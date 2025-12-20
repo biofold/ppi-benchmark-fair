@@ -1,0 +1,476 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3ORR_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "3ORR_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3ORR",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3ORR",
+    "name": "Protein 3ORR",
+    "description": "Protein structure with PDB ID: 3ORR. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3ORR_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3ORR",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Staphylococcus aureus subsp. aureus str. Newman",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "426430",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=426430"
+    },
+    "alternateName": [
+      "PDB 3ORR",
+      "Protein ID 3ORR"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3orr_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3orr.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3ORR",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3ORR",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3ORR_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "purK",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.1490.20;3.30.470.20;3.40.50.20",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02222;PF02826;PF17769",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3ORR\", \"structure_metadata\": {\"pdb_id\": \"3ORR\", \"resolution\": 2.23, \"deposition_date\": \"2010-09-07T00:00:00+0000\", \"release_date\": \"2011-07-20T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Staphylococcus aureus subsp. aureus str. Newman\"], \"citation\": {\"title\": \"Structural and biochemical characterization of N5-carboxyaminoimidazole ribonucleotide synthetase and N5-carboxyaminoimidazole ribonucleotide mutase from Staphylococcus aureus.\", \"doi\": \"10.1107/S0907444911023821\", \"authors\": [\"Brugarolas, P.\", \"Duguid, E.M.\", \"Zhang, W.\", \"Poor, C.B.\", \"He, C.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 66.112, \"b\": 53.327, \"c\": 107.406, \"alpha\": 90.0, \"beta\": 95.34, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN\", \"B\": \"SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus subsp. aureus str. Newman\", \"sequence_length\": 413, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"A0A0H3KFM7\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus subsp. aureus str. Newman\", \"sequence_length\": 413, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"A0A0H3KFM7\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN\", \"organism\": \"Staphylococcus aureus subsp. aureus str. Newman\", \"taxonomy_id\": 426430, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 413, \"gene_name\": null, \"uniprot_ids\": [\"A0A0H3KFM7\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:02:42.713912\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 413.0, \"min_sequence_length\": 413, \"max_sequence_length\": 413}, \"interface_info\": {\"interface_id\": \"3ORR_1\", \"name\": \"Interface 3ORR_1\", \"pdb_id\": \"3ORR\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 413, \"chain2_sequence_length\": 413, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:02:43.615634\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.23,
+            "experimentalMethod": null,
+            "depositionDate": "2010-09-07T00:00:00+0000",
+            "releaseDate": "2011-07-20T00:00:00+0000",
+            "sourceOrganism": [
+              "Staphylococcus aureus subsp. aureus str. Newman"
+            ],
+            "spaceGroup": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Structural and biochemical characterization of N5-carboxyaminoimidazole ribonucleotide synthetase and N5-carboxyaminoimidazole ribonucleotide mutase from Staphylococcus aureus.",
+              "doi": "10.1107/S0907444911023821",
+              "authors": [
+                "Brugarolas, P.",
+                "Duguid, E.M.",
+                "Zhang, W.",
+                "Poor, C.B.",
+                "He, C."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.23,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Staphylococcus aureus subsp. aureus str. Newman",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN",
+        "description": "Amino acid sequence for chain A (length: 413)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 413,
+        "organism": "Staphylococcus aureus subsp. aureus str. Newman",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "SNA(MSE)NFNKLKFGATIGIIGGGQLGK(MSE)(MSE)AQSAQK(MSE)GYKVVVLDPSEDCPCRYVAHEFIQAKYDDEKALNQLGQKCDVITYEFENISAQQLKLLCEKYNIPQGYQAIQLLQDRLTEKETLKSAGTKVVPFISVKESTDIDKAIETLGYPFIVKTRFGGYDGKGQVLINNEKDLQEGFKLIETSECVAEKYLNIKKEVSLTVTRGNNNQITFFPLQENEHRNQILFKTIVPARIDKTAEAKEQVNKIIQSIHFIGTFTVEFFIDSNNQLYVNEIAPRPHNSGHYSIEACDYSQFDTHILAVTGQSLPNSIELLKPAV(MSE)(MSE)NLLGKDLDLLENEFNEHPEWHLHIYGKSERKDSRK(MSE)GH(MSE)TVLTNDVNQTEQD(MSE)YAKFEGSN",
+        "description": "Amino acid sequence for chain B (length: 413)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 413,
+        "organism": "Staphylococcus aureus subsp. aureus str. Newman",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural and biochemical characterization of N5-carboxyaminoimidazole ribonucleotide synthetase and N5-carboxyaminoimidazole ribonucleotide mutase from Staphylococcus aureus.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S0907444911023821",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 413",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 413, \"chain2_sequence_length\": 413, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 413,
+            "chain2_length": 413,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3ORR_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3ORR_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3ORR",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3321.01,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 97,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "purK",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.1490.20;3.30.470.20;3.40.50.20",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02222;PF02826;PF17769",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1377.71,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1943.3,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.414846688206298,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.585153311793701,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3ORR_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3orr_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.229973\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:34.229973"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3ORR_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3AW8_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 2)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

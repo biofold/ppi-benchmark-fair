@@ -1,0 +1,463 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 6EKU_2",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "6EKU_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_6EKU",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "6EKU",
+    "name": "Protein 6EKU",
+    "description": "Protein structure with PDB ID: 6EKU. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 6EKU_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/6EKU",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Vibrio cholerae O1 biovar El Tor str. N16961",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "243277",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243277"
+    },
+    "alternateName": [
+      "PDB 6EKU",
+      "Protein ID 6EKU"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/6eku_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/6EKU_2.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "6EKU",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "6EKU",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "6EKU_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "nanH",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.120.10.10;2.60.120.200",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF09264",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"6EKU\", \"structure_metadata\": {\"pdb_id\": \"6EKU\", \"resolution\": 1.75, \"deposition_date\": \"2017-09-27T00:00:00+0000\", \"release_date\": \"2017-11-29T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Vibrio cholerae O1 biovar El Tor str. N16961\"], \"citation\": {\"title\": \"Different Inhibitory Potencies of Oseltamivir Carboxylate, Zanamivir, and Several Tannins on Bacterial and Viral Neuraminidases as Assessed in a Cell-Free Fluorescence-Based Enzyme Inhibition Assay.\", \"doi\": \"10.3390/molecules22111989\", \"authors\": [\"Quosdorf, S.\", \"Schuetz, A.\", \"Kolodziej, H.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 190.553, \"b\": 50.344, \"c\": 86.087, \"alpha\": 90.0, \"beta\": 107.24, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"ALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGDVIFRGPDRIPSIVASSVTPGVVTAFAEKRVGGGDPGALSNTNDIITRTSRDGGITWDTELNLTEQINVSDEFDFSDPRPIYDPSSNTVLVSYARWPTDAAQNGDRIKPWMPNGIFYSVYDVASGNWQAPIDVTDQVKERSFQIAGWGGSELYRRNTSLNSQQDWQSNAKIRIVDGAANQIQVADGSRKYVVTLSIDESGGLVANLNGVSAPIILQSEHAKVHSFHDYELQYSALNHTTTLFVDGQQITTWAGEVSQENNIQFGNADAQIDGRLHVQKIVLTQQGHNLVEFDAFYLAQQTPEVEKDLEKLGWTKIKTGNTMSLYGNASVNPGPGHGITLTRQQNISGSQNGRLIYPAIVLDRFFLNVMSIYSDDGGSNWQTGSTLPIPFRWKSSSILETLEPSEADMVELQNGDLLLTARLDFNQIVNGVNYSPRQQFLSKDGGITWSLLEANNANVFSNISTGTVDASITRFEQSDGSHFLLFTNPQGNPAGTNGRQNLGLWFSFDEGVTWKGPIQLVNGASAYSDIYQLDSENAIVIVETDNSNMRILRMPITLLKQKLTLSQN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae O1 biovar El Tor str. N16961\", \"sequence_length\": 757, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"ALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGDVIFRGPDRIPSIVASSVTPGVVTAFAEKRVGGGDPGALSNTNDIITRTSRDGGITWDTELNLTEQINVSDEFDFSDPRPIYDPSSNTVLVSYARWPTDAAQNGDRIKPWMPNGIFYSVYDVASGNWQAPIDVTDQVKERSFQIAGWGGSELYRRNTSLNSQQDWQSNAKIRIVDGAANQIQVADGSRKYVVTLSIDESGGLVANLNGVSAPIILQSEHAKVHSFHDYELQYSALNHTTTLFVDGQQITTWAGEVSQENNIQFGNADAQIDGRLHVQKIVLTQQGHNLVEFDAFYLAQQTPEVEKDLEKLGWTKIKTGNTMSLYGNASVNPGPGHGITLTRQQNISGSQNGRLIYPAIVLDRFFLNVMSIYSDDGGSNWQTGSTLPIPFRWKSSSILETLEPSEADMVELQNGDLLLTARLDFNQIVNGVNYSPRQQFLSKDGGITWSLLEANNANVFSNISTGTVDASITRFEQSDGSHFLLFTNPQGNPAGTNGRQNLGLWFSFDEGVTWKGPIQLVNGASAYSDIYQLDSENAIVIVETDNSNMRILRMPITLLKQKLTLSQN\", \"organism\": \"Vibrio cholerae O1 biovar El Tor str. N16961\", \"taxonomy_id\": 243277, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 757, \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"ALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGDVIFRGPDRIPSIVASSVTPGVVTAFAEKRVGGGDPGALSNTNDIITRTSRDGGITWDTELNLTEQINVSDEFDFSDPRPIYDPSSNTVLVSYARWPTDAAQNGDRIKPWMPNGIFYSVYDVASGNWQAPIDVTDQVKERSFQIAGWGGSELYRRNTSLNSQQDWQSNAKIRIVDGAANQIQVADGSRKYVVTLSIDESGGLVANLNGVSAPIILQSEHAKVHSFHDYELQYSALNHTTTLFVDGQQITTWAGEVSQENNIQFGNADAQIDGRLHVQKIVLTQQGHNLVEFDAFYLAQQTPEVEKDLEKLGWTKIKTGNTMSLYGNASVNPGPGHGITLTRQQNISGSQNGRLIYPAIVLDRFFLNVMSIYSDDGGSNWQTGSTLPIPFRWKSSSILETLEPSEADMVELQNGDLLLTARLDFNQIVNGVNYSPRQQFLSKDGGITWSLLEANNANVFSNISTGTVDASITRFEQSDGSHFLLFTNPQGNPAGTNGRQNLGLWFSFDEGVTWKGPIQLVNGASAYSDIYQLDSENAIVIVETDNSNMRILRMPITLLKQKLTLSQN\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"fetch_timestamp\": \"2025-12-19T19:25:04.162341\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 757.0, \"min_sequence_length\": 757, \"max_sequence_length\": 757}, \"interface_info\": {\"interface_id\": \"6EKU_2\", \"name\": \"Interface 6EKU_2\", \"pdb_id\": \"6EKU\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 757, \"chain2_sequence_length\": 757, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:25:06.568430\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.75,
+            "experimentalMethod": null,
+            "depositionDate": "2017-09-27T00:00:00+0000",
+            "releaseDate": "2017-11-29T00:00:00+0000",
+            "sourceOrganism": [
+              "Vibrio cholerae O1 biovar El Tor str. N16961"
+            ],
+            "spaceGroup": null,
+            "entityCount": 7,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Different Inhibitory Potencies of Oseltamivir Carboxylate, Zanamivir, and Several Tannins on Bacterial and Viral Neuraminidases as Assessed in a Cell-Free Fluorescence-Based Enzyme Inhibition Assay.",
+              "doi": "10.3390/molecules22111989",
+              "authors": [
+                "Quosdorf, S.",
+                "Schuetz, A.",
+                "Kolodziej, H."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.75,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Vibrio cholerae O1 biovar El Tor str. N16961",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "ALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGDVIFRGPDRIPSIVASSVTPGVVTAFAEKRVGGGDPGALSNTNDIITRTSRDGGITWDTELNLTEQINVSDEFDFSDPRPIYDPSSNTVLVSYARWPTDAAQNGDRIKPWMPNGIFYSVYDVASGNWQAPIDVTDQVKERSFQIAGWGGSELYRRNTSLNSQQDWQSNAKIRIVDGAANQIQVADGSRKYVVTLSIDESGGLVANLNGVSAPIILQSEHAKVHSFHDYELQYSALNHTTTLFVDGQQITTWAGEVSQENNIQFGNADAQIDGRLHVQKIVLTQQGHNLVEFDAFYLAQQTPEVEKDLEKLGWTKIKTGNTMSLYGNASVNPGPGHGITLTRQQNISGSQNGRLIYPAIVLDRFFLNVMSIYSDDGGSNWQTGSTLPIPFRWKSSSILETLEPSEADMVELQNGDLLLTARLDFNQIVNGVNYSPRQQFLSKDGGITWSLLEANNANVFSNISTGTVDASITRFEQSDGSHFLLFTNPQGNPAGTNGRQNLGLWFSFDEGVTWKGPIQLVNGASAYSDIYQLDSENAIVIVETDNSNMRILRMPITLLKQKLTLSQN",
+        "description": "Amino acid sequence for chain A (length: 757)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 757,
+        "organism": "Vibrio cholerae O1 biovar El Tor str. N16961",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Different Inhibitory Potencies of Oseltamivir Carboxylate, Zanamivir, and Several Tannins on Bacterial and Viral Neuraminidases as Assessed in a Cell-Free Fluorescence-Based Enzyme Inhibition Assay.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.3390/molecules22111989",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 757",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 757, \"chain2_sequence_length\": 757, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 757,
+            "chain2_length": 757,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "6EKU_2",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 6EKU_2",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "6EKU",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "2_556",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3802.81,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 116,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "nanH",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.120.10.10;2.60.120.200",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF09264",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1634.31,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 2168.5,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.429763779941675,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.570236220058326,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6EKU_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6eku_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:36.577221\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:36.577221"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 1 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "6EKU_2",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2W68_11"
+      ],
+      "description": "Other interfaces in the same cluster (total: 2)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

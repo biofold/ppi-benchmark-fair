@@ -1,0 +1,468 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4INA_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4INA_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4INA",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4INA",
+    "name": "Protein 4INA",
+    "description": "Protein structure with PDB ID: 4INA. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4INA_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4INA",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Wolinella succinogenes",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "844",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=844"
+    },
+    "alternateName": [
+      "PDB 4INA",
+      "Protein ID 4INA"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4ina_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4ina.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4INA",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4INA",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4INA_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "WS0167",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.360.10;3.40.50.720",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF03435;PF16653",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4INA\", \"structure_metadata\": {\"pdb_id\": \"4INA\", \"resolution\": 2.488, \"deposition_date\": \"2013-01-04T00:00:00+0000\", \"release_date\": \"2013-01-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Wolinella succinogenes\"], \"citation\": {\"title\": \"Crystal Structure of the Q7MSS8_WOLSU protein from Wolinella succinogenes.\", \"authors\": [\"Vorobiev, S.\", \"Su, M.\", \"Seetharaman, J.\", \"Maglaqui, M.\", \"Xiao, R.\", \"Kohan, E.\", \"Wang, D.\", \"Everett, J.K.\", \"Acton, T.B.\", \"Montelione, G.T.\", \"Tong, L.\", \"Hunt, J.F.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 44.639, \"b\": 95.49, \"c\": 104.427, \"alpha\": 90.0, \"beta\": 101.8, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH\", \"B\": \"(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Wolinella succinogenes\", \"sequence_length\": 465, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7MSS8\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Wolinella succinogenes\", \"sequence_length\": 465, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7MSS8\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH\", \"organism\": \"Wolinella succinogenes\", \"taxonomy_id\": 844, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 465, \"gene_name\": null, \"uniprot_ids\": [\"Q7MSS8\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:09:08.884596\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 465.0, \"min_sequence_length\": 465, \"max_sequence_length\": 465}, \"interface_info\": {\"interface_id\": \"4INA_1\", \"name\": \"Interface 4INA_1\", \"pdb_id\": \"4INA\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 465, \"chain2_sequence_length\": 465, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:09:09.780090\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.488,
+            "experimentalMethod": null,
+            "depositionDate": "2013-01-04T00:00:00+0000",
+            "releaseDate": "2013-01-16T00:00:00+0000",
+            "sourceOrganism": [
+              "Wolinella succinogenes"
+            ],
+            "spaceGroup": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Crystal Structure of the Q7MSS8_WOLSU protein from Wolinella succinogenes.",
+              "authors": [
+                "Vorobiev, S.",
+                "Su, M.",
+                "Seetharaman, J.",
+                "Maglaqui, M.",
+                "Xiao, R.",
+                "Kohan, E.",
+                "Wang, D.",
+                "Everett, J.K.",
+                "Acton, T.B.",
+                "Montelione, G.T.",
+                "Tong, L.",
+                "Hunt, J.F."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.488,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Wolinella succinogenes",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH",
+        "description": "Amino acid sequence for chain A (length: 465)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 465,
+        "organism": "Wolinella succinogenes",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "(MSE)AKVLQIGAGGVGGVVAHK(MSE)A(MSE)NREVFSHITLASRTLSKCQEIAQSIKAKGYGEIDITTVDADSIEELVALINEVKPQIVLNIALPYQDLTI(MSE)EACLRTGVPYLDTANYEHPDLAKFEYKEQWAFHDRYKEKGV(MSE)ALLGSGFDPGVTNVFCAYAQKHYFDEIHEIDILDCNAGDHGYPFATNFNPEINLREVSSKGRYWENGEWIETEP(MSE)EI(MSE)QVWDYPEVGPKDSYLLYHEELESLVRNIKGLKRIRFF(MSE)TFGQSYLTH(MSE)RCLENVG(MSE)LRIDEIEVNGCKVVPIQVLKALLPDPASLASRTKGKTNIGCYIKGIKEGKARTIYIYNVCDHESCYREVNAQAISYTTGVPA(MSE)IGAKL(MSE)LEGKWSGKGVFN(MSE)EELDPDPF(MSE)DELNKQGLPWEVKE(MSE)EALEHHHHHH",
+        "description": "Amino acid sequence for chain B (length: 465)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 465,
+        "organism": "Wolinella succinogenes",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal Structure of the Q7MSS8_WOLSU protein from Wolinella succinogenes.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 465",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 465, \"chain2_sequence_length\": 465, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 465,
+            "chain2_length": 465,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4INA_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4INA_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4INA",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1795.47,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 48,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "WS0167",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.360.10;3.40.50.720",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF03435;PF16653",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 449.189999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1346.28,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.250179618707079,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.749820381292919,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4INA_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4ina_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.887668\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:34.887668"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4INA_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

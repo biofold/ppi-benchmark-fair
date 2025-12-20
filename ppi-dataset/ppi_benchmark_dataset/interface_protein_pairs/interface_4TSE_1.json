@@ -1,0 +1,459 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4TSE_1",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "4TSE_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4TSE",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4TSE",
+    "name": "Protein 4TSE",
+    "description": "Protein structure with PDB ID: 4TSE. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4TSE_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4TSE",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 4TSE",
+      "Protein ID 4TSE"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4tse_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4TSE_1.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4TSE",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4TSE",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4TSE_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "MIB1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF18346",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4TSE\", \"structure_metadata\": {\"pdb_id\": \"4TSE\", \"resolution\": 2.057, \"deposition_date\": \"2014-06-18T00:00:00+0000\", \"release_date\": \"2015-03-18T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"A tail of two sites: a bipartite mechanism for recognition of notch ligands by mind bomb e3 ligases.\", \"doi\": \"10.1016/j.molcel.2015.01.019\", \"authors\": [\"McMillan, B.J.\", \"Schnute, B.\", \"Ohlenhard, N.\", \"Zimmerman, B.\", \"Miles, L.\", \"Beglova, N.\", \"Klein, T.\", \"Blacklow, S.C.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 51.32, \"b\": 86.42, \"c\": 86.6, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN\", \"B\": \"GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 174, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q86YT6\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 174, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q86YT6\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 174, \"gene_name\": null, \"uniprot_ids\": [\"Q86YT6\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:20:07.982519\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 174.0, \"min_sequence_length\": 174, \"max_sequence_length\": 174}, \"interface_info\": {\"interface_id\": \"4TSE_1\", \"name\": \"Interface 4TSE_1\", \"pdb_id\": \"4TSE\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 174, \"chain2_sequence_length\": 174, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:20:08.893569\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.057,
+            "experimentalMethod": null,
+            "depositionDate": "2014-06-18T00:00:00+0000",
+            "releaseDate": "2015-03-18T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "A tail of two sites: a bipartite mechanism for recognition of notch ligands by mind bomb e3 ligases.",
+              "doi": "10.1016/j.molcel.2015.01.019",
+              "authors": [
+                "McMillan, B.J.",
+                "Schnute, B.",
+                "Ohlenhard, N.",
+                "Zimmerman, B.",
+                "Miles, L.",
+                "Beglova, N.",
+                "Klein, T.",
+                "Blacklow, S.C."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.057,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN",
+        "description": "Amino acid sequence for chain A (length: 174)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 174,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "GPLGSRNPGGLQIGDLVNIDLDLEIVQSLQHGHGGWTDGMFETLTTTGTVCGIDEDHDIVVQYPSGNRWTFNPAVLTKANIVRSGDAAQGAEGGTSQFQVGDLVQVCYDLERIKLLQRGHGEWAEAMLPTLGKVGRVQQIYSDSDLKVEVCGTSWTYNPAAVSKVASAGSAISN",
+        "description": "Amino acid sequence for chain B (length: 174)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 174,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "A tail of two sites: a bipartite mechanism for recognition of notch ligands by mind bomb e3 ligases.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.molcel.2015.01.019",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 174",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 174, \"chain2_sequence_length\": 174, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 174,
+            "chain2_length": 174,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4TSE_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4TSE_1",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4TSE",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2131.26,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 75,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "MIB1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF18346",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 934.540000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1196.73,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.438491784202772,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.561512907857323,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4TSE_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4tse_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:36.067541\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:36.067541"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4TSE_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

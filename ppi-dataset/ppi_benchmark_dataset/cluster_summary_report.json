@@ -1,0 +1,12206 @@
+{
+  "generated_date": "2025-12-20T00:11:27.020228",
+  "blastclust_file": "ppi_benchmark_dataset2/blastclust_sequences_S25_L05.txt",
+  "blastclust_method": "BLASTClust sequence clustering",
+  "blastclust_options": "-S 25 -L 0.5 -b F",
+  "total_clusters": 1042,
+  "total_interfaces": 1674,
+  "coverage_statistics": {
+    "interfaces_processed": 1677,
+    "interfaces_in_clusters": 1674,
+    "coverage_percentage": 99.82110912343471
+  },
+  "cluster_size_distribution": {
+    "27": 1,
+    "23": 2,
+    "20": 1,
+    "19": 1,
+    "14": 1,
+    "13": 1,
+    "11": 1,
+    "10": 1,
+    "9": 2,
+    "8": 2,
+    "7": 5,
+    "6": 6,
+    "5": 11,
+    "4": 18,
+    "3": 59,
+    "2": 175,
+    "1": 755
+  },
+  "top_clusters": [
+    {
+      "cluster_id": "5DYK_2",
+      "size": 27,
+      "members": [
+        "5DYK_2",
+        "3NYO_3",
+        "5UVC_5",
+        "5XZW_7",
+        "1K9A_11",
+        "3NPC_2",
+        "6JOL_2",
+        "3L9N_5",
+        "4RED_1",
+        "4RED_8",
+        "3RNY_3",
+        "3ENM_11",
+        "3G0F_1",
+        "4NIF_2",
+        "5IU2_1",
+        "2GS2_1",
+        "4I24_3",
+        "3ALN_1",
+        "6D3L_1",
+        "4WOV_3",
+        "5MJA_1",
+        "3KGA_1",
+        "4HOK_1",
+        "5KVT_2",
+        "3O51_5",
+        "3G7P_1",
+        "3NJ2_1"
+      ],
+      "pdb_ids": [
+        "6JOL",
+        "3L9N",
+        "4WOV",
+        "1K9A",
+        "2GS2",
+        "3NPC",
+        "3KGA",
+        "5DYK",
+        "3ENM",
+        "6D3L",
+        "5IU2",
+        "5KVT",
+        "5MJA",
+        "3NYO",
+        "4NIF",
+        "3G0F",
+        "5XZW",
+        "4I24",
+        "4RED",
+        "4HOK",
+        "5UVC",
+        "3G7P",
+        "3RNY",
+        "3NJ2",
+        "3ALN",
+        "3O51"
+      ]
+    },
+    {
+      "cluster_id": "3O77_2",
+      "size": 23,
+      "members": [
+        "3O77_2",
+        "4PFE_1",
+        "6R2S_8",
+        "1ORS_10",
+        "6H3U_14",
+        "5M7Q_3",
+        "5VM4_4",
+        "3QXU_2",
+        "1OHQ_1",
+        "1TVD_1",
+        "5L6Q_1",
+        "1EEQ_1",
+        "2IMN_1",
+        "1CD0_1",
+        "2CD0_1",
+        "2W0L_2",
+        "1AC6_1",
+        "5T93_1",
+        "1BWW_1",
+        "3DVI_1",
+        "1B0W_1",
+        "1IVL_1",
+        "3DVF_1"
+      ],
+      "pdb_ids": [
+        "1B0W",
+        "3DVF",
+        "1TVD",
+        "2W0L",
+        "1BWW",
+        "1CD0",
+        "1EEQ",
+        "1AC6",
+        "3DVI",
+        "5L6Q",
+        "6H3U",
+        "1ORS",
+        "2IMN",
+        "5VM4",
+        "4PFE",
+        "3O77",
+        "1IVL",
+        "6R2S",
+        "5M7Q",
+        "3QXU",
+        "1OHQ",
+        "5T93",
+        "2CD0"
+      ]
+    },
+    {
+      "cluster_id": "2CW3_1",
+      "size": 23,
+      "members": [
+        "2CW3_1",
+        "4F2N_2",
+        "1Y67_1",
+        "2CW2_1",
+        "1XRE_1",
+        "3CEI_1",
+        "1XUQ_1",
+        "3TQJ_1",
+        "4DVH_1",
+        "4JZ2_1",
+        "1IX9_1",
+        "4YET_1",
+        "1JR9_1",
+        "2RCV_2",
+        "1MY6_1",
+        "2GOJ_1",
+        "3ESF_1",
+        "2GPC_1",
+        "3H1S_1",
+        "3SDP_1",
+        "2W7W_1",
+        "2NYB_2",
+        "1UER_2"
+      ],
+      "pdb_ids": [
+        "1Y67",
+        "2GPC",
+        "1IX9",
+        "2GOJ",
+        "1MY6",
+        "1UER",
+        "3TQJ",
+        "4JZ2",
+        "1XRE",
+        "2RCV",
+        "3ESF",
+        "4DVH",
+        "2NYB",
+        "3SDP",
+        "2CW3",
+        "4F2N",
+        "1JR9",
+        "1XUQ",
+        "2CW2",
+        "4YET",
+        "2W7W",
+        "3CEI",
+        "3H1S"
+      ]
+    },
+    {
+      "cluster_id": "2JLP_3",
+      "size": 20,
+      "members": [
+        "2JLP_3",
+        "5DRA_1",
+        "2BM5_1",
+        "4OJA_1",
+        "3CE1_1",
+        "2APS_1",
+        "2E46_1",
+        "3KBF_1",
+        "1EQW_2",
+        "1TO4_1",
+        "1Z9P_1",
+        "2C9S_1",
+        "1F1G_2",
+        "3L9E_2",
+        "3PU7_1",
+        "3LTV_1",
+        "3MND_1",
+        "1IBD_1",
+        "1SXS_1",
+        "1XSO_1"
+      ],
+      "pdb_ids": [
+        "3KBF",
+        "1SXS",
+        "3MND",
+        "1F1G",
+        "4OJA",
+        "1TO4",
+        "1EQW",
+        "1IBD",
+        "2JLP",
+        "2E46",
+        "2APS",
+        "2C9S",
+        "1XSO",
+        "5DRA",
+        "2BM5",
+        "3CE1",
+        "3L9E",
+        "1Z9P",
+        "3LTV",
+        "3PU7"
+      ]
+    },
+    {
+      "cluster_id": "4ZMS_1",
+      "size": 19,
+      "members": [
+        "4ZMS_1",
+        "4LDZ_1",
+        "3KCN_1",
+        "3HV2_1",
+        "1ZY2_1",
+        "3EUL_6",
+        "4D6Y_1",
+        "5I4C_1",
+        "2QXY_1",
+        "3HDV_3",
+        "4LE0_1",
+        "2PL1_1",
+        "4Q7E_1",
+        "1D5W_2",
+        "1SRR_1",
+        "4L85_1",
+        "1ZH2_1",
+        "1FSE_3",
+        "4WT0_1"
+      ],
+      "pdb_ids": [
+        "4ZMS",
+        "3EUL",
+        "2PL1",
+        "3HV2",
+        "4LE0",
+        "1FSE",
+        "1ZY2",
+        "4WT0",
+        "5I4C",
+        "3HDV",
+        "1D5W",
+        "2QXY",
+        "1SRR",
+        "3KCN",
+        "4LDZ",
+        "4L85",
+        "4D6Y",
+        "4Q7E",
+        "1ZH2"
+      ]
+    },
+    {
+      "cluster_id": "5UQM_2",
+      "size": 14,
+      "members": [
+        "5UQM_2",
+        "5LB8_1",
+        "6QU4_11",
+        "4U5K_1",
+        "6JTZ_1",
+        "3N3M_1",
+        "3K55_9",
+        "2JFP_1",
+        "4RNJ_1",
+        "2DWU_1",
+        "4O1H_1",
+        "5U0K_4",
+        "5U0I_1",
+        "4O1I_2"
+      ],
+      "pdb_ids": [
+        "4O1H",
+        "6QU4",
+        "4U5K",
+        "2JFP",
+        "5LB8",
+        "5U0K",
+        "4O1I",
+        "4RNJ",
+        "6JTZ",
+        "2DWU",
+        "3K55",
+        "5U0I",
+        "5UQM",
+        "3N3M"
+      ]
+    },
+    {
+      "cluster_id": "5XWM_1",
+      "size": 13,
+      "members": [
+        "5XWM_1",
+        "5XWM_3",
+        "3DXB_16",
+        "3HZ4_1",
+        "1V98_2",
+        "5Y4T_1",
+        "1UVZ_3",
+        "4POB_1",
+        "3HHV_1",
+        "1XWB_5",
+        "3DIE_1",
+        "1ERV_1",
+        "4AJ7_1"
+      ],
+      "pdb_ids": [
+        "5Y4T",
+        "3HHV",
+        "1XWB",
+        "3DIE",
+        "5XWM",
+        "3DXB",
+        "3HZ4",
+        "1UVZ",
+        "4AJ7",
+        "1V98",
+        "4POB",
+        "1ERV"
+      ]
+    },
+    {
+      "cluster_id": "3KEB_1",
+      "size": 11,
+      "members": [
+        "3KEB_1",
+        "3ZRD_1",
+        "1XVQ_2",
+        "4JE1_1",
+        "2CX4_1",
+        "1PSQ_1",
+        "1QXH_1",
+        "1Q98_1",
+        "3HJP_1",
+        "4G2E_1",
+        "5C04_1"
+      ],
+      "pdb_ids": [
+        "4G2E",
+        "3ZRD",
+        "3HJP",
+        "2CX4",
+        "1PSQ",
+        "5C04",
+        "1QXH",
+        "1XVQ",
+        "1Q98",
+        "4JE1",
+        "3KEB"
+      ]
+    },
+    {
+      "cluster_id": "5MWX_1",
+      "size": 10,
+      "members": [
+        "5MWX_1",
+        "3WUD_1",
+        "1IS3_1",
+        "3AJZ_1",
+        "3DUI_1",
+        "1GAN_1",
+        "1SLB_2",
+        "1QMJ_1",
+        "2YMZ_2",
+        "1HLC_1"
+      ],
+      "pdb_ids": [
+        "5MWX",
+        "3AJZ",
+        "1HLC",
+        "1QMJ",
+        "1IS3",
+        "1SLB",
+        "3DUI",
+        "2YMZ",
+        "1GAN",
+        "3WUD"
+      ]
+    },
+    {
+      "cluster_id": "6EET_1",
+      "size": 9,
+      "members": [
+        "6EET_1",
+        "5IU9_1",
+        "3K5S_1",
+        "4NUQ_1",
+        "4ZMY_1",
+        "4NQQ_1",
+        "6CGB_1",
+        "3PPE_1",
+        "1ZXK_1"
+      ],
+      "pdb_ids": [
+        "3PPE",
+        "3K5S",
+        "4NQQ",
+        "5IU9",
+        "1ZXK",
+        "4ZMY",
+        "6EET",
+        "4NUQ",
+        "6CGB"
+      ]
+    }
+  ],
+  "single_member_clusters": [
+    {
+      "cluster_id": "6FB3_1",
+      "size": 1,
+      "members": [
+        "6FB3_1"
+      ],
+      "pdb_ids": [
+        "6FB3"
+      ]
+    },
+    {
+      "cluster_id": "4BBR_39",
+      "size": 1,
+      "members": [
+        "4BBR_39"
+      ],
+      "pdb_ids": [
+        "4BBR"
+      ]
+    },
+    {
+      "cluster_id": "6VJB_4",
+      "size": 1,
+      "members": [
+        "6VJB_4"
+      ],
+      "pdb_ids": [
+        "6VJB"
+      ]
+    },
+    {
+      "cluster_id": "5MZO_2",
+      "size": 1,
+      "members": [
+        "5MZO_2"
+      ],
+      "pdb_ids": [
+        "5MZO"
+      ]
+    },
+    {
+      "cluster_id": "4CMP_11",
+      "size": 1,
+      "members": [
+        "4CMP_11"
+      ],
+      "pdb_ids": [
+        "4CMP"
+      ]
+    },
+    {
+      "cluster_id": "4W8J_6",
+      "size": 1,
+      "members": [
+        "4W8J_6"
+      ],
+      "pdb_ids": [
+        "4W8J"
+      ]
+    },
+    {
+      "cluster_id": "6BB8_2",
+      "size": 1,
+      "members": [
+        "6BB8_2"
+      ],
+      "pdb_ids": [
+        "6BB8"
+      ]
+    },
+    {
+      "cluster_id": "5DIS_10",
+      "size": 1,
+      "members": [
+        "5DIS_10"
+      ],
+      "pdb_ids": [
+        "5DIS"
+      ]
+    },
+    {
+      "cluster_id": "4AYG_2",
+      "size": 1,
+      "members": [
+        "4AYG_2"
+      ],
+      "pdb_ids": [
+        "4AYG"
+      ]
+    },
+    {
+      "cluster_id": "4KXF_17",
+      "size": 1,
+      "members": [
+        "4KXF_17"
+      ],
+      "pdb_ids": [
+        "4KXF"
+      ]
+    }
+  ],
+  "all_clusters": [
+    {
+      "cluster_id": "5DYK_2",
+      "size": 27,
+      "members": [
+        "5DYK_2",
+        "3NYO_3",
+        "5UVC_5",
+        "5XZW_7",
+        "1K9A_11",
+        "3NPC_2",
+        "6JOL_2",
+        "3L9N_5",
+        "4RED_1",
+        "4RED_8",
+        "3RNY_3",
+        "3ENM_11",
+        "3G0F_1",
+        "4NIF_2",
+        "5IU2_1",
+        "2GS2_1",
+        "4I24_3",
+        "3ALN_1",
+        "6D3L_1",
+        "4WOV_3",
+        "5MJA_1",
+        "3KGA_1",
+        "4HOK_1",
+        "5KVT_2",
+        "3O51_5",
+        "3G7P_1",
+        "3NJ2_1"
+      ],
+      "pdb_ids": [
+        "6JOL",
+        "3L9N",
+        "4WOV",
+        "1K9A",
+        "2GS2",
+        "3NPC",
+        "3KGA",
+        "5DYK",
+        "3ENM",
+        "6D3L",
+        "5IU2",
+        "5KVT",
+        "5MJA",
+        "3NYO",
+        "4NIF",
+        "3G0F",
+        "5XZW",
+        "4I24",
+        "4RED",
+        "4HOK",
+        "5UVC",
+        "3G7P",
+        "3RNY",
+        "3NJ2",
+        "3ALN",
+        "3O51"
+      ]
+    },
+    {
+      "cluster_id": "3O77_2",
+      "size": 23,
+      "members": [
+        "3O77_2",
+        "4PFE_1",
+        "6R2S_8",
+        "1ORS_10",
+        "6H3U_14",
+        "5M7Q_3",
+        "5VM4_4",
+        "3QXU_2",
+        "1OHQ_1",
+        "1TVD_1",
+        "5L6Q_1",
+        "1EEQ_1",
+        "2IMN_1",
+        "1CD0_1",
+        "2CD0_1",
+        "2W0L_2",
+        "1AC6_1",
+        "5T93_1",
+        "1BWW_1",
+        "3DVI_1",
+        "1B0W_1",
+        "1IVL_1",
+        "3DVF_1"
+      ],
+      "pdb_ids": [
+        "1B0W",
+        "3DVF",
+        "1TVD",
+        "2W0L",
+        "1BWW",
+        "1CD0",
+        "1EEQ",
+        "1AC6",
+        "3DVI",
+        "5L6Q",
+        "6H3U",
+        "1ORS",
+        "2IMN",
+        "5VM4",
+        "4PFE",
+        "3O77",
+        "1IVL",
+        "6R2S",
+        "5M7Q",
+        "3QXU",
+        "1OHQ",
+        "5T93",
+        "2CD0"
+      ]
+    },
+    {
+      "cluster_id": "2CW3_1",
+      "size": 23,
+      "members": [
+        "2CW3_1",
+        "4F2N_2",
+        "1Y67_1",
+        "2CW2_1",
+        "1XRE_1",
+        "3CEI_1",
+        "1XUQ_1",
+        "3TQJ_1",
+        "4DVH_1",
+        "4JZ2_1",
+        "1IX9_1",
+        "4YET_1",
+        "1JR9_1",
+        "2RCV_2",
+        "1MY6_1",
+        "2GOJ_1",
+        "3ESF_1",
+        "2GPC_1",
+        "3H1S_1",
+        "3SDP_1",
+        "2W7W_1",
+        "2NYB_2",
+        "1UER_2"
+      ],
+      "pdb_ids": [
+        "1Y67",
+        "2GPC",
+        "1IX9",
+        "2GOJ",
+        "1MY6",
+        "1UER",
+        "3TQJ",
+        "4JZ2",
+        "1XRE",
+        "2RCV",
+        "3ESF",
+        "4DVH",
+        "2NYB",
+        "3SDP",
+        "2CW3",
+        "4F2N",
+        "1JR9",
+        "1XUQ",
+        "2CW2",
+        "4YET",
+        "2W7W",
+        "3CEI",
+        "3H1S"
+      ]
+    },
+    {
+      "cluster_id": "2JLP_3",
+      "size": 20,
+      "members": [
+        "2JLP_3",
+        "5DRA_1",
+        "2BM5_1",
+        "4OJA_1",
+        "3CE1_1",
+        "2APS_1",
+        "2E46_1",
+        "3KBF_1",
+        "1EQW_2",
+        "1TO4_1",
+        "1Z9P_1",
+        "2C9S_1",
+        "1F1G_2",
+        "3L9E_2",
+        "3PU7_1",
+        "3LTV_1",
+        "3MND_1",
+        "1IBD_1",
+        "1SXS_1",
+        "1XSO_1"
+      ],
+      "pdb_ids": [
+        "3KBF",
+        "1SXS",
+        "3MND",
+        "1F1G",
+        "4OJA",
+        "1TO4",
+        "1EQW",
+        "1IBD",
+        "2JLP",
+        "2E46",
+        "2APS",
+        "2C9S",
+        "1XSO",
+        "5DRA",
+        "2BM5",
+        "3CE1",
+        "3L9E",
+        "1Z9P",
+        "3LTV",
+        "3PU7"
+      ]
+    },
+    {
+      "cluster_id": "4ZMS_1",
+      "size": 19,
+      "members": [
+        "4ZMS_1",
+        "4LDZ_1",
+        "3KCN_1",
+        "3HV2_1",
+        "1ZY2_1",
+        "3EUL_6",
+        "4D6Y_1",
+        "5I4C_1",
+        "2QXY_1",
+        "3HDV_3",
+        "4LE0_1",
+        "2PL1_1",
+        "4Q7E_1",
+        "1D5W_2",
+        "1SRR_1",
+        "4L85_1",
+        "1ZH2_1",
+        "1FSE_3",
+        "4WT0_1"
+      ],
+      "pdb_ids": [
+        "4ZMS",
+        "3EUL",
+        "2PL1",
+        "3HV2",
+        "4LE0",
+        "1FSE",
+        "1ZY2",
+        "4WT0",
+        "5I4C",
+        "3HDV",
+        "1D5W",
+        "2QXY",
+        "1SRR",
+        "3KCN",
+        "4LDZ",
+        "4L85",
+        "4D6Y",
+        "4Q7E",
+        "1ZH2"
+      ]
+    },
+    {
+      "cluster_id": "5UQM_2",
+      "size": 14,
+      "members": [
+        "5UQM_2",
+        "5LB8_1",
+        "6QU4_11",
+        "4U5K_1",
+        "6JTZ_1",
+        "3N3M_1",
+        "3K55_9",
+        "2JFP_1",
+        "4RNJ_1",
+        "2DWU_1",
+        "4O1H_1",
+        "5U0K_4",
+        "5U0I_1",
+        "4O1I_2"
+      ],
+      "pdb_ids": [
+        "4O1H",
+        "6QU4",
+        "4U5K",
+        "2JFP",
+        "5LB8",
+        "5U0K",
+        "4O1I",
+        "4RNJ",
+        "6JTZ",
+        "2DWU",
+        "3K55",
+        "5U0I",
+        "5UQM",
+        "3N3M"
+      ]
+    },
+    {
+      "cluster_id": "5XWM_1",
+      "size": 13,
+      "members": [
+        "5XWM_1",
+        "5XWM_3",
+        "3DXB_16",
+        "3HZ4_1",
+        "1V98_2",
+        "5Y4T_1",
+        "1UVZ_3",
+        "4POB_1",
+        "3HHV_1",
+        "1XWB_5",
+        "3DIE_1",
+        "1ERV_1",
+        "4AJ7_1"
+      ],
+      "pdb_ids": [
+        "5Y4T",
+        "3HHV",
+        "1XWB",
+        "3DIE",
+        "5XWM",
+        "3DXB",
+        "3HZ4",
+        "1UVZ",
+        "4AJ7",
+        "1V98",
+        "4POB",
+        "1ERV"
+      ]
+    },
+    {
+      "cluster_id": "3KEB_1",
+      "size": 11,
+      "members": [
+        "3KEB_1",
+        "3ZRD_1",
+        "1XVQ_2",
+        "4JE1_1",
+        "2CX4_1",
+        "1PSQ_1",
+        "1QXH_1",
+        "1Q98_1",
+        "3HJP_1",
+        "4G2E_1",
+        "5C04_1"
+      ],
+      "pdb_ids": [
+        "4G2E",
+        "3ZRD",
+        "3HJP",
+        "2CX4",
+        "1PSQ",
+        "5C04",
+        "1QXH",
+        "1XVQ",
+        "1Q98",
+        "4JE1",
+        "3KEB"
+      ]
+    },
+    {
+      "cluster_id": "5MWX_1",
+      "size": 10,
+      "members": [
+        "5MWX_1",
+        "3WUD_1",
+        "1IS3_1",
+        "3AJZ_1",
+        "3DUI_1",
+        "1GAN_1",
+        "1SLB_2",
+        "1QMJ_1",
+        "2YMZ_2",
+        "1HLC_1"
+      ],
+      "pdb_ids": [
+        "5MWX",
+        "3AJZ",
+        "1HLC",
+        "1QMJ",
+        "1IS3",
+        "1SLB",
+        "3DUI",
+        "2YMZ",
+        "1GAN",
+        "3WUD"
+      ]
+    },
+    {
+      "cluster_id": "6EET_1",
+      "size": 9,
+      "members": [
+        "6EET_1",
+        "5IU9_1",
+        "3K5S_1",
+        "4NUQ_1",
+        "4ZMY_1",
+        "4NQQ_1",
+        "6CGB_1",
+        "3PPE_1",
+        "1ZXK_1"
+      ],
+      "pdb_ids": [
+        "3PPE",
+        "3K5S",
+        "4NQQ",
+        "5IU9",
+        "1ZXK",
+        "4ZMY",
+        "6EET",
+        "4NUQ",
+        "6CGB"
+      ]
+    },
+    {
+      "cluster_id": "3MGC_2",
+      "size": 9,
+      "members": [
+        "3MGC_2",
+        "3MG9_3",
+        "3NIB_1",
+        "2H8K_1",
+        "2GWH_1",
+        "1HY3_1",
+        "1OV4_1",
+        "2OV8_1",
+        "3F3Y_2"
+      ],
+      "pdb_ids": [
+        "2GWH",
+        "3MGC",
+        "3F3Y",
+        "1HY3",
+        "3MG9",
+        "2OV8",
+        "1OV4",
+        "2H8K",
+        "3NIB"
+      ]
+    },
+    {
+      "cluster_id": "4BLA_10",
+      "size": 8,
+      "members": [
+        "4BLA_10",
+        "6DD5_1",
+        "1HSJ_1",
+        "4IKM_1",
+        "5YGS_6",
+        "4KMD_4",
+        "3WOA_1",
+        "5B3Z_1"
+      ],
+      "pdb_ids": [
+        "1HSJ",
+        "6DD5",
+        "4IKM",
+        "4KMD",
+        "5YGS",
+        "5B3Z",
+        "3WOA",
+        "4BLA"
+      ]
+    },
+    {
+      "cluster_id": "2G0H_1",
+      "size": 8,
+      "members": [
+        "2G0H_1",
+        "4OAR_3",
+        "4RE8_3",
+        "4FN9_1",
+        "3P0U_1",
+        "3CJW_1",
+        "1S9P_1",
+        "1S9P_5"
+      ],
+      "pdb_ids": [
+        "4OAR",
+        "3P0U",
+        "4FN9",
+        "4RE8",
+        "3CJW",
+        "2G0H",
+        "1S9P"
+      ]
+    },
+    {
+      "cluster_id": "3LJS_1",
+      "size": 7,
+      "members": [
+        "3LJS_1",
+        "4DU5_2",
+        "1TZ3_1",
+        "3HJ6_1",
+        "3LHX_1",
+        "3PL2_2",
+        "4E69_2"
+      ],
+      "pdb_ids": [
+        "3LJS",
+        "3HJ6",
+        "4DU5",
+        "3PL2",
+        "4E69",
+        "1TZ3",
+        "3LHX"
+      ]
+    },
+    {
+      "cluster_id": "3GHY_3",
+      "size": 7,
+      "members": [
+        "3GHY_3",
+        "2EW2_1",
+        "3I83_1",
+        "3HN2_1",
+        "3EGO_1",
+        "3G17_2",
+        "4S3M_1"
+      ],
+      "pdb_ids": [
+        "3GHY",
+        "3HN2",
+        "3EGO",
+        "4S3M",
+        "2EW2",
+        "3I83",
+        "3G17"
+      ]
+    },
+    {
+      "cluster_id": "3AUF_1",
+      "size": 7,
+      "members": [
+        "3AUF_1",
+        "3DA8_1",
+        "3DCJ_1",
+        "3P9X_1",
+        "4DS3_1",
+        "5CJJ_1",
+        "3OA4_1"
+      ],
+      "pdb_ids": [
+        "3DCJ",
+        "3P9X",
+        "3OA4",
+        "4DS3",
+        "5CJJ",
+        "3AUF",
+        "3DA8"
+      ]
+    },
+    {
+      "cluster_id": "4F82_1",
+      "size": 7,
+      "members": [
+        "4F82_1",
+        "5J9C_1",
+        "2PWJ_2",
+        "2XHF_1",
+        "4MMM_5",
+        "2WFC_1",
+        "5K2I_1"
+      ],
+      "pdb_ids": [
+        "4MMM",
+        "5K2I",
+        "2WFC",
+        "2PWJ",
+        "4F82",
+        "2XHF",
+        "5J9C"
+      ]
+    },
+    {
+      "cluster_id": "1GMZ_1",
+      "size": 7,
+      "members": [
+        "1GMZ_1",
+        "1KVO_2",
+        "1POE_1",
+        "1BJJ_9",
+        "3DIH_2",
+        "3JR8_2",
+        "4RFP_1"
+      ],
+      "pdb_ids": [
+        "1GMZ",
+        "3DIH",
+        "1KVO",
+        "1BJJ",
+        "3JR8",
+        "1POE",
+        "4RFP"
+      ]
+    },
+    {
+      "cluster_id": "6G5G_11",
+      "size": 6,
+      "members": [
+        "6G5G_11",
+        "5BQN_4",
+        "5V38_7",
+        "2G7P_1",
+        "6DKK_1",
+        "6DKK_6"
+      ],
+      "pdb_ids": [
+        "6G5G",
+        "5BQN",
+        "6DKK",
+        "5V38",
+        "2G7P"
+      ]
+    },
+    {
+      "cluster_id": "1UOU_1",
+      "size": 6,
+      "members": [
+        "1UOU_1",
+        "2TPT_1",
+        "4GA4_1",
+        "4YYY_1",
+        "5EP8_1",
+        "2DSJ_1"
+      ],
+      "pdb_ids": [
+        "4YYY",
+        "5EP8",
+        "1UOU",
+        "2DSJ",
+        "4GA4",
+        "2TPT"
+      ]
+    },
+    {
+      "cluster_id": "4LW8_1",
+      "size": 6,
+      "members": [
+        "4LW8_1",
+        "1BWS_1",
+        "4E5Y_1",
+        "5LC1_5",
+        "4ZRN_1",
+        "2P5U_1"
+      ],
+      "pdb_ids": [
+        "4E5Y",
+        "1BWS",
+        "2P5U",
+        "4ZRN",
+        "4LW8",
+        "5LC1"
+      ]
+    },
+    {
+      "cluster_id": "3PF9_1",
+      "size": 6,
+      "members": [
+        "3PF9_1",
+        "2F6S_1",
+        "5CKL_1",
+        "3DED_1",
+        "2OAI_1",
+        "2PLS_5"
+      ],
+      "pdb_ids": [
+        "2F6S",
+        "3PF9",
+        "5CKL",
+        "2PLS",
+        "2OAI",
+        "3DED"
+      ]
+    },
+    {
+      "cluster_id": "5YTB_12",
+      "size": 6,
+      "members": [
+        "5YTB_12",
+        "3CLV_1",
+        "3NC1_5",
+        "4LRW_1",
+        "6EPP_2",
+        "5P21_1"
+      ],
+      "pdb_ids": [
+        "3CLV",
+        "6EPP",
+        "3NC1",
+        "5YTB",
+        "5P21",
+        "4LRW"
+      ]
+    },
+    {
+      "cluster_id": "5XWE_1",
+      "size": 6,
+      "members": [
+        "5XWE_1",
+        "4LFT_1",
+        "2CTX_1",
+        "3HH7_1",
+        "1QKD_1",
+        "1CDT_1"
+      ],
+      "pdb_ids": [
+        "3HH7",
+        "1QKD",
+        "4LFT",
+        "5XWE",
+        "2CTX",
+        "1CDT"
+      ]
+    },
+    {
+      "cluster_id": "1GXD_4",
+      "size": 5,
+      "members": [
+        "1GXD_4",
+        "3M7P_3",
+        "4JP4_1",
+        "1XUR_1",
+        "6MAV_7"
+      ],
+      "pdb_ids": [
+        "1XUR",
+        "6MAV",
+        "3M7P",
+        "4JP4",
+        "1GXD"
+      ]
+    },
+    {
+      "cluster_id": "3BL8_1",
+      "size": 5,
+      "members": [
+        "3BL8_1",
+        "1SOM_1",
+        "2HA7_1",
+        "1XLU_1",
+        "5DYW_1"
+      ],
+      "pdb_ids": [
+        "5DYW",
+        "1SOM",
+        "2HA7",
+        "1XLU",
+        "3BL8"
+      ]
+    },
+    {
+      "cluster_id": "4GDY_11",
+      "size": 5,
+      "members": [
+        "4GDY_11",
+        "3DYD_1",
+        "3ZPG_1",
+        "2DOU_1",
+        "3DH1_1"
+      ],
+      "pdb_ids": [
+        "4GDY",
+        "2DOU",
+        "3DH1",
+        "3ZPG",
+        "3DYD"
+      ]
+    },
+    {
+      "cluster_id": "1Q1E_2",
+      "size": 5,
+      "members": [
+        "1Q1E_2",
+        "6GJQ_3",
+        "1VPL_1",
+        "1XEF_2",
+        "2PCJ_1"
+      ],
+      "pdb_ids": [
+        "1VPL",
+        "1Q1E",
+        "6GJQ",
+        "1XEF",
+        "2PCJ"
+      ]
+    },
+    {
+      "cluster_id": "4DUP_1",
+      "size": 5,
+      "members": [
+        "4DUP_1",
+        "2J8Z_1",
+        "3LCR_1",
+        "1IYZ_1",
+        "1KEZ_1"
+      ],
+      "pdb_ids": [
+        "3LCR",
+        "1IYZ",
+        "1KEZ",
+        "4DUP",
+        "2J8Z"
+      ]
+    },
+    {
+      "cluster_id": "5HQW_1",
+      "size": 5,
+      "members": [
+        "5HQW_1",
+        "5HU7_1",
+        "5J6O_1",
+        "3KG8_1",
+        "3KG6_2"
+      ],
+      "pdb_ids": [
+        "5HU7",
+        "5HQW",
+        "3KG6",
+        "5J6O",
+        "3KG8"
+      ]
+    },
+    {
+      "cluster_id": "4OPH_1",
+      "size": 5,
+      "members": [
+        "4OPH_1",
+        "3D6R_3",
+        "3O9S_1",
+        "5H5N_1",
+        "1AIL_1"
+      ],
+      "pdb_ids": [
+        "4OPH",
+        "3D6R",
+        "3O9S",
+        "5H5N",
+        "1AIL"
+      ]
+    },
+    {
+      "cluster_id": "1TO0_3",
+      "size": 5,
+      "members": [
+        "1TO0_3",
+        "1NS5_1",
+        "1O6D_2",
+        "1VH0_8",
+        "5ZYO_2"
+      ],
+      "pdb_ids": [
+        "1O6D",
+        "5ZYO",
+        "1NS5",
+        "1VH0",
+        "1TO0"
+      ]
+    },
+    {
+      "cluster_id": "3ERJ_1",
+      "size": 5,
+      "members": [
+        "3ERJ_1",
+        "1WN2_1",
+        "1XTY_2",
+        "1Q7S_3",
+        "2ZV3_3"
+      ],
+      "pdb_ids": [
+        "1Q7S",
+        "2ZV3",
+        "3ERJ",
+        "1WN2",
+        "1XTY"
+      ]
+    },
+    {
+      "cluster_id": "1ESR_1",
+      "size": 5,
+      "members": [
+        "1ESR_1",
+        "2FJ2_2",
+        "2X6G_7",
+        "1U4M_1",
+        "2Q8R_2"
+      ],
+      "pdb_ids": [
+        "1U4M",
+        "1ESR",
+        "2FJ2",
+        "2X6G",
+        "2Q8R"
+      ]
+    },
+    {
+      "cluster_id": "1LWS_4",
+      "size": 5,
+      "members": [
+        "1LWS_4",
+        "6BWY_1",
+        "2AJQ_9",
+        "2ZHG_1",
+        "3B39_3"
+      ],
+      "pdb_ids": [
+        "3B39",
+        "2ZHG",
+        "1LWS",
+        "6BWY",
+        "2AJQ"
+      ]
+    },
+    {
+      "cluster_id": "5YIJ_13",
+      "size": 4,
+      "members": [
+        "5YIJ_13",
+        "5YIJ_5",
+        "5YIK_15",
+        "5YIM_2"
+      ],
+      "pdb_ids": [
+        "5YIK",
+        "5YIM",
+        "5YIJ"
+      ]
+    },
+    {
+      "cluster_id": "1DGK_1",
+      "size": 4,
+      "members": [
+        "1DGK_1",
+        "6JJ4_4",
+        "4L3Q_1",
+        "1V4T_4"
+      ],
+      "pdb_ids": [
+        "6JJ4",
+        "1V4T",
+        "4L3Q",
+        "1DGK"
+      ]
+    },
+    {
+      "cluster_id": "1BJT_1",
+      "size": 4,
+      "members": [
+        "1BJT_1",
+        "2XCR_4",
+        "3NUH_5",
+        "4CKL_2"
+      ],
+      "pdb_ids": [
+        "1BJT",
+        "3NUH",
+        "4CKL",
+        "2XCR"
+      ]
+    },
+    {
+      "cluster_id": "2O1V_1",
+      "size": 4,
+      "members": [
+        "2O1V_1",
+        "5F3K_1",
+        "5F5R_2",
+        "6CJS_3"
+      ],
+      "pdb_ids": [
+        "5F3K",
+        "6CJS",
+        "2O1V",
+        "5F5R"
+      ]
+    },
+    {
+      "cluster_id": "5K5T_1",
+      "size": 4,
+      "members": [
+        "5K5T_1",
+        "4XAR_1",
+        "4XAS_1",
+        "3MQ4_1"
+      ],
+      "pdb_ids": [
+        "4XAS",
+        "5K5T",
+        "4XAR",
+        "3MQ4"
+      ]
+    },
+    {
+      "cluster_id": "4NZQ_2",
+      "size": 4,
+      "members": [
+        "4NZQ_2",
+        "4O03_1",
+        "4KKD_1",
+        "1SI5_3"
+      ],
+      "pdb_ids": [
+        "4KKD",
+        "4O03",
+        "4NZQ",
+        "1SI5"
+      ]
+    },
+    {
+      "cluster_id": "3QM2_1",
+      "size": 4,
+      "members": [
+        "3QM2_1",
+        "3M5U_1",
+        "5YII_1",
+        "5YII_2"
+      ],
+      "pdb_ids": [
+        "5YII",
+        "3QM2",
+        "3M5U"
+      ]
+    },
+    {
+      "cluster_id": "3ZL7_8",
+      "size": 4,
+      "members": [
+        "3ZL7_8",
+        "5N71_4",
+        "1LEE_3",
+        "1PSA_1"
+      ],
+      "pdb_ids": [
+        "5N71",
+        "1PSA",
+        "3ZL7",
+        "1LEE"
+      ]
+    },
+    {
+      "cluster_id": "1J8F_5",
+      "size": 4,
+      "members": [
+        "1J8F_5",
+        "5Y2F_2",
+        "5MAT_1",
+        "1ICI_5"
+      ],
+      "pdb_ids": [
+        "1ICI",
+        "5MAT",
+        "5Y2F",
+        "1J8F"
+      ]
+    },
+    {
+      "cluster_id": "1YAE_9",
+      "size": 4,
+      "members": [
+        "1YAE_9",
+        "2V3T_1",
+        "1MQD_4",
+        "4NWC_2"
+      ],
+      "pdb_ids": [
+        "4NWC",
+        "2V3T",
+        "1YAE",
+        "1MQD"
+      ]
+    },
+    {
+      "cluster_id": "4EMB_2",
+      "size": 4,
+      "members": [
+        "4EMB_2",
+        "4EO9_1",
+        "1E59_1",
+        "4PZ9_1"
+      ],
+      "pdb_ids": [
+        "4EMB",
+        "4PZ9",
+        "1E59",
+        "4EO9"
+      ]
+    },
+    {
+      "cluster_id": "2A4A_3",
+      "size": 4,
+      "members": [
+        "2A4A_3",
+        "5C6M_2",
+        "5C2X_1",
+        "1KTN_1"
+      ],
+      "pdb_ids": [
+        "5C6M",
+        "5C2X",
+        "2A4A",
+        "1KTN"
+      ]
+    },
+    {
+      "cluster_id": "5CKN_1",
+      "size": 4,
+      "members": [
+        "5CKN_1",
+        "5CKM_1",
+        "4LMF_6",
+        "1NZI_1"
+      ],
+      "pdb_ids": [
+        "5CKM",
+        "5CKN",
+        "1NZI",
+        "4LMF"
+      ]
+    },
+    {
+      "cluster_id": "4JDL_2",
+      "size": 4,
+      "members": [
+        "4JDL_2",
+        "4DSC_1",
+        "3RT2_2",
+        "3KAY_1"
+      ],
+      "pdb_ids": [
+        "3RT2",
+        "4JDL",
+        "3KAY",
+        "4DSC"
+      ]
+    },
+    {
+      "cluster_id": "5AN1_5",
+      "size": 4,
+      "members": [
+        "5AN1_5",
+        "6GSU_1",
+        "1Q4J_1",
+        "2WS2_1"
+      ],
+      "pdb_ids": [
+        "6GSU",
+        "2WS2",
+        "5AN1",
+        "1Q4J"
+      ]
+    },
+    {
+      "cluster_id": "2NWU_1",
+      "size": 4,
+      "members": [
+        "2NWU_1",
+        "2PZZ_1",
+        "3C9G_1",
+        "3D7A_1"
+      ],
+      "pdb_ids": [
+        "3C9G",
+        "2PZZ",
+        "2NWU",
+        "3D7A"
+      ]
+    },
+    {
+      "cluster_id": "1QHQ_3",
+      "size": 4,
+      "members": [
+        "1QHQ_3",
+        "1AIZ_1",
+        "1RKR_5",
+        "1UAT_2"
+      ],
+      "pdb_ids": [
+        "1QHQ",
+        "1UAT",
+        "1RKR",
+        "1AIZ"
+      ]
+    },
+    {
+      "cluster_id": "2H9U_1",
+      "size": 4,
+      "members": [
+        "2H9U_1",
+        "1H0X_1",
+        "2Z7C_2",
+        "3TOE_1"
+      ],
+      "pdb_ids": [
+        "1H0X",
+        "3TOE",
+        "2H9U",
+        "2Z7C"
+      ]
+    },
+    {
+      "cluster_id": "5HB4_7",
+      "size": 3,
+      "members": [
+        "5HB4_7",
+        "4KNH_1",
+        "4KNH_4"
+      ],
+      "pdb_ids": [
+        "5HB4",
+        "4KNH"
+      ]
+    },
+    {
+      "cluster_id": "5ZLN_1",
+      "size": 3,
+      "members": [
+        "5ZLN_1",
+        "4QDH_1",
+        "2WFH_1"
+      ],
+      "pdb_ids": [
+        "2WFH",
+        "4QDH",
+        "5ZLN"
+      ]
+    },
+    {
+      "cluster_id": "3FFN_1",
+      "size": 3,
+      "members": [
+        "3FFN_1",
+        "3FG6_42",
+        "5A1K_8"
+      ],
+      "pdb_ids": [
+        "3FFN",
+        "5A1K",
+        "3FG6"
+      ]
+    },
+    {
+      "cluster_id": "1YVL_4",
+      "size": 3,
+      "members": [
+        "1YVL_4",
+        "4Y5U_1",
+        "1BGF_1"
+      ],
+      "pdb_ids": [
+        "1YVL",
+        "4Y5U",
+        "1BGF"
+      ]
+    },
+    {
+      "cluster_id": "4WHJ_1",
+      "size": 3,
+      "members": [
+        "4WHJ_1",
+        "3LJB_2",
+        "4X0R_1"
+      ],
+      "pdb_ids": [
+        "3LJB",
+        "4X0R",
+        "4WHJ"
+      ]
+    },
+    {
+      "cluster_id": "3CTZ_1",
+      "size": 3,
+      "members": [
+        "3CTZ_1",
+        "4ZNG_1",
+        "3OOO_1"
+      ],
+      "pdb_ids": [
+        "3OOO",
+        "4ZNG",
+        "3CTZ"
+      ]
+    },
+    {
+      "cluster_id": "3WBI_8",
+      "size": 3,
+      "members": [
+        "3WBI_8",
+        "3WBJ_2",
+        "3WBJ_6"
+      ],
+      "pdb_ids": [
+        "3WBJ",
+        "3WBI"
+      ]
+    },
+    {
+      "cluster_id": "4ZHR_4",
+      "size": 3,
+      "members": [
+        "4ZHR_4",
+        "1MML_2",
+        "5DZM_3"
+      ],
+      "pdb_ids": [
+        "5DZM",
+        "4ZHR",
+        "1MML"
+      ]
+    },
+    {
+      "cluster_id": "3P27_1",
+      "size": 3,
+      "members": [
+        "3P27_1",
+        "4C0S_1",
+        "3WXM_3"
+      ],
+      "pdb_ids": [
+        "3WXM",
+        "3P27",
+        "4C0S"
+      ]
+    },
+    {
+      "cluster_id": "2F9Q_2",
+      "size": 3,
+      "members": [
+        "2F9Q_2",
+        "2F9Q_3",
+        "2BDM_2"
+      ],
+      "pdb_ids": [
+        "2BDM",
+        "2F9Q"
+      ]
+    },
+    {
+      "cluster_id": "4XEA_1",
+      "size": 3,
+      "members": [
+        "4XEA_1",
+        "4NNZ_2",
+        "3EOQ_1"
+      ],
+      "pdb_ids": [
+        "4XEA",
+        "3EOQ",
+        "4NNZ"
+      ]
+    },
+    {
+      "cluster_id": "4YIW_1",
+      "size": 3,
+      "members": [
+        "4YIW_1",
+        "3HM7_2",
+        "2Z00_2"
+      ],
+      "pdb_ids": [
+        "2Z00",
+        "3HM7",
+        "4YIW"
+      ]
+    },
+    {
+      "cluster_id": "3GTY_7",
+      "size": 3,
+      "members": [
+        "3GTY_7",
+        "2NSA_5",
+        "2NSA_6"
+      ],
+      "pdb_ids": [
+        "2NSA",
+        "3GTY"
+      ]
+    },
+    {
+      "cluster_id": "3G45_1",
+      "size": 3,
+      "members": [
+        "3G45_1",
+        "2R8Q_1",
+        "4I15_1"
+      ],
+      "pdb_ids": [
+        "4I15",
+        "3G45",
+        "2R8Q"
+      ]
+    },
+    {
+      "cluster_id": "3SVK_1",
+      "size": 3,
+      "members": [
+        "3SVK_1",
+        "5ONC_1",
+        "1AFW_1"
+      ],
+      "pdb_ids": [
+        "1AFW",
+        "3SVK",
+        "5ONC"
+      ]
+    },
+    {
+      "cluster_id": "6LNP_1",
+      "size": 3,
+      "members": [
+        "6LNP_1",
+        "2J80_1",
+        "3BY8_2"
+      ],
+      "pdb_ids": [
+        "6LNP",
+        "3BY8",
+        "2J80"
+      ]
+    },
+    {
+      "cluster_id": "1AZT_1",
+      "size": 3,
+      "members": [
+        "1AZT_1",
+        "3V00_10",
+        "3N5C_1"
+      ],
+      "pdb_ids": [
+        "3V00",
+        "1AZT",
+        "3N5C"
+      ]
+    },
+    {
+      "cluster_id": "6II0_11",
+      "size": 3,
+      "members": [
+        "6II0_11",
+        "6II0_6",
+        "6II0_7"
+      ],
+      "pdb_ids": [
+        "6II0"
+      ]
+    },
+    {
+      "cluster_id": "3A9I_1",
+      "size": 3,
+      "members": [
+        "3A9I_1",
+        "3EEG_1",
+        "3EWB_1"
+      ],
+      "pdb_ids": [
+        "3EEG",
+        "3EWB",
+        "3A9I"
+      ]
+    },
+    {
+      "cluster_id": "1D1T_4",
+      "size": 3,
+      "members": [
+        "1D1T_4",
+        "5VKT_2",
+        "1Q1N_1"
+      ],
+      "pdb_ids": [
+        "1D1T",
+        "1Q1N",
+        "5VKT"
+      ]
+    },
+    {
+      "cluster_id": "1JYE_1",
+      "size": 3,
+      "members": [
+        "1JYE_1",
+        "3CLK_1",
+        "3D8U_1"
+      ],
+      "pdb_ids": [
+        "3CLK",
+        "1JYE",
+        "3D8U"
+      ]
+    },
+    {
+      "cluster_id": "6TXQ_3",
+      "size": 3,
+      "members": [
+        "6TXQ_3",
+        "3U8Z_10",
+        "3U8Z_2"
+      ],
+      "pdb_ids": [
+        "3U8Z",
+        "6TXQ"
+      ]
+    },
+    {
+      "cluster_id": "3L6B_1",
+      "size": 3,
+      "members": [
+        "3L6B_1",
+        "3HMK_1",
+        "1WTC_1"
+      ],
+      "pdb_ids": [
+        "3L6B",
+        "3HMK",
+        "1WTC"
+      ]
+    },
+    {
+      "cluster_id": "1ZZH_2",
+      "size": 3,
+      "members": [
+        "1ZZH_2",
+        "1RZ6_2",
+        "1IQC_1"
+      ],
+      "pdb_ids": [
+        "1IQC",
+        "1RZ6",
+        "1ZZH"
+      ]
+    },
+    {
+      "cluster_id": "4BKM_1",
+      "size": 3,
+      "members": [
+        "4BKM_1",
+        "1YV9_1",
+        "1ZJJ_1"
+      ],
+      "pdb_ids": [
+        "1YV9",
+        "4BKM",
+        "1ZJJ"
+      ]
+    },
+    {
+      "cluster_id": "1MVH_1",
+      "size": 3,
+      "members": [
+        "1MVH_1",
+        "3HNA_3",
+        "5VSC_1"
+      ],
+      "pdb_ids": [
+        "3HNA",
+        "5VSC",
+        "1MVH"
+      ]
+    },
+    {
+      "cluster_id": "1Y7H_2",
+      "size": 3,
+      "members": [
+        "1Y7H_2",
+        "3DQZ_2",
+        "3RKS_2"
+      ],
+      "pdb_ids": [
+        "3DQZ",
+        "1Y7H",
+        "3RKS"
+      ]
+    },
+    {
+      "cluster_id": "3EFB_1",
+      "size": 3,
+      "members": [
+        "3EFB_1",
+        "4L4Z_1",
+        "3BXH_1"
+      ],
+      "pdb_ids": [
+        "3BXH",
+        "3EFB",
+        "4L4Z"
+      ]
+    },
+    {
+      "cluster_id": "2PH1_1",
+      "size": 3,
+      "members": [
+        "2PH1_1",
+        "3KB1_1",
+        "3VX3_1"
+      ],
+      "pdb_ids": [
+        "2PH1",
+        "3VX3",
+        "3KB1"
+      ]
+    },
+    {
+      "cluster_id": "2XEQ_1",
+      "size": 3,
+      "members": [
+        "2XEQ_1",
+        "2XEQ_5",
+        "2XER_3"
+      ],
+      "pdb_ids": [
+        "2XER",
+        "2XEQ"
+      ]
+    },
+    {
+      "cluster_id": "5XWZ_2",
+      "size": 3,
+      "members": [
+        "5XWZ_2",
+        "5XO7_1",
+        "5IE7_1"
+      ],
+      "pdb_ids": [
+        "5XWZ",
+        "5IE7",
+        "5XO7"
+      ]
+    },
+    {
+      "cluster_id": "5B1Y_1",
+      "size": 3,
+      "members": [
+        "5B1Y_1",
+        "4YXF_1",
+        "6GZC_3"
+      ],
+      "pdb_ids": [
+        "6GZC",
+        "4YXF",
+        "5B1Y"
+      ]
+    },
+    {
+      "cluster_id": "4F7R_11",
+      "size": 3,
+      "members": [
+        "4F7R_11",
+        "5LVZ_1",
+        "5F74_2"
+      ],
+      "pdb_ids": [
+        "5F74",
+        "4F7R",
+        "5LVZ"
+      ]
+    },
+    {
+      "cluster_id": "3PR8_1",
+      "size": 3,
+      "members": [
+        "3PR8_1",
+        "3LYP_1",
+        "4OMV_1"
+      ],
+      "pdb_ids": [
+        "3LYP",
+        "3PR8",
+        "4OMV"
+      ]
+    },
+    {
+      "cluster_id": "3O63_1",
+      "size": 3,
+      "members": [
+        "3O63_1",
+        "1YAD_2",
+        "1XI3_1"
+      ],
+      "pdb_ids": [
+        "3O63",
+        "1XI3",
+        "1YAD"
+      ]
+    },
+    {
+      "cluster_id": "3U7I_2",
+      "size": 3,
+      "members": [
+        "3U7I_2",
+        "2V9C_1",
+        "4ESE_1"
+      ],
+      "pdb_ids": [
+        "2V9C",
+        "4ESE",
+        "3U7I"
+      ]
+    },
+    {
+      "cluster_id": "1KS2_1",
+      "size": 3,
+      "members": [
+        "1KS2_1",
+        "4GMK_1",
+        "3L7O_1"
+      ],
+      "pdb_ids": [
+        "4GMK",
+        "3L7O",
+        "1KS2"
+      ]
+    },
+    {
+      "cluster_id": "3FTJ_3",
+      "size": 3,
+      "members": [
+        "3FTJ_3",
+        "3FTJ_5",
+        "5LJ8_3"
+      ],
+      "pdb_ids": [
+        "3FTJ",
+        "5LJ8"
+      ]
+    },
+    {
+      "cluster_id": "4CKN_2",
+      "size": 3,
+      "members": [
+        "4CKN_2",
+        "4CKM_2",
+        "4TTW_1"
+      ],
+      "pdb_ids": [
+        "4CKN",
+        "4TTW",
+        "4CKM"
+      ]
+    },
+    {
+      "cluster_id": "1TMK_1",
+      "size": 3,
+      "members": [
+        "1TMK_1",
+        "4MQB_1",
+        "2V54_1"
+      ],
+      "pdb_ids": [
+        "2V54",
+        "1TMK",
+        "4MQB"
+      ]
+    },
+    {
+      "cluster_id": "3HRU_1",
+      "size": 3,
+      "members": [
+        "3HRU_1",
+        "2ISY_1",
+        "2F5E_1"
+      ],
+      "pdb_ids": [
+        "2F5E",
+        "2ISY",
+        "3HRU"
+      ]
+    },
+    {
+      "cluster_id": "3TQU_2",
+      "size": 3,
+      "members": [
+        "3TQU_2",
+        "1B78_1",
+        "2DVN_1"
+      ],
+      "pdb_ids": [
+        "2DVN",
+        "1B78",
+        "3TQU"
+      ]
+    },
+    {
+      "cluster_id": "4U66_5",
+      "size": 3,
+      "members": [
+        "4U66_5",
+        "3PIM_1",
+        "4W8C_6"
+      ],
+      "pdb_ids": [
+        "3PIM",
+        "4W8C",
+        "4U66"
+      ]
+    },
+    {
+      "cluster_id": "3C8J_1",
+      "size": 3,
+      "members": [
+        "3C8J_1",
+        "2BPD_1",
+        "1HQ8_1"
+      ],
+      "pdb_ids": [
+        "3C8J",
+        "1HQ8",
+        "2BPD"
+      ]
+    },
+    {
+      "cluster_id": "1VOK_6",
+      "size": 3,
+      "members": [
+        "1VOK_6",
+        "1MP9_1",
+        "1PCZ_1"
+      ],
+      "pdb_ids": [
+        "1MP9",
+        "1PCZ",
+        "1VOK"
+      ]
+    },
+    {
+      "cluster_id": "5EXV_1",
+      "size": 3,
+      "members": [
+        "5EXV_1",
+        "2PH0_1",
+        "2OVI_2"
+      ],
+      "pdb_ids": [
+        "2OVI",
+        "2PH0",
+        "5EXV"
+      ]
+    },
+    {
+      "cluster_id": "5VCP_1",
+      "size": 3,
+      "members": [
+        "5VCP_1",
+        "1VEZ_2",
+        "1Y6H_3"
+      ],
+      "pdb_ids": [
+        "1Y6H",
+        "5VCP",
+        "1VEZ"
+      ]
+    },
+    {
+      "cluster_id": "4MEI_1",
+      "size": 3,
+      "members": [
+        "4MEI_1",
+        "2BHM_2",
+        "2CC3_1"
+      ],
+      "pdb_ids": [
+        "2BHM",
+        "4MEI",
+        "2CC3"
+      ]
+    },
+    {
+      "cluster_id": "2OQT_5",
+      "size": 3,
+      "members": [
+        "2OQT_5",
+        "3BJV_1",
+        "3OXP_1"
+      ],
+      "pdb_ids": [
+        "3OXP",
+        "3BJV",
+        "2OQT"
+      ]
+    },
+    {
+      "cluster_id": "3OCO_1",
+      "size": 3,
+      "members": [
+        "3OCO_1",
+        "3LV9_1",
+        "3HF7_2"
+      ],
+      "pdb_ids": [
+        "3OCO",
+        "3HF7",
+        "3LV9"
+      ]
+    },
+    {
+      "cluster_id": "3SMD_2",
+      "size": 3,
+      "members": [
+        "3SMD_2",
+        "3EES_1",
+        "3R03_1"
+      ],
+      "pdb_ids": [
+        "3EES",
+        "3SMD",
+        "3R03"
+      ]
+    },
+    {
+      "cluster_id": "2RGV_1",
+      "size": 3,
+      "members": [
+        "2RGV_1",
+        "4RB0_7",
+        "4RAY_1"
+      ],
+      "pdb_ids": [
+        "2RGV",
+        "4RB0",
+        "4RAY"
+      ]
+    },
+    {
+      "cluster_id": "3TER_1",
+      "size": 3,
+      "members": [
+        "3TER_1",
+        "3TEQ_1",
+        "3TEQ_3"
+      ],
+      "pdb_ids": [
+        "3TER",
+        "3TEQ"
+      ]
+    },
+    {
+      "cluster_id": "5GYR_7",
+      "size": 3,
+      "members": [
+        "5GYR_7",
+        "1E85_1",
+        "2J8W_1"
+      ],
+      "pdb_ids": [
+        "2J8W",
+        "1E85",
+        "5GYR"
+      ]
+    },
+    {
+      "cluster_id": "2B0U_18",
+      "size": 3,
+      "members": [
+        "2B0U_18",
+        "1TFG_1",
+        "6MAC_5"
+      ],
+      "pdb_ids": [
+        "2B0U",
+        "1TFG",
+        "6MAC"
+      ]
+    },
+    {
+      "cluster_id": "1MY7_1",
+      "size": 3,
+      "members": [
+        "1MY7_1",
+        "1U3Z_1",
+        "3JV5_2"
+      ],
+      "pdb_ids": [
+        "1U3Z",
+        "1MY7",
+        "3JV5"
+      ]
+    },
+    {
+      "cluster_id": "4QHH_3",
+      "size": 3,
+      "members": [
+        "4QHH_3",
+        "4QHI_1",
+        "4QHJ_1"
+      ],
+      "pdb_ids": [
+        "4QHI",
+        "4QHJ",
+        "4QHH"
+      ]
+    },
+    {
+      "cluster_id": "6AEG_3",
+      "size": 3,
+      "members": [
+        "6AEG_3",
+        "1B23_4",
+        "6K4P_3"
+      ],
+      "pdb_ids": [
+        "6K4P",
+        "1B23",
+        "6AEG"
+      ]
+    },
+    {
+      "cluster_id": "2PMR_1",
+      "size": 3,
+      "members": [
+        "2PMR_1",
+        "2OO2_1",
+        "4FZP_1"
+      ],
+      "pdb_ids": [
+        "2PMR",
+        "2OO2",
+        "4FZP"
+      ]
+    },
+    {
+      "cluster_id": "4U59_2",
+      "size": 2,
+      "members": [
+        "4U59_2",
+        "4ZIQ_3"
+      ],
+      "pdb_ids": [
+        "4U59",
+        "4ZIQ"
+      ]
+    },
+    {
+      "cluster_id": "2PN5_2",
+      "size": 2,
+      "members": [
+        "2PN5_2",
+        "4D94_2"
+      ],
+      "pdb_ids": [
+        "4D94",
+        "2PN5"
+      ]
+    },
+    {
+      "cluster_id": "5ZTF_1",
+      "size": 2,
+      "members": [
+        "5ZTF_1",
+        "3NAN_2"
+      ],
+      "pdb_ids": [
+        "5ZTF",
+        "3NAN"
+      ]
+    },
+    {
+      "cluster_id": "4C0O_1",
+      "size": 2,
+      "members": [
+        "4C0O_1",
+        "4C0P_1"
+      ],
+      "pdb_ids": [
+        "4C0P",
+        "4C0O"
+      ]
+    },
+    {
+      "cluster_id": "6QSN_1",
+      "size": 2,
+      "members": [
+        "6QSN_1",
+        "4HDG_1"
+      ],
+      "pdb_ids": [
+        "6QSN",
+        "4HDG"
+      ]
+    },
+    {
+      "cluster_id": "1TF5_1",
+      "size": 2,
+      "members": [
+        "1TF5_1",
+        "2IBM_4"
+      ],
+      "pdb_ids": [
+        "1TF5",
+        "2IBM"
+      ]
+    },
+    {
+      "cluster_id": "1TAQ_5",
+      "size": 2,
+      "members": [
+        "1TAQ_5",
+        "6VDD_2"
+      ],
+      "pdb_ids": [
+        "6VDD",
+        "1TAQ"
+      ]
+    },
+    {
+      "cluster_id": "5N69_1",
+      "size": 2,
+      "members": [
+        "5N69_1",
+        "1BR1_20"
+      ],
+      "pdb_ids": [
+        "1BR1",
+        "5N69"
+      ]
+    },
+    {
+      "cluster_id": "6QZH_3",
+      "size": 2,
+      "members": [
+        "6QZH_3",
+        "6JOD_12"
+      ],
+      "pdb_ids": [
+        "6QZH",
+        "6JOD"
+      ]
+    },
+    {
+      "cluster_id": "6EKU_2",
+      "size": 2,
+      "members": [
+        "6EKU_2",
+        "2W68_11"
+      ],
+      "pdb_ids": [
+        "2W68",
+        "6EKU"
+      ]
+    },
+    {
+      "cluster_id": "5YP1_3",
+      "size": 2,
+      "members": [
+        "5YP1_3",
+        "2ECF_1"
+      ],
+      "pdb_ids": [
+        "2ECF",
+        "5YP1"
+      ]
+    },
+    {
+      "cluster_id": "3WNK_2",
+      "size": 2,
+      "members": [
+        "3WNK_2",
+        "6FHM_1"
+      ],
+      "pdb_ids": [
+        "3WNK",
+        "6FHM"
+      ]
+    },
+    {
+      "cluster_id": "5CA9_6",
+      "size": 2,
+      "members": [
+        "5CA9_6",
+        "5CB2_3"
+      ],
+      "pdb_ids": [
+        "5CB2",
+        "5CA9"
+      ]
+    },
+    {
+      "cluster_id": "3OKT_4",
+      "size": 2,
+      "members": [
+        "3OKT_4",
+        "3AL9_1"
+      ],
+      "pdb_ids": [
+        "3OKT",
+        "3AL9"
+      ]
+    },
+    {
+      "cluster_id": "2QXL_1",
+      "size": 2,
+      "members": [
+        "2QXL_1",
+        "3FE1_7"
+      ],
+      "pdb_ids": [
+        "2QXL",
+        "3FE1"
+      ]
+    },
+    {
+      "cluster_id": "2IJD_5",
+      "size": 2,
+      "members": [
+        "2IJD_5",
+        "2ZU1_3"
+      ],
+      "pdb_ids": [
+        "2IJD",
+        "2ZU1"
+      ]
+    },
+    {
+      "cluster_id": "5L7D_1",
+      "size": 2,
+      "members": [
+        "5L7D_1",
+        "4QIN_1"
+      ],
+      "pdb_ids": [
+        "4QIN",
+        "5L7D"
+      ]
+    },
+    {
+      "cluster_id": "3LF7_2",
+      "size": 2,
+      "members": [
+        "3LF7_2",
+        "3LFI_1"
+      ],
+      "pdb_ids": [
+        "3LFI",
+        "3LF7"
+      ]
+    },
+    {
+      "cluster_id": "5HAY_1",
+      "size": 2,
+      "members": [
+        "5HAY_1",
+        "5HB0_7"
+      ],
+      "pdb_ids": [
+        "5HAY",
+        "5HB0"
+      ]
+    },
+    {
+      "cluster_id": "2IUT_1",
+      "size": 2,
+      "members": [
+        "2IUT_1",
+        "2IUT_6"
+      ],
+      "pdb_ids": [
+        "2IUT"
+      ]
+    },
+    {
+      "cluster_id": "5AJN_3",
+      "size": 2,
+      "members": [
+        "5AJN_3",
+        "2FFV_3"
+      ],
+      "pdb_ids": [
+        "2FFV",
+        "5AJN"
+      ]
+    },
+    {
+      "cluster_id": "4CQO_2",
+      "size": 2,
+      "members": [
+        "4CQO_2",
+        "4CQO_7"
+      ],
+      "pdb_ids": [
+        "4CQO"
+      ]
+    },
+    {
+      "cluster_id": "3I8B_2",
+      "size": 2,
+      "members": [
+        "3I8B_2",
+        "5VM1_5"
+      ],
+      "pdb_ids": [
+        "5VM1",
+        "3I8B"
+      ]
+    },
+    {
+      "cluster_id": "1XKV_1",
+      "size": 2,
+      "members": [
+        "1XKV_1",
+        "1II2_1"
+      ],
+      "pdb_ids": [
+        "1II2",
+        "1XKV"
+      ]
+    },
+    {
+      "cluster_id": "6INY_1",
+      "size": 2,
+      "members": [
+        "6INY_1",
+        "6III_1"
+      ],
+      "pdb_ids": [
+        "6INY",
+        "6III"
+      ]
+    },
+    {
+      "cluster_id": "6TFQ_4",
+      "size": 2,
+      "members": [
+        "6TFQ_4",
+        "4I8C_13"
+      ],
+      "pdb_ids": [
+        "6TFQ",
+        "4I8C"
+      ]
+    },
+    {
+      "cluster_id": "6G20_4",
+      "size": 2,
+      "members": [
+        "6G20_4",
+        "4E04_1"
+      ],
+      "pdb_ids": [
+        "6G20",
+        "4E04"
+      ]
+    },
+    {
+      "cluster_id": "6A16_5",
+      "size": 2,
+      "members": [
+        "6A16_5",
+        "6A17_1"
+      ],
+      "pdb_ids": [
+        "6A16",
+        "6A17"
+      ]
+    },
+    {
+      "cluster_id": "3CB2_1",
+      "size": 2,
+      "members": [
+        "3CB2_1",
+        "5MIO_5"
+      ],
+      "pdb_ids": [
+        "5MIO",
+        "3CB2"
+      ]
+    },
+    {
+      "cluster_id": "5Y9H_4",
+      "size": 2,
+      "members": [
+        "5Y9H_4",
+        "5Y9H_6"
+      ],
+      "pdb_ids": [
+        "5Y9H"
+      ]
+    },
+    {
+      "cluster_id": "1DP4_1",
+      "size": 2,
+      "members": [
+        "1DP4_1",
+        "1DP4_2"
+      ],
+      "pdb_ids": [
+        "1DP4"
+      ]
+    },
+    {
+      "cluster_id": "2ZNH_1",
+      "size": 2,
+      "members": [
+        "2ZNH_1",
+        "5NCS_1"
+      ],
+      "pdb_ids": [
+        "5NCS",
+        "2ZNH"
+      ]
+    },
+    {
+      "cluster_id": "4PLN_1",
+      "size": 2,
+      "members": [
+        "4PLN_1",
+        "4AQT_3"
+      ],
+      "pdb_ids": [
+        "4AQT",
+        "4PLN"
+      ]
+    },
+    {
+      "cluster_id": "2J3X_1",
+      "size": 2,
+      "members": [
+        "2J3X_1",
+        "2J3Z_7"
+      ],
+      "pdb_ids": [
+        "2J3X",
+        "2J3Z"
+      ]
+    },
+    {
+      "cluster_id": "6S1L_5",
+      "size": 2,
+      "members": [
+        "6S1L_5",
+        "6G16_10"
+      ],
+      "pdb_ids": [
+        "6G16",
+        "6S1L"
+      ]
+    },
+    {
+      "cluster_id": "2QGH_1",
+      "size": 2,
+      "members": [
+        "2QGH_1",
+        "3C5Q_1"
+      ],
+      "pdb_ids": [
+        "2QGH",
+        "3C5Q"
+      ]
+    },
+    {
+      "cluster_id": "1YSJ_1",
+      "size": 2,
+      "members": [
+        "1YSJ_1",
+        "4LZA_1"
+      ],
+      "pdb_ids": [
+        "1YSJ",
+        "4LZA"
+      ]
+    },
+    {
+      "cluster_id": "5EX9_2",
+      "size": 2,
+      "members": [
+        "5EX9_2",
+        "4AW3_1"
+      ],
+      "pdb_ids": [
+        "5EX9",
+        "4AW3"
+      ]
+    },
+    {
+      "cluster_id": "2WNH_2",
+      "size": 2,
+      "members": [
+        "2WNH_2",
+        "2WNH_5"
+      ],
+      "pdb_ids": [
+        "2WNH"
+      ]
+    },
+    {
+      "cluster_id": "3EZ9_2",
+      "size": 2,
+      "members": [
+        "3EZ9_2",
+        "2BEJ_1"
+      ],
+      "pdb_ids": [
+        "3EZ9",
+        "2BEJ"
+      ]
+    },
+    {
+      "cluster_id": "4TMB_2",
+      "size": 2,
+      "members": [
+        "4TMB_2",
+        "1OYA_1"
+      ],
+      "pdb_ids": [
+        "4TMB",
+        "1OYA"
+      ]
+    },
+    {
+      "cluster_id": "1FP3_2",
+      "size": 2,
+      "members": [
+        "1FP3_2",
+        "2GZ6_1"
+      ],
+      "pdb_ids": [
+        "1FP3",
+        "2GZ6"
+      ]
+    },
+    {
+      "cluster_id": "3MLP_10",
+      "size": 2,
+      "members": [
+        "3MLP_10",
+        "3MLO_3"
+      ],
+      "pdb_ids": [
+        "3MLP",
+        "3MLO"
+      ]
+    },
+    {
+      "cluster_id": "3K5X_2",
+      "size": 2,
+      "members": [
+        "3K5X_2",
+        "3FDG_1"
+      ],
+      "pdb_ids": [
+        "3K5X",
+        "3FDG"
+      ]
+    },
+    {
+      "cluster_id": "1O12_1",
+      "size": 2,
+      "members": [
+        "1O12_1",
+        "3EGJ_2"
+      ],
+      "pdb_ids": [
+        "3EGJ",
+        "1O12"
+      ]
+    },
+    {
+      "cluster_id": "1O92_2",
+      "size": 2,
+      "members": [
+        "1O92_2",
+        "1XRC_5"
+      ],
+      "pdb_ids": [
+        "1XRC",
+        "1O92"
+      ]
+    },
+    {
+      "cluster_id": "3ORR_1",
+      "size": 2,
+      "members": [
+        "3ORR_1",
+        "3AW8_1"
+      ],
+      "pdb_ids": [
+        "3AW8",
+        "3ORR"
+      ]
+    },
+    {
+      "cluster_id": "3WGN_3",
+      "size": 2,
+      "members": [
+        "3WGN_3",
+        "2RHJ_1"
+      ],
+      "pdb_ids": [
+        "2RHJ",
+        "3WGN"
+      ]
+    },
+    {
+      "cluster_id": "2XBF_2",
+      "size": 2,
+      "members": [
+        "2XBF_2",
+        "5HPK_5"
+      ],
+      "pdb_ids": [
+        "5HPK",
+        "2XBF"
+      ]
+    },
+    {
+      "cluster_id": "3ML6_3",
+      "size": 2,
+      "members": [
+        "3ML6_3",
+        "3ML6_7"
+      ],
+      "pdb_ids": [
+        "3ML6"
+      ]
+    },
+    {
+      "cluster_id": "5AFB_2",
+      "size": 2,
+      "members": [
+        "5AFB_2",
+        "5AFB_5"
+      ],
+      "pdb_ids": [
+        "5AFB"
+      ]
+    },
+    {
+      "cluster_id": "4LEV_3",
+      "size": 2,
+      "members": [
+        "4LEV_3",
+        "4O67_1"
+      ],
+      "pdb_ids": [
+        "4O67",
+        "4LEV"
+      ]
+    },
+    {
+      "cluster_id": "6P40_1",
+      "size": 2,
+      "members": [
+        "6P40_1",
+        "6NFL_3"
+      ],
+      "pdb_ids": [
+        "6NFL",
+        "6P40"
+      ]
+    },
+    {
+      "cluster_id": "3NUR_2",
+      "size": 2,
+      "members": [
+        "3NUR_2",
+        "3PFY_4"
+      ],
+      "pdb_ids": [
+        "3NUR",
+        "3PFY"
+      ]
+    },
+    {
+      "cluster_id": "4WPH_1",
+      "size": 2,
+      "members": [
+        "4WPH_1",
+        "4PYZ_1"
+      ],
+      "pdb_ids": [
+        "4PYZ",
+        "4WPH"
+      ]
+    },
+    {
+      "cluster_id": "5XFL_2",
+      "size": 2,
+      "members": [
+        "5XFL_2",
+        "1L7C_5"
+      ],
+      "pdb_ids": [
+        "5XFL",
+        "1L7C"
+      ]
+    },
+    {
+      "cluster_id": "5F5M_14",
+      "size": 2,
+      "members": [
+        "5F5M_14",
+        "5F5M_2"
+      ],
+      "pdb_ids": [
+        "5F5M"
+      ]
+    },
+    {
+      "cluster_id": "3AUX_2",
+      "size": 2,
+      "members": [
+        "3AUX_2",
+        "1XEW_4"
+      ],
+      "pdb_ids": [
+        "1XEW",
+        "3AUX"
+      ]
+    },
+    {
+      "cluster_id": "4EXQ_2",
+      "size": 2,
+      "members": [
+        "4EXQ_2",
+        "3CYV_1"
+      ],
+      "pdb_ids": [
+        "4EXQ",
+        "3CYV"
+      ]
+    },
+    {
+      "cluster_id": "4TRT_1",
+      "size": 2,
+      "members": [
+        "4TRT_1",
+        "1JQJ_9"
+      ],
+      "pdb_ids": [
+        "1JQJ",
+        "4TRT"
+      ]
+    },
+    {
+      "cluster_id": "3TN4_1",
+      "size": 2,
+      "members": [
+        "3TN4_1",
+        "4PBE_1"
+      ],
+      "pdb_ids": [
+        "4PBE",
+        "3TN4"
+      ]
+    },
+    {
+      "cluster_id": "4DEZ_3",
+      "size": 2,
+      "members": [
+        "4DEZ_3",
+        "2RDI_2"
+      ],
+      "pdb_ids": [
+        "2RDI",
+        "4DEZ"
+      ]
+    },
+    {
+      "cluster_id": "2PPV_1",
+      "size": 2,
+      "members": [
+        "2PPV_1",
+        "2HZB_1"
+      ],
+      "pdb_ids": [
+        "2HZB",
+        "2PPV"
+      ]
+    },
+    {
+      "cluster_id": "4CZM_1",
+      "size": 2,
+      "members": [
+        "4CZM_1",
+        "4CZM_5"
+      ],
+      "pdb_ids": [
+        "4CZM"
+      ]
+    },
+    {
+      "cluster_id": "6CF6_1",
+      "size": 2,
+      "members": [
+        "6CF6_1",
+        "4RLY_3"
+      ],
+      "pdb_ids": [
+        "6CF6",
+        "4RLY"
+      ]
+    },
+    {
+      "cluster_id": "4P52_2",
+      "size": 2,
+      "members": [
+        "4P52_2",
+        "4PR3_1"
+      ],
+      "pdb_ids": [
+        "4PR3",
+        "4P52"
+      ]
+    },
+    {
+      "cluster_id": "2YM9_8",
+      "size": 2,
+      "members": [
+        "2YM9_8",
+        "2YM0_5"
+      ],
+      "pdb_ids": [
+        "2YM9",
+        "2YM0"
+      ]
+    },
+    {
+      "cluster_id": "3R8E_1",
+      "size": 2,
+      "members": [
+        "3R8E_1",
+        "3HTV_1"
+      ],
+      "pdb_ids": [
+        "3HTV",
+        "3R8E"
+      ]
+    },
+    {
+      "cluster_id": "1TXN_1",
+      "size": 2,
+      "members": [
+        "1TXN_1",
+        "5EO6_1"
+      ],
+      "pdb_ids": [
+        "1TXN",
+        "5EO6"
+      ]
+    },
+    {
+      "cluster_id": "4U04_1",
+      "size": 2,
+      "members": [
+        "4U04_1",
+        "6I7K_1"
+      ],
+      "pdb_ids": [
+        "6I7K",
+        "4U04"
+      ]
+    },
+    {
+      "cluster_id": "3CWN_2",
+      "size": 2,
+      "members": [
+        "3CWN_2",
+        "2E1D_1"
+      ],
+      "pdb_ids": [
+        "3CWN",
+        "2E1D"
+      ]
+    },
+    {
+      "cluster_id": "4NZV_1",
+      "size": 2,
+      "members": [
+        "4NZV_1",
+        "3THN_1"
+      ],
+      "pdb_ids": [
+        "3THN",
+        "4NZV"
+      ]
+    },
+    {
+      "cluster_id": "6J09_4",
+      "size": 2,
+      "members": [
+        "6J09_4",
+        "6J09_5"
+      ],
+      "pdb_ids": [
+        "6J09"
+      ]
+    },
+    {
+      "cluster_id": "1NFT_1",
+      "size": 2,
+      "members": [
+        "1NFT_1",
+        "1NFT_2"
+      ],
+      "pdb_ids": [
+        "1NFT"
+      ]
+    },
+    {
+      "cluster_id": "6GC9_1",
+      "size": 2,
+      "members": [
+        "6GC9_1",
+        "4FQU_5"
+      ],
+      "pdb_ids": [
+        "6GC9",
+        "4FQU"
+      ]
+    },
+    {
+      "cluster_id": "5Y3E_2",
+      "size": 2,
+      "members": [
+        "5Y3E_2",
+        "6WRH_3"
+      ],
+      "pdb_ids": [
+        "6WRH",
+        "5Y3E"
+      ]
+    },
+    {
+      "cluster_id": "4NVR_1",
+      "size": 2,
+      "members": [
+        "4NVR_1",
+        "3QYJ_3"
+      ],
+      "pdb_ids": [
+        "4NVR",
+        "3QYJ"
+      ]
+    },
+    {
+      "cluster_id": "4W4J_5",
+      "size": 2,
+      "members": [
+        "4W4J_5",
+        "4L4W_9"
+      ],
+      "pdb_ids": [
+        "4W4J",
+        "4L4W"
+      ]
+    },
+    {
+      "cluster_id": "3LQE_5",
+      "size": 2,
+      "members": [
+        "3LQE_5",
+        "5OMN_2"
+      ],
+      "pdb_ids": [
+        "5OMN",
+        "3LQE"
+      ]
+    },
+    {
+      "cluster_id": "4DJ2_1",
+      "size": 2,
+      "members": [
+        "4DJ2_1",
+        "4DJ3_1"
+      ],
+      "pdb_ids": [
+        "4DJ2",
+        "4DJ3"
+      ]
+    },
+    {
+      "cluster_id": "5IGH_2",
+      "size": 2,
+      "members": [
+        "5IGH_2",
+        "5IGP_2"
+      ],
+      "pdb_ids": [
+        "5IGH",
+        "5IGP"
+      ]
+    },
+    {
+      "cluster_id": "1BP6_1",
+      "size": 2,
+      "members": [
+        "1BP6_1",
+        "6AUJ_1"
+      ],
+      "pdb_ids": [
+        "6AUJ",
+        "1BP6"
+      ]
+    },
+    {
+      "cluster_id": "3KHP_2",
+      "size": 2,
+      "members": [
+        "3KHP_2",
+        "1S9C_6"
+      ],
+      "pdb_ids": [
+        "1S9C",
+        "3KHP"
+      ]
+    },
+    {
+      "cluster_id": "1QYA_1",
+      "size": 2,
+      "members": [
+        "1QYA_1",
+        "1XUB_1"
+      ],
+      "pdb_ids": [
+        "1XUB",
+        "1QYA"
+      ]
+    },
+    {
+      "cluster_id": "5L40_2",
+      "size": 2,
+      "members": [
+        "5L40_2",
+        "5L45_1"
+      ],
+      "pdb_ids": [
+        "5L40",
+        "5L45"
+      ]
+    },
+    {
+      "cluster_id": "3C6B_1",
+      "size": 2,
+      "members": [
+        "3C6B_1",
+        "3FCX_1"
+      ],
+      "pdb_ids": [
+        "3FCX",
+        "3C6B"
+      ]
+    },
+    {
+      "cluster_id": "3UQZ_1",
+      "size": 2,
+      "members": [
+        "3UQZ_1",
+        "4LJK_2"
+      ],
+      "pdb_ids": [
+        "4LJK",
+        "3UQZ"
+      ]
+    },
+    {
+      "cluster_id": "4LD8_1",
+      "size": 2,
+      "members": [
+        "4LD8_1",
+        "4LDB_4"
+      ],
+      "pdb_ids": [
+        "4LDB",
+        "4LD8"
+      ]
+    },
+    {
+      "cluster_id": "3AAD_12",
+      "size": 2,
+      "members": [
+        "3AAD_12",
+        "4KCX_1"
+      ],
+      "pdb_ids": [
+        "3AAD",
+        "4KCX"
+      ]
+    },
+    {
+      "cluster_id": "1QEX_1",
+      "size": 2,
+      "members": [
+        "1QEX_1",
+        "1QEX_6"
+      ],
+      "pdb_ids": [
+        "1QEX"
+      ]
+    },
+    {
+      "cluster_id": "2J3S_1",
+      "size": 2,
+      "members": [
+        "2J3S_1",
+        "4P3W_1"
+      ],
+      "pdb_ids": [
+        "2J3S",
+        "4P3W"
+      ]
+    },
+    {
+      "cluster_id": "1NVT_1",
+      "size": 2,
+      "members": [
+        "1NVT_1",
+        "3FBT_2"
+      ],
+      "pdb_ids": [
+        "1NVT",
+        "3FBT"
+      ]
+    },
+    {
+      "cluster_id": "4EHT_1",
+      "size": 2,
+      "members": [
+        "4EHT_1",
+        "1HUX_1"
+      ],
+      "pdb_ids": [
+        "1HUX",
+        "4EHT"
+      ]
+    },
+    {
+      "cluster_id": "3DUV_1",
+      "size": 2,
+      "members": [
+        "3DUV_1",
+        "1VIC_7"
+      ],
+      "pdb_ids": [
+        "3DUV",
+        "1VIC"
+      ]
+    },
+    {
+      "cluster_id": "6MXD_2",
+      "size": 2,
+      "members": [
+        "6MXD_2",
+        "5JSQ_1"
+      ],
+      "pdb_ids": [
+        "5JSQ",
+        "6MXD"
+      ]
+    },
+    {
+      "cluster_id": "3E7P_1",
+      "size": 2,
+      "members": [
+        "3E7P_1",
+        "3F4K_1"
+      ],
+      "pdb_ids": [
+        "3E7P",
+        "3F4K"
+      ]
+    },
+    {
+      "cluster_id": "5NQZ_11",
+      "size": 2,
+      "members": [
+        "5NQZ_11",
+        "4AYN_1"
+      ],
+      "pdb_ids": [
+        "5NQZ",
+        "4AYN"
+      ]
+    },
+    {
+      "cluster_id": "3UMC_2",
+      "size": 2,
+      "members": [
+        "3UMC_2",
+        "1QQ7_1"
+      ],
+      "pdb_ids": [
+        "1QQ7",
+        "3UMC"
+      ]
+    },
+    {
+      "cluster_id": "3NZR_2",
+      "size": 2,
+      "members": [
+        "3NZR_2",
+        "3MUX_1"
+      ],
+      "pdb_ids": [
+        "3MUX",
+        "3NZR"
+      ]
+    },
+    {
+      "cluster_id": "3FRL_1",
+      "size": 2,
+      "members": [
+        "3FRL_1",
+        "2ZZ8_1"
+      ],
+      "pdb_ids": [
+        "3FRL",
+        "2ZZ8"
+      ]
+    },
+    {
+      "cluster_id": "4PH6_1",
+      "size": 2,
+      "members": [
+        "4PH6_1",
+        "1SFL_1"
+      ],
+      "pdb_ids": [
+        "4PH6",
+        "1SFL"
+      ]
+    },
+    {
+      "cluster_id": "1OKJ_1",
+      "size": 2,
+      "members": [
+        "1OKJ_1",
+        "3R6M_1"
+      ],
+      "pdb_ids": [
+        "1OKJ",
+        "3R6M"
+      ]
+    },
+    {
+      "cluster_id": "1OVN_1",
+      "size": 2,
+      "members": [
+        "1OVN_1",
+        "2QC7_2"
+      ],
+      "pdb_ids": [
+        "2QC7",
+        "1OVN"
+      ]
+    },
+    {
+      "cluster_id": "1KU2_1",
+      "size": 2,
+      "members": [
+        "1KU2_1",
+        "1KU2_4"
+      ],
+      "pdb_ids": [
+        "1KU2"
+      ]
+    },
+    {
+      "cluster_id": "1KUT_1",
+      "size": 2,
+      "members": [
+        "1KUT_1",
+        "4O7V_1"
+      ],
+      "pdb_ids": [
+        "1KUT",
+        "4O7V"
+      ]
+    },
+    {
+      "cluster_id": "4D9O_1",
+      "size": 2,
+      "members": [
+        "4D9O_1",
+        "3VNF_2"
+      ],
+      "pdb_ids": [
+        "3VNF",
+        "4D9O"
+      ]
+    },
+    {
+      "cluster_id": "4J2P_1",
+      "size": 2,
+      "members": [
+        "4J2P_1",
+        "1FVP_1"
+      ],
+      "pdb_ids": [
+        "4J2P",
+        "1FVP"
+      ]
+    },
+    {
+      "cluster_id": "4MKO_2",
+      "size": 2,
+      "members": [
+        "4MKO_2",
+        "4MKQ_1"
+      ],
+      "pdb_ids": [
+        "4MKO",
+        "4MKQ"
+      ]
+    },
+    {
+      "cluster_id": "4OHC_2",
+      "size": 2,
+      "members": [
+        "4OHC_2",
+        "5HKL_1"
+      ],
+      "pdb_ids": [
+        "4OHC",
+        "5HKL"
+      ]
+    },
+    {
+      "cluster_id": "3JV9_1",
+      "size": 2,
+      "members": [
+        "3JV9_1",
+        "4XWS_2"
+      ],
+      "pdb_ids": [
+        "3JV9",
+        "4XWS"
+      ]
+    },
+    {
+      "cluster_id": "5GMJ_6",
+      "size": 2,
+      "members": [
+        "5GMJ_6",
+        "6G8T_3"
+      ],
+      "pdb_ids": [
+        "5GMJ",
+        "6G8T"
+      ]
+    },
+    {
+      "cluster_id": "5Y5W_17",
+      "size": 2,
+      "members": [
+        "5Y5W_17",
+        "5Y5W_3"
+      ],
+      "pdb_ids": [
+        "5Y5W"
+      ]
+    },
+    {
+      "cluster_id": "3LP9_1",
+      "size": 2,
+      "members": [
+        "3LP9_1",
+        "3V6N_1"
+      ],
+      "pdb_ids": [
+        "3LP9",
+        "3V6N"
+      ]
+    },
+    {
+      "cluster_id": "3TGO_11",
+      "size": 2,
+      "members": [
+        "3TGO_11",
+        "3Q5M_5"
+      ],
+      "pdb_ids": [
+        "3Q5M",
+        "3TGO"
+      ]
+    },
+    {
+      "cluster_id": "3TG8_4",
+      "size": 2,
+      "members": [
+        "3TG8_4",
+        "4QGB_1"
+      ],
+      "pdb_ids": [
+        "4QGB",
+        "3TG8"
+      ]
+    },
+    {
+      "cluster_id": "6FJU_1",
+      "size": 2,
+      "members": [
+        "6FJU_1",
+        "6FJV_2"
+      ],
+      "pdb_ids": [
+        "6FJU",
+        "6FJV"
+      ]
+    },
+    {
+      "cluster_id": "5XPU_3",
+      "size": 2,
+      "members": [
+        "5XPU_3",
+        "6BI7_21"
+      ],
+      "pdb_ids": [
+        "5XPU",
+        "6BI7"
+      ]
+    },
+    {
+      "cluster_id": "2PJU_1",
+      "size": 2,
+      "members": [
+        "2PJU_1",
+        "2Q5C_3"
+      ],
+      "pdb_ids": [
+        "2Q5C",
+        "2PJU"
+      ]
+    },
+    {
+      "cluster_id": "4I5Q_1",
+      "size": 2,
+      "members": [
+        "4I5Q_1",
+        "1JZO_1"
+      ],
+      "pdb_ids": [
+        "1JZO",
+        "4I5Q"
+      ]
+    },
+    {
+      "cluster_id": "5K93_1",
+      "size": 2,
+      "members": [
+        "5K93_1",
+        "2J7L_4"
+      ],
+      "pdb_ids": [
+        "2J7L",
+        "5K93"
+      ]
+    },
+    {
+      "cluster_id": "3URO_2",
+      "size": 2,
+      "members": [
+        "3URO_2",
+        "3R0N_1"
+      ],
+      "pdb_ids": [
+        "3URO",
+        "3R0N"
+      ]
+    },
+    {
+      "cluster_id": "4HF7_1",
+      "size": 2,
+      "members": [
+        "4HF7_1",
+        "4PPY_1"
+      ],
+      "pdb_ids": [
+        "4HF7",
+        "4PPY"
+      ]
+    },
+    {
+      "cluster_id": "5CRC_1",
+      "size": 2,
+      "members": [
+        "5CRC_1",
+        "5CRB_1"
+      ],
+      "pdb_ids": [
+        "5CRB",
+        "5CRC"
+      ]
+    },
+    {
+      "cluster_id": "1ZP7_1",
+      "size": 2,
+      "members": [
+        "1ZP7_1",
+        "2FCO_1"
+      ],
+      "pdb_ids": [
+        "2FCO",
+        "1ZP7"
+      ]
+    },
+    {
+      "cluster_id": "3C8X_2",
+      "size": 2,
+      "members": [
+        "3C8X_2",
+        "3HPN_1"
+      ],
+      "pdb_ids": [
+        "3C8X",
+        "3HPN"
+      ]
+    },
+    {
+      "cluster_id": "2OGI_1",
+      "size": 2,
+      "members": [
+        "2OGI_1",
+        "3CCG_1"
+      ],
+      "pdb_ids": [
+        "3CCG",
+        "2OGI"
+      ]
+    },
+    {
+      "cluster_id": "4H6U_1",
+      "size": 2,
+      "members": [
+        "4H6U_1",
+        "4H6Z_1"
+      ],
+      "pdb_ids": [
+        "4H6U",
+        "4H6Z"
+      ]
+    },
+    {
+      "cluster_id": "5CHO_3",
+      "size": 2,
+      "members": [
+        "5CHO_3",
+        "3K86_1"
+      ],
+      "pdb_ids": [
+        "5CHO",
+        "3K86"
+      ]
+    },
+    {
+      "cluster_id": "2VRN_1",
+      "size": 2,
+      "members": [
+        "2VRN_1",
+        "3L18_1"
+      ],
+      "pdb_ids": [
+        "3L18",
+        "2VRN"
+      ]
+    },
+    {
+      "cluster_id": "3HYQ_2",
+      "size": 2,
+      "members": [
+        "3HYQ_2",
+        "1NFS_1"
+      ],
+      "pdb_ids": [
+        "3HYQ",
+        "1NFS"
+      ]
+    },
+    {
+      "cluster_id": "4DKC_1",
+      "size": 2,
+      "members": [
+        "4DKC_1",
+        "4EXN_1"
+      ],
+      "pdb_ids": [
+        "4EXN",
+        "4DKC"
+      ]
+    },
+    {
+      "cluster_id": "3WPW_1",
+      "size": 2,
+      "members": [
+        "3WPW_1",
+        "2ZVZ_1"
+      ],
+      "pdb_ids": [
+        "2ZVZ",
+        "3WPW"
+      ]
+    },
+    {
+      "cluster_id": "2NYS_1",
+      "size": 2,
+      "members": [
+        "2NYS_1",
+        "2QAZ_2"
+      ],
+      "pdb_ids": [
+        "2QAZ",
+        "2NYS"
+      ]
+    },
+    {
+      "cluster_id": "2QLD_1",
+      "size": 2,
+      "members": [
+        "2QLD_1",
+        "1C3G_1"
+      ],
+      "pdb_ids": [
+        "1C3G",
+        "2QLD"
+      ]
+    },
+    {
+      "cluster_id": "1YEM_1",
+      "size": 2,
+      "members": [
+        "1YEM_1",
+        "2DC4_1"
+      ],
+      "pdb_ids": [
+        "2DC4",
+        "1YEM"
+      ]
+    },
+    {
+      "cluster_id": "6K6N_1",
+      "size": 2,
+      "members": [
+        "6K6N_1",
+        "6B72_1"
+      ],
+      "pdb_ids": [
+        "6B72",
+        "6K6N"
+      ]
+    },
+    {
+      "cluster_id": "3GOR_1",
+      "size": 2,
+      "members": [
+        "3GOR_1",
+        "3DKA_1"
+      ],
+      "pdb_ids": [
+        "3GOR",
+        "3DKA"
+      ]
+    },
+    {
+      "cluster_id": "5KOL_2",
+      "size": 2,
+      "members": [
+        "5KOL_2",
+        "5V01_1"
+      ],
+      "pdb_ids": [
+        "5V01",
+        "5KOL"
+      ]
+    },
+    {
+      "cluster_id": "2IMZ_1",
+      "size": 2,
+      "members": [
+        "2IMZ_1",
+        "3IGD_1"
+      ],
+      "pdb_ids": [
+        "3IGD",
+        "2IMZ"
+      ]
+    },
+    {
+      "cluster_id": "2OB5_1",
+      "size": 2,
+      "members": [
+        "2OB5_1",
+        "2WCU_1"
+      ],
+      "pdb_ids": [
+        "2OB5",
+        "2WCU"
+      ]
+    },
+    {
+      "cluster_id": "3F8H_1",
+      "size": 2,
+      "members": [
+        "3F8H_1",
+        "3G0K_1"
+      ],
+      "pdb_ids": [
+        "3G0K",
+        "3F8H"
+      ]
+    },
+    {
+      "cluster_id": "4K30_3",
+      "size": 2,
+      "members": [
+        "4K30_3",
+        "4NF1_4"
+      ],
+      "pdb_ids": [
+        "4NF1",
+        "4K30"
+      ]
+    },
+    {
+      "cluster_id": "1MI8_1",
+      "size": 2,
+      "members": [
+        "1MI8_1",
+        "4O1R_2"
+      ],
+      "pdb_ids": [
+        "1MI8",
+        "4O1R"
+      ]
+    },
+    {
+      "cluster_id": "2SNW_1",
+      "size": 2,
+      "members": [
+        "2SNW_1",
+        "5H23_1"
+      ],
+      "pdb_ids": [
+        "5H23",
+        "2SNW"
+      ]
+    },
+    {
+      "cluster_id": "4DYW_3",
+      "size": 2,
+      "members": [
+        "4DYW_3",
+        "4KYX_1"
+      ],
+      "pdb_ids": [
+        "4DYW",
+        "4KYX"
+      ]
+    },
+    {
+      "cluster_id": "2E2C_1",
+      "size": 2,
+      "members": [
+        "2E2C_1",
+        "3JW0_13"
+      ],
+      "pdb_ids": [
+        "3JW0",
+        "2E2C"
+      ]
+    },
+    {
+      "cluster_id": "4FLB_1",
+      "size": 2,
+      "members": [
+        "4FLB_1",
+        "4Q96_2"
+      ],
+      "pdb_ids": [
+        "4Q96",
+        "4FLB"
+      ]
+    },
+    {
+      "cluster_id": "3IFT_2",
+      "size": 2,
+      "members": [
+        "3IFT_2",
+        "3TZU_1"
+      ],
+      "pdb_ids": [
+        "3TZU",
+        "3IFT"
+      ]
+    },
+    {
+      "cluster_id": "5SVG_1",
+      "size": 2,
+      "members": [
+        "5SVG_1",
+        "4NXF_1"
+      ],
+      "pdb_ids": [
+        "4NXF",
+        "5SVG"
+      ]
+    },
+    {
+      "cluster_id": "1LYN_1",
+      "size": 2,
+      "members": [
+        "1LYN_1",
+        "3LYN_1"
+      ],
+      "pdb_ids": [
+        "3LYN",
+        "1LYN"
+      ]
+    },
+    {
+      "cluster_id": "2YY9_1",
+      "size": 2,
+      "members": [
+        "2YY9_1",
+        "2VPK_1"
+      ],
+      "pdb_ids": [
+        "2VPK",
+        "2YY9"
+      ]
+    },
+    {
+      "cluster_id": "2J85_1",
+      "size": 2,
+      "members": [
+        "2J85_1",
+        "2X4I_1"
+      ],
+      "pdb_ids": [
+        "2J85",
+        "2X4I"
+      ]
+    },
+    {
+      "cluster_id": "2Z6F_1",
+      "size": 2,
+      "members": [
+        "2Z6F_1",
+        "3RTL_6"
+      ],
+      "pdb_ids": [
+        "3RTL",
+        "2Z6F"
+      ]
+    },
+    {
+      "cluster_id": "5ABR_1",
+      "size": 2,
+      "members": [
+        "5ABR_1",
+        "1M2A_1"
+      ],
+      "pdb_ids": [
+        "5ABR",
+        "1M2A"
+      ]
+    },
+    {
+      "cluster_id": "1WWP_1",
+      "size": 2,
+      "members": [
+        "1WWP_1",
+        "2YWA_1"
+      ],
+      "pdb_ids": [
+        "1WWP",
+        "2YWA"
+      ]
+    },
+    {
+      "cluster_id": "3RBG_2",
+      "size": 2,
+      "members": [
+        "3RBG_2",
+        "3M45_2"
+      ],
+      "pdb_ids": [
+        "3RBG",
+        "3M45"
+      ]
+    },
+    {
+      "cluster_id": "3D7Q_2",
+      "size": 2,
+      "members": [
+        "3D7Q_2",
+        "2NWV_1"
+      ],
+      "pdb_ids": [
+        "2NWV",
+        "3D7Q"
+      ]
+    },
+    {
+      "cluster_id": "4YE0_1",
+      "size": 2,
+      "members": [
+        "4YE0_1",
+        "3L1E_1"
+      ],
+      "pdb_ids": [
+        "3L1E",
+        "4YE0"
+      ]
+    },
+    {
+      "cluster_id": "1CD8_1",
+      "size": 2,
+      "members": [
+        "1CD8_1",
+        "5EDX_1"
+      ],
+      "pdb_ids": [
+        "1CD8",
+        "5EDX"
+      ]
+    },
+    {
+      "cluster_id": "4HWX_1",
+      "size": 2,
+      "members": [
+        "4HWX_1",
+        "3SSI_1"
+      ],
+      "pdb_ids": [
+        "3SSI",
+        "4HWX"
+      ]
+    },
+    {
+      "cluster_id": "5HIZ_1",
+      "size": 2,
+      "members": [
+        "5HIZ_1",
+        "2J98_1"
+      ],
+      "pdb_ids": [
+        "5HIZ",
+        "2J98"
+      ]
+    },
+    {
+      "cluster_id": "1V2Z_1",
+      "size": 2,
+      "members": [
+        "1V2Z_1",
+        "1R5Q_2"
+      ],
+      "pdb_ids": [
+        "1R5Q",
+        "1V2Z"
+      ]
+    },
+    {
+      "cluster_id": "2QSQ_1",
+      "size": 2,
+      "members": [
+        "2QSQ_1",
+        "4QXW_1"
+      ],
+      "pdb_ids": [
+        "2QSQ",
+        "4QXW"
+      ]
+    },
+    {
+      "cluster_id": "3W66_1",
+      "size": 2,
+      "members": [
+        "3W66_1",
+        "3W64_1"
+      ],
+      "pdb_ids": [
+        "3W66",
+        "3W64"
+      ]
+    },
+    {
+      "cluster_id": "5WME_4",
+      "size": 2,
+      "members": [
+        "5WME_4",
+        "5WME_5"
+      ],
+      "pdb_ids": [
+        "5WME"
+      ]
+    },
+    {
+      "cluster_id": "3LRQ_1",
+      "size": 2,
+      "members": [
+        "3LRQ_1",
+        "3LRQ_2"
+      ],
+      "pdb_ids": [
+        "3LRQ"
+      ]
+    },
+    {
+      "cluster_id": "1RFY_1",
+      "size": 2,
+      "members": [
+        "1RFY_1",
+        "2HJD_1"
+      ],
+      "pdb_ids": [
+        "2HJD",
+        "1RFY"
+      ]
+    },
+    {
+      "cluster_id": "5WOF_13",
+      "size": 2,
+      "members": [
+        "5WOF_13",
+        "3RJS_1"
+      ],
+      "pdb_ids": [
+        "3RJS",
+        "5WOF"
+      ]
+    },
+    {
+      "cluster_id": "4FQN_1",
+      "size": 2,
+      "members": [
+        "4FQN_1",
+        "4YL6_4"
+      ],
+      "pdb_ids": [
+        "4YL6",
+        "4FQN"
+      ]
+    },
+    {
+      "cluster_id": "3OBH_1",
+      "size": 2,
+      "members": [
+        "3OBH_1",
+        "3PM7_1"
+      ],
+      "pdb_ids": [
+        "3PM7",
+        "3OBH"
+      ]
+    },
+    {
+      "cluster_id": "1HA4_1",
+      "size": 2,
+      "members": [
+        "1HA4_1",
+        "1GAM_1"
+      ],
+      "pdb_ids": [
+        "1GAM",
+        "1HA4"
+      ]
+    },
+    {
+      "cluster_id": "2B5A_1",
+      "size": 2,
+      "members": [
+        "2B5A_1",
+        "1Y7Y_1"
+      ],
+      "pdb_ids": [
+        "2B5A",
+        "1Y7Y"
+      ]
+    },
+    {
+      "cluster_id": "2OVG_3",
+      "size": 2,
+      "members": [
+        "2OVG_3",
+        "5CRO_1"
+      ],
+      "pdb_ids": [
+        "2OVG",
+        "5CRO"
+      ]
+    },
+    {
+      "cluster_id": "4QF2_1",
+      "size": 2,
+      "members": [
+        "4QF2_1",
+        "4QF3_3"
+      ],
+      "pdb_ids": [
+        "4QF3",
+        "4QF2"
+      ]
+    },
+    {
+      "cluster_id": "1JM0_2",
+      "size": 2,
+      "members": [
+        "1JM0_2",
+        "1MFT_1"
+      ],
+      "pdb_ids": [
+        "1JM0",
+        "1MFT"
+      ]
+    },
+    {
+      "cluster_id": "6FB3_1",
+      "size": 1,
+      "members": [
+        "6FB3_1"
+      ],
+      "pdb_ids": [
+        "6FB3"
+      ]
+    },
+    {
+      "cluster_id": "4BBR_39",
+      "size": 1,
+      "members": [
+        "4BBR_39"
+      ],
+      "pdb_ids": [
+        "4BBR"
+      ]
+    },
+    {
+      "cluster_id": "6VJB_4",
+      "size": 1,
+      "members": [
+        "6VJB_4"
+      ],
+      "pdb_ids": [
+        "6VJB"
+      ]
+    },
+    {
+      "cluster_id": "5MZO_2",
+      "size": 1,
+      "members": [
+        "5MZO_2"
+      ],
+      "pdb_ids": [
+        "5MZO"
+      ]
+    },
+    {
+      "cluster_id": "4CMP_11",
+      "size": 1,
+      "members": [
+        "4CMP_11"
+      ],
+      "pdb_ids": [
+        "4CMP"
+      ]
+    },
+    {
+      "cluster_id": "4W8J_6",
+      "size": 1,
+      "members": [
+        "4W8J_6"
+      ],
+      "pdb_ids": [
+        "4W8J"
+      ]
+    },
+    {
+      "cluster_id": "6BB8_2",
+      "size": 1,
+      "members": [
+        "6BB8_2"
+      ],
+      "pdb_ids": [
+        "6BB8"
+      ]
+    },
+    {
+      "cluster_id": "5DIS_10",
+      "size": 1,
+      "members": [
+        "5DIS_10"
+      ],
+      "pdb_ids": [
+        "5DIS"
+      ]
+    },
+    {
+      "cluster_id": "4AYG_2",
+      "size": 1,
+      "members": [
+        "4AYG_2"
+      ],
+      "pdb_ids": [
+        "4AYG"
+      ]
+    },
+    {
+      "cluster_id": "4KXF_17",
+      "size": 1,
+      "members": [
+        "4KXF_17"
+      ],
+      "pdb_ids": [
+        "4KXF"
+      ]
+    },
+    {
+      "cluster_id": "5KNL_11",
+      "size": 1,
+      "members": [
+        "5KNL_11"
+      ],
+      "pdb_ids": [
+        "5KNL"
+      ]
+    },
+    {
+      "cluster_id": "4LHC_2",
+      "size": 1,
+      "members": [
+        "4LHC_2"
+      ],
+      "pdb_ids": [
+        "4LHC"
+      ]
+    },
+    {
+      "cluster_id": "5CSA_6",
+      "size": 1,
+      "members": [
+        "5CSA_6"
+      ],
+      "pdb_ids": [
+        "5CSA"
+      ]
+    },
+    {
+      "cluster_id": "6AS7_3",
+      "size": 1,
+      "members": [
+        "6AS7_3"
+      ],
+      "pdb_ids": [
+        "6AS7"
+      ]
+    },
+    {
+      "cluster_id": "5GZU_1",
+      "size": 1,
+      "members": [
+        "5GZU_1"
+      ],
+      "pdb_ids": [
+        "5GZU"
+      ]
+    },
+    {
+      "cluster_id": "4DA4_1",
+      "size": 1,
+      "members": [
+        "4DA4_1"
+      ],
+      "pdb_ids": [
+        "4DA4"
+      ]
+    },
+    {
+      "cluster_id": "5VM9_1",
+      "size": 1,
+      "members": [
+        "5VM9_1"
+      ],
+      "pdb_ids": [
+        "5VM9"
+      ]
+    },
+    {
+      "cluster_id": "4PAA_1",
+      "size": 1,
+      "members": [
+        "4PAA_1"
+      ],
+      "pdb_ids": [
+        "4PAA"
+      ]
+    },
+    {
+      "cluster_id": "4GTW_1",
+      "size": 1,
+      "members": [
+        "4GTW_1"
+      ],
+      "pdb_ids": [
+        "4GTW"
+      ]
+    },
+    {
+      "cluster_id": "1N0V_2",
+      "size": 1,
+      "members": [
+        "1N0V_2"
+      ],
+      "pdb_ids": [
+        "1N0V"
+      ]
+    },
+    {
+      "cluster_id": "3UT0_7",
+      "size": 1,
+      "members": [
+        "3UT0_7"
+      ],
+      "pdb_ids": [
+        "3UT0"
+      ]
+    },
+    {
+      "cluster_id": "5TUS_3",
+      "size": 1,
+      "members": [
+        "5TUS_3"
+      ],
+      "pdb_ids": [
+        "5TUS"
+      ]
+    },
+    {
+      "cluster_id": "4FT4_1",
+      "size": 1,
+      "members": [
+        "4FT4_1"
+      ],
+      "pdb_ids": [
+        "4FT4"
+      ]
+    },
+    {
+      "cluster_id": "6I97_1",
+      "size": 1,
+      "members": [
+        "6I97_1"
+      ],
+      "pdb_ids": [
+        "6I97"
+      ]
+    },
+    {
+      "cluster_id": "5KYN_7",
+      "size": 1,
+      "members": [
+        "5KYN_7"
+      ],
+      "pdb_ids": [
+        "5KYN"
+      ]
+    },
+    {
+      "cluster_id": "2XIQ_1",
+      "size": 1,
+      "members": [
+        "2XIQ_1"
+      ],
+      "pdb_ids": [
+        "2XIQ"
+      ]
+    },
+    {
+      "cluster_id": "5MZ4_7",
+      "size": 1,
+      "members": [
+        "5MZ4_7"
+      ],
+      "pdb_ids": [
+        "5MZ4"
+      ]
+    },
+    {
+      "cluster_id": "4EX4_1",
+      "size": 1,
+      "members": [
+        "4EX4_1"
+      ],
+      "pdb_ids": [
+        "4EX4"
+      ]
+    },
+    {
+      "cluster_id": "1GGT_10",
+      "size": 1,
+      "members": [
+        "1GGT_10"
+      ],
+      "pdb_ids": [
+        "1GGT"
+      ]
+    },
+    {
+      "cluster_id": "2BRV_1",
+      "size": 1,
+      "members": [
+        "2BRV_1"
+      ],
+      "pdb_ids": [
+        "2BRV"
+      ]
+    },
+    {
+      "cluster_id": "3WOI_1",
+      "size": 1,
+      "members": [
+        "3WOI_1"
+      ],
+      "pdb_ids": [
+        "3WOI"
+      ]
+    },
+    {
+      "cluster_id": "6TKA_4",
+      "size": 1,
+      "members": [
+        "6TKA_4"
+      ],
+      "pdb_ids": [
+        "6TKA"
+      ]
+    },
+    {
+      "cluster_id": "3MT5_4",
+      "size": 1,
+      "members": [
+        "3MT5_4"
+      ],
+      "pdb_ids": [
+        "3MT5"
+      ]
+    },
+    {
+      "cluster_id": "2VNC_8",
+      "size": 1,
+      "members": [
+        "2VNC_8"
+      ],
+      "pdb_ids": [
+        "2VNC"
+      ]
+    },
+    {
+      "cluster_id": "5LTA_3",
+      "size": 1,
+      "members": [
+        "5LTA_3"
+      ],
+      "pdb_ids": [
+        "5LTA"
+      ]
+    },
+    {
+      "cluster_id": "2NUB_6",
+      "size": 1,
+      "members": [
+        "2NUB_6"
+      ],
+      "pdb_ids": [
+        "2NUB"
+      ]
+    },
+    {
+      "cluster_id": "5NA8_5",
+      "size": 1,
+      "members": [
+        "5NA8_5"
+      ],
+      "pdb_ids": [
+        "5NA8"
+      ]
+    },
+    {
+      "cluster_id": "1RP5_3",
+      "size": 1,
+      "members": [
+        "1RP5_3"
+      ],
+      "pdb_ids": [
+        "1RP5"
+      ]
+    },
+    {
+      "cluster_id": "5MFA_3",
+      "size": 1,
+      "members": [
+        "5MFA_3"
+      ],
+      "pdb_ids": [
+        "5MFA"
+      ]
+    },
+    {
+      "cluster_id": "3FG3_1",
+      "size": 1,
+      "members": [
+        "3FG3_1"
+      ],
+      "pdb_ids": [
+        "3FG3"
+      ]
+    },
+    {
+      "cluster_id": "5E6M_3",
+      "size": 1,
+      "members": [
+        "5E6M_3"
+      ],
+      "pdb_ids": [
+        "5E6M"
+      ]
+    },
+    {
+      "cluster_id": "4JC8_1",
+      "size": 1,
+      "members": [
+        "4JC8_1"
+      ],
+      "pdb_ids": [
+        "4JC8"
+      ]
+    },
+    {
+      "cluster_id": "5WTX_4",
+      "size": 1,
+      "members": [
+        "5WTX_4"
+      ],
+      "pdb_ids": [
+        "5WTX"
+      ]
+    },
+    {
+      "cluster_id": "1WAC_4",
+      "size": 1,
+      "members": [
+        "1WAC_4"
+      ],
+      "pdb_ids": [
+        "1WAC"
+      ]
+    },
+    {
+      "cluster_id": "5JRH_1",
+      "size": 1,
+      "members": [
+        "5JRH_1"
+      ],
+      "pdb_ids": [
+        "5JRH"
+      ]
+    },
+    {
+      "cluster_id": "1K1Y_4",
+      "size": 1,
+      "members": [
+        "1K1Y_4"
+      ],
+      "pdb_ids": [
+        "1K1Y"
+      ]
+    },
+    {
+      "cluster_id": "3GRL_1",
+      "size": 1,
+      "members": [
+        "3GRL_1"
+      ],
+      "pdb_ids": [
+        "3GRL"
+      ]
+    },
+    {
+      "cluster_id": "1VG9_2",
+      "size": 1,
+      "members": [
+        "1VG9_2"
+      ],
+      "pdb_ids": [
+        "1VG9"
+      ]
+    },
+    {
+      "cluster_id": "6G88_1",
+      "size": 1,
+      "members": [
+        "6G88_1"
+      ],
+      "pdb_ids": [
+        "6G88"
+      ]
+    },
+    {
+      "cluster_id": "6EHG_10",
+      "size": 1,
+      "members": [
+        "6EHG_10"
+      ],
+      "pdb_ids": [
+        "6EHG"
+      ]
+    },
+    {
+      "cluster_id": "1CX8_2",
+      "size": 1,
+      "members": [
+        "1CX8_2"
+      ],
+      "pdb_ids": [
+        "1CX8"
+      ]
+    },
+    {
+      "cluster_id": "3NZP_2",
+      "size": 1,
+      "members": [
+        "3NZP_2"
+      ],
+      "pdb_ids": [
+        "3NZP"
+      ]
+    },
+    {
+      "cluster_id": "5HO9_4",
+      "size": 1,
+      "members": [
+        "5HO9_4"
+      ],
+      "pdb_ids": [
+        "5HO9"
+      ]
+    },
+    {
+      "cluster_id": "3FJO_2",
+      "size": 1,
+      "members": [
+        "3FJO_2"
+      ],
+      "pdb_ids": [
+        "3FJO"
+      ]
+    },
+    {
+      "cluster_id": "2QYU_1",
+      "size": 1,
+      "members": [
+        "2QYU_1"
+      ],
+      "pdb_ids": [
+        "2QYU"
+      ]
+    },
+    {
+      "cluster_id": "1QHM_4",
+      "size": 1,
+      "members": [
+        "1QHM_4"
+      ],
+      "pdb_ids": [
+        "1QHM"
+      ]
+    },
+    {
+      "cluster_id": "2JKR_34",
+      "size": 1,
+      "members": [
+        "2JKR_34"
+      ],
+      "pdb_ids": [
+        "2JKR"
+      ]
+    },
+    {
+      "cluster_id": "1M6B_2",
+      "size": 1,
+      "members": [
+        "1M6B_2"
+      ],
+      "pdb_ids": [
+        "1M6B"
+      ]
+    },
+    {
+      "cluster_id": "1BS2_4",
+      "size": 1,
+      "members": [
+        "1BS2_4"
+      ],
+      "pdb_ids": [
+        "1BS2"
+      ]
+    },
+    {
+      "cluster_id": "1J36_3",
+      "size": 1,
+      "members": [
+        "1J36_3"
+      ],
+      "pdb_ids": [
+        "1J36"
+      ]
+    },
+    {
+      "cluster_id": "5Z70_2",
+      "size": 1,
+      "members": [
+        "5Z70_2"
+      ],
+      "pdb_ids": [
+        "5Z70"
+      ]
+    },
+    {
+      "cluster_id": "3VH1_2",
+      "size": 1,
+      "members": [
+        "3VH1_2"
+      ],
+      "pdb_ids": [
+        "3VH1"
+      ]
+    },
+    {
+      "cluster_id": "3CPE_5",
+      "size": 1,
+      "members": [
+        "3CPE_5"
+      ],
+      "pdb_ids": [
+        "3CPE"
+      ]
+    },
+    {
+      "cluster_id": "2PF4_5",
+      "size": 1,
+      "members": [
+        "2PF4_5"
+      ],
+      "pdb_ids": [
+        "2PF4"
+      ]
+    },
+    {
+      "cluster_id": "3H7L_3",
+      "size": 1,
+      "members": [
+        "3H7L_3"
+      ],
+      "pdb_ids": [
+        "3H7L"
+      ]
+    },
+    {
+      "cluster_id": "4EPL_2",
+      "size": 1,
+      "members": [
+        "4EPL_2"
+      ],
+      "pdb_ids": [
+        "4EPL"
+      ]
+    },
+    {
+      "cluster_id": "6BEB_5",
+      "size": 1,
+      "members": [
+        "6BEB_5"
+      ],
+      "pdb_ids": [
+        "6BEB"
+      ]
+    },
+    {
+      "cluster_id": "4CCF_7",
+      "size": 1,
+      "members": [
+        "4CCF_7"
+      ],
+      "pdb_ids": [
+        "4CCF"
+      ]
+    },
+    {
+      "cluster_id": "4NLD_3",
+      "size": 1,
+      "members": [
+        "4NLD_3"
+      ],
+      "pdb_ids": [
+        "4NLD"
+      ]
+    },
+    {
+      "cluster_id": "3BDL_3",
+      "size": 1,
+      "members": [
+        "3BDL_3"
+      ],
+      "pdb_ids": [
+        "3BDL"
+      ]
+    },
+    {
+      "cluster_id": "5LX8_1",
+      "size": 1,
+      "members": [
+        "5LX8_1"
+      ],
+      "pdb_ids": [
+        "5LX8"
+      ]
+    },
+    {
+      "cluster_id": "6O9Q_5",
+      "size": 1,
+      "members": [
+        "6O9Q_5"
+      ],
+      "pdb_ids": [
+        "6O9Q"
+      ]
+    },
+    {
+      "cluster_id": "6H4H_10",
+      "size": 1,
+      "members": [
+        "6H4H_10"
+      ],
+      "pdb_ids": [
+        "6H4H"
+      ]
+    },
+    {
+      "cluster_id": "4G37_4",
+      "size": 1,
+      "members": [
+        "4G37_4"
+      ],
+      "pdb_ids": [
+        "4G37"
+      ]
+    },
+    {
+      "cluster_id": "1T1E_2",
+      "size": 1,
+      "members": [
+        "1T1E_2"
+      ],
+      "pdb_ids": [
+        "1T1E"
+      ]
+    },
+    {
+      "cluster_id": "6I04_3",
+      "size": 1,
+      "members": [
+        "6I04_3"
+      ],
+      "pdb_ids": [
+        "6I04"
+      ]
+    },
+    {
+      "cluster_id": "5HM4_1",
+      "size": 1,
+      "members": [
+        "5HM4_1"
+      ],
+      "pdb_ids": [
+        "5HM4"
+      ]
+    },
+    {
+      "cluster_id": "2AC1_3",
+      "size": 1,
+      "members": [
+        "2AC1_3"
+      ],
+      "pdb_ids": [
+        "2AC1"
+      ]
+    },
+    {
+      "cluster_id": "2AR8_1",
+      "size": 1,
+      "members": [
+        "2AR8_1"
+      ],
+      "pdb_ids": [
+        "2AR8"
+      ]
+    },
+    {
+      "cluster_id": "6W25_2",
+      "size": 1,
+      "members": [
+        "6W25_2"
+      ],
+      "pdb_ids": [
+        "6W25"
+      ]
+    },
+    {
+      "cluster_id": "4K5S_1",
+      "size": 1,
+      "members": [
+        "4K5S_1"
+      ],
+      "pdb_ids": [
+        "4K5S"
+      ]
+    },
+    {
+      "cluster_id": "5IMT_6",
+      "size": 1,
+      "members": [
+        "5IMT_6"
+      ],
+      "pdb_ids": [
+        "5IMT"
+      ]
+    },
+    {
+      "cluster_id": "6I3J_3",
+      "size": 1,
+      "members": [
+        "6I3J_3"
+      ],
+      "pdb_ids": [
+        "6I3J"
+      ]
+    },
+    {
+      "cluster_id": "4H2I_1",
+      "size": 1,
+      "members": [
+        "4H2I_1"
+      ],
+      "pdb_ids": [
+        "4H2I"
+      ]
+    },
+    {
+      "cluster_id": "2Z0F_1",
+      "size": 1,
+      "members": [
+        "2Z0F_1"
+      ],
+      "pdb_ids": [
+        "2Z0F"
+      ]
+    },
+    {
+      "cluster_id": "2F1Z_5",
+      "size": 1,
+      "members": [
+        "2F1Z_5"
+      ],
+      "pdb_ids": [
+        "2F1Z"
+      ]
+    },
+    {
+      "cluster_id": "2F00_1",
+      "size": 1,
+      "members": [
+        "2F00_1"
+      ],
+      "pdb_ids": [
+        "2F00"
+      ]
+    },
+    {
+      "cluster_id": "3SMT_4",
+      "size": 1,
+      "members": [
+        "3SMT_4"
+      ],
+      "pdb_ids": [
+        "3SMT"
+      ]
+    },
+    {
+      "cluster_id": "1NF7_4",
+      "size": 1,
+      "members": [
+        "1NF7_4"
+      ],
+      "pdb_ids": [
+        "1NF7"
+      ]
+    },
+    {
+      "cluster_id": "3ROS_1",
+      "size": 1,
+      "members": [
+        "3ROS_1"
+      ],
+      "pdb_ids": [
+        "3ROS"
+      ]
+    },
+    {
+      "cluster_id": "4P2L_1",
+      "size": 1,
+      "members": [
+        "4P2L_1"
+      ],
+      "pdb_ids": [
+        "4P2L"
+      ]
+    },
+    {
+      "cluster_id": "3HQ2_1",
+      "size": 1,
+      "members": [
+        "3HQ2_1"
+      ],
+      "pdb_ids": [
+        "3HQ2"
+      ]
+    },
+    {
+      "cluster_id": "4NZJ_2",
+      "size": 1,
+      "members": [
+        "4NZJ_2"
+      ],
+      "pdb_ids": [
+        "4NZJ"
+      ]
+    },
+    {
+      "cluster_id": "4TWA_2",
+      "size": 1,
+      "members": [
+        "4TWA_2"
+      ],
+      "pdb_ids": [
+        "4TWA"
+      ]
+    },
+    {
+      "cluster_id": "4Z8X_8",
+      "size": 1,
+      "members": [
+        "4Z8X_8"
+      ],
+      "pdb_ids": [
+        "4Z8X"
+      ]
+    },
+    {
+      "cluster_id": "6PQN_5",
+      "size": 1,
+      "members": [
+        "6PQN_5"
+      ],
+      "pdb_ids": [
+        "6PQN"
+      ]
+    },
+    {
+      "cluster_id": "3RMK_3",
+      "size": 1,
+      "members": [
+        "3RMK_3"
+      ],
+      "pdb_ids": [
+        "3RMK"
+      ]
+    },
+    {
+      "cluster_id": "6PKC_4",
+      "size": 1,
+      "members": [
+        "6PKC_4"
+      ],
+      "pdb_ids": [
+        "6PKC"
+      ]
+    },
+    {
+      "cluster_id": "2BDE_2",
+      "size": 1,
+      "members": [
+        "2BDE_2"
+      ],
+      "pdb_ids": [
+        "2BDE"
+      ]
+    },
+    {
+      "cluster_id": "4KGB_1",
+      "size": 1,
+      "members": [
+        "4KGB_1"
+      ],
+      "pdb_ids": [
+        "4KGB"
+      ]
+    },
+    {
+      "cluster_id": "1GCJ_1",
+      "size": 1,
+      "members": [
+        "1GCJ_1"
+      ],
+      "pdb_ids": [
+        "1GCJ"
+      ]
+    },
+    {
+      "cluster_id": "5FUF_1",
+      "size": 1,
+      "members": [
+        "5FUF_1"
+      ],
+      "pdb_ids": [
+        "5FUF"
+      ]
+    },
+    {
+      "cluster_id": "5XQ1_1",
+      "size": 1,
+      "members": [
+        "5XQ1_1"
+      ],
+      "pdb_ids": [
+        "5XQ1"
+      ]
+    },
+    {
+      "cluster_id": "5O8E_2",
+      "size": 1,
+      "members": [
+        "5O8E_2"
+      ],
+      "pdb_ids": [
+        "5O8E"
+      ]
+    },
+    {
+      "cluster_id": "4AQF_9",
+      "size": 1,
+      "members": [
+        "4AQF_9"
+      ],
+      "pdb_ids": [
+        "4AQF"
+      ]
+    },
+    {
+      "cluster_id": "4IRY_1",
+      "size": 1,
+      "members": [
+        "4IRY_1"
+      ],
+      "pdb_ids": [
+        "4IRY"
+      ]
+    },
+    {
+      "cluster_id": "1OBB_1",
+      "size": 1,
+      "members": [
+        "1OBB_1"
+      ],
+      "pdb_ids": [
+        "1OBB"
+      ]
+    },
+    {
+      "cluster_id": "5W5I_6",
+      "size": 1,
+      "members": [
+        "5W5I_6"
+      ],
+      "pdb_ids": [
+        "5W5I"
+      ]
+    },
+    {
+      "cluster_id": "4OV8_5",
+      "size": 1,
+      "members": [
+        "4OV8_5"
+      ],
+      "pdb_ids": [
+        "4OV8"
+      ]
+    },
+    {
+      "cluster_id": "6NC7_1",
+      "size": 1,
+      "members": [
+        "6NC7_1"
+      ],
+      "pdb_ids": [
+        "6NC7"
+      ]
+    },
+    {
+      "cluster_id": "5GX8_1",
+      "size": 1,
+      "members": [
+        "5GX8_1"
+      ],
+      "pdb_ids": [
+        "5GX8"
+      ]
+    },
+    {
+      "cluster_id": "3BXZ_1",
+      "size": 1,
+      "members": [
+        "3BXZ_1"
+      ],
+      "pdb_ids": [
+        "3BXZ"
+      ]
+    },
+    {
+      "cluster_id": "5Z0Y_1",
+      "size": 1,
+      "members": [
+        "5Z0Y_1"
+      ],
+      "pdb_ids": [
+        "5Z0Y"
+      ]
+    },
+    {
+      "cluster_id": "3BIF_1",
+      "size": 1,
+      "members": [
+        "3BIF_1"
+      ],
+      "pdb_ids": [
+        "3BIF"
+      ]
+    },
+    {
+      "cluster_id": "6QQ2_2",
+      "size": 1,
+      "members": [
+        "6QQ2_2"
+      ],
+      "pdb_ids": [
+        "6QQ2"
+      ]
+    },
+    {
+      "cluster_id": "2NX9_1",
+      "size": 1,
+      "members": [
+        "2NX9_1"
+      ],
+      "pdb_ids": [
+        "2NX9"
+      ]
+    },
+    {
+      "cluster_id": "4A7P_1",
+      "size": 1,
+      "members": [
+        "4A7P_1"
+      ],
+      "pdb_ids": [
+        "4A7P"
+      ]
+    },
+    {
+      "cluster_id": "4G8T_2",
+      "size": 1,
+      "members": [
+        "4G8T_2"
+      ],
+      "pdb_ids": [
+        "4G8T"
+      ]
+    },
+    {
+      "cluster_id": "1ZCJ_3",
+      "size": 1,
+      "members": [
+        "1ZCJ_3"
+      ],
+      "pdb_ids": [
+        "1ZCJ"
+      ]
+    },
+    {
+      "cluster_id": "5ZMD_1",
+      "size": 1,
+      "members": [
+        "5ZMD_1"
+      ],
+      "pdb_ids": [
+        "5ZMD"
+      ]
+    },
+    {
+      "cluster_id": "4GVL_7",
+      "size": 1,
+      "members": [
+        "4GVL_7"
+      ],
+      "pdb_ids": [
+        "4GVL"
+      ]
+    },
+    {
+      "cluster_id": "5FN0_6",
+      "size": 1,
+      "members": [
+        "5FN0_6"
+      ],
+      "pdb_ids": [
+        "5FN0"
+      ]
+    },
+    {
+      "cluster_id": "4TKX_3",
+      "size": 1,
+      "members": [
+        "4TKX_3"
+      ],
+      "pdb_ids": [
+        "4TKX"
+      ]
+    },
+    {
+      "cluster_id": "6ORF_1",
+      "size": 1,
+      "members": [
+        "6ORF_1"
+      ],
+      "pdb_ids": [
+        "6ORF"
+      ]
+    },
+    {
+      "cluster_id": "4C5G_6",
+      "size": 1,
+      "members": [
+        "4C5G_6"
+      ],
+      "pdb_ids": [
+        "4C5G"
+      ]
+    },
+    {
+      "cluster_id": "5H0I_1",
+      "size": 1,
+      "members": [
+        "5H0I_1"
+      ],
+      "pdb_ids": [
+        "5H0I"
+      ]
+    },
+    {
+      "cluster_id": "3PPL_1",
+      "size": 1,
+      "members": [
+        "3PPL_1"
+      ],
+      "pdb_ids": [
+        "3PPL"
+      ]
+    },
+    {
+      "cluster_id": "5UIG_4",
+      "size": 1,
+      "members": [
+        "5UIG_4"
+      ],
+      "pdb_ids": [
+        "5UIG"
+      ]
+    },
+    {
+      "cluster_id": "3TPE_4",
+      "size": 1,
+      "members": [
+        "3TPE_4"
+      ],
+      "pdb_ids": [
+        "3TPE"
+      ]
+    },
+    {
+      "cluster_id": "3HY1_5",
+      "size": 1,
+      "members": [
+        "3HY1_5"
+      ],
+      "pdb_ids": [
+        "3HY1"
+      ]
+    },
+    {
+      "cluster_id": "6J20_3",
+      "size": 1,
+      "members": [
+        "6J20_3"
+      ],
+      "pdb_ids": [
+        "6J20"
+      ]
+    },
+    {
+      "cluster_id": "6JDU_3",
+      "size": 1,
+      "members": [
+        "6JDU_3"
+      ],
+      "pdb_ids": [
+        "6JDU"
+      ]
+    },
+    {
+      "cluster_id": "3KT3_3",
+      "size": 1,
+      "members": [
+        "3KT3_3"
+      ],
+      "pdb_ids": [
+        "3KT3"
+      ]
+    },
+    {
+      "cluster_id": "4CYJ_12",
+      "size": 1,
+      "members": [
+        "4CYJ_12"
+      ],
+      "pdb_ids": [
+        "4CYJ"
+      ]
+    },
+    {
+      "cluster_id": "4ZCH_5",
+      "size": 1,
+      "members": [
+        "4ZCH_5"
+      ],
+      "pdb_ids": [
+        "4ZCH"
+      ]
+    },
+    {
+      "cluster_id": "1DT9_4",
+      "size": 1,
+      "members": [
+        "1DT9_4"
+      ],
+      "pdb_ids": [
+        "1DT9"
+      ]
+    },
+    {
+      "cluster_id": "2FN1_1",
+      "size": 1,
+      "members": [
+        "2FN1_1"
+      ],
+      "pdb_ids": [
+        "2FN1"
+      ]
+    },
+    {
+      "cluster_id": "4G0B_5",
+      "size": 1,
+      "members": [
+        "4G0B_5"
+      ],
+      "pdb_ids": [
+        "4G0B"
+      ]
+    },
+    {
+      "cluster_id": "4INA_1",
+      "size": 1,
+      "members": [
+        "4INA_1"
+      ],
+      "pdb_ids": [
+        "4INA"
+      ]
+    },
+    {
+      "cluster_id": "4E4J_2",
+      "size": 1,
+      "members": [
+        "4E4J_2"
+      ],
+      "pdb_ids": [
+        "4E4J"
+      ]
+    },
+    {
+      "cluster_id": "4HJ1_6",
+      "size": 1,
+      "members": [
+        "4HJ1_6"
+      ],
+      "pdb_ids": [
+        "4HJ1"
+      ]
+    },
+    {
+      "cluster_id": "4N4A_3",
+      "size": 1,
+      "members": [
+        "4N4A_3"
+      ],
+      "pdb_ids": [
+        "4N4A"
+      ]
+    },
+    {
+      "cluster_id": "4ZDU_4",
+      "size": 1,
+      "members": [
+        "4ZDU_4"
+      ],
+      "pdb_ids": [
+        "4ZDU"
+      ]
+    },
+    {
+      "cluster_id": "1T1L_1",
+      "size": 1,
+      "members": [
+        "1T1L_1"
+      ],
+      "pdb_ids": [
+        "1T1L"
+      ]
+    },
+    {
+      "cluster_id": "6BUI_11",
+      "size": 1,
+      "members": [
+        "6BUI_11"
+      ],
+      "pdb_ids": [
+        "6BUI"
+      ]
+    },
+    {
+      "cluster_id": "4PWZ_1",
+      "size": 1,
+      "members": [
+        "4PWZ_1"
+      ],
+      "pdb_ids": [
+        "4PWZ"
+      ]
+    },
+    {
+      "cluster_id": "5YFN_4",
+      "size": 1,
+      "members": [
+        "5YFN_4"
+      ],
+      "pdb_ids": [
+        "5YFN"
+      ]
+    },
+    {
+      "cluster_id": "6H3S_1",
+      "size": 1,
+      "members": [
+        "6H3S_1"
+      ],
+      "pdb_ids": [
+        "6H3S"
+      ]
+    },
+    {
+      "cluster_id": "1JIL_1",
+      "size": 1,
+      "members": [
+        "1JIL_1"
+      ],
+      "pdb_ids": [
+        "1JIL"
+      ]
+    },
+    {
+      "cluster_id": "1QPG_1",
+      "size": 1,
+      "members": [
+        "1QPG_1"
+      ],
+      "pdb_ids": [
+        "1QPG"
+      ]
+    },
+    {
+      "cluster_id": "3P4Y_1",
+      "size": 1,
+      "members": [
+        "3P4Y_1"
+      ],
+      "pdb_ids": [
+        "3P4Y"
+      ]
+    },
+    {
+      "cluster_id": "4KV9_1",
+      "size": 1,
+      "members": [
+        "4KV9_1"
+      ],
+      "pdb_ids": [
+        "4KV9"
+      ]
+    },
+    {
+      "cluster_id": "4P3O_5",
+      "size": 1,
+      "members": [
+        "4P3O_5"
+      ],
+      "pdb_ids": [
+        "4P3O"
+      ]
+    },
+    {
+      "cluster_id": "6GV1_7",
+      "size": 1,
+      "members": [
+        "6GV1_7"
+      ],
+      "pdb_ids": [
+        "6GV1"
+      ]
+    },
+    {
+      "cluster_id": "6FPT_1",
+      "size": 1,
+      "members": [
+        "6FPT_1"
+      ],
+      "pdb_ids": [
+        "6FPT"
+      ]
+    },
+    {
+      "cluster_id": "4PZ8_4",
+      "size": 1,
+      "members": [
+        "4PZ8_4"
+      ],
+      "pdb_ids": [
+        "4PZ8"
+      ]
+    },
+    {
+      "cluster_id": "4G3U_6",
+      "size": 1,
+      "members": [
+        "4G3U_6"
+      ],
+      "pdb_ids": [
+        "4G3U"
+      ]
+    },
+    {
+      "cluster_id": "1FPQ_1",
+      "size": 1,
+      "members": [
+        "1FPQ_1"
+      ],
+      "pdb_ids": [
+        "1FPQ"
+      ]
+    },
+    {
+      "cluster_id": "4FR2_1",
+      "size": 1,
+      "members": [
+        "4FR2_1"
+      ],
+      "pdb_ids": [
+        "4FR2"
+      ]
+    },
+    {
+      "cluster_id": "3ANI_1",
+      "size": 1,
+      "members": [
+        "3ANI_1"
+      ],
+      "pdb_ids": [
+        "3ANI"
+      ]
+    },
+    {
+      "cluster_id": "2DH6_1",
+      "size": 1,
+      "members": [
+        "2DH6_1"
+      ],
+      "pdb_ids": [
+        "2DH6"
+      ]
+    },
+    {
+      "cluster_id": "3CWC_1",
+      "size": 1,
+      "members": [
+        "3CWC_1"
+      ],
+      "pdb_ids": [
+        "3CWC"
+      ]
+    },
+    {
+      "cluster_id": "3KVB_1",
+      "size": 1,
+      "members": [
+        "3KVB_1"
+      ],
+      "pdb_ids": [
+        "3KVB"
+      ]
+    },
+    {
+      "cluster_id": "1V4V_1",
+      "size": 1,
+      "members": [
+        "1V4V_1"
+      ],
+      "pdb_ids": [
+        "1V4V"
+      ]
+    },
+    {
+      "cluster_id": "2R3V_6",
+      "size": 1,
+      "members": [
+        "2R3V_6"
+      ],
+      "pdb_ids": [
+        "2R3V"
+      ]
+    },
+    {
+      "cluster_id": "6ENG_3",
+      "size": 1,
+      "members": [
+        "6ENG_3"
+      ],
+      "pdb_ids": [
+        "6ENG"
+      ]
+    },
+    {
+      "cluster_id": "3OYM_4",
+      "size": 1,
+      "members": [
+        "3OYM_4"
+      ],
+      "pdb_ids": [
+        "3OYM"
+      ]
+    },
+    {
+      "cluster_id": "6A1Z_5",
+      "size": 1,
+      "members": [
+        "6A1Z_5"
+      ],
+      "pdb_ids": [
+        "6A1Z"
+      ]
+    },
+    {
+      "cluster_id": "2ZKJ_2",
+      "size": 1,
+      "members": [
+        "2ZKJ_2"
+      ],
+      "pdb_ids": [
+        "2ZKJ"
+      ]
+    },
+    {
+      "cluster_id": "4FHL_2",
+      "size": 1,
+      "members": [
+        "4FHL_2"
+      ],
+      "pdb_ids": [
+        "4FHL"
+      ]
+    },
+    {
+      "cluster_id": "2NTX_3",
+      "size": 1,
+      "members": [
+        "2NTX_3"
+      ],
+      "pdb_ids": [
+        "2NTX"
+      ]
+    },
+    {
+      "cluster_id": "3TY9_4",
+      "size": 1,
+      "members": [
+        "3TY9_4"
+      ],
+      "pdb_ids": [
+        "3TY9"
+      ]
+    },
+    {
+      "cluster_id": "5L7N_1",
+      "size": 1,
+      "members": [
+        "5L7N_1"
+      ],
+      "pdb_ids": [
+        "5L7N"
+      ]
+    },
+    {
+      "cluster_id": "3KNZ_3",
+      "size": 1,
+      "members": [
+        "3KNZ_3"
+      ],
+      "pdb_ids": [
+        "3KNZ"
+      ]
+    },
+    {
+      "cluster_id": "3OET_2",
+      "size": 1,
+      "members": [
+        "3OET_2"
+      ],
+      "pdb_ids": [
+        "3OET"
+      ]
+    },
+    {
+      "cluster_id": "3TSW_4",
+      "size": 1,
+      "members": [
+        "3TSW_4"
+      ],
+      "pdb_ids": [
+        "3TSW"
+      ]
+    },
+    {
+      "cluster_id": "4ZWV_1",
+      "size": 1,
+      "members": [
+        "4ZWV_1"
+      ],
+      "pdb_ids": [
+        "4ZWV"
+      ]
+    },
+    {
+      "cluster_id": "5EQF_7",
+      "size": 1,
+      "members": [
+        "5EQF_7"
+      ],
+      "pdb_ids": [
+        "5EQF"
+      ]
+    },
+    {
+      "cluster_id": "5H7Z_5",
+      "size": 1,
+      "members": [
+        "5H7Z_5"
+      ],
+      "pdb_ids": [
+        "5H7Z"
+      ]
+    },
+    {
+      "cluster_id": "1DD7_1",
+      "size": 1,
+      "members": [
+        "1DD7_1"
+      ],
+      "pdb_ids": [
+        "1DD7"
+      ]
+    },
+    {
+      "cluster_id": "1FCF_6",
+      "size": 1,
+      "members": [
+        "1FCF_6"
+      ],
+      "pdb_ids": [
+        "1FCF"
+      ]
+    },
+    {
+      "cluster_id": "2B8H_6",
+      "size": 1,
+      "members": [
+        "2B8H_6"
+      ],
+      "pdb_ids": [
+        "2B8H"
+      ]
+    },
+    {
+      "cluster_id": "3RAO_1",
+      "size": 1,
+      "members": [
+        "3RAO_1"
+      ],
+      "pdb_ids": [
+        "3RAO"
+      ]
+    },
+    {
+      "cluster_id": "2WE8_2",
+      "size": 1,
+      "members": [
+        "2WE8_2"
+      ],
+      "pdb_ids": [
+        "2WE8"
+      ]
+    },
+    {
+      "cluster_id": "8JDW_1",
+      "size": 1,
+      "members": [
+        "8JDW_1"
+      ],
+      "pdb_ids": [
+        "8JDW"
+      ]
+    },
+    {
+      "cluster_id": "3HGV_3",
+      "size": 1,
+      "members": [
+        "3HGV_3"
+      ],
+      "pdb_ids": [
+        "3HGV"
+      ]
+    },
+    {
+      "cluster_id": "4GMG_11",
+      "size": 1,
+      "members": [
+        "4GMG_11"
+      ],
+      "pdb_ids": [
+        "4GMG"
+      ]
+    },
+    {
+      "cluster_id": "1ECX_1",
+      "size": 1,
+      "members": [
+        "1ECX_1"
+      ],
+      "pdb_ids": [
+        "1ECX"
+      ]
+    },
+    {
+      "cluster_id": "1VQU_1",
+      "size": 1,
+      "members": [
+        "1VQU_1"
+      ],
+      "pdb_ids": [
+        "1VQU"
+      ]
+    },
+    {
+      "cluster_id": "4HNE_6",
+      "size": 1,
+      "members": [
+        "4HNE_6"
+      ],
+      "pdb_ids": [
+        "4HNE"
+      ]
+    },
+    {
+      "cluster_id": "4X94_4",
+      "size": 1,
+      "members": [
+        "4X94_4"
+      ],
+      "pdb_ids": [
+        "4X94"
+      ]
+    },
+    {
+      "cluster_id": "3CZ7_3",
+      "size": 1,
+      "members": [
+        "3CZ7_3"
+      ],
+      "pdb_ids": [
+        "3CZ7"
+      ]
+    },
+    {
+      "cluster_id": "5H13_1",
+      "size": 1,
+      "members": [
+        "5H13_1"
+      ],
+      "pdb_ids": [
+        "5H13"
+      ]
+    },
+    {
+      "cluster_id": "3LWB_1",
+      "size": 1,
+      "members": [
+        "3LWB_1"
+      ],
+      "pdb_ids": [
+        "3LWB"
+      ]
+    },
+    {
+      "cluster_id": "3LYA_4",
+      "size": 1,
+      "members": [
+        "3LYA_4"
+      ],
+      "pdb_ids": [
+        "3LYA"
+      ]
+    },
+    {
+      "cluster_id": "1KHO_1",
+      "size": 1,
+      "members": [
+        "1KHO_1"
+      ],
+      "pdb_ids": [
+        "1KHO"
+      ]
+    },
+    {
+      "cluster_id": "1GYL_1",
+      "size": 1,
+      "members": [
+        "1GYL_1"
+      ],
+      "pdb_ids": [
+        "1GYL"
+      ]
+    },
+    {
+      "cluster_id": "2HB0_1",
+      "size": 1,
+      "members": [
+        "2HB0_1"
+      ],
+      "pdb_ids": [
+        "2HB0"
+      ]
+    },
+    {
+      "cluster_id": "4RCT_1",
+      "size": 1,
+      "members": [
+        "4RCT_1"
+      ],
+      "pdb_ids": [
+        "4RCT"
+      ]
+    },
+    {
+      "cluster_id": "3RTR_20",
+      "size": 1,
+      "members": [
+        "3RTR_20"
+      ],
+      "pdb_ids": [
+        "3RTR"
+      ]
+    },
+    {
+      "cluster_id": "5K4B_1",
+      "size": 1,
+      "members": [
+        "5K4B_1"
+      ],
+      "pdb_ids": [
+        "5K4B"
+      ]
+    },
+    {
+      "cluster_id": "4B87_1",
+      "size": 1,
+      "members": [
+        "4B87_1"
+      ],
+      "pdb_ids": [
+        "4B87"
+      ]
+    },
+    {
+      "cluster_id": "4P7O_1",
+      "size": 1,
+      "members": [
+        "4P7O_1"
+      ],
+      "pdb_ids": [
+        "4P7O"
+      ]
+    },
+    {
+      "cluster_id": "5COA_3",
+      "size": 1,
+      "members": [
+        "5COA_3"
+      ],
+      "pdb_ids": [
+        "5COA"
+      ]
+    },
+    {
+      "cluster_id": "3KUX_3",
+      "size": 1,
+      "members": [
+        "3KUX_3"
+      ],
+      "pdb_ids": [
+        "3KUX"
+      ]
+    },
+    {
+      "cluster_id": "4G1L_10",
+      "size": 1,
+      "members": [
+        "4G1L_10"
+      ],
+      "pdb_ids": [
+        "4G1L"
+      ]
+    },
+    {
+      "cluster_id": "1FDJ_11",
+      "size": 1,
+      "members": [
+        "1FDJ_11"
+      ],
+      "pdb_ids": [
+        "1FDJ"
+      ]
+    },
+    {
+      "cluster_id": "1ZBR_1",
+      "size": 1,
+      "members": [
+        "1ZBR_1"
+      ],
+      "pdb_ids": [
+        "1ZBR"
+      ]
+    },
+    {
+      "cluster_id": "3JPW_2",
+      "size": 1,
+      "members": [
+        "3JPW_2"
+      ],
+      "pdb_ids": [
+        "3JPW"
+      ]
+    },
+    {
+      "cluster_id": "6HKW_16",
+      "size": 1,
+      "members": [
+        "6HKW_16"
+      ],
+      "pdb_ids": [
+        "6HKW"
+      ]
+    },
+    {
+      "cluster_id": "6QPP_2",
+      "size": 1,
+      "members": [
+        "6QPP_2"
+      ],
+      "pdb_ids": [
+        "6QPP"
+      ]
+    },
+    {
+      "cluster_id": "2I7P_1",
+      "size": 1,
+      "members": [
+        "2I7P_1"
+      ],
+      "pdb_ids": [
+        "2I7P"
+      ]
+    },
+    {
+      "cluster_id": "3L0Z_5",
+      "size": 1,
+      "members": [
+        "3L0Z_5"
+      ],
+      "pdb_ids": [
+        "3L0Z"
+      ]
+    },
+    {
+      "cluster_id": "4GEW_4",
+      "size": 1,
+      "members": [
+        "4GEW_4"
+      ],
+      "pdb_ids": [
+        "4GEW"
+      ]
+    },
+    {
+      "cluster_id": "1FR1_1",
+      "size": 1,
+      "members": [
+        "1FR1_1"
+      ],
+      "pdb_ids": [
+        "1FR1"
+      ]
+    },
+    {
+      "cluster_id": "4U9O_3",
+      "size": 1,
+      "members": [
+        "4U9O_3"
+      ],
+      "pdb_ids": [
+        "4U9O"
+      ]
+    },
+    {
+      "cluster_id": "4GC9_1",
+      "size": 1,
+      "members": [
+        "4GC9_1"
+      ],
+      "pdb_ids": [
+        "4GC9"
+      ]
+    },
+    {
+      "cluster_id": "3EB8_3",
+      "size": 1,
+      "members": [
+        "3EB8_3"
+      ],
+      "pdb_ids": [
+        "3EB8"
+      ]
+    },
+    {
+      "cluster_id": "5ZHQ_1",
+      "size": 1,
+      "members": [
+        "5ZHQ_1"
+      ],
+      "pdb_ids": [
+        "5ZHQ"
+      ]
+    },
+    {
+      "cluster_id": "4Q5Y_1",
+      "size": 1,
+      "members": [
+        "4Q5Y_1"
+      ],
+      "pdb_ids": [
+        "4Q5Y"
+      ]
+    },
+    {
+      "cluster_id": "1IUG_1",
+      "size": 1,
+      "members": [
+        "1IUG_1"
+      ],
+      "pdb_ids": [
+        "1IUG"
+      ]
+    },
+    {
+      "cluster_id": "4A64_5",
+      "size": 1,
+      "members": [
+        "4A64_5"
+      ],
+      "pdb_ids": [
+        "4A64"
+      ]
+    },
+    {
+      "cluster_id": "2ZB3_4",
+      "size": 1,
+      "members": [
+        "2ZB3_4"
+      ],
+      "pdb_ids": [
+        "2ZB3"
+      ]
+    },
+    {
+      "cluster_id": "1K6I_3",
+      "size": 1,
+      "members": [
+        "1K6I_3"
+      ],
+      "pdb_ids": [
+        "1K6I"
+      ]
+    },
+    {
+      "cluster_id": "3K8V_9",
+      "size": 1,
+      "members": [
+        "3K8V_9"
+      ],
+      "pdb_ids": [
+        "3K8V"
+      ]
+    },
+    {
+      "cluster_id": "1JUH_9",
+      "size": 1,
+      "members": [
+        "1JUH_9"
+      ],
+      "pdb_ids": [
+        "1JUH"
+      ]
+    },
+    {
+      "cluster_id": "1UJN_1",
+      "size": 1,
+      "members": [
+        "1UJN_1"
+      ],
+      "pdb_ids": [
+        "1UJN"
+      ]
+    },
+    {
+      "cluster_id": "4YH6_1",
+      "size": 1,
+      "members": [
+        "4YH6_1"
+      ],
+      "pdb_ids": [
+        "4YH6"
+      ]
+    },
+    {
+      "cluster_id": "3GFF_1",
+      "size": 1,
+      "members": [
+        "3GFF_1"
+      ],
+      "pdb_ids": [
+        "3GFF"
+      ]
+    },
+    {
+      "cluster_id": "4WZH_4",
+      "size": 1,
+      "members": [
+        "4WZH_4"
+      ],
+      "pdb_ids": [
+        "4WZH"
+      ]
+    },
+    {
+      "cluster_id": "2Q7D_1",
+      "size": 1,
+      "members": [
+        "2Q7D_1"
+      ],
+      "pdb_ids": [
+        "2Q7D"
+      ]
+    },
+    {
+      "cluster_id": "3IHR_3",
+      "size": 1,
+      "members": [
+        "3IHR_3"
+      ],
+      "pdb_ids": [
+        "3IHR"
+      ]
+    },
+    {
+      "cluster_id": "2I6A_2",
+      "size": 1,
+      "members": [
+        "2I6A_2"
+      ],
+      "pdb_ids": [
+        "2I6A"
+      ]
+    },
+    {
+      "cluster_id": "3DO5_1",
+      "size": 1,
+      "members": [
+        "3DO5_1"
+      ],
+      "pdb_ids": [
+        "3DO5"
+      ]
+    },
+    {
+      "cluster_id": "6BNC_1",
+      "size": 1,
+      "members": [
+        "6BNC_1"
+      ],
+      "pdb_ids": [
+        "6BNC"
+      ]
+    },
+    {
+      "cluster_id": "5C3Q_18",
+      "size": 1,
+      "members": [
+        "5C3Q_18"
+      ],
+      "pdb_ids": [
+        "5C3Q"
+      ]
+    },
+    {
+      "cluster_id": "1RPA_1",
+      "size": 1,
+      "members": [
+        "1RPA_1"
+      ],
+      "pdb_ids": [
+        "1RPA"
+      ]
+    },
+    {
+      "cluster_id": "2I5P_1",
+      "size": 1,
+      "members": [
+        "2I5P_1"
+      ],
+      "pdb_ids": [
+        "2I5P"
+      ]
+    },
+    {
+      "cluster_id": "4NXW_2",
+      "size": 1,
+      "members": [
+        "4NXW_2"
+      ],
+      "pdb_ids": [
+        "4NXW"
+      ]
+    },
+    {
+      "cluster_id": "3RO8_19",
+      "size": 1,
+      "members": [
+        "3RO8_19"
+      ],
+      "pdb_ids": [
+        "3RO8"
+      ]
+    },
+    {
+      "cluster_id": "3BLC_3",
+      "size": 1,
+      "members": [
+        "3BLC_3"
+      ],
+      "pdb_ids": [
+        "3BLC"
+      ]
+    },
+    {
+      "cluster_id": "3RT0_1",
+      "size": 1,
+      "members": [
+        "3RT0_1"
+      ],
+      "pdb_ids": [
+        "3RT0"
+      ]
+    },
+    {
+      "cluster_id": "5MUS_1",
+      "size": 1,
+      "members": [
+        "5MUS_1"
+      ],
+      "pdb_ids": [
+        "5MUS"
+      ]
+    },
+    {
+      "cluster_id": "1KIE_1",
+      "size": 1,
+      "members": [
+        "1KIE_1"
+      ],
+      "pdb_ids": [
+        "1KIE"
+      ]
+    },
+    {
+      "cluster_id": "3OPU_23",
+      "size": 1,
+      "members": [
+        "3OPU_23"
+      ],
+      "pdb_ids": [
+        "3OPU"
+      ]
+    },
+    {
+      "cluster_id": "4HD0_5",
+      "size": 1,
+      "members": [
+        "4HD0_5"
+      ],
+      "pdb_ids": [
+        "4HD0"
+      ]
+    },
+    {
+      "cluster_id": "5X9I_1",
+      "size": 1,
+      "members": [
+        "5X9I_1"
+      ],
+      "pdb_ids": [
+        "5X9I"
+      ]
+    },
+    {
+      "cluster_id": "6RRC_4",
+      "size": 1,
+      "members": [
+        "6RRC_4"
+      ],
+      "pdb_ids": [
+        "6RRC"
+      ]
+    },
+    {
+      "cluster_id": "3IJL_2",
+      "size": 1,
+      "members": [
+        "3IJL_2"
+      ],
+      "pdb_ids": [
+        "3IJL"
+      ]
+    },
+    {
+      "cluster_id": "3BXX_1",
+      "size": 1,
+      "members": [
+        "3BXX_1"
+      ],
+      "pdb_ids": [
+        "3BXX"
+      ]
+    },
+    {
+      "cluster_id": "3PND_8",
+      "size": 1,
+      "members": [
+        "3PND_8"
+      ],
+      "pdb_ids": [
+        "3PND"
+      ]
+    },
+    {
+      "cluster_id": "5FUB_1",
+      "size": 1,
+      "members": [
+        "5FUB_1"
+      ],
+      "pdb_ids": [
+        "5FUB"
+      ]
+    },
+    {
+      "cluster_id": "6D9M_4",
+      "size": 1,
+      "members": [
+        "6D9M_4"
+      ],
+      "pdb_ids": [
+        "6D9M"
+      ]
+    },
+    {
+      "cluster_id": "2ZZN_2",
+      "size": 1,
+      "members": [
+        "2ZZN_2"
+      ],
+      "pdb_ids": [
+        "2ZZN"
+      ]
+    },
+    {
+      "cluster_id": "3CHI_1",
+      "size": 1,
+      "members": [
+        "3CHI_1"
+      ],
+      "pdb_ids": [
+        "3CHI"
+      ]
+    },
+    {
+      "cluster_id": "4MDH_1",
+      "size": 1,
+      "members": [
+        "4MDH_1"
+      ],
+      "pdb_ids": [
+        "4MDH"
+      ]
+    },
+    {
+      "cluster_id": "5KZ6_1",
+      "size": 1,
+      "members": [
+        "5KZ6_1"
+      ],
+      "pdb_ids": [
+        "5KZ6"
+      ]
+    },
+    {
+      "cluster_id": "5IG8_1",
+      "size": 1,
+      "members": [
+        "5IG8_1"
+      ],
+      "pdb_ids": [
+        "5IG8"
+      ]
+    },
+    {
+      "cluster_id": "5NFO_5",
+      "size": 1,
+      "members": [
+        "5NFO_5"
+      ],
+      "pdb_ids": [
+        "5NFO"
+      ]
+    },
+    {
+      "cluster_id": "2VJ4_7",
+      "size": 1,
+      "members": [
+        "2VJ4_7"
+      ],
+      "pdb_ids": [
+        "2VJ4"
+      ]
+    },
+    {
+      "cluster_id": "3LXY_1",
+      "size": 1,
+      "members": [
+        "3LXY_1"
+      ],
+      "pdb_ids": [
+        "3LXY"
+      ]
+    },
+    {
+      "cluster_id": "5DTM_1",
+      "size": 1,
+      "members": [
+        "5DTM_1"
+      ],
+      "pdb_ids": [
+        "5DTM"
+      ]
+    },
+    {
+      "cluster_id": "6HZL_2",
+      "size": 1,
+      "members": [
+        "6HZL_2"
+      ],
+      "pdb_ids": [
+        "6HZL"
+      ]
+    },
+    {
+      "cluster_id": "3DPT_1",
+      "size": 1,
+      "members": [
+        "3DPT_1"
+      ],
+      "pdb_ids": [
+        "3DPT"
+      ]
+    },
+    {
+      "cluster_id": "2FV7_1",
+      "size": 1,
+      "members": [
+        "2FV7_1"
+      ],
+      "pdb_ids": [
+        "2FV7"
+      ]
+    },
+    {
+      "cluster_id": "2HK3_1",
+      "size": 1,
+      "members": [
+        "2HK3_1"
+      ],
+      "pdb_ids": [
+        "2HK3"
+      ]
+    },
+    {
+      "cluster_id": "5C9V_3",
+      "size": 1,
+      "members": [
+        "5C9V_3"
+      ],
+      "pdb_ids": [
+        "5C9V"
+      ]
+    },
+    {
+      "cluster_id": "3PBB_5",
+      "size": 1,
+      "members": [
+        "3PBB_5"
+      ],
+      "pdb_ids": [
+        "3PBB"
+      ]
+    },
+    {
+      "cluster_id": "2D4H_1",
+      "size": 1,
+      "members": [
+        "2D4H_1"
+      ],
+      "pdb_ids": [
+        "2D4H"
+      ]
+    },
+    {
+      "cluster_id": "4MUO_1",
+      "size": 1,
+      "members": [
+        "4MUO_1"
+      ],
+      "pdb_ids": [
+        "4MUO"
+      ]
+    },
+    {
+      "cluster_id": "1U2J_24",
+      "size": 1,
+      "members": [
+        "1U2J_24"
+      ],
+      "pdb_ids": [
+        "1U2J"
+      ]
+    },
+    {
+      "cluster_id": "3SNO_1",
+      "size": 1,
+      "members": [
+        "3SNO_1"
+      ],
+      "pdb_ids": [
+        "3SNO"
+      ]
+    },
+    {
+      "cluster_id": "3V0E_5",
+      "size": 1,
+      "members": [
+        "3V0E_5"
+      ],
+      "pdb_ids": [
+        "3V0E"
+      ]
+    },
+    {
+      "cluster_id": "2OFJ_1",
+      "size": 1,
+      "members": [
+        "2OFJ_1"
+      ],
+      "pdb_ids": [
+        "2OFJ"
+      ]
+    },
+    {
+      "cluster_id": "4HHE_4",
+      "size": 1,
+      "members": [
+        "4HHE_4"
+      ],
+      "pdb_ids": [
+        "4HHE"
+      ]
+    },
+    {
+      "cluster_id": "5HSX_3",
+      "size": 1,
+      "members": [
+        "5HSX_3"
+      ],
+      "pdb_ids": [
+        "5HSX"
+      ]
+    },
+    {
+      "cluster_id": "3K6K_2",
+      "size": 1,
+      "members": [
+        "3K6K_2"
+      ],
+      "pdb_ids": [
+        "3K6K"
+      ]
+    },
+    {
+      "cluster_id": "3EIJ_1",
+      "size": 1,
+      "members": [
+        "3EIJ_1"
+      ],
+      "pdb_ids": [
+        "3EIJ"
+      ]
+    },
+    {
+      "cluster_id": "4DMZ_1",
+      "size": 1,
+      "members": [
+        "4DMZ_1"
+      ],
+      "pdb_ids": [
+        "4DMZ"
+      ]
+    },
+    {
+      "cluster_id": "1I74_1",
+      "size": 1,
+      "members": [
+        "1I74_1"
+      ],
+      "pdb_ids": [
+        "1I74"
+      ]
+    },
+    {
+      "cluster_id": "1SE8_1",
+      "size": 1,
+      "members": [
+        "1SE8_1"
+      ],
+      "pdb_ids": [
+        "1SE8"
+      ]
+    },
+    {
+      "cluster_id": "3HZU_1",
+      "size": 1,
+      "members": [
+        "3HZU_1"
+      ],
+      "pdb_ids": [
+        "3HZU"
+      ]
+    },
+    {
+      "cluster_id": "3QAT_3",
+      "size": 1,
+      "members": [
+        "3QAT_3"
+      ],
+      "pdb_ids": [
+        "3QAT"
+      ]
+    },
+    {
+      "cluster_id": "4G0A_16",
+      "size": 1,
+      "members": [
+        "4G0A_16"
+      ],
+      "pdb_ids": [
+        "4G0A"
+      ]
+    },
+    {
+      "cluster_id": "3ICW_3",
+      "size": 1,
+      "members": [
+        "3ICW_3"
+      ],
+      "pdb_ids": [
+        "3ICW"
+      ]
+    },
+    {
+      "cluster_id": "4PBC_1",
+      "size": 1,
+      "members": [
+        "4PBC_1"
+      ],
+      "pdb_ids": [
+        "4PBC"
+      ]
+    },
+    {
+      "cluster_id": "4ZQB_1",
+      "size": 1,
+      "members": [
+        "4ZQB_1"
+      ],
+      "pdb_ids": [
+        "4ZQB"
+      ]
+    },
+    {
+      "cluster_id": "1ZC6_1",
+      "size": 1,
+      "members": [
+        "1ZC6_1"
+      ],
+      "pdb_ids": [
+        "1ZC6"
+      ]
+    },
+    {
+      "cluster_id": "4MHR_2",
+      "size": 1,
+      "members": [
+        "4MHR_2"
+      ],
+      "pdb_ids": [
+        "4MHR"
+      ]
+    },
+    {
+      "cluster_id": "1AZW_1",
+      "size": 1,
+      "members": [
+        "1AZW_1"
+      ],
+      "pdb_ids": [
+        "1AZW"
+      ]
+    },
+    {
+      "cluster_id": "2H2W_1",
+      "size": 1,
+      "members": [
+        "2H2W_1"
+      ],
+      "pdb_ids": [
+        "2H2W"
+      ]
+    },
+    {
+      "cluster_id": "3K1M_1",
+      "size": 1,
+      "members": [
+        "3K1M_1"
+      ],
+      "pdb_ids": [
+        "3K1M"
+      ]
+    },
+    {
+      "cluster_id": "5IL5_1",
+      "size": 1,
+      "members": [
+        "5IL5_1"
+      ],
+      "pdb_ids": [
+        "5IL5"
+      ]
+    },
+    {
+      "cluster_id": "2YXZ_2",
+      "size": 1,
+      "members": [
+        "2YXZ_2"
+      ],
+      "pdb_ids": [
+        "2YXZ"
+      ]
+    },
+    {
+      "cluster_id": "2V5N_1",
+      "size": 1,
+      "members": [
+        "2V5N_1"
+      ],
+      "pdb_ids": [
+        "2V5N"
+      ]
+    },
+    {
+      "cluster_id": "2EGU_3",
+      "size": 1,
+      "members": [
+        "2EGU_3"
+      ],
+      "pdb_ids": [
+        "2EGU"
+      ]
+    },
+    {
+      "cluster_id": "4WLM_2",
+      "size": 1,
+      "members": [
+        "4WLM_2"
+      ],
+      "pdb_ids": [
+        "4WLM"
+      ]
+    },
+    {
+      "cluster_id": "1F1J_5",
+      "size": 1,
+      "members": [
+        "1F1J_5"
+      ],
+      "pdb_ids": [
+        "1F1J"
+      ]
+    },
+    {
+      "cluster_id": "1P8L_1",
+      "size": 1,
+      "members": [
+        "1P8L_1"
+      ],
+      "pdb_ids": [
+        "1P8L"
+      ]
+    },
+    {
+      "cluster_id": "1SFR_4",
+      "size": 1,
+      "members": [
+        "1SFR_4"
+      ],
+      "pdb_ids": [
+        "1SFR"
+      ]
+    },
+    {
+      "cluster_id": "3KG7_2",
+      "size": 1,
+      "members": [
+        "3KG7_2"
+      ],
+      "pdb_ids": [
+        "3KG7"
+      ]
+    },
+    {
+      "cluster_id": "4I1M_4",
+      "size": 1,
+      "members": [
+        "4I1M_4"
+      ],
+      "pdb_ids": [
+        "4I1M"
+      ]
+    },
+    {
+      "cluster_id": "4NGF_4",
+      "size": 1,
+      "members": [
+        "4NGF_4"
+      ],
+      "pdb_ids": [
+        "4NGF"
+      ]
+    },
+    {
+      "cluster_id": "5E5P_4",
+      "size": 1,
+      "members": [
+        "5E5P_4"
+      ],
+      "pdb_ids": [
+        "5E5P"
+      ]
+    },
+    {
+      "cluster_id": "4OKY_1",
+      "size": 1,
+      "members": [
+        "4OKY_1"
+      ],
+      "pdb_ids": [
+        "4OKY"
+      ]
+    },
+    {
+      "cluster_id": "4W8P_5",
+      "size": 1,
+      "members": [
+        "4W8P_5"
+      ],
+      "pdb_ids": [
+        "4W8P"
+      ]
+    },
+    {
+      "cluster_id": "1P35_11",
+      "size": 1,
+      "members": [
+        "1P35_11"
+      ],
+      "pdb_ids": [
+        "1P35"
+      ]
+    },
+    {
+      "cluster_id": "1WLG_3",
+      "size": 1,
+      "members": [
+        "1WLG_3"
+      ],
+      "pdb_ids": [
+        "1WLG"
+      ]
+    },
+    {
+      "cluster_id": "4NPJ_1",
+      "size": 1,
+      "members": [
+        "4NPJ_1"
+      ],
+      "pdb_ids": [
+        "4NPJ"
+      ]
+    },
+    {
+      "cluster_id": "6R80_2",
+      "size": 1,
+      "members": [
+        "6R80_2"
+      ],
+      "pdb_ids": [
+        "6R80"
+      ]
+    },
+    {
+      "cluster_id": "5AYP_1",
+      "size": 1,
+      "members": [
+        "5AYP_1"
+      ],
+      "pdb_ids": [
+        "5AYP"
+      ]
+    },
+    {
+      "cluster_id": "1J1I_1",
+      "size": 1,
+      "members": [
+        "1J1I_1"
+      ],
+      "pdb_ids": [
+        "1J1I"
+      ]
+    },
+    {
+      "cluster_id": "5UME_2",
+      "size": 1,
+      "members": [
+        "5UME_2"
+      ],
+      "pdb_ids": [
+        "5UME"
+      ]
+    },
+    {
+      "cluster_id": "3B4U_1",
+      "size": 1,
+      "members": [
+        "3B4U_1"
+      ],
+      "pdb_ids": [
+        "3B4U"
+      ]
+    },
+    {
+      "cluster_id": "5Y4S_6",
+      "size": 1,
+      "members": [
+        "5Y4S_6"
+      ],
+      "pdb_ids": [
+        "5Y4S"
+      ]
+    },
+    {
+      "cluster_id": "1H3I_1",
+      "size": 1,
+      "members": [
+        "1H3I_1"
+      ],
+      "pdb_ids": [
+        "1H3I"
+      ]
+    },
+    {
+      "cluster_id": "5MSN_1",
+      "size": 1,
+      "members": [
+        "5MSN_1"
+      ],
+      "pdb_ids": [
+        "5MSN"
+      ]
+    },
+    {
+      "cluster_id": "3BJR_1",
+      "size": 1,
+      "members": [
+        "3BJR_1"
+      ],
+      "pdb_ids": [
+        "3BJR"
+      ]
+    },
+    {
+      "cluster_id": "5FOM_2",
+      "size": 1,
+      "members": [
+        "5FOM_2"
+      ],
+      "pdb_ids": [
+        "5FOM"
+      ]
+    },
+    {
+      "cluster_id": "5B7Z_1",
+      "size": 1,
+      "members": [
+        "5B7Z_1"
+      ],
+      "pdb_ids": [
+        "5B7Z"
+      ]
+    },
+    {
+      "cluster_id": "2F1M_2",
+      "size": 1,
+      "members": [
+        "2F1M_2"
+      ],
+      "pdb_ids": [
+        "2F1M"
+      ]
+    },
+    {
+      "cluster_id": "5JGK_1",
+      "size": 1,
+      "members": [
+        "5JGK_1"
+      ],
+      "pdb_ids": [
+        "5JGK"
+      ]
+    },
+    {
+      "cluster_id": "6D2S_6",
+      "size": 1,
+      "members": [
+        "6D2S_6"
+      ],
+      "pdb_ids": [
+        "6D2S"
+      ]
+    },
+    {
+      "cluster_id": "3A1D_5",
+      "size": 1,
+      "members": [
+        "3A1D_5"
+      ],
+      "pdb_ids": [
+        "3A1D"
+      ]
+    },
+    {
+      "cluster_id": "2XJ9_1",
+      "size": 1,
+      "members": [
+        "2XJ9_1"
+      ],
+      "pdb_ids": [
+        "2XJ9"
+      ]
+    },
+    {
+      "cluster_id": "3RPC_2",
+      "size": 1,
+      "members": [
+        "3RPC_2"
+      ],
+      "pdb_ids": [
+        "3RPC"
+      ]
+    },
+    {
+      "cluster_id": "4GUZ_5",
+      "size": 1,
+      "members": [
+        "4GUZ_5"
+      ],
+      "pdb_ids": [
+        "4GUZ"
+      ]
+    },
+    {
+      "cluster_id": "3IHL_5",
+      "size": 1,
+      "members": [
+        "3IHL_5"
+      ],
+      "pdb_ids": [
+        "3IHL"
+      ]
+    },
+    {
+      "cluster_id": "4Q7J_22",
+      "size": 1,
+      "members": [
+        "4Q7J_22"
+      ],
+      "pdb_ids": [
+        "4Q7J"
+      ]
+    },
+    {
+      "cluster_id": "2C2X_1",
+      "size": 1,
+      "members": [
+        "2C2X_1"
+      ],
+      "pdb_ids": [
+        "2C2X"
+      ]
+    },
+    {
+      "cluster_id": "3ROG_2",
+      "size": 1,
+      "members": [
+        "3ROG_2"
+      ],
+      "pdb_ids": [
+        "3ROG"
+      ]
+    },
+    {
+      "cluster_id": "2OZV_1",
+      "size": 1,
+      "members": [
+        "2OZV_1"
+      ],
+      "pdb_ids": [
+        "2OZV"
+      ]
+    },
+    {
+      "cluster_id": "4FNA_6",
+      "size": 1,
+      "members": [
+        "4FNA_6"
+      ],
+      "pdb_ids": [
+        "4FNA"
+      ]
+    },
+    {
+      "cluster_id": "6DFK_9",
+      "size": 1,
+      "members": [
+        "6DFK_9"
+      ],
+      "pdb_ids": [
+        "6DFK"
+      ]
+    },
+    {
+      "cluster_id": "4F7O_1",
+      "size": 1,
+      "members": [
+        "4F7O_1"
+      ],
+      "pdb_ids": [
+        "4F7O"
+      ]
+    },
+    {
+      "cluster_id": "2BBH_4",
+      "size": 1,
+      "members": [
+        "2BBH_4"
+      ],
+      "pdb_ids": [
+        "2BBH"
+      ]
+    },
+    {
+      "cluster_id": "5EQ9_1",
+      "size": 1,
+      "members": [
+        "5EQ9_1"
+      ],
+      "pdb_ids": [
+        "5EQ9"
+      ]
+    },
+    {
+      "cluster_id": "6FWT_2",
+      "size": 1,
+      "members": [
+        "6FWT_2"
+      ],
+      "pdb_ids": [
+        "6FWT"
+      ]
+    },
+    {
+      "cluster_id": "1SW2_4",
+      "size": 1,
+      "members": [
+        "1SW2_4"
+      ],
+      "pdb_ids": [
+        "1SW2"
+      ]
+    },
+    {
+      "cluster_id": "2ZE3_1",
+      "size": 1,
+      "members": [
+        "2ZE3_1"
+      ],
+      "pdb_ids": [
+        "2ZE3"
+      ]
+    },
+    {
+      "cluster_id": "4NSV_1",
+      "size": 1,
+      "members": [
+        "4NSV_1"
+      ],
+      "pdb_ids": [
+        "4NSV"
+      ]
+    },
+    {
+      "cluster_id": "1QRD_1",
+      "size": 1,
+      "members": [
+        "1QRD_1"
+      ],
+      "pdb_ids": [
+        "1QRD"
+      ]
+    },
+    {
+      "cluster_id": "1M6U_9",
+      "size": 1,
+      "members": [
+        "1M6U_9"
+      ],
+      "pdb_ids": [
+        "1M6U"
+      ]
+    },
+    {
+      "cluster_id": "1G68_1",
+      "size": 1,
+      "members": [
+        "1G68_1"
+      ],
+      "pdb_ids": [
+        "1G68"
+      ]
+    },
+    {
+      "cluster_id": "2YAZ_6",
+      "size": 1,
+      "members": [
+        "2YAZ_6"
+      ],
+      "pdb_ids": [
+        "2YAZ"
+      ]
+    },
+    {
+      "cluster_id": "2YCJ_1",
+      "size": 1,
+      "members": [
+        "2YCJ_1"
+      ],
+      "pdb_ids": [
+        "2YCJ"
+      ]
+    },
+    {
+      "cluster_id": "3ZYL_1",
+      "size": 1,
+      "members": [
+        "3ZYL_1"
+      ],
+      "pdb_ids": [
+        "3ZYL"
+      ]
+    },
+    {
+      "cluster_id": "4ZLP_4",
+      "size": 1,
+      "members": [
+        "4ZLP_4"
+      ],
+      "pdb_ids": [
+        "4ZLP"
+      ]
+    },
+    {
+      "cluster_id": "5T9F_1",
+      "size": 1,
+      "members": [
+        "5T9F_1"
+      ],
+      "pdb_ids": [
+        "5T9F"
+      ]
+    },
+    {
+      "cluster_id": "1KCM_6",
+      "size": 1,
+      "members": [
+        "1KCM_6"
+      ],
+      "pdb_ids": [
+        "1KCM"
+      ]
+    },
+    {
+      "cluster_id": "2FUC_1",
+      "size": 1,
+      "members": [
+        "2FUC_1"
+      ],
+      "pdb_ids": [
+        "2FUC"
+      ]
+    },
+    {
+      "cluster_id": "5FJZ_4",
+      "size": 1,
+      "members": [
+        "5FJZ_4"
+      ],
+      "pdb_ids": [
+        "5FJZ"
+      ]
+    },
+    {
+      "cluster_id": "1CP2_1",
+      "size": 1,
+      "members": [
+        "1CP2_1"
+      ],
+      "pdb_ids": [
+        "1CP2"
+      ]
+    },
+    {
+      "cluster_id": "4C98_1",
+      "size": 1,
+      "members": [
+        "4C98_1"
+      ],
+      "pdb_ids": [
+        "4C98"
+      ]
+    },
+    {
+      "cluster_id": "3LPM_1",
+      "size": 1,
+      "members": [
+        "3LPM_1"
+      ],
+      "pdb_ids": [
+        "3LPM"
+      ]
+    },
+    {
+      "cluster_id": "5D9G_2",
+      "size": 1,
+      "members": [
+        "5D9G_2"
+      ],
+      "pdb_ids": [
+        "5D9G"
+      ]
+    },
+    {
+      "cluster_id": "1EKU_1",
+      "size": 1,
+      "members": [
+        "1EKU_1"
+      ],
+      "pdb_ids": [
+        "1EKU"
+      ]
+    },
+    {
+      "cluster_id": "3UIT_14",
+      "size": 1,
+      "members": [
+        "3UIT_14"
+      ],
+      "pdb_ids": [
+        "3UIT"
+      ]
+    },
+    {
+      "cluster_id": "5WDI_2",
+      "size": 1,
+      "members": [
+        "5WDI_2"
+      ],
+      "pdb_ids": [
+        "5WDI"
+      ]
+    },
+    {
+      "cluster_id": "1CYY_5",
+      "size": 1,
+      "members": [
+        "1CYY_5"
+      ],
+      "pdb_ids": [
+        "1CYY"
+      ]
+    },
+    {
+      "cluster_id": "1SYQ_8",
+      "size": 1,
+      "members": [
+        "1SYQ_8"
+      ],
+      "pdb_ids": [
+        "1SYQ"
+      ]
+    },
+    {
+      "cluster_id": "1VR0_1",
+      "size": 1,
+      "members": [
+        "1VR0_1"
+      ],
+      "pdb_ids": [
+        "1VR0"
+      ]
+    },
+    {
+      "cluster_id": "3L1W_2",
+      "size": 1,
+      "members": [
+        "3L1W_2"
+      ],
+      "pdb_ids": [
+        "3L1W"
+      ]
+    },
+    {
+      "cluster_id": "5GT9_1",
+      "size": 1,
+      "members": [
+        "5GT9_1"
+      ],
+      "pdb_ids": [
+        "5GT9"
+      ]
+    },
+    {
+      "cluster_id": "2NPN_3",
+      "size": 1,
+      "members": [
+        "2NPN_3"
+      ],
+      "pdb_ids": [
+        "2NPN"
+      ]
+    },
+    {
+      "cluster_id": "3HY8_1",
+      "size": 1,
+      "members": [
+        "3HY8_1"
+      ],
+      "pdb_ids": [
+        "3HY8"
+      ]
+    },
+    {
+      "cluster_id": "1C16_14",
+      "size": 1,
+      "members": [
+        "1C16_14"
+      ],
+      "pdb_ids": [
+        "1C16"
+      ]
+    },
+    {
+      "cluster_id": "3AQT_1",
+      "size": 1,
+      "members": [
+        "3AQT_1"
+      ],
+      "pdb_ids": [
+        "3AQT"
+      ]
+    },
+    {
+      "cluster_id": "5GKX_4",
+      "size": 1,
+      "members": [
+        "5GKX_4"
+      ],
+      "pdb_ids": [
+        "5GKX"
+      ]
+    },
+    {
+      "cluster_id": "1LVB_5",
+      "size": 1,
+      "members": [
+        "1LVB_5"
+      ],
+      "pdb_ids": [
+        "1LVB"
+      ]
+    },
+    {
+      "cluster_id": "1XKZ_2",
+      "size": 1,
+      "members": [
+        "1XKZ_2"
+      ],
+      "pdb_ids": [
+        "1XKZ"
+      ]
+    },
+    {
+      "cluster_id": "3TR2_1",
+      "size": 1,
+      "members": [
+        "3TR2_1"
+      ],
+      "pdb_ids": [
+        "3TR2"
+      ]
+    },
+    {
+      "cluster_id": "5OJ8_3",
+      "size": 1,
+      "members": [
+        "5OJ8_3"
+      ],
+      "pdb_ids": [
+        "5OJ8"
+      ]
+    },
+    {
+      "cluster_id": "1UKG_1",
+      "size": 1,
+      "members": [
+        "1UKG_1"
+      ],
+      "pdb_ids": [
+        "1UKG"
+      ]
+    },
+    {
+      "cluster_id": "1YLN_1",
+      "size": 1,
+      "members": [
+        "1YLN_1"
+      ],
+      "pdb_ids": [
+        "1YLN"
+      ]
+    },
+    {
+      "cluster_id": "2UZJ_8",
+      "size": 1,
+      "members": [
+        "2UZJ_8"
+      ],
+      "pdb_ids": [
+        "2UZJ"
+      ]
+    },
+    {
+      "cluster_id": "3LYC_3",
+      "size": 1,
+      "members": [
+        "3LYC_3"
+      ],
+      "pdb_ids": [
+        "3LYC"
+      ]
+    },
+    {
+      "cluster_id": "6GFK_3",
+      "size": 1,
+      "members": [
+        "6GFK_3"
+      ],
+      "pdb_ids": [
+        "6GFK"
+      ]
+    },
+    {
+      "cluster_id": "3E6D_1",
+      "size": 1,
+      "members": [
+        "3E6D_1"
+      ],
+      "pdb_ids": [
+        "3E6D"
+      ]
+    },
+    {
+      "cluster_id": "5I10_2",
+      "size": 1,
+      "members": [
+        "5I10_2"
+      ],
+      "pdb_ids": [
+        "5I10"
+      ]
+    },
+    {
+      "cluster_id": "5MQH_4",
+      "size": 1,
+      "members": [
+        "5MQH_4"
+      ],
+      "pdb_ids": [
+        "5MQH"
+      ]
+    },
+    {
+      "cluster_id": "5WLY_5",
+      "size": 1,
+      "members": [
+        "5WLY_5"
+      ],
+      "pdb_ids": [
+        "5WLY"
+      ]
+    },
+    {
+      "cluster_id": "4AXV_2",
+      "size": 1,
+      "members": [
+        "4AXV_2"
+      ],
+      "pdb_ids": [
+        "4AXV"
+      ]
+    },
+    {
+      "cluster_id": "5COW_2",
+      "size": 1,
+      "members": [
+        "5COW_2"
+      ],
+      "pdb_ids": [
+        "5COW"
+      ]
+    },
+    {
+      "cluster_id": "2X2U_3",
+      "size": 1,
+      "members": [
+        "2X2U_3"
+      ],
+      "pdb_ids": [
+        "2X2U"
+      ]
+    },
+    {
+      "cluster_id": "4WWC_3",
+      "size": 1,
+      "members": [
+        "4WWC_3"
+      ],
+      "pdb_ids": [
+        "4WWC"
+      ]
+    },
+    {
+      "cluster_id": "5JK9_1",
+      "size": 1,
+      "members": [
+        "5JK9_1"
+      ],
+      "pdb_ids": [
+        "5JK9"
+      ]
+    },
+    {
+      "cluster_id": "3STI_6",
+      "size": 1,
+      "members": [
+        "3STI_6"
+      ],
+      "pdb_ids": [
+        "3STI"
+      ]
+    },
+    {
+      "cluster_id": "5UZX_1",
+      "size": 1,
+      "members": [
+        "5UZX_1"
+      ],
+      "pdb_ids": [
+        "5UZX"
+      ]
+    },
+    {
+      "cluster_id": "2ERC_1",
+      "size": 1,
+      "members": [
+        "2ERC_1"
+      ],
+      "pdb_ids": [
+        "2ERC"
+      ]
+    },
+    {
+      "cluster_id": "4KVR_2",
+      "size": 1,
+      "members": [
+        "4KVR_2"
+      ],
+      "pdb_ids": [
+        "4KVR"
+      ]
+    },
+    {
+      "cluster_id": "4V07_1",
+      "size": 1,
+      "members": [
+        "4V07_1"
+      ],
+      "pdb_ids": [
+        "4V07"
+      ]
+    },
+    {
+      "cluster_id": "5HNS_1",
+      "size": 1,
+      "members": [
+        "5HNS_1"
+      ],
+      "pdb_ids": [
+        "5HNS"
+      ]
+    },
+    {
+      "cluster_id": "1RK4_1",
+      "size": 1,
+      "members": [
+        "1RK4_1"
+      ],
+      "pdb_ids": [
+        "1RK4"
+      ]
+    },
+    {
+      "cluster_id": "6BM9_1",
+      "size": 1,
+      "members": [
+        "6BM9_1"
+      ],
+      "pdb_ids": [
+        "6BM9"
+      ]
+    },
+    {
+      "cluster_id": "1IXQ_2",
+      "size": 1,
+      "members": [
+        "1IXQ_2"
+      ],
+      "pdb_ids": [
+        "1IXQ"
+      ]
+    },
+    {
+      "cluster_id": "4Q9A_1",
+      "size": 1,
+      "members": [
+        "4Q9A_1"
+      ],
+      "pdb_ids": [
+        "4Q9A"
+      ]
+    },
+    {
+      "cluster_id": "5UOS_1",
+      "size": 1,
+      "members": [
+        "5UOS_1"
+      ],
+      "pdb_ids": [
+        "5UOS"
+      ]
+    },
+    {
+      "cluster_id": "3MSQ_6",
+      "size": 1,
+      "members": [
+        "3MSQ_6"
+      ],
+      "pdb_ids": [
+        "3MSQ"
+      ]
+    },
+    {
+      "cluster_id": "4CHL_1",
+      "size": 1,
+      "members": [
+        "4CHL_1"
+      ],
+      "pdb_ids": [
+        "4CHL"
+      ]
+    },
+    {
+      "cluster_id": "1QVW_1",
+      "size": 1,
+      "members": [
+        "1QVW_1"
+      ],
+      "pdb_ids": [
+        "1QVW"
+      ]
+    },
+    {
+      "cluster_id": "1RCW_2",
+      "size": 1,
+      "members": [
+        "1RCW_2"
+      ],
+      "pdb_ids": [
+        "1RCW"
+      ]
+    },
+    {
+      "cluster_id": "3E8S_1",
+      "size": 1,
+      "members": [
+        "3E8S_1"
+      ],
+      "pdb_ids": [
+        "3E8S"
+      ]
+    },
+    {
+      "cluster_id": "2F96_1",
+      "size": 1,
+      "members": [
+        "2F96_1"
+      ],
+      "pdb_ids": [
+        "2F96"
+      ]
+    },
+    {
+      "cluster_id": "4JU5_1",
+      "size": 1,
+      "members": [
+        "4JU5_1"
+      ],
+      "pdb_ids": [
+        "4JU5"
+      ]
+    },
+    {
+      "cluster_id": "4M58_1",
+      "size": 1,
+      "members": [
+        "4M58_1"
+      ],
+      "pdb_ids": [
+        "4M58"
+      ]
+    },
+    {
+      "cluster_id": "2BDQ_1",
+      "size": 1,
+      "members": [
+        "2BDQ_1"
+      ],
+      "pdb_ids": [
+        "2BDQ"
+      ]
+    },
+    {
+      "cluster_id": "4GML_1",
+      "size": 1,
+      "members": [
+        "4GML_1"
+      ],
+      "pdb_ids": [
+        "4GML"
+      ]
+    },
+    {
+      "cluster_id": "4IYP_5",
+      "size": 1,
+      "members": [
+        "4IYP_5"
+      ],
+      "pdb_ids": [
+        "4IYP"
+      ]
+    },
+    {
+      "cluster_id": "1Z72_1",
+      "size": 1,
+      "members": [
+        "1Z72_1"
+      ],
+      "pdb_ids": [
+        "1Z72"
+      ]
+    },
+    {
+      "cluster_id": "2OMK_1",
+      "size": 1,
+      "members": [
+        "2OMK_1"
+      ],
+      "pdb_ids": [
+        "2OMK"
+      ]
+    },
+    {
+      "cluster_id": "5HXO_1",
+      "size": 1,
+      "members": [
+        "5HXO_1"
+      ],
+      "pdb_ids": [
+        "5HXO"
+      ]
+    },
+    {
+      "cluster_id": "6QGS_17",
+      "size": 1,
+      "members": [
+        "6QGS_17"
+      ],
+      "pdb_ids": [
+        "6QGS"
+      ]
+    },
+    {
+      "cluster_id": "1IIW_1",
+      "size": 1,
+      "members": [
+        "1IIW_1"
+      ],
+      "pdb_ids": [
+        "1IIW"
+      ]
+    },
+    {
+      "cluster_id": "1LKV_6",
+      "size": 1,
+      "members": [
+        "1LKV_6"
+      ],
+      "pdb_ids": [
+        "1LKV"
+      ]
+    },
+    {
+      "cluster_id": "2IO3_12",
+      "size": 1,
+      "members": [
+        "2IO3_12"
+      ],
+      "pdb_ids": [
+        "2IO3"
+      ]
+    },
+    {
+      "cluster_id": "1KHX_2",
+      "size": 1,
+      "members": [
+        "1KHX_2"
+      ],
+      "pdb_ids": [
+        "1KHX"
+      ]
+    },
+    {
+      "cluster_id": "3DQP_1",
+      "size": 1,
+      "members": [
+        "3DQP_1"
+      ],
+      "pdb_ids": [
+        "3DQP"
+      ]
+    },
+    {
+      "cluster_id": "3PRB_7",
+      "size": 1,
+      "members": [
+        "3PRB_7"
+      ],
+      "pdb_ids": [
+        "3PRB"
+      ]
+    },
+    {
+      "cluster_id": "1H1Y_1",
+      "size": 1,
+      "members": [
+        "1H1Y_1"
+      ],
+      "pdb_ids": [
+        "1H1Y"
+      ]
+    },
+    {
+      "cluster_id": "3R8C_1",
+      "size": 1,
+      "members": [
+        "3R8C_1"
+      ],
+      "pdb_ids": [
+        "3R8C"
+      ]
+    },
+    {
+      "cluster_id": "2D13_2",
+      "size": 1,
+      "members": [
+        "2D13_2"
+      ],
+      "pdb_ids": [
+        "2D13"
+      ]
+    },
+    {
+      "cluster_id": "3AOS_1",
+      "size": 1,
+      "members": [
+        "3AOS_1"
+      ],
+      "pdb_ids": [
+        "3AOS"
+      ]
+    },
+    {
+      "cluster_id": "1PRX_1",
+      "size": 1,
+      "members": [
+        "1PRX_1"
+      ],
+      "pdb_ids": [
+        "1PRX"
+      ]
+    },
+    {
+      "cluster_id": "6H97_3",
+      "size": 1,
+      "members": [
+        "6H97_3"
+      ],
+      "pdb_ids": [
+        "6H97"
+      ]
+    },
+    {
+      "cluster_id": "6O8B_4",
+      "size": 1,
+      "members": [
+        "6O8B_4"
+      ],
+      "pdb_ids": [
+        "6O8B"
+      ]
+    },
+    {
+      "cluster_id": "2G3P_1",
+      "size": 1,
+      "members": [
+        "2G3P_1"
+      ],
+      "pdb_ids": [
+        "2G3P"
+      ]
+    },
+    {
+      "cluster_id": "4G7N_1",
+      "size": 1,
+      "members": [
+        "4G7N_1"
+      ],
+      "pdb_ids": [
+        "4G7N"
+      ]
+    },
+    {
+      "cluster_id": "5ZW3_1",
+      "size": 1,
+      "members": [
+        "5ZW3_1"
+      ],
+      "pdb_ids": [
+        "5ZW3"
+      ]
+    },
+    {
+      "cluster_id": "6B5Q_7",
+      "size": 1,
+      "members": [
+        "6B5Q_7"
+      ],
+      "pdb_ids": [
+        "6B5Q"
+      ]
+    },
+    {
+      "cluster_id": "6KC6_7",
+      "size": 1,
+      "members": [
+        "6KC6_7"
+      ],
+      "pdb_ids": [
+        "6KC6"
+      ]
+    },
+    {
+      "cluster_id": "1I49_3",
+      "size": 1,
+      "members": [
+        "1I49_3"
+      ],
+      "pdb_ids": [
+        "1I49"
+      ]
+    },
+    {
+      "cluster_id": "2HKU_1",
+      "size": 1,
+      "members": [
+        "2HKU_1"
+      ],
+      "pdb_ids": [
+        "2HKU"
+      ]
+    },
+    {
+      "cluster_id": "1FP5_1",
+      "size": 1,
+      "members": [
+        "1FP5_1"
+      ],
+      "pdb_ids": [
+        "1FP5"
+      ]
+    },
+    {
+      "cluster_id": "4CGR_1",
+      "size": 1,
+      "members": [
+        "4CGR_1"
+      ],
+      "pdb_ids": [
+        "4CGR"
+      ]
+    },
+    {
+      "cluster_id": "4L7E_1",
+      "size": 1,
+      "members": [
+        "4L7E_1"
+      ],
+      "pdb_ids": [
+        "4L7E"
+      ]
+    },
+    {
+      "cluster_id": "4PEL_7",
+      "size": 1,
+      "members": [
+        "4PEL_7"
+      ],
+      "pdb_ids": [
+        "4PEL"
+      ]
+    },
+    {
+      "cluster_id": "1DVR_1",
+      "size": 1,
+      "members": [
+        "1DVR_1"
+      ],
+      "pdb_ids": [
+        "1DVR"
+      ]
+    },
+    {
+      "cluster_id": "3HHA_4",
+      "size": 1,
+      "members": [
+        "3HHA_4"
+      ],
+      "pdb_ids": [
+        "3HHA"
+      ]
+    },
+    {
+      "cluster_id": "1O64_1",
+      "size": 1,
+      "members": [
+        "1O64_1"
+      ],
+      "pdb_ids": [
+        "1O64"
+      ]
+    },
+    {
+      "cluster_id": "1PD5_26",
+      "size": 1,
+      "members": [
+        "1PD5_26"
+      ],
+      "pdb_ids": [
+        "1PD5"
+      ]
+    },
+    {
+      "cluster_id": "3KPH_1",
+      "size": 1,
+      "members": [
+        "3KPH_1"
+      ],
+      "pdb_ids": [
+        "3KPH"
+      ]
+    },
+    {
+      "cluster_id": "5HPJ_1",
+      "size": 1,
+      "members": [
+        "5HPJ_1"
+      ],
+      "pdb_ids": [
+        "5HPJ"
+      ]
+    },
+    {
+      "cluster_id": "3B7M_6",
+      "size": 1,
+      "members": [
+        "3B7M_6"
+      ],
+      "pdb_ids": [
+        "3B7M"
+      ]
+    },
+    {
+      "cluster_id": "3ME4_1",
+      "size": 1,
+      "members": [
+        "3ME4_1"
+      ],
+      "pdb_ids": [
+        "3ME4"
+      ]
+    },
+    {
+      "cluster_id": "4I1T_1",
+      "size": 1,
+      "members": [
+        "4I1T_1"
+      ],
+      "pdb_ids": [
+        "4I1T"
+      ]
+    },
+    {
+      "cluster_id": "4OFD_1",
+      "size": 1,
+      "members": [
+        "4OFD_1"
+      ],
+      "pdb_ids": [
+        "4OFD"
+      ]
+    },
+    {
+      "cluster_id": "2FCA_1",
+      "size": 1,
+      "members": [
+        "2FCA_1"
+      ],
+      "pdb_ids": [
+        "2FCA"
+      ]
+    },
+    {
+      "cluster_id": "3HJG_1",
+      "size": 1,
+      "members": [
+        "3HJG_1"
+      ],
+      "pdb_ids": [
+        "3HJG"
+      ]
+    },
+    {
+      "cluster_id": "4BQ8_3",
+      "size": 1,
+      "members": [
+        "4BQ8_3"
+      ],
+      "pdb_ids": [
+        "4BQ8"
+      ]
+    },
+    {
+      "cluster_id": "1U20_1",
+      "size": 1,
+      "members": [
+        "1U20_1"
+      ],
+      "pdb_ids": [
+        "1U20"
+      ]
+    },
+    {
+      "cluster_id": "1X1P_3",
+      "size": 1,
+      "members": [
+        "1X1P_3"
+      ],
+      "pdb_ids": [
+        "1X1P"
+      ]
+    },
+    {
+      "cluster_id": "3R8K_1",
+      "size": 1,
+      "members": [
+        "3R8K_1"
+      ],
+      "pdb_ids": [
+        "3R8K"
+      ]
+    },
+    {
+      "cluster_id": "3VDU_4",
+      "size": 1,
+      "members": [
+        "3VDU_4"
+      ],
+      "pdb_ids": [
+        "3VDU"
+      ]
+    },
+    {
+      "cluster_id": "5F05_1",
+      "size": 1,
+      "members": [
+        "5F05_1"
+      ],
+      "pdb_ids": [
+        "5F05"
+      ]
+    },
+    {
+      "cluster_id": "1FU1_8",
+      "size": 1,
+      "members": [
+        "1FU1_8"
+      ],
+      "pdb_ids": [
+        "1FU1"
+      ]
+    },
+    {
+      "cluster_id": "3CRJ_1",
+      "size": 1,
+      "members": [
+        "3CRJ_1"
+      ],
+      "pdb_ids": [
+        "3CRJ"
+      ]
+    },
+    {
+      "cluster_id": "5DQW_1",
+      "size": 1,
+      "members": [
+        "5DQW_1"
+      ],
+      "pdb_ids": [
+        "5DQW"
+      ]
+    },
+    {
+      "cluster_id": "1V2A_1",
+      "size": 1,
+      "members": [
+        "1V2A_1"
+      ],
+      "pdb_ids": [
+        "1V2A"
+      ]
+    },
+    {
+      "cluster_id": "2WUI_1",
+      "size": 1,
+      "members": [
+        "2WUI_1"
+      ],
+      "pdb_ids": [
+        "2WUI"
+      ]
+    },
+    {
+      "cluster_id": "3NYL_3",
+      "size": 1,
+      "members": [
+        "3NYL_3"
+      ],
+      "pdb_ids": [
+        "3NYL"
+      ]
+    },
+    {
+      "cluster_id": "2XWC_1",
+      "size": 1,
+      "members": [
+        "2XWC_1"
+      ],
+      "pdb_ids": [
+        "2XWC"
+      ]
+    },
+    {
+      "cluster_id": "3T6N_4",
+      "size": 1,
+      "members": [
+        "3T6N_4"
+      ],
+      "pdb_ids": [
+        "3T6N"
+      ]
+    },
+    {
+      "cluster_id": "1PP3_2",
+      "size": 1,
+      "members": [
+        "1PP3_2"
+      ],
+      "pdb_ids": [
+        "1PP3"
+      ]
+    },
+    {
+      "cluster_id": "2OZ6_1",
+      "size": 1,
+      "members": [
+        "2OZ6_1"
+      ],
+      "pdb_ids": [
+        "2OZ6"
+      ]
+    },
+    {
+      "cluster_id": "4HC1_28",
+      "size": 1,
+      "members": [
+        "4HC1_28"
+      ],
+      "pdb_ids": [
+        "4HC1"
+      ]
+    },
+    {
+      "cluster_id": "2GD5_1",
+      "size": 1,
+      "members": [
+        "2GD5_1"
+      ],
+      "pdb_ids": [
+        "2GD5"
+      ]
+    },
+    {
+      "cluster_id": "3QB2_9",
+      "size": 1,
+      "members": [
+        "3QB2_9"
+      ],
+      "pdb_ids": [
+        "3QB2"
+      ]
+    },
+    {
+      "cluster_id": "3UEN_5",
+      "size": 1,
+      "members": [
+        "3UEN_5"
+      ],
+      "pdb_ids": [
+        "3UEN"
+      ]
+    },
+    {
+      "cluster_id": "2Q24_2",
+      "size": 1,
+      "members": [
+        "2Q24_2"
+      ],
+      "pdb_ids": [
+        "2Q24"
+      ]
+    },
+    {
+      "cluster_id": "3MXO_2",
+      "size": 1,
+      "members": [
+        "3MXO_2"
+      ],
+      "pdb_ids": [
+        "3MXO"
+      ]
+    },
+    {
+      "cluster_id": "2ACA_1",
+      "size": 1,
+      "members": [
+        "2ACA_1"
+      ],
+      "pdb_ids": [
+        "2ACA"
+      ]
+    },
+    {
+      "cluster_id": "2XT2_1",
+      "size": 1,
+      "members": [
+        "2XT2_1"
+      ],
+      "pdb_ids": [
+        "2XT2"
+      ]
+    },
+    {
+      "cluster_id": "4DQ0_1",
+      "size": 1,
+      "members": [
+        "4DQ0_1"
+      ],
+      "pdb_ids": [
+        "4DQ0"
+      ]
+    },
+    {
+      "cluster_id": "6AZH_1",
+      "size": 1,
+      "members": [
+        "6AZH_1"
+      ],
+      "pdb_ids": [
+        "6AZH"
+      ]
+    },
+    {
+      "cluster_id": "3ZRT_1",
+      "size": 1,
+      "members": [
+        "3ZRT_1"
+      ],
+      "pdb_ids": [
+        "3ZRT"
+      ]
+    },
+    {
+      "cluster_id": "5SY4_1",
+      "size": 1,
+      "members": [
+        "5SY4_1"
+      ],
+      "pdb_ids": [
+        "5SY4"
+      ]
+    },
+    {
+      "cluster_id": "6EMT_1",
+      "size": 1,
+      "members": [
+        "6EMT_1"
+      ],
+      "pdb_ids": [
+        "6EMT"
+      ]
+    },
+    {
+      "cluster_id": "2PR8_3",
+      "size": 1,
+      "members": [
+        "2PR8_3"
+      ],
+      "pdb_ids": [
+        "2PR8"
+      ]
+    },
+    {
+      "cluster_id": "3BWV_1",
+      "size": 1,
+      "members": [
+        "3BWV_1"
+      ],
+      "pdb_ids": [
+        "3BWV"
+      ]
+    },
+    {
+      "cluster_id": "4OIE_1",
+      "size": 1,
+      "members": [
+        "4OIE_1"
+      ],
+      "pdb_ids": [
+        "4OIE"
+      ]
+    },
+    {
+      "cluster_id": "1QVT_19",
+      "size": 1,
+      "members": [
+        "1QVT_19"
+      ],
+      "pdb_ids": [
+        "1QVT"
+      ]
+    },
+    {
+      "cluster_id": "3IGR_2",
+      "size": 1,
+      "members": [
+        "3IGR_2"
+      ],
+      "pdb_ids": [
+        "3IGR"
+      ]
+    },
+    {
+      "cluster_id": "4A12_9",
+      "size": 1,
+      "members": [
+        "4A12_9"
+      ],
+      "pdb_ids": [
+        "4A12"
+      ]
+    },
+    {
+      "cluster_id": "5J1F_4",
+      "size": 1,
+      "members": [
+        "5J1F_4"
+      ],
+      "pdb_ids": [
+        "5J1F"
+      ]
+    },
+    {
+      "cluster_id": "6EWI_3",
+      "size": 1,
+      "members": [
+        "6EWI_3"
+      ],
+      "pdb_ids": [
+        "6EWI"
+      ]
+    },
+    {
+      "cluster_id": "6AOB_1",
+      "size": 1,
+      "members": [
+        "6AOB_1"
+      ],
+      "pdb_ids": [
+        "6AOB"
+      ]
+    },
+    {
+      "cluster_id": "1T0I_1",
+      "size": 1,
+      "members": [
+        "1T0I_1"
+      ],
+      "pdb_ids": [
+        "1T0I"
+      ]
+    },
+    {
+      "cluster_id": "3KTM_12",
+      "size": 1,
+      "members": [
+        "3KTM_12"
+      ],
+      "pdb_ids": [
+        "3KTM"
+      ]
+    },
+    {
+      "cluster_id": "3ZC9_1",
+      "size": 1,
+      "members": [
+        "3ZC9_1"
+      ],
+      "pdb_ids": [
+        "3ZC9"
+      ]
+    },
+    {
+      "cluster_id": "4LO5_2",
+      "size": 1,
+      "members": [
+        "4LO5_2"
+      ],
+      "pdb_ids": [
+        "4LO5"
+      ]
+    },
+    {
+      "cluster_id": "1EX2_1",
+      "size": 1,
+      "members": [
+        "1EX2_1"
+      ],
+      "pdb_ids": [
+        "1EX2"
+      ]
+    },
+    {
+      "cluster_id": "3FRS_2",
+      "size": 1,
+      "members": [
+        "3FRS_2"
+      ],
+      "pdb_ids": [
+        "3FRS"
+      ]
+    },
+    {
+      "cluster_id": "3JUW_2",
+      "size": 1,
+      "members": [
+        "3JUW_2"
+      ],
+      "pdb_ids": [
+        "3JUW"
+      ]
+    },
+    {
+      "cluster_id": "4XBD_3",
+      "size": 1,
+      "members": [
+        "4XBD_3"
+      ],
+      "pdb_ids": [
+        "4XBD"
+      ]
+    },
+    {
+      "cluster_id": "5IFW_6",
+      "size": 1,
+      "members": [
+        "5IFW_6"
+      ],
+      "pdb_ids": [
+        "5IFW"
+      ]
+    },
+    {
+      "cluster_id": "3G13_1",
+      "size": 1,
+      "members": [
+        "3G13_1"
+      ],
+      "pdb_ids": [
+        "3G13"
+      ]
+    },
+    {
+      "cluster_id": "4N3V_1",
+      "size": 1,
+      "members": [
+        "4N3V_1"
+      ],
+      "pdb_ids": [
+        "4N3V"
+      ]
+    },
+    {
+      "cluster_id": "4QDS_1",
+      "size": 1,
+      "members": [
+        "4QDS_1"
+      ],
+      "pdb_ids": [
+        "4QDS"
+      ]
+    },
+    {
+      "cluster_id": "1ALU_1",
+      "size": 1,
+      "members": [
+        "1ALU_1"
+      ],
+      "pdb_ids": [
+        "1ALU"
+      ]
+    },
+    {
+      "cluster_id": "2YVU_1",
+      "size": 1,
+      "members": [
+        "2YVU_1"
+      ],
+      "pdb_ids": [
+        "2YVU"
+      ]
+    },
+    {
+      "cluster_id": "1RTV_1",
+      "size": 1,
+      "members": [
+        "1RTV_1"
+      ],
+      "pdb_ids": [
+        "1RTV"
+      ]
+    },
+    {
+      "cluster_id": "5IQW_2",
+      "size": 1,
+      "members": [
+        "5IQW_2"
+      ],
+      "pdb_ids": [
+        "5IQW"
+      ]
+    },
+    {
+      "cluster_id": "1PXV_1",
+      "size": 1,
+      "members": [
+        "1PXV_1"
+      ],
+      "pdb_ids": [
+        "1PXV"
+      ]
+    },
+    {
+      "cluster_id": "2R7H_1",
+      "size": 1,
+      "members": [
+        "2R7H_1"
+      ],
+      "pdb_ids": [
+        "2R7H"
+      ]
+    },
+    {
+      "cluster_id": "2ZOZ_2",
+      "size": 1,
+      "members": [
+        "2ZOZ_2"
+      ],
+      "pdb_ids": [
+        "2ZOZ"
+      ]
+    },
+    {
+      "cluster_id": "3CL3_7",
+      "size": 1,
+      "members": [
+        "3CL3_7"
+      ],
+      "pdb_ids": [
+        "3CL3"
+      ]
+    },
+    {
+      "cluster_id": "3KKC_1",
+      "size": 1,
+      "members": [
+        "3KKC_1"
+      ],
+      "pdb_ids": [
+        "3KKC"
+      ]
+    },
+    {
+      "cluster_id": "2O9A_1",
+      "size": 1,
+      "members": [
+        "2O9A_1"
+      ],
+      "pdb_ids": [
+        "2O9A"
+      ]
+    },
+    {
+      "cluster_id": "1DOV_3",
+      "size": 1,
+      "members": [
+        "1DOV_3"
+      ],
+      "pdb_ids": [
+        "1DOV"
+      ]
+    },
+    {
+      "cluster_id": "2XSS_2",
+      "size": 1,
+      "members": [
+        "2XSS_2"
+      ],
+      "pdb_ids": [
+        "2XSS"
+      ]
+    },
+    {
+      "cluster_id": "5NCR_1",
+      "size": 1,
+      "members": [
+        "5NCR_1"
+      ],
+      "pdb_ids": [
+        "5NCR"
+      ]
+    },
+    {
+      "cluster_id": "3WKL_2",
+      "size": 1,
+      "members": [
+        "3WKL_2"
+      ],
+      "pdb_ids": [
+        "3WKL"
+      ]
+    },
+    {
+      "cluster_id": "5UJF_2",
+      "size": 1,
+      "members": [
+        "5UJF_2"
+      ],
+      "pdb_ids": [
+        "5UJF"
+      ]
+    },
+    {
+      "cluster_id": "5VXA_3",
+      "size": 1,
+      "members": [
+        "5VXA_3"
+      ],
+      "pdb_ids": [
+        "5VXA"
+      ]
+    },
+    {
+      "cluster_id": "2IKK_1",
+      "size": 1,
+      "members": [
+        "2IKK_1"
+      ],
+      "pdb_ids": [
+        "2IKK"
+      ]
+    },
+    {
+      "cluster_id": "6N5Z_1",
+      "size": 1,
+      "members": [
+        "6N5Z_1"
+      ],
+      "pdb_ids": [
+        "6N5Z"
+      ]
+    },
+    {
+      "cluster_id": "2EKZ_1",
+      "size": 1,
+      "members": [
+        "2EKZ_1"
+      ],
+      "pdb_ids": [
+        "2EKZ"
+      ]
+    },
+    {
+      "cluster_id": "3LMB_1",
+      "size": 1,
+      "members": [
+        "3LMB_1"
+      ],
+      "pdb_ids": [
+        "3LMB"
+      ]
+    },
+    {
+      "cluster_id": "3TRC_1",
+      "size": 1,
+      "members": [
+        "3TRC_1"
+      ],
+      "pdb_ids": [
+        "3TRC"
+      ]
+    },
+    {
+      "cluster_id": "4ERU_1",
+      "size": 1,
+      "members": [
+        "4ERU_1"
+      ],
+      "pdb_ids": [
+        "4ERU"
+      ]
+    },
+    {
+      "cluster_id": "6JSD_1",
+      "size": 1,
+      "members": [
+        "6JSD_1"
+      ],
+      "pdb_ids": [
+        "6JSD"
+      ]
+    },
+    {
+      "cluster_id": "1NP6_1",
+      "size": 1,
+      "members": [
+        "1NP6_1"
+      ],
+      "pdb_ids": [
+        "1NP6"
+      ]
+    },
+    {
+      "cluster_id": "2P22_22",
+      "size": 1,
+      "members": [
+        "2P22_22"
+      ],
+      "pdb_ids": [
+        "2P22"
+      ]
+    },
+    {
+      "cluster_id": "4TSE_1",
+      "size": 1,
+      "members": [
+        "4TSE_1"
+      ],
+      "pdb_ids": [
+        "4TSE"
+      ]
+    },
+    {
+      "cluster_id": "1E6C_1",
+      "size": 1,
+      "members": [
+        "1E6C_1"
+      ],
+      "pdb_ids": [
+        "1E6C"
+      ]
+    },
+    {
+      "cluster_id": "2A67_2",
+      "size": 1,
+      "members": [
+        "2A67_2"
+      ],
+      "pdb_ids": [
+        "2A67"
+      ]
+    },
+    {
+      "cluster_id": "3H2D_1",
+      "size": 1,
+      "members": [
+        "3H2D_1"
+      ],
+      "pdb_ids": [
+        "3H2D"
+      ]
+    },
+    {
+      "cluster_id": "3HIE_3",
+      "size": 1,
+      "members": [
+        "3HIE_3"
+      ],
+      "pdb_ids": [
+        "3HIE"
+      ]
+    },
+    {
+      "cluster_id": "2J8M_1",
+      "size": 1,
+      "members": [
+        "2J8M_1"
+      ],
+      "pdb_ids": [
+        "2J8M"
+      ]
+    },
+    {
+      "cluster_id": "5QSL_2",
+      "size": 1,
+      "members": [
+        "5QSL_2"
+      ],
+      "pdb_ids": [
+        "5QSL"
+      ]
+    },
+    {
+      "cluster_id": "2OIK_2",
+      "size": 1,
+      "members": [
+        "2OIK_2"
+      ],
+      "pdb_ids": [
+        "2OIK"
+      ]
+    },
+    {
+      "cluster_id": "2Q4N_1",
+      "size": 1,
+      "members": [
+        "2Q4N_1"
+      ],
+      "pdb_ids": [
+        "2Q4N"
+      ]
+    },
+    {
+      "cluster_id": "3ATP_1",
+      "size": 1,
+      "members": [
+        "3ATP_1"
+      ],
+      "pdb_ids": [
+        "3ATP"
+      ]
+    },
+    {
+      "cluster_id": "3L9Z_1",
+      "size": 1,
+      "members": [
+        "3L9Z_1"
+      ],
+      "pdb_ids": [
+        "3L9Z"
+      ]
+    },
+    {
+      "cluster_id": "3PYI_1",
+      "size": 1,
+      "members": [
+        "3PYI_1"
+      ],
+      "pdb_ids": [
+        "3PYI"
+      ]
+    },
+    {
+      "cluster_id": "3Q64_1",
+      "size": 1,
+      "members": [
+        "3Q64_1"
+      ],
+      "pdb_ids": [
+        "3Q64"
+      ]
+    },
+    {
+      "cluster_id": "4PZK_1",
+      "size": 1,
+      "members": [
+        "4PZK_1"
+      ],
+      "pdb_ids": [
+        "4PZK"
+      ]
+    },
+    {
+      "cluster_id": "2VX8_1",
+      "size": 1,
+      "members": [
+        "2VX8_1"
+      ],
+      "pdb_ids": [
+        "2VX8"
+      ]
+    },
+    {
+      "cluster_id": "1FUX_1",
+      "size": 1,
+      "members": [
+        "1FUX_1"
+      ],
+      "pdb_ids": [
+        "1FUX"
+      ]
+    },
+    {
+      "cluster_id": "3FBU_1",
+      "size": 1,
+      "members": [
+        "3FBU_1"
+      ],
+      "pdb_ids": [
+        "3FBU"
+      ]
+    },
+    {
+      "cluster_id": "4RMM_1",
+      "size": 1,
+      "members": [
+        "4RMM_1"
+      ],
+      "pdb_ids": [
+        "4RMM"
+      ]
+    },
+    {
+      "cluster_id": "4WNY_1",
+      "size": 1,
+      "members": [
+        "4WNY_1"
+      ],
+      "pdb_ids": [
+        "4WNY"
+      ]
+    },
+    {
+      "cluster_id": "2X2A_1",
+      "size": 1,
+      "members": [
+        "2X2A_1"
+      ],
+      "pdb_ids": [
+        "2X2A"
+      ]
+    },
+    {
+      "cluster_id": "1A17_6",
+      "size": 1,
+      "members": [
+        "1A17_6"
+      ],
+      "pdb_ids": [
+        "1A17"
+      ]
+    },
+    {
+      "cluster_id": "5TDQ_2",
+      "size": 1,
+      "members": [
+        "5TDQ_2"
+      ],
+      "pdb_ids": [
+        "5TDQ"
+      ]
+    },
+    {
+      "cluster_id": "1OR3_7",
+      "size": 1,
+      "members": [
+        "1OR3_7"
+      ],
+      "pdb_ids": [
+        "1OR3"
+      ]
+    },
+    {
+      "cluster_id": "2EAV_1",
+      "size": 1,
+      "members": [
+        "2EAV_1"
+      ],
+      "pdb_ids": [
+        "2EAV"
+      ]
+    },
+    {
+      "cluster_id": "3HDE_2",
+      "size": 1,
+      "members": [
+        "3HDE_2"
+      ],
+      "pdb_ids": [
+        "3HDE"
+      ]
+    },
+    {
+      "cluster_id": "6RP3_5",
+      "size": 1,
+      "members": [
+        "6RP3_5"
+      ],
+      "pdb_ids": [
+        "6RP3"
+      ]
+    },
+    {
+      "cluster_id": "2PFI_1",
+      "size": 1,
+      "members": [
+        "2PFI_1"
+      ],
+      "pdb_ids": [
+        "2PFI"
+      ]
+    },
+    {
+      "cluster_id": "3L5Z_1",
+      "size": 1,
+      "members": [
+        "3L5Z_1"
+      ],
+      "pdb_ids": [
+        "3L5Z"
+      ]
+    },
+    {
+      "cluster_id": "5EG8_1",
+      "size": 1,
+      "members": [
+        "5EG8_1"
+      ],
+      "pdb_ids": [
+        "5EG8"
+      ]
+    },
+    {
+      "cluster_id": "1G73_7",
+      "size": 1,
+      "members": [
+        "1G73_7"
+      ],
+      "pdb_ids": [
+        "1G73"
+      ]
+    },
+    {
+      "cluster_id": "1JOG_2",
+      "size": 1,
+      "members": [
+        "1JOG_2"
+      ],
+      "pdb_ids": [
+        "1JOG"
+      ]
+    },
+    {
+      "cluster_id": "3KZA_1",
+      "size": 1,
+      "members": [
+        "3KZA_1"
+      ],
+      "pdb_ids": [
+        "3KZA"
+      ]
+    },
+    {
+      "cluster_id": "5WQI_2",
+      "size": 1,
+      "members": [
+        "5WQI_2"
+      ],
+      "pdb_ids": [
+        "5WQI"
+      ]
+    },
+    {
+      "cluster_id": "3FB3_1",
+      "size": 1,
+      "members": [
+        "3FB3_1"
+      ],
+      "pdb_ids": [
+        "3FB3"
+      ]
+    },
+    {
+      "cluster_id": "3LF6_1",
+      "size": 1,
+      "members": [
+        "3LF6_1"
+      ],
+      "pdb_ids": [
+        "3LF6"
+      ]
+    },
+    {
+      "cluster_id": "5COL_1",
+      "size": 1,
+      "members": [
+        "5COL_1"
+      ],
+      "pdb_ids": [
+        "5COL"
+      ]
+    },
+    {
+      "cluster_id": "3KSH_1",
+      "size": 1,
+      "members": [
+        "3KSH_1"
+      ],
+      "pdb_ids": [
+        "3KSH"
+      ]
+    },
+    {
+      "cluster_id": "3LHK_2",
+      "size": 1,
+      "members": [
+        "3LHK_2"
+      ],
+      "pdb_ids": [
+        "3LHK"
+      ]
+    },
+    {
+      "cluster_id": "3T9Y_1",
+      "size": 1,
+      "members": [
+        "3T9Y_1"
+      ],
+      "pdb_ids": [
+        "3T9Y"
+      ]
+    },
+    {
+      "cluster_id": "5J7N_3",
+      "size": 1,
+      "members": [
+        "5J7N_3"
+      ],
+      "pdb_ids": [
+        "5J7N"
+      ]
+    },
+    {
+      "cluster_id": "1E0R_2",
+      "size": 1,
+      "members": [
+        "1E0R_2"
+      ],
+      "pdb_ids": [
+        "1E0R"
+      ]
+    },
+    {
+      "cluster_id": "1NP8_1",
+      "size": 1,
+      "members": [
+        "1NP8_1"
+      ],
+      "pdb_ids": [
+        "1NP8"
+      ]
+    },
+    {
+      "cluster_id": "1HJR_1",
+      "size": 1,
+      "members": [
+        "1HJR_1"
+      ],
+      "pdb_ids": [
+        "1HJR"
+      ]
+    },
+    {
+      "cluster_id": "2JBX_1",
+      "size": 1,
+      "members": [
+        "2JBX_1"
+      ],
+      "pdb_ids": [
+        "2JBX"
+      ]
+    },
+    {
+      "cluster_id": "4E89_2",
+      "size": 1,
+      "members": [
+        "4E89_2"
+      ],
+      "pdb_ids": [
+        "4E89"
+      ]
+    },
+    {
+      "cluster_id": "1JRK_1",
+      "size": 1,
+      "members": [
+        "1JRK_1"
+      ],
+      "pdb_ids": [
+        "1JRK"
+      ]
+    },
+    {
+      "cluster_id": "2O7M_6",
+      "size": 1,
+      "members": [
+        "2O7M_6"
+      ],
+      "pdb_ids": [
+        "2O7M"
+      ]
+    },
+    {
+      "cluster_id": "4IYS_1",
+      "size": 1,
+      "members": [
+        "4IYS_1"
+      ],
+      "pdb_ids": [
+        "4IYS"
+      ]
+    },
+    {
+      "cluster_id": "1T3W_1",
+      "size": 1,
+      "members": [
+        "1T3W_1"
+      ],
+      "pdb_ids": [
+        "1T3W"
+      ]
+    },
+    {
+      "cluster_id": "3EC9_1",
+      "size": 1,
+      "members": [
+        "3EC9_1"
+      ],
+      "pdb_ids": [
+        "3EC9"
+      ]
+    },
+    {
+      "cluster_id": "4EXO_1",
+      "size": 1,
+      "members": [
+        "4EXO_1"
+      ],
+      "pdb_ids": [
+        "4EXO"
+      ]
+    },
+    {
+      "cluster_id": "6NP6_5",
+      "size": 1,
+      "members": [
+        "6NP6_5"
+      ],
+      "pdb_ids": [
+        "6NP6"
+      ]
+    },
+    {
+      "cluster_id": "2EJN_1",
+      "size": 1,
+      "members": [
+        "2EJN_1"
+      ],
+      "pdb_ids": [
+        "2EJN"
+      ]
+    },
+    {
+      "cluster_id": "3UF5_1",
+      "size": 1,
+      "members": [
+        "3UF5_1"
+      ],
+      "pdb_ids": [
+        "3UF5"
+      ]
+    },
+    {
+      "cluster_id": "5XBI_1",
+      "size": 1,
+      "members": [
+        "5XBI_1"
+      ],
+      "pdb_ids": [
+        "5XBI"
+      ]
+    },
+    {
+      "cluster_id": "3F9S_1",
+      "size": 1,
+      "members": [
+        "3F9S_1"
+      ],
+      "pdb_ids": [
+        "3F9S"
+      ]
+    },
+    {
+      "cluster_id": "3FH0_1",
+      "size": 1,
+      "members": [
+        "3FH0_1"
+      ],
+      "pdb_ids": [
+        "3FH0"
+      ]
+    },
+    {
+      "cluster_id": "4TKZ_2",
+      "size": 1,
+      "members": [
+        "4TKZ_2"
+      ],
+      "pdb_ids": [
+        "4TKZ"
+      ]
+    },
+    {
+      "cluster_id": "2FHQ_1",
+      "size": 1,
+      "members": [
+        "2FHQ_1"
+      ],
+      "pdb_ids": [
+        "2FHQ"
+      ]
+    },
+    {
+      "cluster_id": "3GZ1_1",
+      "size": 1,
+      "members": [
+        "3GZ1_1"
+      ],
+      "pdb_ids": [
+        "3GZ1"
+      ]
+    },
+    {
+      "cluster_id": "3U80_1",
+      "size": 1,
+      "members": [
+        "3U80_1"
+      ],
+      "pdb_ids": [
+        "3U80"
+      ]
+    },
+    {
+      "cluster_id": "3KHT_2",
+      "size": 1,
+      "members": [
+        "3KHT_2"
+      ],
+      "pdb_ids": [
+        "3KHT"
+      ]
+    },
+    {
+      "cluster_id": "3LQN_1",
+      "size": 1,
+      "members": [
+        "3LQN_1"
+      ],
+      "pdb_ids": [
+        "3LQN"
+      ]
+    },
+    {
+      "cluster_id": "1YE5_1",
+      "size": 1,
+      "members": [
+        "1YE5_1"
+      ],
+      "pdb_ids": [
+        "1YE5"
+      ]
+    },
+    {
+      "cluster_id": "3LZA_1",
+      "size": 1,
+      "members": [
+        "3LZA_1"
+      ],
+      "pdb_ids": [
+        "3LZA"
+      ]
+    },
+    {
+      "cluster_id": "3O0M_1",
+      "size": 1,
+      "members": [
+        "3O0M_1"
+      ],
+      "pdb_ids": [
+        "3O0M"
+      ]
+    },
+    {
+      "cluster_id": "3ROB_1",
+      "size": 1,
+      "members": [
+        "3ROB_1"
+      ],
+      "pdb_ids": [
+        "3ROB"
+      ]
+    },
+    {
+      "cluster_id": "1A3A_1",
+      "size": 1,
+      "members": [
+        "1A3A_1"
+      ],
+      "pdb_ids": [
+        "1A3A"
+      ]
+    },
+    {
+      "cluster_id": "3BQA_1",
+      "size": 1,
+      "members": [
+        "3BQA_1"
+      ],
+      "pdb_ids": [
+        "3BQA"
+      ]
+    },
+    {
+      "cluster_id": "5GUS_1",
+      "size": 1,
+      "members": [
+        "5GUS_1"
+      ],
+      "pdb_ids": [
+        "5GUS"
+      ]
+    },
+    {
+      "cluster_id": "1AOH_1",
+      "size": 1,
+      "members": [
+        "1AOH_1"
+      ],
+      "pdb_ids": [
+        "1AOH"
+      ]
+    },
+    {
+      "cluster_id": "1UJK_3",
+      "size": 1,
+      "members": [
+        "1UJK_3"
+      ],
+      "pdb_ids": [
+        "1UJK"
+      ]
+    },
+    {
+      "cluster_id": "2EO0_1",
+      "size": 1,
+      "members": [
+        "2EO0_1"
+      ],
+      "pdb_ids": [
+        "2EO0"
+      ]
+    },
+    {
+      "cluster_id": "3K44_21",
+      "size": 1,
+      "members": [
+        "3K44_21"
+      ],
+      "pdb_ids": [
+        "3K44"
+      ]
+    },
+    {
+      "cluster_id": "4RZ0_1",
+      "size": 1,
+      "members": [
+        "4RZ0_1"
+      ],
+      "pdb_ids": [
+        "4RZ0"
+      ]
+    },
+    {
+      "cluster_id": "3NRD_1",
+      "size": 1,
+      "members": [
+        "3NRD_1"
+      ],
+      "pdb_ids": [
+        "3NRD"
+      ]
+    },
+    {
+      "cluster_id": "3N77_3",
+      "size": 1,
+      "members": [
+        "3N77_3"
+      ],
+      "pdb_ids": [
+        "3N77"
+      ]
+    },
+    {
+      "cluster_id": "2GSL_3",
+      "size": 1,
+      "members": [
+        "2GSL_3"
+      ],
+      "pdb_ids": [
+        "2GSL"
+      ]
+    },
+    {
+      "cluster_id": "2YVQ_2",
+      "size": 1,
+      "members": [
+        "2YVQ_2"
+      ],
+      "pdb_ids": [
+        "2YVQ"
+      ]
+    },
+    {
+      "cluster_id": "3DM8_1",
+      "size": 1,
+      "members": [
+        "3DM8_1"
+      ],
+      "pdb_ids": [
+        "3DM8"
+      ]
+    },
+    {
+      "cluster_id": "3GLV_1",
+      "size": 1,
+      "members": [
+        "3GLV_1"
+      ],
+      "pdb_ids": [
+        "3GLV"
+      ]
+    },
+    {
+      "cluster_id": "3RRI_2",
+      "size": 1,
+      "members": [
+        "3RRI_2"
+      ],
+      "pdb_ids": [
+        "3RRI"
+      ]
+    },
+    {
+      "cluster_id": "4O9K_1",
+      "size": 1,
+      "members": [
+        "4O9K_1"
+      ],
+      "pdb_ids": [
+        "4O9K"
+      ]
+    },
+    {
+      "cluster_id": "5YRG_1",
+      "size": 1,
+      "members": [
+        "5YRG_1"
+      ],
+      "pdb_ids": [
+        "5YRG"
+      ]
+    },
+    {
+      "cluster_id": "3A44_1",
+      "size": 1,
+      "members": [
+        "3A44_1"
+      ],
+      "pdb_ids": [
+        "3A44"
+      ]
+    },
+    {
+      "cluster_id": "3QWM_1",
+      "size": 1,
+      "members": [
+        "3QWM_1"
+      ],
+      "pdb_ids": [
+        "3QWM"
+      ]
+    },
+    {
+      "cluster_id": "5WYG_1",
+      "size": 1,
+      "members": [
+        "5WYG_1"
+      ],
+      "pdb_ids": [
+        "5WYG"
+      ]
+    },
+    {
+      "cluster_id": "3HX8_2",
+      "size": 1,
+      "members": [
+        "3HX8_2"
+      ],
+      "pdb_ids": [
+        "3HX8"
+      ]
+    },
+    {
+      "cluster_id": "4J9A_11",
+      "size": 1,
+      "members": [
+        "4J9A_11"
+      ],
+      "pdb_ids": [
+        "4J9A"
+      ]
+    },
+    {
+      "cluster_id": "1K46_1",
+      "size": 1,
+      "members": [
+        "1K46_1"
+      ],
+      "pdb_ids": [
+        "1K46"
+      ]
+    },
+    {
+      "cluster_id": "3LEQ_2",
+      "size": 1,
+      "members": [
+        "3LEQ_2"
+      ],
+      "pdb_ids": [
+        "3LEQ"
+      ]
+    },
+    {
+      "cluster_id": "1JHE_1",
+      "size": 1,
+      "members": [
+        "1JHE_1"
+      ],
+      "pdb_ids": [
+        "1JHE"
+      ]
+    },
+    {
+      "cluster_id": "2RC3_2",
+      "size": 1,
+      "members": [
+        "2RC3_2"
+      ],
+      "pdb_ids": [
+        "2RC3"
+      ]
+    },
+    {
+      "cluster_id": "3DD9_1",
+      "size": 1,
+      "members": [
+        "3DD9_1"
+      ],
+      "pdb_ids": [
+        "3DD9"
+      ]
+    },
+    {
+      "cluster_id": "3LMN_8",
+      "size": 1,
+      "members": [
+        "3LMN_8"
+      ],
+      "pdb_ids": [
+        "3LMN"
+      ]
+    },
+    {
+      "cluster_id": "3EHC_1",
+      "size": 1,
+      "members": [
+        "3EHC_1"
+      ],
+      "pdb_ids": [
+        "3EHC"
+      ]
+    },
+    {
+      "cluster_id": "5ZND_3",
+      "size": 1,
+      "members": [
+        "5ZND_3"
+      ],
+      "pdb_ids": [
+        "5ZND"
+      ]
+    },
+    {
+      "cluster_id": "2DWY_6",
+      "size": 1,
+      "members": [
+        "2DWY_6"
+      ],
+      "pdb_ids": [
+        "2DWY"
+      ]
+    },
+    {
+      "cluster_id": "2HNG_1",
+      "size": 1,
+      "members": [
+        "2HNG_1"
+      ],
+      "pdb_ids": [
+        "2HNG"
+      ]
+    },
+    {
+      "cluster_id": "2ITF_5",
+      "size": 1,
+      "members": [
+        "2ITF_5"
+      ],
+      "pdb_ids": [
+        "2ITF"
+      ]
+    },
+    {
+      "cluster_id": "1FZV_1",
+      "size": 1,
+      "members": [
+        "1FZV_1"
+      ],
+      "pdb_ids": [
+        "1FZV"
+      ]
+    },
+    {
+      "cluster_id": "1J8B_1",
+      "size": 1,
+      "members": [
+        "1J8B_1"
+      ],
+      "pdb_ids": [
+        "1J8B"
+      ]
+    },
+    {
+      "cluster_id": "2B7L_1",
+      "size": 1,
+      "members": [
+        "2B7L_1"
+      ],
+      "pdb_ids": [
+        "2B7L"
+      ]
+    },
+    {
+      "cluster_id": "3P3D_2",
+      "size": 1,
+      "members": [
+        "3P3D_2"
+      ],
+      "pdb_ids": [
+        "3P3D"
+      ]
+    },
+    {
+      "cluster_id": "5DBL_1",
+      "size": 1,
+      "members": [
+        "5DBL_1"
+      ],
+      "pdb_ids": [
+        "5DBL"
+      ]
+    },
+    {
+      "cluster_id": "1M08_1",
+      "size": 1,
+      "members": [
+        "1M08_1"
+      ],
+      "pdb_ids": [
+        "1M08"
+      ]
+    },
+    {
+      "cluster_id": "3C1Q_1",
+      "size": 1,
+      "members": [
+        "3C1Q_1"
+      ],
+      "pdb_ids": [
+        "3C1Q"
+      ]
+    },
+    {
+      "cluster_id": "5FEG_1",
+      "size": 1,
+      "members": [
+        "5FEG_1"
+      ],
+      "pdb_ids": [
+        "5FEG"
+      ]
+    },
+    {
+      "cluster_id": "1IJY_1",
+      "size": 1,
+      "members": [
+        "1IJY_1"
+      ],
+      "pdb_ids": [
+        "1IJY"
+      ]
+    },
+    {
+      "cluster_id": "2BHO_1",
+      "size": 1,
+      "members": [
+        "2BHO_1"
+      ],
+      "pdb_ids": [
+        "2BHO"
+      ]
+    },
+    {
+      "cluster_id": "3P0C_3",
+      "size": 1,
+      "members": [
+        "3P0C_3"
+      ],
+      "pdb_ids": [
+        "3P0C"
+      ]
+    },
+    {
+      "cluster_id": "4TT4_1",
+      "size": 1,
+      "members": [
+        "4TT4_1"
+      ],
+      "pdb_ids": [
+        "4TT4"
+      ]
+    },
+    {
+      "cluster_id": "1F1C_1",
+      "size": 1,
+      "members": [
+        "1F1C_1"
+      ],
+      "pdb_ids": [
+        "1F1C"
+      ]
+    },
+    {
+      "cluster_id": "2G45_2",
+      "size": 1,
+      "members": [
+        "2G45_2"
+      ],
+      "pdb_ids": [
+        "2G45"
+      ]
+    },
+    {
+      "cluster_id": "2VSC_4",
+      "size": 1,
+      "members": [
+        "2VSC_4"
+      ],
+      "pdb_ids": [
+        "2VSC"
+      ]
+    },
+    {
+      "cluster_id": "6F1K_1",
+      "size": 1,
+      "members": [
+        "6F1K_1"
+      ],
+      "pdb_ids": [
+        "6F1K"
+      ]
+    },
+    {
+      "cluster_id": "2NVN_1",
+      "size": 1,
+      "members": [
+        "2NVN_1"
+      ],
+      "pdb_ids": [
+        "2NVN"
+      ]
+    },
+    {
+      "cluster_id": "1EWJ_2",
+      "size": 1,
+      "members": [
+        "1EWJ_2"
+      ],
+      "pdb_ids": [
+        "1EWJ"
+      ]
+    },
+    {
+      "cluster_id": "3BDE_2",
+      "size": 1,
+      "members": [
+        "3BDE_2"
+      ],
+      "pdb_ids": [
+        "3BDE"
+      ]
+    },
+    {
+      "cluster_id": "5KS7_1",
+      "size": 1,
+      "members": [
+        "5KS7_1"
+      ],
+      "pdb_ids": [
+        "5KS7"
+      ]
+    },
+    {
+      "cluster_id": "3DL3_1",
+      "size": 1,
+      "members": [
+        "3DL3_1"
+      ],
+      "pdb_ids": [
+        "3DL3"
+      ]
+    },
+    {
+      "cluster_id": "4LIR_1",
+      "size": 1,
+      "members": [
+        "4LIR_1"
+      ],
+      "pdb_ids": [
+        "4LIR"
+      ]
+    },
+    {
+      "cluster_id": "6AR4_1",
+      "size": 1,
+      "members": [
+        "6AR4_1"
+      ],
+      "pdb_ids": [
+        "6AR4"
+      ]
+    },
+    {
+      "cluster_id": "2QLX_2",
+      "size": 1,
+      "members": [
+        "2QLX_2"
+      ],
+      "pdb_ids": [
+        "2QLX"
+      ]
+    },
+    {
+      "cluster_id": "2RAX_22",
+      "size": 1,
+      "members": [
+        "2RAX_22"
+      ],
+      "pdb_ids": [
+        "2RAX"
+      ]
+    },
+    {
+      "cluster_id": "2XDP_6",
+      "size": 1,
+      "members": [
+        "2XDP_6"
+      ],
+      "pdb_ids": [
+        "2XDP"
+      ]
+    },
+    {
+      "cluster_id": "1QTO_1",
+      "size": 1,
+      "members": [
+        "1QTO_1"
+      ],
+      "pdb_ids": [
+        "1QTO"
+      ]
+    },
+    {
+      "cluster_id": "1UD0_7",
+      "size": 1,
+      "members": [
+        "1UD0_7"
+      ],
+      "pdb_ids": [
+        "1UD0"
+      ]
+    },
+    {
+      "cluster_id": "2QMS_1",
+      "size": 1,
+      "members": [
+        "2QMS_1"
+      ],
+      "pdb_ids": [
+        "2QMS"
+      ]
+    },
+    {
+      "cluster_id": "2ZZT_1",
+      "size": 1,
+      "members": [
+        "2ZZT_1"
+      ],
+      "pdb_ids": [
+        "2ZZT"
+      ]
+    },
+    {
+      "cluster_id": "3M5B_1",
+      "size": 1,
+      "members": [
+        "3M5B_1"
+      ],
+      "pdb_ids": [
+        "3M5B"
+      ]
+    },
+    {
+      "cluster_id": "2Q30_4",
+      "size": 1,
+      "members": [
+        "2Q30_4"
+      ],
+      "pdb_ids": [
+        "2Q30"
+      ]
+    },
+    {
+      "cluster_id": "3F14_1",
+      "size": 1,
+      "members": [
+        "3F14_1"
+      ],
+      "pdb_ids": [
+        "3F14"
+      ]
+    },
+    {
+      "cluster_id": "5EB9_1",
+      "size": 1,
+      "members": [
+        "5EB9_1"
+      ],
+      "pdb_ids": [
+        "5EB9"
+      ]
+    },
+    {
+      "cluster_id": "1XSV_1",
+      "size": 1,
+      "members": [
+        "1XSV_1"
+      ],
+      "pdb_ids": [
+        "1XSV"
+      ]
+    },
+    {
+      "cluster_id": "2IDL_1",
+      "size": 1,
+      "members": [
+        "2IDL_1"
+      ],
+      "pdb_ids": [
+        "2IDL"
+      ]
+    },
+    {
+      "cluster_id": "5DYM_1",
+      "size": 1,
+      "members": [
+        "5DYM_1"
+      ],
+      "pdb_ids": [
+        "5DYM"
+      ]
+    },
+    {
+      "cluster_id": "2AXI_3",
+      "size": 1,
+      "members": [
+        "2AXI_3"
+      ],
+      "pdb_ids": [
+        "2AXI"
+      ]
+    },
+    {
+      "cluster_id": "2DPF_1",
+      "size": 1,
+      "members": [
+        "2DPF_1"
+      ],
+      "pdb_ids": [
+        "2DPF"
+      ]
+    },
+    {
+      "cluster_id": "2DQL_1",
+      "size": 1,
+      "members": [
+        "2DQL_1"
+      ],
+      "pdb_ids": [
+        "2DQL"
+      ]
+    },
+    {
+      "cluster_id": "2I45_4",
+      "size": 1,
+      "members": [
+        "2I45_4"
+      ],
+      "pdb_ids": [
+        "2I45"
+      ]
+    },
+    {
+      "cluster_id": "2I9Z_1",
+      "size": 1,
+      "members": [
+        "2I9Z_1"
+      ],
+      "pdb_ids": [
+        "2I9Z"
+      ]
+    },
+    {
+      "cluster_id": "3HQX_1",
+      "size": 1,
+      "members": [
+        "3HQX_1"
+      ],
+      "pdb_ids": [
+        "3HQX"
+      ]
+    },
+    {
+      "cluster_id": "4RXJ_2",
+      "size": 1,
+      "members": [
+        "4RXJ_2"
+      ],
+      "pdb_ids": [
+        "4RXJ"
+      ]
+    },
+    {
+      "cluster_id": "2GFF_1",
+      "size": 1,
+      "members": [
+        "2GFF_1"
+      ],
+      "pdb_ids": [
+        "2GFF"
+      ]
+    },
+    {
+      "cluster_id": "3G48_2",
+      "size": 1,
+      "members": [
+        "3G48_2"
+      ],
+      "pdb_ids": [
+        "3G48"
+      ]
+    },
+    {
+      "cluster_id": "3GW2_1",
+      "size": 1,
+      "members": [
+        "3GW2_1"
+      ],
+      "pdb_ids": [
+        "3GW2"
+      ]
+    },
+    {
+      "cluster_id": "3NFC_1",
+      "size": 1,
+      "members": [
+        "3NFC_1"
+      ],
+      "pdb_ids": [
+        "3NFC"
+      ]
+    },
+    {
+      "cluster_id": "3UFE_1",
+      "size": 1,
+      "members": [
+        "3UFE_1"
+      ],
+      "pdb_ids": [
+        "3UFE"
+      ]
+    },
+    {
+      "cluster_id": "4Q97_1",
+      "size": 1,
+      "members": [
+        "4Q97_1"
+      ],
+      "pdb_ids": [
+        "4Q97"
+      ]
+    },
+    {
+      "cluster_id": "5OYM_13",
+      "size": 1,
+      "members": [
+        "5OYM_13"
+      ],
+      "pdb_ids": [
+        "5OYM"
+      ]
+    },
+    {
+      "cluster_id": "1ZSZ_1",
+      "size": 1,
+      "members": [
+        "1ZSZ_1"
+      ],
+      "pdb_ids": [
+        "1ZSZ"
+      ]
+    },
+    {
+      "cluster_id": "3UCR_1",
+      "size": 1,
+      "members": [
+        "3UCR_1"
+      ],
+      "pdb_ids": [
+        "3UCR"
+      ]
+    },
+    {
+      "cluster_id": "5HS8_1",
+      "size": 1,
+      "members": [
+        "5HS8_1"
+      ],
+      "pdb_ids": [
+        "5HS8"
+      ]
+    },
+    {
+      "cluster_id": "1GYO_1",
+      "size": 1,
+      "members": [
+        "1GYO_1"
+      ],
+      "pdb_ids": [
+        "1GYO"
+      ]
+    },
+    {
+      "cluster_id": "1JBG_1",
+      "size": 1,
+      "members": [
+        "1JBG_1"
+      ],
+      "pdb_ids": [
+        "1JBG"
+      ]
+    },
+    {
+      "cluster_id": "2QRR_1",
+      "size": 1,
+      "members": [
+        "2QRR_1"
+      ],
+      "pdb_ids": [
+        "2QRR"
+      ]
+    },
+    {
+      "cluster_id": "4EIB_6",
+      "size": 1,
+      "members": [
+        "4EIB_6"
+      ],
+      "pdb_ids": [
+        "4EIB"
+      ]
+    },
+    {
+      "cluster_id": "3DEX_1",
+      "size": 1,
+      "members": [
+        "3DEX_1"
+      ],
+      "pdb_ids": [
+        "3DEX"
+      ]
+    },
+    {
+      "cluster_id": "4FDB_1",
+      "size": 1,
+      "members": [
+        "4FDB_1"
+      ],
+      "pdb_ids": [
+        "4FDB"
+      ]
+    },
+    {
+      "cluster_id": "1E7N_1",
+      "size": 1,
+      "members": [
+        "1E7N_1"
+      ],
+      "pdb_ids": [
+        "1E7N"
+      ]
+    },
+    {
+      "cluster_id": "3JTH_1",
+      "size": 1,
+      "members": [
+        "3JTH_1"
+      ],
+      "pdb_ids": [
+        "3JTH"
+      ]
+    },
+    {
+      "cluster_id": "3LAG_1",
+      "size": 1,
+      "members": [
+        "3LAG_1"
+      ],
+      "pdb_ids": [
+        "3LAG"
+      ]
+    },
+    {
+      "cluster_id": "6F6P_1",
+      "size": 1,
+      "members": [
+        "6F6P_1"
+      ],
+      "pdb_ids": [
+        "6F6P"
+      ]
+    },
+    {
+      "cluster_id": "3PC6_1",
+      "size": 1,
+      "members": [
+        "3PC6_1"
+      ],
+      "pdb_ids": [
+        "3PC6"
+      ]
+    },
+    {
+      "cluster_id": "4WVR_2",
+      "size": 1,
+      "members": [
+        "4WVR_2"
+      ],
+      "pdb_ids": [
+        "4WVR"
+      ]
+    },
+    {
+      "cluster_id": "2EBB_1",
+      "size": 1,
+      "members": [
+        "2EBB_1"
+      ],
+      "pdb_ids": [
+        "2EBB"
+      ]
+    },
+    {
+      "cluster_id": "3RET_7",
+      "size": 1,
+      "members": [
+        "3RET_7"
+      ],
+      "pdb_ids": [
+        "3RET"
+      ]
+    },
+    {
+      "cluster_id": "2A8F_1",
+      "size": 1,
+      "members": [
+        "2A8F_1"
+      ],
+      "pdb_ids": [
+        "2A8F"
+      ]
+    },
+    {
+      "cluster_id": "2G3K_8",
+      "size": 1,
+      "members": [
+        "2G3K_8"
+      ],
+      "pdb_ids": [
+        "2G3K"
+      ]
+    },
+    {
+      "cluster_id": "3LO3_3",
+      "size": 1,
+      "members": [
+        "3LO3_3"
+      ],
+      "pdb_ids": [
+        "3LO3"
+      ]
+    },
+    {
+      "cluster_id": "1R7J_1",
+      "size": 1,
+      "members": [
+        "1R7J_1"
+      ],
+      "pdb_ids": [
+        "1R7J"
+      ]
+    },
+    {
+      "cluster_id": "3LHR_1",
+      "size": 1,
+      "members": [
+        "3LHR_1"
+      ],
+      "pdb_ids": [
+        "3LHR"
+      ]
+    },
+    {
+      "cluster_id": "3S4R_7",
+      "size": 1,
+      "members": [
+        "3S4R_7"
+      ],
+      "pdb_ids": [
+        "3S4R"
+      ]
+    },
+    {
+      "cluster_id": "4A56_1",
+      "size": 1,
+      "members": [
+        "4A56_1"
+      ],
+      "pdb_ids": [
+        "4A56"
+      ]
+    },
+    {
+      "cluster_id": "2ZW2_1",
+      "size": 1,
+      "members": [
+        "2ZW2_1"
+      ],
+      "pdb_ids": [
+        "2ZW2"
+      ]
+    },
+    {
+      "cluster_id": "4QBO_1",
+      "size": 1,
+      "members": [
+        "4QBO_1"
+      ],
+      "pdb_ids": [
+        "4QBO"
+      ]
+    },
+    {
+      "cluster_id": "1YBZ_2",
+      "size": 1,
+      "members": [
+        "1YBZ_2"
+      ],
+      "pdb_ids": [
+        "1YBZ"
+      ]
+    },
+    {
+      "cluster_id": "4I6S_9",
+      "size": 1,
+      "members": [
+        "4I6S_9"
+      ],
+      "pdb_ids": [
+        "4I6S"
+      ]
+    },
+    {
+      "cluster_id": "1U07_1",
+      "size": 1,
+      "members": [
+        "1U07_1"
+      ],
+      "pdb_ids": [
+        "1U07"
+      ]
+    },
+    {
+      "cluster_id": "3PC7_1",
+      "size": 1,
+      "members": [
+        "3PC7_1"
+      ],
+      "pdb_ids": [
+        "3PC7"
+      ]
+    },
+    {
+      "cluster_id": "4RZK_1",
+      "size": 1,
+      "members": [
+        "4RZK_1"
+      ],
+      "pdb_ids": [
+        "4RZK"
+      ]
+    },
+    {
+      "cluster_id": "1UDV_1",
+      "size": 1,
+      "members": [
+        "1UDV_1"
+      ],
+      "pdb_ids": [
+        "1UDV"
+      ]
+    },
+    {
+      "cluster_id": "3CNK_1",
+      "size": 1,
+      "members": [
+        "3CNK_1"
+      ],
+      "pdb_ids": [
+        "3CNK"
+      ]
+    },
+    {
+      "cluster_id": "4LOW_1",
+      "size": 1,
+      "members": [
+        "4LOW_1"
+      ],
+      "pdb_ids": [
+        "4LOW"
+      ]
+    },
+    {
+      "cluster_id": "2AHM_21",
+      "size": 1,
+      "members": [
+        "2AHM_21"
+      ],
+      "pdb_ids": [
+        "2AHM"
+      ]
+    },
+    {
+      "cluster_id": "3ZIG_1",
+      "size": 1,
+      "members": [
+        "3ZIG_1"
+      ],
+      "pdb_ids": [
+        "3ZIG"
+      ]
+    },
+    {
+      "cluster_id": "5EYO_2",
+      "size": 1,
+      "members": [
+        "5EYO_2"
+      ],
+      "pdb_ids": [
+        "5EYO"
+      ]
+    },
+    {
+      "cluster_id": "2ZXY_1",
+      "size": 1,
+      "members": [
+        "2ZXY_1"
+      ],
+      "pdb_ids": [
+        "2ZXY"
+      ]
+    },
+    {
+      "cluster_id": "3DQV_12",
+      "size": 1,
+      "members": [
+        "3DQV_12"
+      ],
+      "pdb_ids": [
+        "3DQV"
+      ]
+    },
+    {
+      "cluster_id": "4XVV_1",
+      "size": 1,
+      "members": [
+        "4XVV_1"
+      ],
+      "pdb_ids": [
+        "4XVV"
+      ]
+    },
+    {
+      "cluster_id": "5FGO_1",
+      "size": 1,
+      "members": [
+        "5FGO_1"
+      ],
+      "pdb_ids": [
+        "5FGO"
+      ]
+    },
+    {
+      "cluster_id": "3BS3_1",
+      "size": 1,
+      "members": [
+        "3BS3_1"
+      ],
+      "pdb_ids": [
+        "3BS3"
+      ]
+    },
+    {
+      "cluster_id": "3EUS_1",
+      "size": 1,
+      "members": [
+        "3EUS_1"
+      ],
+      "pdb_ids": [
+        "3EUS"
+      ]
+    },
+    {
+      "cluster_id": "1ZLJ_1",
+      "size": 1,
+      "members": [
+        "1ZLJ_1"
+      ],
+      "pdb_ids": [
+        "1ZLJ"
+      ]
+    },
+    {
+      "cluster_id": "4YTV_3",
+      "size": 1,
+      "members": [
+        "4YTV_3"
+      ],
+      "pdb_ids": [
+        "4YTV"
+      ]
+    },
+    {
+      "cluster_id": "1A7G_1",
+      "size": 1,
+      "members": [
+        "1A7G_1"
+      ],
+      "pdb_ids": [
+        "1A7G"
+      ]
+    },
+    {
+      "cluster_id": "4FBI_1",
+      "size": 1,
+      "members": [
+        "4FBI_1"
+      ],
+      "pdb_ids": [
+        "4FBI"
+      ]
+    },
+    {
+      "cluster_id": "6FNZ_4",
+      "size": 1,
+      "members": [
+        "6FNZ_4"
+      ],
+      "pdb_ids": [
+        "6FNZ"
+      ]
+    },
+    {
+      "cluster_id": "6OTN_2",
+      "size": 1,
+      "members": [
+        "6OTN_2"
+      ],
+      "pdb_ids": [
+        "6OTN"
+      ]
+    },
+    {
+      "cluster_id": "1USM_1",
+      "size": 1,
+      "members": [
+        "1USM_1"
+      ],
+      "pdb_ids": [
+        "1USM"
+      ]
+    },
+    {
+      "cluster_id": "5N7L_1",
+      "size": 1,
+      "members": [
+        "5N7L_1"
+      ],
+      "pdb_ids": [
+        "5N7L"
+      ]
+    },
+    {
+      "cluster_id": "4O1W_1",
+      "size": 1,
+      "members": [
+        "4O1W_1"
+      ],
+      "pdb_ids": [
+        "4O1W"
+      ]
+    },
+    {
+      "cluster_id": "6R2F_1",
+      "size": 1,
+      "members": [
+        "6R2F_1"
+      ],
+      "pdb_ids": [
+        "6R2F"
+      ]
+    },
+    {
+      "cluster_id": "3B7H_1",
+      "size": 1,
+      "members": [
+        "3B7H_1"
+      ],
+      "pdb_ids": [
+        "3B7H"
+      ]
+    },
+    {
+      "cluster_id": "3QQ6_1",
+      "size": 1,
+      "members": [
+        "3QQ6_1"
+      ],
+      "pdb_ids": [
+        "3QQ6"
+      ]
+    },
+    {
+      "cluster_id": "2ONT_3",
+      "size": 1,
+      "members": [
+        "2ONT_3"
+      ],
+      "pdb_ids": [
+        "2ONT"
+      ]
+    },
+    {
+      "cluster_id": "3U5V_1",
+      "size": 1,
+      "members": [
+        "3U5V_1"
+      ],
+      "pdb_ids": [
+        "3U5V"
+      ]
+    },
+    {
+      "cluster_id": "5TRB_1",
+      "size": 1,
+      "members": [
+        "5TRB_1"
+      ],
+      "pdb_ids": [
+        "5TRB"
+      ]
+    },
+    {
+      "cluster_id": "4IC3_1",
+      "size": 1,
+      "members": [
+        "4IC3_1"
+      ],
+      "pdb_ids": [
+        "4IC3"
+      ]
+    },
+    {
+      "cluster_id": "5VDF_4",
+      "size": 1,
+      "members": [
+        "5VDF_4"
+      ],
+      "pdb_ids": [
+        "5VDF"
+      ]
+    },
+    {
+      "cluster_id": "2IY2_1",
+      "size": 1,
+      "members": [
+        "2IY2_1"
+      ],
+      "pdb_ids": [
+        "2IY2"
+      ]
+    },
+    {
+      "cluster_id": "2EWT_1",
+      "size": 1,
+      "members": [
+        "2EWT_1"
+      ],
+      "pdb_ids": [
+        "2EWT"
+      ]
+    },
+    {
+      "cluster_id": "2PIJ_1",
+      "size": 1,
+      "members": [
+        "2PIJ_1"
+      ],
+      "pdb_ids": [
+        "2PIJ"
+      ]
+    },
+    {
+      "cluster_id": "4XSS_5",
+      "size": 1,
+      "members": [
+        "4XSS_5"
+      ],
+      "pdb_ids": [
+        "4XSS"
+      ]
+    },
+    {
+      "cluster_id": "1FE0_1",
+      "size": 1,
+      "members": [
+        "1FE0_1"
+      ],
+      "pdb_ids": [
+        "1FE0"
+      ]
+    },
+    {
+      "cluster_id": "6UCM_16",
+      "size": 1,
+      "members": [
+        "6UCM_16"
+      ],
+      "pdb_ids": [
+        "6UCM"
+      ]
+    },
+    {
+      "cluster_id": "1QG7_1",
+      "size": 1,
+      "members": [
+        "1QG7_1"
+      ],
+      "pdb_ids": [
+        "1QG7"
+      ]
+    },
+    {
+      "cluster_id": "2XJ3_1",
+      "size": 1,
+      "members": [
+        "2XJ3_1"
+      ],
+      "pdb_ids": [
+        "2XJ3"
+      ]
+    },
+    {
+      "cluster_id": "2XEU_1",
+      "size": 1,
+      "members": [
+        "2XEU_1"
+      ],
+      "pdb_ids": [
+        "2XEU"
+      ]
+    },
+    {
+      "cluster_id": "3TBO_1",
+      "size": 1,
+      "members": [
+        "3TBO_1"
+      ],
+      "pdb_ids": [
+        "3TBO"
+      ]
+    },
+    {
+      "cluster_id": "5LLJ_1",
+      "size": 1,
+      "members": [
+        "5LLJ_1"
+      ],
+      "pdb_ids": [
+        "5LLJ"
+      ]
+    },
+    {
+      "cluster_id": "3E7K_14",
+      "size": 1,
+      "members": [
+        "3E7K_14"
+      ],
+      "pdb_ids": [
+        "3E7K"
+      ]
+    },
+    {
+      "cluster_id": "5TC2_1",
+      "size": 1,
+      "members": [
+        "5TC2_1"
+      ],
+      "pdb_ids": [
+        "5TC2"
+      ]
+    },
+    {
+      "cluster_id": "3Q1D_1",
+      "size": 1,
+      "members": [
+        "3Q1D_1"
+      ],
+      "pdb_ids": [
+        "3Q1D"
+      ]
+    },
+    {
+      "cluster_id": "4E86_14",
+      "size": 1,
+      "members": [
+        "4E86_14"
+      ],
+      "pdb_ids": [
+        "4E86"
+      ]
+    },
+    {
+      "cluster_id": "1BHM_1",
+      "size": 1,
+      "members": [
+        "1BHM_1"
+      ],
+      "pdb_ids": [
+        "1BHM"
+      ]
+    },
+    {
+      "cluster_id": "1ZBH_2",
+      "size": 1,
+      "members": [
+        "1ZBH_2"
+      ],
+      "pdb_ids": [
+        "1ZBH"
+      ]
+    },
+    {
+      "cluster_id": "1KIX_3",
+      "size": 1,
+      "members": [
+        "1KIX_3"
+      ],
+      "pdb_ids": [
+        "1KIX"
+      ]
+    },
+    {
+      "cluster_id": "1XI1_1",
+      "size": 1,
+      "members": [
+        "1XI1_1"
+      ],
+      "pdb_ids": [
+        "1XI1"
+      ]
+    },
+    {
+      "cluster_id": "2I91_1",
+      "size": 1,
+      "members": [
+        "2I91_1"
+      ],
+      "pdb_ids": [
+        "2I91"
+      ]
+    }
+  ]
+}

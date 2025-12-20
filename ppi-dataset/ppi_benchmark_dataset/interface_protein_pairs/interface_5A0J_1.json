@@ -1,0 +1,272 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5A0J_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "5A0J_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5A0J",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5A0J",
+    "name": "Protein 5A0J",
+    "description": "Protein structure with PDB ID: 5A0J. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5A0J_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5A0J",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Organism-specific protein",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "placeholder_note": "Organism information will be populated from PDB metadata by script 3"
+    },
+    "alternateName": [
+      "PDB 5A0J",
+      "Protein ID 5A0J"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5a0j_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5a0j.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5A0J",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5A0J",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5A0J_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.10.600.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5A0J\", \"structure_metadata\": {\"pdb_id\": \"5A0J\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": false, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": [], \"fetch_timestamp\": \"2025-12-19T19:30:30.390117\"}, \"interface_info\": {\"interface_id\": \"5A0J_1\", \"name\": \"Interface 5A0J_1\", \"pdb_id\": \"5A0J\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": null, \"enrichment_timestamp\": \"2025-12-19T19:30:30.998942\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": null,
+            "experimentalMethod": null,
+            "depositionDate": null,
+            "releaseDate": null,
+            "sourceOrganism": [],
+            "spaceGroup": null,
+            "entityCount": 0,
+            "chainCount": null,
+            "uniqueSequences": null,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": null
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5A0J_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5A0J",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "To be populated by script 4",
+      "description": "Sequence cluster ID from BLASTClust analysis (-S 25 -L 0.5 -b F). Will be populated by script 4."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2543.59,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 75,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.10.600.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 785.019999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1758.57,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.308626783404558,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.691373216595442,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5A0J_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5a0j_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.109006\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:37.109006"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "UNAVAILABLE - Not found in RCSB API",
+      "description": "PDB metadata could not be fetched from RCSB API"
+    }
+  ]
+}

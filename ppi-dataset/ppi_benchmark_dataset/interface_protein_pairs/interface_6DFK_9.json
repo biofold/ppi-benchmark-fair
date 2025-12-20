@@ -1,0 +1,505 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 6DFK_9",
+  "description": "Protein-protein interaction interface between chains C and H",
+  "identifier": "6DFK_9",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_6DFK",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "6DFK",
+    "name": "Protein 6DFK",
+    "description": "Protein structure with PDB ID: 6DFK. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 6DFK_9 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/6DFK",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Plasmodium falciparum 3D7",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "36329",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36329"
+    },
+    "alternateName": [
+      "PDB 6DFK",
+      "Protein ID 6DFK"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/6dfk_9.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/6DFK_9.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "6DFK",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "6DFK",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "6DFK_9",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "C-H",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "PF3D7_0907700",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02252",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"6DFK\", \"structure_metadata\": {\"pdb_id\": \"6DFK\", \"resolution\": 3.1, \"deposition_date\": \"2018-05-15T00:00:00+0000\", \"release_date\": \"2019-08-07T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Plasmodium falciparum 3D7\"], \"citation\": {\"title\": \"The structure of the PA28-20S proteasome complex from Plasmodium falciparum and implications for proteostasis.\", \"doi\": \"10.1038/s41564-019-0524-4\", \"authors\": [\"Xie, S.C.\", \"Metcalfe, R.D.\", \"Hanssen, E.\", \"Yang, T.\", \"Gillett, D.L.\", \"Leis, A.P.\", \"Morton, C.J.\", \"Kuiper, M.J.\", \"Parker, M.W.\", \"Spillman, N.J.\", \"Wong, W.\", \"Tsu, C.\", \"Dick, L.R.\", \"Griffin, M.D.W.\", \"Tilley, L.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 166.485, \"b\": 166.485, \"c\": 399.162, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"B\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"C\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"D\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"E\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"F\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"G\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"H\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"I\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"J\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"K\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"L\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"M\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"N\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"M\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}, \"N\": {\"entity_id\": \"1\", \"organism\": \"Plasmodium falciparum 3D7\", \"sequence_length\": 280, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"organism\": \"Plasmodium falciparum 3D7\", \"taxonomy_id\": 36329, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 280, \"gene_name\": null, \"uniprot_ids\": [\"Q8I374\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF\", \"entities\": [\"1\"], \"chain_count\": 14}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:01:17.310429\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 14, \"chain_count\": 14, \"unique_sequences\": 1, \"avg_sequence_length\": 280.0, \"min_sequence_length\": 280, \"max_sequence_length\": 280}, \"interface_info\": {\"interface_id\": \"6DFK_9\", \"name\": \"Interface 6DFK_9\", \"pdb_id\": \"6DFK\", \"auth_chain1\": \"C\", \"auth_chain2\": \"H\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 280, \"chain2_sequence_length\": 280, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:01:18.214122\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 3.1,
+            "experimentalMethod": null,
+            "depositionDate": "2018-05-15T00:00:00+0000",
+            "releaseDate": "2019-08-07T00:00:00+0000",
+            "sourceOrganism": [
+              "Plasmodium falciparum 3D7"
+            ],
+            "spaceGroup": null,
+            "entityCount": 2,
+            "chainCount": 14,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "The structure of the PA28-20S proteasome complex from Plasmodium falciparum and implications for proteostasis.",
+              "doi": "10.1038/s41564-019-0524-4",
+              "authors": [
+                "Xie, S.C.",
+                "Metcalfe, R.D.",
+                "Hanssen, E.",
+                "Yang, T.",
+                "Gillett, D.L.",
+                "Leis, A.P.",
+                "Morton, C.J.",
+                "Kuiper, M.J.",
+                "Parker, M.W.",
+                "Spillman, N.J.",
+                "Wong, W.",
+                "Tsu, C.",
+                "Dick, L.R.",
+                "Griffin, M.D.W.",
+                "Tilley, L."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 3.1,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Plasmodium falciparum 3D7",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 14,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF",
+        "description": "Amino acid sequence for chain A (length: 280)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 280,
+        "organism": "Plasmodium falciparum 3D7",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF",
+        "description": "Amino acid sequence for chain B (length: 280)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 280,
+        "organism": "Plasmodium falciparum 3D7",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF",
+        "description": "Amino acid sequence for chain C (length: 280)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 280,
+        "organism": "Plasmodium falciparum 3D7",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF",
+        "description": "Amino acid sequence for chain D (length: 280)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 280,
+        "organism": "Plasmodium falciparum 3D7",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "GMEAYLNKIDKIEPSDQKIKEEYNKFKYDITKQAIESLRERIPKRIIFFNNLVNVNSEPGSILNVNDLDGVSYKYKINKIEENVRKKHKGNNSSDFDEREKKKDSLDGHVKHFSNNEDSKLIIDDKVLYTHYVPSHKQIYLELEKIKTYASELIEIIGNIKLWIQLNVPRIEDGNNFGVGIQEEAIQELARVEESAFNLYDAIVKYYMERAKISTKVLKYPNVSDYQEAVRELDEKEWIHIKITIVDMRNNYIMLYDLLYKNWEKVVKPKNEDAHHRMTF",
+        "description": "Amino acid sequence for chain E (length: 280)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 280,
+        "organism": "Plasmodium falciparum 3D7",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AdditionalChains",
+        "value": "9 more chains",
+        "description": "Total of 14 chains in structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 14 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The structure of the PA28-20S proteasome complex from Plasmodium falciparum and implications for proteostasis.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/s41564-019-0524-4",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, E, F, G, H, I, J, K, L, M, N, Length: 280",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 280, \"chain2_sequence_length\": 280, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 280,
+            "chain2_length": 280,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "6DFK_9",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 6DFK_9",
+      "description": "Homodimer interaction partner in chain H"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "6DFK",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "C",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "H",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2247.53,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 63,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "PF3D7_0907700",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02252",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1040.83,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1206.68,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.463099491441716,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.536891609900647,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6DFK_9\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"H\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6dfk_9.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.085130\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:34.085130"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 14 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "6DFK_9",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

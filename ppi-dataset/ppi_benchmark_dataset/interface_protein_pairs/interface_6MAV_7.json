@@ -1,0 +1,480 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 6MAV_7",
+  "description": "Protein-protein interaction interface between chains B and B",
+  "identifier": "6MAV_7",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_6MAV",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "6MAV",
+    "name": "Protein 6MAV",
+    "description": "Protein structure with PDB ID: 6MAV. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 6MAV_7 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/6MAV",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 6MAV",
+      "Protein ID 6MAV"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/6mav_7.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/6MAV_7.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "6MAV",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "6MAV",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "6MAV_7",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "B-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "TIMP1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.40.50.120;3.90.370.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00965",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"6MAV\", \"structure_metadata\": {\"pdb_id\": \"6MAV\", \"resolution\": 2.37, \"deposition_date\": \"2018-08-28T00:00:00+0000\", \"release_date\": \"2019-05-15T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Directed evolution of the metalloproteinase inhibitor TIMP-1 reveals that its N- and C-terminal domains cooperate in matrix metalloproteinase recognition.\", \"doi\": \"10.1074/jbc.RA119.008321\", \"authors\": [\"Raeeszadeh-Sarmazdeh, M.\", \"Greene, K.A.\", \"Sankaran, B.\", \"Downey, G.P.\", \"Radisky, D.C.\", \"Radisky, E.S.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 69.703, \"b\": 69.703, \"c\": 321.326, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"FRTFPGIPKWRKTHLTYRIVNYTPDLPKDAVDSAVEKALKVWEEVTPLTFSRLYEGEADIMISFAVREHGDFYPFDGPGNVLAHAYAPGPGINGDAHFDDDEQWTKDTTGTNLFLVAAHEIGHSLGLFHSANTEALMYPLYHSLTDLTRFRLSQDDINGIQSLYGPPP\", \"B\": \"CTCVPPHPQTAFCNSDLVIRAKFVGTPEVNQTTGYQRYEIKMTKMYKGFQALGDAADIRFVYTPAMESVCGYFHRSHNRSEEFLIAGKLQDGLLHITTCSFVAPWNSLSLAQRRGFTKTYTVGCEECTVFPCLSIPCKLQSGTHCLWTDQLLQGSEKGFQSRHLACLPREPGLCTWQSLRSQIA\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 168, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P08254\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Homo sapiens\", \"sequence_length\": 184, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P01033\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"FRTFPGIPKWRKTHLTYRIVNYTPDLPKDAVDSAVEKALKVWEEVTPLTFSRLYEGEADIMISFAVREHGDFYPFDGPGNVLAHAYAPGPGINGDAHFDDDEQWTKDTTGTNLFLVAAHEIGHSLGLFHSANTEALMYPLYHSLTDLTRFRLSQDDINGIQSLYGPPP\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 168, \"gene_name\": null, \"uniprot_ids\": [\"P08254\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"CTCVPPHPQTAFCNSDLVIRAKFVGTPEVNQTTGYQRYEIKMTKMYKGFQALGDAADIRFVYTPAMESVCGYFHRSHNRSEEFLIAGKLQDGLLHITTCSFVAPWNSLSLAQRRGFTKTYTVGCEECTVFPCLSIPCKLQSGTHCLWTDQLLQGSEKGFQSRHLACLPREPGLCTWQSLRSQIA\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 184, \"gene_name\": null, \"uniprot_ids\": [\"P01033\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"FRTFPGIPKWRKTHLTYRIVNYTPDLPKDAVDSAVEKALKVWEEVTPLTFSRLYEGEADIMISFAVREHGDFYPFDGPGNVLAHAYAPGPGINGDAHFDDDEQWTKDTTGTNLFLVAAHEIGHSLGLFHSANTEALMYPLYHSLTDLTRFRLSQDDINGIQSLYGPPP\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"CTCVPPHPQTAFCNSDLVIRAKFVGTPEVNQTTGYQRYEIKMTKMYKGFQALGDAADIRFVYTPAMESVCGYFHRSHNRSEEFLIAGKLQDGLLHITTCSFVAPWNSLSLAQRRGFTKTYTVGCEECTVFPCLSIPCKLQSGTHCLWTDQLLQGSEKGFQSRHLACLPREPGLCTWQSLRSQIA\", \"entities\": [\"2\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:31:05.922272\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 2, \"unique_sequences\": 2, \"avg_sequence_length\": 176.0, \"min_sequence_length\": 168, \"max_sequence_length\": 184}, \"interface_info\": {\"interface_id\": \"6MAV_7\", \"name\": \"Interface 6MAV_7\", \"pdb_id\": \"6MAV\", \"auth_chain1\": \"B\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 168, \"chain2_sequence_length\": 184, \"sequences_identical\": false, \"sequence_identity\": 4.761904761904762}, \"enrichment_timestamp\": \"2025-12-19T19:31:07.734930\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.37,
+            "experimentalMethod": null,
+            "depositionDate": "2018-08-28T00:00:00+0000",
+            "releaseDate": "2019-05-15T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "entityCount": 5,
+            "chainCount": 2,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "Directed evolution of the metalloproteinase inhibitor TIMP-1 reveals that its N- and C-terminal domains cooperate in matrix metalloproteinase recognition.",
+              "doi": "10.1074/jbc.RA119.008321",
+              "authors": [
+                "Raeeszadeh-Sarmazdeh, M.",
+                "Greene, K.A.",
+                "Sankaran, B.",
+                "Downey, G.P.",
+                "Radisky, D.C.",
+                "Radisky, E.S."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.37,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "FRTFPGIPKWRKTHLTYRIVNYTPDLPKDAVDSAVEKALKVWEEVTPLTFSRLYEGEADIMISFAVREHGDFYPFDGPGNVLAHAYAPGPGINGDAHFDDDEQWTKDTTGTNLFLVAAHEIGHSLGLFHSANTEALMYPLYHSLTDLTRFRLSQDDINGIQSLYGPPP",
+        "description": "Amino acid sequence for chain A (length: 168)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 168,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "CTCVPPHPQTAFCNSDLVIRAKFVGTPEVNQTTGYQRYEIKMTKMYKGFQALGDAADIRFVYTPAMESVCGYFHRSHNRSEEFLIAGKLQDGLLHITTCSFVAPWNSLSLAQRRGFTKTYTVGCEECTVFPCLSIPCKLQSGTHCLWTDQLLQGSEKGFQSRHLACLPREPGLCTWQSLRSQIA",
+        "description": "Amino acid sequence for chain B (length: 184)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 184,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Directed evolution of the metalloproteinase inhibitor TIMP-1 reveals that its N- and C-terminal domains cooperate in matrix metalloproteinase recognition.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1074/jbc.RA119.008321",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 168",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: B, Length: 184",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 168, \"chain2_sequence_length\": 184, \"sequences_identical\": false, \"sequence_identity\": 4.761904761904762}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 168,
+            "chain2_length": 184,
+            "sequences_identical": false,
+            "sequence_identity": 4.761904761904762
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "4.8%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1GXD_4",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 5 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 5,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 6MAV_7",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "6MAV",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "B",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "11_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "4_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1611.8,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 50,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "TIMP1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.40.50.120;3.90.370.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00965",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 511.04,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1100.76,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.317061670182405,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.682938329817596,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6MAV_7\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6mav_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.182467\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:37.182467"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1GXD_4",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 5 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 5,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1GXD_4",
+        "3M7P_3",
+        "4JP4_1",
+        "1XUR_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 5)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

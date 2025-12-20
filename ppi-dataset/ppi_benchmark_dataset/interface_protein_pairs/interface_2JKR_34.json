@@ -1,0 +1,547 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2JKR_34",
+  "description": "Protein-protein interaction interface between chains L and L",
+  "identifier": "2JKR_34",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2JKR",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2JKR",
+    "name": "Protein 2JKR",
+    "description": "Protein structure with PDB ID: 2JKR. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2JKR_34 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2JKR",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Mus musculus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "10090",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
+    },
+    "alternateName": [
+      "PDB 2JKR",
+      "Protein ID 2JKR"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2jkr_34.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2JKR_34.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2JKR",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2JKR",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2JKR_34",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "L-L",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "Ap2a2",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.25.10.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01602",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2JKR\", \"structure_metadata\": {\"pdb_id\": \"2JKR\", \"resolution\": 2.98, \"deposition_date\": \"2008-08-29T00:00:00+0000\", \"release_date\": \"2008-10-28T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mus musculus\", \"Rattus norvegicus\", \"Homo sapiens\"], \"citation\": {\"title\": \"A Structural Explanation for the Binding of Endocytic Dileucine Motifs by the Ap2 Complex.\", \"doi\": \"10.1038/NATURE07422\", \"authors\": [\"Kelly, B.T.\", \"Mccoy, A.J.\", \"Spaete, K.\", \"Miller, S.E.\", \"Evans, P.R.\", \"Hoening, S.\", \"Owen, D.J.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 169.9, \"b\": 169.9, \"c\": 321.7, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS\", \"L\": \"MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS\", \"B\": \"MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK\", \"E\": \"MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK\", \"I\": \"MIRFILIQNRAGKTRLAKWYMQFDDDEKQKLIEEVHAVVTVRDAKHTNFVEFRNFKIIYRRYAGLYFCICVDVNDNNLAYLEAIHNFVEVLNEYFHNVCELDLVFNFYKVYTVVDEMFLAGEIRETSQTKVLKQLLMLQSLE\", \"S\": \"MIRFILIQNRAGKTRLAKWYMQFDDDEKQKLIEEVHAVVTVRDAKHTNFVEFRNFKIIYRRYAGLYFCICVDVNDNNLAYLEAIHNFVEVLNEYFHNVCELDLVFNFYKVYTVVDEMFLAGEIRETSQTKVLKQLLMLQSLE\", \"M\": \"MIGGLFIYNHKGEVLISRVYRDDIGRNAVDAFRVNVIHARQQVRSPVTNIARTSFFHVKRSNIWLAAVTKQNVNAAMVFEFLYKMCDVMAAYFGKISEENIKNNFVLIYELLDEILDFGYPQNSETGALKTFITQQGIKSQHQTKEEQSQITSQVTGQIGWRREGIKYRRNELFLDVLESVNLLMSPQGQVLSAHVSGRVVMKSYLSGMPECKFGMNDKIVIEKQGKGTADETSKSGKQSIAIDDCTFHQCVRLSKFDSERSISFIPPDGEFELMRYRTTKDIILPFRVIPLVREVGRTKLEVKVVIKSNFKPSLLAQKIEVRIPTPLNTSGVQVICMKGKAKYKASENAIVWKIKRMAGMKESQISAEIELLPTNDKKKWARPPISMNFEVPFAPSGLKVRYLKVFEPKLNYSDHDVIKWVRYIGRSGIYETRC\", \"U\": \"MIGGLFIYNHKGEVLISRVYRDDIGRNAVDAFRVNVIHARQQVRSPVTNIARTSFFHVKRSNIWLAAVTKQNVNAAMVFEFLYKMCDVMAAYFGKISEENIKNNFVLIYELLDEILDFGYPQNSETGALKTFITQQGIKSQHQTKEEQSQITSQVTGQIGWRREGIKYRRNELFLDVLESVNLLMSPQGQVLSAHVSGRVVMKSYLSGMPECKFGMNDKIVIEKQGKGTADETSKSGKQSIAIDDCTFHQCVRLSKFDSERSISFIPPDGEFELMRYRTTKDIILPFRVIPLVREVGRTKLEVKVVIKSNFKPSLLAQKIEVRIPTPLNTSGVQVICMKGKAKYKASENAIVWKIKRMAGMKESQISAEIELLPTNDKKKWARPPISMNFEVPFAPSGLKVRYLKVFEPKLNYSDHDVIKWVRYIGRSGIYETRC\", \"P\": \"RM(SEP)QIKRLLSE\", \"Q\": \"RM(SEP)QIKRLLSE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 623, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P17427\"]}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 623, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P17427\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Homo sapiens\", \"sequence_length\": 591, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P63010\"]}, \"E\": {\"entity_id\": \"2\", \"organism\": \"Homo sapiens\", \"sequence_length\": 591, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P63010\"]}, \"I\": {\"entity_id\": \"3\", \"organism\": \"Mus musculus\", \"sequence_length\": 142, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P62743\"]}, \"S\": {\"entity_id\": \"3\", \"organism\": \"Mus musculus\", \"sequence_length\": 142, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P62743\"]}, \"M\": {\"entity_id\": \"4\", \"organism\": \"Rattus norvegicus\", \"sequence_length\": 435, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P84092\"]}, \"U\": {\"entity_id\": \"4\", \"organism\": \"Rattus norvegicus\", \"sequence_length\": 435, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P84092\"]}, \"P\": {\"entity_id\": \"5\", \"organism\": \"Homo sapiens\", \"sequence_length\": 15, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P01730\"]}, \"Q\": {\"entity_id\": \"5\", \"organism\": \"Homo sapiens\", \"sequence_length\": 15, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P01730\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"A\", \"L\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 623, \"gene_name\": null, \"uniprot_ids\": [\"P17427\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"B\", \"E\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 591, \"gene_name\": null, \"uniprot_ids\": [\"P63010\"]}, \"3\": {\"entity_id\": \"3\", \"sequence\": \"MIRFILIQNRAGKTRLAKWYMQFDDDEKQKLIEEVHAVVTVRDAKHTNFVEFRNFKIIYRRYAGLYFCICVDVNDNNLAYLEAIHNFVEVLNEYFHNVCELDLVFNFYKVYTVVDEMFLAGEIRETSQTKVLKQLLMLQSLE\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"I\", \"S\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 142, \"gene_name\": null, \"uniprot_ids\": [\"P62743\"]}, \"4\": {\"entity_id\": \"4\", \"sequence\": \"MIGGLFIYNHKGEVLISRVYRDDIGRNAVDAFRVNVIHARQQVRSPVTNIARTSFFHVKRSNIWLAAVTKQNVNAAMVFEFLYKMCDVMAAYFGKISEENIKNNFVLIYELLDEILDFGYPQNSETGALKTFITQQGIKSQHQTKEEQSQITSQVTGQIGWRREGIKYRRNELFLDVLESVNLLMSPQGQVLSAHVSGRVVMKSYLSGMPECKFGMNDKIVIEKQGKGTADETSKSGKQSIAIDDCTFHQCVRLSKFDSERSISFIPPDGEFELMRYRTTKDIILPFRVIPLVREVGRTKLEVKVVIKSNFKPSLLAQKIEVRIPTPLNTSGVQVICMKGKAKYKASENAIVWKIKRMAGMKESQISAEIELLPTNDKKKWARPPISMNFEVPFAPSGLKVRYLKVFEPKLNYSDHDVIKWVRYIGRSGIYETRC\", \"organism\": \"Rattus norvegicus\", \"taxonomy_id\": 10116, \"chain_ids\": [\"M\", \"U\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 435, \"gene_name\": null, \"uniprot_ids\": [\"P84092\"]}, \"5\": {\"entity_id\": \"5\", \"sequence\": \"RM(SEP)QIKRLLSE\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"P\", \"Q\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 15, \"gene_name\": null, \"uniprot_ids\": [\"P01730\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS\", \"entities\": [\"1\"], \"chain_count\": 2}, {\"sequence\": \"MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK\", \"entities\": [\"2\"], \"chain_count\": 2}, {\"sequence\": \"MIRFILIQNRAGKTRLAKWYMQFDDDEKQKLIEEVHAVVTVRDAKHTNFVEFRNFKIIYRRYAGLYFCICVDVNDNNLAYLEAIHNFVEVLNEYFHNVCELDLVFNFYKVYTVVDEMFLAGEIRETSQTKVLKQLLMLQSLE\", \"entities\": [\"3\"], \"chain_count\": 2}, {\"sequence\": \"MIGGLFIYNHKGEVLISRVYRDDIGRNAVDAFRVNVIHARQQVRSPVTNIARTSFFHVKRSNIWLAAVTKQNVNAAMVFEFLYKMCDVMAAYFGKISEENIKNNFVLIYELLDEILDFGYPQNSETGALKTFITQQGIKSQHQTKEEQSQITSQVTGQIGWRREGIKYRRNELFLDVLESVNLLMSPQGQVLSAHVSGRVVMKSYLSGMPECKFGMNDKIVIEKQGKGTADETSKSGKQSIAIDDCTFHQCVRLSKFDSERSISFIPPDGEFELMRYRTTKDIILPFRVIPLVREVGRTKLEVKVVIKSNFKPSLLAQKIEVRIPTPLNTSGVQVICMKGKAKYKASENAIVWKIKRMAGMKESQISAEIELLPTNDKKKWARPPISMNFEVPFAPSGLKVRYLKVFEPKLNYSDHDVIKWVRYIGRSGIYETRC\", \"entities\": [\"4\"], \"chain_count\": 2}, {\"sequence\": \"RM(SEP)QIKRLLSE\", \"entities\": [\"5\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"fetch_timestamp\": \"2025-12-19T19:14:52.865539\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 10, \"unique_sequences\": 5, \"avg_sequence_length\": 361.2, \"min_sequence_length\": 15, \"max_sequence_length\": 623}, \"interface_info\": {\"interface_id\": \"2JKR_34\", \"name\": \"Interface 2JKR_34\", \"pdb_id\": \"2JKR\", \"auth_chain1\": \"L\", \"auth_chain2\": \"L\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 623, \"chain2_sequence_length\": 591, \"sequences_identical\": false, \"sequence_identity\": 7.4450084602368864}, \"enrichment_timestamp\": \"2025-12-19T19:14:55.308147\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.98,
+            "experimentalMethod": null,
+            "depositionDate": "2008-08-29T00:00:00+0000",
+            "releaseDate": "2008-10-28T00:00:00+0000",
+            "sourceOrganism": [
+              "Mus musculus",
+              "Rattus norvegicus",
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "entityCount": 7,
+            "chainCount": 10,
+            "uniqueSequences": 5,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "A Structural Explanation for the Binding of Endocytic Dileucine Motifs by the Ap2 Complex.",
+              "doi": "10.1038/NATURE07422",
+              "authors": [
+                "Kelly, B.T.",
+                "Mccoy, A.J.",
+                "Spaete, K.",
+                "Miller, S.E.",
+                "Evans, P.R.",
+                "Hoening, S.",
+                "Owen, D.J."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.98,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Mus musculus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Rattus norvegicus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 10,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 5,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS",
+        "description": "Amino acid sequence for chain A (length: 623)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 623,
+        "organism": "Mus musculus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_L_Sequence",
+        "value": "MPAVSKGDGMRGLAVFISDIRNCKSKEAEIKRINKELANIRSKFKGDKALDGYSKKKYVCKLLFIFLLGHDIDFGHMEAVNLLSSNRYTEKQIGYLFISVLVNSNSELIRLINNAIKNDLASRNPTFMGLALHCIANVGSREMAEAFAGEIPKILVAGDTMDSVKQSAALCLLRLYRTSPDLVPMGDWTSRVVHLLNDQHLGVVTAATSLITTLAQKNPEEFKTSVSLAVSRLSRIVTSASTDLQDYTYYFVPAPWLSVKLLRLLQCYPPPEDPAVRGRLTECLETILNKAQEPPKSKKVQHSNAKNAVLFEAISLIIHHDSEPNLLVRACNQLGQFLQHRETNLRYLALESMCTLASSEFSHEAVKTHIETVINALKTERDVSVRQRAVDLLYAMCDRSNAQQIVAEMLSYLETADYSIREEIVLKVAILAEKYAVDYTWYVDTILNLIRIAGDYVSEEVWYRVIQIVINRDDVQGYAAKTVFEALQAPACHENLVKVGGYILGEFGNLIAGDPRSSPLIQFNLLHSKFHLCSVPTRALLLSTYIKFVNLFPEVKATIQDVLRSDSQLKNADVELQQRAVEYLRLSTVASTDILATVLEEMPPFPERESSILAKLKKKKGGS",
+        "description": "Amino acid sequence for chain L (length: 623)",
+        "chainId": "L",
+        "entityId": "1",
+        "sequenceLength": 623,
+        "organism": "Mus musculus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK",
+        "description": "Amino acid sequence for chain B (length: 591)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 591,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "MTDSKYFTTNKKGEIFELKAELNNEKKEKRKEAVKKVIAAMTVGKDVSSLFPDVVNCMQTDNLELKKLVYLYLMNYAKSQPDMAIMAVNSFVKDCEDPNPLIRALAVRTMGCIRVDKITEYLCEPLRKCLKDEDPYVRKTAAVCVAKLHDINAQMVEDQGFLDSLRDLIADSNPMVVANAVAALSEISESHPNSNLLDLNPQNINKLLTALNECTEWGQIFILDCLSNYNPKDDREAQSICERVTPRLSHANSAVVLSAVKVLMKFLELLPKDSDYYNMLLKKLAPPLVTLLSGEPEVQYVALRNINLIVQKRPEILKQEIKVFFVKYNDPIYVKLEKLDIMIRLASQANIAQVLAELKEYATEVDVDFVRKAVRAIGRCAIKVEQSAERCVSTLLDLIQTKVNYVVQEAIVVIRDIFRKYPNKYESIIATLCENLDSLDEPDARAAMIWIVGEYAERIDNADELLESFLEGFHDESTQVQLTLLTAIVKLFLKKPSETQELVQQVLSLATQDSDNPDLRDRGYIYWRLLSTDPVTAKEVVLSEKPLISEETDLIEPTLLDELICHIGSLASVYHKPPNAFVEGSHGIHRK",
+        "description": "Amino acid sequence for chain E (length: 591)",
+        "chainId": "E",
+        "entityId": "2",
+        "sequenceLength": 591,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_I_Sequence",
+        "value": "MIRFILIQNRAGKTRLAKWYMQFDDDEKQKLIEEVHAVVTVRDAKHTNFVEFRNFKIIYRRYAGLYFCICVDVNDNNLAYLEAIHNFVEVLNEYFHNVCELDLVFNFYKVYTVVDEMFLAGEIRETSQTKVLKQLLMLQSLE",
+        "description": "Amino acid sequence for chain I (length: 142)",
+        "chainId": "I",
+        "entityId": "3",
+        "sequenceLength": 142,
+        "organism": "Mus musculus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AdditionalChains",
+        "value": "5 more chains",
+        "description": "Total of 10 chains in structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_3",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_4",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_5",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "A Structural Explanation for the Binding of Endocytic Dileucine Motifs by the Ap2 Complex.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/NATURE07422",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, L, Length: 623",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: B, E, Length: 591",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_3",
+        "value": "Chains: I, S, Length: 142",
+        "description": "Entity 3 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 623, \"chain2_sequence_length\": 591, \"sequences_identical\": false, \"sequence_identity\": 7.4450084602368864}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 623,
+            "chain2_length": 591,
+            "sequences_identical": false,
+            "sequence_identity": 7.4450084602368864
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "7.4%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2JKR_34",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2JKR_34",
+      "description": "Homodimer interaction partner in chain L"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2JKR",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "L",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "L",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "8_554",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2648.62,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 71,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "Ap2a2",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.25.10.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01602",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1247.83,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1400.79,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.471124585633275,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.528875414366728,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2JKR_34\", \"auth_chains\": {\"chain1\": \"L\", \"chain2\": \"L\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2jkr_34.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.531091\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:35.531091"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 10 chains, 5 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2JKR_34",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

@@ -1,0 +1,477 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1O92_2",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "1O92_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1O92",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1O92",
+    "name": "Protein 1O92",
+    "description": "Protein structure with PDB ID: 1O92. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1O92_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1O92",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Rattus norvegicus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "10116",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10116"
+    },
+    "alternateName": [
+      "PDB 1O92",
+      "Protein ID 1O92"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1o92_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1O92_2.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1O92",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1O92",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1O92_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "Mat1a",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.300.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00438;PF02773;PF02772",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1O92\", \"structure_metadata\": {\"pdb_id\": \"1O92\", \"resolution\": 3.19, \"deposition_date\": \"2002-12-10T00:00:00+0000\", \"release_date\": \"2003-08-07T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Rattus norvegicus\"], \"citation\": {\"title\": \"Crystal Structures of Methionine Adenosyltransferase Complexed with Substrates and Products Reveal the Methionine-ATP Recognition and Give Insights Into the Catalytic Mechanism\", \"doi\": \"10.1016/S0022-2836(03)00728-9\", \"authors\": [\"Gonzalez, B.\", \"Pajares, M.A.\", \"Hermoso, J.A.\", \"Guillerm, D.\", \"Guillerm, G.\", \"Sanz-Aparicio, J.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 115.14, \"b\": 115.14, \"c\": 160.45, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF\", \"B\": \"MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Rattus norvegicus\", \"sequence_length\": 396, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P13444\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Rattus norvegicus\", \"sequence_length\": 396, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P13444\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF\", \"organism\": \"Rattus norvegicus\", \"taxonomy_id\": 10116, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 396, \"gene_name\": null, \"uniprot_ids\": [\"P13444\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"fetch_timestamp\": \"2025-12-19T19:13:53.406762\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 396.0, \"min_sequence_length\": 396, \"max_sequence_length\": 396}, \"interface_info\": {\"interface_id\": \"1O92_2\", \"name\": \"Interface 1O92_2\", \"pdb_id\": \"1O92\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 396, \"chain2_sequence_length\": 396, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:13:55.810673\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 3.19,
+            "experimentalMethod": null,
+            "depositionDate": "2002-12-10T00:00:00+0000",
+            "releaseDate": "2003-08-07T00:00:00+0000",
+            "sourceOrganism": [
+              "Rattus norvegicus"
+            ],
+            "spaceGroup": null,
+            "entityCount": 7,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Crystal Structures of Methionine Adenosyltransferase Complexed with Substrates and Products Reveal the Methionine-ATP Recognition and Give Insights Into the Catalytic Mechanism",
+              "doi": "10.1016/S0022-2836(03)00728-9",
+              "authors": [
+                "Gonzalez, B.",
+                "Pajares, M.A.",
+                "Hermoso, J.A.",
+                "Guillerm, D.",
+                "Guillerm, G.",
+                "Sanz-Aparicio, J."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 3.19,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Rattus norvegicus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF",
+        "description": "Amino acid sequence for chain A (length: 396)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 396,
+        "organism": "Rattus norvegicus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MNGPVDGLCDHSLSEEGAFMFTSESVGEGHPDKICDQISDAVLDAHLKQDPNAKVACETVCKTGMVLLCGEITSMAMIDYQRVVRDTIKHIGYDDSAKGFDFKTCNVLVALEQQSPDIAQCVHLDRNEEDVGAGDQGLMFGYATDETEECMPLTIVLAHKLNTRMADLRRSGVLPWLRPDSKTQVTVQYVQDNGAVIPVRVHTIVISVQHNEDITLEAMREALKEQVIKAVVPAKYLDEDTIYHLQPSGRFVIGGPQGDAGVTGRKIIVDTYGGWGAHGGGAFSGKDYTKVDRSAAYAARWVAKSLVKAGLCRRVLVQVSYAIGVAEPLSISIFTYGTSKKTERELLEVVNKNFDLRPGVIVRDLDLKKPIYQKTACYGHFGRSEFPWEVPKKLVF",
+        "description": "Amino acid sequence for chain B (length: 396)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 396,
+        "organism": "Rattus norvegicus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal Structures of Methionine Adenosyltransferase Complexed with Substrates and Products Reveal the Methionine-ATP Recognition and Give Insights Into the Catalytic Mechanism",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/S0022-2836(03)00728-9",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 396",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 396, \"chain2_sequence_length\": 396, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 396,
+            "chain2_length": 396,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1O92_2",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1O92_2",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1O92",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "6_565",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2059.35,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 68,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "Mat1a",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.300.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00438;PF02773;PF02772",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 925.16,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1134.2,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.449248549299537,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.550756306601597,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1O92_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1o92_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.413301\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:35.413301"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1O92_2",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1XRC_5"
+      ],
+      "description": "Other interfaces in the same cluster (total: 2)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

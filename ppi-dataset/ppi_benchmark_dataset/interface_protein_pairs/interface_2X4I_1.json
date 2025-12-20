@@ -1,0 +1,524 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2X4I_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2X4I_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2X4I",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2X4I",
+    "name": "Protein 2X4I",
+    "description": "Protein structure with PDB ID: 2X4I. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2X4I_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2X4I",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Sulfolobus islandicus rudivirus 1 variant XX",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "282066",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=282066"
+    },
+    "alternateName": [
+      "PDB 2X4I",
+      "Protein ID 2X4I"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2x4i_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2x4i.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2X4I",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2X4I",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2X4I_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "114",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.11170",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF08960",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2X4I\", \"structure_metadata\": {\"pdb_id\": \"2X4I\", \"resolution\": 2.2, \"deposition_date\": \"2010-01-31T00:00:00+0000\", \"release_date\": \"2010-07-21T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Sulfolobus islandicus rudivirus 1 variant XX\"], \"citation\": {\"title\": \"The Scottish Structural Proteomics Facility: Targets, Methods and Outputs.\", \"doi\": \"10.1007/S10969-010-9090-Y\", \"authors\": [\"Oke, M.\", \"Carter, L.G.\", \"Johnson, K.A.\", \"Liu, H.\", \"Mcmahon, S.A.\", \"Yan, X.\", \"Kerou, M.\", \"Weikart, N.D.\", \"Kadi, N.\", \"Sheikh, M.A.\", \"Schmelz, S.\", \"Dorward, M.\", \"Zawadzki, M.\", \"Cozens, C.\", \"Falconer, H.\", \"Powers, H.\", \"Overton, I.M.\", \"Van Niekerk, C.A.J.\", \"Peng, X.\", \"Patel, P.\", \"Garrett, R.A.\", \"Prangishvili, D.\", \"Botting, C.H.\", \"Coote, P.J.\", \"Dryden, D.T.F.\", \"Barton, G.J.\", \"Schwarz-Linek, U.\", \"Challis, G.L.\", \"Taylor, G.L.\", \"White, M.F.\", \"Naismith, J.H.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 48.79, \"b\": 48.79, \"c\": 195.27, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\", \"B\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\", \"C\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\", \"D\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Sulfolobus islandicus rudivirus 1 variant XX\", \"sequence_length\": 114, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8QL27\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Sulfolobus islandicus rudivirus 1 variant XX\", \"sequence_length\": 114, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8QL27\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Sulfolobus islandicus rudivirus 1 variant XX\", \"sequence_length\": 114, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8QL27\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Sulfolobus islandicus rudivirus 1 variant XX\", \"sequence_length\": 114, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8QL27\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\", \"organism\": \"Sulfolobus islandicus rudivirus 1 variant XX\", \"taxonomy_id\": 282066, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 114, \"gene_name\": null, \"uniprot_ids\": [\"Q8QL27\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T18:51:21.994657\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 114.0, \"min_sequence_length\": 114, \"max_sequence_length\": 114}, \"interface_info\": {\"interface_id\": \"2X4I_1\", \"name\": \"Interface 2X4I_1\", \"pdb_id\": \"2X4I\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"C\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 114, \"chain2_sequence_length\": 114, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:51:22.898550\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.2,
+            "experimentalMethod": null,
+            "depositionDate": "2010-01-31T00:00:00+0000",
+            "releaseDate": "2010-07-21T00:00:00+0000",
+            "sourceOrganism": [
+              "Sulfolobus islandicus rudivirus 1 variant XX"
+            ],
+            "spaceGroup": null,
+            "entityCount": 2,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "The Scottish Structural Proteomics Facility: Targets, Methods and Outputs.",
+              "doi": "10.1007/S10969-010-9090-Y",
+              "authors": [
+                "Oke, M.",
+                "Carter, L.G.",
+                "Johnson, K.A.",
+                "Liu, H.",
+                "Mcmahon, S.A.",
+                "Yan, X.",
+                "Kerou, M.",
+                "Weikart, N.D.",
+                "Kadi, N.",
+                "Sheikh, M.A.",
+                "Schmelz, S.",
+                "Dorward, M.",
+                "Zawadzki, M.",
+                "Cozens, C.",
+                "Falconer, H.",
+                "Powers, H.",
+                "Overton, I.M.",
+                "Van Niekerk, C.A.J.",
+                "Peng, X.",
+                "Patel, P.",
+                "Garrett, R.A.",
+                "Prangishvili, D.",
+                "Botting, C.H.",
+                "Coote, P.J.",
+                "Dryden, D.T.F.",
+                "Barton, G.J.",
+                "Schwarz-Linek, U.",
+                "Challis, G.L.",
+                "Taylor, G.L.",
+                "White, M.F.",
+                "Naismith, J.H."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.2,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Sulfolobus islandicus rudivirus 1 variant XX",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD",
+        "description": "Amino acid sequence for chain A (length: 114)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 114,
+        "organism": "Sulfolobus islandicus rudivirus 1 variant XX",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD",
+        "description": "Amino acid sequence for chain B (length: 114)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 114,
+        "organism": "Sulfolobus islandicus rudivirus 1 variant XX",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD",
+        "description": "Amino acid sequence for chain C (length: 114)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 114,
+        "organism": "Sulfolobus islandicus rudivirus 1 variant XX",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "MNKVYLANAFSINMLTKFPTKVVIDKIDRLEFCENIDNEDIINSIGHDSTIQLINSLCGTTFQKNRVEIKLEKEDKLYVVQISQRLEEGKILTLEEILKLYESGKVQFFEIIVD",
+        "description": "Amino acid sequence for chain D (length: 114)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 114,
+        "organism": "Sulfolobus islandicus rudivirus 1 variant XX",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The Scottish Structural Proteomics Facility: Targets, Methods and Outputs.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1007/S10969-010-9090-Y",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 114",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 114, \"chain2_sequence_length\": 114, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 114,
+            "chain2_length": 114,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2J85_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2X4I_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2X4I",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1585.18,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 53,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "114",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.11170",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF08960",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 464.41,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1120.77,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.292969883546348,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.707030116453652,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "C-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2X4I_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2x4i_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.081181\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:33.081181"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 4 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2J85_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2J85_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 2)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}
