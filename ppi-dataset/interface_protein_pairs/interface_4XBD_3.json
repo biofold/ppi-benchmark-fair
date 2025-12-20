@@ -1,0 +1,475 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4XBD_3",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4XBD_3",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4XBD",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4XBD",
+    "name": "Protein 4XBD",
+    "description": "Protein structure with PDB ID: 4XBD. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4XBD_3 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4XBD",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Norovirus Hu/1968/US",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "524364",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=524364"
+    },
+    "alternateName": [
+      "PDB 4XBD",
+      "Protein ID 4XBD"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4xbd_3.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4xbd.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4XBD",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4XBD",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4XBD_3",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "ORF1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.40.10.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF05416",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4XBD\", \"structure_metadata\": {\"pdb_id\": \"4XBD\", \"resolution\": 1.45, \"deposition_date\": \"2014-12-16T00:00:00+0000\", \"release_date\": \"2015-03-25T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Norovirus Hu/1968/US\"], \"citation\": {\"title\": \"Structure-Guided Design and Optimization of Dipeptidyl Inhibitors of Norovirus 3CL Protease. Structure-Activity Relationships and Biochemical, X-ray Crystallographic, Cell-Based, and In Vivo Studies.\", \"doi\": \"10.1021/jm5019934\", \"authors\": [\"Galasiti Kankanamalage, A.C.\", \"Kim, Y.\", \"Weerawarna, P.M.\", \"Uy, R.A.\", \"Damalanka, V.C.\", \"Mandadapu, S.R.\", \"Alliston, K.R.\", \"Mehzabeen, N.\", \"Battaile, K.P.\", \"Lovell, S.\", \"Chang, K.O.\", \"Groutas, W.C.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 37.466, \"b\": 66.907, \"c\": 126.404, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE\", \"B\": \"HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Norovirus Hu/1968/US\", \"sequence_length\": 188, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83883\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Norovirus Hu/1968/US\", \"sequence_length\": 188, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83883\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE\", \"organism\": \"Norovirus Hu/1968/US\", \"taxonomy_id\": 524364, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 188, \"gene_name\": null, \"uniprot_ids\": [\"Q83883\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:48:57.596150\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 188.0, \"min_sequence_length\": 188, \"max_sequence_length\": 188}, \"interface_info\": {\"interface_id\": \"4XBD_3\", \"name\": \"Interface 4XBD_3\", \"pdb_id\": \"4XBD\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 188, \"chain2_sequence_length\": 188, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:48:58.813190\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.45,
+            "experimentalMethod": null,
+            "depositionDate": "2014-12-16T00:00:00+0000",
+            "releaseDate": "2015-03-25T00:00:00+0000",
+            "sourceOrganism": [
+              "Norovirus Hu/1968/US"
+            ],
+            "spaceGroup": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Structure-Guided Design and Optimization of Dipeptidyl Inhibitors of Norovirus 3CL Protease. Structure-Activity Relationships and Biochemical, X-ray Crystallographic, Cell-Based, and In Vivo Studies.",
+              "doi": "10.1021/jm5019934",
+              "authors": [
+                "Galasiti Kankanamalage, A.C.",
+                "Kim, Y.",
+                "Weerawarna, P.M.",
+                "Uy, R.A.",
+                "Damalanka, V.C.",
+                "Mandadapu, S.R.",
+                "Alliston, K.R.",
+                "Mehzabeen, N.",
+                "Battaile, K.P.",
+                "Lovell, S.",
+                "Chang, K.O.",
+                "Groutas, W.C."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.45,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Norovirus Hu/1968/US",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE",
+        "description": "Amino acid sequence for chain A (length: 188)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 188,
+        "organism": "Norovirus Hu/1968/US",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "HHHHHHMAPPTLWSRVTKFGSGWGFWVSPTVFITTTHVVPTGVKEFFGEPLSSIAIHQAGEFTQFRFSKKMRPDLTGMVLEEGCPEGTVCSVLIKRDSGELLPLAVRMGAIASMRIQGRLVHGQSGMLLTGANAKGMDLGTIPGDCGAPYVHKRGNDWVVCGVHAAATKSGNTVVCAVQAGEGETALE",
+        "description": "Amino acid sequence for chain B (length: 188)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 188,
+        "organism": "Norovirus Hu/1968/US",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structure-Guided Design and Optimization of Dipeptidyl Inhibitors of Norovirus 3CL Protease. Structure-Activity Relationships and Biochemical, X-ray Crystallographic, Cell-Based, and In Vivo Studies.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/jm5019934",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 188",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 188, \"chain2_sequence_length\": 188, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 188,
+            "chain2_length": 188,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4XBD_3",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4XBD_3",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4XBD",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 923.310000000001,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 34,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "ORF1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.40.10.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF05416",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 265.88,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 657.42,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.287963955767835,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.712025213633557,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4XBD_3\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4xbd_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.845136\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:32.845136"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4XBD_3",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

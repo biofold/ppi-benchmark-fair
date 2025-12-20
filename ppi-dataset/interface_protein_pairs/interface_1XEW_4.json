@@ -1,0 +1,474 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1XEW_4",
+  "description": "Protein-protein interaction interface between chains X and X",
+  "identifier": "1XEW_4",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1XEW",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1XEW",
+    "name": "Protein 1XEW",
+    "description": "Protein structure with PDB ID: 1XEW. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1XEW_4 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1XEW",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Pyrococcus furiosus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "2261",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2261"
+    },
+    "alternateName": [
+      "PDB 1XEW",
+      "Protein ID 1XEW"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1xew_4.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1XEW_4.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1XEW",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1XEW",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1XEW_4",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "X-X",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "smc",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.300",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02463",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1XEW\", \"structure_metadata\": {\"pdb_id\": \"1XEW\", \"resolution\": 2.0, \"deposition_date\": \"2004-09-13T00:00:00+0000\", \"release_date\": \"2004-12-07T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Pyrococcus furiosus\"], \"citation\": {\"title\": \"Structural biochemistry of ATP-driven dimerization and DNA-stimulated activation of SMC ATPases\", \"doi\": \"10.1016/j.cub.2004.09.044\", \"authors\": [\"Lammens, A.\", \"Schele, A.\", \"Hopfner, K.-P.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 102.285, \"b\": 56.744, \"c\": 78.869, \"alpha\": 90.0, \"beta\": 123.05, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"X\": \"MPYIEKLELKGFKSYGNKKVVIPFSKGFTAIVGANGSGKSNIGDAILFVLGGLSAKAMRASRISDLIFAGSKNEPPAKYAEVAIYFNNEDRGFPIDEDEVVIRRRVYPDGRSSYWLNGRRATRSEILDILTAAMISPDGYNIVLQGDITKFIKMSPLERRLLIDDISGIAEYDSKKEKALEE\", \"Y\": \"EKEKKNVFMRTFEAISRNFSEIFAKLSPGGSARLILENPEDPFSGGLEIEAKPAGKDVKRIEAMSGGEKALTALAFVFAIQKFKPAPFYLFDEIDAHLDDANVKRVADLIKESSKESQFIVITLRDVMMANADKIIGVSMRDGVSKVVSLSLEKAMKILEEIRKKQGWEHGN\"}, \"chain_info\": {\"X\": {\"entity_id\": \"1\", \"organism\": \"Pyrococcus furiosus\", \"sequence_length\": 182, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8TZY2\"]}, \"Y\": {\"entity_id\": \"2\", \"organism\": \"Pyrococcus furiosus\", \"sequence_length\": 172, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8TZY2\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MPYIEKLELKGFKSYGNKKVVIPFSKGFTAIVGANGSGKSNIGDAILFVLGGLSAKAMRASRISDLIFAGSKNEPPAKYAEVAIYFNNEDRGFPIDEDEVVIRRRVYPDGRSSYWLNGRRATRSEILDILTAAMISPDGYNIVLQGDITKFIKMSPLERRLLIDDISGIAEYDSKKEKALEE\", \"organism\": \"Pyrococcus furiosus\", \"taxonomy_id\": 2261, \"chain_ids\": [\"X\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 182, \"gene_name\": null, \"uniprot_ids\": [\"Q8TZY2\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"EKEKKNVFMRTFEAISRNFSEIFAKLSPGGSARLILENPEDPFSGGLEIEAKPAGKDVKRIEAMSGGEKALTALAFVFAIQKFKPAPFYLFDEIDAHLDDANVKRVADLIKESSKESQFIVITLRDVMMANADKIIGVSMRDGVSKVVSLSLEKAMKILEEIRKKQGWEHGN\", \"organism\": \"Pyrococcus furiosus\", \"taxonomy_id\": 2261, \"chain_ids\": [\"Y\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 172, \"gene_name\": null, \"uniprot_ids\": [\"Q8TZY2\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"MPYIEKLELKGFKSYGNKKVVIPFSKGFTAIVGANGSGKSNIGDAILFVLGGLSAKAMRASRISDLIFAGSKNEPPAKYAEVAIYFNNEDRGFPIDEDEVVIRRRVYPDGRSSYWLNGRRATRSEILDILTAAMISPDGYNIVLQGDITKFIKMSPLERRLLIDDISGIAEYDSKKEKALEE\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"EKEKKNVFMRTFEAISRNFSEIFAKLSPGGSARLILENPEDPFSGGLEIEAKPAGKDVKRIEAMSGGEKALTALAFVFAIQKFKPAPFYLFDEIDAHLDDANVKRVADLIKESSKESQFIVITLRDVMMANADKIIGVSMRDGVSKVVSLSLEKAMKILEEIRKKQGWEHGN\", \"entities\": [\"2\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:56:26.390599\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 2, \"unique_sequences\": 2, \"avg_sequence_length\": 177.0, \"min_sequence_length\": 172, \"max_sequence_length\": 182}, \"interface_info\": {\"interface_id\": \"1XEW_4\", \"name\": \"Interface 1XEW_4\", \"pdb_id\": \"1XEW\", \"auth_chain1\": \"X\", \"auth_chain2\": \"X\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 182, \"chain2_sequence_length\": 182, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:56:27.597631\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.0,
+            "experimentalMethod": null,
+            "depositionDate": "2004-09-13T00:00:00+0000",
+            "releaseDate": "2004-12-07T00:00:00+0000",
+            "sourceOrganism": [
+              "Pyrococcus furiosus"
+            ],
+            "spaceGroup": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "Structural biochemistry of ATP-driven dimerization and DNA-stimulated activation of SMC ATPases",
+              "doi": "10.1016/j.cub.2004.09.044",
+              "authors": [
+                "Lammens, A.",
+                "Schele, A.",
+                "Hopfner, K.-P."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.0,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Pyrococcus furiosus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_X_Sequence",
+        "value": "MPYIEKLELKGFKSYGNKKVVIPFSKGFTAIVGANGSGKSNIGDAILFVLGGLSAKAMRASRISDLIFAGSKNEPPAKYAEVAIYFNNEDRGFPIDEDEVVIRRRVYPDGRSSYWLNGRRATRSEILDILTAAMISPDGYNIVLQGDITKFIKMSPLERRLLIDDISGIAEYDSKKEKALEE",
+        "description": "Amino acid sequence for chain X (length: 182)",
+        "chainId": "X",
+        "entityId": "1",
+        "sequenceLength": 182,
+        "organism": "Pyrococcus furiosus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_Y_Sequence",
+        "value": "EKEKKNVFMRTFEAISRNFSEIFAKLSPGGSARLILENPEDPFSGGLEIEAKPAGKDVKRIEAMSGGEKALTALAFVFAIQKFKPAPFYLFDEIDAHLDDANVKRVADLIKESSKESQFIVITLRDVMMANADKIIGVSMRDGVSKVVSLSLEKAMKILEEIRKKQGWEHGN",
+        "description": "Amino acid sequence for chain Y (length: 172)",
+        "chainId": "Y",
+        "entityId": "2",
+        "sequenceLength": 172,
+        "organism": "Pyrococcus furiosus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural biochemistry of ATP-driven dimerization and DNA-stimulated activation of SMC ATPases",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.cub.2004.09.044",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: X, Length: 182",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: Y, Length: 172",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 182, \"chain2_sequence_length\": 182, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 182,
+            "chain2_length": 182,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3AUX_2",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1XEW_4",
+      "description": "Homodimer interaction partner in chain X"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1XEW",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "X",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "X",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "2_657",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2475.42,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 59,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "smc",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.300",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02463",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1109.44,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1365.98,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.448182530641265,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.551817469358735,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1XEW_4\", \"auth_chains\": {\"chain1\": \"X\", \"chain2\": \"X\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1xew_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.598893\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:33.598893"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3AUX_2",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 2 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3AUX_2"
+      ],
+      "description": "Other interfaces in the same cluster (total: 2)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

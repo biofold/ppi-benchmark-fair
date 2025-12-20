@@ -1,0 +1,519 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3WXM_3",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "3WXM_3",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3WXM",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3WXM",
+    "name": "Protein 3WXM",
+    "description": "Protein structure with PDB ID: 3WXM. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3WXM_3 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3WXM",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Aeropyrum pernix K1",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "272557",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=272557"
+    },
+    "alternateName": [
+      "PDB 3WXM",
+      "Protein ID 3WXM"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3wxm_3.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3WXM_3.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3WXM",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3WXM",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3WXM_3",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "tuf",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.40.30.10;3.40.50.300",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF03144;PF03143;PF00009",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3WXM\", \"structure_metadata\": {\"pdb_id\": \"3WXM\", \"resolution\": 2.3, \"deposition_date\": \"2014-08-04T00:00:00+0000\", \"release_date\": \"2014-09-03T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Aeropyrum pernix K1\"], \"citation\": {\"title\": \"Structural basis for mRNA surveillance by archaeal Pelota and GTP-bound EF1 alpha complex\", \"doi\": \"10.1073/pnas.1009598107\", \"authors\": [\"Kobayashi, K.\", \"Kikuno, I.\", \"Kuroha, K.\", \"Saito, K.\", \"Ito, K.\", \"Ishitani, R.\", \"Inada, T.\", \"Nureki, O.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 148.926, \"b\": 158.944, \"c\": 427.236, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"C\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"E\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"G\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"B\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"D\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"F\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"H\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"D\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"F\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"H\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"organism\": \"Aeropyrum pernix K1\", \"taxonomy_id\": 272557, \"chain_ids\": [\"A\", \"C\", \"E\", \"G\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 447, \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"organism\": \"Aeropyrum pernix K1\", \"taxonomy_id\": 272557, \"chain_ids\": [\"B\", \"D\", \"F\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 376, \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"entities\": [\"1\"], \"chain_count\": 4}, {\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"entities\": [\"2\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:14:31.016795\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 8, \"unique_sequences\": 2, \"avg_sequence_length\": 411.5, \"min_sequence_length\": 376, \"max_sequence_length\": 447}, \"interface_info\": {\"interface_id\": \"3WXM_3\", \"name\": \"Interface 3WXM_3\", \"pdb_id\": \"3WXM\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 447, \"chain2_sequence_length\": 376, \"sequences_identical\": false, \"sequence_identity\": 8.51063829787234}, \"enrichment_timestamp\": \"2025-12-19T19:14:32.862221\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.3,
+            "experimentalMethod": null,
+            "depositionDate": "2014-08-04T00:00:00+0000",
+            "releaseDate": "2014-09-03T00:00:00+0000",
+            "sourceOrganism": [
+              "Aeropyrum pernix K1"
+            ],
+            "spaceGroup": null,
+            "entityCount": 5,
+            "chainCount": 8,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "Structural basis for mRNA surveillance by archaeal Pelota and GTP-bound EF1 alpha complex",
+              "doi": "10.1073/pnas.1009598107",
+              "authors": [
+                "Kobayashi, K.",
+                "Kikuno, I.",
+                "Kuroha, K.",
+                "Saito, K.",
+                "Ito, K.",
+                "Ishitani, R.",
+                "Inada, T.",
+                "Nureki, O."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.3,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Aeropyrum pernix K1",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 8,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC",
+        "description": "Amino acid sequence for chain A (length: 447)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 447,
+        "organism": "Aeropyrum pernix K1",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC",
+        "description": "Amino acid sequence for chain C (length: 447)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 447,
+        "organism": "Aeropyrum pernix K1",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC",
+        "description": "Amino acid sequence for chain E (length: 447)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 447,
+        "organism": "Aeropyrum pernix K1",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_G_Sequence",
+        "value": "GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC",
+        "description": "Amino acid sequence for chain G (length: 447)",
+        "chainId": "G",
+        "entityId": "1",
+        "sequenceLength": 447,
+        "organism": "Aeropyrum pernix K1",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL",
+        "description": "Amino acid sequence for chain B (length: 376)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 376,
+        "organism": "Aeropyrum pernix K1",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AdditionalChains",
+        "value": "3 more chains",
+        "description": "Total of 8 chains in structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural basis for mRNA surveillance by archaeal Pelota and GTP-bound EF1 alpha complex",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1073/pnas.1009598107",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, C, E, G, Length: 447",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: B, D, F, H, Length: 376",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 447, \"chain2_sequence_length\": 376, \"sequences_identical\": false, \"sequence_identity\": 8.51063829787234}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 447,
+            "chain2_length": 376,
+            "sequences_identical": false,
+            "sequence_identity": 8.51063829787234
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "8.5%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3P27_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 3 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 3,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3WXM_3",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3WXM",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "4_565",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2086.45,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 61,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "tuf",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.40.30.10;3.40.50.300",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF03144;PF03143;PF00009",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 916.109999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1170.34,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.439075942390183,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.560924057609815,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3WXM_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3wxm_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.484937\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:35.484937"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 8 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3P27_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 3 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 3,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3P27_1",
+        "4C0S_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 3)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4XAS_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4XAS_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4XAS",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4XAS",
+    "name": "Protein 4XAS",
+    "description": "Protein structure with PDB ID: 4XAS. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4XAS_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4XAS",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 4XAS",
+      "Protein ID 4XAS"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4xas_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4xas.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4XAS",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4XAS",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4XAS_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "GRM2",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.2300",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01094",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4XAS\", \"structure_metadata\": {\"pdb_id\": \"4XAS\", \"resolution\": 2.35, \"deposition_date\": \"2014-12-15T00:00:00+0000\", \"release_date\": \"2015-02-04T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Synthesis and Pharmacological Characterization of C4-Disubstituted Analogs of 1S,2S,5R,6S-2-Aminobicyclo[3.1.0]hexane-2,6-dicarboxylate: Identification of a Potent, Selective Metabotropic Glutamate Receptor Agonist and Determination of Agonist-Bound Human mGlu2 and mGlu3 Amino Terminal Domain Structures.\", \"doi\": \"10.1021/jm501612y\", \"authors\": [\"Monn, J.A.\", \"Prieto, L.\", \"Taboada, L.\", \"Pedregal, C.\", \"Hao, J.\", \"Reinhard, M.R.\", \"Henry, S.S.\", \"Goldsmith, P.J.\", \"Beadle, C.D.\", \"Walton, L.\", \"Man, T.\", \"Rudyk, H.\", \"Clark, B.\", \"Tupper, D.\", \"Baker, S.R.\", \"Lamas, C.\", \"Montero, C.\", \"Marcos, A.\", \"Blanco, J.\", \"Bures, M.\", \"Clawson, D.K.\", \"Atwell, S.\", \"Lu, F.\", \"Wang, J.\", \"Russell, M.\", \"Heinz, B.A.\", \"Wang, X.\", \"Carter, J.H.\", \"Xiang, C.\", \"Catlow, J.T.\", \"Swanson, S.\", \"Sanger, H.\", \"Broad, L.M.\", \"Johnson, M.P.\", \"Knopp, K.L.\", \"Simmons, R.M.\", \"Johnson, B.G.\", \"Shaw, D.B.\", \"McKinzie, D.L.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 78.044, \"b\": 135.858, \"c\": 92.2, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH\", \"B\": \"MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 503, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q14416\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 503, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q14416\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 503, \"gene_name\": null, \"uniprot_ids\": [\"Q14416\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:00:52.227069\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 503.0, \"min_sequence_length\": 503, \"max_sequence_length\": 503}, \"interface_info\": {\"interface_id\": \"4XAS_1\", \"name\": \"Interface 4XAS_1\", \"pdb_id\": \"4XAS\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 503, \"chain2_sequence_length\": 503, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:00:53.418158\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.35,
+            "experimentalMethod": null,
+            "depositionDate": "2014-12-15T00:00:00+0000",
+            "releaseDate": "2015-02-04T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Synthesis and Pharmacological Characterization of C4-Disubstituted Analogs of 1S,2S,5R,6S-2-Aminobicyclo[3.1.0]hexane-2,6-dicarboxylate: Identification of a Potent, Selective Metabotropic Glutamate Receptor Agonist and Determination of Agonist-Bound Human mGlu2 and mGlu3 Amino Terminal Domain Structures.",
+              "doi": "10.1021/jm501612y",
+              "authors": [
+                "Monn, J.A.",
+                "Prieto, L.",
+                "Taboada, L.",
+                "Pedregal, C.",
+                "Hao, J.",
+                "Reinhard, M.R.",
+                "Henry, S.S.",
+                "Goldsmith, P.J.",
+                "Beadle, C.D.",
+                "Walton, L.",
+                "Man, T.",
+                "Rudyk, H.",
+                "Clark, B.",
+                "Tupper, D.",
+                "Baker, S.R.",
+                "Lamas, C.",
+                "Montero, C.",
+                "Marcos, A.",
+                "Blanco, J.",
+                "Bures, M.",
+                "Clawson, D.K.",
+                "Atwell, S.",
+                "Lu, F.",
+                "Wang, J.",
+                "Russell, M.",
+                "Heinz, B.A.",
+                "Wang, X.",
+                "Carter, J.H.",
+                "Xiang, C.",
+                "Catlow, J.T.",
+                "Swanson, S.",
+                "Sanger, H.",
+                "Broad, L.M.",
+                "Johnson, M.P.",
+                "Knopp, K.L.",
+                "Simmons, R.M.",
+                "Johnson, B.G.",
+                "Shaw, D.B.",
+                "McKinzie, D.L."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.35,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH",
+        "description": "Amino acid sequence for chain A (length: 503)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 503,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MALGSLLALLALLLLWGAVAEGPAKKVLTLEGDLVLGGLFPVHQKGGPAEDCGPVNEHRGIQRLEAMLFALDRINRDPHLLPGVRLGAHILDSCSKDTHALEQALDFVRASLSRGADGSRHICPDGSYATHGDAPTAITGVIGGSYSDVSIQVANLLRLFQIPQISYASTSAKLSDKSRYDYFARTVPPDFFQAKAMAEILRFFNWTYVSTVASEGDYGETGIEAFELEARARNISVATSEKVGRAMSRAAFEGVVRALLQKPSARVAVLFTRSEDARELLAASQRLNASFTWVASDGWGALEEVVAGSEGAAEGAITIELASYPISDFASYFQSLDPWNNSRNPWFREFWEQRFRCSFRQRDCAAHSLRAVPFEQESKIMFVVNAVYAMAHALHNMHRALCPNTTRLCDAMRPVNGRRLYKDFVLNVKFDAPFRPADTHNEVRFDRFGDGIGRYNIFTYLRAGSGRYRYQKVGYWAEGLTLDTSLIPWASPSAGEGHHHHHH",
+        "description": "Amino acid sequence for chain B (length: 503)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 503,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Synthesis and Pharmacological Characterization of C4-Disubstituted Analogs of 1S,2S,5R,6S-2-Aminobicyclo[3.1.0]hexane-2,6-dicarboxylate: Identification of a Potent, Selective Metabotropic Glutamate Receptor Agonist and Determination of Agonist-Bound Human mGlu2 and mGlu3 Amino Terminal Domain Structures.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/jm501612y",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 503",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 503, \"chain2_sequence_length\": 503, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 503,
+            "chain2_length": 503,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5K5T_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 4 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 4,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4XAS_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4XAS",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1291.07999999999,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 40,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "GRM2",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.2300",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01094",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 482.66,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 808.400000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.373842054713884,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.626142454379283,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4XAS_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4xas_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.044452\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:34.044452"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5K5T_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 4 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 4,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5K5T_1",
+        "4XAR_1",
+        "3MQ4_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 4)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

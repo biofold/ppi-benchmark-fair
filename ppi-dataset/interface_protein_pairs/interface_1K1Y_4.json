@@ -1,0 +1,470 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1K1Y_4",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "1K1Y_4",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1K1Y",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1K1Y",
+    "name": "Protein 1K1Y",
+    "description": "Protein structure with PDB ID: 1K1Y. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1K1Y_4 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1K1Y",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Thermococcus litoralis",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "2265",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2265"
+    },
+    "alternateName": [
+      "PDB 1K1Y",
+      "Protein ID 1K1Y"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1k1y_4.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1K1Y_4.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1K1Y",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1K1Y",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1K1Y_4",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "jgt",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.20.110.20;2.70.98.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF09094;PF03065;PF09095",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1K1Y\", \"structure_metadata\": {\"pdb_id\": \"1K1Y\", \"resolution\": 2.4, \"deposition_date\": \"2001-09-26T00:00:00+0000\", \"release_date\": \"2003-06-17T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Thermococcus litoralis\"], \"citation\": {\"title\": \"Crystal structures of 4-alpha-glucanotransferase from Thermococcus litoralis and its complex with an inhibitor\", \"doi\": \"10.1074/jbc.M213134200\", \"authors\": [\"Imamura, H.\", \"Fushinobu, S.\", \"Yamamoto, M.\", \"Kumasaka, T.\", \"Jeon, B.S.\", \"Wakagi, T.\", \"Matsuzawa, H.\"]}, \"entity_count\": 6, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 137.61, \"b\": 160.968, \"c\": 70.202, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL\", \"B\": \"MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Thermococcus litoralis\", \"sequence_length\": 659, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O32462\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Thermococcus litoralis\", \"sequence_length\": 659, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O32462\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL\", \"organism\": \"Thermococcus litoralis\", \"taxonomy_id\": 2265, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 659, \"gene_name\": null, \"uniprot_ids\": [\"O32462\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"], \"fetch_timestamp\": \"2025-12-19T18:52:02.974889\", \"polymer_composition\": \"protein/oligosaccharide\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 659.0, \"min_sequence_length\": 659, \"max_sequence_length\": 659}, \"interface_info\": {\"interface_id\": \"1K1Y_4\", \"name\": \"Interface 1K1Y_4\", \"pdb_id\": \"1K1Y\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 659, \"chain2_sequence_length\": 659, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:52:05.071700\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.4,
+            "experimentalMethod": null,
+            "depositionDate": "2001-09-26T00:00:00+0000",
+            "releaseDate": "2003-06-17T00:00:00+0000",
+            "sourceOrganism": [
+              "Thermococcus litoralis"
+            ],
+            "spaceGroup": null,
+            "entityCount": 6,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Crystal structures of 4-alpha-glucanotransferase from Thermococcus litoralis and its complex with an inhibitor",
+              "doi": "10.1074/jbc.M213134200",
+              "authors": [
+                "Imamura, H.",
+                "Fushinobu, S.",
+                "Yamamoto, M.",
+                "Kumasaka, T.",
+                "Jeon, B.S.",
+                "Wakagi, T.",
+                "Matsuzawa, H."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.4,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Thermococcus litoralis",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL",
+        "description": "Amino acid sequence for chain A (length: 659)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 659,
+        "organism": "Thermococcus litoralis",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MERINFIFGIHNHQPLGNFGWVFEEAYNRSYRPFMEILEEFPEMKVNVHFSGPLLEWIEENKPDYLDLLRSLIKRGQLEIVVAGFYEPVLAAIPKEDRLVQIEMLKDYARKLGYDAKGVWLTERVWQPELVKSLREAGIEYVVVDDYHFMSAGLSKEELFWPYYTEDGGEVITVFPIDEKLRYLIPFRPVKKTIEYLESLTSDDPSKVAVFHDDGEKFGVWPGTYEWVYEKGWLREFFDAITSNEKINLMTYSEYLSKFTPRGLVYLPIASYFEMSEWSLPAKQAKLFVEFVEQLKEEGKFEKYRVFVRGGIWKNFFFKYPESNFMHKRMLMVSKAVRDNPEARKYILKAQCNDAYWHGVFGGIYLPHLRRTVWENIIKAQRYLKPENKILDVDFDGRAEIMVENDGFIATIKPHYGGSIFELSSKRKAVNYNDVLPRRWEHYHEVPEATKPEKESEEGIASIHELGKQIPEEIRRELAYDWQLRAILQDHFIKPEETLDNYRLVKYHELGDFVNQPYEYEMIENGVKLWREGGVYAEEKIPARVEKKIELTEDGFIAKYRVLLEKPYKALFGVEINLAVHSVMEKPEEFEAKEFEVNDPYGIGKVRIELDKAAKVWKFPIKTLSQSEAGWDFIQQGVSYTMLFPIEKELEFTVRFREL",
+        "description": "Amino acid sequence for chain B (length: 659)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 659,
+        "organism": "Thermococcus litoralis",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structures of 4-alpha-glucanotransferase from Thermococcus litoralis and its complex with an inhibitor",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1074/jbc.M213134200",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 659",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 659, \"chain2_sequence_length\": 659, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 659,
+            "chain2_length": 659,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1K1Y_4",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1K1Y_4",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1K1Y",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "2_565",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3008.39,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 91,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "jgt",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.20.110.20;2.70.98.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF09094;PF03065;PF09095",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1630.86,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1377.51,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.542103916048119,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.457889435877663,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1K1Y_4\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1k1y_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.160094\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:33.160094"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1K1Y_4",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

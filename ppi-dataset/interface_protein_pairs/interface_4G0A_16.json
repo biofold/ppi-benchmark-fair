@@ -1,0 +1,503 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4G0A_16",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "4G0A_16",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4G0A",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4G0A",
+    "name": "Protein 4G0A",
+    "description": "Protein structure with PDB ID: 4G0A. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4G0A_16 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4G0A",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "36435",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36435"
+    },
+    "alternateName": [
+      "PDB 4G0A",
+      "Protein ID 4G0A"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4g0a_16.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4G0A_16.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4G0A",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4G0A",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4G0A_16",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.90.1400.10;3.30.428.20",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02509",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4G0A\", \"structure_metadata\": {\"pdb_id\": \"4G0A\", \"resolution\": 2.0995, \"deposition_date\": \"2012-07-09T00:00:00+0000\", \"release_date\": \"2012-08-22T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"synthetic construct\"], \"citation\": {\"title\": \"Crystallographic Analysis of Rotavirus NSP2-RNA Complex Reveals Specific Recognition of 5' GG Sequence for RTPase Activity.\", \"doi\": \"10.1128/JVI.01201-12\", \"authors\": [\"Hu, L.\", \"Chow, D.C.\", \"Patton, J.T.\", \"Palzkill, T.\", \"Estes, M.K.\", \"Prasad, B.V.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 107.69, \"b\": 107.69, \"c\": 272.211, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"B\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"C\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"D\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"E\": \"GGU\", \"F\": \"GGU\", \"G\": \"GGU\", \"H\": \"GGU\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"sequence_length\": 317, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q03243\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"sequence_length\": 317, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q03243\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"sequence_length\": 317, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q03243\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"sequence_length\": 317, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q03243\"]}, \"E\": {\"entity_id\": \"2\", \"organism\": \"synthetic construct\", \"sequence_length\": 3, \"polymer_type\": \"polyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"F\": {\"entity_id\": \"2\", \"organism\": \"synthetic construct\", \"sequence_length\": 3, \"polymer_type\": \"polyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"G\": {\"entity_id\": \"2\", \"organism\": \"synthetic construct\", \"sequence_length\": 3, \"polymer_type\": \"polyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"H\": {\"entity_id\": \"2\", \"organism\": \"synthetic construct\", \"sequence_length\": 3, \"polymer_type\": \"polyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"organism\": \"Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)\", \"taxonomy_id\": 36435, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 317, \"gene_name\": null, \"uniprot_ids\": [\"Q03243\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"GGU\", \"organism\": \"synthetic construct\", \"taxonomy_id\": 32630, \"chain_ids\": [\"E\", \"F\", \"G\", \"H\"], \"polymer_type\": \"polyribonucleotide\", \"sequence_length\": 3, \"gene_name\": null, \"uniprot_ids\": []}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV\", \"entities\": [\"1\"], \"chain_count\": 4}, {\"sequence\": \"GGU\", \"entities\": [\"2\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:38:12.126432\", \"polymer_composition\": \"protein/NA\", \"chain_count\": 8, \"unique_sequences\": 2, \"avg_sequence_length\": 160.0, \"min_sequence_length\": 3, \"max_sequence_length\": 317}, \"interface_info\": {\"interface_id\": \"4G0A_16\", \"name\": \"Interface 4G0A_16\", \"pdb_id\": \"4G0A\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 317, \"chain2_sequence_length\": 317, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:38:13.902309\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.0995,
+            "experimentalMethod": null,
+            "depositionDate": "2012-07-09T00:00:00+0000",
+            "releaseDate": "2012-08-22T00:00:00+0000",
+            "sourceOrganism": [
+              "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+              "synthetic construct"
+            ],
+            "spaceGroup": null,
+            "entityCount": 5,
+            "chainCount": 8,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "Crystallographic Analysis of Rotavirus NSP2-RNA Complex Reveals Specific Recognition of 5' GG Sequence for RTPase Activity.",
+              "doi": "10.1128/JVI.01201-12",
+              "authors": [
+                "Hu, L.",
+                "Chow, D.C.",
+                "Patton, J.T.",
+                "Palzkill, T.",
+                "Estes, M.K.",
+                "Prasad, B.V."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.0995,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "synthetic construct",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 8,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV",
+        "description": "Amino acid sequence for chain A (length: 317)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 317,
+        "organism": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV",
+        "description": "Amino acid sequence for chain B (length: 317)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 317,
+        "organism": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV",
+        "description": "Amino acid sequence for chain C (length: 317)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 317,
+        "organism": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "MAELACFCYPHLENDSYKFIPFNNLAIKAMLTAKVDKKDMDKFYDSIIYGIAPPPQFKKRYNTNDNSRGMNFETIMFTKVAMLICEALNSLKVTQANVSNVLSRVVSIRHLENLVIRKENPQDILFHSKDLLLKSTLIAIGQSKEIETTITAEGGEIVFQNAAFTMWKLTYLEHQLMPILDQNFIEYKVTLNEDKPISDVHVKELVAELRWQYNKFAVITHGKGHYRIVKYSSVANHADRVYATFKSNVKTGVNNDFNLLDQRIIWQNWYAFTSSMKQGNTLDVCKRLLFQKMKPEKNPFKGLSTDRKMDEVSQVGV",
+        "description": "Amino acid sequence for chain D (length: 317)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 317,
+        "organism": "Simian 11 rotavirus (serotype 3 / strain SA11-Ramig)",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "GGU",
+        "description": "Amino acid sequence for chain E (length: 3)",
+        "chainId": "E",
+        "entityId": "2",
+        "sequenceLength": 3,
+        "organism": "synthetic construct",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AdditionalChains",
+        "value": "3 more chains",
+        "description": "Total of 8 chains in structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystallographic Analysis of Rotavirus NSP2-RNA Complex Reveals Specific Recognition of 5' GG Sequence for RTPase Activity.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1128/JVI.01201-12",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 317",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: E, F, G, H, Length: 3",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 317, \"chain2_sequence_length\": 317, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 317,
+            "chain2_length": 317,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4G0A_16",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4G0A_16",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4G0A",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "4_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3349.89,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 89,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.90.1400.10;3.30.428.20",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02509",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1268.21,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 2081.68,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.378582580323533,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.621417419676467,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4G0A_16\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4g0a_16.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.942319\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:37.942319"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 8 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4G0A_16",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

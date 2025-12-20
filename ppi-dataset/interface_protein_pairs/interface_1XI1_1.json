@@ -1,0 +1,489 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1XI1_1",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "1XI1_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1XI1",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1XI1",
+    "name": "Protein 1XI1",
+    "description": "Protein structure with PDB ID: 1XI1. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1XI1_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1XI1",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Salasvirus phi29",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "10756",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10756"
+    },
+    "alternateName": [
+      "PDB 1XI1",
+      "Protein ID 1XI1"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1xi1_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1XI1_1.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1XI1",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1XI1",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1XI1_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "2",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.420.10;4.10.80.30;1.10.287.690;3.90.1600.10;3.30.1770.10;4.10.80.20",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF03175",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1XI1\", \"structure_metadata\": {\"pdb_id\": \"1XI1\", \"resolution\": 2.2, \"deposition_date\": \"2004-09-21T00:00:00+0000\", \"release_date\": \"2004-12-07T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Salasvirus phi29\"], \"citation\": {\"title\": \"Correction of X-ray intensities from single crystals containing lattice-translocation defects\", \"doi\": \"10.1107/S0907444904026721\", \"authors\": [\"Wang, J.\", \"Kamtekar, S.\", \"Berman, A.J.\", \"Steitz, T.A.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 60.557, \"b\": 170.563, \"c\": 68.813, \"alpha\": 90.0, \"beta\": 106.99, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"C\": \"(DT)(DT)(DT)(DT)(DT)\", \"D\": \"(DT)(DT)(DT)(DT)(DT)\", \"A\": \"MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK\", \"B\": \"MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK\"}, \"chain_info\": {\"C\": {\"entity_id\": \"1\", \"organism\": null, \"sequence_length\": 20, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"D\": {\"entity_id\": \"1\", \"organism\": null, \"sequence_length\": 20, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"A\": {\"entity_id\": \"2\", \"organism\": \"Salasvirus phi29\", \"sequence_length\": 575, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P03680\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Salasvirus phi29\", \"sequence_length\": 575, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P03680\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(DT)(DT)(DT)(DT)(DT)\", \"organism\": null, \"taxonomy_id\": null, \"chain_ids\": [\"C\", \"D\"], \"polymer_type\": \"polydeoxyribonucleotide\", \"sequence_length\": 20, \"gene_name\": null, \"uniprot_ids\": []}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK\", \"organism\": \"Salasvirus phi29\", \"taxonomy_id\": 10756, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 575, \"gene_name\": null, \"uniprot_ids\": [\"P03680\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"(DT)(DT)(DT)(DT)(DT)\", \"entities\": [\"1\"], \"chain_count\": 2}, {\"sequence\": \"MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK\", \"entities\": [\"2\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:15:40.782840\", \"polymer_composition\": \"protein/NA\", \"chain_count\": 4, \"unique_sequences\": 2, \"avg_sequence_length\": 297.5, \"min_sequence_length\": 20, \"max_sequence_length\": 575}, \"interface_info\": {\"interface_id\": \"1XI1_1\", \"name\": \"Interface 1XI1_1\", \"pdb_id\": \"1XI1\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 575, \"chain2_sequence_length\": 575, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:15:42.274529\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.2,
+            "experimentalMethod": null,
+            "depositionDate": "2004-09-21T00:00:00+0000",
+            "releaseDate": "2004-12-07T00:00:00+0000",
+            "sourceOrganism": [
+              "Salasvirus phi29"
+            ],
+            "spaceGroup": null,
+            "entityCount": 4,
+            "chainCount": 4,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "Correction of X-ray intensities from single crystals containing lattice-translocation defects",
+              "doi": "10.1107/S0907444904026721",
+              "authors": [
+                "Wang, J.",
+                "Kamtekar, S.",
+                "Berman, A.J.",
+                "Steitz, T.A."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.2,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Salasvirus phi29",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "(DT)(DT)(DT)(DT)(DT)",
+        "description": "Amino acid sequence for chain C (length: 20)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 20,
+        "organism": null,
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "(DT)(DT)(DT)(DT)(DT)",
+        "description": "Amino acid sequence for chain D (length: 20)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 20,
+        "organism": null,
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK",
+        "description": "Amino acid sequence for chain A (length: 575)",
+        "chainId": "A",
+        "entityId": "2",
+        "sequenceLength": 575,
+        "organism": "Salasvirus phi29",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MKHMPRKMYSCAFETTTKVEDCRVWAYGYMNIEDHSEYKIGNSLDEFMAWVLKVQADLYFHNLKFAGAFIINWLERNGFKWSADGLPNTYNTIISRMGQWYMIDICLGYKGKRKIHTVIYDSLKKLPFPVKKIAKDFKLTVLKGDIDYHKERPVGYKITPEEYAYIKNDIQIIAEALLIQFKQGLDRMTAGSDSLKGFKDIITTKKFKKVFPTLSLGLDKEVRYAYRGGFTWLNDRFKEKEIGEGMVFDVNSLYPAQMYSRLLPYGEPIVFEGKYVWDEDYPLHIQHIRCEFELKEGYIPTIQIKRSRFYKGNEYLKSSGGEIADLWLSNVDLELMKEHYDLYNVEYISGLKFKATTGLFKDFIDKWTYIKTTSEGAIKQLAKLMLNSLYGKFASNPDVTGKVPYLKENGALGFRLGEEETKDPVYTPMGVFITAWARYTTITAAQACYDRIIYCDTDSIHLTGTEIPDVIKDIVDPKKLGYWAHESTFKRAKYLRQKTYIQDIYMKEVDGKLVEGSPDDYTDIKFSVKCAGMTDKIKKEVTFENFKVGFSRKMKPKPVQVPGGVVLVDDTFTIK",
+        "description": "Amino acid sequence for chain B (length: 575)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 575,
+        "organism": "Salasvirus phi29",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Correction of X-ray intensities from single crystals containing lattice-translocation defects",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S0907444904026721",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: C, D, Length: 20",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: A, B, Length: 575",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 575, \"chain2_sequence_length\": 575, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 575,
+            "chain2_length": 575,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1XI1_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1XI1_1",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1XI1",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2493.04,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 69,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "2",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.420.10;4.10.80.30;1.10.287.690;3.90.1600.10;3.30.1770.10;4.10.80.20",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF03175",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1088.75,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1404.29,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.436715816834066,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.563284183165934,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1XI1_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1xi1_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.609539\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:35.609539"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 4 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1XI1_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

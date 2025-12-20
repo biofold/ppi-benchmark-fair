@@ -1,0 +1,489 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1MY6_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1MY6_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1MY6",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1MY6",
+    "name": "Protein 1MY6",
+    "description": "Protein structure with PDB ID: 1MY6. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1MY6_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1MY6",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Thermosynechococcus vestitus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "146786",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=146786"
+    },
+    "alternateName": [
+      "PDB 1MY6",
+      "Protein ID 1MY6"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1my6_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1my6.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1MY6",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1MY6",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1MY6_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "sodB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00081;PF02777",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1MY6\", \"structure_metadata\": {\"pdb_id\": \"1MY6\", \"resolution\": 1.6, \"deposition_date\": \"2002-10-03T00:00:00+0000\", \"release_date\": \"2003-07-29T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Thermosynechococcus vestitus\"], \"citation\": {\"title\": \"The 1.6 A resolution structure of Fe-superoxide dismutase from the thermophilic cyanobacterium Thermosynechococcus elongatus.\", \"doi\": \"10.1007/s00775-003-0469-0\", \"authors\": [\"Kerfeld, C.A.\", \"Yoshida, S.\", \"Tran, K.T.\", \"Yeates, T.O.\", \"Cascio, D.\", \"Bottin, H.\", \"Berthomieu, C.\", \"Sugiura, M.\", \"Boussac, A.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 51.749, \"b\": 63.644, \"c\": 74.709, \"alpha\": 90.0, \"beta\": 110.45, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA\", \"B\": \"AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Thermosynechococcus vestitus\", \"sequence_length\": 199, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8DIR2\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Thermosynechococcus vestitus\", \"sequence_length\": 199, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8DIR2\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA\", \"organism\": \"Thermosynechococcus vestitus\", \"taxonomy_id\": 146786, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 199, \"gene_name\": null, \"uniprot_ids\": [\"Q8DIR2\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:39:20.450877\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 199.0, \"min_sequence_length\": 199, \"max_sequence_length\": 199}, \"interface_info\": {\"interface_id\": \"1MY6_1\", \"name\": \"Interface 1MY6_1\", \"pdb_id\": \"1MY6\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 199, \"chain2_sequence_length\": 199, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:39:21.626492\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.6,
+            "experimentalMethod": null,
+            "depositionDate": "2002-10-03T00:00:00+0000",
+            "releaseDate": "2003-07-29T00:00:00+0000",
+            "sourceOrganism": [
+              "Thermosynechococcus vestitus"
+            ],
+            "spaceGroup": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "The 1.6 A resolution structure of Fe-superoxide dismutase from the thermophilic cyanobacterium Thermosynechococcus elongatus.",
+              "doi": "10.1007/s00775-003-0469-0",
+              "authors": [
+                "Kerfeld, C.A.",
+                "Yoshida, S.",
+                "Tran, K.T.",
+                "Yeates, T.O.",
+                "Cascio, D.",
+                "Bottin, H.",
+                "Berthomieu, C.",
+                "Sugiura, M.",
+                "Boussac, A."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.6,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Thermosynechococcus vestitus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA",
+        "description": "Amino acid sequence for chain A (length: 199)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 199,
+        "organism": "Thermosynechococcus vestitus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "AFVQEPLPFDPGALEPYGMSAKTLEFHYGKHHKGYVDNLNKLTQDTELADKSLEDVIRTTYGDAAKVGIFNNAAQVWNHTFFWNSLKPGGGGVPTGDVAARINSAFGSYDEFKAQFKNAAATQFGSGWAWLVLEAGTLKVTKTANAENPLVHGQVPLLTIDVWEHAYYLDYQNRRPDFIDNFLNQLVNWDFVAKNLAAA",
+        "description": "Amino acid sequence for chain B (length: 199)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 199,
+        "organism": "Thermosynechococcus vestitus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 2 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The 1.6 A resolution structure of Fe-superoxide dismutase from the thermophilic cyanobacterium Thermosynechococcus elongatus.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1007/s00775-003-0469-0",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 199",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 199, \"chain2_sequence_length\": 199, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 199,
+            "chain2_length": 199,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2CW3_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 23 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 23,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1MY6_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1MY6",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1778.74,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 52,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "sodB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00081;PF02777",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 621.62,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1157.12,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.349472098226834,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.650527901773164,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1MY6_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1my6_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:38.051315\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:38.051315"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2CW3_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 23 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 23,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2CW3_1",
+        "4F2N_2",
+        "1Y67_1",
+        "2CW2_1",
+        "1XRE_1",
+        "3CEI_1",
+        "1XUQ_1",
+        "3TQJ_1",
+        "4DVH_1",
+        "4JZ2_1",
+        "1IX9_1",
+        "4YET_1",
+        "1JR9_1",
+        "2RCV_2",
+        "2GOJ_1",
+        "3ESF_1",
+        "2GPC_1",
+        "3H1S_1",
+        "3SDP_1",
+        "2W7W_1",
+        "2NYB_2",
+        "1UER_2"
+      ],
+      "description": "Other interfaces in the same cluster (total: 23)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

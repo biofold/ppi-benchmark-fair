@@ -1,0 +1,509 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 6KC6_7",
+  "description": "Protein-protein interaction interface between chains C and K",
+  "identifier": "6KC6_7",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_6KC6",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "6KC6",
+    "name": "Protein 6KC6",
+    "description": "Protein structure with PDB ID: 6KC6. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 6KC6_7 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/6KC6",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 6KC6",
+      "Protein ID 6KC6"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/6kc6_7.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/6KC6_7.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "6KC6",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "6KC6",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "6KC6_7",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "C-K",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "RNF31",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF18091",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"6KC6\", \"structure_metadata\": {\"pdb_id\": \"6KC6\", \"resolution\": 2.123, \"deposition_date\": \"2019-06-27T00:00:00+0000\", \"release_date\": \"2020-04-15T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Molecular bases for HOIPINs-mediated inhibition of LUBAC and innate immune responses.\", \"doi\": \"10.1038/s42003-020-0882-8\", \"authors\": [\"Oikawa, D.\", \"Sato, Y.\", \"Ohtake, F.\", \"Komakura, K.\", \"Hanada, K.\", \"Sugawara, K.\", \"Terawaki, S.\", \"Mizukami, Y.\", \"Phuong, H.T.\", \"Iio, K.\", \"Obika, S.\", \"Fukushi, M.\", \"Irie, T.\", \"Tsuruta, D.\", \"Sakamoto, S.\", \"Tanaka, K.\", \"Saeki, Y.\", \"Fukai, S.\", \"Tokunaga, F.\"]}, \"entity_count\": 6, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 151.586, \"b\": 88.793, \"c\": 104.438, \"alpha\": 90.0, \"beta\": 101.08, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"C\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"E\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"G\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"I\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"K\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"C\", \"E\", \"G\", \"I\", \"K\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 225, \"gene_name\": null, \"uniprot_ids\": [\"Q96EP0\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK\", \"entities\": [\"1\"], \"chain_count\": 6}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"], \"fetch_timestamp\": \"2025-12-19T19:18:11.689639\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 6, \"chain_count\": 6, \"unique_sequences\": 1, \"avg_sequence_length\": 225.0, \"min_sequence_length\": 225, \"max_sequence_length\": 225}, \"interface_info\": {\"interface_id\": \"6KC6_7\", \"name\": \"Interface 6KC6_7\", \"pdb_id\": \"6KC6\", \"auth_chain1\": \"C\", \"auth_chain2\": \"K\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 225, \"chain2_sequence_length\": 225, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:18:13.782467\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.123,
+            "experimentalMethod": null,
+            "depositionDate": "2019-06-27T00:00:00+0000",
+            "releaseDate": "2020-04-15T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "entityCount": 6,
+            "chainCount": 6,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Molecular bases for HOIPINs-mediated inhibition of LUBAC and innate immune responses.",
+              "doi": "10.1038/s42003-020-0882-8",
+              "authors": [
+                "Oikawa, D.",
+                "Sato, Y.",
+                "Ohtake, F.",
+                "Komakura, K.",
+                "Hanada, K.",
+                "Sugawara, K.",
+                "Terawaki, S.",
+                "Mizukami, Y.",
+                "Phuong, H.T.",
+                "Iio, K.",
+                "Obika, S.",
+                "Fukushi, M.",
+                "Irie, T.",
+                "Tsuruta, D.",
+                "Sakamoto, S.",
+                "Tanaka, K.",
+                "Saeki, Y.",
+                "Fukai, S.",
+                "Tokunaga, F."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.123,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 6,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK",
+        "description": "Amino acid sequence for chain A (length: 225)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 225,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK",
+        "description": "Amino acid sequence for chain C (length: 225)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 225,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK",
+        "description": "Amino acid sequence for chain E (length: 225)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 225,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_G_Sequence",
+        "value": "GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK",
+        "description": "Amino acid sequence for chain G (length: 225)",
+        "chainId": "G",
+        "entityId": "1",
+        "sequenceLength": 225,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_I_Sequence",
+        "value": "GPGHMPEYQAQGLAMYLQENGIDCPKCKFSYALARGGCMHFHCTQCRHQFCSGCYNAFYAKNKCPEPNCRVKKSLHGHHPRDCLFYLRDWTALRLQKLLQDNNVMFNTEPPAGARAVPGGGCRVIEQKEVPNGLRDEACGKETPAGYAGLCQAHYKEYLVSLINAHSLDPATLYEVEELETATERYLHVRPQPLAGEDPPAYQARLLQKLTEEVPLGQSIPRRRK",
+        "description": "Amino acid sequence for chain I (length: 225)",
+        "chainId": "I",
+        "entityId": "1",
+        "sequenceLength": 225,
+        "organism": "Homo sapiens",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AdditionalChains",
+        "value": "1 more chains",
+        "description": "Total of 6 chains in structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 6 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Molecular bases for HOIPINs-mediated inhibition of LUBAC and innate immune responses.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/s42003-020-0882-8",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, C, E, G, I, K, Length: 225",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 225, \"chain2_sequence_length\": 225, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 225,
+            "chain2_length": 225,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "6KC6_7",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 6KC6_7",
+      "description": "Homodimer interaction partner in chain K"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "6KC6",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "C",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "K",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1445.32,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 46,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "RNF31",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF18091",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 736.900000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 708.389999999999,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.509852489414111,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.490126753936845,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6KC6_7\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"K\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6kc6_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.872713\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:35.872713"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 6 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "6KC6_7",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 1 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

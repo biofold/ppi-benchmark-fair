@@ -1,0 +1,476 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3NUH_5",
+  "description": "Protein-protein interaction interface between chains B and B",
+  "identifier": "3NUH_5",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3NUH",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3NUH",
+    "name": "Protein 3NUH",
+    "description": "Protein structure with PDB ID: 3NUH. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3NUH_5 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3NUH",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Escherichia coli K-12",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "83333",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
+    },
+    "alternateName": [
+      "PDB 3NUH",
+      "Protein ID 3NUH"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3nuh_5.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3NUH_5.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3NUH",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3NUH",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3NUH_5",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "B-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "gyrB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.300.370;3.10.20.690",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01751;PF00986;PF18053",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3NUH\", \"structure_metadata\": {\"pdb_id\": \"3NUH\", \"resolution\": 3.103, \"deposition_date\": \"2010-07-06T00:00:00+0000\", \"release_date\": \"2010-08-11T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Escherichia coli K-12\"], \"citation\": {\"title\": \"A domain insertion in Escherichia coli GyrB adopts a novel fold that plays a critical role in gyrase function.\", \"doi\": \"10.1093/nar/gkq665\", \"authors\": [\"Schoeffler, A.J.\", \"May, A.P.\", \"Berger, J.M.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 108.062, \"b\": 147.493, \"c\": 138.87, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)SDLAREITPVNIEEELKSSYLDYA(MSE)SVIVGRALPDVRDGLKPVHRRVLYA(MSE)NVLGNDWNKAYKKSARVVGDVIGKYHPHGDSAVYDTIVR(MSE)AQPFSLRY(MSE)LVDGQGNFGSIDGDSAAA(MSE)RYTEIRLAKIAHEL(MSE)ADLEKETVDFVDNYDGTEKIPDV(MSE)PTKIPNLLVNGSSGIAVG(MSE)ATNIPPHNLTEVINGCLAYIDDEDISIEGL(MSE)EHIPGPDFPTAAIINGRRGIEEAYRTGRGKVYIRARAEVEVDAKTGRETIIVHEIPYQVNKARLIEKIAELVKEKRVEGISALRDESDKDG(MSE)RIVIEVKRDAVGEVVLNNLYSQTQLQVSFGIN(MSE)VALHHGQPKI(MSE)NLKDIIAAFVRHRREVVTRRTIFELRKARDRAHILEALAVALANIDPIIELIRHAPTPAEAKTALVANPWQLGNVAA(MSE)LERAGDDAARPEWLEPEFGVRDGLYYLTEQQAQAILDLRLQKLTGLEHEKLLDEYKELLDQIAELLRILGSADRL(MSE)EVIREELELVREQFGDKRRTEITANS\", \"B\": \"SNAARE(MSE)TRRKGALDLAGLPGKLADCQERDPALSELYLVEGDSAGGSAKQGRNRKNQAILPLKGKILNVEKARFDK(MSE)LSSQEVATLITALGCGIGRDEYNPDKLRYHSIII(MSE)TDADVDGSHIRTLLLTFFYRQ(MSE)PEIVERGHVYIAQPPLYKVKKGKQEQYIKDDEA(MSE)DQYQISIALDGATLHTNASAPALAGEALEKLVSEYNATQK(MSE)INR(MSE)ERRYPKA(MSE)LKELIYQPTLTEADLSDEQTVTRWVNALVSELNDKEQHGSQWKFDVHTNAEQNLFEPIVRVRTHGVDTDYPLDHEFITGGEYRRICTLGEKLRGLLEEDAFIERGERRQPVASFEQALDWLVKESRRGLSIQRYKGLGE(MSE)NPEQLWETT(MSE)DPESRR(MSE)LRVTVKDAIAADQLFTTL(MSE)GDAVEPRRAFIEENALKAANIDI\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Escherichia coli K-12\", \"sequence_length\": 585, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0AES4\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Escherichia coli K-12\", \"sequence_length\": 468, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0AES6\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)SDLAREITPVNIEEELKSSYLDYA(MSE)SVIVGRALPDVRDGLKPVHRRVLYA(MSE)NVLGNDWNKAYKKSARVVGDVIGKYHPHGDSAVYDTIVR(MSE)AQPFSLRY(MSE)LVDGQGNFGSIDGDSAAA(MSE)RYTEIRLAKIAHEL(MSE)ADLEKETVDFVDNYDGTEKIPDV(MSE)PTKIPNLLVNGSSGIAVG(MSE)ATNIPPHNLTEVINGCLAYIDDEDISIEGL(MSE)EHIPGPDFPTAAIINGRRGIEEAYRTGRGKVYIRARAEVEVDAKTGRETIIVHEIPYQVNKARLIEKIAELVKEKRVEGISALRDESDKDG(MSE)RIVIEVKRDAVGEVVLNNLYSQTQLQVSFGIN(MSE)VALHHGQPKI(MSE)NLKDIIAAFVRHRREVVTRRTIFELRKARDRAHILEALAVALANIDPIIELIRHAPTPAEAKTALVANPWQLGNVAA(MSE)LERAGDDAARPEWLEPEFGVRDGLYYLTEQQAQAILDLRLQKLTGLEHEKLLDEYKELLDQIAELLRILGSADRL(MSE)EVIREELELVREQFGDKRRTEITANS\", \"organism\": \"Escherichia coli K-12\", \"taxonomy_id\": 83333, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 585, \"gene_name\": null, \"uniprot_ids\": [\"P0AES4\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"SNAARE(MSE)TRRKGALDLAGLPGKLADCQERDPALSELYLVEGDSAGGSAKQGRNRKNQAILPLKGKILNVEKARFDK(MSE)LSSQEVATLITALGCGIGRDEYNPDKLRYHSIII(MSE)TDADVDGSHIRTLLLTFFYRQ(MSE)PEIVERGHVYIAQPPLYKVKKGKQEQYIKDDEA(MSE)DQYQISIALDGATLHTNASAPALAGEALEKLVSEYNATQK(MSE)INR(MSE)ERRYPKA(MSE)LKELIYQPTLTEADLSDEQTVTRWVNALVSELNDKEQHGSQWKFDVHTNAEQNLFEPIVRVRTHGVDTDYPLDHEFITGGEYRRICTLGEKLRGLLEEDAFIERGERRQPVASFEQALDWLVKESRRGLSIQRYKGLGE(MSE)NPEQLWETT(MSE)DPESRR(MSE)LRVTVKDAIAADQLFTTL(MSE)GDAVEPRRAFIEENALKAANIDI\", \"organism\": \"Escherichia coli K-12\", \"taxonomy_id\": 83333, \"chain_ids\": [\"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 468, \"gene_name\": null, \"uniprot_ids\": [\"P0AES6\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"(MSE)SDLAREITPVNIEEELKSSYLDYA(MSE)SVIVGRALPDVRDGLKPVHRRVLYA(MSE)NVLGNDWNKAYKKSARVVGDVIGKYHPHGDSAVYDTIVR(MSE)AQPFSLRY(MSE)LVDGQGNFGSIDGDSAAA(MSE)RYTEIRLAKIAHEL(MSE)ADLEKETVDFVDNYDGTEKIPDV(MSE)PTKIPNLLVNGSSGIAVG(MSE)ATNIPPHNLTEVINGCLAYIDDEDISIEGL(MSE)EHIPGPDFPTAAIINGRRGIEEAYRTGRGKVYIRARAEVEVDAKTGRETIIVHEIPYQVNKARLIEKIAELVKEKRVEGISALRDESDKDG(MSE)RIVIEVKRDAVGEVVLNNLYSQTQLQVSFGIN(MSE)VALHHGQPKI(MSE)NLKDIIAAFVRHRREVVTRRTIFELRKARDRAHILEALAVALANIDPIIELIRHAPTPAEAKTALVANPWQLGNVAA(MSE)LERAGDDAARPEWLEPEFGVRDGLYYLTEQQAQAILDLRLQKLTGLEHEKLLDEYKELLDQIAELLRILGSADRL(MSE)EVIREELELVREQFGDKRRTEITANS\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"SNAARE(MSE)TRRKGALDLAGLPGKLADCQERDPALSELYLVEGDSAGGSAKQGRNRKNQAILPLKGKILNVEKARFDK(MSE)LSSQEVATLITALGCGIGRDEYNPDKLRYHSIII(MSE)TDADVDGSHIRTLLLTFFYRQ(MSE)PEIVERGHVYIAQPPLYKVKKGKQEQYIKDDEA(MSE)DQYQISIALDGATLHTNASAPALAGEALEKLVSEYNATQK(MSE)INR(MSE)ERRYPKA(MSE)LKELIYQPTLTEADLSDEQTVTRWVNALVSELNDKEQHGSQWKFDVHTNAEQNLFEPIVRVRTHGVDTDYPLDHEFITGGEYRRICTLGEKLRGLLEEDAFIERGERRQPVASFEQALDWLVKESRRGLSIQRYKGLGE(MSE)NPEQLWETT(MSE)DPESRR(MSE)LRVTVKDAIAADQLFTTL(MSE)GDAVEPRRAFIEENALKAANIDI\", \"entities\": [\"2\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:16:56.130779\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 2, \"unique_sequences\": 2, \"avg_sequence_length\": 526.5, \"min_sequence_length\": 468, \"max_sequence_length\": 585}, \"interface_info\": {\"interface_id\": \"3NUH_5\", \"name\": \"Interface 3NUH_5\", \"pdb_id\": \"3NUH\", \"auth_chain1\": \"B\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 585, \"chain2_sequence_length\": 468, \"sequences_identical\": false, \"sequence_identity\": 6.41025641025641}, \"enrichment_timestamp\": \"2025-12-19T19:16:57.633329\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 3.103,
+            "experimentalMethod": null,
+            "depositionDate": "2010-07-06T00:00:00+0000",
+            "releaseDate": "2010-08-11T00:00:00+0000",
+            "sourceOrganism": [
+              "Escherichia coli K-12"
+            ],
+            "spaceGroup": null,
+            "entityCount": 4,
+            "chainCount": 2,
+            "uniqueSequences": 2,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "A domain insertion in Escherichia coli GyrB adopts a novel fold that plays a critical role in gyrase function.",
+              "doi": "10.1093/nar/gkq665",
+              "authors": [
+                "Schoeffler, A.J.",
+                "May, A.P.",
+                "Berger, J.M."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 3.103,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Escherichia coli K-12",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 2,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "(MSE)SDLAREITPVNIEEELKSSYLDYA(MSE)SVIVGRALPDVRDGLKPVHRRVLYA(MSE)NVLGNDWNKAYKKSARVVGDVIGKYHPHGDSAVYDTIVR(MSE)AQPFSLRY(MSE)LVDGQGNFGSIDGDSAAA(MSE)RYTEIRLAKIAHEL(MSE)ADLEKETVDFVDNYDGTEKIPDV(MSE)PTKIPNLLVNGSSGIAVG(MSE)ATNIPPHNLTEVINGCLAYIDDEDISIEGL(MSE)EHIPGPDFPTAAIINGRRGIEEAYRTGRGKVYIRARAEVEVDAKTGRETIIVHEIPYQVNKARLIEKIAELVKEKRVEGISALRDESDKDG(MSE)RIVIEVKRDAVGEVVLNNLYSQTQLQVSFGIN(MSE)VALHHGQPKI(MSE)NLKDIIAAFVRHRREVVTRRTIFELRKARDRAHILEALAVALANIDPIIELIRHAPTPAEAKTALVANPWQLGNVAA(MSE)LERAGDDAARPEWLEPEFGVRDGLYYLTEQQAQAILDLRLQKLTGLEHEKLLDEYKELLDQIAELLRILGSADRL(MSE)EVIREELELVREQFGDKRRTEITANS",
+        "description": "Amino acid sequence for chain A (length: 585)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 585,
+        "organism": "Escherichia coli K-12",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "SNAARE(MSE)TRRKGALDLAGLPGKLADCQERDPALSELYLVEGDSAGGSAKQGRNRKNQAILPLKGKILNVEKARFDK(MSE)LSSQEVATLITALGCGIGRDEYNPDKLRYHSIII(MSE)TDADVDGSHIRTLLLTFFYRQ(MSE)PEIVERGHVYIAQPPLYKVKKGKQEQYIKDDEA(MSE)DQYQISIALDGATLHTNASAPALAGEALEKLVSEYNATQK(MSE)INR(MSE)ERRYPKA(MSE)LKELIYQPTLTEADLSDEQTVTRWVNALVSELNDKEQHGSQWKFDVHTNAEQNLFEPIVRVRTHGVDTDYPLDHEFITGGEYRRICTLGEKLRGLLEEDAFIERGERRQPVASFEQALDWLVKESRRGLSIQRYKGLGE(MSE)NPEQLWETT(MSE)DPESRR(MSE)LRVTVKDAIAADQLFTTL(MSE)GDAVEPRRAFIEENALKAANIDI",
+        "description": "Amino acid sequence for chain B (length: 468)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 468,
+        "organism": "Escherichia coli K-12",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "A domain insertion in Escherichia coli GyrB adopts a novel fold that plays a critical role in gyrase function.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1093/nar/gkq665",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 585",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: B, Length: 468",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 585, \"chain2_sequence_length\": 468, \"sequences_identical\": false, \"sequence_identity\": 6.41025641025641}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 585,
+            "chain2_length": 468,
+            "sequences_identical": false,
+            "sequence_identity": 6.41025641025641
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "6.4%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1BJT_1",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 4 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 4,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3NUH_5",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3NUH",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "B",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "3_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2641.52,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 75,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "gyrB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.300.370;3.10.20.690",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01751;PF00986;PF18053",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1409.33,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1133.1,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.533529937308821,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.428957569884006,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3NUH_5\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3nuh_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.737643\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-19T18:29:35.737643"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 2 chains, 2 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1BJT_1",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 4 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 4,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1BJT_1",
+        "2XCR_4",
+        "4CKL_2"
+      ],
+      "description": "Other interfaces in the same cluster (total: 4)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

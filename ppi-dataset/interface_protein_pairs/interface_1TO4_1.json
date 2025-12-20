@@ -1,0 +1,517 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1TO4_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1TO4_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1TO4",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1TO4",
+    "name": "Protein 1TO4",
+    "description": "Protein structure with PDB ID: 1TO4. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1TO4_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1TO4",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Schistosoma mansoni",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "6183",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6183"
+    },
+    "alternateName": [
+      "PDB 1TO4",
+      "Protein ID 1TO4"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1to4_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1to4.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1TO4",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1TO4",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1TO4_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "SOD",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.60.40.200",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00080",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1TO4\", \"structure_metadata\": {\"pdb_id\": \"1TO4\", \"resolution\": 1.55, \"deposition_date\": \"2004-06-12T00:00:00+0000\", \"release_date\": \"2004-08-31T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Schistosoma mansoni\"], \"citation\": {\"title\": \"Structure of the cytosolic Cu,Zn superoxide dismutase from Schistosoma mansoni.\", \"doi\": \"10.1107/S0907444904016798\", \"authors\": [\"Cardoso, R.M.\", \"Silva, C.H.\", \"Ulian de Araujo, A.P.\", \"Tanaka, T.\", \"Tanaka, M.\", \"Garratt, R.C.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 39.27, \"b\": 95.08, \"c\": 78.41, \"alpha\": 90.0, \"beta\": 103.55, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\", \"B\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\", \"C\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\", \"D\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Schistosoma mansoni\", \"sequence_length\": 156, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01137\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Schistosoma mansoni\", \"sequence_length\": 156, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01137\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Schistosoma mansoni\", \"sequence_length\": 156, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01137\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Schistosoma mansoni\", \"sequence_length\": 156, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01137\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\", \"organism\": \"Schistosoma mansoni\", \"taxonomy_id\": 6183, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 156, \"gene_name\": null, \"uniprot_ids\": [\"Q01137\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:52:15.202036\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 156.0, \"min_sequence_length\": 156, \"max_sequence_length\": 156}, \"interface_info\": {\"interface_id\": \"1TO4_1\", \"name\": \"Interface 1TO4_1\", \"pdb_id\": \"1TO4\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 156, \"chain2_sequence_length\": 156, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:52:16.706887\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.55,
+            "experimentalMethod": null,
+            "depositionDate": "2004-06-12T00:00:00+0000",
+            "releaseDate": "2004-08-31T00:00:00+0000",
+            "sourceOrganism": [
+              "Schistosoma mansoni"
+            ],
+            "spaceGroup": null,
+            "entityCount": 4,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "citation": {
+              "title": "Structure of the cytosolic Cu,Zn superoxide dismutase from Schistosoma mansoni.",
+              "doi": "10.1107/S0907444904016798",
+              "authors": [
+                "Cardoso, R.M.",
+                "Silva, C.H.",
+                "Ulian de Araujo, A.P.",
+                "Tanaka, T.",
+                "Tanaka, M.",
+                "Garratt, R.C."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.55,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Schistosoma mansoni",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE",
+        "description": "Amino acid sequence for chain A (length: 156)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 156,
+        "organism": "Schistosoma mansoni",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE",
+        "description": "Amino acid sequence for chain B (length: 156)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 156,
+        "organism": "Schistosoma mansoni",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE",
+        "description": "Amino acid sequence for chain C (length: 156)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 156,
+        "organism": "Schistosoma mansoni",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "GSNMKAVCVMTGTAGVKGVVKFTQETDNGPVHVHAEFSGLKAGKHGFHVHEFGDTTNGCTSAGAHFNPTKQEHGAPEDSIRHVGDLGNVVAGADGNAVYNATDKLISLNGSHSIIGRSMVIHENEDDLGRGGHELSKVTGNAGGRLACGVVGLAAE",
+        "description": "Amino acid sequence for chain D (length: 156)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 156,
+        "organism": "Schistosoma mansoni",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 4 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structure of the cytosolic Cu,Zn superoxide dismutase from Schistosoma mansoni.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S0907444904016798",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 156",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 156, \"chain2_sequence_length\": 156, \"sequences_identical\": true, \"sequence_identity\": 100.0}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 156,
+            "chain2_length": 156,
+            "sequences_identical": true,
+            "sequence_identity": 100.0
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "100.0%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2JLP_3",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 20 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 20,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1TO4_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1TO4",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1273.21,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 51,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "SOD",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.60.40.200",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00080",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 341.05,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 932.180000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.267866259297367,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.732149449030405,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1TO4_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1to4_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.180166\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:33.180166"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 4 chains, 1 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2JLP_3",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 20 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 20,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2JLP_3",
+        "5DRA_1",
+        "2BM5_1",
+        "4OJA_1",
+        "3CE1_1",
+        "2APS_1",
+        "2E46_1",
+        "3KBF_1",
+        "1EQW_2",
+        "1Z9P_1",
+        "2C9S_1",
+        "1F1G_2",
+        "3L9E_2",
+        "3PU7_1",
+        "3LTV_1",
+        "3MND_1",
+        "1IBD_1",
+        "1SXS_1",
+        "1XSO_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 20)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}

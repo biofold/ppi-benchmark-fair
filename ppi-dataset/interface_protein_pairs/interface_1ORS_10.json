@@ -1,0 +1,529 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1ORS_10",
+  "description": "Protein-protein interaction interface between chains C and C",
+  "identifier": "1ORS_10",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1ORS",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1ORS",
+    "name": "Protein 1ORS",
+    "description": "Protein structure with PDB ID: 1ORS. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1ORS_10 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1ORS",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Mus musculus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "10090",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
+    },
+    "alternateName": [
+      "PDB 1ORS",
+      "Protein ID 1ORS"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1ors_10.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1ORS_10.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1ORS",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1ORS",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1ORS_10",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "C-C",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "APE_0955",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.20.120.350",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00520",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1ORS\", \"structure_metadata\": {\"pdb_id\": \"1ORS\", \"resolution\": 1.9, \"deposition_date\": \"2003-03-14T00:00:00+0000\", \"release_date\": \"2003-05-06T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mus musculus\", \"Aeropyrum pernix\"], \"citation\": {\"title\": \"X-ray structure of a voltage-dependent K+ channel\", \"doi\": \"10.1038/nature01580\", \"authors\": [\"Jiang, Y.\", \"Lee, A.\", \"Chen, J.\", \"Ruta, V.\", \"Cadene, M.\", \"Chait, B.T.\", \"MacKinnon, R.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 264.71, \"b\": 61.6, \"c\": 46.06, \"alpha\": 90.0, \"beta\": 90.35, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"QIVLTQSPAIMSASLGDRVTMTCTASSSVSSSYLHWYQQKPGSSPKLWIYSTSNLASGVPARFSGSGSGTSYSLTISSMEAEDAATYYCHQFHRSLTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVLNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRNEC\", \"B\": \"DVQLQESGPGLVKPSQSLSLTCTVTGYSITNNYAWNWIRQFPGNKLEWMGYINYSGTTSYNPSLKSRISITRDTSKNQFFLQLNSVTTEDTATYFCVRGYDYFAMDYWGQGTSVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWNSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSTWPSETVTCNVAHPASSTKVDKKIVPRDCG\", \"C\": \"DVMEHPLVELGVSYAALLSVIVVVVEYTMQLSGEYLVRLYLVDLILVIILWADYAYRAYKSGDPAGYVKKTLYEIPALVPAGLLALIEGHLAGLGLFRLVRLLRFLRILLIISRGSKFLSAIADAADKLVPR\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 214, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P01837\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Mus musculus\", \"sequence_length\": 221, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P01869\"]}, \"C\": {\"entity_id\": \"3\", \"organism\": \"Aeropyrum pernix\", \"sequence_length\": 132, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YDF8\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"QIVLTQSPAIMSASLGDRVTMTCTASSSVSSSYLHWYQQKPGSSPKLWIYSTSNLASGVPARFSGSGSGTSYSLTISSMEAEDAATYYCHQFHRSLTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVLNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRNEC\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 214, \"gene_name\": null, \"uniprot_ids\": [\"P01837\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"DVQLQESGPGLVKPSQSLSLTCTVTGYSITNNYAWNWIRQFPGNKLEWMGYINYSGTTSYNPSLKSRISITRDTSKNQFFLQLNSVTTEDTATYFCVRGYDYFAMDYWGQGTSVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWNSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSTWPSETVTCNVAHPASSTKVDKKIVPRDCG\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 221, \"gene_name\": null, \"uniprot_ids\": [\"P01869\"]}, \"3\": {\"entity_id\": \"3\", \"sequence\": \"DVMEHPLVELGVSYAALLSVIVVVVEYTMQLSGEYLVRLYLVDLILVIILWADYAYRAYKSGDPAGYVKKTLYEIPALVPAGLLALIEGHLAGLGLFRLVRLLRFLRILLIISRGSKFLSAIADAADKLVPR\", \"organism\": \"Aeropyrum pernix\", \"taxonomy_id\": 56636, \"chain_ids\": [\"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 132, \"gene_name\": null, \"uniprot_ids\": [\"Q9YDF8\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"QIVLTQSPAIMSASLGDRVTMTCTASSSVSSSYLHWYQQKPGSSPKLWIYSTSNLASGVPARFSGSGSGTSYSLTISSMEAEDAATYYCHQFHRSLTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVLNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRNEC\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"DVQLQESGPGLVKPSQSLSLTCTVTGYSITNNYAWNWIRQFPGNKLEWMGYINYSGTTSYNPSLKSRISITRDTSKNQFFLQLNSVTTEDTATYFCVRGYDYFAMDYWGQGTSVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWNSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSTWPSETVTCNVAHPASSTKVDKKIVPRDCG\", \"entities\": [\"2\"], \"chain_count\": 1}, {\"sequence\": \"DVMEHPLVELGVSYAALLSVIVVVVEYTMQLSGEYLVRLYLVDLILVIILWADYAYRAYKSGDPAGYVKKTLYEIPALVPAGLLALIEGHLAGLGLFRLVRLLRFLRILLIISRGSKFLSAIADAADKLVPR\", \"entities\": [\"3\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:37:18.044056\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 3, \"unique_sequences\": 3, \"avg_sequence_length\": 189.0, \"min_sequence_length\": 132, \"max_sequence_length\": 221}, \"interface_info\": {\"interface_id\": \"1ORS_10\", \"name\": \"Interface 1ORS_10\", \"pdb_id\": \"1ORS\", \"auth_chain1\": \"C\", \"auth_chain2\": \"C\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 214, \"chain2_sequence_length\": 221, \"sequences_identical\": false, \"sequence_identity\": 6.5420560747663545}, \"enrichment_timestamp\": \"2025-12-19T18:37:19.535879\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.9,
+            "experimentalMethod": null,
+            "depositionDate": "2003-03-14T00:00:00+0000",
+            "releaseDate": "2003-05-06T00:00:00+0000",
+            "sourceOrganism": [
+              "Mus musculus",
+              "Aeropyrum pernix"
+            ],
+            "spaceGroup": null,
+            "entityCount": 4,
+            "chainCount": 3,
+            "uniqueSequences": 3,
+            "isHomomer": false,
+            "homomerType": null,
+            "citation": {
+              "title": "X-ray structure of a voltage-dependent K+ channel",
+              "doi": "10.1038/nature01580",
+              "authors": [
+                "Jiang, Y.",
+                "Lee, A.",
+                "Chen, J.",
+                "Ruta, V.",
+                "Cadene, M.",
+                "Chait, B.T.",
+                "MacKinnon, R."
+              ]
+            }
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.9,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Mus musculus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Aeropyrum pernix",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 3,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 3,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "QIVLTQSPAIMSASLGDRVTMTCTASSSVSSSYLHWYQQKPGSSPKLWIYSTSNLASGVPARFSGSGSGTSYSLTISSMEAEDAATYYCHQFHRSLTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVLNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRNEC",
+        "description": "Amino acid sequence for chain A (length: 214)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 214,
+        "organism": "Mus musculus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "DVQLQESGPGLVKPSQSLSLTCTVTGYSITNNYAWNWIRQFPGNKLEWMGYINYSGTTSYNPSLKSRISITRDTSKNQFFLQLNSVTTEDTATYFCVRGYDYFAMDYWGQGTSVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWNSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSTWPSETVTCNVAHPASSTKVDKKIVPRDCG",
+        "description": "Amino acid sequence for chain B (length: 221)",
+        "chainId": "B",
+        "entityId": "2",
+        "sequenceLength": 221,
+        "organism": "Mus musculus",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "DVMEHPLVELGVSYAALLSVIVVVVEYTMQLSGEYLVRLYLVDLILVIILWADYAYRAYKSGDPAGYVKKTLYEIPALVPAGLLALIEGHLAGLGLFRLVRLLRFLRILLIISRGSKFLSAIADAADKLVPR",
+        "description": "Amino acid sequence for chain C (length: 132)",
+        "chainId": "C",
+        "entityId": "3",
+        "sequenceLength": 132,
+        "organism": "Aeropyrum pernix",
+        "geneName": null
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_1",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_2",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SequenceCluster_3",
+        "value": "1 entities, 1 chains",
+        "description": "Sequence cluster with 1 identical entities"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "X-ray structure of a voltage-dependent K+ channel",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/nature01580",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 214",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_2",
+        "value": "Chains: B, Length: 221",
+        "description": "Entity 2 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_3",
+        "value": "Chains: C, Length: 132",
+        "description": "Entity 3 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceAnalysis",
+        "value": "{\"chain1_sequence_length\": 214, \"chain2_sequence_length\": 221, \"sequences_identical\": false, \"sequence_identity\": 6.5420560747663545}",
+        "description": "Sequence analysis for the interface chains",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedInterfaceAnalysis",
+          "value": {
+            "chain1_length": 214,
+            "chain2_length": 221,
+            "sequences_identical": false,
+            "sequence_identity": 6.5420560747663545
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSequenceIdentity",
+        "value": "6.5%",
+        "description": "Sequence identity between interface chains"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "COMPLETE - Populated by 3rd script",
+        "description": "PDB metadata has been fully populated from RCSB API"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3O77_2",
+        "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 23 members."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembersNumber",
+        "value": 23,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "BLASTClustMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterIDStatus",
+        "value": "COMPLETE - Populated by script 4",
+        "description": "ClusterID has been validated/added from BLASTClust analysis"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1ORS_10",
+      "description": "Homodimer interaction partner in chain C"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1ORS",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "C",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "C",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "2_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2149.8,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 56,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "APE_0955",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.20.120.350",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00520",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 357.92,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1791.88,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.166489906037771,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.833510093962229,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1ORS_10\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"C\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1ors_10.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:31.612804\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-19T18:29:31.612804"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDBMetadataStatus",
+      "value": "COMPLETE - Populated by 3rd script",
+      "description": "PDB metadata fetched from RCSB API: 3 chains, 3 unique sequences"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3O77_2",
+      "description": "Sequence cluster ID from BLASTClust analysis. Cluster contains 23 members."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembersNumber",
+      "value": 23,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3O77_2",
+        "4PFE_1",
+        "6R2S_8",
+        "6H3U_14",
+        "5M7Q_3",
+        "5VM4_4",
+        "3QXU_2",
+        "1OHQ_1",
+        "1TVD_1",
+        "5L6Q_1",
+        "1EEQ_1",
+        "2IMN_1",
+        "1CD0_1",
+        "2CD0_1",
+        "2W0L_2",
+        "1AC6_1",
+        "5T93_1",
+        "1BWW_1",
+        "3DVI_1",
+        "1B0W_1",
+        "1IVL_1",
+        "3DVF_1"
+      ],
+      "description": "Other interfaces in the same cluster (total: 23)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BLASTClustMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterIDStatus",
+      "value": "COMPLETE - Populated by script 4",
+      "description": "ClusterID has been validated/added from BLASTClust analysis"
+    }
+  ]
+}
