@@ -73,7 +73,7 @@ The file `all_scripts.py` contains **five scripts**. Each script performs a spec
 
 ---
 
-### Script 1 – Base Dataset and Interface Metadata Generation (`1_ppi_benchmark_dataset.py`)
+### Base Dataset and Interface Metadata Generation (1_ppi_benchmark_dataset.py)
 
 **Purpose**  
 Generate the core FAIR and Bioschemas-compliant JSON-LD metadata describing the *ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces* using **only information provided by the benchmark GitHub repository**.
@@ -107,9 +107,8 @@ manifest.json
 
 These outputs are fully reproducible and deterministic.
 
----
 
-### Script 2 – Assembly Chain Validation and Labeling (`2_add_chain_labels.py`)
+### Assembly Chain Validation and Labeling (2_add_chain_labels.py`)
 
 **Purpose**  
 Validate and correct interface chain identifiers by inspecting **actual biological assembly structure files** (PDB or mmCIF).
@@ -142,9 +141,8 @@ Stored as `PropertyValue` entries:
 
 No new biological annotations are introduced; this step strictly validates structure consistency.
 
----
 
-### Script 3 – PDB Metadata Enrichment (`3_add_pdb_metadata.py`)
+### PDB Metadata Enrichment (3_add_pdb_metadata.py`)
 
 **Purpose**  
 Enrich Protein entities with authoritative structural and biological metadata retrieved from the **RCSB PDB REST API**.
@@ -178,9 +176,8 @@ Stored as `PropertyValue` entries in the `Protein` entity:
 
 This step is network-dependent and should be versioned for reproducibility.
 
----
 
-### Script 4 – Cluster ID Annotation from BlastClust (`4_add_cluster_ids.py`)
+### Cluster ID Annotation from BlastClust (4_add_cluster_ids.py)
 
 **Purpose**  
 Annotate interfaces and proteins with **cluster identifiers** derived from sequence clustering (BlastClust output).
