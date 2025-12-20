@@ -108,7 +108,7 @@ manifest.json
 These outputs are fully reproducible and deterministic.
 
 
-### Assembly Chain Validation and Labeling (2_add_chain_labels.py`)
+### Assembly Chain Validation and Labeling (2_add_chain_labels.py)
 
 **Purpose**  
 Validate and correct interface chain identifiers by inspecting **actual biological assembly structure files** (PDB or mmCIF).
@@ -142,7 +142,7 @@ Stored as `PropertyValue` entries:
 No new biological annotations are introduced; this step strictly validates structure consistency.
 
 
-### PDB Metadata Enrichment (3_add_pdb_metadata.py`)
+### PDB Metadata Enrichment (3_add_pdb_metadata.py)
 
 **Purpose**  
 Enrich Protein entities with authoritative structural and biological metadata retrieved from the **RCSB PDB REST API**.
@@ -204,9 +204,8 @@ Stored as `PropertyValue` entries:
 - Updated `interface_*.json` files
 - Updated `dataset_with_interfaces.json`
 
----
 
-### Script 5 – Machine Learning Evaluation with Croissant (`5_ppi_ml_croissant.py`)
+### Machine Learning Evaluation with Croissant (5_ppi_ml_croissant.py)
 
 **Purpose**  
 Evaluate machine learning methods on the benchmark dataset using **MLCommons Croissant-compliant metadata**.
