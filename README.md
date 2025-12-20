@@ -73,7 +73,7 @@ The file `all_scripts.py` contains **five scripts**. Each script performs a spec
 
 ---
 
-## 4. Script 1 – Base Dataset and Interface Metadata Generation (`1_ppi_benchmark_dataset.py`)
+### Script 1 – Base Dataset and Interface Metadata Generation (`1_ppi_benchmark_dataset.py`)
 
 **Purpose**  
 Generate the core FAIR and Bioschemas-compliant JSON-LD metadata describing the *ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces* using **only information provided by the benchmark GitHub repository**.
@@ -109,7 +109,7 @@ These outputs are fully reproducible and deterministic.
 
 ---
 
-## 5. Script 2 – Assembly Chain Validation and Labeling (`2_add_chain_labels.py`)
+### Script 2 – Assembly Chain Validation and Labeling (`2_add_chain_labels.py`)
 
 **Purpose**  
 Validate and correct interface chain identifiers by inspecting **actual biological assembly structure files** (PDB or mmCIF).
@@ -144,7 +144,7 @@ No new biological annotations are introduced; this step strictly validates struc
 
 ---
 
-## 6. Script 3 – PDB Metadata Enrichment (`3_add_pdb_metadata.py`)
+### Script 3 – PDB Metadata Enrichment (`3_add_pdb_metadata.py`)
 
 **Purpose**  
 Enrich Protein entities with authoritative structural and biological metadata retrieved from the **RCSB PDB REST API**.
@@ -180,7 +180,7 @@ This step is network-dependent and should be versioned for reproducibility.
 
 ---
 
-## 7. Script 4 – Cluster ID Annotation from BlastClust (`4_add_cluster_ids.py`)
+### Script 4 – Cluster ID Annotation from BlastClust (`4_add_cluster_ids.py`)
 
 **Purpose**  
 Annotate interfaces and proteins with **cluster identifiers** derived from sequence clustering (BlastClust output).
@@ -209,7 +209,7 @@ Stored as `PropertyValue` entries:
 
 ---
 
-## 8. Script 5 – Machine Learning Evaluation with Croissant (`5_ppi_ml_croissant.py`)
+### Script 5 – Machine Learning Evaluation with Croissant (`5_ppi_ml_croissant.py`)
 
 **Purpose**  
 Evaluate machine learning methods on the benchmark dataset using **MLCommons Croissant-compliant metadata**.
@@ -237,7 +237,7 @@ sufficient for automated ML benchmarking.
 
 ---
 
-## 9. Output File Summary
+## 4. Output File Summary
 
 | File | Description |
 |----|----|
@@ -248,7 +248,7 @@ sufficient for automated ML benchmarking.
 
 ---
 
-## 10. Design Principles
+## 5. Design Principles
 
 - **Separation of concerns**: each script has a single responsibility
 - **Provenance-aware**: enrichment steps are isolated
@@ -257,7 +257,7 @@ sufficient for automated ML benchmarking.
 
 ---
 
-## 11. Intended Use
+## 6. Intended Use
 
 This pipeline supports:
 - ML benchmarking and reproducibility
