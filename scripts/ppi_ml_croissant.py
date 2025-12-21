@@ -31,6 +31,8 @@ import warnings
 from collections import defaultdict, Counter
 from typing import Dict, List, Tuple, Any, Optional
 import scipy.stats as stats
+import matplotlib
+matplotlib.use('Agg')  # Use the Agg backend for non-interactive plotting
 
 warnings.filterwarnings('ignore')
 
@@ -986,7 +988,7 @@ class FeatureEvaluator:
         
         self.feature_importance = results
         return results
-    
+
     def generate_feature_report(self, X, y, feature_names=None, save_path=None):
         """
         Generate comprehensive feature evaluation report.
@@ -1024,32 +1026,65 @@ class FeatureEvaluator:
         print("5. Evaluating feature importance across models...")
         importance_results = self.evaluate_feature_importance_models(X, y, feature_names)
         
+        # Helper function to convert numpy types to Python native types
+        def convert_to_serializable(obj):
+            if isinstance(obj, (np.integer, np.int64, np.int32, np.int16, np.int8)):
+                return int(obj)
+            elif isinstance(obj, (np.floating, np.float64, np.float32, np.float16)):
+                return float(obj)
+            elif isinstance(obj, (np.bool_, bool)):
+                return bool(obj)
+            elif isinstance(obj, np.ndarray):
+                return convert_to_serializable(obj.tolist())
+            elif isinstance(obj, dict):
+                return {k: convert_to_serializable(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [convert_to_serializable(v) for v in obj]
+            elif isinstance(obj, tuple):
+                return tuple(convert_to_serializable(v) for v in obj)
+            elif isinstance(obj, np.generic):
+                # Handle any other numpy generic types
+                return obj.item()
+            elif pd.isna(obj):
+                return None
+            else:
+                return obj
+        
+        # Convert class distribution
+        class_dist = dict(Counter(y))
+        serializable_class_dist = {}
+        for key, value in class_dist.items():
+            if isinstance(key, (np.integer, np.int64)):
+                serializable_class_dist[int(key)] = int(value)
+            else:
+                serializable_class_dist[key] = int(value)
+        
         # Compile report
         report = {
             'dataset_info': {
-                'n_samples': X.shape[0],
-                'n_features': X.shape[1],
+                'n_samples': int(X.shape[0]),
+                'n_features': int(X.shape[1]),
                 'feature_names': feature_names,
-                'class_distribution': Counter(y)
+                'class_distribution': serializable_class_dist
             },
-            'basic_statistics': stats,
+            'basic_statistics': convert_to_serializable(stats),
             'correlation_analysis': {
-                'highly_correlated_pairs': high_corr,
+                'highly_correlated_pairs': convert_to_serializable(high_corr),
                 'n_highly_correlated': len(high_corr)
             },
             'feature_target_analysis': {
-                'anova_significant_features': self.anova_results.get('significant_features', []),
-                'mutual_info_top_features': self.mutual_info_results.get('top_features', []),
-                'all_scores': feature_target
+                'anova_significant_features': convert_to_serializable(self.anova_results.get('significant_features', [])),
+                'mutual_info_top_features': convert_to_serializable(self.mutual_info_results.get('top_features', [])),
+                'all_scores': convert_to_serializable(feature_target)
             },
             'pca_analysis': {
-                'n_components': pca_results['n_components'],
-                'explained_variance': pca_results['explained_variance_ratio'].tolist(),
-                'cumulative_variance': pca_results['cumulative_variance'].tolist(),
-                'components_needed_95': np.argmax(pca_results['cumulative_variance'] > 0.95) + 1,
-                'component_loadings': pca_results['component_loadings']
+                'n_components': int(pca_results['n_components']),
+                'explained_variance': convert_to_serializable(pca_results['explained_variance_ratio']),
+                'cumulative_variance': convert_to_serializable(pca_results['cumulative_variance']),
+                'components_needed_95': int(np.argmax(pca_results['cumulative_variance'] > 0.95) + 1),
+                'component_loadings': convert_to_serializable(pca_results['component_loadings'])
             },
-            'feature_importance': importance_results
+            'feature_importance': convert_to_serializable(importance_results)
         }
         
         # Print summary
@@ -1063,7 +1098,7 @@ class FeatureEvaluator:
         if save_path:
             report_path = Path(save_path) / "feature_evaluation_report.json"
             with open(report_path, 'w') as f:
-                json.dump(report, f, indent=2)
+                json.dump(report, f, indent=2, default=str)  # Added default=str as safety
             print(f"\n✅ Feature evaluation report saved to: {report_path}")
         
         return report
@@ -1104,7 +1139,7 @@ class FeatureEvaluator:
             top_features = report['feature_importance']['random_forest']['top_features']
             for i, (feature, importance) in enumerate(top_features[:5], 1):
                 print(f"    {i}. {feature}: {importance:.4f}")
-    
+
     def generate_feature_visualizations(self, X, y, feature_names, save_path):
         """
         Generate comprehensive feature visualization plots.
@@ -1205,15 +1240,21 @@ class FeatureEvaluator:
             if 'random_forest' in self.feature_importance:
                 top_feature_name = self.feature_importance['random_forest']['top_features'][0][0]
                 if top_feature_name in X.columns:
-                    # Create violin plot
-                    plot_data = pd.DataFrame({
-                        'Feature Value': X[top_feature_name],
-                        'Class': y
-                    })
-                    sns.violinplot(x='Class', y='Feature Value', data=plot_data, ax=ax5)
-                    ax5.set_title(f'Distribution of Top Feature: {top_feature_name}')
-                    ax5.set_xlabel('Class (0=Non-physio, 1=Physio)')
-                    ax5.set_ylabel('Feature Value')
+                    # Check if the feature is numeric
+                    if pd.api.types.is_numeric_dtype(X[top_feature_name]):
+                        # Create violin plot
+                        plot_data = pd.DataFrame({
+                            'Feature Value': X[top_feature_name],
+                            'Class': y
+                        })
+                        sns.violinplot(x='Class', y='Feature Value', data=plot_data, ax=ax5)
+                        ax5.set_title(f'Distribution of Top Feature: {top_feature_name}')
+                        ax5.set_xlabel('Class (0=Non-physio, 1=Physio)')
+                        ax5.set_ylabel('Feature Value')
+                    else:
+                        ax5.text(0.5, 0.5, f'Feature "{top_feature_name}" is not numeric', 
+                                ha='center', va='center', transform=ax5.transAxes)
+                        ax5.set_title(f'Distribution of Top Feature: {top_feature_name}')
         
         # 6. Missing values heatmap
         ax6 = plt.subplot(3, 3, 6)
@@ -1229,20 +1270,33 @@ class FeatureEvaluator:
                         ha='center', va='center', transform=ax6.transAxes)
                 ax6.set_title('Missing Values Pattern')
         
-        # 7. Feature statistics boxplot
+        # 7. Feature statistics boxplot (FIXED)
         ax7 = plt.subplot(3, 3, 7)
         if self.feature_stats:
             stats_df = pd.DataFrame(self.feature_stats).T
-            if not stats_df.empty:
-                # Select key statistics to plot
-                key_stats = ['mean', 'std', 'min', 'max']
-                available_stats = [s for s in key_stats if s in stats_df.columns]
+            
+            # Only select numeric statistics for plotting
+            numeric_stats = ['mean', 'std', 'min', 'max', 'median']
+            available_numeric_stats = [s for s in numeric_stats if s in stats_df.columns]
+            
+            if available_numeric_stats:
+                # Convert to numeric, handling any non-numeric values
+                plot_data = stats_df[available_numeric_stats].apply(pd.to_numeric, errors='coerce')
                 
-                if available_stats:
-                    stats_df[available_stats].plot(kind='box', ax=ax7)
+                # Check if we have any numeric data to plot
+                if not plot_data.isna().all().all():
+                    plot_data.plot(kind='box', ax=ax7)
                     ax7.set_title('Feature Statistics Distribution')
                     ax7.set_ylabel('Value')
                     ax7.grid(True, alpha=0.3)
+                else:
+                    ax7.text(0.5, 0.5, 'No numeric statistics available', 
+                            ha='center', va='center', transform=ax7.transAxes)
+                    ax7.set_title('Feature Statistics Distribution')
+            else:
+                ax7.text(0.5, 0.5, 'No numeric statistics available', 
+                        ha='center', va='center', transform=ax7.transAxes)
+                ax7.set_title('Feature Statistics Distribution')
         
         # 8. Top component loadings
         ax8 = plt.subplot(3, 3, 8)
@@ -1300,7 +1354,7 @@ class FeatureEvaluator:
         plt.close()
         
         # Additional: Create detailed feature ranking plot
-        self.create_feature_ranking_plot(save_path)
+        self.create_feature_ranking_plot(save_path)    
     
     def create_feature_ranking_plot(self, save_path):
         """Create a detailed feature ranking plot."""
@@ -1439,6 +1493,7 @@ class ProteinInteractionClassifier:
         self.n_splits = n_splits
         self.cv_splits = None
         self.feature_evaluation_report = None
+        self.feature_names = None
     
     def evaluate_features(self, X, y, feature_names=None, save_path=None):
         """
@@ -1463,15 +1518,15 @@ class ProteinInteractionClassifier:
             else:
                 feature_names = [f'Feature_{i}' for i in range(X.shape[1])]
         
+        # Store feature names for later use
+        self.feature_names = feature_names
+        
         # Perform feature evaluation
         self.feature_evaluation_report = self.feature_evaluator.generate_feature_report(
             X, y, feature_names, save_path
         )
         
         return self.feature_evaluation_report
-    
-    # Note: The rest of the ProteinInteractionClassifier methods remain the same
-    # but I'll include the key methods that were modified or added
     
     def create_cluster_aware_cv_splits(self, X, y, cluster_ids):
         """
@@ -1547,6 +1602,12 @@ class ProteinInteractionClassifier:
         """
         print(f"\n=== TRAINING WITH {self.n_splits}-FOLD CLUSTER-AWARE CROSS-VALIDATION ===")
         
+        # Store feature names if provided
+        if feature_names is not None:
+            self.feature_names = feature_names
+        elif isinstance(X, pd.DataFrame):
+            self.feature_names = list(X.columns)
+        
         # Create CV splits
         cv_splits = self.create_cluster_aware_cv_splits(X, y, cluster_ids)
         
@@ -1555,9 +1616,6 @@ class ProteinInteractionClassifier:
         all_predictions = {}
         all_true_labels = {}
         all_proba_predictions = {}
-        
-        # Store feature names if provided
-        self.feature_names = feature_names
         
         # Train and evaluate each model
         for name, model in self.models.items():
@@ -1588,7 +1646,11 @@ class ProteinInteractionClassifier:
                 X_test_scaled = self.scaler.transform(X_test)
                 
                 # Train model
-                model.fit(X_train_scaled, y_train)
+                try:
+                    model.fit(X_train_scaled, y_train)
+                except Exception as e:
+                    print(f"    Error training model: {e}")
+                    continue
                 
                 # Make predictions
                 y_pred = model.predict(X_test_scaled)
@@ -1628,24 +1690,31 @@ class ProteinInteractionClassifier:
                     all_proba_predictions[name].extend(y_pred_proba.tolist() if hasattr(y_pred_proba, 'tolist') else list(y_pred_proba))
             
             # Calculate average metrics across folds
-            avg_accuracy = np.mean(fold_accuracies)
-            avg_precision = np.mean(fold_precisions)
-            avg_recall = np.mean(fold_recalls)
-            avg_f1 = np.mean(fold_f1s)
-            avg_roc_auc = np.mean(fold_roc_aucs) if fold_roc_aucs else None
+            if fold_accuracies:
+                avg_accuracy = np.mean(fold_accuracies)
+                avg_precision = np.mean(fold_precisions)
+                avg_recall = np.mean(fold_recalls)
+                avg_f1 = np.mean(fold_f1s)
+                avg_roc_auc = np.mean(fold_roc_aucs) if fold_roc_aucs else None
+            else:
+                avg_accuracy = avg_precision = avg_recall = avg_f1 = avg_roc_auc = 0
             
             # Calculate overall metrics
-            overall_accuracy = accuracy_score(all_true_labels[name], all_predictions[name])
-            overall_precision = precision_score(all_true_labels[name], all_predictions[name], zero_division=0)
-            overall_recall = recall_score(all_true_labels[name], all_predictions[name], zero_division=0)
-            overall_f1 = f1_score(all_true_labels[name], all_predictions[name], zero_division=0)
-            
-            overall_roc_auc = None
-            if all_proba_predictions[name]:
-                try:
-                    overall_roc_auc = roc_auc_score(all_true_labels[name], all_proba_predictions[name])
-                except:
-                    overall_roc_auc = None
+            if all_true_labels[name]:
+                overall_accuracy = accuracy_score(all_true_labels[name], all_predictions[name])
+                overall_precision = precision_score(all_true_labels[name], all_predictions[name], zero_division=0)
+                overall_recall = recall_score(all_true_labels[name], all_predictions[name], zero_division=0)
+                overall_f1 = f1_score(all_true_labels[name], all_predictions[name], zero_division=0)
+                
+                overall_roc_auc = None
+                if all_proba_predictions[name]:
+                    try:
+                        overall_roc_auc = roc_auc_score(all_true_labels[name], all_proba_predictions[name])
+                    except:
+                        overall_roc_auc = None
+            else:
+                overall_accuracy = overall_precision = overall_recall = overall_f1 = 0
+                overall_roc_auc = None
             
             # Store results
             self.results[name] = {
@@ -1677,12 +1746,12 @@ class ProteinInteractionClassifier:
             
             # Print results
             print(f"  CV Results for {name}:")
-            print(f"    Average Accuracy:  {avg_accuracy:.4f} (±{np.std(fold_accuracies):.4f})")
-            print(f"    Average Precision: {avg_precision:.4f} (±{np.std(fold_precisions):.4f})")
-            print(f"    Average Recall:    {avg_recall:.4f} (±{np.std(fold_recalls):.4f})")
-            print(f"    Average F1-Score:  {avg_f1:.4f} (±{np.std(fold_f1s):.4f})")
+            print(f"    Average Accuracy:  {avg_accuracy:.4f} (±{np.std(fold_accuracies) if fold_accuracies else 0:.4f})")
+            print(f"    Average Precision: {avg_precision:.4f} (±{np.std(fold_precisions) if fold_precisions else 0:.4f})")
+            print(f"    Average Recall:    {avg_recall:.4f} (±{np.std(fold_recalls) if fold_recalls else 0:.4f})")
+            print(f"    Average F1-Score:  {avg_f1:.4f} (±{np.std(fold_f1s) if fold_f1s else 0:.4f})")
             if avg_roc_auc is not None:
-                print(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(fold_roc_aucs):.4f})")
+                print(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(fold_roc_aucs) if fold_roc_aucs else 0:.4f})")
             
             print(f"  Overall Results (all folds combined):")
             print(f"    Accuracy:  {overall_accuracy:.4f}")
@@ -1702,6 +1771,169 @@ class ProteinInteractionClassifier:
         
         if self.best_model_name:
             print(f"\n✅ Best model: {self.best_model_name} (Average F1-Score: {best_f1:.4f})")
+        
+        return self.results
+    
+    def train_test_split(self, X, y, cluster_ids, test_size=0.2, random_state=42):
+        """
+        Split data into train and test sets while keeping clusters together.
+        
+        Args:
+            X: Features
+            y: Labels
+            cluster_ids: Cluster IDs
+            test_size: Size of test set
+            random_state: Random seed
+            
+        Returns:
+            X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test
+        """
+        print(f"\n=== CREATING TRAIN/TEST SPLIT (Test size: {test_size}) ===")
+        
+        # Get unique clusters
+        unique_clusters = cluster_ids.unique()
+        n_clusters = len(unique_clusters)
+        n_test_clusters = int(n_clusters * test_size)
+        
+        # Randomly select test clusters
+        np.random.seed(random_state)
+        test_clusters = np.random.choice(unique_clusters, n_test_clusters, replace=False)
+        
+        # Create masks
+        train_mask = ~cluster_ids.isin(test_clusters)
+        test_mask = cluster_ids.isin(test_clusters)
+        
+        # Split data
+        X_train = X[train_mask]
+        X_test = X[test_mask]
+        y_train = y[train_mask]
+        y_test = y[test_mask]
+        cluster_ids_train = cluster_ids[train_mask]
+        cluster_ids_test = cluster_ids[test_mask]
+        
+        print(f"  Training set: {len(X_train)} samples, {len(cluster_ids_train.unique())} clusters")
+        print(f"  Test set: {len(X_test)} samples, {len(cluster_ids_test.unique())} clusters")
+        
+        return X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test
+    
+    def train_and_evaluate(self, X, y, cluster_ids, feature_names=None, test_size=0.2):
+        """
+        Train and evaluate models using train/test split.
+        
+        Args:
+            X: Features
+            y: Labels
+            cluster_ids: Cluster IDs
+            feature_names: Feature names
+            test_size: Test set size
+            
+        Returns:
+            Dictionary with evaluation results
+        """
+        print(f"\n=== TRAINING AND EVALUATING MODELS (Test size: {test_size}) ===")
+        
+        # Store feature names
+        if feature_names is not None:
+            self.feature_names = feature_names
+        elif isinstance(X, pd.DataFrame):
+            self.feature_names = list(X.columns)
+        
+        # Split data
+        X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test = self.train_test_split(
+            X, y, cluster_ids, test_size=test_size, random_state=self.random_state
+        )
+        
+        # Scale features
+        X_train_scaled = self.scaler.fit_transform(X_train)
+        X_test_scaled = self.scaler.transform(X_test)
+        
+        # Train and evaluate each model
+        self.results = {}
+        for name, model in self.models.items():
+            print(f"\n--- Training {name} ---")
+            
+            try:
+                # Train model
+                model.fit(X_train_scaled, y_train)
+                
+                # Make predictions
+                y_pred = model.predict(X_test_scaled)
+                
+                # Get probability predictions if available
+                if hasattr(model, 'predict_proba'):
+                    y_pred_proba = model.predict_proba(X_test_scaled)[:, 1]
+                else:
+                    y_pred_proba = None
+                
+                # Calculate metrics
+                accuracy = accuracy_score(y_test, y_pred)
+                precision = precision_score(y_test, y_pred, zero_division=0)
+                recall = recall_score(y_test, y_pred, zero_division=0)
+                f1 = f1_score(y_test, y_pred, zero_division=0)
+                
+                # Calculate ROC-AUC if probability estimates are available
+                roc_auc = None
+                if y_pred_proba is not None:
+                    try:
+                        roc_auc = roc_auc_score(y_test, y_pred_proba)
+                    except:
+                        roc_auc = None
+                
+                # Calculate confusion matrix
+                cm = confusion_matrix(y_test, y_pred)
+                
+                # Store results
+                self.results[name] = {
+                    'accuracy': accuracy,
+                    'precision': precision,
+                    'recall': recall,
+                    'f1': f1,
+                    'roc_auc': roc_auc,
+                    'confusion_matrix': cm.tolist(),
+                    'predictions': y_pred.tolist() if hasattr(y_pred, 'tolist') else list(y_pred),
+                    'true_labels': y_test.tolist() if hasattr(y_test, 'tolist') else list(y_test),
+                    'probabilities': y_pred_proba.tolist() if y_pred_proba is not None and hasattr(y_pred_proba, 'tolist') else list(y_pred_proba) if y_pred_proba is not None else None
+                }
+                
+                # Print results
+                print(f"  Test Results for {name}:")
+                print(f"    Accuracy:  {accuracy:.4f}")
+                print(f"    Precision: {precision:.4f}")
+                print(f"    Recall:    {recall:.4f}")
+                print(f"    F1-Score:  {f1:.4f}")
+                if roc_auc is not None:
+                    print(f"    ROC-AUC:   {roc_auc:.4f}")
+                
+                # Print classification report
+                print(f"    Classification Report:")
+                report = classification_report(y_test, y_pred, target_names=['Non-physio', 'Physio'])
+                for line in report.split('\n'):
+                    print(f"      {line}")
+                
+            except Exception as e:
+                print(f"  Error training {name}: {e}")
+                self.results[name] = {
+                    'accuracy': 0,
+                    'precision': 0,
+                    'recall': 0,
+                    'f1': 0,
+                    'roc_auc': None,
+                    'confusion_matrix': [[0, 0], [0, 0]],
+                    'predictions': [],
+                    'true_labels': [],
+                    'probabilities': None
+                }
+        
+        # Determine best model based on F1-score
+        best_f1 = -1
+        for name, metrics in self.results.items():
+            if metrics['f1'] > best_f1:
+                best_f1 = metrics['f1']
+                self.best_model_name = name
+                self.best_model = self.models[name]
+        
+        if self.best_model_name:
+            print(f"\n✅ Best model: {self.best_model_name} (F1-Score: {best_f1:.4f})")
         
         return self.results
     
@@ -1742,7 +1974,8 @@ class ProteinInteractionClassifier:
         ax = axes[0, 1]
         for name in model_names:
             fold_f1s = self.results[name]['fold_metrics']['f1_scores']
-            ax.plot(range(1, len(fold_f1s) + 1), fold_f1s, marker='o', label=name)
+            if fold_f1s:
+                ax.plot(range(1, len(fold_f1s) + 1), fold_f1s, marker='o', label=name)
         
         ax.set_xlabel('Fold')
         ax.set_ylabel('F1-Score')
@@ -1772,13 +2005,14 @@ class ProteinInteractionClassifier:
             y_true = self.results[self.best_model_name]['true_labels']
             y_pred = self.results[self.best_model_name]['predictions']
             
-            cm = confusion_matrix(y_true, y_pred)
-            sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax,
-                       xticklabels=['Non-physio', 'Physio'],
-                       yticklabels=['Non-physio', 'Physio'])
-            ax.set_xlabel('Predicted')
-            ax.set_ylabel('True')
-            ax.set_title(f'Confusion Matrix - {self.best_model_name}')
+            if y_true and y_pred:
+                cm = confusion_matrix(y_true, y_pred)
+                sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax,
+                           xticklabels=['Non-physio', 'Physio'],
+                           yticklabels=['Non-physio', 'Physio'])
+                ax.set_xlabel('Predicted')
+                ax.set_ylabel('True')
+                ax.set_title(f'Confusion Matrix - {self.best_model_name}')
         
         # Plot 5: Metric distributions across folds
         ax = axes[1, 1]
@@ -1789,16 +2023,18 @@ class ProteinInteractionClassifier:
         for name in model_names:
             for metric, label in zip(metrics_to_plot, metric_labels):
                 values = self.results[name]['fold_metrics'][metric]
-                for value in values:
-                    data.append({'Model': name, 'Metric': label, 'Value': value})
+                if values:
+                    for value in values:
+                        data.append({'Model': name, 'Metric': label, 'Value': value})
         
         if data:
             df_plot = pd.DataFrame(data)
-            sns.boxplot(x='Model', y='Value', hue='Metric', data=df_plot, ax=ax)
-            ax.set_title('Metric Distributions Across Folds')
-            ax.set_ylabel('Score')
-            ax.set_ylim(0, 1.1)
-            ax.legend(title='Metric', bbox_to_anchor=(1.05, 1), loc='upper left')
+            if not df_plot.empty:
+                sns.boxplot(x='Model', y='Value', hue='Metric', data=df_plot, ax=ax)
+                ax.set_title('Metric Distributions Across Folds')
+                ax.set_ylabel('Score')
+                ax.set_ylim(0, 1.1)
+                ax.legend(title='Metric', bbox_to_anchor=(1.05, 1), loc='upper left')
         
         # Plot 6: Class distribution in each fold (empty for now)
         ax = axes[1, 2]
@@ -1826,6 +2062,107 @@ class ProteinInteractionClassifier:
         plt.show()
         print("✅ Cross-validation visualizations generated")
     
+    def plot_test_results(self, save_plots=False, output_dir="."):
+        """Plot test results."""
+        if not self.results:
+            print("❌ No results to plot. Train models first.")
+            return
+        
+        print("\n=== PLOTTING TEST RESULTS ===")
+        
+        # Create figure with subplots
+        fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+        fig.suptitle('Model Performance on Test Set', fontsize=16)
+        
+        # Plot 1: Metrics comparison
+        ax1 = axes[0, 0]
+        model_names = list(self.results.keys())
+        metrics = ['accuracy', 'precision', 'recall', 'f1']
+        metric_labels = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+        
+        x = np.arange(len(model_names))
+        width = 0.2
+        
+        for i, (metric, label) in enumerate(zip(metrics, metric_labels)):
+            values = [self.results[name][metric] for name in model_names]
+            ax1.bar(x + i*width - width*1.5, values, width, label=label)
+        
+        ax1.set_xlabel('Models')
+        ax1.set_ylabel('Score')
+        ax1.set_title('Test Set Metrics by Model')
+        ax1.set_xticks(x)
+        ax1.set_xticklabels(model_names, rotation=45)
+        ax1.legend()
+        ax1.set_ylim(0, 1.1)
+        
+        # Plot 2: ROC curves
+        ax2 = axes[0, 1]
+        for name in model_names:
+            if self.results[name]['probabilities']:
+                fpr, tpr, _ = roc_curve(self.results[name]['true_labels'], 
+                                       self.results[name]['probabilities'])
+                roc_auc = auc(fpr, tpr)
+                ax2.plot(fpr, tpr, label=f'{name} (AUC = {roc_auc:.3f})')
+        
+        ax2.plot([0, 1], [0, 1], 'k--', label='Random')
+        ax2.set_xlabel('False Positive Rate')
+        ax2.set_ylabel('True Positive Rate')
+        ax2.set_title('ROC Curves on Test Set')
+        ax2.legend()
+        ax2.grid(True, alpha=0.3)
+        
+        # Plot 3: Confusion matrix for best model
+        if self.best_model_name:
+            ax3 = axes[1, 0]
+            y_true = self.results[self.best_model_name]['true_labels']
+            y_pred = self.results[self.best_model_name]['predictions']
+            
+            if y_true and y_pred:
+                cm = confusion_matrix(y_true, y_pred)
+                sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax3,
+                           xticklabels=['Non-physio', 'Physio'],
+                           yticklabels=['Non-physio', 'Physio'])
+                ax3.set_xlabel('Predicted')
+                ax3.set_ylabel('True')
+                ax3.set_title(f'Confusion Matrix - {self.best_model_name}')
+        
+        # Plot 4: Model comparison table
+        ax4 = axes[1, 1]
+        ax4.axis('off')
+        
+        # Create comparison table
+        if self.results:
+            comparison_data = []
+            for name in model_names:
+                comparison_data.append([
+                    name,
+                    f"{self.results[name]['accuracy']:.4f}",
+                    f"{self.results[name]['precision']:.4f}",
+                    f"{self.results[name]['recall']:.4f}",
+                    f"{self.results[name]['f1']:.4f}",
+                    f"{self.results[name]['roc_auc']:.4f}" if self.results[name]['roc_auc'] is not None else "N/A"
+                ])
+            
+            # Create table
+            col_labels = ['Model', 'Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
+            table = ax4.table(cellText=comparison_data, colLabels=col_labels, 
+                             cellLoc='center', loc='center')
+            table.auto_set_font_size(False)
+            table.set_fontsize(9)
+            table.scale(1, 1.5)
+        
+        plt.tight_layout()
+        
+        if save_plots:
+            output_path = Path(output_dir)
+            output_path.mkdir(parents=True, exist_ok=True)
+            plot_path = output_path / "test_results.png"
+            plt.savefig(plot_path, dpi=300, bbox_inches='tight')
+            print(f"Saved test results plot to: {plot_path}")
+        
+        plt.show()
+        print("✅ Test results visualizations generated")
+    
     def feature_importance_analysis(self, X_train, y_train, save_plots=False, output_dir="."):
         """
         Analyze feature importance (for tree-based models).
@@ -1849,7 +2186,7 @@ class ProteinInteractionClassifier:
                 importances = model.feature_importances_
                 
                 # Get feature names
-                if hasattr(self, 'feature_names') and self.feature_names is not None:
+                if self.feature_names is not None:
                     feature_names = self.feature_names
                 elif hasattr(X_train, 'columns'):
                     feature_names = list(X_train.columns)
@@ -1900,16 +2237,22 @@ class ProteinInteractionClassifier:
             results_dict[name] = {
                 'cv_metrics': {
                     k: (float(v) if isinstance(v, (np.float32, np.float64)) else v)
-                    for k, v in metrics['cv_metrics'].items()
+                    for k, v in metrics.get('cv_metrics', {}).items()
                 },
                 'overall_metrics': {
                     k: (float(v) if isinstance(v, (np.float32, np.float64)) else v)
-                    for k, v in metrics['overall_metrics'].items()
+                    for k, v in metrics.get('overall_metrics', {}).items()
                 },
                 'fold_metrics': {
                     k: ([float(val) for val in v] if isinstance(v, list) else v)
-                    for k, v in metrics['fold_metrics'].items()
-                }
+                    for k, v in metrics.get('fold_metrics', {}).items()
+                },
+                'accuracy': metrics.get('accuracy', 0),
+                'precision': metrics.get('precision', 0),
+                'recall': metrics.get('recall', 0),
+                'f1': metrics.get('f1', 0),
+                'roc_auc': metrics.get('roc_auc'),
+                'confusion_matrix': metrics.get('confusion_matrix', [[0, 0], [0, 0]])
             }
         
         # Add cross-validation settings
@@ -1945,6 +2288,9 @@ Examples:
   # Use GitHub repository with 10-fold CV and save feature analysis
   python 5_ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --folds 10 --evaluate-features --save-plots
   
+  # Train/test split instead of CV
+  python 5_ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
+  
   # Full pipeline with feature evaluation and importance analysis
   python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots --output-dir ./full_analysis
         """
@@ -1967,6 +2313,13 @@ Examples:
         type=int,
         default=5,
         help='Number of cross-validation folds (default: 5)'
+    )
+    
+    parser.add_argument(
+        '--test-split',
+        type=float,
+        default=0.0,
+        help='Fraction of data to use as test set (0.0 for CV only, >0 for train/test split)'
     )
     
     parser.add_argument(
@@ -2157,15 +2510,24 @@ def main():
             n_splits=args.folds
         )
         
-        # Step 7: Train with ClusterID-aware cross-validation
+        # Step 7: Train and evaluate models
         print("\n" + "="*60)
-        print("Step 7: Training with ClusterID-aware cross-validation")
+        print("Step 7: Training and evaluating models")
         print("="*60)
         
-        results = classifier.train_with_cross_validation(
-            X_processed, labels, cluster_ids,
-            feature_names=list(X_processed.columns)
-        )
+        if args.test_split > 0:
+            # Use train/test split
+            results = classifier.train_and_evaluate(
+                X_processed, labels, cluster_ids,
+                feature_names=list(X_processed.columns),
+                test_size=args.test_split
+            )
+        else:
+            # Use cross-validation
+            results = classifier.train_with_cross_validation(
+                X_processed, labels, cluster_ids,
+                feature_names=list(X_processed.columns)
+            )
         
         # Step 8: Save results
         print("\n" + "="*60)
@@ -2180,7 +2542,10 @@ def main():
             print("Step 9: Generating visualizations")
             print("="*60)
             
-            classifier.plot_cv_results(save_plots=args.save_plots, output_dir=args.output_dir)
+            if args.test_split > 0:
+                classifier.plot_test_results(save_plots=args.save_plots, output_dir=args.output_dir)
+            else:
+                classifier.plot_cv_results(save_plots=args.save_plots, output_dir=args.output_dir)
             
             # Step 10: Feature importance analysis
             if args.feature_analysis:
@@ -2203,7 +2568,12 @@ def main():
         print(f"Total samples: {len(features_df)}")
         print(f"Unique ClusterIDs: {cluster_ids.nunique()}")
         print(f"Features used: {X_processed.shape[1]}")
-        print(f"Cross-validation folds: {args.folds}")
+        
+        if args.test_split > 0:
+            print(f"Evaluation method: Train/test split (Test size: {args.test_split})")
+        else:
+            print(f"Cross-validation folds: {args.folds}")
+        
         print(f"Random state: {args.random_state}")
         
         if args.evaluate_features:
@@ -2214,25 +2584,37 @@ def main():
                 print(f"  - Significant features (ANOVA p<0.05): {len(report['feature_target_analysis']['anova_significant_features'])}")
                 print(f"  - PCA components for 95% variance: {report['pca_analysis']['components_needed_95']}")
         
-        print(f"\nCross-validation method: ClusterID-aware stratified CV")
-        print(f"  - Ensures all interfaces from same cluster stay together")
-        print(f"  - Maintains class balance across folds")
-        print(f"  - Prevents data leakage between training and testing")
+        if args.test_split <= 0:
+            print(f"\nCross-validation method: ClusterID-aware stratified CV")
+            print(f"  - Ensures all interfaces from same cluster stay together")
+            print(f"  - Maintains class balance across folds")
+            print(f"  - Prevents data leakage between training and testing")
         
         if classifier.best_model_name and results:
-            best_result = results[classifier.best_model_name]
-            print(f"\nBest model: {classifier.best_model_name}")
-            print(f"  Average CV Metrics:")
-            print(f"    F1-Score:  {best_result['cv_metrics']['f1']:.4f}")
-            print(f"    Accuracy:  {best_result['cv_metrics']['accuracy']:.4f}")
-            print(f"    Precision: {best_result['cv_metrics']['precision']:.4f}")
-            print(f"    Recall:    {best_result['cv_metrics']['recall']:.4f}")
-            if best_result['cv_metrics']['roc_auc'] is not None:
-                print(f"    ROC-AUC:   {best_result['cv_metrics']['roc_auc']:.4f}")
-            
-            print(f"\n  Overall Metrics (all folds combined):")
-            print(f"    F1-Score:  {best_result['overall_metrics']['f1']:.4f}")
-            print(f"    Accuracy:  {best_result['overall_metrics']['accuracy']:.4f}")
+            if args.test_split > 0:
+                best_result = results[classifier.best_model_name]
+                print(f"\nBest model: {classifier.best_model_name}")
+                print(f"  Test Set Metrics:")
+                print(f"    F1-Score:  {best_result['f1']:.4f}")
+                print(f"    Accuracy:  {best_result['accuracy']:.4f}")
+                print(f"    Precision: {best_result['precision']:.4f}")
+                print(f"    Recall:    {best_result['recall']:.4f}")
+                if best_result['roc_auc'] is not None:
+                    print(f"    ROC-AUC:   {best_result['roc_auc']:.4f}")
+            else:
+                best_result = results[classifier.best_model_name]
+                print(f"\nBest model: {classifier.best_model_name}")
+                print(f"  Average CV Metrics:")
+                print(f"    F1-Score:  {best_result['cv_metrics']['f1']:.4f}")
+                print(f"    Accuracy:  {best_result['cv_metrics']['accuracy']:.4f}")
+                print(f"    Precision: {best_result['cv_metrics']['precision']:.4f}")
+                print(f"    Recall:    {best_result['cv_metrics']['recall']:.4f}")
+                if best_result['cv_metrics']['roc_auc'] is not None:
+                    print(f"    ROC-AUC:   {best_result['cv_metrics']['roc_auc']:.4f}")
+                
+                print(f"\n  Overall Metrics (all folds combined):")
+                print(f"    F1-Score:  {best_result['overall_metrics']['f1']:.4f}")
+                print(f"    Accuracy:  {best_result['overall_metrics']['accuracy']:.4f}")
         
         if args.save_plots:
             print(f"\nResults saved to: {args.output_dir}")
@@ -2259,16 +2641,19 @@ Example Usage with Feature Evaluation:
 1. Comprehensive feature evaluation only:
    python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-report-only
 
-2. Full pipeline with feature evaluation and model training:
+2. Full pipeline with feature evaluation and model training (CV):
    python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots
 
 3. Feature evaluation from GitHub repository:
    python 5_ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --evaluate-features
 
-4. Quick evaluation with feature analysis:
+4. Train/test split instead of CV:
+   python 5_ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
+
+5. Quick evaluation with feature analysis:
    python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --quick
 
-5. Advanced feature evaluation with custom output directory:
+6. Advanced feature evaluation with custom output directory:
    python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --save-plots --output-dir ./detailed_feature_analysis
     """)
 
