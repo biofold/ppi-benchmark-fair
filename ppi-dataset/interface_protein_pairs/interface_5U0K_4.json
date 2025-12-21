@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "G-I",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5U0K\", \"structure_metadata\": {\"pdb_id\": \"5U0K\", \"resolution\": 2.548, \"deposition_date\": \"2016-11-24T00:00:00+0000\", \"release_date\": \"2017-05-24T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"The origin and evolution of human glutaminases and their atypical C-terminal ankyrin repeats.\", \"doi\": \"10.1074/jbc.M117.787291\", \"authors\": [\"Pasquali, C.C.\", \"Islam, Z.\", \"Adamoski, D.\", \"Ferreira, I.M.\", \"Righeto, R.D.\", \"Bettini, J.\", \"Portugal, R.V.\", \"Yue, W.W.\", \"Gonzalez, A.\", \"Dias, S.M.G.\", \"Ambrosio, A.L.B.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 85.26, \"b\": 85.26, \"c\": 336.78, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"B\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"C\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"D\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"E\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"F\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"G\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"H\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"I\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"J\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 141, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 141, \"gene_name\": null, \"uniprot_ids\": [\"Q9UI32\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MHHHHHHSSGVDLGTENLYFQSMKTVVNLLFAAYSGDVSALRRFALSAMDMEQKDYDSRTALHVAAAEGHIEVVKFLIEACKVNPFAKDRWGNIPLDDAVQFNHLEVVKLLQDYQDSYTLSETQAEAAAEALSKENLESMV\", \"entities\": [\"1\"], \"chain_count\": 10}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:38:22.125251\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 10, \"chain_count\": 10, \"unique_sequences\": 1, \"avg_sequence_length\": 141.0, \"min_sequence_length\": 141, \"max_sequence_length\": 141}, \"interface_info\": {\"interface_id\": \"5U0K_4\", \"name\": \"Interface 5U0K_4\", \"pdb_id\": \"5U0K\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"G\", \"label_chain2\": \"I\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 141, \"chain2_sequence_length\": 141, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:38:23.028068\"}",
@@ -320,6 +314,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "G-I",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -441,24 +447,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "G",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "I",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "G-I",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5U0K_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"I\"}, \"actual_chains_found\": [\"G\", \"I\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5u0k_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.955968\"}",
       "description": "Results of chain validation against structure files",
@@ -528,6 +516,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5U0K_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"I\"}, \"actual_chains_found\": [\"G\", \"I\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5u0k_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.210236\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.210236"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5U0K_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"I\"}, \"actual_chains_found\": [\"G\", \"I\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5u0k_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.936784\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.936784"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "G",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "I",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "G-I",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5U0K_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"I\"}, \"actual_chains_found\": [\"G\", \"I\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5u0k_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.441110\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:47.441110"
+        }
+      }
     }
   ]
 }

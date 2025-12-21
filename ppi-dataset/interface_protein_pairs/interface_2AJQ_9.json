@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2AJQ\", \"structure_metadata\": {\"pdb_id\": \"2AJQ\", \"resolution\": 2.6, \"deposition_date\": \"2005-08-02T00:00:00+0000\", \"release_date\": \"2006-09-26T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Escherichia phage T7\", \"Escherichia coli\"], \"citation\": {\"title\": \"Structure of replicative DNA polymerase provides insigts into the mechanisms for processivity, frameshifting and editing\", \"authors\": [\"Brieba, L.\", \"Ellenberger, T.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 168.312, \"b\": 169.235, \"c\": 179.788, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"P\": \"(DC)(DG)(DA)(DA)(DA)(DA)(DC)(DG)(DA)(DC)(DG)(DG)(DC)(DC)(DA)(DG)(DT)(DG)(DC)(DC)(DA)(2DT)\", \"X\": \"(DC)(DG)(DA)(DA)(DA)(DA)(DC)(DG)(DA)(DC)(DG)(DG)(DC)(DC)(DA)(DG)(DT)(DG)(DC)(DC)(DA)(2DT)\", \"T\": \"(DA)(DT)(DG)(DG)(DA)(DT)(DG)(DG)(DC)(DA)(DC)(DT)(DG)(DG)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DT)(DT)(DT)(DC)(DG)\", \"Z\": \"(DA)(DT)(DG)(DG)(DA)(DT)(DG)(DG)(DC)(DA)(DC)(DT)(DG)(DG)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DT)(DT)(DT)(DC)(DG)\", \"A\": \"MIVSAIAANALLESVTKFHCGVIYDYSTAEYVSYRPSDFGAYLDALEAEVARGGLIVFHNGHKYDVPALTKLAKLQLNREFHLPRENCIDTLVLSRLIHSNLKDTDMGLLRSGKLPGKRFGSHALEAWGYRLGEMKGEYKDDFKRMLEEQGEEYVDGMEWWNFNEEMMDYNVQDVVVTKALLEKLLSDKHYFPPEIDFTDVGYTTFWSESLEAVDIEHRAAWLLAKQERNGFPFDTKAIEELYVELAARRSELLRKLTETFGSWYQPKGGTEMFCHPRTGKPLPKYPRIKTPKVGGIFKKPKNKAQREGREPCELDTREYVAGAPYTPVEHVVFNPSSRDHIQKKLQEAGWVPTKYTDKGAPVVDDEVLEGVRVDDPEKQAAIDLIKEYLMIQKRIGQSAEGDKAWLRYVAEDGKIHGSVNPNGAVTGRATHAFPNLAQIPGVRSPYGEQCRAAFGAEHHLDGITGKPWVQAGIDASGLELRCLAHFMARFDNGEYAHEILNGDIHTKNQIAAELPTRDNAKTFIYGFLYGAGDEKIGQIVGAGKERGKELKKKFLENTPAIAALRESIQQTLVESSQWVAGEQQVKWKRRWIKGLDGRKVHVRSPHAALNTLLQSAGALICKLWIIKTEEMLVEKGLKHGWDGDFAYMAWVHDEIQVGCRTEEIAQVVIETAQEAMRWVGDHWNFRCLLDTEGKMGPNWAICH\", \"F\": \"MIVSAIAANALLESVTKFHCGVIYDYSTAEYVSYRPSDFGAYLDALEAEVARGGLIVFHNGHKYDVPALTKLAKLQLNREFHLPRENCIDTLVLSRLIHSNLKDTDMGLLRSGKLPGKRFGSHALEAWGYRLGEMKGEYKDDFKRMLEEQGEEYVDGMEWWNFNEEMMDYNVQDVVVTKALLEKLLSDKHYFPPEIDFTDVGYTTFWSESLEAVDIEHRAAWLLAKQERNGFPFDTKAIEELYVELAARRSELLRKLTETFGSWYQPKGGTEMFCHPRTGKPLPKYPRIKTPKVGGIFKKPKNKAQREGREPCELDTREYVAGAPYTPVEHVVFNPSSRDHIQKKLQEAGWVPTKYTDKGAPVVDDEVLEGVRVDDPEKQAAIDLIKEYLMIQKRIGQSAEGDKAWLRYVAEDGKIHGSVNPNGAVTGRATHAFPNLAQIPGVRSPYGEQCRAAFGAEHHLDGITGKPWVQAGIDASGLELRCLAHFMARFDNGEYAHEILNGDIHTKNQIAAELPTRDNAKTFIYGFLYGAGDEKIGQIVGAGKERGKELKKKFLENTPAIAALRESIQQTLVESSQWVAGEQQVKWKRRWIKGLDGRKVHVRSPHAALNTLLQSAGALICKLWIIKTEEMLVEKGLKHGWDGDFAYMAWVHDEIQVGCRTEEIAQVVIETAQEAMRWVGDHWNFRCLLDTEGKMGPNWAICH\", \"B\": \"SDKIIHLTDDSFDTDVLKADGAILVDFWAEWCGPCKMIAPILDEIADEYQGKLTVAKLNIDQNPGTAPKYGIRGIPTLLLFKNGEVAATKVGALSKGQLKEFLDANLA\", \"I\": \"SDKIIHLTDDSFDTDVLKADGAILVDFWAEWCGPCKMIAPILDEIADEYQGKLTVAKLNIDQNPGTAPKYGIRGIPTLLLFKNGEVAATKVGALSKGQLKEFLDANLA\"}, \"chain_info\": {\"P\": {\"entity_id\": \"1\", \"organism\": null, \"sequence_length\": 89, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"X\": {\"entity_id\": \"1\", \"organism\": null, \"sequence_length\": 89, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"T\": {\"entity_id\": \"2\", \"organism\": null, \"sequence_length\": 104, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"Z\": {\"entity_id\": \"2\", \"organism\": null, \"sequence_length\": 104, \"polymer_type\": \"polydeoxyribonucleotide\", \"gene_name\": null, \"uniprot_ids\": []}, \"A\": {\"entity_id\": \"3\", \"organism\": \"Escherichia phage T7\", \"sequence_length\": 704, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00581\"]}, \"F\": {\"entity_id\": \"3\", \"organism\": \"Escherichia phage T7\", \"sequence_length\": 704, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00581\"]}, \"B\": {\"entity_id\": \"4\", \"organism\": \"Escherichia coli\", \"sequence_length\": 108, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0AA25\"]}, \"I\": {\"entity_id\": \"4\", \"organism\": \"Escherichia coli\", \"sequence_length\": 108, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0AA25\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(DC)(DG)(DA)(DA)(DA)(DA)(DC)(DG)(DA)(DC)(DG)(DG)(DC)(DC)(DA)(DG)(DT)(DG)(DC)(DC)(DA)(2DT)\", \"organism\": null, \"taxonomy_id\": null, \"chain_ids\": [\"P\", \"X\"], \"polymer_type\": \"polydeoxyribonucleotide\", \"sequence_length\": 89, \"gene_name\": null, \"uniprot_ids\": []}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"(DA)(DT)(DG)(DG)(DA)(DT)(DG)(DG)(DC)(DA)(DC)(DT)(DG)(DG)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DT)(DT)(DT)(DC)(DG)\", \"organism\": null, \"taxonomy_id\": null, \"chain_ids\": [\"T\", \"Z\"], \"polymer_type\": \"polydeoxyribonucleotide\", \"sequence_length\": 104, \"gene_name\": null, \"uniprot_ids\": []}, \"3\": {\"entity_id\": \"3\", \"sequence\": \"MIVSAIAANALLESVTKFHCGVIYDYSTAEYVSYRPSDFGAYLDALEAEVARGGLIVFHNGHKYDVPALTKLAKLQLNREFHLPRENCIDTLVLSRLIHSNLKDTDMGLLRSGKLPGKRFGSHALEAWGYRLGEMKGEYKDDFKRMLEEQGEEYVDGMEWWNFNEEMMDYNVQDVVVTKALLEKLLSDKHYFPPEIDFTDVGYTTFWSESLEAVDIEHRAAWLLAKQERNGFPFDTKAIEELYVELAARRSELLRKLTETFGSWYQPKGGTEMFCHPRTGKPLPKYPRIKTPKVGGIFKKPKNKAQREGREPCELDTREYVAGAPYTPVEHVVFNPSSRDHIQKKLQEAGWVPTKYTDKGAPVVDDEVLEGVRVDDPEKQAAIDLIKEYLMIQKRIGQSAEGDKAWLRYVAEDGKIHGSVNPNGAVTGRATHAFPNLAQIPGVRSPYGEQCRAAFGAEHHLDGITGKPWVQAGIDASGLELRCLAHFMARFDNGEYAHEILNGDIHTKNQIAAELPTRDNAKTFIYGFLYGAGDEKIGQIVGAGKERGKELKKKFLENTPAIAALRESIQQTLVESSQWVAGEQQVKWKRRWIKGLDGRKVHVRSPHAALNTLLQSAGALICKLWIIKTEEMLVEKGLKHGWDGDFAYMAWVHDEIQVGCRTEEIAQVVIETAQEAMRWVGDHWNFRCLLDTEGKMGPNWAICH\", \"organism\": \"Escherichia phage T7\", \"taxonomy_id\": 10760, \"chain_ids\": [\"A\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 704, \"gene_name\": null, \"uniprot_ids\": [\"P00581\"]}, \"4\": {\"entity_id\": \"4\", \"sequence\": \"SDKIIHLTDDSFDTDVLKADGAILVDFWAEWCGPCKMIAPILDEIADEYQGKLTVAKLNIDQNPGTAPKYGIRGIPTLLLFKNGEVAATKVGALSKGQLKEFLDANLA\", \"organism\": \"Escherichia coli\", \"taxonomy_id\": 562, \"chain_ids\": [\"B\", \"I\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 108, \"gene_name\": null, \"uniprot_ids\": [\"P0AA25\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"(DC)(DG)(DA)(DA)(DA)(DA)(DC)(DG)(DA)(DC)(DG)(DG)(DC)(DC)(DA)(DG)(DT)(DG)(DC)(DC)(DA)(2DT)\", \"entities\": [\"1\"], \"chain_count\": 2}, {\"sequence\": \"(DA)(DT)(DG)(DG)(DA)(DT)(DG)(DG)(DC)(DA)(DC)(DT)(DG)(DG)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DT)(DT)(DT)(DC)(DG)\", \"entities\": [\"2\"], \"chain_count\": 2}, {\"sequence\": \"MIVSAIAANALLESVTKFHCGVIYDYSTAEYVSYRPSDFGAYLDALEAEVARGGLIVFHNGHKYDVPALTKLAKLQLNREFHLPRENCIDTLVLSRLIHSNLKDTDMGLLRSGKLPGKRFGSHALEAWGYRLGEMKGEYKDDFKRMLEEQGEEYVDGMEWWNFNEEMMDYNVQDVVVTKALLEKLLSDKHYFPPEIDFTDVGYTTFWSESLEAVDIEHRAAWLLAKQERNGFPFDTKAIEELYVELAARRSELLRKLTETFGSWYQPKGGTEMFCHPRTGKPLPKYPRIKTPKVGGIFKKPKNKAQREGREPCELDTREYVAGAPYTPVEHVVFNPSSRDHIQKKLQEAGWVPTKYTDKGAPVVDDEVLEGVRVDDPEKQAAIDLIKEYLMIQKRIGQSAEGDKAWLRYVAEDGKIHGSVNPNGAVTGRATHAFPNLAQIPGVRSPYGEQCRAAFGAEHHLDGITGKPWVQAGIDASGLELRCLAHFMARFDNGEYAHEILNGDIHTKNQIAAELPTRDNAKTFIYGFLYGAGDEKIGQIVGAGKERGKELKKKFLENTPAIAALRESIQQTLVESSQWVAGEQQVKWKRRWIKGLDGRKVHVRSPHAALNTLLQSAGALICKLWIIKTEEMLVEKGLKHGWDGDFAYMAWVHDEIQVGCRTEEIAQVVIETAQEAMRWVGDHWNFRCLLDTEGKMGPNWAICH\", \"entities\": [\"3\"], \"chain_count\": 2}, {\"sequence\": \"SDKIIHLTDDSFDTDVLKADGAILVDFWAEWCGPCKMIAPILDEIADEYQGKLTVAKLNIDQNPGTAPKYGIRGIPTLLLFKNGEVAATKVGALSKGQLKEFLDANLA\", \"entities\": [\"4\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:34:45.628210\", \"polymer_composition\": \"protein/NA\", \"chain_count\": 8, \"unique_sequences\": 4, \"avg_sequence_length\": 251.25, \"min_sequence_length\": 89, \"max_sequence_length\": 704}, \"interface_info\": {\"interface_id\": \"2AJQ_9\", \"name\": \"Interface 2AJQ_9\", \"pdb_id\": \"2AJQ\", \"auth_chain1\": \"F\", \"auth_chain2\": \"F\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 704, \"chain2_sequence_length\": 108, \"sequences_identical\": false, \"sequence_identity\": 7.4074074074074066}, \"enrichment_timestamp\": \"2025-12-19T19:34:47.412062\"}",
@@ -329,6 +323,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -450,24 +456,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2AJQ_9\", \"auth_chains\": {\"chain1\": \"F\", \"chain2\": \"F\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2ajq_9.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.546203\"}",
       "description": "Results of chain validation against structure files",
@@ -528,6 +516,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2AJQ_9\", \"auth_chains\": {\"chain1\": \"F\", \"chain2\": \"F\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2ajq_9.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.798688\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.798688"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2AJQ_9\", \"auth_chains\": {\"chain1\": \"F\", \"chain2\": \"F\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2ajq_9.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.530106\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.530106"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2AJQ_9\", \"auth_chains\": {\"chain1\": \"F\", \"chain2\": \"F\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2ajq_9.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.087957\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.087957"
+        }
+      }
     }
   ]
 }

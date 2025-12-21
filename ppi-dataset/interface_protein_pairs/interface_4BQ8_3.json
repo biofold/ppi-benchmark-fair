@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4BQ8\", \"structure_metadata\": {\"pdb_id\": \"4BQ8\", \"resolution\": 2.8, \"deposition_date\": \"2013-05-30T00:00:00+0000\", \"release_date\": \"2013-06-12T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mus musculus\", \"Homo sapiens\"], \"citation\": {\"title\": \"Structure of the Repulsive Guidance Molecule (Rgm)-Neogenin Signaling Hub\", \"doi\": \"10.1126/SCIENCE.1232322\", \"authors\": [\"Bell, C.H.\", \"Healey, E.\", \"Van Erp, S.\", \"Bishop, B.\", \"Tang, C.\", \"Gilbert, R.J.C.\", \"Aricescu, A.R.\", \"Pasterkamp, R.J.\", \"Siebold, C.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 116.92, \"b\": 116.92, \"c\": 91.82, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"ETGTPMMPPVGVQASILSHDTIRITWADNSLPKHQKITDSRYYTVRWKTNIPANTKYKNANATTLSYLVTGLKPNTLYEFSVMVTKGRRSSTWSMTAHGATFELVPTSPPKDVTVVSKEGKPRTIIVNWQPPSEANGKITGYIIYYSTDVNAEIHDWVIEPVVGNRLTHQIQELTLDTPYYFKIQARNSKGMGPMSEAVQFRTPGTKHHHHHH\", \"B\": \"ETGQPAQCRIQKCTTDFVSLTSHLNSAVDGFDSEFCKALRAYAGCTQRTSKACRGNLVYHSAVLGISDLMSQRNCSKDGPTSSTNPEVTHDPCNYHSHAGAREHRRGDQNPPSYLFCGLFGD\", \"C\": \"PHLRTFKDNFQTCKVEGAWPLIDNNYLSVQVTNVPVVPGSSATATNKITIIFKAHHGCTDQKVYQAVTDDLPAAFVDGTTSGGDSDAKSLRIVERESGHYVEMHARYIGTTVFVRQVGRYLTLAIRMPEDLAMSYEESQDLQLCVNGCPLSERIDDGQGQVSAILGHSLPRTSLVQAWPGYTLETANTQCHEKMPVKDIYFQSCVFDLLTTGDANFTAAAHSALEDVEALHPRKERWHIFPSGTKHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 213, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P97798\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Homo sapiens\", \"sequence_length\": 122, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q6NW40\"]}, \"C\": {\"entity_id\": \"3\", \"organism\": \"Homo sapiens\", \"sequence_length\": 251, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q6NW40\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"ETGTPMMPPVGVQASILSHDTIRITWADNSLPKHQKITDSRYYTVRWKTNIPANTKYKNANATTLSYLVTGLKPNTLYEFSVMVTKGRRSSTWSMTAHGATFELVPTSPPKDVTVVSKEGKPRTIIVNWQPPSEANGKITGYIIYYSTDVNAEIHDWVIEPVVGNRLTHQIQELTLDTPYYFKIQARNSKGMGPMSEAVQFRTPGTKHHHHHH\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 213, \"gene_name\": null, \"uniprot_ids\": [\"P97798\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"ETGQPAQCRIQKCTTDFVSLTSHLNSAVDGFDSEFCKALRAYAGCTQRTSKACRGNLVYHSAVLGISDLMSQRNCSKDGPTSSTNPEVTHDPCNYHSHAGAREHRRGDQNPPSYLFCGLFGD\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 122, \"gene_name\": null, \"uniprot_ids\": [\"Q6NW40\"]}, \"3\": {\"entity_id\": \"3\", \"sequence\": \"PHLRTFKDNFQTCKVEGAWPLIDNNYLSVQVTNVPVVPGSSATATNKITIIFKAHHGCTDQKVYQAVTDDLPAAFVDGTTSGGDSDAKSLRIVERESGHYVEMHARYIGTTVFVRQVGRYLTLAIRMPEDLAMSYEESQDLQLCVNGCPLSERIDDGQGQVSAILGHSLPRTSLVQAWPGYTLETANTQCHEKMPVKDIYFQSCVFDLLTTGDANFTAAAHSALEDVEALHPRKERWHIFPSGTKHHHHHH\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 251, \"gene_name\": null, \"uniprot_ids\": [\"Q6NW40\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"ETGTPMMPPVGVQASILSHDTIRITWADNSLPKHQKITDSRYYTVRWKTNIPANTKYKNANATTLSYLVTGLKPNTLYEFSVMVTKGRRSSTWSMTAHGATFELVPTSPPKDVTVVSKEGKPRTIIVNWQPPSEANGKITGYIIYYSTDVNAEIHDWVIEPVVGNRLTHQIQELTLDTPYYFKIQARNSKGMGPMSEAVQFRTPGTKHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"ETGQPAQCRIQKCTTDFVSLTSHLNSAVDGFDSEFCKALRAYAGCTQRTSKACRGNLVYHSAVLGISDLMSQRNCSKDGPTSSTNPEVTHDPCNYHSHAGAREHRRGDQNPPSYLFCGLFGD\", \"entities\": [\"2\"], \"chain_count\": 1}, {\"sequence\": \"PHLRTFKDNFQTCKVEGAWPLIDNNYLSVQVTNVPVVPGSSATATNKITIIFKAHHGCTDQKVYQAVTDDLPAAFVDGTTSGGDSDAKSLRIVERESGHYVEMHARYIGTTVFVRQVGRYLTLAIRMPEDLAMSYEESQDLQLCVNGCPLSERIDDGQGQVSAILGHSLPRTSLVQAWPGYTLETANTQCHEKMPVKDIYFQSCVFDLLTTGDANFTAAAHSALEDVEALHPRKERWHIFPSGTKHHHHHH\", \"entities\": [\"3\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:36:26.333800\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 3, \"unique_sequences\": 3, \"avg_sequence_length\": 195.33333333333334, \"min_sequence_length\": 122, \"max_sequence_length\": 251}, \"interface_info\": {\"interface_id\": \"4BQ8_3\", \"name\": \"Interface 4BQ8_3\", \"pdb_id\": \"4BQ8\", \"auth_chain1\": \"C\", \"auth_chain2\": \"C\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 213, \"chain2_sequence_length\": 122, \"sequences_identical\": false, \"sequence_identity\": 9.01639344262295}, \"enrichment_timestamp\": \"2025-12-19T19:36:28.145084\"}",
@@ -309,6 +303,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -430,24 +436,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4BQ8_3\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"C\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4bq8_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.747624\"}",
       "description": "Results of chain validation against structure files",
@@ -497,6 +485,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4BQ8_3\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"C\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4bq8_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.925501\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.925501"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4BQ8_3\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"C\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4bq8_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.661358\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.661358"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4BQ8_3\", \"auth_chains\": {\"chain1\": \"C\", \"chain2\": \"C\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4bq8_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.226439\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.226439"
+        }
+      }
     }
   ]
 }

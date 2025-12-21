@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3VNF\", \"structure_metadata\": {\"pdb_id\": \"3VNF\", \"resolution\": 2.1, \"deposition_date\": \"2012-01-12T00:00:00+0000\", \"release_date\": \"2012-04-18T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Sudan ebolavirus\"], \"citation\": {\"title\": \"The ebola virus interferon antagonist VP24 directly binds STAT1 and has a novel, pyramidal fold\", \"doi\": \"10.1371/journal.ppat.1002550\", \"authors\": [\"Zhang, A.P.P.\", \"Bornholdt, Z.A.\", \"Liu, T.\", \"Abelson, D.M.\", \"Lee, D.E.\", \"Li, S.\", \"Woods Jr., V.L.\", \"Saphire, E.O.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 61.11, \"b\": 61.11, \"c\": 126.82, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"PKRELEQGVAFSDLCNFLVTPTVQGWKVYWAGLEFDVNQKGITLLNRLKVNDFAPAWAMTRNLFPHLFKNQQSEVQTPIWALRVILAAGILDQLMDHSLIEPLSGALNLIADWLLTTSTNHFNMRTQRVKDQLSMRMLSLIRSNIINFINKLETLHVVNYKGLLSSVEIGTPSYAIIITRTNMGYLVEVQEPDKSAMDIRHPGPVKFSLLHESTLK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Sudan ebolavirus\", \"sequence_length\": 216, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5XX02\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"PKRELEQGVAFSDLCNFLVTPTVQGWKVYWAGLEFDVNQKGITLLNRLKVNDFAPAWAMTRNLFPHLFKNQQSEVQTPIWALRVILAAGILDQLMDHSLIEPLSGALNLIADWLLTTSTNHFNMRTQRVKDQLSMRMLSLIRSNIINFINKLETLHVVNYKGLLSSVEIGTPSYAIIITRTNMGYLVEVQEPDKSAMDIRHPGPVKFSLLHESTLK\", \"organism\": \"Sudan ebolavirus\", \"taxonomy_id\": 186540, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 216, \"gene_name\": null, \"uniprot_ids\": [\"Q5XX02\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"PKRELEQGVAFSDLCNFLVTPTVQGWKVYWAGLEFDVNQKGITLLNRLKVNDFAPAWAMTRNLFPHLFKNQQSEVQTPIWALRVILAAGILDQLMDHSLIEPLSGALNLIADWLLTTSTNHFNMRTQRVKDQLSMRMLSLIRSNIINFINKLETLHVVNYKGLLSSVEIGTPSYAIIITRTNMGYLVEVQEPDKSAMDIRHPGPVKFSLLHESTLK\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T18:37:36.590892\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 216.0, \"min_sequence_length\": 216, \"max_sequence_length\": 216}, \"interface_info\": {\"interface_id\": \"3VNF_2\", \"name\": \"Interface 3VNF_2\", \"pdb_id\": \"3VNF\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": null, \"enrichment_timestamp\": \"2025-12-19T18:37:37.497896\"}",
@@ -239,6 +233,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -354,24 +360,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3VNF_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3vnf_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:31.634088\"}",
       "description": "Results of chain validation against structure files",
@@ -429,6 +417,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3VNF_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3vnf_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.737043\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.737043"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3VNF_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3vnf_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.480544\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.480544"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3VNF_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3vnf_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.947410\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.947410"
+        }
+      }
     }
   ]
 }

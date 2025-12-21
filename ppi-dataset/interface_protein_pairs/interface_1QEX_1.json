@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"1QEX\", \"structure_metadata\": {\"pdb_id\": \"1QEX\", \"resolution\": 2.3, \"deposition_date\": \"1999-03-30T00:00:00+0000\", \"release_date\": \"1999-10-05T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Tequatrovirus T4\"], \"citation\": {\"title\": \"The structure of bacteriophage T4 gene product 9: the trigger for tail contraction.\", \"doi\": \"10.1016/S0969-2126(00)80055-6\", \"authors\": [\"Kostyuchenko, V.A.\", \"Navruzbekov, G.A.\", \"Kurochkina, L.P.\", \"Strelkov, S.V.\", \"Mesyanzhinov, V.V.\", \"Rossmann, M.G.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 94.33, \"b\": 94.33, \"c\": 440.94, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MFIQEPKKLIDTGEIGNASTGDILFDGGNKINSDFNAIYNAFGDQRKMAVANGTGADGQIIHATGYYQKHSITEYATPVKVGTRHDIDTSTVGVKVIIERGELGDCVEFINSNGSISVTNPLTIQAIDSIKGVSGNLVVTSPYSKVTLRCISSDNSTSVWNYSIESMFGQKESPAEGTWNISTSGSVDIPLFHRTEYNMAKLLVTCQSVDGRKIKTAEINILVDTVNSEVISSEYAVMRVGNETEEDEIANIAFSIKENYVTATISSSTVGMRAAVKVIATQKIGVAQ\", \"B\": \"MFIQEPKKLIDTGEIGNASTGDILFDGGNKINSDFNAIYNAFGDQRKMAVANGTGADGQIIHATGYYQKHSITEYATPVKVGTRHDIDTSTVGVKVIIERGELGDCVEFINSNGSISVTNPLTIQAIDSIKGVSGNLVVTSPYSKVTLRCISSDNSTSVWNYSIESMFGQKESPAEGTWNISTSGSVDIPLFHRTEYNMAKLLVTCQSVDGRKIKTAEINILVDTVNSEVISSEYAVMRVGNETEEDEIANIAFSIKENYVTATISSSTVGMRAAVKVIATQKIGVAQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Tequatrovirus T4\", \"sequence_length\": 288, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10927\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Tequatrovirus T4\", \"sequence_length\": 288, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10927\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MFIQEPKKLIDTGEIGNASTGDILFDGGNKINSDFNAIYNAFGDQRKMAVANGTGADGQIIHATGYYQKHSITEYATPVKVGTRHDIDTSTVGVKVIIERGELGDCVEFINSNGSISVTNPLTIQAIDSIKGVSGNLVVTSPYSKVTLRCISSDNSTSVWNYSIESMFGQKESPAEGTWNISTSGSVDIPLFHRTEYNMAKLLVTCQSVDGRKIKTAEINILVDTVNSEVISSEYAVMRVGNETEEDEIANIAFSIKENYVTATISSSTVGMRAAVKVIATQKIGVAQ\", \"organism\": \"Tequatrovirus T4\", \"taxonomy_id\": 10665, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 288, \"gene_name\": null, \"uniprot_ids\": [\"P10927\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MFIQEPKKLIDTGEIGNASTGDILFDGGNKINSDFNAIYNAFGDQRKMAVANGTGADGQIIHATGYYQKHSITEYATPVKVGTRHDIDTSTVGVKVIIERGELGDCVEFINSNGSISVTNPLTIQAIDSIKGVSGNLVVTSPYSKVTLRCISSDNSTSVWNYSIESMFGQKESPAEGTWNISTSGSVDIPLFHRTEYNMAKLLVTCQSVDGRKIKTAEINILVDTVNSEVISSEYAVMRVGNETEEDEIANIAFSIKENYVTATISSSTVGMRAAVKVIATQKIGVAQ\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:03:37.426450\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 288.0, \"min_sequence_length\": 288, \"max_sequence_length\": 288}, \"interface_info\": {\"interface_id\": \"1QEX_1\", \"name\": \"Interface 1QEX_1\", \"pdb_id\": \"1QEX\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 288, \"chain2_sequence_length\": 288, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:03:38.612966\"}",
@@ -276,6 +270,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -397,24 +403,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"1QEX_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1qex_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.317240\"}",
       "description": "Results of chain validation against structure files",
@@ -472,6 +460,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1QEX_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1qex_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.243040\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:28.243040"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1QEX_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1qex_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:25.978898\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:25.978898"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1QEX_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1qex_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.343410\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:44.343410"
+        }
+      }
     }
   ]
 }

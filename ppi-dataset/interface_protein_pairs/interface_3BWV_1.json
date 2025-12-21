@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3BWV\", \"structure_metadata\": {\"pdb_id\": \"3BWV\", \"resolution\": 1.55, \"deposition_date\": \"2008-01-10T00:00:00+0000\", \"release_date\": \"2008-01-22T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Staphylococcus epidermidis ATCC 12228\"], \"citation\": {\"title\": \"Crystal structure of deoxyribonucleotidase-like protein (NP_764060.1) from Staphylococcus epidermidis ATCC 12228 at 1.55 A resolution\", \"authors\": [\"Joint Center for Structural Genomics (JCSG)\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 39.31, \"b\": 40.27, \"c\": 55.31, \"alpha\": 71.93, \"beta\": 75.08, \"gamma\": 83.62}, \"found_in_api\": true, \"sequences\": {\"A\": \"G(MSE)TRQRIAID(MSE)DEVLADTLGAVVKAVNERADLNIK(MSE)ESLNGKKLKH(MSE)IPEHEGLV(MSE)DILKEPGFFRNLDV(MSE)PHAQEVVKQLNEHYDIYIATAA(MSE)DVPTSFHDKYEWLLEYFPFLDPQHFVFCGRKNIILADYLIDDNPKQLEIFEGKSI(MSE)FTASHNVYEHRFERVSGWRDVKNYFNSIEK\", \"B\": \"G(MSE)TRQRIAID(MSE)DEVLADTLGAVVKAVNERADLNIK(MSE)ESLNGKKLKH(MSE)IPEHEGLV(MSE)DILKEPGFFRNLDV(MSE)PHAQEVVKQLNEHYDIYIATAA(MSE)DVPTSFHDKYEWLLEYFPFLDPQHFVFCGRKNIILADYLIDDNPKQLEIFEGKSI(MSE)FTASHNVYEHRFERVSGWRDVKNYFNSIEK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus epidermidis ATCC 12228\", \"sequence_length\": 212, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8CTG7\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus epidermidis ATCC 12228\", \"sequence_length\": 212, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8CTG7\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"G(MSE)TRQRIAID(MSE)DEVLADTLGAVVKAVNERADLNIK(MSE)ESLNGKKLKH(MSE)IPEHEGLV(MSE)DILKEPGFFRNLDV(MSE)PHAQEVVKQLNEHYDIYIATAA(MSE)DVPTSFHDKYEWLLEYFPFLDPQHFVFCGRKNIILADYLIDDNPKQLEIFEGKSI(MSE)FTASHNVYEHRFERVSGWRDVKNYFNSIEK\", \"organism\": \"Staphylococcus epidermidis ATCC 12228\", \"taxonomy_id\": 176280, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 212, \"gene_name\": null, \"uniprot_ids\": [\"Q8CTG7\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"G(MSE)TRQRIAID(MSE)DEVLADTLGAVVKAVNERADLNIK(MSE)ESLNGKKLKH(MSE)IPEHEGLV(MSE)DILKEPGFFRNLDV(MSE)PHAQEVVKQLNEHYDIYIATAA(MSE)DVPTSFHDKYEWLLEYFPFLDPQHFVFCGRKNIILADYLIDDNPKQLEIFEGKSI(MSE)FTASHNVYEHRFERVSGWRDVKNYFNSIEK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:36:45.404447\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 212.0, \"min_sequence_length\": 212, \"max_sequence_length\": 212}, \"interface_info\": {\"interface_id\": \"3BWV_1\", \"name\": \"Interface 3BWV_1\", \"pdb_id\": \"3BWV\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 212, \"chain2_sequence_length\": 212, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:36:46.919832\"}",
@@ -264,6 +258,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -385,24 +391,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3BWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3bwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.773503\"}",
       "description": "Results of chain validation against structure files",
@@ -452,6 +440,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3BWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3bwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:32.042597\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:32.042597"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3BWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3bwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.780419\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.780419"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3BWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3bwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.350513\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.350513"
+        }
+      }
     }
   ]
 }

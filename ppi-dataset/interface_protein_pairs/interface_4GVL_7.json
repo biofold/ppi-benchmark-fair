@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4GVL\", \"structure_metadata\": {\"pdb_id\": \"4GVL\", \"resolution\": 3.0, \"deposition_date\": \"2012-08-30T00:00:00+0000\", \"release_date\": \"2012-12-26T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Geobacter sulfurreducens PCA\"], \"citation\": {\"title\": \"Distinct gating mechanisms revealed by the structures of a multi-ligand gated K(+) channel.\", \"doi\": \"10.7554/eLife.00184\", \"authors\": [\"Kong, C.\", \"Zeng, W.\", \"Ye, S.\", \"Chen, L.\", \"Sauer, D.B.\", \"Lam, Y.\", \"Derebe, M.G.\", \"Jiang, Y.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 110.648, \"b\": 161.693, \"c\": 310.127, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\", \"B\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\", \"C\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\", \"D\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Geobacter sulfurreducens PCA\", \"sequence_length\": 462, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q74FS9\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Geobacter sulfurreducens PCA\", \"sequence_length\": 462, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q74FS9\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Geobacter sulfurreducens PCA\", \"sequence_length\": 462, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q74FS9\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Geobacter sulfurreducens PCA\", \"sequence_length\": 462, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q74FS9\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\", \"organism\": \"Geobacter sulfurreducens PCA\", \"taxonomy_id\": 243231, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 462, \"gene_name\": null, \"uniprot_ids\": [\"Q74FS9\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MFLAPWIERRLRYHPTIELPDDTRGHILIFGIDPITRTLIRKLESRNHLFVVVTDNYDQALHLEEQEGFKVVYGSPTDAHVLAGLRVAAARSIIANLSDPDNANLCLTVRSLCQTPIIAVVKEPVHGELLRLAGANQVVPLTRILGRYLGIRATTCGALAHILDSFGNLQIAELPVHGTPFAGKTIGESGIRQRTGLSIIGVWERGSLTTPQRETVLTEQSLLVLAGTKSQLAALEYLIGEAPEDELIFIIGHGRIGCAAAAFLDRKPVPFILIDRQESPVCNDHVVVYGDATVGQTLRQAGIDRASGIIVTTNDDSTNIFLTLACRHLHSHIRIVARANGEENVDQLYAAGADFVVSNASVGANILGNLLEHKESAFLSEGMAVFRRPLPPAMAGKTIAETRLRPLTGCSIVAIEAPDRADILISPPPETILAEGARLILIGTSEQEKTFDQTIAARLVPR\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:40:36.830306\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 462.0, \"min_sequence_length\": 462, \"max_sequence_length\": 462}, \"interface_info\": {\"interface_id\": \"4GVL_7\", \"name\": \"Interface 4GVL_7\", \"pdb_id\": \"4GVL\", \"auth_chain1\": \"D\", \"auth_chain2\": \"D\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 462, \"chain2_sequence_length\": 462, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:40:38.333871\"}",
@@ -300,6 +294,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -421,24 +427,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4GVL_7\", \"auth_chains\": {\"chain1\": \"D\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4gvl_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:38.189791\"}",
       "description": "Results of chain validation against structure files",
@@ -488,6 +476,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4GVL_7\", \"auth_chains\": {\"chain1\": \"D\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4gvl_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.472295\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.472295"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4GVL_7\", \"auth_chains\": {\"chain1\": \"D\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4gvl_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.200547\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.200547"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4GVL_7\", \"auth_chains\": {\"chain1\": \"D\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4gvl_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.725038\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:47.725038"
+        }
+      }
     }
   ]
 }

@@ -100,7 +100,7 @@ class PPIBenchmarkProcessor:
             
             # Try with the specified separator first
             try:
-                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator)
+                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator).iloc[:, 2:].head(5)
                 logger.info(f"Successfully loaded {len(self.dataset)} records with separator '{self.csv_separator}'")
             except Exception as e:
                 logger.warning(f"Failed with separator '{self.csv_separator}': {e}")

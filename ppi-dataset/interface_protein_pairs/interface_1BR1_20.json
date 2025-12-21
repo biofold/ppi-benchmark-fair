@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"1BR1\", \"structure_metadata\": {\"pdb_id\": \"1BR1\", \"resolution\": 3.5, \"deposition_date\": \"1998-08-26T00:00:00+0000\", \"release_date\": \"1998-09-09T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Gallus gallus\"], \"citation\": {\"title\": \"Crystal structure of a vertebrate smooth muscle myosin motor domain and its complex with the essential light chain: visualization of the pre-power stroke state.\", \"doi\": \"10.1016/S0092-8674(00)81598-6\", \"authors\": [\"Dominguez, R.\", \"Freyzon, Y.\", \"Trybus, K.M.\", \"Cohen, C.\"]}, \"entity_count\": 6, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 95.32, \"b\": 144.66, \"c\": 147.29, \"alpha\": 111.21, \"beta\": 106.1, \"gamma\": 92.58}, \"found_in_api\": true, \"sequences\": {\"A\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"C\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"E\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"G\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"B\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\", \"D\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\", \"F\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\", \"H\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Gallus gallus\", \"sequence_length\": 820, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10587\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Gallus gallus\", \"sequence_length\": 820, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10587\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Gallus gallus\", \"sequence_length\": 820, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10587\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Gallus gallus\", \"sequence_length\": 820, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P10587\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Gallus gallus\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P02607\"]}, \"D\": {\"entity_id\": \"2\", \"organism\": \"Gallus gallus\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P02607\"]}, \"F\": {\"entity_id\": \"2\", \"organism\": \"Gallus gallus\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P02607\"]}, \"H\": {\"entity_id\": \"2\", \"organism\": \"Gallus gallus\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P02607\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"organism\": \"Gallus gallus\", \"taxonomy_id\": 9031, \"chain_ids\": [\"A\", \"C\", \"E\", \"G\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 820, \"gene_name\": null, \"uniprot_ids\": [\"P10587\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\", \"organism\": \"Gallus gallus\", \"taxonomy_id\": 9031, \"chain_ids\": [\"B\", \"D\", \"F\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 150, \"gene_name\": null, \"uniprot_ids\": [\"P02607\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"AQKPLSDDEKFLFVDKNFVNNPLAQADWSAKKLVWVPSEKHGFEAASIKEEKGDEVTVELQENGKKVTLSKDDIQKMNPPKFSKVEDMAELTCLNEASVLHNLRERYFSGLIYTYSGLFCVVINPYKQLPIYSEKIIDMYKGKKRHEMPPHIYAIADTAYRSMLQDREDQSILCTGESGAGKTENTKKVIQYLAVVASSHKGKKDTSITQGPSFSYGELEKQLLQANPILEAFGNAKTVKNDNSSRFGKFIRINFDVTGYIVGANIETYLLEKSRAIRQAKDERTFHIFYYLIAGASEQMRNDLLLEGFNNYTFLSNGHVPIPAQQDDEMFQETLEAMTIMGFTEEEQTSILRVVSSVLQLGNIVFKKERNTDQASMPDNTAAQKVCHLMGINVTDFTRSILTPRIKVGRDVVQKAQTKEQADFAIEALAKAKFERLFRWILTRVNKALDKTKRQGASFLGILDIAGFEIFEINSFEQLCINYTNEKLQQLFNHTMFILEQEEYQREGIEWNFIDFGLDLQPCIELIERPTNPPGVLALLDEECWFPKATDTSFVEKLIQEQGNHAKFQKSKQLKDKTEFCILHYAGKVTYNASAWLTKNMDPLNDNVTSLLNQSSDKFVADLWKDVDRIVGLDQMAKMTESSLPSASKTKKGMFRTVGQLYKEQLTKLMTTLRNTNPNFVRCIIPNHEKRAGKLDAHLVLEQLRCNGVLEGIRICRQGFPNRIVFQEFRQRYEILAANAIPKGFMDGKQACILMIKALELDPNLYRIGQSKIFFRTGVLAHLEEERDLKITDVIIAFQAQCRGYLARKAFAKRQQQLGS\", \"entities\": [\"1\"], \"chain_count\": 4}, {\"sequence\": \"CDFSEEQTAEFKEAFQLFDRTGDGKILYSQCGDVMRALGQNPTNAEVMKVLGNPKSDEMNLKTLKFEQFLPMMQTIAKNKDQGCFEDYVEGLRVFDKEGNGTVMGAEIRHVLVTLGEKMTEEEVEQLVAGHEDSNGCINYEELVRMVLSG\", \"entities\": [\"2\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"], \"fetch_timestamp\": \"2025-12-19T19:34:01.484131\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 8, \"unique_sequences\": 2, \"avg_sequence_length\": 485.0, \"min_sequence_length\": 150, \"max_sequence_length\": 820}, \"interface_info\": {\"interface_id\": \"1BR1_20\", \"name\": \"Interface 1BR1_20\", \"pdb_id\": \"1BR1\", \"auth_chain1\": \"E\", \"auth_chain2\": \"G\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 820, \"chain2_sequence_length\": 150, \"sequences_identical\": false, \"sequence_identity\": 8.666666666666668}, \"enrichment_timestamp\": \"2025-12-19T19:34:03.574038\"}",
@@ -313,6 +307,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -434,24 +440,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"1BR1_20\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"G\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1br1_20.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.478842\"}",
       "description": "Results of chain validation against structure files",
@@ -509,6 +497,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1BR1_20\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"G\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1br1_20.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:34.366902\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:34.366902"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1BR1_20\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"G\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1br1_20.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:32.153394\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:32.153394"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1BR1_20\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"G\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1br1_20.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.836443\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:50.836443"
+        }
+      }
     }
   ]
 }

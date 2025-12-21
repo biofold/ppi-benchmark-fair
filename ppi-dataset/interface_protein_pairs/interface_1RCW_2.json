@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-C",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"1RCW\", \"structure_metadata\": {\"pdb_id\": \"1RCW\", \"resolution\": 2.5, \"deposition_date\": \"2003-11-04T00:00:00+0000\", \"release_date\": \"2004-05-04T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Chlamydia trachomatis\"], \"citation\": {\"title\": \"Structure of the Chlamydia protein CADD reveals a redox enzyme that modulates host cell apoptosis.\", \"doi\": \"10.1074/jbc.M401268200\", \"authors\": [\"Schwarzenbacher, R.\", \"Stenner-Liewen, F.\", \"Liewen, H.\", \"Robinson, H.\", \"Yuan, H.\", \"Bossy-Wetzel, E.\", \"Reed, J.C.\", \"Liddington, R.C.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 77.553, \"b\": 192.966, \"c\": 93.74, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MMEVFMNFLDQLDLIIQNKH(MSE)LEHTFYVKWSKGELTKEQLQAYAKDYYLHIKAFPKYLSAIHSRCDDLEARKLLLDNL(MSE)DEENGYPNHIDLWKQFVFALGVTPEELEAHEPSEAAKAKVATF(MSE)RWCTGDSLAAGVAALYSYESQIPRIAREKIRGLTEYFGFSNPEDYAYFTEHEEADVRHAREEKALIE(MSE)LLKDDADKVLEASQEVTQSLYGFLDSFLDPGTCCSCHQSY\", \"B\": \"MMEVFMNFLDQLDLIIQNKH(MSE)LEHTFYVKWSKGELTKEQLQAYAKDYYLHIKAFPKYLSAIHSRCDDLEARKLLLDNL(MSE)DEENGYPNHIDLWKQFVFALGVTPEELEAHEPSEAAKAKVATF(MSE)RWCTGDSLAAGVAALYSYESQIPRIAREKIRGLTEYFGFSNPEDYAYFTEHEEADVRHAREEKALIE(MSE)LLKDDADKVLEASQEVTQSLYGFLDSFLDPGTCCSCHQSY\", \"C\": \"MMEVFMNFLDQLDLIIQNKH(MSE)LEHTFYVKWSKGELTKEQLQAYAKDYYLHIKAFPKYLSAIHSRCDDLEARKLLLDNL(MSE)DEENGYPNHIDLWKQFVFALGVTPEELEAHEPSEAAKAKVATF(MSE)RWCTGDSLAAGVAALYSYESQIPRIAREKIRGLTEYFGFSNPEDYAYFTEHEEADVRHAREEKALIE(MSE)LLKDDADKVLEASQEVTQSLYGFLDSFLDPGTCCSCHQSY\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Chlamydia trachomatis\", \"sequence_length\": 247, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O84616\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Chlamydia trachomatis\", \"sequence_length\": 247, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O84616\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Chlamydia trachomatis\", \"sequence_length\": 247, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O84616\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MMEVFMNFLDQLDLIIQNKH(MSE)LEHTFYVKWSKGELTKEQLQAYAKDYYLHIKAFPKYLSAIHSRCDDLEARKLLLDNL(MSE)DEENGYPNHIDLWKQFVFALGVTPEELEAHEPSEAAKAKVATF(MSE)RWCTGDSLAAGVAALYSYESQIPRIAREKIRGLTEYFGFSNPEDYAYFTEHEEADVRHAREEKALIE(MSE)LLKDDADKVLEASQEVTQSLYGFLDSFLDPGTCCSCHQSY\", \"organism\": \"Chlamydia trachomatis\", \"taxonomy_id\": 813, \"chain_ids\": [\"A\", \"B\", \"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 247, \"gene_name\": null, \"uniprot_ids\": [\"O84616\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MMEVFMNFLDQLDLIIQNKH(MSE)LEHTFYVKWSKGELTKEQLQAYAKDYYLHIKAFPKYLSAIHSRCDDLEARKLLLDNL(MSE)DEENGYPNHIDLWKQFVFALGVTPEELEAHEPSEAAKAKVATF(MSE)RWCTGDSLAAGVAALYSYESQIPRIAREKIRGLTEYFGFSNPEDYAYFTEHEEADVRHAREEKALIE(MSE)LLKDDADKVLEASQEVTQSLYGFLDSFLDPGTCCSCHQSY\", \"entities\": [\"1\"], \"chain_count\": 3}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:31:58.515224\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 3, \"chain_count\": 3, \"unique_sequences\": 1, \"avg_sequence_length\": 247.0, \"min_sequence_length\": 247, \"max_sequence_length\": 247}, \"interface_info\": {\"interface_id\": \"1RCW_2\", \"name\": \"Interface 1RCW_2\", \"pdb_id\": \"1RCW\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"C\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 247, \"chain2_sequence_length\": 247, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:31:59.716319\"}",
@@ -289,6 +283,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-C",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -410,24 +416,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "C",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-C",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"1RCW_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"C\"}, \"actual_chains_found\": [\"A\", \"C\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1rcw_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.271391\"}",
       "description": "Results of chain validation against structure files",
@@ -477,6 +465,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1RCW_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"C\"}, \"actual_chains_found\": [\"A\", \"C\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1rcw_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:32.235049\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:32.235049"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1RCW_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"C\"}, \"actual_chains_found\": [\"A\", \"C\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1rcw_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.977130\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.977130"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "C",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-C",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1RCW_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"C\"}, \"actual_chains_found\": [\"A\", \"C\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1rcw_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.554959\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.554959"
+        }
+      }
     }
   ]
 }

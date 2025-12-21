@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3WXM\", \"structure_metadata\": {\"pdb_id\": \"3WXM\", \"resolution\": 2.3, \"deposition_date\": \"2014-08-04T00:00:00+0000\", \"release_date\": \"2014-09-03T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Aeropyrum pernix K1\"], \"citation\": {\"title\": \"Structural basis for mRNA surveillance by archaeal Pelota and GTP-bound EF1 alpha complex\", \"doi\": \"10.1073/pnas.1009598107\", \"authors\": [\"Kobayashi, K.\", \"Kikuno, I.\", \"Kuroha, K.\", \"Saito, K.\", \"Ito, K.\", \"Ishitani, R.\", \"Inada, T.\", \"Nureki, O.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 148.926, \"b\": 158.944, \"c\": 427.236, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"C\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"E\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"G\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"B\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"D\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"F\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"H\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 447, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"D\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"F\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}, \"H\": {\"entity_id\": \"2\", \"organism\": \"Aeropyrum pernix K1\", \"sequence_length\": 376, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"organism\": \"Aeropyrum pernix K1\", \"taxonomy_id\": 272557, \"chain_ids\": [\"A\", \"C\", \"E\", \"G\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 447, \"gene_name\": null, \"uniprot_ids\": [\"Q9YAV0\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"organism\": \"Aeropyrum pernix K1\", \"taxonomy_id\": 272557, \"chain_ids\": [\"B\", \"D\", \"F\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 376, \"gene_name\": null, \"uniprot_ids\": [\"Q9YAZ5\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"GSHMAEKPHMNLVVIGHVDHGKSTLVGHLLYRLGYIEEKKLKELEEQAKSRGKESFKFAWILDKMKEERERGITIDLTFMKFETKKYVFTIIDAPGHRDFVKNMITGASQADAAILVVSARKGEFEAGMSTEGQTREHLLLARTMGIEQIIVAVNKMDAPDVNYDQKRYEFVVSVLKKFMKGLGYQVDKIPFIPVSAWKGDNLIERSPNMPWYNGPTLVEALDQLQPPAKPVDKPLRIPVQNVYSIPGAGTVPVGRVETGVLRVGDKVVFMPPGVVGEVRSIEMHYQQLQQAEPGDNIGFAVRGVSKSDIKRGDVAGHLDKPPTVAEEFEARIFVIWHPSAITVGYTPVIHVHTASVSSRIIEIKAKLDPKTGQVVEQNPQFLKAGDAAIVRFKPVKPLVVEKFSEIPQLGRFAMRDMNRTVGIGIVTDVKPAKVDIKAKLARGSGC\", \"entities\": [\"1\"], \"chain_count\": 4}, {\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMRVEVLDNKRRIVRLRPESEEDLWLLRITLRPGDVVRIRTSRDVPVGSGRKERVVMTLRIRLDSIEFQPFTGKLRISGIVVEGPDEFGVKGRRHSTAVSIGTWLVVERDKGWSEQELERLASGRARGTAVIAAVDYDEFALAVLAGHGMKILEDTSARLPGKDDPSREQEVEKYVDRAAKRIVEEAARHRSPIAVIAGPGQLKTSVAEKVQRAMPSLKVATVDTSMGGVAGVREALRRESVTRILRELSIVEAEGVLEEFLRRIAKSRDTVAYTPGEVLAVARMGAVDTVLLVDTLLHSPDDAVREAVDEALRLVESMGGRVIIIPGDSPAGERLVSFGGVIALLRYPVPQEARRL\", \"entities\": [\"2\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:14:31.016795\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 8, \"unique_sequences\": 2, \"avg_sequence_length\": 411.5, \"min_sequence_length\": 376, \"max_sequence_length\": 447}, \"interface_info\": {\"interface_id\": \"3WXM_3\", \"name\": \"Interface 3WXM_3\", \"pdb_id\": \"3WXM\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 447, \"chain2_sequence_length\": 376, \"sequences_identical\": false, \"sequence_identity\": 8.51063829787234}, \"enrichment_timestamp\": \"2025-12-19T19:14:32.862221\"}",
@@ -317,6 +311,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -438,24 +444,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3WXM_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3wxm_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.484937\"}",
       "description": "Results of chain validation against structure files",
@@ -514,6 +502,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3WXM_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3wxm_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.974748\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:33.974748"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3WXM_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3wxm_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.759983\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:31.759983"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3WXM_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3wxm_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.416625\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:50.416625"
+        }
+      }
     }
   ]
 }

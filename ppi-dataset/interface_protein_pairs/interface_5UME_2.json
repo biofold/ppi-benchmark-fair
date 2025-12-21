@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "B-F",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5UME\", \"structure_metadata\": {\"pdb_id\": \"5UME\", \"resolution\": 2.7, \"deposition_date\": \"2017-01-27T00:00:00+0000\", \"release_date\": \"2017-02-22T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Haemophilus influenzae Rd KW20\"], \"citation\": {\"title\": \"Structural genomics of bacterial drug targets: Application of a high-throughput pipeline to solve 58 protein structures from pathogenic and related bacteria.\", \"doi\": \"10.1128/mra.00200-25\", \"authors\": [\"Inniss, N.L.\", \"Minasov, G.\", \"Chang, C.\", \"Tan, K.\", \"Kim, Y.\", \"Maltseva, N.\", \"Stogios, P.\", \"Filippova, E.\", \"Michalska, K.\", \"Osipiuk, J.\", \"Jaroszewki, L.\", \"Godzik, A.\", \"Savchenko, A.\", \"Joachimiak, A.\", \"Anderson, W.F.\", \"Satchell, K.J.F.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 90.065, \"b\": 134.96, \"c\": 182.985, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"B\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"C\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"D\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"E\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"F\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"sequence_length\": 295, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"organism\": \"Haemophilus influenzae Rd KW20\", \"taxonomy_id\": 71421, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 295, \"gene_name\": null, \"uniprot_ids\": [\"P45208\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNAMSYAKEIDTLNQHIADFNKKINVSFEFFPPKNEKMETLLWDSIHRLKVLKPKFVSVTYGANSGERDRTHGIVKAIKQETGLEAAPHLTGIDATPEELKQIARDYWDSGIRRIVALRGDEPKGYAKKPFYASDLVELLRSVADFDISVAAYPEVHPEAKSAQADLINLKRKIDAGANHVITQFFFDIENYLRFRDRCASIGIDTEIVPGILPVTNFKQLQKMASFTNVKIPAWLVKAYDGLDNDPTTRNLVAASVAMDMVKILSREGVNDFHFYTLNRSELTYAICHMLGVRP\", \"entities\": [\"1\"], \"chain_count\": 6}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"fetch_timestamp\": \"2025-12-19T19:14:24.502544\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 6, \"chain_count\": 6, \"unique_sequences\": 1, \"avg_sequence_length\": 295.0, \"min_sequence_length\": 295, \"max_sequence_length\": 295}, \"interface_info\": {\"interface_id\": \"5UME_2\", \"name\": \"Interface 5UME_2\", \"pdb_id\": \"5UME\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"B\", \"label_chain2\": \"F\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 295, \"chain2_sequence_length\": 295, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:14:26.925535\"}",
@@ -325,6 +319,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-F",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -446,24 +452,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "B",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "F",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "B-F",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5UME_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"B\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5ume_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.476057\"}",
       "description": "Results of chain validation against structure files",
@@ -513,6 +501,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5UME_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"B\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5ume_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.850464\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:33.850464"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5UME_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"B\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5ume_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.634450\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:31.634450"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "F",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "B-F",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5UME_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"B\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5ume_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.245968\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:50.245968"
+        }
+      }
     }
   ]
 }

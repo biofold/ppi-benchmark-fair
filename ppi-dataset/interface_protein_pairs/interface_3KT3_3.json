@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3KT3\", \"structure_metadata\": {\"pdb_id\": \"3KT3\", \"resolution\": 2.6, \"deposition_date\": \"2009-11-24T00:00:00+0000\", \"release_date\": \"2010-02-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Saccharomyces cerevisiae\"], \"citation\": {\"title\": \"Crystal structures of Saccharomyces cerevisiae tryptophanyl-tRNA synthetase: new insights into the mechanism of tryptophan activation and implications for anti-fungal drug design\", \"doi\": \"10.1093/nar/gkp1254\", \"authors\": [\"Zhou, M.\", \"Dong, X.\", \"Shen, N.\", \"Zhong, C.\", \"Ding, J.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 251.759, \"b\": 251.759, \"c\": 111.102, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\", \"B\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\", \"C\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\", \"D\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 438, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q12109\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 438, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q12109\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 438, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q12109\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 438, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q12109\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\", \"organism\": \"Saccharomyces cerevisiae\", \"taxonomy_id\": 4932, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 438, \"gene_name\": null, \"uniprot_ids\": [\"Q12109\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSNDETVEKVTQQVSELKSTDVKEQVVTPWDVEGGVDEQGRAQNIDYDKLIKQFGTKPVNEETLKRFKQVTGREPHHFLRKGLFFSERDFTKILDLYEQGKPFFLYTGRGPSSDSMHLGHMIPFVFTKWLQEVFDVPLVIELTDDEKFLFKHKLTINDVKNFARENAKDIIAVGFDPKNTFIFSDLQYMGGAFYETVVRVSRQITGSTAKAVFGFNDSDCIGKFHFASIQIATAFPSSFPNVLGLPDKTPCLIPCAIDQDPYFRVCRDVADKLKYSKPALLHSRFFPALQGSTTKMSASDDTTAIFMTDTPKQIQKKINKYAFSGGQVSADLHRELGGNPDVDVAYQYLSFFKDDDVFLKECYDKYKSGELLSGEMKKLCIETLQEFVKAFQERRAQVDEETLDKFMVPHKLVWGEKERLVAPKPKTKQEKKHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:19:04.807323\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 438.0, \"min_sequence_length\": 438, \"max_sequence_length\": 438}, \"interface_info\": {\"interface_id\": \"3KT3_3\", \"name\": \"Interface 3KT3_3\", \"pdb_id\": \"3KT3\", \"auth_chain1\": \"A\", \"auth_chain2\": \"D\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 438, \"chain2_sequence_length\": 438, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:19:06.294345\"}",
@@ -297,6 +291,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -418,24 +424,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3KT3_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3kt3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.964935\"}",
       "description": "Results of chain validation against structure files",
@@ -485,6 +473,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3KT3_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3kt3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.630994\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:33.630994"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3KT3_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3kt3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.408297\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:31.408297"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3KT3_3\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3kt3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.011188\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:50.011188"
+        }
+      }
     }
   ]
 }

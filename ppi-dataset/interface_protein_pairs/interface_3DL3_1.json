@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "D-F",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3DL3\", \"structure_metadata\": {\"pdb_id\": \"3DL3\", \"resolution\": 2.3, \"deposition_date\": \"2008-06-26T00:00:00+0000\", \"release_date\": \"2008-08-26T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Aliivibrio fischeri ES114\"], \"citation\": {\"title\": \"Crystal structure of the tellurite resistance protein TehB. Northeast Structural Genomics Consortium target VfR98.\", \"authors\": [\"Kuzin, A.P.\", \"Su, M.\", \"Seetharaman, J.\", \"Wang, D.\", \"Mao, L.\", \"Maglaqui, M.\", \"Xiao, R.\", \"Liu, J.\", \"Baran, M.C.\", \"Acton, T.B.\", \"Rost, B.\", \"Montelione, G.T.\", \"Tong, L.\", \"Hunt, J.F.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 43.574, \"b\": 205.02, \"c\": 56.356, \"alpha\": 90.0, \"beta\": 110.21, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"B\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"D\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"E\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"G\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"H\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"F\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"I\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Aliivibrio fischeri ES114\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"organism\": \"Aliivibrio fischeri ES114\", \"taxonomy_id\": 312309, \"chain_ids\": [\"A\", \"B\", \"D\", \"E\", \"G\", \"H\", \"F\", \"I\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 131, \"gene_name\": null, \"uniprot_ids\": [\"Q5E3X2\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"(MSE)SHLRIPKNWTIQRSTPFFTKDNVPEALLTHHNTAVDVFGQICV(MSE)EGVVTYYGFANSEATEPEIKVVINAGQFATSPPQYWHRIELSDDAQFNINFWSDQDKSGKK(MSE)FNTKLEHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:02:13.742965\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 131.0, \"min_sequence_length\": 131, \"max_sequence_length\": 131}, \"interface_info\": {\"interface_id\": \"3DL3_1\", \"name\": \"Interface 3DL3_1\", \"pdb_id\": \"3DL3\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"D\", \"label_chain2\": \"F\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 131, \"chain2_sequence_length\": 131, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:02:14.649773\"}",
@@ -316,6 +310,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "D-F",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -437,24 +443,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "D",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "F",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "D-F",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3DL3_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"D\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"D\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3dl3_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.181979\"}",
       "description": "Results of chain validation against structure files",
@@ -504,6 +492,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3DL3_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"D\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"D\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3dl3_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.056983\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:28.056983"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3DL3_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"D\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"D\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3dl3_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:25.784433\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:25.784433"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "D",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "F",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "D-F",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3DL3_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"D\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"D\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3dl3_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.148764\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:44.148764"
+        }
+      }
     }
   ]
 }

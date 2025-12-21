@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5KNL\", \"structure_metadata\": {\"pdb_id\": \"5KNL\", \"resolution\": 2.5, \"deposition_date\": \"2016-06-28T00:00:00+0000\", \"release_date\": \"2017-02-15T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Schizosaccharomyces pombe 972h-\", \"Moesziomyces antarcticus\"], \"citation\": {\"title\": \"S. pombe Uba1-Ubc15 Structure Reveals a Novel Regulatory Mechanism of Ubiquitin E2 Activity.\", \"doi\": \"10.1016/j.molcel.2017.01.008\", \"authors\": [\"Lv, Z.\", \"Rickman, K.A.\", \"Yuan, L.\", \"Williams, K.\", \"Selvam, S.P.\", \"Woosley, A.N.\", \"Howe, P.H.\", \"Ogretmen, B.\", \"Smogorzewska, A.\", \"Olsen, S.K.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 77.111, \"b\": 82.238, \"c\": 135.376, \"alpha\": 102.1, \"beta\": 95.78, \"gamma\": 90.86}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNTIDEGLYSRQLYVLGHEAMKQMSQSNVLIIGCKGLGVEIAKNVCLAGVKSVTLYDPQPTRIEDLSSQYFLTEDDIGVPRAKVTVSKLAELNQYVPVSVVDELSTEYLKNFKCVVVTETSLTKQLEINDFTHKNHIAYIAADSRGLFGSIFCDFGENFICTDTDGNEPLTGMIASITDDGVVTMLEETRHGLENGDFVKFTEVKGMPGLNDGTPRKVEVKGPYTFSIGSVKDLGSAGYNGVFTQVKVPTKISFKSLRESLKDPEYVYPDFGKMMRPPQYHIAFQALSAFADAHEGSLPRPRNDIDAAEFFEFCKKIASTLQFDVELDEKLIKEISYQARGDLVAMSAFLGGAVAQEVLKATTSKFYPLKQYFYFDSLESLPSSVTISEETCKPRGCRYDGQIAVFGSEFQEKIASLSTFLVGAGAIGCEMLKNWAMMGVATGESGHISVTDMDSIEKSNLNRQFLFRPRDVGKLKSECASTAVSIMNPSLTGKITSYQERVGPESEGIFGDEFFEKLSLVTNALDNVEARMYVDRRCVFFEKPLLESGTLGTKGNTQVVVPHLTESYGSSQDPPEKSFPICTLKNFPNRIEHTIAWARDLFEGLFKQPIDNVNMYLSSPNFLETSLKTSSNPREVLENIRDYLVTEKPLSFEECIMWARLQFDKFFNNNIQQLLFNFPKDSVTSTGQPFWSGPKRAPTPLSFDIHNREHFDFIVAAASLYAFNYGLKSETDPAIYERVLAGYNPPPFAPKSGIKIQVNENEEAPETAANKDKQELKSIADSLPPPSSLVGFRLTPAEFEKDDDSNHHIDFITAASNLRAMNYDITPADRFKTKFVAGKIVPAMCTSTAVVSGLVCLELVKLVDGKKKIEEYKNGFFNLAIGLFTFSDPIASPKMKVNGKEIDKIWDRYNLPDCTLQELIDYFQKEEGLEVTMLSSGVSLLYANFQPPKKLAERLPLKISELVEQITKKKLEPFRKHLVLEICCDDANGEDVEVPFICIKL\", \"D\": \"SNTIDEGLYSRQLYVLGHEAMKQMSQSNVLIIGCKGLGVEIAKNVCLAGVKSVTLYDPQPTRIEDLSSQYFLTEDDIGVPRAKVTVSKLAELNQYVPVSVVDELSTEYLKNFKCVVVTETSLTKQLEINDFTHKNHIAYIAADSRGLFGSIFCDFGENFICTDTDGNEPLTGMIASITDDGVVTMLEETRHGLENGDFVKFTEVKGMPGLNDGTPRKVEVKGPYTFSIGSVKDLGSAGYNGVFTQVKVPTKISFKSLRESLKDPEYVYPDFGKMMRPPQYHIAFQALSAFADAHEGSLPRPRNDIDAAEFFEFCKKIASTLQFDVELDEKLIKEISYQARGDLVAMSAFLGGAVAQEVLKATTSKFYPLKQYFYFDSLESLPSSVTISEETCKPRGCRYDGQIAVFGSEFQEKIASLSTFLVGAGAIGCEMLKNWAMMGVATGESGHISVTDMDSIEKSNLNRQFLFRPRDVGKLKSECASTAVSIMNPSLTGKITSYQERVGPESEGIFGDEFFEKLSLVTNALDNVEARMYVDRRCVFFEKPLLESGTLGTKGNTQVVVPHLTESYGSSQDPPEKSFPICTLKNFPNRIEHTIAWARDLFEGLFKQPIDNVNMYLSSPNFLETSLKTSSNPREVLENIRDYLVTEKPLSFEECIMWARLQFDKFFNNNIQQLLFNFPKDSVTSTGQPFWSGPKRAPTPLSFDIHNREHFDFIVAAASLYAFNYGLKSETDPAIYERVLAGYNPPPFAPKSGIKIQVNENEEAPETAANKDKQELKSIADSLPPPSSLVGFRLTPAEFEKDDDSNHHIDFITAASNLRAMNYDITPADRFKTKFVAGKIVPAMCTSTAVVSGLVCLELVKLVDGKKKIEEYKNGFFNLAIGLFTFSDPIASPKMKVNGKEIDKIWDRYNLPDCTLQELIDYFQKEEGLEVTMLSSGVSLLYANFQPPKKLAERLPLKISELVEQITKKKLEPFRKHLVLEICCDDANGEDVEVPFICIKL\", \"B\": \"MGSSHHHHHHSSGLVPRGSHMQIFVRTLTGRTITLEVESSDTIDNVRARIQDREGIPPDQQRLIFAGRQLEDGRTLADYNIQRESTLHLVLRLRGG\", \"E\": \"MGSSHHHHHHSSGLVPRGSHMQIFVRTLTGRTITLEVESSDTIDNVRARIQDREGIPPDQQRLIFAGRQLEDGRTLADYNIQRESTLHLVLRLRGG\", \"C\": \"MPSSASEQLLRKQLKEIQKNPPQGFSVGLVDDKSIFEWEVMIIGPEDTLYEGGFFHATLSFPQDYPLMPPKMKFTTEIWHPNVHPNGEVCISILHPPGDDKYGYEDAGERWLPVHSPETILISVISMLSSPNDESPANIDAAKEFRENPQEFKKRVRRLVRRSIEMILEHHHHHH\", \"F\": \"MPSSASEQLLRKQLKEIQKNPPQGFSVGLVDDKSIFEWEVMIIGPEDTLYEGGFFHATLSFPQDYPLMPPKMKFTTEIWHPNVHPNGEVCISILHPPGDDKYGYEDAGERWLPVHSPETILISVISMLSSPNDESPANIDAAKEFRENPQEFKKRVRRLVRRSIEMILEHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"sequence_length\": 1001, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O94609\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"sequence_length\": 1001, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O94609\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Moesziomyces antarcticus\", \"sequence_length\": 96, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"A0A081CEG8\"]}, \"E\": {\"entity_id\": \"2\", \"organism\": \"Moesziomyces antarcticus\", \"sequence_length\": 96, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"A0A081CEG8\"]}, \"C\": {\"entity_id\": \"3\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"sequence_length\": 175, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9Y818\"]}, \"F\": {\"entity_id\": \"3\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"sequence_length\": 175, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9Y818\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNTIDEGLYSRQLYVLGHEAMKQMSQSNVLIIGCKGLGVEIAKNVCLAGVKSVTLYDPQPTRIEDLSSQYFLTEDDIGVPRAKVTVSKLAELNQYVPVSVVDELSTEYLKNFKCVVVTETSLTKQLEINDFTHKNHIAYIAADSRGLFGSIFCDFGENFICTDTDGNEPLTGMIASITDDGVVTMLEETRHGLENGDFVKFTEVKGMPGLNDGTPRKVEVKGPYTFSIGSVKDLGSAGYNGVFTQVKVPTKISFKSLRESLKDPEYVYPDFGKMMRPPQYHIAFQALSAFADAHEGSLPRPRNDIDAAEFFEFCKKIASTLQFDVELDEKLIKEISYQARGDLVAMSAFLGGAVAQEVLKATTSKFYPLKQYFYFDSLESLPSSVTISEETCKPRGCRYDGQIAVFGSEFQEKIASLSTFLVGAGAIGCEMLKNWAMMGVATGESGHISVTDMDSIEKSNLNRQFLFRPRDVGKLKSECASTAVSIMNPSLTGKITSYQERVGPESEGIFGDEFFEKLSLVTNALDNVEARMYVDRRCVFFEKPLLESGTLGTKGNTQVVVPHLTESYGSSQDPPEKSFPICTLKNFPNRIEHTIAWARDLFEGLFKQPIDNVNMYLSSPNFLETSLKTSSNPREVLENIRDYLVTEKPLSFEECIMWARLQFDKFFNNNIQQLLFNFPKDSVTSTGQPFWSGPKRAPTPLSFDIHNREHFDFIVAAASLYAFNYGLKSETDPAIYERVLAGYNPPPFAPKSGIKIQVNENEEAPETAANKDKQELKSIADSLPPPSSLVGFRLTPAEFEKDDDSNHHIDFITAASNLRAMNYDITPADRFKTKFVAGKIVPAMCTSTAVVSGLVCLELVKLVDGKKKIEEYKNGFFNLAIGLFTFSDPIASPKMKVNGKEIDKIWDRYNLPDCTLQELIDYFQKEEGLEVTMLSSGVSLLYANFQPPKKLAERLPLKISELVEQITKKKLEPFRKHLVLEICCDDANGEDVEVPFICIKL\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"taxonomy_id\": 284812, \"chain_ids\": [\"A\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 1001, \"gene_name\": null, \"uniprot_ids\": [\"O94609\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMQIFVRTLTGRTITLEVESSDTIDNVRARIQDREGIPPDQQRLIFAGRQLEDGRTLADYNIQRESTLHLVLRLRGG\", \"organism\": \"Moesziomyces antarcticus\", \"taxonomy_id\": 84753, \"chain_ids\": [\"B\", \"E\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 96, \"gene_name\": null, \"uniprot_ids\": [\"A0A081CEG8\"]}, \"3\": {\"entity_id\": \"3\", \"sequence\": \"MPSSASEQLLRKQLKEIQKNPPQGFSVGLVDDKSIFEWEVMIIGPEDTLYEGGFFHATLSFPQDYPLMPPKMKFTTEIWHPNVHPNGEVCISILHPPGDDKYGYEDAGERWLPVHSPETILISVISMLSSPNDESPANIDAAKEFRENPQEFKKRVRRLVRRSIEMILEHHHHHH\", \"organism\": \"Schizosaccharomyces pombe 972h-\", \"taxonomy_id\": 284812, \"chain_ids\": [\"C\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 175, \"gene_name\": null, \"uniprot_ids\": [\"Q9Y818\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"SNTIDEGLYSRQLYVLGHEAMKQMSQSNVLIIGCKGLGVEIAKNVCLAGVKSVTLYDPQPTRIEDLSSQYFLTEDDIGVPRAKVTVSKLAELNQYVPVSVVDELSTEYLKNFKCVVVTETSLTKQLEINDFTHKNHIAYIAADSRGLFGSIFCDFGENFICTDTDGNEPLTGMIASITDDGVVTMLEETRHGLENGDFVKFTEVKGMPGLNDGTPRKVEVKGPYTFSIGSVKDLGSAGYNGVFTQVKVPTKISFKSLRESLKDPEYVYPDFGKMMRPPQYHIAFQALSAFADAHEGSLPRPRNDIDAAEFFEFCKKIASTLQFDVELDEKLIKEISYQARGDLVAMSAFLGGAVAQEVLKATTSKFYPLKQYFYFDSLESLPSSVTISEETCKPRGCRYDGQIAVFGSEFQEKIASLSTFLVGAGAIGCEMLKNWAMMGVATGESGHISVTDMDSIEKSNLNRQFLFRPRDVGKLKSECASTAVSIMNPSLTGKITSYQERVGPESEGIFGDEFFEKLSLVTNALDNVEARMYVDRRCVFFEKPLLESGTLGTKGNTQVVVPHLTESYGSSQDPPEKSFPICTLKNFPNRIEHTIAWARDLFEGLFKQPIDNVNMYLSSPNFLETSLKTSSNPREVLENIRDYLVTEKPLSFEECIMWARLQFDKFFNNNIQQLLFNFPKDSVTSTGQPFWSGPKRAPTPLSFDIHNREHFDFIVAAASLYAFNYGLKSETDPAIYERVLAGYNPPPFAPKSGIKIQVNENEEAPETAANKDKQELKSIADSLPPPSSLVGFRLTPAEFEKDDDSNHHIDFITAASNLRAMNYDITPADRFKTKFVAGKIVPAMCTSTAVVSGLVCLELVKLVDGKKKIEEYKNGFFNLAIGLFTFSDPIASPKMKVNGKEIDKIWDRYNLPDCTLQELIDYFQKEEGLEVTMLSSGVSLLYANFQPPKKLAERLPLKISELVEQITKKKLEPFRKHLVLEICCDDANGEDVEVPFICIKL\", \"entities\": [\"1\"], \"chain_count\": 2}, {\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMQIFVRTLTGRTITLEVESSDTIDNVRARIQDREGIPPDQQRLIFAGRQLEDGRTLADYNIQRESTLHLVLRLRGG\", \"entities\": [\"2\"], \"chain_count\": 2}, {\"sequence\": \"MPSSASEQLLRKQLKEIQKNPPQGFSVGLVDDKSIFEWEVMIIGPEDTLYEGGFFHATLSFPQDYPLMPPKMKFTTEIWHPNVHPNGEVCISILHPPGDDKYGYEDAGERWLPVHSPETILISVISMLSSPNDESPANIDAAKEFRENPQEFKKRVRRLVRRSIEMILEHHHHHH\", \"entities\": [\"3\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:30:32.001464\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 6, \"unique_sequences\": 3, \"avg_sequence_length\": 424.0, \"min_sequence_length\": 96, \"max_sequence_length\": 1001}, \"interface_info\": {\"interface_id\": \"5KNL_11\", \"name\": \"Interface 5KNL_11\", \"pdb_id\": \"5KNL\", \"auth_chain1\": \"A\", \"auth_chain2\": \"D\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 1001, \"chain2_sequence_length\": 96, \"sequences_identical\": false, \"sequence_identity\": 7.291666666666667}, \"enrichment_timestamp\": \"2025-12-19T19:30:33.811754\"}",
@@ -338,6 +332,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -459,24 +465,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5KNL_11\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5knl_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.129940\"}",
       "description": "Results of chain validation against structure files",
@@ -526,6 +514,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5KNL_11\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5knl_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:32.904769\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:32.904769"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5KNL_11\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5knl_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:30.663380\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:30.663380"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5KNL_11\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"D\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5knl_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:49.235048\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:49.235048"
+        }
+      }
     }
   ]
 }

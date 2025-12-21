@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "B-D",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4LJK\", \"structure_metadata\": {\"pdb_id\": \"4LJK\", \"resolution\": 2.354, \"deposition_date\": \"2013-07-05T00:00:00+0000\", \"release_date\": \"2014-01-01T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Helicobacter pylori 26695\"], \"citation\": {\"title\": \"Structural insights into the unique single-stranded DNA-binding mode of Helicobacter pylori DprA.\", \"doi\": \"10.1093/nar/gkt1334\", \"authors\": [\"Wang, W.\", \"Ding, J.\", \"Zhang, Y.\", \"Hu, Y.\", \"Wang, D.C.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 117.88, \"b\": 42.43, \"c\": 181.33, \"alpha\": 90.0, \"beta\": 108.65, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"B\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"E\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"F\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"H\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"C\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"D\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"G\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Helicobacter pylori 26695\", \"sequence_length\": 249, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"organism\": \"Helicobacter pylori 26695\", \"taxonomy_id\": 85962, \"chain_ids\": [\"A\", \"B\", \"E\", \"F\", \"H\", \"C\", \"D\", \"G\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 249, \"gene_name\": null, \"uniprot_ids\": [\"O25100\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"(MSE)KSHFQYSTLENIPKAFDILKDPPKKLYCVGDTKLLDTPLKVAIIGTRRPTPYSKQHTITLARELAKNGAVIVSGGALGVDIIAQENALPKTI(MSE)LSPCSLDFIYPTNNHKVIQEIAQNGLILSEYEKDF(MSE)PIKGSFLARNRLVIALSDVVIIPQADLKSGS(MSE)SSARLAQKYQKPLFVLPQRLNESDGTNELLEKGQAQGIFNIQNFINTLLKDYHLKE(MSE)PELEHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:35:53.165555\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 249.0, \"min_sequence_length\": 249, \"max_sequence_length\": 249}, \"interface_info\": {\"interface_id\": \"4LJK_2\", \"name\": \"Interface 4LJK_2\", \"pdb_id\": \"4LJK\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"B\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 249, \"chain2_sequence_length\": 249, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:35:54.070475\"}",
@@ -314,6 +308,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -435,24 +441,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "B",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "D",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "B-D",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4LJK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"B\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4ljk_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.685155\"}",
       "description": "Results of chain validation against structure files",
@@ -510,6 +498,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4LJK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"B\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ljk_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.819874\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.819874"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4LJK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"B\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ljk_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.551221\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.551221"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "B-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4LJK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"B\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ljk_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.111332\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.111332"
+        }
+      }
     }
   ]
 }

@@ -79,16 +79,16 @@
     "fields_to_be_populated": {
       "LabelChain1": {
         "status": "POPULATED by 2nd script",
-        "timestamp": "2025-12-19T18:29:44.589293",
+        "timestamp": "2025-12-20T11:55:59.849125",
         "description": "First chain in the assembly interface (validated from structure file)"
       },
       "LabelChain2": {
         "status": "POPULATED by 2nd script",
-        "timestamp": "2025-12-19T18:29:44.589298",
+        "timestamp": "2025-12-20T11:55:59.849132",
         "description": "Second chain in the assembly interface (validated from structure file)"
       },
       "PDB_metadata": {
-        "status": "POPULATED by 3rd script",
+        "status": "EMPTY - To be populated by script 3",
         "timestamp": "2025-12-19T19:41:37.990852",
         "description": "Comprehensive PDB metadata from RCSB API",
         "data_includes": [
@@ -103,7 +103,7 @@
         ]
       },
       "ClusterID": {
-        "status": "COMPLETELY POPULATED by script 4",
+        "status": "PARTIAL - To be completed by script 4",
         "timestamp": "2025-12-20T00:11:27.018556",
         "description": "Sequence cluster ID from BLASTClust analysis",
         "blastclust_method": "BLASTClust sequence clustering",
@@ -128,18 +128,18 @@
   },
   "assembly_chain_checking": {
     "script": "2nd script - Assembly Chain Checker",
-    "execution_date": "2025-12-19T18:29:44.588238",
+    "execution_date": "2025-12-20T11:55:59.847815",
     "statistics": {
-      "total_files_processed": 1677,
+      "total_files_processed": 1678,
       "successfully_updated": 1677,
       "failed_updates": 0,
       "chains_updated": 3128,
-      "success_rate": "100.0%"
+      "success_rate": "99.9%"
     },
     "settings": {
       "mmcif_base_url": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/",
       "pdb_base_url": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/",
-      "pdb_label_dir": "ppi_benchmark_data/pdb",
+      "pdb_label_dir": "../ppi_benchmark_data/pdb",
       "cif_label_dir": null
     },
     "validation_summary": {

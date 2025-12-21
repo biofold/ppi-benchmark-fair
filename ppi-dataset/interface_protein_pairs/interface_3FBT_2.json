@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "C-D",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3FBT\", \"structure_metadata\": {\"pdb_id\": \"3FBT\", \"resolution\": 2.1, \"deposition_date\": \"2008-11-19T00:00:00+0000\", \"release_date\": \"2008-12-09T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Clostridium acetobutylicum\"], \"citation\": {\"title\": \"Crystal structure of a chorismate mutase/shikimate 5-dehydrogenase fusion protein from Clostridium acetobutylicum\", \"authors\": [\"Bonanno, J.B.\", \"Gilmore, M.\", \"Bain, K.T.\", \"Hu, S.\", \"Romero, R.\", \"Wasserman, S.\", \"Sauder, J.M.\", \"Burley, S.K.\", \"Almo, S.C.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 65.132, \"b\": 135.336, \"c\": 67.14, \"alpha\": 90.0, \"beta\": 102.14, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\", \"B\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\", \"C\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\", \"D\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Clostridium acetobutylicum\", \"sequence_length\": 282, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q97KM0\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Clostridium acetobutylicum\", \"sequence_length\": 282, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q97KM0\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Clostridium acetobutylicum\", \"sequence_length\": 282, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q97KM0\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Clostridium acetobutylicum\", \"sequence_length\": 282, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q97KM0\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\", \"organism\": \"Clostridium acetobutylicum\", \"taxonomy_id\": 1488, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 282, \"gene_name\": null, \"uniprot_ids\": [\"Q97KM0\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSLNTSIYGLIGEKLGHSHSSYIHKLIFEKVGIKGIYNLFEVPKEKLKESVDTFKIIKCGGLNVTIPYKVEVMKELYEISEKARKIGAVNTLKFSREGISGFNTDYIGFGKMLSKFRVEIKNNICVVLGSGGAARAVLQYLKDNFAKDIYVVTRNPEKTSEIYGEFKVISYDELSNLKGDVIINCTPKGMYPKEGESPVDKEVVAKFSSAVDLIYNPVETLFLKYARESGVKAVNGLYMLVSQAAASEEIWNDISIDEIIVDEIFEVLEEKIKSEGHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:33:08.901592\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 282.0, \"min_sequence_length\": 282, \"max_sequence_length\": 282}, \"interface_info\": {\"interface_id\": \"3FBT_2\", \"name\": \"Interface 3FBT_2\", \"pdb_id\": \"3FBT\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"C\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 282, \"chain2_sequence_length\": 282, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:33:10.134140\"}",
@@ -294,6 +288,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -415,24 +421,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "C",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "D",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "C-D",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3FBT_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3fbt_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.384133\"}",
       "description": "Results of chain validation against structure files",
@@ -490,6 +478,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3FBT_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3fbt_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:32.380036\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:32.380036"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3FBT_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3fbt_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:30.125363\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:30.125363"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "C-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3FBT_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3fbt_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.678541\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.678541"
+        }
+      }
     }
   ]
 }

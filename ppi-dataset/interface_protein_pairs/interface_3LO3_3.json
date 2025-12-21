@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "E-F",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3LO3\", \"structure_metadata\": {\"pdb_id\": \"3LO3\", \"resolution\": 2.383, \"deposition_date\": \"2010-02-03T00:00:00+0000\", \"release_date\": \"2010-02-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Colwellia psychrerythraea 34H\"], \"citation\": {\"title\": \"The crystal structure of a conserved functionally unknown protein from Colwellia psychrerythraea 34H.\", \"authors\": [\"Tan, K.\", \"Li, H.\", \"Bearden, J.\", \"Joachimiak, A.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 55.684, \"b\": 109.503, \"c\": 126.509, \"alpha\": 66.02, \"beta\": 80.8, \"gamma\": 79.42}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"B\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"C\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"D\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"E\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"F\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"G\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"H\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"I\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"J\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"K\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"L\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"M\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"N\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"O\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"P\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Q\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"R\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"S\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"T\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"U\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"V\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"W\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"X\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Y\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Z\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"a\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"b\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"M\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"N\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"O\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"P\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"Q\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"R\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"S\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"T\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"U\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"V\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"W\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"X\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"Y\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"Z\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"a\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}, \"b\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"organism\": \"Colwellia psychrerythraea 34H\", \"taxonomy_id\": 167879, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"a\", \"b\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 98, \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"entities\": [\"1\"], \"chain_count\": 28}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:47:05.872345\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 28, \"chain_count\": 28, \"unique_sequences\": 1, \"avg_sequence_length\": 98.0, \"min_sequence_length\": 98, \"max_sequence_length\": 98}, \"interface_info\": {\"interface_id\": \"3LO3_3\", \"name\": \"Interface 3LO3_3\", \"pdb_id\": \"3LO3\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"E\", \"label_chain2\": \"F\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 98, \"chain2_sequence_length\": 98, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:47:07.074246\"}",
@@ -306,6 +300,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "E-F",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -427,24 +433,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "E",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "F",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "E-F",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3LO3_3\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3lo3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.646599\"}",
       "description": "Results of chain validation against structure files",
@@ -494,6 +482,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LO3_3\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lo3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:29.944133\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:29.944133"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LO3_3\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lo3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:27.701954\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:27.701954"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "E",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "F",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "E-F",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LO3_3\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lo3_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.124551\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.124551"
+        }
+      }
     }
   ]
 }

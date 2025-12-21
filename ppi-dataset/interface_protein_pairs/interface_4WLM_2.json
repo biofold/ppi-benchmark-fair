@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4WLM\", \"structure_metadata\": {\"pdb_id\": \"4WLM\", \"resolution\": 3.0, \"deposition_date\": \"2014-10-07T00:00:00+0000\", \"release_date\": \"2015-09-30T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mus musculus\"], \"citation\": {\"title\": \"Notch-modifying xylosyltransferase structures support an SNi-like retaining mechanism.\", \"doi\": \"10.1038/nchembio.1927\", \"authors\": [\"Yu, H.\", \"Takeuchi, M.\", \"LeBarron, J.\", \"Kantharia, J.\", \"London, E.\", \"Bakker, H.\", \"Haltiwanger, R.S.\", \"Li, H.\", \"Takeuchi, H.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 89.306, \"b\": 89.306, \"c\": 154.303, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SLEGGVVVPVDYHLLMMFTKAEHNAPLQAKARVALSSLLRLAKFEAHEVLNLHFVSEEASREVAKALLRELLPPAAGFKCKVIFHDVAVLTDKLFPVVEAMQKYFSAGSGTYYSDSIFFLSVAMHQIMPKEIPRIIQLDLDLKYKTNIRELFEEFDNFLPGAVIGIAREMQPVYRHTFWQFRHENPKTRVGDPPPEGLPGFNSGVMLLNLEAMRQSPLYSHLLEPSWVQQLADKYHFRGHLGDQDFFTMIGMEHPELFHVLDCTWNRQLCTWWRDHGYSDVFQAYFRCEGHVKIYHGNCNTPIPED\", \"B\": \"SLEGGVVVPVDYHLLMMFTKAEHNAPLQAKARVALSSLLRLAKFEAHEVLNLHFVSEEASREVAKALLRELLPPAAGFKCKVIFHDVAVLTDKLFPVVEAMQKYFSAGSGTYYSDSIFFLSVAMHQIMPKEIPRIIQLDLDLKYKTNIRELFEEFDNFLPGAVIGIAREMQPVYRHTFWQFRHENPKTRVGDPPPEGLPGFNSGVMLLNLEAMRQSPLYSHLLEPSWVQQLADKYHFRGHLGDQDFFTMIGMEHPELFHVLDCTWNRQLCTWWRDHGYSDVFQAYFRCEGHVKIYHGNCNTPIPED\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 306, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q3U4G3\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Mus musculus\", \"sequence_length\": 306, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q3U4G3\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SLEGGVVVPVDYHLLMMFTKAEHNAPLQAKARVALSSLLRLAKFEAHEVLNLHFVSEEASREVAKALLRELLPPAAGFKCKVIFHDVAVLTDKLFPVVEAMQKYFSAGSGTYYSDSIFFLSVAMHQIMPKEIPRIIQLDLDLKYKTNIRELFEEFDNFLPGAVIGIAREMQPVYRHTFWQFRHENPKTRVGDPPPEGLPGFNSGVMLLNLEAMRQSPLYSHLLEPSWVQQLADKYHFRGHLGDQDFFTMIGMEHPELFHVLDCTWNRQLCTWWRDHGYSDVFQAYFRCEGHVKIYHGNCNTPIPED\", \"organism\": \"Mus musculus\", \"taxonomy_id\": 10090, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 306, \"gene_name\": null, \"uniprot_ids\": [\"Q3U4G3\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SLEGGVVVPVDYHLLMMFTKAEHNAPLQAKARVALSSLLRLAKFEAHEVLNLHFVSEEASREVAKALLRELLPPAAGFKCKVIFHDVAVLTDKLFPVVEAMQKYFSAGSGTYYSDSIFFLSVAMHQIMPKEIPRIIQLDLDLKYKTNIRELFEEFDNFLPGAVIGIAREMQPVYRHTFWQFRHENPKTRVGDPPPEGLPGFNSGVMLLNLEAMRQSPLYSHLLEPSWVQQLADKYHFRGHLGDQDFFTMIGMEHPELFHVLDCTWNRQLCTWWRDHGYSDVFQAYFRCEGHVKIYHGNCNTPIPED\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:27:29.391543\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 306.0, \"min_sequence_length\": 306, \"max_sequence_length\": 306}, \"interface_info\": {\"interface_id\": \"4WLM_2\", \"name\": \"Interface 4WLM_2\", \"pdb_id\": \"4WLM\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 306, \"chain2_sequence_length\": 306, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:27:30.578313\"}",
@@ -273,6 +267,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -388,24 +394,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4WLM_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4wlm_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:36.804045\"}",
       "description": "Results of chain validation against structure files",
@@ -455,6 +443,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4WLM_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4wlm_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:32.555869\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:32.555869"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4WLM_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4wlm_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:30.305974\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:30.305974"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4WLM_2\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4wlm_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.862377\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:48.862377"
+        }
+      }
     }
   ]
 }

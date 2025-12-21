@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "E-F",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5LC1\", \"structure_metadata\": {\"pdb_id\": \"5LC1\", \"resolution\": 2.1, \"deposition_date\": \"2016-06-18T00:00:00+0000\", \"release_date\": \"2016-07-27T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Trypanosoma brucei\"], \"citation\": {\"title\": \"Structure and function of L-threonine-3-dehydrogenase from the parasitic protozoan Trypanosoma brucei revealed by X-ray crystallography and geometric simulations.\", \"doi\": \"10.1107/S2059798318009208\", \"authors\": [\"Adjogatse, E.\", \"Erskine, P.\", \"Wells, S.A.\", \"Kelly, J.M.\", \"Wilden, J.D.\", \"Chan, A.W.E.\", \"Selwood, D.\", \"Coker, A.\", \"Wood, S.\", \"Cooper, J.B.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 132.04, \"b\": 276.49, \"c\": 55.74, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"B\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"C\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"D\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"E\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"F\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Trypanosoma brucei\", \"sequence_length\": 321, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"organism\": \"Trypanosoma brucei\", \"taxonomy_id\": 5691, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 321, \"gene_name\": null, \"uniprot_ids\": [\"Q7YW97\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"HMPRVLVTGALGQIGTDLSLALRDKFGADSVLVSDVVEPGAKHPLAGLKGVEKLDCLDSNGFEKLVKEFKPTWMYHLPAIMSVRGEAEPDLAMDINVNTTRYALELARKYNIRIFIPSTIAAFGDKCGKTMTKDDTIMNPSTVYGVTKVYTELLGTWYRQKYGVDFRSVRLPGIISAATLPGGGATDYAIHMYHSALLQKKCVCPVLPYESLPMMYMPDTLNSLVKIMEAPLEKLTRTVYNITGFSFSPSELRFSIERCTDRTIEVEYVEGPAQKIANSWPDSLDDSNARNDWGHQVKYDIDMMSEDMLRQIPILHGLPSL\", \"entities\": [\"1\"], \"chain_count\": 6}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"fetch_timestamp\": \"2025-12-19T19:34:59.208186\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 6, \"chain_count\": 6, \"unique_sequences\": 1, \"avg_sequence_length\": 321.0, \"min_sequence_length\": 321, \"max_sequence_length\": 321}, \"interface_info\": {\"interface_id\": \"5LC1_5\", \"name\": \"Interface 5LC1_5\", \"pdb_id\": \"5LC1\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"E\", \"label_chain2\": \"F\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 321, \"chain2_sequence_length\": 321, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:35:01.638947\"}",
@@ -313,6 +307,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "E-F",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -428,24 +434,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "E",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "F",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "E-F",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5LC1_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5lc1_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:37.567132\"}",
       "description": "Results of chain validation against structure files",
@@ -507,6 +495,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5LC1_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5lc1_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.773330\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.773330"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5LC1_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5lc1_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.504448\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.504448"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "E",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "F",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "E-F",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5LC1_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"E\", \"chain2\": \"F\"}, \"actual_chains_found\": [\"E\", \"F\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5lc1_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:48.059526\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:48.059526"
+        }
+      }
     }
   ]
 }

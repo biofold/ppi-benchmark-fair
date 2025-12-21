@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5GYR\", \"structure_metadata\": {\"pdb_id\": \"5GYR\", \"resolution\": 1.6, \"deposition_date\": \"2016-09-23T00:00:00+0000\", \"release_date\": \"2017-02-08T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Allochromatium vinosum DSM 180\"], \"citation\": {\"title\": \"Formation and carbon monoxide-dependent dissociation of Allochromatium vinosum cytochrome c' oligomers using domain-swapped dimers\", \"doi\": \"10.1002/pro.3090\", \"authors\": [\"Yamanaka, M.\", \"Hoshizumi, M.\", \"Nagao, S.\", \"Nakayama, R.\", \"Shibata, N.\", \"Higuchi, Y.\", \"Hirota, S.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 82.949, \"b\": 48.62, \"c\": 130.55, \"alpha\": 90.0, \"beta\": 92.28, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"B\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"E\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"F\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"I\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"J\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"M\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"N\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"M\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}, \"N\": {\"entity_id\": \"1\", \"organism\": \"Allochromatium vinosum DSM 180\", \"sequence_length\": 131, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"organism\": \"Allochromatium vinosum DSM 180\", \"taxonomy_id\": 572477, \"chain_ids\": [\"A\", \"B\", \"E\", \"F\", \"I\", \"J\", \"M\", \"N\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 131, \"gene_name\": null, \"uniprot_ids\": [\"P00154\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"AGLSPEEQIETRQAGYEFMGWNMGKIKANLEGEYNAAQVEAAANVIAAIANSGMGALYGPGTDKNVGDVKTRVKPEFFQNMEDVGKIAREFVGAANTLAEVAATGEAEAVKTAFGDVGAACKSCHEKYRAK\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:37:15.832425\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 131.0, \"min_sequence_length\": 131, \"max_sequence_length\": 131}, \"interface_info\": {\"interface_id\": \"5GYR_7\", \"name\": \"Interface 5GYR_7\", \"pdb_id\": \"5GYR\", \"auth_chain1\": \"E\", \"auth_chain2\": \"J\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 131, \"chain2_sequence_length\": 131, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:37:17.040344\"}",
@@ -310,6 +304,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -425,24 +431,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5GYR_7\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"J\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5gyr_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:31.610503\"}",
       "description": "Results of chain validation against structure files",
@@ -501,6 +489,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5GYR_7\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"J\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5gyr_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.762664\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.762664"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5GYR_7\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"J\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5gyr_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.502604\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.502604"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5GYR_7\", \"auth_chains\": {\"chain1\": \"E\", \"chain2\": \"J\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5gyr_7.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.970789\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.970789"
+        }
+      }
     }
   ]
 }

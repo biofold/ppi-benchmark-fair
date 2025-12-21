@@ -16,6 +16,7 @@ from collections import Counter
 import time
 from urllib.parse import quote
 import pandas as pd
+import re
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -1015,6 +1016,914 @@ class PDBMetadataEnricher:
         
         return updated_data
     
+    def update_pdb_metadata_status_in_json(self, json_data: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Update the PDBMetadataStatus field in JSON-LD data.
+        
+        Args:
+            json_data: JSON-LD data to update
+            
+        Returns:
+            Updated JSON-LD data
+        """
+        updated_data = json_data.copy()
+        
+        # Get statistics for the description
+        total_pdbs = len(self.stats["unique_pdbs_processed"])
+        enriched_pdbs = len(self.stats["enriched_pdbs"])
+        
+        # Find and update PDBMetadataStatus in additionalProperty
+        if "additionalProperty" in updated_data:
+            for i, prop in enumerate(updated_data["additionalProperty"]):
+                if prop.get("name") == "PDBMetadataStatus":
+                    updated_data["additionalProperty"][i] = {
+                        "@type": "PropertyValue",
+                        "name": "PDBMetadataStatus",
+                        "value": f"COMPLETE - {enriched_pdbs} PDBs enriched",
+                        "description": f"PDB metadata populated by script 3. Retrieved metadata for {enriched_pdbs} out of {total_pdbs} PDB structures from RCSB API."
+                    }
+                    logger.debug(f"Updated PDBMetadataStatus in JSON-LD: {enriched_pdbs} PDBs enriched")
+                    return updated_data
+            
+            # If PDBMetadataStatus not found, add it
+            updated_data["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PDBMetadataStatus",
+                "value": f"COMPLETE - {enriched_pdbs} PDBs enriched",
+                "description": f"PDB metadata populated by script 3. Retrieved metadata for {enriched_pdbs} out of {total_pdbs} PDB structures from RCSB API."
+            })
+            logger.debug(f"Added PDBMetadataStatus to JSON-LD: {enriched_pdbs} PDBs enriched")
+        
+        return updated_data
+    
+    def update_pdb_metadata_status_in_html(self, html_content: str) -> str:
+        """
+        Update the PDBMetadataStatus field in HTML JSON-LD script tag.
+        
+        Args:
+            html_content: HTML content to update
+            
+        Returns:
+            Updated HTML content
+        """
+        # Get statistics for the description
+        total_pdbs = len(self.stats["unique_pdbs_processed"])
+        enriched_pdbs = len(self.stats["enriched_pdbs"])
+        
+        # Pattern to find JSON-LD script tags
+        script_pattern = r'<script type="application/ld\+json">(.*?)</script>'
+        
+        def update_json_in_script(match):
+            script_content = match.group(1)
+            try:
+                # Clean the script content
+                script_content_clean = script_content.strip()
+                if not script_content_clean:
+                    return match.group(0)
+                
+                json_data = json.loads(script_content_clean)
+                updated_json = self.update_pdb_metadata_status_in_json(json_data)
+                return f'<script type="application/ld+json">\n{json.dumps(updated_json, indent=2)}\n</script>'
+            except json.JSONDecodeError as e:
+                logger.error(f"Failed to parse JSON-LD in HTML: {e}")
+                logger.debug(f"Problematic JSON content: {script_content[:200]}...")
+                return match.group(0)
+            except Exception as e:
+                logger.error(f"Error updating JSON-LD in HTML: {e}")
+                return match.group(0)
+        
+        # Update all JSON-LD script tags
+        updated_html = re.sub(script_pattern, update_json_in_script, html_content, flags=re.DOTALL)
+        
+        return updated_html
+    
+    def find_fair_metadata_package_file(self) -> Optional[Path]:
+        """
+        Find the fair_metadata_package.json file.
+        
+        Returns:
+            Path to the file if found, None otherwise
+        """
+        # Try in the input directory
+        fair_metadata_file = self.input_dir / "fair_metadata_package.json"
+        if fair_metadata_file.exists():
+            logger.info(f"Found fair_metadata_package.json at: {fair_metadata_file}")
+            return fair_metadata_file
+        
+        # Try looking for it in any subdirectory
+        for file_path in self.input_dir.rglob("fair_metadata_package.json"):
+            if file_path.is_file():
+                logger.info(f"Found fair_metadata_package.json at: {file_path}")
+                return file_path
+        
+        logger.warning(f"fair_metadata_package.json not found in {self.input_dir} or subdirectories")
+        
+        # List all files in directory for debugging
+        logger.debug(f"Files in {self.input_dir}:")
+        for item in self.input_dir.iterdir():
+            logger.debug(f"  {item.name} ({'dir' if item.is_dir() else 'file'})")
+        
+        return None
+    
+    def find_embedded_markup_html_file(self) -> Optional[Path]:
+        """
+        Find the embedded_markup.html file.
+        
+        Returns:
+            Path to the file if found, None otherwise
+        """
+        # Try in the input directory
+        embedded_html_file = self.input_dir / "embedded_markup.html"
+        if embedded_html_file.exists():
+            logger.info(f"Found embedded_markup.html at: {embedded_html_file}")
+            return embedded_html_file
+        
+        # Try looking for it in any subdirectory
+        for file_path in self.input_dir.rglob("embedded_markup.html"):
+            if file_path.is_file():
+                logger.info(f"Found embedded_markup.html at: {file_path}")
+                return file_path
+        
+        logger.warning(f"embedded_markup.html not found in {self.input_dir} or subdirectories")
+        
+        # List all files in directory for debugging
+        logger.debug(f"Files in {self.input_dir}:")
+        for item in self.input_dir.iterdir():
+            logger.debug(f"  {item.name} ({'dir' if item.is_dir() else 'file'})")
+        
+        return None
+
+    def update_fair_metadata_package(self) -> bool:
+        """
+        Update fair_metadata_package.json with PDB metadata information.
+        
+        Returns:
+            True if successful, False otherwise
+        """
+        fair_metadata_file = self.find_fair_metadata_package_file()
+        
+        if not fair_metadata_file:
+            logger.error("❌ Could not find fair_metadata_package.json")
+            logger.error(f"   Searched in: {self.input_dir} and subdirectories")
+            return False
+        
+        try:
+            logger.info(f"📄 Loading fair_metadata_package.json from: {fair_metadata_file}")
+            
+            # Read the file
+            with open(fair_metadata_file, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+            
+            # Parse JSON
+            fair_metadata = json.loads(file_content)
+            
+            logger.debug(f"✅ Successfully parsed fair_metadata_package.json")
+            logger.debug(f"   File has keys: {list(fair_metadata.keys())}")
+            
+            # Get metadata fetcher statistics
+            fetcher_stats = self.metadata_fetcher.get_statistics()
+            
+            # FIRST: Update the dataset structure from dataset_with_interfaces.json if it exists
+            dataset_file = self.input_dir / "dataset_with_interfaces.json"
+            if dataset_file.exists():
+                logger.info(f"📄 Found dataset_with_interfaces.json, updating dataset structure...")
+                
+                with open(dataset_file, 'r', encoding='utf-8') as f:
+                    dataset_data = json.load(f)
+                
+                # Update the main dataset structure from dataset_with_interfaces.json
+                # Copy key metadata that should be in fair_metadata_package.json
+                key_fields = [
+                    "name", "description", "identifier", "url", "license", "keywords",
+                    "creator", "datePublished", "publisher", "version", "citation",
+                    "variableMeasured", "measurementTechnique", "dateCreated",
+                    "dateModified", "maintainer", "size", "hasPart", "numberOfItems",
+                    "distribution"
+                ]
+                
+                for field in key_fields:
+                    if field in dataset_data:
+                        fair_metadata[field] = dataset_data[field]
+                
+                logger.info(f"✅ Updated dataset structure from dataset_with_interfaces.json")
+                logger.info(f"   - hasPart: {len(dataset_data.get('hasPart', []))} interfaces")
+                logger.info(f"   - numberOfItems: {dataset_data.get('numberOfItems', 'N/A')}")
+            
+            # SECOND: Update PDB metadata status in the hasPart items
+            if "hasPart" in fair_metadata and isinstance(fair_metadata["hasPart"], list):
+                logger.info(f"📊 Updating PDB metadata status in {len(fair_metadata['hasPart'])} interface items...")
+                
+                for i, interface_item in enumerate(fair_metadata["hasPart"]):
+                    # Check if this is a DataCatalogItem (interface)
+                    if isinstance(interface_item, dict) and "DataCatalogItem" in interface_item.get("@type", []):
+                        interface_id = interface_item.get("identifier", "")
+                        
+                        # Update additionalProperty with PDB metadata status
+                        if "additionalProperty" in interface_item:
+                            # Remove old PDB metadata status if present
+                            interface_item["additionalProperty"] = [
+                                prop for prop in interface_item["additionalProperty"]
+                                if prop.get("name") not in ["PDBMetadataStatus", "PDBMetadataPlaceholder"]
+                            ]
+                            
+                            # Add updated PDB metadata status
+                            interface_item["additionalProperty"].append({
+                                "@type": "PropertyValue",
+                                "name": "PDBMetadataStatus",
+                                "value": "COMPLETE - Populated by 3rd script",
+                                "description": f"PDB metadata has been fully populated from RCSB API"
+                            })
+                        
+                        # Also update the mainEntity (Protein) if it exists
+                        if "mainEntity" in interface_item and isinstance(interface_item["mainEntity"], dict):
+                            protein = interface_item["mainEntity"]
+                            
+                            # Update additionalProperty in protein
+                            if "additionalProperty" in protein:
+                                # Remove old PDB metadata status if present
+                                protein["additionalProperty"] = [
+                                    prop for prop in protein["additionalProperty"]
+                                    if prop.get("name") not in ["PDBMetadataStatus", "PDBMetadataPlaceholder"]
+                                ]
+                                
+                                # Add updated PDB metadata status
+                                protein["additionalProperty"].append({
+                                    "@type": "PropertyValue",
+                                    "name": "PDBMetadataStatus",
+                                    "value": "COMPLETE - Populated by 3rd script",
+                                    "description": "PDB metadata has been fully populated from RCSB API"
+                                })
+                
+                logger.info(f"✅ Updated PDB metadata status in all interface items")
+            
+            # THIRD: Get ALL the PDB metadata that was fetched
+            all_pdb_metadata = self.metadata_fetcher.metadata_cache
+            
+            # Create PDB metadata summary section
+            pdb_metadata_summary = {
+                "script": "3_add_pdb_metadata.py",
+                "execution_date": datetime.now().isoformat(),
+                "description": "PDB metadata enrichment from RCSB API using optimized sequential approach",
+                "total_pdbs_processed": len(self.stats["unique_pdbs_processed"]),
+                "successfully_enriched_pdbs": len(self.stats["enriched_pdbs"]),
+                "metadata_fetcher_statistics": {
+                    "total_api_requests": fetcher_stats.get("total_requests", 0),
+                    "successful_fetches": fetcher_stats.get("successful_fetches", 0),
+                    "failed_fetches": fetcher_stats.get("failed_fetches", 0),
+                    "cache_hits": fetcher_stats.get("cached_hits", 0),
+                    "unique_pdbs_fetched": fetcher_stats.get("unique_pdbs_fetched", 0)
+                },
+                "optimization_strategy": {
+                    "name": "Sequential approach execution",
+                    "description": "Approach 1 (entry) → Approach 2 (entities) → Approach 3 (assembly) as fallback",
+                    "benefits": [
+                        "Reduces unnecessary API calls",
+                        "Stops when sufficient metadata is obtained",
+                        "Most structures resolved with Approach 1 or 1+2",
+                        "Approach 3 only used as fallback when others fail"
+                    ]
+                },
+                "metadata_includes": [
+                    "Resolution and experimental method",
+                    "Source organism(s) and taxonomy IDs",
+                    "ALL chain sequences (not just representative)",
+                    "Homomer detection and analysis",
+                    "Sequence clusters and identity analysis",
+                    "Citation and publication information",
+                    "Entity and chain mappings",
+                    "Interface-specific sequence analysis"
+                ]
+            }
+            
+            # Add approach statistics if available
+            if "approach_statistics" in fetcher_stats:
+                pdb_metadata_summary["approach_statistics"] = fetcher_stats["approach_statistics"]
+            
+            # Add resolution statistics if available
+            if "resolution_stats" in fetcher_stats:
+                pdb_metadata_summary["resolution_statistics"] = fetcher_stats["resolution_stats"]
+            
+            # Add sequence statistics if available
+            if "sequence_stats" in fetcher_stats:
+                pdb_metadata_summary["sequence_statistics"] = fetcher_stats["sequence_stats"]
+            
+            # Add organism statistics if available
+            if "organism_stats" in fetcher_stats:
+                pdb_metadata_summary["organism_statistics"] = fetcher_stats["organism_stats"]
+            
+            # Add sample PDB metadata (first 3 PDBs as examples)
+            sample_pdb_metadata = {}
+            pdb_counter = 0
+            for pdb_id, metadata in all_pdb_metadata.items():
+                if pdb_counter >= 3:  # Limit to 3 samples
+                    break
+                
+                # Create a simplified version of the metadata for display
+                sample_metadata = {
+                    "resolution": metadata.get("resolution"),
+                    "experimental_method": metadata.get("experimental_method"),
+                    "source_organism": metadata.get("source_organism", []),
+                    "chain_count": metadata.get("chain_count", 0),
+                    "unique_sequences": metadata.get("unique_sequences", 0),
+                    "is_homomer": metadata.get("is_homomer", False),
+                    "homomer_type": metadata.get("homomer_type"),
+                    "entity_count": metadata.get("entity_count", 0)
+                }
+                
+                # Add sequence information (first 2 chains as samples)
+                if metadata.get("sequences"):
+                    sample_sequences = {}
+                    chain_counter = 0
+                    for chain_id, sequence in metadata["sequences"].items():
+                        if chain_counter >= 2:
+                            break
+                        # Store just the first 50 characters of sequence for brevity
+                        truncated_seq = sequence[:50] + "..." if len(sequence) > 50 else sequence
+                        sample_sequences[chain_id] = {
+                            "length": len(sequence),
+                            "sample": truncated_seq
+                        }
+                        chain_counter += 1
+                    sample_metadata["sample_sequences"] = sample_sequences
+                
+                sample_pdb_metadata[pdb_id] = sample_metadata
+                pdb_counter += 1
+            
+            if sample_pdb_metadata:
+                pdb_metadata_summary["sample_pdb_metadata"] = sample_pdb_metadata
+            
+            # Add to fair_metadata_package.json as a separate section
+            fair_metadata["pdb_metadata_enrichment"] = pdb_metadata_summary
+            
+            # Add PDB metadata to the additionalProperty section
+            if "additionalProperty" not in fair_metadata:
+                fair_metadata["additionalProperty"] = []
+            
+            # Remove any existing PDB metadata properties
+            fair_metadata["additionalProperty"] = [
+                prop for prop in fair_metadata["additionalProperty"]
+                if prop.get("name") not in ["PDBMetadata", "PDBStructureMetadata", "PDBMetadataDetails", "PDBMetadataStatus"]
+            ]
+            
+            # Add comprehensive PDB metadata property
+            if all_pdb_metadata:
+                # Create a summary of all PDB metadata
+                pdb_summary = {
+                    "total_pdbs": len(all_pdb_metadata),
+                    "successfully_fetched": sum(1 for meta in all_pdb_metadata.values() if meta.get("found_in_api", False)),
+                    "pdb_ids": list(all_pdb_metadata.keys()),
+                    "metadata_available": True,
+                    "fetch_timestamp": datetime.now().isoformat()
+                }
+                
+                fair_metadata["additionalProperty"].append({
+                    "@type": "PropertyValue",
+                    "name": "PDBMetadata",
+                    "value": json.dumps(pdb_summary, default=str),
+                    "description": "Summary of PDB metadata retrieved from RCSB API",
+                    "valueReference": {
+                        "@type": "PropertyValue",
+                        "name": "ParsedPDBMetadataSummary",
+                        "value": {
+                            "total_structures": len(all_pdb_metadata),
+                            "structures_with_metadata": sum(1 for meta in all_pdb_metadata.values() if meta.get("found_in_api", False)),
+                            "total_chains": sum(len(meta.get("sequences", {})) for meta in all_pdb_metadata.values()),
+                            "homomeric_structures": sum(1 for meta in all_pdb_metadata.values() if meta.get("is_homomer", False)),
+                            "unique_organisms": len(set(org for meta in all_pdb_metadata.values()
+                                                      for org in meta.get("source_organism", [])))
+                        }
+                    }
+                })
+                
+                # Add resolution information if available
+                resolutions = [meta.get("resolution") for meta in all_pdb_metadata.values()
+                             if meta.get("resolution") is not None]
+                if resolutions:
+                    fair_metadata["additionalProperty"].append({
+                        "@type": "PropertyValue",
+                        "name": "PDBResolutionStats",
+                        "value": f"Average: {sum(resolutions)/len(resolutions):.2f} Å, Range: {min(resolutions):.2f}-{max(resolutions):.2f} Å",
+                        "description": "Resolution statistics for all PDB structures"
+                    })
+            
+            # Add overall PDB metadata status
+            fair_metadata["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PDBMetadataStatus",
+                "value": f"COMPLETE - {len(self.stats['enriched_pdbs'])} PDBs enriched by script 3",
+                "description": f"PDB metadata populated by script 3. Retrieved metadata for {len(self.stats['enriched_pdbs'])} out of {len(self.stats['unique_pdbs_processed'])} PDB structures from RCSB API."
+            })
+            
+            # Update processing log
+            if "processing_log" not in fair_metadata:
+                fair_metadata["processing_log"] = []
+            
+            fair_metadata["processing_log"].append({
+                "step": "3_pdb_metadata_enrichment",
+                "timestamp": datetime.now().isoformat(),
+                "status": "completed",
+                "details": {
+                    "total_files": self.stats["total_files"],
+                    "successful_enrichments": self.stats["successfully_enriched"],
+                    "unique_pdbs": len(self.stats["unique_pdbs_processed"]),
+                    "enriched_pdbs": len(self.stats["enriched_pdbs"]),
+                    "metadata_cache_size": len(all_pdb_metadata),
+                    "interfaces_updated": len(fair_metadata.get("hasPart", [])),
+                    "dataset_source": "dataset_with_interfaces.json" if dataset_file.exists() else "existing_data"
+                }
+            })
+            
+            # Save the updated file
+            with open(fair_metadata_file, 'w', encoding='utf-8') as f:
+                json.dump(fair_metadata, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"✅ Updated fair_metadata_package.json at: {fair_metadata_file}")
+            logger.info(f"   - Updated dataset structure from dataset_with_interfaces.json")
+            logger.info(f"   - Updated PDBMetadataStatus in all interface items")
+            logger.info(f"   - Added PDB metadata enrichment section")
+            logger.info(f"   - Added PDB metadata to additionalProperty section")
+            return True
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"❌ Failed to parse JSON in fair_metadata_package.json: {e}")
+            logger.error(f"   File path: {fair_metadata_file}")
+            return False
+        except Exception as e:
+            logger.error(f"❌ Failed to update fair_metadata_package.json: {e}")
+            import traceback
+            logger.error(f"   Traceback: {traceback.format_exc()}")
+            return False
+    
+    def update_fair_metadata_package2(self) -> bool:
+        """
+        Update fair_metadata_package.json with PDB metadata information.
+        
+        Returns:
+            True if successful, False otherwise
+        """
+        fair_metadata_file = self.find_fair_metadata_package_file()
+        
+        if not fair_metadata_file:
+            logger.error("❌ Could not find fair_metadata_package.json")
+            logger.error(f"   Searched in: {self.input_dir} and subdirectories")
+            return False
+        
+        try:
+            logger.info(f"📄 Loading fair_metadata_package.json from: {fair_metadata_file}")
+            
+            # Read the file
+            with open(fair_metadata_file, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+            
+            # Parse JSON
+            fair_metadata = json.loads(file_content)
+            
+            logger.debug(f"✅ Successfully parsed fair_metadata_package.json")
+            logger.debug(f"   File has keys: {list(fair_metadata.keys())}")
+            
+            # Get metadata fetcher statistics
+            fetcher_stats = self.metadata_fetcher.get_statistics()
+            
+            # Get ALL the PDB metadata that was fetched
+            all_pdb_metadata = self.metadata_fetcher.metadata_cache
+            
+            # Update the PDBMetadataStatus field in the main JSON-LD
+            fair_metadata = self.update_pdb_metadata_status_in_json(fair_metadata)
+            
+            # Create PDB metadata summary section
+            pdb_metadata_summary = {
+                "script": "3_add_pdb_metadata.py",
+                "execution_date": datetime.now().isoformat(),
+                "description": "PDB metadata enrichment from RCSB API using optimized sequential approach",
+                "total_pdbs_processed": len(self.stats["unique_pdbs_processed"]),
+                "successfully_enriched_pdbs": len(self.stats["enriched_pdbs"]),
+                "metadata_fetcher_statistics": {
+                    "total_api_requests": fetcher_stats.get("total_requests", 0),
+                    "successful_fetches": fetcher_stats.get("successful_fetches", 0),
+                    "failed_fetches": fetcher_stats.get("failed_fetches", 0),
+                    "cache_hits": fetcher_stats.get("cached_hits", 0),
+                    "unique_pdbs_fetched": fetcher_stats.get("unique_pdbs_fetched", 0)
+                },
+                "optimization_strategy": {
+                    "name": "Sequential approach execution",
+                    "description": "Approach 1 (entry) → Approach 2 (entities) → Approach 3 (assembly) as fallback",
+                    "benefits": [
+                        "Reduces unnecessary API calls",
+                        "Stops when sufficient metadata is obtained",
+                        "Most structures resolved with Approach 1 or 1+2",
+                        "Approach 3 only used as fallback when others fail"
+                    ]
+                },
+                "metadata_includes": [
+                    "Resolution and experimental method",
+                    "Source organism(s) and taxonomy IDs",
+                    "ALL chain sequences (not just representative)",
+                    "Homomer detection and analysis",
+                    "Sequence clusters and identity analysis",
+                    "Citation and publication information",
+                    "Entity and chain mappings",
+                    "Interface-specific sequence analysis"
+                ]
+            }
+            
+            # Add approach statistics if available
+            if "approach_statistics" in fetcher_stats:
+                pdb_metadata_summary["approach_statistics"] = fetcher_stats["approach_statistics"]
+            
+            # Add resolution statistics if available
+            if "resolution_stats" in fetcher_stats:
+                pdb_metadata_summary["resolution_statistics"] = fetcher_stats["resolution_stats"]
+            
+            # Add sequence statistics if available
+            if "sequence_stats" in fetcher_stats:
+                pdb_metadata_summary["sequence_statistics"] = fetcher_stats["sequence_stats"]
+            
+            # Add organism statistics if available
+            if "organism_stats" in fetcher_stats:
+                pdb_metadata_summary["organism_statistics"] = fetcher_stats["organism_stats"]
+            
+            # Add sample PDB metadata (first 3 PDBs as examples)
+            sample_pdb_metadata = {}
+            pdb_counter = 0
+            for pdb_id, metadata in all_pdb_metadata.items():
+                if pdb_counter >= 3:  # Limit to 3 samples
+                    break
+                
+                # Create a simplified version of the metadata for display
+                sample_metadata = {
+                    "resolution": metadata.get("resolution"),
+                    "experimental_method": metadata.get("experimental_method"),
+                    "source_organism": metadata.get("source_organism", []),
+                    "chain_count": metadata.get("chain_count", 0),
+                    "unique_sequences": metadata.get("unique_sequences", 0),
+                    "is_homomer": metadata.get("is_homomer", False),
+                    "homomer_type": metadata.get("homomer_type"),
+                    "entity_count": metadata.get("entity_count", 0)
+                }
+                
+                # Add sequence information (first 2 chains as samples)
+                if metadata.get("sequences"):
+                    sample_sequences = {}
+                    chain_counter = 0
+                    for chain_id, sequence in metadata["sequences"].items():
+                        if chain_counter >= 2:
+                            break
+                        # Store just the first 50 characters of sequence for brevity
+                        truncated_seq = sequence[:50] + "..." if len(sequence) > 50 else sequence
+                        sample_sequences[chain_id] = {
+                            "length": len(sequence),
+                            "sample": truncated_seq
+                        }
+                        chain_counter += 1
+                    sample_metadata["sample_sequences"] = sample_sequences
+                
+                sample_pdb_metadata[pdb_id] = sample_metadata
+                pdb_counter += 1
+            
+            if sample_pdb_metadata:
+                pdb_metadata_summary["sample_pdb_metadata"] = sample_pdb_metadata
+            
+            # Add to fair_metadata_package.json as a separate section
+            fair_metadata["pdb_metadata_enrichment"] = pdb_metadata_summary
+            
+            # ALSO add the actual PDB metadata to the additionalProperty section
+            # This is where the actual PDB data should be added, not just the status
+            if "additionalProperty" not in fair_metadata:
+                fair_metadata["additionalProperty"] = []
+            
+            # Remove any existing PDB metadata properties
+            fair_metadata["additionalProperty"] = [
+                prop for prop in fair_metadata["additionalProperty"] 
+                if prop.get("name") not in ["PDBMetadata", "PDBStructureMetadata", "PDBMetadataDetails"]
+            ]
+            
+            # Add comprehensive PDB metadata property
+            if all_pdb_metadata:
+                # Create a summary of all PDB metadata
+                pdb_summary = {
+                    "total_pdbs": len(all_pdb_metadata),
+                    "successfully_fetched": sum(1 for meta in all_pdb_metadata.values() if meta.get("found_in_api", False)),
+                    "pdb_ids": list(all_pdb_metadata.keys()),
+                    "metadata_available": True,
+                    "fetch_timestamp": datetime.now().isoformat()
+                }
+                
+                fair_metadata["additionalProperty"].append({
+                    "@type": "PropertyValue",
+                    "name": "PDBMetadata",
+                    "value": json.dumps(pdb_summary, default=str),
+                    "description": "Summary of PDB metadata retrieved from RCSB API",
+                    "valueReference": {
+                        "@type": "PropertyValue",
+                        "name": "ParsedPDBMetadataSummary",
+                        "value": {
+                            "total_structures": len(all_pdb_metadata),
+                            "structures_with_metadata": sum(1 for meta in all_pdb_metadata.values() if meta.get("found_in_api", False)),
+                            "total_chains": sum(len(meta.get("sequences", {})) for meta in all_pdb_metadata.values()),
+                            "homomeric_structures": sum(1 for meta in all_pdb_metadata.values() if meta.get("is_homomer", False)),
+                            "unique_organisms": len(set(org for meta in all_pdb_metadata.values() 
+                                                      for org in meta.get("source_organism", [])))
+                        }
+                    }
+                })
+                
+                # Add resolution information if available
+                resolutions = [meta.get("resolution") for meta in all_pdb_metadata.values() 
+                             if meta.get("resolution") is not None]
+                if resolutions:
+                    fair_metadata["additionalProperty"].append({
+                        "@type": "PropertyValue",
+                        "name": "PDBResolutionStats",
+                        "value": f"Average: {sum(resolutions)/len(resolutions):.2f} Å, Range: {min(resolutions):.2f}-{max(resolutions):.2f} Å",
+                        "description": "Resolution statistics for all PDB structures"
+                    })
+            
+            # Update processing log
+            if "processing_log" not in fair_metadata:
+                fair_metadata["processing_log"] = []
+            
+            fair_metadata["processing_log"].append({
+                "step": "3_pdb_metadata_enrichment",
+                "timestamp": datetime.now().isoformat(),
+                "status": "completed",
+                "details": {
+                    "total_files": self.stats["total_files"],
+                    "successful_enrichments": self.stats["successfully_enriched"],
+                    "unique_pdbs": len(self.stats["unique_pdbs_processed"]),
+                    "enriched_pdbs": len(self.stats["enriched_pdbs"]),
+                    "metadata_cache_size": len(all_pdb_metadata)
+                }
+            })
+            
+            # Save the updated file
+            with open(fair_metadata_file, 'w', encoding='utf-8') as f:
+                json.dump(fair_metadata, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"✅ Updated fair_metadata_package.json at: {fair_metadata_file}")
+            logger.info(f"   - Updated PDBMetadataStatus field")
+            logger.info(f"   - Added PDB metadata enrichment section with {len(self.stats['unique_pdbs_processed'])} PDBs")
+            logger.info(f"   - Added actual PDB metadata to additionalProperty section")
+            return True
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"❌ Failed to parse JSON in fair_metadata_package.json: {e}")
+            logger.error(f"   File path: {fair_metadata_file}")
+            return False
+        except Exception as e:
+            logger.error(f"❌ Failed to update fair_metadata_package.json: {e}")
+            import traceback
+            logger.error(f"   Traceback: {traceback.format_exc()}")
+            return False
+
+    def update_fair_metadata_package2(self) -> bool:
+        """
+        Update fair_metadata_package.json with PDB metadata information.
+        
+        Returns:
+            True if successful, False otherwise
+        """
+        fair_metadata_file = self.find_fair_metadata_package_file()
+        
+        if not fair_metadata_file:
+            logger.error("❌ Could not find fair_metadata_package.json")
+            logger.error(f"   Searched in: {self.input_dir} and subdirectories")
+            return False
+        
+        try:
+            logger.info(f"📄 Loading fair_metadata_package.json from: {fair_metadata_file}")
+            
+            # Read the file
+            with open(fair_metadata_file, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+            
+            # Parse JSON
+            fair_metadata = json.loads(file_content)
+            
+            logger.debug(f"✅ Successfully parsed fair_metadata_package.json")
+            logger.debug(f"   File has keys: {list(fair_metadata.keys())}")
+            
+            # Get metadata fetcher statistics
+            fetcher_stats = self.metadata_fetcher.get_statistics()
+            
+            # Update the PDBMetadataStatus field in the main JSON-LD
+            fair_metadata = self.update_pdb_metadata_status_in_json(fair_metadata)
+        
+            print ('ZZ',self.stats)    
+            # Create PDB metadata summary section
+            pdb_metadata_summary = {
+                "script": "3_add_pdb_metadata.py",
+                "execution_date": datetime.now().isoformat(),
+                "description": "PDB metadata enrichment from RCSB API using optimized sequential approach",
+                "total_pdbs_processed": len(self.stats["unique_pdbs_processed"]),
+                "successfully_enriched_pdbs": len(self.stats["enriched_pdbs"]),
+                "metadata_fetcher_statistics": {
+                    "total_api_requests": fetcher_stats.get("total_requests", 0),
+                    "successful_fetches": fetcher_stats.get("successful_fetches", 0),
+                    "failed_fetches": fetcher_stats.get("failed_fetches", 0),
+                    "cache_hits": fetcher_stats.get("cached_hits", 0),
+                    "unique_pdbs_fetched": fetcher_stats.get("unique_pdbs_fetched", 0)
+                },
+                "optimization_strategy": {
+                    "name": "Sequential approach execution",
+                    "description": "Approach 1 (entry) → Approach 2 (entities) → Approach 3 (assembly) as fallback",
+                    "benefits": [
+                        "Reduces unnecessary API calls",
+                        "Stops when sufficient metadata is obtained",
+                        "Most structures resolved with Approach 1 or 1+2",
+                        "Approach 3 only used as fallback when others fail"
+                    ]
+                },
+                "metadata_includes": [
+                    "Resolution and experimental method",
+                    "Source organism(s) and taxonomy IDs",
+                    "ALL chain sequences (not just representative)",
+                    "Homomer detection and analysis",
+                    "Sequence clusters and identity analysis",
+                    "Citation and publication information",
+                    "Entity and chain mappings",
+                    "Interface-specific sequence analysis"
+                ]
+            }
+            
+            # Add approach statistics if available
+            if "approach_statistics" in fetcher_stats:
+                pdb_metadata_summary["approach_statistics"] = fetcher_stats["approach_statistics"]
+            
+            # Add to fair_metadata_package.json as a separate section
+            fair_metadata["pdb_metadata_enrichment"] = pdb_metadata_summary
+            
+            # Update processing log
+            if "processing_log" not in fair_metadata:
+                fair_metadata["processing_log"] = []
+            
+            fair_metadata["processing_log"].append({
+                "step": "3_pdb_metadata_enrichment",
+                "timestamp": datetime.now().isoformat(),
+                "status": "completed",
+                "details": {
+                    "total_files": self.stats["total_files"],
+                    "successful_enrichments": self.stats["successfully_enriched"],
+                    "unique_pdbs": len(self.stats["unique_pdbs_processed"]),
+                    "enriched_pdbs": len(self.stats["enriched_pdbs"])
+                }
+            })
+            
+            # Save the updated file
+            with open(fair_metadata_file, 'w', encoding='utf-8') as f:
+                json.dump(fair_metadata, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"✅ Updated fair_metadata_package.json at: {fair_metadata_file}")
+            logger.info(f"   - Updated PDBMetadataStatus field")
+            logger.info(f"   - Added PDB metadata enrichment section with {len(self.stats['unique_pdbs_processed'])} PDBs")
+            return True
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"❌ Failed to parse JSON in fair_metadata_package.json: {e}")
+            logger.error(f"   File path: {fair_metadata_file}")
+            return False
+        except Exception as e:
+            logger.error(f"❌ Failed to update fair_metadata_package.json: {e}")
+            import traceback
+            logger.error(f"   Traceback: {traceback.format_exc()}")
+            return False
+    
+    def update_embedded_markup_html(self) -> bool:
+        """
+        Update embedded_markup.html with PDB metadata information.
+        
+        Returns:
+            True if successful, False otherwise
+        """
+        embedded_html_file = self.find_embedded_markup_html_file()
+        
+        if not embedded_html_file:
+            logger.error("❌ Could not find embedded_markup.html")
+            logger.error(f"   Searched in: {self.input_dir} and subdirectories")
+            return False
+        
+        try:
+            logger.info(f"📄 Loading embedded_markup.html from: {embedded_html_file}")
+            
+            # Read the file
+            with open(embedded_html_file, 'r', encoding='utf-8') as f:
+                html_content = f.read()
+            
+            logger.debug(f"✅ Successfully read embedded_markup.html")
+            logger.debug(f"   File size: {len(html_content)} bytes")
+            
+            # Check if file contains JSON-LD
+            if '<script type="application/ld+json">' not in html_content:
+                logger.warning("⚠️  embedded_markup.html does not contain JSON-LD script tags")
+                logger.warning("   Will add PDB metadata summary section anyway")
+            
+            # Update the PDBMetadataStatus in JSON-LD script tags
+            updated_html = self.update_pdb_metadata_status_in_html(html_content)
+            
+            # Get metadata fetcher statistics
+            fetcher_stats = self.metadata_fetcher.get_statistics()
+            
+            # Create HTML section for PDB metadata summary
+            pdb_metadata_section = f"""
+<!-- PDB Metadata Summary Section - Added by script 3_add_pdb_metadata.py -->
+<section id="pdb-metadata-summary" class="pdb-metadata-summary-section" style="margin: 20px 0; padding: 20px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+    <h2 style="color: #2c3e50;">PDB Metadata Enrichment Summary</h2>
+    
+    <div class="summary-stats" style="margin-bottom: 20px;">
+        <h3 style="color: #3498db;">Statistics</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #e9ecef;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Metric</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid #dee2e6;">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">Total PDBs Processed</td>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">{len(self.stats['unique_pdbs_processed'])}</td>
+                </tr>
+                <tr style="background-color: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">Successfully Enriched</td>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">{len(self.stats['enriched_pdbs'])}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">Total API Requests</td>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">{fetcher_stats.get('total_requests', 0)}</td>
+                </tr>
+                <tr style="background-color: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">Successful Fetches</td>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">{fetcher_stats.get('successful_fetches', 0)}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="optimization-info" style="margin-bottom: 20px;">
+        <h3 style="color: #3498db;">Optimization Strategy</h3>
+        <p><strong>Sequential Approach Execution:</strong> Stop when metadata is obtained</p>
+        <ol>
+            <li><strong>Approach 1:</strong> Entry endpoint (basic structure info)</li>
+            <li><strong>Approach 2:</strong> Entity endpoints (sequences, organisms)</li>
+            <li><strong>Approach 3:</strong> Assembly endpoint (fallback only)</li>
+        </ol>
+        <p><em>Most structures resolved with Approach 1 or 1+2</em></p>
+    </div>
+    
+    <div class="metadata-content" style="margin-bottom: 20px;">
+        <h3 style="color: #3498db;">PDB Metadata Included:</h3>
+        <ul>
+            <li>Resolution and experimental method</li>
+            <li>Source organism(s) and taxonomy IDs</li>
+            <li>ALL chain sequences (not just representative)</li>
+            <li>Homomer detection and analysis</li>
+            <li>Sequence clusters and identity analysis</li>
+            <li>Citation and publication information</li>
+            <li>Entity and chain mappings</li>
+            <li>Interface-specific sequence analysis</li>
+        </ul>
+    </div>
+    
+    <div class="status-update">
+        <h3 style="color: #27ae60;">Status Update</h3>
+        <p>The <strong>PDBMetadataStatus</strong> field in the JSON-LD markup has been updated from "To be populated by script 3" to:</p>
+        <div style="background-color: #e8f5e9; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0;">
+            <strong>COMPLETE - {len(self.stats['enriched_pdbs'])} PDBs enriched</strong><br>
+            PDB metadata populated by script 3. Retrieved metadata for {len(self.stats['enriched_pdbs'])} out of {len(self.stats['unique_pdbs_processed'])} PDB structures from RCSB API.
+        </div>
+    </div>
+</section>
+<!-- End PDB Metadata Summary Section -->
+"""
+            
+            # Find where to insert the PDB metadata section
+            # Look for the end of the body tag
+            insert_point = updated_html.find("</body>")
+            if insert_point == -1:
+                # If no body tag, look for the end of the html
+                insert_point = updated_html.find("</html>")
+                if insert_point == -1:
+                    # Just append at the end
+                    insert_point = len(updated_html)
+                    logger.warning("⚠️  Could not find </body> or </html> tag, appending at end")
+            
+            # Insert the PDB metadata section before the closing body/html tag
+            final_html = updated_html[:insert_point] + pdb_metadata_section + updated_html[insert_point:]
+            
+            # Save the updated HTML file
+            with open(embedded_html_file, 'w', encoding='utf-8') as f:
+                f.write(final_html)
+            
+            logger.info(f"✅ Updated embedded_markup.html at: {embedded_html_file}")
+            logger.info(f"   - Updated PDBMetadataStatus in JSON-LD script tags")
+            logger.info(f"   - Added PDB metadata summary section")
+            return True
+            
+        except Exception as e:
+            logger.error(f"❌ Failed to update embedded_markup.html: {e}")
+            import traceback
+            logger.error(f"   Traceback: {traceback.format_exc()}")
+            return False
+    
     def process_interface_file(self, interface_file: Path) -> bool:
         """
         Process a single interface JSON-LD file and add PDB metadata.
@@ -1068,12 +1977,10 @@ class PDBMetadataEnricher:
             structure_meta = pdb_metadata.get("structure_metadata", {})
             if structure_meta.get("found_in_api"):
                 approaches_used = structure_meta.get("approaches_used", [])
-                logger.info(f"✅ Successfully enriched {interface_file}")
-                logger.info(f"  Approaches used: {approaches_used}")
-                logger.info(f"  PDB metadata: {structure_meta.get('chain_count', 0)} chains, "
-                          f"{structure_meta.get('unique_sequences', 0)} unique seqs, "
-                          f"homomer={structure_meta.get('is_homomer', False)}, "
-                          f"resolution={structure_meta.get('resolution')}")
+                logger.info(f"✅ Successfully enriched {interface_file.name}")
+                logger.info(f"   Approaches used: {approaches_used}")
+                logger.info(f"   PDB metadata: {structure_meta.get('chain_count', 0)} chains, "
+                          f"{structure_meta.get('unique_sequences', 0)} unique seqs")
             else:
                 logger.warning(f"⚠️  PDB metadata not available for {pdb_id}")
             
@@ -1129,7 +2036,7 @@ class PDBMetadataEnricher:
                 with open(dataset_file, 'w', encoding='utf-8') as f:
                     json.dump(dataset_data, f, indent=2, ensure_ascii=False)
                 
-                logger.info(f"Updated dataset file: {dataset_file}")
+                logger.info(f"✅ Updated dataset file: {dataset_file}")
                 return True
             
             else:
@@ -1201,7 +2108,7 @@ class PDBMetadataEnricher:
             with open(manifest_file, 'w', encoding='utf-8') as f:
                 json.dump(manifest_data, f, indent=2, ensure_ascii=False)
             
-            logger.info(f"Updated manifest file: {manifest_file}")
+            logger.info(f"✅ Updated manifest file: {manifest_file}")
             return True
             
         except Exception as e:
@@ -1222,8 +2129,8 @@ class PDBMetadataEnricher:
             with open(cache_file, 'w', encoding='utf-8') as f:
                 json.dump(self.metadata_fetcher.metadata_cache, f, indent=2, default=str)
             
-            logger.info(f"Saved PDB metadata cache to: {cache_file}")
-            logger.info(f"  Cache contains {len(self.metadata_fetcher.metadata_cache)} PDB entries")
+            logger.info(f"✅ Saved PDB metadata cache to: {cache_file}")
+            logger.info(f"   Cache contains {len(self.metadata_fetcher.metadata_cache)} PDB entries")
             return True
             
         except Exception as e:
@@ -1270,14 +2177,22 @@ class PDBMetadataEnricher:
         # Update dataset file if it exists
         dataset_file = self.input_dir / "dataset_with_interfaces.json"
         if dataset_file.exists():
-            logger.info(f"Updating dataset file: {dataset_file}")
+            logger.info(f"Updating dataset file: {dataset_file.name}")
             self.update_dataset_file(dataset_file)
         
         # Update manifest file if it exists
         manifest_file = self.input_dir / "manifest.json"
         if manifest_file.exists():
-            logger.info(f"Updating manifest file: {manifest_file}")
+            logger.info(f"Updating manifest file: {manifest_file.name}")
             self.update_manifest_file(manifest_file)
+        
+        # Update fair_metadata_package.json
+        logger.info("Updating fair_metadata_package.json with PDB metadata information...")
+        fair_metadata_success = self.update_fair_metadata_package()
+        
+        # Update embedded_markup.html
+        logger.info("Updating embedded_markup.html with PDB metadata section...")
+        embedded_html_success = self.update_embedded_markup_html()
         
         # Save metadata cache
         cache_file = self.input_dir / "pdb_metadata_cache.json"
@@ -1356,7 +2271,26 @@ class PDBMetadataEnricher:
         logger.info(f"  - Approach 3 only used as fallback when others fail")
         
         logger.info("")
-        logger.info(f"All JSON-LD files have been enriched with comprehensive PDB metadata.")
+        logger.info(f"📁 Updated Files:")
+        logger.info(f"  - All interface JSON-LD files enriched with PDB metadata")
+        if manifest_file.exists():
+            logger.info(f"  - manifest.json updated with statistics")
+        if fair_metadata_success:
+            logger.info(f"  - fair_metadata_package.json:")
+            logger.info(f"     * Updated PDBMetadataStatus field")
+            logger.info(f"     * Added PDB metadata enrichment section")
+        else:
+            logger.info(f"  - ❌ fair_metadata_package.json NOT updated")
+        if embedded_html_success:
+            logger.info(f"  - embedded_markup.html:")
+            logger.info(f"     * Updated PDBMetadataStatus in JSON-LD script tags")
+            logger.info(f"     * Added PDB metadata summary section")
+        else:
+            logger.info(f"  - ❌ embedded_markup.html NOT updated")
+        if self.metadata_fetcher.metadata_cache:
+            logger.info(f"  - pdb_metadata_cache.json saved with API responses")
+        
+        logger.info("")
         logger.info(f"Next step: Run script 4 to add ClusterID information.")
         
         return {**self.stats, **fetcher_stats}
@@ -1465,6 +2399,11 @@ Optimization Strategy:
         print("   Please run scripts 1 and 2 first to generate and update the JSON-LD files.")
         return
     
+    # List files in directory for debugging
+    print(f"\n📁 Files in {args.input}:")
+    for item in Path(args.input).iterdir():
+        print(f"  - {item.name} ({'dir' if item.is_dir() else 'file'})")
+    
     # Create enricher and run
     enricher = PDBMetadataEnricher(
         input_dir=args.input,
@@ -1503,6 +2442,27 @@ Optimization Strategy:
             print(f"     Actual API calls made: {actual_calls}")
             print(f"     API calls saved: {savings} ({savings_percent:.1f}%)")
             print(f"     Efficiency improvement: {((max_possible_calls/actual_calls) if actual_calls > 0 else 0):.1f}x")
+    
+    print(f"\n   Updated files:")
+    print(f"     - All interface JSON-LD files enriched with PDB metadata")
+    print(f"     - manifest.json updated with statistics")
+    
+    # Check if files were actually updated
+    fair_metadata_file = Path(args.input) / "fair_metadata_package.json"
+    embedded_html_file = Path(args.input) / "embedded_markup.html"
+    
+    if fair_metadata_file.exists():
+        print(f"     - fair_metadata_package.json exists and should be updated")
+    else:
+        print(f"     - ❌ fair_metadata_package.json NOT FOUND at {fair_metadata_file}")
+    
+    if embedded_html_file.exists():
+        print(f"     - embedded_markup.html exists and should be updated")
+    else:
+        print(f"     - ❌ embedded_markup.html NOT FOUND at {embedded_html_file}")
+    
+    if not args.skip_cache:
+        print(f"     - pdb_metadata_cache.json (cache file)")
     
     print(f"\n   Next step: Run script 4 to add ClusterID information")
 

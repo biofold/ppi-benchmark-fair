@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5JGK\", \"structure_metadata\": {\"pdb_id\": \"5JGK\", \"resolution\": 1.33, \"deposition_date\": \"2016-04-20T00:00:00+0000\", \"release_date\": \"2017-03-01T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Aspergillus fumigatus Z5\"], \"citation\": {\"title\": \"Structural, mechanistic and functional insight into gliotoxinbis-thiomethylation inAspergillus fumigatus.\", \"doi\": \"10.1098/rsob.160292\", \"authors\": [\"Dolan, S.K.\", \"Bock, T.\", \"Hering, V.\", \"Owens, R.A.\", \"Jones, G.W.\", \"Blankenfeldt, W.\", \"Doyle, S.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 48.748, \"b\": 109.301, \"c\": 59.856, \"alpha\": 90.0, \"beta\": 112.25, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GHMSKSDYIQNMFQTKSFVDRYKYTEKLTGLYAQTLVDYSGVANTSQKPLIVLDNACGIGAVSSVLNHTLQDEAKKTWKLTCGDLSEGMLETTKRRLQDEGWVNAETKIVNALDTGLPDGHYTHVFVAFGFQSFPDANAALKECFRILASGGILASSTWQNFNWIPIMKAAIETIPGNLPFPTQKEFIALHNAGWDSESYIQSELEKLGFRDVKVIPVPKETSIPIDEFFEVCMMIIPYLLPKFWTEEQRESHEKDVPMVLRQYLQDTYGANGQVPLEAVALITTGLKP\", \"B\": \"GHMSKSDYIQNMFQTKSFVDRYKYTEKLTGLYAQTLVDYSGVANTSQKPLIVLDNACGIGAVSSVLNHTLQDEAKKTWKLTCGDLSEGMLETTKRRLQDEGWVNAETKIVNALDTGLPDGHYTHVFVAFGFQSFPDANAALKECFRILASGGILASSTWQNFNWIPIMKAAIETIPGNLPFPTQKEFIALHNAGWDSESYIQSELEKLGFRDVKVIPVPKETSIPIDEFFEVCMMIIPYLLPKFWTEEQRESHEKDVPMVLRQYLQDTYGANGQVPLEAVALITTGLKP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Aspergillus fumigatus Z5\", \"sequence_length\": 289, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q4X158\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Aspergillus fumigatus Z5\", \"sequence_length\": 289, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q4X158\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GHMSKSDYIQNMFQTKSFVDRYKYTEKLTGLYAQTLVDYSGVANTSQKPLIVLDNACGIGAVSSVLNHTLQDEAKKTWKLTCGDLSEGMLETTKRRLQDEGWVNAETKIVNALDTGLPDGHYTHVFVAFGFQSFPDANAALKECFRILASGGILASSTWQNFNWIPIMKAAIETIPGNLPFPTQKEFIALHNAGWDSESYIQSELEKLGFRDVKVIPVPKETSIPIDEFFEVCMMIIPYLLPKFWTEEQRESHEKDVPMVLRQYLQDTYGANGQVPLEAVALITTGLKP\", \"organism\": \"Aspergillus fumigatus Z5\", \"taxonomy_id\": 1437362, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 289, \"gene_name\": null, \"uniprot_ids\": [\"Q4X158\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GHMSKSDYIQNMFQTKSFVDRYKYTEKLTGLYAQTLVDYSGVANTSQKPLIVLDNACGIGAVSSVLNHTLQDEAKKTWKLTCGDLSEGMLETTKRRLQDEGWVNAETKIVNALDTGLPDGHYTHVFVAFGFQSFPDANAALKECFRILASGGILASSTWQNFNWIPIMKAAIETIPGNLPFPTQKEFIALHNAGWDSESYIQSELEKLGFRDVKVIPVPKETSIPIDEFFEVCMMIIPYLLPKFWTEEQRESHEKDVPMVLRQYLQDTYGANGQVPLEAVALITTGLKP\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T19:00:04.339910\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 289.0, \"min_sequence_length\": 289, \"max_sequence_length\": 289}, \"interface_info\": {\"interface_id\": \"5JGK_1\", \"name\": \"Interface 5JGK_1\", \"pdb_id\": \"5JGK\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 289, \"chain2_sequence_length\": 289, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:00:05.853085\"}",
@@ -271,6 +265,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -386,24 +392,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5JGK_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5jgk_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.969372\"}",
       "description": "Results of chain validation against structure files",
@@ -453,6 +441,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5JGK_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5jgk_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.660523\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:28.660523"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5JGK_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5jgk_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:26.412803\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:26.412803"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5JGK_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5jgk_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.782269\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:44.782269"
+        }
+      }
     }
   ]
 }

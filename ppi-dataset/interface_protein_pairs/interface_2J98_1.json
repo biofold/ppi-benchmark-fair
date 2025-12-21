@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2J98\", \"structure_metadata\": {\"pdb_id\": \"2J98\", \"resolution\": 1.8, \"deposition_date\": \"2006-11-03T00:00:00+0000\", \"release_date\": \"2007-11-27T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Human coronavirus 229E\"], \"citation\": {\"title\": \"Variable Oligomerization Modes in Coronavirus Non-Structural Protein 9.\", \"doi\": \"10.1016/J.JMB.2008.07.071\", \"authors\": [\"Ponnusamy, R.\", \"Moll, R.\", \"Weimar, T.\", \"Mesters, J.R.\", \"Hilgenfeld, R.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 26.396, \"b\": 61.377, \"c\": 107.309, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"NNEIMPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\", \"B\": \"NNEIKPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Human coronavirus 229E\", \"sequence_length\": 109, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6X1\"]}, \"B\": {\"entity_id\": \"2\", \"organism\": \"Human coronavirus 229E\", \"sequence_length\": 109, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6X1\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"NNEIMPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\", \"organism\": \"Human coronavirus 229E\", \"taxonomy_id\": 11137, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 109, \"gene_name\": null, \"uniprot_ids\": [\"P0C6X1\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"NNEIKPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\", \"organism\": \"Human coronavirus 229E\", \"taxonomy_id\": 11137, \"chain_ids\": [\"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 109, \"gene_name\": null, \"uniprot_ids\": [\"P0C6X1\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"NNEIMPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\", \"entities\": [\"1\"], \"chain_count\": 1}, {\"sequence\": \"NNEIKPGKMKVKATKGEGDGGITSEGNALYNNEGGRAFMYAYVTTKPGMKYVKWEHDSGVVTVELEPPARFVIDTPTGPQIKYLYFVKNLNNLRRGAVLGYIGATVRLQ\", \"entities\": [\"2\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:45:03.353902\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 2, \"unique_sequences\": 2, \"avg_sequence_length\": 109.0, \"min_sequence_length\": 109, \"max_sequence_length\": 109}, \"interface_info\": {\"interface_id\": \"2J98_1\", \"name\": \"Interface 2J98_1\", \"pdb_id\": \"2J98\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 109, \"chain2_sequence_length\": 109, \"sequences_identical\": false, \"sequence_identity\": 99.08256880733946}, \"enrichment_timestamp\": \"2025-12-19T18:45:04.865055\"}",
@@ -275,6 +269,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -396,24 +402,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2J98_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2j98_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.412706\"}",
       "description": "Results of chain validation against structure files",
@@ -471,6 +459,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2J98_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2j98_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.640219\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.640219"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2J98_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2j98_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.386782\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.386782"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2J98_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2j98_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.850502\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.850502"
+        }
+      }
     }
   ]
 }

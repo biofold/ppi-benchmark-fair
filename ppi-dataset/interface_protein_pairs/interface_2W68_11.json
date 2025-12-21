@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2W68\", \"structure_metadata\": {\"pdb_id\": \"2W68\", \"resolution\": 2.5, \"deposition_date\": \"2008-12-17T00:00:00+0000\", \"release_date\": \"2008-12-30T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Vibrio cholerae\"], \"citation\": {\"title\": \"Enhancing the Receptor Affinity of the Sialic Acid-Binding Domain of Vibrio Cholerae Sialidase Through Multivalency\", \"doi\": \"10.1074/JBC.M807398200\", \"authors\": [\"Connaris, H.\", \"Crocker, P.R.\", \"Taylor, G.L.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 138.6, \"b\": 197.62, \"c\": 82.98, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"AAMALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGD\", \"B\": \"AAMALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGD\", \"C\": \"AAMALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGD\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 195, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 195, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 195, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"AAMALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGD\", \"organism\": \"Vibrio cholerae\", \"taxonomy_id\": 666, \"chain_ids\": [\"A\", \"B\", \"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 195, \"gene_name\": null, \"uniprot_ids\": [\"P0C6E9\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"AAMALFDYNATGDTEFDSPAKQGWMQDNTNNGSGVLTNADGMPAWLVQGIGGRAQWTYSLSTNQHAQASSFGWRMTTEMKVLSGGMITNYYANGTQRVLPIISLDSSGNLVVEFEGQTGRTVLATGTAATEYHKFELVFLPGSNPSASFYFDGKLIRDNIQPTASKQNMIVWGNGSSNTDGVAAYRDIKFEIQGD\", \"entities\": [\"1\"], \"chain_count\": 3}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:51:39.474327\", \"polymer_composition\": \"protein/oligosaccharide\", \"homomer_type\": \"monomer\", \"homomer_chains\": 3, \"chain_count\": 3, \"unique_sequences\": 1, \"avg_sequence_length\": 195.0, \"min_sequence_length\": 195, \"max_sequence_length\": 195}, \"interface_info\": {\"interface_id\": \"2W68_11\", \"name\": \"Interface 2W68_11\", \"pdb_id\": \"2W68\", \"auth_chain1\": \"B\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 195, \"chain2_sequence_length\": 195, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:51:40.972692\"}",
@@ -284,6 +278,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -405,24 +411,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2W68_11\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2w68_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.112929\"}",
       "description": "Results of chain validation against structure files",
@@ -480,6 +468,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2W68_11\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2w68_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.642309\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:28.642309"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2W68_11\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2w68_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:26.393953\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:26.393953"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2W68_11\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2w68_11.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.762578\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:44.762578"
+        }
+      }
     }
   ]
 }

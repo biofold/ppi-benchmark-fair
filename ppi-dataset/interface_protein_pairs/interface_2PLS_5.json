@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-K",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2PLS\", \"structure_metadata\": {\"pdb_id\": \"2PLS\", \"resolution\": 2.15, \"deposition_date\": \"2007-04-20T00:00:00+0000\", \"release_date\": \"2007-05-22T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Chlorobaculum tepidum TLS\"], \"citation\": {\"title\": \"The crystal structure of the CorC/HlyC transporter associated domain of a CBS domain protein from Chlorobium tepidum TLS.\", \"authors\": [\"Tan, K.\", \"Volkart, L.\", \"Clancy, S.\", \"Joachimiak, A.\"]}, \"entity_count\": 6, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 108.243, \"b\": 108.493, \"c\": 106.37, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"B\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"C\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"D\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"E\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"F\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"G\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"H\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"I\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"J\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"K\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"L\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Chlorobaculum tepidum TLS\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"organism\": \"Chlorobaculum tepidum TLS\", \"taxonomy_id\": 194439, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 98, \"gene_name\": null, \"uniprot_ids\": [\"Q8KEZ1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNAVQREDGSWLLDGLIAVPELKDTLGLRAVPEEEKGVYHTLSG(MSE)I(MSE)WLLGRLPQTGDITFWENWRLEVID(MSE)DSKRIDKVLATKID\", \"entities\": [\"1\"], \"chain_count\": 12}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"], \"fetch_timestamp\": \"2025-12-19T18:50:25.370455\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 12, \"chain_count\": 12, \"unique_sequences\": 1, \"avg_sequence_length\": 98.0, \"min_sequence_length\": 98, \"max_sequence_length\": 98}, \"interface_info\": {\"interface_id\": \"2PLS_5\", \"name\": \"Interface 2PLS_5\", \"pdb_id\": \"2PLS\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"K\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 98, \"chain2_sequence_length\": 98, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:50:27.490213\"}",
@@ -306,6 +300,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-K",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -427,24 +433,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "K",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-K",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2PLS_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"K\"}, \"actual_chains_found\": [\"A\", \"K\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2pls_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.976174\"}",
       "description": "Results of chain validation against structure files",
@@ -506,6 +494,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2PLS_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"K\"}, \"actual_chains_found\": [\"A\", \"K\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2pls_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:29.480080\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:29.480080"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2PLS_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"K\"}, \"actual_chains_found\": [\"A\", \"K\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2pls_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:27.238547\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:27.238547"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "K",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-K",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2PLS_5\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"K\"}, \"actual_chains_found\": [\"A\", \"K\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2pls_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:45.638877\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:45.638877"
+        }
+      }
     }
   ]
 }

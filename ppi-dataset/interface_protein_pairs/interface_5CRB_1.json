@@ -83,12 +83,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"5CRB\", \"structure_metadata\": {\"pdb_id\": \"5CRB\", \"resolution\": 2.0, \"deposition_date\": \"2015-07-22T00:00:00+0000\", \"release_date\": \"2015-11-25T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Legionella pneumophila\"], \"citation\": {\"title\": \"Structural basis of substrate recognition by a bacterial deubiquitinase important for dynamics of phagosome ubiquitination.\", \"doi\": \"10.1073/pnas.1514568112\", \"authors\": [\"Sheedlo, M.J.\", \"Qiu, J.\", \"Tan, Y.\", \"Paul, L.N.\", \"Luo, Z.Q.\", \"Das, C.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 62.41, \"b\": 76.355, \"c\": 88.429, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MPKYVEGVELTQEGMHAIFARMGYGDITSGSIYNGVPTIDTGALNRQGFMPVLTGVGPHRDSGHWIMLIKGPGNQYYLFDPLGKTSGEGYQNILAAQLPMGSTLSVIPNGSGLNMGLCGYWVASAGLRAHQALNQHNPPTLLNVGQTITNEMRNELDHDGYRKITGWLRAVADEFPEGDPQLDGKALRENTEK\", \"B\": \"MPKYVEGVELTQEGMHAIFARMGYGDITSGSIYNGVPTIDTGALNRQGFMPVLTGVGPHRDSGHWIMLIKGPGNQYYLFDPLGKTSGEGYQNILAAQLPMGSTLSVIPNGSGLNMGLCGYWVASAGLRAHQALNQHNPPTLLNVGQTITNEMRNELDHDGYRKITGWLRAVADEFPEGDPQLDGKALRENTEK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Legionella pneumophila\", \"sequence_length\": 193, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q6RCR0\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Legionella pneumophila\", \"sequence_length\": 193, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q6RCR0\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MPKYVEGVELTQEGMHAIFARMGYGDITSGSIYNGVPTIDTGALNRQGFMPVLTGVGPHRDSGHWIMLIKGPGNQYYLFDPLGKTSGEGYQNILAAQLPMGSTLSVIPNGSGLNMGLCGYWVASAGLRAHQALNQHNPPTLLNVGQTITNEMRNELDHDGYRKITGWLRAVADEFPEGDPQLDGKALRENTEK\", \"organism\": \"Legionella pneumophila\", \"taxonomy_id\": 446, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 193, \"gene_name\": null, \"uniprot_ids\": [\"Q6RCR0\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MPKYVEGVELTQEGMHAIFARMGYGDITSGSIYNGVPTIDTGALNRQGFMPVLTGVGPHRDSGHWIMLIKGPGNQYYLFDPLGKTSGEGYQNILAAQLPMGSTLSVIPNGSGLNMGLCGYWVASAGLRAHQALNQHNPPTLLNVGQTITNEMRNELDHDGYRKITGWLRAVADEFPEGDPQLDGKALRENTEK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T18:40:27.472327\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 193.0, \"min_sequence_length\": 193, \"max_sequence_length\": 193}, \"interface_info\": {\"interface_id\": \"5CRB_1\", \"name\": \"Interface 5CRB_1\", \"pdb_id\": \"5CRB\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 193, \"chain2_sequence_length\": 193, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:40:28.374532\"}",
@@ -264,6 +258,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -373,24 +379,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"5CRB_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/5crb_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:31.951959\"}",
       "description": "Results of chain validation against structure files",
@@ -448,6 +436,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5CRB_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5crb_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.074775\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:31.074775"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5CRB_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5crb_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.804813\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:28.804813"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"5CRB_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/5crb_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.286794\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:47.286794"
+        }
+      }
     }
   ]
 }

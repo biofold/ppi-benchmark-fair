@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "G-H",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2RCV\", \"structure_metadata\": {\"pdb_id\": \"2RCV\", \"resolution\": 1.6, \"deposition_date\": \"2007-09-20T00:00:00+0000\", \"release_date\": \"2008-02-26T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Bacillus subtilis\"], \"citation\": {\"title\": \"Structure of Bacillus subtilis superoxide dismutase.\", \"doi\": \"10.1107/S1744309107054127\", \"authors\": [\"Liu, P.\", \"Ewis, H.E.\", \"Huang, Y.J.\", \"Lu, C.D.\", \"Tai, P.C.\", \"Weber, I.T.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 68.369, \"b\": 84.034, \"c\": 91.951, \"alpha\": 99.13, \"beta\": 105.98, \"gamma\": 105.58}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"B\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"C\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"D\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"E\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"F\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"G\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"H\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 202, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"organism\": \"Bacillus subtilis\", \"taxonomy_id\": 1423, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 202, \"gene_name\": null, \"uniprot_ids\": [\"P54375\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAYELPELPYAYDALEPHIDKETMTIHHTKHHNTYVTNLNKAVEGNTALANKSVEELVADLDSVPENIRTAVRNNGGGHANHKLFWTLLSPNGGGEPTGALAEEINSVFGSFDKFKEQFAAAAAGRFGSGWAWLVVNNGKLEITSTPNQDSPLSEGKTPILGLDVWEHAYYLNYQNRRPDYISAFWNVVNWDEVARLYSERK\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:43:48.622339\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 202.0, \"min_sequence_length\": 202, \"max_sequence_length\": 202}, \"interface_info\": {\"interface_id\": \"2RCV_2\", \"name\": \"Interface 2RCV_2\", \"pdb_id\": \"2RCV\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"G\", \"label_chain2\": \"H\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 202, \"chain2_sequence_length\": 202, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:43:49.818187\"}",
@@ -315,6 +309,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "G-H",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -436,24 +442,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "G",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "H",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "G-H",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2RCV_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2rcv_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.301197\"}",
       "description": "Results of chain validation against structure files",
@@ -532,6 +520,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2RCV_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2rcv_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.472570\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.472570"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2RCV_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2rcv_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.223746\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.223746"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "G",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "H",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "G-H",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2RCV_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2rcv_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.671587\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.671587"
+        }
+      }
     }
   ]
 }

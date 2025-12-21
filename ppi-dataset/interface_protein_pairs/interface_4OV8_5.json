@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4OV8\", \"structure_metadata\": {\"pdb_id\": \"4OV8\", \"resolution\": 2.15, \"deposition_date\": \"2014-02-20T00:00:00+0000\", \"release_date\": \"2015-02-18T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Pleurotus ostreatus\"], \"citation\": {\"title\": \"Conformational Changes during Pore Formation by the Perforin-Related Protein Pleurotolysin\", \"doi\": \"10.1371/journal.pbio.1002049\", \"authors\": [\"Lukoyanova, N.\", \"Kondos, S.C.\", \"Farabella, I.\", \"Law, R.H.P.\", \"Reboul, C.F.\", \"Caradoc-Davies, T.T.\", \"Spicer, B.A.\", \"Kleifeld, O.\", \"Traore, D.A.\", \"Ekkel, S.M.\", \"Voskoboinik, I.\", \"Trapani, J.A.\", \"Hatfaludi, T.\", \"Oliver, K.\", \"Hotze, E.M.\", \"Tweten, R.K.\", \"Whisstock, J.C.\", \"Topf, M.\", \"Saibil, H.R.\", \"Dunstone, M.A.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 71.181, \"b\": 71.181, \"c\": 174.675, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Pleurotus ostreatus\", \"sequence_length\": 476, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q5W9E8\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"organism\": \"Pleurotus ostreatus\", \"taxonomy_id\": 5322, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 476, \"gene_name\": null, \"uniprot_ids\": [\"Q5W9E8\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T18:50:51.575536\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 476.0, \"min_sequence_length\": 476, \"max_sequence_length\": 476}, \"interface_info\": {\"interface_id\": \"4OV8_5\", \"name\": \"Interface 4OV8_5\", \"pdb_id\": \"4OV8\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 476, \"chain2_sequence_length\": 476, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:50:53.373898\"}",
@@ -273,6 +267,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -388,24 +394,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4OV8_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4ov8_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.025315\"}",
       "description": "Results of chain validation against structure files",
@@ -455,6 +443,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4OV8_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ov8_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:29.432871\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:29.432871"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4OV8_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ov8_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:27.191292\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:27.191292"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4OV8_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ov8_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:45.589458\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:45.589458"
+        }
+      }
     }
   ]
 }

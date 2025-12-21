@@ -83,12 +83,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-L",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4E86\", \"structure_metadata\": {\"pdb_id\": \"4E86\", \"resolution\": 2.75, \"deposition_date\": \"2012-03-19T00:00:00+0000\", \"release_date\": \"2012-05-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Functional determinants of human enteric {alpha}-defensin HD5: crucial role for hydrophobicity at dimer interface.\", \"doi\": \"10.1074/jbc.M112.367995\", \"authors\": [\"Rajabi, M.\", \"Ericksen, B.\", \"Wu, X.\", \"de Leeuw, E.\", \"Zhao, L.\", \"Pazgier, M.\", \"Lu, W.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 124.141, \"b\": 40.757, \"c\": 54.215, \"alpha\": 90.0, \"beta\": 96.38, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"B\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"C\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"D\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"E\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"F\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"G\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"H\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"L\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"L\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 36, \"gene_name\": null, \"uniprot_ids\": [\"Q01523\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"ATCYCRTGRCATRESLSGVCEISGRLYR(ABA)CCR\", \"entities\": [\"1\"], \"chain_count\": 9}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:10:28.907125\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 9, \"chain_count\": 9, \"unique_sequences\": 1, \"avg_sequence_length\": 36.0, \"min_sequence_length\": 36, \"max_sequence_length\": 36}, \"interface_info\": {\"interface_id\": \"4E86_14\", \"name\": \"Interface 4E86_14\", \"pdb_id\": \"4E86\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"L\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 36, \"chain2_sequence_length\": 36, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:10:30.106942\"}",
@@ -304,6 +298,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-L",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -413,24 +419,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "L",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-L",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4E86_14\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"L\"}, \"actual_chains_found\": [\"A\", \"L\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4e86_14.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.037571\"}",
       "description": "Results of chain validation against structure files",
@@ -480,6 +468,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4E86_14\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"L\"}, \"actual_chains_found\": [\"A\", \"L\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4e86_14.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.694234\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:31.694234"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4E86_14\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"L\"}, \"actual_chains_found\": [\"A\", \"L\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4e86_14.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.424599\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:29.424599"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "L",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-L",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4E86_14\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"L\"}, \"actual_chains_found\": [\"A\", \"L\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4e86_14.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.968932\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:47.968932"
+        }
+      }
     }
   ]
 }

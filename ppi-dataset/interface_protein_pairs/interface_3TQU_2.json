@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "C-D",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3TQU\", \"structure_metadata\": {\"pdb_id\": \"3TQU\", \"resolution\": 1.9, \"deposition_date\": \"2011-09-09T00:00:00+0000\", \"release_date\": \"2011-09-21T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Coxiella burnetii RSA 493\"], \"citation\": {\"title\": \"Structural genomics for drug design against the pathogen Coxiella burnetii.\", \"doi\": \"10.1002/prot.24841\", \"authors\": [\"Franklin, M.C.\", \"Cheung, J.\", \"Rudolph, M.J.\", \"Burshteyn, F.\", \"Cassidy, M.\", \"Gary, E.\", \"Hillerich, B.\", \"Yao, Z.K.\", \"Carlier, P.R.\", \"Totrov, M.\", \"Love, J.D.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 51.528, \"b\": 86.737, \"c\": 105.794, \"alpha\": 90.0, \"beta\": 92.49, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\", \"B\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\", \"C\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\", \"D\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Coxiella burnetii RSA 493\", \"sequence_length\": 215, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83FA3\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Coxiella burnetii RSA 493\", \"sequence_length\": 215, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83FA3\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Coxiella burnetii RSA 493\", \"sequence_length\": 215, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83FA3\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Coxiella burnetii RSA 493\", \"sequence_length\": 215, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q83FA3\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\", \"organism\": \"Coxiella burnetii RSA 493\", \"taxonomy_id\": 227377, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 215, \"gene_name\": null, \"uniprot_ids\": [\"Q83FA3\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNA(MSE)LEIVLASQNSSKLAE(MSE)QELLRDLEIKFIPQTEFSVPDIEETGSTFVENAIIKARHAAKQTGLPALADDSGLTIAALNSAPGVFSSRYAGKNATDAERIQKVLEALEAADDSDRSASFHCVIAL(MSE)ENENDPAPLICHGVWEGEIAREPRGKNGFGYDPIFYVPSHQRTAAELDPQEKNAISHRGQALEQLSTVLTEAFLV\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:58:29.644535\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 215.0, \"min_sequence_length\": 215, \"max_sequence_length\": 215}, \"interface_info\": {\"interface_id\": \"3TQU_2\", \"name\": \"Interface 3TQU_2\", \"pdb_id\": \"3TQU\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"C\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 215, \"chain2_sequence_length\": 215, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:58:31.155851\"}",
@@ -303,6 +297,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -424,24 +430,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "C",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "D",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "C-D",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3TQU_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3tqu_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.811449\"}",
       "description": "Results of chain validation against structure files",
@@ -500,6 +488,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3TQU_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3tqu_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.526063\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:28.526063"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3TQU_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3tqu_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:26.273485\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:26.273485"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "C-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3TQU_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3tqu_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.640434\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:44.640434"
+        }
+      }
     }
   ]
 }

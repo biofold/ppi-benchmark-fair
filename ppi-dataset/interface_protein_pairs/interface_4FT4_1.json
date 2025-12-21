@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "B-A",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4FT4\", \"structure_metadata\": {\"pdb_id\": \"4FT4\", \"resolution\": 2.7, \"deposition_date\": \"2012-06-27T00:00:00+0000\", \"release_date\": \"2012-10-17T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Zea mays\"], \"citation\": {\"title\": \"Dual Binding of Chromomethylase Domains to H3K9me2-Containing Nucleosomes Directs DNA Methylation in Plants.\", \"doi\": \"10.1016/j.cell.2012.07.034\", \"authors\": [\"Du, J.\", \"Zhong, X.\", \"Bernatavichute, Y.V.\", \"Stroud, H.\", \"Feng, S.\", \"Caro, E.\", \"Vashisht, A.A.\", \"Terragni, J.\", \"Chin, H.G.\", \"Tu, A.\", \"Hetzel, J.\", \"Wohlschlegel, J.A.\", \"Pradhan, S.\", \"Patel, D.J.\", \"Jacobsen, S.E.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 64.645, \"b\": 111.558, \"c\": 151.48, \"alpha\": 90.0, \"beta\": 101.98, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"B\": \"SAGDHEPEFIGSPVAADEARSNWPKRYGRSTAAKKPDEEEELKARCHYRSAKVDNVVYCLGDDVYVKAGENEADYIGRITEFFEGTDQCHYFTCRWFFRAEDTVINSLVSISVDGHKHDPRRVFLSEEKNDNVLDCIISKVKIVHVDPNMDPKAKAQLIESCDLYYDMSYSVAYSTFANISSENGQSGSDTASGISSDDVDLETSSSMPTRTATLLDLYSGCGGMSTGLCLGAALSGLKLETRWAVDFNSFACQSLKYNHPQTEVRNEKADEFLALLKEWAVLCKKYVQDVDSNLASSEDQADEDSPLDKDEFVVEKLVGICYGGSDRENGIYFKVQWEGYGPEEDTWEPIDNLSDCPQKIREFVQEGHKRKILPLPGDVDVICGGPPCQGISGFNRYRNRDEPLKDEKNKQMVTFMDIVAYLKPKYVLMENVVDILKFADGYLGKYALSCLVAMKYQARLGMMVAGCYGLPQFRMRVFLWGALSSMVLPKYPLPTYDVVVRGGAPNAFSQCMVAYDETQKPSLKKALLLGDAISDLPKVQNHQPNDVMEYGGSPKTEFQRYIRLSRKDMLDWSFGEGAGPDEGKLLDHQPLRLNNDDYERVQQIPVKKGANFRDLKGVRVGANNIVEWDPEIERVKLSSGKPLVPDYAMSFIKGKSLKPFGRLWWDETVPTVVTRAEPHNQVIIHPTQARVLTIRENARLQGFPDYYRLFGPIKEKYIQVGNAVAVPVARALGYCLGQAYLGESEGSDPLYQLPPSFTSVGGRTAGQARASPVGTPAGEVVEQ\", \"A\": \"SAGDHEPEFIGSPVAADEARSNWPKRYGRSTAAKKPDEEEELKARCHYRSAKVDNVVYCLGDDVYVKAGENEADYIGRITEFFEGTDQCHYFTCRWFFRAEDTVINSLVSISVDGHKHDPRRVFLSEEKNDNVLDCIISKVKIVHVDPNMDPKAKAQLIESCDLYYDMSYSVAYSTFANISSENGQSGSDTASGISSDDVDLETSSSMPTRTATLLDLYSGCGGMSTGLCLGAALSGLKLETRWAVDFNSFACQSLKYNHPQTEVRNEKADEFLALLKEWAVLCKKYVQDVDSNLASSEDQADEDSPLDKDEFVVEKLVGICYGGSDRENGIYFKVQWEGYGPEEDTWEPIDNLSDCPQKIREFVQEGHKRKILPLPGDVDVICGGPPCQGISGFNRYRNRDEPLKDEKNKQMVTFMDIVAYLKPKYVLMENVVDILKFADGYLGKYALSCLVAMKYQARLGMMVAGCYGLPQFRMRVFLWGALSSMVLPKYPLPTYDVVVRGGAPNAFSQCMVAYDETQKPSLKKALLLGDAISDLPKVQNHQPNDVMEYGGSPKTEFQRYIRLSRKDMLDWSFGEGAGPDEGKLLDHQPLRLNNDDYERVQQIPVKKGANFRDLKGVRVGANNIVEWDPEIERVKLSSGKPLVPDYAMSFIKGKSLKPFGRLWWDETVPTVVTRAEPHNQVIIHPTQARVLTIRENARLQGFPDYYRLFGPIKEKYIQVGNAVAVPVARALGYCLGQAYLGESEGSDPLYQLPPSFTSVGGRTAGQARASPVGTPAGEVVEQ\", \"P\": \"ARTKQTAR(MLY)STGGKAPRKQLATKAARKSAPAT\", \"Q\": \"ARTKQTAR(MLY)STGGKAPRKQLATKAARKSAPAT\"}, \"chain_info\": {\"B\": {\"entity_id\": \"1\", \"organism\": \"Zea mays\", \"sequence_length\": 784, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9AXT8\"]}, \"A\": {\"entity_id\": \"1\", \"organism\": \"Zea mays\", \"sequence_length\": 784, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q9AXT8\"]}, \"P\": {\"entity_id\": \"2\", \"organism\": null, \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P59226\"]}, \"Q\": {\"entity_id\": \"2\", \"organism\": null, \"sequence_length\": 36, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"P59226\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SAGDHEPEFIGSPVAADEARSNWPKRYGRSTAAKKPDEEEELKARCHYRSAKVDNVVYCLGDDVYVKAGENEADYIGRITEFFEGTDQCHYFTCRWFFRAEDTVINSLVSISVDGHKHDPRRVFLSEEKNDNVLDCIISKVKIVHVDPNMDPKAKAQLIESCDLYYDMSYSVAYSTFANISSENGQSGSDTASGISSDDVDLETSSSMPTRTATLLDLYSGCGGMSTGLCLGAALSGLKLETRWAVDFNSFACQSLKYNHPQTEVRNEKADEFLALLKEWAVLCKKYVQDVDSNLASSEDQADEDSPLDKDEFVVEKLVGICYGGSDRENGIYFKVQWEGYGPEEDTWEPIDNLSDCPQKIREFVQEGHKRKILPLPGDVDVICGGPPCQGISGFNRYRNRDEPLKDEKNKQMVTFMDIVAYLKPKYVLMENVVDILKFADGYLGKYALSCLVAMKYQARLGMMVAGCYGLPQFRMRVFLWGALSSMVLPKYPLPTYDVVVRGGAPNAFSQCMVAYDETQKPSLKKALLLGDAISDLPKVQNHQPNDVMEYGGSPKTEFQRYIRLSRKDMLDWSFGEGAGPDEGKLLDHQPLRLNNDDYERVQQIPVKKGANFRDLKGVRVGANNIVEWDPEIERVKLSSGKPLVPDYAMSFIKGKSLKPFGRLWWDETVPTVVTRAEPHNQVIIHPTQARVLTIRENARLQGFPDYYRLFGPIKEKYIQVGNAVAVPVARALGYCLGQAYLGESEGSDPLYQLPPSFTSVGGRTAGQARASPVGTPAGEVVEQ\", \"organism\": \"Zea mays\", \"taxonomy_id\": 4577, \"chain_ids\": [\"B\", \"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 784, \"gene_name\": null, \"uniprot_ids\": [\"Q9AXT8\"]}, \"2\": {\"entity_id\": \"2\", \"sequence\": \"ARTKQTAR(MLY)STGGKAPRKQLATKAARKSAPAT\", \"organism\": null, \"taxonomy_id\": null, \"chain_ids\": [\"P\", \"Q\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 36, \"gene_name\": null, \"uniprot_ids\": [\"P59226\"]}}, \"is_homomer\": false, \"sequence_clusters\": [{\"sequence\": \"SAGDHEPEFIGSPVAADEARSNWPKRYGRSTAAKKPDEEEELKARCHYRSAKVDNVVYCLGDDVYVKAGENEADYIGRITEFFEGTDQCHYFTCRWFFRAEDTVINSLVSISVDGHKHDPRRVFLSEEKNDNVLDCIISKVKIVHVDPNMDPKAKAQLIESCDLYYDMSYSVAYSTFANISSENGQSGSDTASGISSDDVDLETSSSMPTRTATLLDLYSGCGGMSTGLCLGAALSGLKLETRWAVDFNSFACQSLKYNHPQTEVRNEKADEFLALLKEWAVLCKKYVQDVDSNLASSEDQADEDSPLDKDEFVVEKLVGICYGGSDRENGIYFKVQWEGYGPEEDTWEPIDNLSDCPQKIREFVQEGHKRKILPLPGDVDVICGGPPCQGISGFNRYRNRDEPLKDEKNKQMVTFMDIVAYLKPKYVLMENVVDILKFADGYLGKYALSCLVAMKYQARLGMMVAGCYGLPQFRMRVFLWGALSSMVLPKYPLPTYDVVVRGGAPNAFSQCMVAYDETQKPSLKKALLLGDAISDLPKVQNHQPNDVMEYGGSPKTEFQRYIRLSRKDMLDWSFGEGAGPDEGKLLDHQPLRLNNDDYERVQQIPVKKGANFRDLKGVRVGANNIVEWDPEIERVKLSSGKPLVPDYAMSFIKGKSLKPFGRLWWDETVPTVVTRAEPHNQVIIHPTQARVLTIRENARLQGFPDYYRLFGPIKEKYIQVGNAVAVPVARALGYCLGQAYLGESEGSDPLYQLPPSFTSVGGRTAGQARASPVGTPAGEVVEQ\", \"entities\": [\"1\"], \"chain_count\": 2}, {\"sequence\": \"ARTKQTAR(MLY)STGGKAPRKQLATKAARKSAPAT\", \"entities\": [\"2\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"fetch_timestamp\": \"2025-12-19T18:53:49.000317\", \"polymer_composition\": \"heteromeric protein\", \"chain_count\": 4, \"unique_sequences\": 2, \"avg_sequence_length\": 410.0, \"min_sequence_length\": 36, \"max_sequence_length\": 784}, \"interface_info\": {\"interface_id\": \"4FT4_1\", \"name\": \"Interface 4FT4_1\", \"pdb_id\": \"4FT4\", \"auth_chain1\": \"B\", \"auth_chain2\": \"A\", \"label_chain1\": \"B\", \"label_chain2\": \"A\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 784, \"chain2_sequence_length\": 784, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:53:50.502741\"}",
@@ -307,6 +301,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-A",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -428,24 +434,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "B",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "A",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "B-A",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4FT4_1\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4ft4_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.338076\"}",
       "description": "Results of chain validation against structure files",
@@ -495,6 +483,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4FT4_1\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ft4_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.882103\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:28.882103"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4FT4_1\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ft4_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:26.640144\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:26.640144"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "A",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "B-A",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4FT4_1\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4ft4_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:45.014065\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:45.014065"
+        }
+      }
     }
   ]
 }

@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "G-H",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4NF1\", \"structure_metadata\": {\"pdb_id\": \"4NF1\", \"resolution\": 1.3986, \"deposition_date\": \"2013-10-30T00:00:00+0000\", \"release_date\": \"2014-11-12T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Xylella fastidiosa Temecula1\"], \"citation\": {\"title\": \"Structures of the N-acetyltransferase domain of Xylella fastidiosaN-acetyl-L-glutamate synthase/kinase with and without a His tag bound to N-acetyl-L-glutamate.\", \"doi\": \"10.1107/S2053230X14026788\", \"authors\": [\"Zhao, G.\", \"Jin, Z.\", \"Allewell, N.M.\", \"Tuchman, M.\", \"Shi, D.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 63.871, \"b\": 123.35, \"c\": 76.659, \"alpha\": 90.0, \"beta\": 107.62, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"B\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"C\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"D\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"E\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"F\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"G\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"H\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Xylella fastidiosa Temecula1\", \"sequence_length\": 150, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"organism\": \"Xylella fastidiosa Temecula1\", \"taxonomy_id\": 183190, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 150, \"gene_name\": null, \"uniprot_ids\": [\"Q87EL2\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GSHMVIRATTWKDLDLPRLQHLIQSSFRRTLIPHYFETTPLLRAYVSENYRAAVILTKLGNVPYLDKFAVLDDAQGEGLGRAVWSIMREETPQLFWRSRHNNQANAFYYAESDGYYKQDHWKIFWNGLHHFQQIQQCVAHCTQHPPTLID\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T18:57:34.826569\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 150.0, \"min_sequence_length\": 150, \"max_sequence_length\": 150}, \"interface_info\": {\"interface_id\": \"4NF1_4\", \"name\": \"Interface 4NF1_4\", \"pdb_id\": \"4NF1\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"G\", \"label_chain2\": \"H\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 150, \"chain2_sequence_length\": 150, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:57:36.610926\"}",
@@ -314,6 +308,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "G-H",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -435,24 +441,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "G",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "H",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "G-H",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4NF1_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4nf1_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:33.722052\"}",
       "description": "Results of chain validation against structure files",
@@ -510,6 +498,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4NF1_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4nf1_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:29.337893\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:29.337893"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4NF1_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4nf1_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:27.096065\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:27.096065"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "G",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "H",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "G-H",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4NF1_4\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"G\", \"chain2\": \"H\"}, \"actual_chains_found\": [\"G\", \"H\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4nf1_4.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:45.489957\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:45.489957"
+        }
+      }
     }
   ]
 }

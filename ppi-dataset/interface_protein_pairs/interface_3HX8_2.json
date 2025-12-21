@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "C-D",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3HX8\", \"structure_metadata\": {\"pdb_id\": \"3HX8\", \"resolution\": 1.45, \"deposition_date\": \"2009-06-19T00:00:00+0000\", \"release_date\": \"2009-07-07T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mesorhizobium loti\"], \"citation\": {\"title\": \"Crystal structure of putative ketosteroid isomerase (NP_103587.1) from MESORHIZOBIUM LOTI at 1.45 A resolution\", \"authors\": [\"Joint Center for Structural Genomics (JCSG)\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 48.336, \"b\": 55.111, \"c\": 56.862, \"alpha\": 69.02, \"beta\": 76.89, \"gamma\": 64.83}, \"found_in_api\": true, \"sequences\": {\"A\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\", \"B\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\", \"C\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\", \"D\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mesorhizobium loti\", \"sequence_length\": 145, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q98IZ3\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Mesorhizobium loti\", \"sequence_length\": 145, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q98IZ3\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Mesorhizobium loti\", \"sequence_length\": 145, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q98IZ3\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Mesorhizobium loti\", \"sequence_length\": 145, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q98IZ3\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\", \"organism\": \"Mesorhizobium loti\", \"taxonomy_id\": 381, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 145, \"gene_name\": null, \"uniprot_ids\": [\"Q98IZ3\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GQSAKEAIEAANADFVKAYNSKDAAGVASKY(MSE)DDAAAFPPD(MSE)ARVDGRQNIQKLWQGA(MSE)D(MSE)GISELKLTTLDVQESGDFAFESGSFSLKAPGKDSKLVDAAGKYVVVWRKGQDGGWKLYRDIWNSDPAK\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:00:44.357565\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 145.0, \"min_sequence_length\": 145, \"max_sequence_length\": 145}, \"interface_info\": {\"interface_id\": \"3HX8_2\", \"name\": \"Interface 3HX8_2\", \"pdb_id\": \"3HX8\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"C\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 145, \"chain2_sequence_length\": 145, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:00:46.177726\"}",
@@ -286,6 +280,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -407,24 +413,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "C",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "D",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "C-D",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3HX8_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3hx8_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:34.033554\"}",
       "description": "Results of chain validation against structure files",
@@ -474,6 +462,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HX8_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hx8_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:28.667160\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:28.667160"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HX8_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hx8_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:26.419694\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:26.419694"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "C-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HX8_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hx8_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:44.789456\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:44.789456"
+        }
+      }
     }
   ]
 }

@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "C-D",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"2OIK\", \"structure_metadata\": {\"pdb_id\": \"2OIK\", \"resolution\": 1.65, \"deposition_date\": \"2007-01-11T00:00:00+0000\", \"release_date\": \"2007-01-30T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Methylobacillus flagellatus KT\"], \"citation\": {\"title\": \"Crystal structure of histidine triad (HIT) protein (YP_546612.1) from Methylobacillus flagellatus KT at 1.65 A resolution\", \"authors\": [\"Joint Center for Structural Genomics (JCSG)\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 45.243, \"b\": 47.981, \"c\": 69.766, \"alpha\": 108.13, \"beta\": 98.22, \"gamma\": 90.34}, \"found_in_api\": true, \"sequences\": {\"A\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\", \"B\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\", \"C\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\", \"D\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Methylobacillus flagellatus KT\", \"sequence_length\": 186, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q1GYB6\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Methylobacillus flagellatus KT\", \"sequence_length\": 186, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q1GYB6\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Methylobacillus flagellatus KT\", \"sequence_length\": 186, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q1GYB6\"]}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Methylobacillus flagellatus KT\", \"sequence_length\": 186, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q1GYB6\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\", \"organism\": \"Methylobacillus flagellatus KT\", \"taxonomy_id\": 265072, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 186, \"gene_name\": null, \"uniprot_ids\": [\"Q1GYB6\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"G(MSE)TRT(MSE)SFHKNCELCTTAGGEILWQDALCRVVHVENQDYPGFCRVILNRHVKE(MSE)SDLRPAERDHL(MSE)LVVFAVEEAVREV(MSE)RPDKINLASLGN(MSE)TPHVHWHVIPRFKRDRHFPNSVWGETKRESLPQALDQGSTTALKKAISVRLDQGEPVF(MSE)G(MSE)\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"fetch_timestamp\": \"2025-12-19T19:10:33.926560\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 186.0, \"min_sequence_length\": 186, \"max_sequence_length\": 186}, \"interface_info\": {\"interface_id\": \"2OIK_2\", \"name\": \"Interface 2OIK_2\", \"pdb_id\": \"2OIK\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"C\", \"label_chain2\": \"D\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 186, \"chain2_sequence_length\": 186, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:10:35.726139\"}",
@@ -286,6 +280,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -407,24 +413,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "C",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "D",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "C-D",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"2OIK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/2oik_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.043186\"}",
       "description": "Results of chain validation against structure files",
@@ -474,6 +462,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2OIK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2oik_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:34.388370\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:34.388370"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2OIK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2oik_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:32.174574\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:32.174574"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "C-D",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"2OIK_2\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"C\", \"chain2\": \"D\"}, \"actual_chains_found\": [\"C\", \"D\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/2oik_2.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.859254\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:50.859254"
+        }
+      }
     }
   ]
 }

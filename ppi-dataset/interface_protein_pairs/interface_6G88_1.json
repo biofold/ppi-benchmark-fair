@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"6G88\", \"structure_metadata\": {\"pdb_id\": \"6G88\", \"resolution\": 3.3, \"deposition_date\": \"2018-04-08T00:00:00+0000\", \"release_date\": \"2019-04-24T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Enterococcus faecium\"], \"citation\": {\"title\": \"Structural basis of inactivation of Enterococcus faecium penicillin binding protein 5 by ceftobiprole.\", \"authors\": [\"Sauvage, E.\", \"El Gachi, M.\", \"Kerff, F.\", \"Herman, R.\", \"Verlaine, O.\", \"Amoroso, A.\", \"Page, M.G.P.\", \"Joris, B.\", \"Charlier, P.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 79.194, \"b\": 128.736, \"c\": 238.479, \"alpha\": 90.0, \"beta\": 94.04, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MGRHYQETQAVEAGEKTVEQFVQALNKGDYNKAAGMASKKAANKSALSEKEILEKYQNIYGAADVKGLEISNLKVDKKDDSTYSFSYKAKMNTSLGELKDLSYKGTLDRNDGKTTINWQPNLVFPEMEGNDKVSLTTQEATRGNILDRNGEPLATTGKLKQLGVVPSKLGDGDEKTANIKAIASAFDLTEDAINQAISQSWVQPDYFVPLKIIDGATPELPAGATIQEVDGRYYPLGEAAAQLIGYVGDITAEDIDKNPELSSNGKIGRSGLEMAFDKDLRGTTGGKLSITDTDGVEKKVLIEHEVQNGKDIKLTIDAKAQKTAFDSLGGKAGSTVATTPKTGDLLALASSPSYDPNKMTNGISQEDYKAYEENPEQPFISRFATGYAPGSTFKMITAAIGLDNGTIDPNEVLTINGLKWQKDSSWGSYQVTRVSDVSHVDLKTALIYSDNIYMAQETLKMGEKNFRAGLDKFIFGEDLDLPISMNPAQISNEESFNSDILLADTGYGQGELLINPIQQAAMYSVFANNGTLVYPKLIADKETKDKKNVIGETAVQTIVPDLREVVQDVNGTAHSLSALGIPLAAKTGTAEIKEKQDEKGKENSFLFAFNPDNQGYMMVSMLENKEDDDSATKRAPELLQYLNQNYQLE\", \"B\": \"MGRHYQETQAVEAGEKTVEQFVQALNKGDYNKAAGMASKKAANKSALSEKEILEKYQNIYGAADVKGLEISNLKVDKKDDSTYSFSYKAKMNTSLGELKDLSYKGTLDRNDGKTTINWQPNLVFPEMEGNDKVSLTTQEATRGNILDRNGEPLATTGKLKQLGVVPSKLGDGDEKTANIKAIASAFDLTEDAINQAISQSWVQPDYFVPLKIIDGATPELPAGATIQEVDGRYYPLGEAAAQLIGYVGDITAEDIDKNPELSSNGKIGRSGLEMAFDKDLRGTTGGKLSITDTDGVEKKVLIEHEVQNGKDIKLTIDAKAQKTAFDSLGGKAGSTVATTPKTGDLLALASSPSYDPNKMTNGISQEDYKAYEENPEQPFISRFATGYAPGSTFKMITAAIGLDNGTIDPNEVLTINGLKWQKDSSWGSYQVTRVSDVSHVDLKTALIYSDNIYMAQETLKMGEKNFRAGLDKFIFGEDLDLPISMNPAQISNEESFNSDILLADTGYGQGELLINPIQQAAMYSVFANNGTLVYPKLIADKETKDKKNVIGETAVQTIVPDLREVVQDVNGTAHSLSALGIPLAAKTGTAEIKEKQDEKGKENSFLFAFNPDNQGYMMVSMLENKEDDDSATKRAPELLQYLNQNYQLE\", \"C\": \"MGRHYQETQAVEAGEKTVEQFVQALNKGDYNKAAGMASKKAANKSALSEKEILEKYQNIYGAADVKGLEISNLKVDKKDDSTYSFSYKAKMNTSLGELKDLSYKGTLDRNDGKTTINWQPNLVFPEMEGNDKVSLTTQEATRGNILDRNGEPLATTGKLKQLGVVPSKLGDGDEKTANIKAIASAFDLTEDAINQAISQSWVQPDYFVPLKIIDGATPELPAGATIQEVDGRYYPLGEAAAQLIGYVGDITAEDIDKNPELSSNGKIGRSGLEMAFDKDLRGTTGGKLSITDTDGVEKKVLIEHEVQNGKDIKLTIDAKAQKTAFDSLGGKAGSTVATTPKTGDLLALASSPSYDPNKMTNGISQEDYKAYEENPEQPFISRFATGYAPGSTFKMITAAIGLDNGTIDPNEVLTINGLKWQKDSSWGSYQVTRVSDVSHVDLKTALIYSDNIYMAQETLKMGEKNFRAGLDKFIFGEDLDLPISMNPAQISNEESFNSDILLADTGYGQGELLINPIQQAAMYSVFANNGTLVYPKLIADKETKDKKNVIGETAVQTIVPDLREVVQDVNGTAHSLSALGIPLAAKTGTAEIKEKQDEKGKENSFLFAFNPDNQGYMMVSMLENKEDDDSATKRAPELLQYLNQNYQLE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Enterococcus faecium\", \"sequence_length\": 649, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q47759\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Enterococcus faecium\", \"sequence_length\": 649, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q47759\"]}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Enterococcus faecium\", \"sequence_length\": 649, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q47759\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MGRHYQETQAVEAGEKTVEQFVQALNKGDYNKAAGMASKKAANKSALSEKEILEKYQNIYGAADVKGLEISNLKVDKKDDSTYSFSYKAKMNTSLGELKDLSYKGTLDRNDGKTTINWQPNLVFPEMEGNDKVSLTTQEATRGNILDRNGEPLATTGKLKQLGVVPSKLGDGDEKTANIKAIASAFDLTEDAINQAISQSWVQPDYFVPLKIIDGATPELPAGATIQEVDGRYYPLGEAAAQLIGYVGDITAEDIDKNPELSSNGKIGRSGLEMAFDKDLRGTTGGKLSITDTDGVEKKVLIEHEVQNGKDIKLTIDAKAQKTAFDSLGGKAGSTVATTPKTGDLLALASSPSYDPNKMTNGISQEDYKAYEENPEQPFISRFATGYAPGSTFKMITAAIGLDNGTIDPNEVLTINGLKWQKDSSWGSYQVTRVSDVSHVDLKTALIYSDNIYMAQETLKMGEKNFRAGLDKFIFGEDLDLPISMNPAQISNEESFNSDILLADTGYGQGELLINPIQQAAMYSVFANNGTLVYPKLIADKETKDKKNVIGETAVQTIVPDLREVVQDVNGTAHSLSALGIPLAAKTGTAEIKEKQDEKGKENSFLFAFNPDNQGYMMVSMLENKEDDDSATKRAPELLQYLNQNYQLE\", \"organism\": \"Enterococcus faecium\", \"taxonomy_id\": 1352, \"chain_ids\": [\"A\", \"B\", \"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 649, \"gene_name\": null, \"uniprot_ids\": [\"Q47759\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MGRHYQETQAVEAGEKTVEQFVQALNKGDYNKAAGMASKKAANKSALSEKEILEKYQNIYGAADVKGLEISNLKVDKKDDSTYSFSYKAKMNTSLGELKDLSYKGTLDRNDGKTTINWQPNLVFPEMEGNDKVSLTTQEATRGNILDRNGEPLATTGKLKQLGVVPSKLGDGDEKTANIKAIASAFDLTEDAINQAISQSWVQPDYFVPLKIIDGATPELPAGATIQEVDGRYYPLGEAAAQLIGYVGDITAEDIDKNPELSSNGKIGRSGLEMAFDKDLRGTTGGKLSITDTDGVEKKVLIEHEVQNGKDIKLTIDAKAQKTAFDSLGGKAGSTVATTPKTGDLLALASSPSYDPNKMTNGISQEDYKAYEENPEQPFISRFATGYAPGSTFKMITAAIGLDNGTIDPNEVLTINGLKWQKDSSWGSYQVTRVSDVSHVDLKTALIYSDNIYMAQETLKMGEKNFRAGLDKFIFGEDLDLPISMNPAQISNEESFNSDILLADTGYGQGELLINPIQQAAMYSVFANNGTLVYPKLIADKETKDKKNVIGETAVQTIVPDLREVVQDVNGTAHSLSALGIPLAAKTGTAEIKEKQDEKGKENSFLFAFNPDNQGYMMVSMLENKEDDDSATKRAPELLQYLNQNYQLE\", \"entities\": [\"1\"], \"chain_count\": 3}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:40:30.209138\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 3, \"chain_count\": 3, \"unique_sequences\": 1, \"avg_sequence_length\": 649.0, \"min_sequence_length\": 649, \"max_sequence_length\": 649}, \"interface_info\": {\"interface_id\": \"6G88_1\", \"name\": \"Interface 6G88_1\", \"pdb_id\": \"6G88\", \"auth_chain1\": \"A\", \"auth_chain2\": \"B\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 649, \"chain2_sequence_length\": 649, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:40:31.416060\"}",
@@ -277,6 +271,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -392,24 +398,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"6G88_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6g88_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:38.169313\"}",
       "description": "Results of chain validation against structure files",
@@ -459,6 +447,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6G88_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6g88_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:31.500608\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:31.500608"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6G88_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6g88_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:29.228745\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:29.228745"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6G88_1\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6g88_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.755076\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:47.755076"
+        }
+      }
     }
   ]
 }

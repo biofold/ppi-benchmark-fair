@@ -83,12 +83,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "B-A",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3HGV\", \"structure_metadata\": {\"pdb_id\": \"3HGV\", \"resolution\": 2.3, \"deposition_date\": \"2009-05-14T00:00:00+0000\", \"release_date\": \"2010-04-28T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Pantoea agglomerans\"], \"citation\": {\"title\": \"Structure of the D-alanylgriseoluteic acid biosynthetic protein EhpF, an atypical member of the ANL superfamily of adenylating enzymes.\", \"doi\": \"10.1107/S0907444910008425\", \"authors\": [\"Bera, A.K.\", \"Atanasova, V.\", \"Gamage, S.\", \"Robinson, H.\", \"Parsons, J.F.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 68.836, \"b\": 110.143, \"c\": 112.044, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSH(MSE)KDYSLEIDAV(MSE)KAAQINDTNNFVQAL(MSE)RWHFSKETGSPFWLG(MSE)REQLNFDPIKDVKTINDLRQFSDISHCLRQEPVANLVPQGLPADSHPQVYESGGTTGAPKYVVAYDAWIEALISWR(MSE)SGYQHRPGRPSGNTLAAIPTGPHIVGAINKERALRLGG(MSE)FFSIDIDPRWVKRSLSEGDTATVRKYTHHLVDQVQNTL(MSE)NQDIRFLVTTPPVLRELLKRPEVVLQ(MSE)KQSLAQITLGGTELNLDEIKFIASEILPDCEFSASYGSTSALGVSRSLLITSESQQVIYDSFSPFITYDVVDSITAQTVEYGERGNVIVTHLSPWAFYPRVAERDTAIRLPGVSGFAGDRLADIEPLKISEGRKVIEGVY\", \"B\": \"GSH(MSE)KDYSLEIDAV(MSE)KAAQINDTNNFVQAL(MSE)RWHFSKETGSPFWLG(MSE)REQLNFDPIKDVKTINDLRQFSDISHCLRQEPVANLVPQGLPADSHPQVYESGGTTGAPKYVVAYDAWIEALISWR(MSE)SGYQHRPGRPSGNTLAAIPTGPHIVGAINKERALRLGG(MSE)FFSIDIDPRWVKRSLSEGDTATVRKYTHHLVDQVQNTL(MSE)NQDIRFLVTTPPVLRELLKRPEVVLQ(MSE)KQSLAQITLGGTELNLDEIKFIASEILPDCEFSASYGSTSALGVSRSLLITSESQQVIYDSFSPFITYDVVDSITAQTVEYGERGNVIVTHLSPWAFYPRVAERDTAIRLPGVSGFAGDRLADIEPLKISEGRKVIEGVY\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Pantoea agglomerans\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8GPH0\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Pantoea agglomerans\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q8GPH0\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSH(MSE)KDYSLEIDAV(MSE)KAAQINDTNNFVQAL(MSE)RWHFSKETGSPFWLG(MSE)REQLNFDPIKDVKTINDLRQFSDISHCLRQEPVANLVPQGLPADSHPQVYESGGTTGAPKYVVAYDAWIEALISWR(MSE)SGYQHRPGRPSGNTLAAIPTGPHIVGAINKERALRLGG(MSE)FFSIDIDPRWVKRSLSEGDTATVRKYTHHLVDQVQNTL(MSE)NQDIRFLVTTPPVLRELLKRPEVVLQ(MSE)KQSLAQITLGGTELNLDEIKFIASEILPDCEFSASYGSTSALGVSRSLLITSESQQVIYDSFSPFITYDVVDSITAQTVEYGERGNVIVTHLSPWAFYPRVAERDTAIRLPGVSGFAGDRLADIEPLKISEGRKVIEGVY\", \"organism\": \"Pantoea agglomerans\", \"taxonomy_id\": 549, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 401, \"gene_name\": null, \"uniprot_ids\": [\"Q8GPH0\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GSH(MSE)KDYSLEIDAV(MSE)KAAQINDTNNFVQAL(MSE)RWHFSKETGSPFWLG(MSE)REQLNFDPIKDVKTINDLRQFSDISHCLRQEPVANLVPQGLPADSHPQVYESGGTTGAPKYVVAYDAWIEALISWR(MSE)SGYQHRPGRPSGNTLAAIPTGPHIVGAINKERALRLGG(MSE)FFSIDIDPRWVKRSLSEGDTATVRKYTHHLVDQVQNTL(MSE)NQDIRFLVTTPPVLRELLKRPEVVLQ(MSE)KQSLAQITLGGTELNLDEIKFIASEILPDCEFSASYGSTSALGVSRSLLITSESQQVIYDSFSPFITYDVVDSITAQTVEYGERGNVIVTHLSPWAFYPRVAERDTAIRLPGVSGFAGDRLADIEPLKISEGRKVIEGVY\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:20:21.091913\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 401.0, \"min_sequence_length\": 401, \"max_sequence_length\": 401}, \"interface_info\": {\"interface_id\": \"3HGV_3\", \"name\": \"Interface 3HGV_3\", \"pdb_id\": \"3HGV\", \"auth_chain1\": \"B\", \"auth_chain2\": \"A\", \"label_chain1\": \"B\", \"label_chain2\": \"A\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 401, \"chain2_sequence_length\": 401, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:20:22.004579\"}",
@@ -263,6 +257,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-A",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -372,24 +378,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "B",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "A",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "B-A",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3HGV_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3hgv_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:36.084585\"}",
       "description": "Results of chain validation against structure files",
@@ -439,6 +427,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HGV_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hgv_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.721865\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:33.721865"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HGV_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hgv_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.501623\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:31.501623"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "A",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "B-A",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3HGV_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3hgv_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.107058\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:50.107058"
+        }
+      }
     }
   ]
 }

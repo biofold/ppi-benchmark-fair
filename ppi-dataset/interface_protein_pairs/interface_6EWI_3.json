@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "B-A",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"6EWI\", \"structure_metadata\": {\"pdb_id\": \"6EWI\", \"resolution\": 2.1, \"deposition_date\": \"2017-11-04T00:00:00+0000\", \"release_date\": \"2018-05-02T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Oreochromis niloticus\"], \"citation\": {\"title\": \"Disease-Associated Mutations in CEP120 Destabilize the Protein and Impair Ciliogenesis.\", \"doi\": \"10.1016/j.celrep.2018.04.100\", \"authors\": [\"Joseph, N.\", \"Al-Jassar, C.\", \"Johnson, C.M.\", \"Andreeva, A.\", \"Barnabas, D.D.\", \"Freund, S.M.V.\", \"Gergely, F.\", \"van Breugel, M.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 40.726, \"b\": 95.449, \"c\": 99.168, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GPHMPEKLEAILIPDQGYHQVGPADLCTDMFVLSVTVAFPTKLEQLVPSTMKLSAEGSEFFFYYSLLGNDITSEPFHNLLSPDFEPERASVRIRSSKQILKAFLSQQPSLQIHLCCGNHSLGSTDVSLSALAGISTDLDNKAATVESAFILQPPKRVKQTLPALPTDLQPTLGVAVTLRREEVALQQSVGNKE\", \"B\": \"GPHMPEKLEAILIPDQGYHQVGPADLCTDMFVLSVTVAFPTKLEQLVPSTMKLSAEGSEFFFYYSLLGNDITSEPFHNLLSPDFEPERASVRIRSSKQILKAFLSQQPSLQIHLCCGNHSLGSTDVSLSALAGISTDLDNKAATVESAFILQPPKRVKQTLPALPTDLQPTLGVAVTLRREEVALQQSVGNKE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Oreochromis niloticus\", \"sequence_length\": 193, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"I3K8D3\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Oreochromis niloticus\", \"sequence_length\": 193, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"I3K8D3\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GPHMPEKLEAILIPDQGYHQVGPADLCTDMFVLSVTVAFPTKLEQLVPSTMKLSAEGSEFFFYYSLLGNDITSEPFHNLLSPDFEPERASVRIRSSKQILKAFLSQQPSLQIHLCCGNHSLGSTDVSLSALAGISTDLDNKAATVESAFILQPPKRVKQTLPALPTDLQPTLGVAVTLRREEVALQQSVGNKE\", \"organism\": \"Oreochromis niloticus\", \"taxonomy_id\": 8128, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 193, \"gene_name\": null, \"uniprot_ids\": [\"I3K8D3\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GPHMPEKLEAILIPDQGYHQVGPADLCTDMFVLSVTVAFPTKLEQLVPSTMKLSAEGSEFFFYYSLLGNDITSEPFHNLLSPDFEPERASVRIRSSKQILKAFLSQQPSLQIHLCCGNHSLGSTDVSLSALAGISTDLDNKAATVESAFILQPPKRVKQTLPALPTDLQPTLGVAVTLRREEVALQQSVGNKE\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T19:19:49.636311\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 193.0, \"min_sequence_length\": 193, \"max_sequence_length\": 193}, \"interface_info\": {\"interface_id\": \"6EWI_3\", \"name\": \"Interface 6EWI_3\", \"pdb_id\": \"6EWI\", \"auth_chain1\": \"B\", \"auth_chain2\": \"A\", \"label_chain1\": \"B\", \"label_chain2\": \"A\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 193, \"chain2_sequence_length\": 193, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:19:50.534449\"}",
@@ -272,6 +266,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-A",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Matches annotation",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -387,24 +393,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "B",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "A",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "B-A",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"6EWI_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/6ewi_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:36.035418\"}",
       "description": "Results of chain validation against structure files",
@@ -454,6 +442,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6EWI_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6ewi_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.697671\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:33.697671"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6EWI_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6ewi_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.476532\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:31.476532"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "A",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "B-A",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"6EWI_3\", \"auth_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"B\", \"chain2\": \"A\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": false, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/6ewi_3.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.081287\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": false,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:50.081287"
+        }
+      }
     }
   ]
 }

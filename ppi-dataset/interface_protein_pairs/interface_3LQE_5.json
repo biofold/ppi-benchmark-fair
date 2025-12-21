@@ -89,12 +89,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"3LQE\", \"structure_metadata\": {\"pdb_id\": \"3LQE\", \"resolution\": 2.0, \"deposition_date\": \"2010-02-09T00:00:00+0000\", \"release_date\": \"2010-04-21T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Murine norovirus 1\"], \"citation\": {\"title\": \"High-resolution x-ray structure and functional analysis of the murine norovirus 1 capsid protein protruding domain.\", \"doi\": \"10.1128/JVI.00316-10\", \"authors\": [\"Taube, S.\", \"Rubin, J.R.\", \"Katpally, U.\", \"Smith, T.J.\", \"Kendall, A.\", \"Stuckey, J.A.\", \"Wobus, C.E.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 86.262, \"b\": 105.219, \"c\": 84.053, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNATIYRMVDLPVIQPRLCTHARWPAPVYGLLVDPSLPSNPQWQNGRVHVDGTLLGTTPISGSWVSCFAAEAAYEFQSGTGEVATFTLIEQDGSAYVPGDRAAPLGYPDFSGQLEIEVQTETTKTGDKLKVTTFEMILGPTTNADQAPYQGRVFASVTAAASLDLVDGRVRAVPRSIYGFQDTIPEYNDGLLVPLAPPIGPFLPGEVLLRFRTYMRQIDTADAAAEAIDCALPQEFVSWFASNAFTVQSEALLLRYRNTLTGQLLFECKLYNEGYIALSYSGSGPLTFPTDGIFEVVSWVPRLYQLASVGSLATGRMLKQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Murine norovirus 1\", \"sequence_length\": 320, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q2V8W4\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNATIYRMVDLPVIQPRLCTHARWPAPVYGLLVDPSLPSNPQWQNGRVHVDGTLLGTTPISGSWVSCFAAEAAYEFQSGTGEVATFTLIEQDGSAYVPGDRAAPLGYPDFSGQLEIEVQTETTKTGDKLKVTTFEMILGPTTNADQAPYQGRVFASVTAAASLDLVDGRVRAVPRSIYGFQDTIPEYNDGLLVPLAPPIGPFLPGEVLLRFRTYMRQIDTADAAAEAIDCALPQEFVSWFASNAFTVQSEALLLRYRNTLTGQLLFECKLYNEGYIALSYSGSGPLTFPTDGIFEVVSWVPRLYQLASVGSLATGRMLKQ\", \"organism\": \"Murine norovirus 1\", \"taxonomy_id\": 223997, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 320, \"gene_name\": null, \"uniprot_ids\": [\"Q2V8W4\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNATIYRMVDLPVIQPRLCTHARWPAPVYGLLVDPSLPSNPQWQNGRVHVDGTLLGTTPISGSWVSCFAAEAAYEFQSGTGEVATFTLIEQDGSAYVPGDRAAPLGYPDFSGQLEIEVQTETTKTGDKLKVTTFEMILGPTTNADQAPYQGRVFASVTAAASLDLVDGRVRAVPRSIYGFQDTIPEYNDGLLVPLAPPIGPFLPGEVLLRFRTYMRQIDTADAAAEAIDCALPQEFVSWFASNAFTVQSEALLLRYRNTLTGQLLFECKLYNEGYIALSYSGSGPLTFPTDGIFEVVSWVPRLYQLASVGSLATGRMLKQ\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"fetch_timestamp\": \"2025-12-19T18:50:19.329318\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 320.0, \"min_sequence_length\": 320, \"max_sequence_length\": 320}, \"interface_info\": {\"interface_id\": \"3LQE_5\", \"name\": \"Interface 3LQE_5\", \"pdb_id\": \"3LQE\", \"auth_chain1\": \"A\", \"auth_chain2\": \"A\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"ProtCID\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 320, \"chain2_sequence_length\": 320, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T18:50:20.233877\"}",
@@ -260,6 +254,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -375,24 +381,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"3LQE_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/3lqe_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.969299\"}",
       "description": "Results of chain validation against structure files",
@@ -450,6 +438,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LQE_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lqe_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:29.388898\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T00:56:29.388898"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LQE_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lqe_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:27.147570\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T01:02:27.147570"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"3LQE_5\", \"auth_chains\": {\"chain1\": \"A\", \"chain2\": \"A\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": true, \"chain2_exists\": true, \"all_chains_exist\": true, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/3lqe_5.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:45.543581\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": true,
+          "validation_timestamp": "2025-12-20T11:55:45.543581"
+        }
+      }
     }
   ]
 }

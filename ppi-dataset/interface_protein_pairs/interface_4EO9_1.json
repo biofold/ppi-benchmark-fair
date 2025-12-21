@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4EO9\", \"structure_metadata\": {\"pdb_id\": \"4EO9\", \"resolution\": 2.45, \"deposition_date\": \"2012-04-13T00:00:00+0000\", \"release_date\": \"2012-04-25T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mycobacterium leprae Br4923\"], \"citation\": {\"title\": \"Increasing the structural coverage of tuberculosis drug targets.\", \"doi\": \"10.1016/j.tube.2014.12.003\", \"authors\": [\"Baugh, L.\", \"Phan, I.\", \"Begley, D.W.\", \"Clifton, M.C.\", \"Armour, B.\", \"Dranow, D.M.\", \"Taylor, B.M.\", \"Muruthi, M.M.\", \"Abendroth, J.\", \"Fairman, J.W.\", \"Fox, D.\", \"Dieterich, S.H.\", \"Staker, B.L.\", \"Gardberg, A.S.\", \"Choi, R.\", \"Hewitt, S.N.\", \"Napuli, A.J.\", \"Myers, J.\", \"Barrett, L.K.\", \"Zhang, Y.\", \"Ferrell, M.\", \"Mundt, E.\", \"Thompkins, K.\", \"Tran, N.\", \"Lyons-Abbott, S.\", \"Abramov, A.\", \"Sekar, A.\", \"Serbzhinskiy, D.\", \"Lorimer, D.\", \"Buchko, G.W.\", \"Stacy, R.\", \"Stewart, L.J.\", \"Edwards, T.E.\", \"Van Voorhis, W.C.\", \"Myler, P.J.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 80.31, \"b\": 80.31, \"c\": 119.33, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAHHHHHHMGTLEAQTQGPGSMQQGNTATLILLRHGESDWNARNLFTGWVDVGLTDKGRAEAVRSGELLAEHNLLPDVLYTSLLRRAITTAHLALDTADWLWIPVRRSWRLNERHYGALQGLDKAVTKARYGEERFMAWRRSYDTPPPPIEKGSEFSQDADPRYTDIGGGPLTECLADVVTRFLPYFTDVIVPDLRTGRTVLIVAHGNSLRALVKHLDEMSDDEVVGLNVPTGIPLRYDLDADLRPVVPGGTYLDPEAAAAVISQARP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mycobacterium leprae Br4923\", \"sequence_length\": 268, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"B8ZT86\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAHHHHHHMGTLEAQTQGPGSMQQGNTATLILLRHGESDWNARNLFTGWVDVGLTDKGRAEAVRSGELLAEHNLLPDVLYTSLLRRAITTAHLALDTADWLWIPVRRSWRLNERHYGALQGLDKAVTKARYGEERFMAWRRSYDTPPPPIEKGSEFSQDADPRYTDIGGGPLTECLADVVTRFLPYFTDVIVPDLRTGRTVLIVAHGNSLRALVKHLDEMSDDEVVGLNVPTGIPLRYDLDADLRPVVPGGTYLDPEAAAAVISQARP\", \"organism\": \"Mycobacterium leprae Br4923\", \"taxonomy_id\": 561304, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 268, \"gene_name\": null, \"uniprot_ids\": [\"B8ZT86\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAHHHHHHMGTLEAQTQGPGSMQQGNTATLILLRHGESDWNARNLFTGWVDVGLTDKGRAEAVRSGELLAEHNLLPDVLYTSLLRRAITTAHLALDTADWLWIPVRRSWRLNERHYGALQGLDKAVTKARYGEERFMAWRRSYDTPPPPIEKGSEFSQDADPRYTDIGGGPLTECLADVVTRFLPYFTDVIVPDLRTGRTVLIVAHGNSLRALVKHLDEMSDDEVVGLNVPTGIPLRYDLDADLRPVVPGGTYLDPEAAAAVISQARP\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:44:09.625984\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 268.0, \"min_sequence_length\": 268, \"max_sequence_length\": 268}, \"interface_info\": {\"interface_id\": \"4EO9_1\", \"name\": \"Interface 4EO9_1\", \"pdb_id\": \"4EO9\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": null, \"enrichment_timestamp\": \"2025-12-19T18:44:10.830631\"}",
@@ -272,6 +266,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -393,24 +399,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4EO9_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4eo9_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:32.332973\"}",
       "description": "Results of chain validation against structure files",
@@ -470,6 +458,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4EO9_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4eo9_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.560675\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.560675"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4EO9_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4eo9_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.309357\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.309357"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4EO9_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4eo9_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:46.768279\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:46.768279"
+        }
+      }
     }
   ]
 }

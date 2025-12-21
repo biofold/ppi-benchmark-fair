@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"4ZWV\", \"structure_metadata\": {\"pdb_id\": \"4ZWV\", \"resolution\": 1.503, \"deposition_date\": \"2015-05-19T00:00:00+0000\", \"release_date\": \"2015-06-03T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Actinomadura melliaura\"], \"citation\": {\"title\": \"Structural characterization of AtmS13, a putative sugar aminotransferase involved in indolocarbazole AT2433 aminopentose biosynthesis.\", \"doi\": \"10.1002/prot.24844\", \"authors\": [\"Singh, S.\", \"Kim, Y.\", \"Wang, F.\", \"Bigelow, L.\", \"Endres, M.\", \"Kharel, M.K.\", \"Babnigg, G.\", \"Bingman, C.A.\", \"Joachimiak, A.\", \"Thorson, J.S.\", \"Phillips, G.N.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 204.137, \"b\": 73.025, \"c\": 58.607, \"alpha\": 90.0, \"beta\": 103.68, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNA(MSE)IPLFKVAVSPTALDRVAEVFASGYLGQGPRVAEFESALAARLGNPRVVSVHSGTSGLCLALRLLDAPEERDEVLSTPLTFEATNWAILADGRRITWVDVDPATLT(MSE)DLDDLERKISPATRAIIVVHWTGYPVDLDRLAGILDRAEREHGFRPAVIEDCAHAWGASYRGVPLGSHGN(MSE)CVFSFQAL(LLP)HLTCGDGGLLTLPGDELHERA(MSE)LRRFYGIDRTADRLRGAYDVAEWGLKWH(MSE)TDLNAAIGLANLETVDEQLRLHRENAAFYDKELTGVPGLELLQRSPDREGSFYVYDVKVDDRPAFHRK(MSE)EAAGI(MSE)AGLVSRRNDEHSCVAHLRTSLPGLDSVYDR(MSE)VSLPVGWWLTEQDREHVVATIRSGW\", \"B\": \"SNA(MSE)IPLFKVAVSPTALDRVAEVFASGYLGQGPRVAEFESALAARLGNPRVVSVHSGTSGLCLALRLLDAPEERDEVLSTPLTFEATNWAILADGRRITWVDVDPATLT(MSE)DLDDLERKISPATRAIIVVHWTGYPVDLDRLAGILDRAEREHGFRPAVIEDCAHAWGASYRGVPLGSHGN(MSE)CVFSFQAL(LLP)HLTCGDGGLLTLPGDELHERA(MSE)LRRFYGIDRTADRLRGAYDVAEWGLKWH(MSE)TDLNAAIGLANLETVDEQLRLHRENAAFYDKELTGVPGLELLQRSPDREGSFYVYDVKVDDRPAFHRK(MSE)EAAGI(MSE)AGLVSRRNDEHSCVAHLRTSLPGLDSVYDR(MSE)VSLPVGWWLTEQDREHVVATIRSGW\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Actinomadura melliaura\", \"sequence_length\": 408, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q0H2X1\"]}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Actinomadura melliaura\", \"sequence_length\": 408, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q0H2X1\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNA(MSE)IPLFKVAVSPTALDRVAEVFASGYLGQGPRVAEFESALAARLGNPRVVSVHSGTSGLCLALRLLDAPEERDEVLSTPLTFEATNWAILADGRRITWVDVDPATLT(MSE)DLDDLERKISPATRAIIVVHWTGYPVDLDRLAGILDRAEREHGFRPAVIEDCAHAWGASYRGVPLGSHGN(MSE)CVFSFQAL(LLP)HLTCGDGGLLTLPGDELHERA(MSE)LRRFYGIDRTADRLRGAYDVAEWGLKWH(MSE)TDLNAAIGLANLETVDEQLRLHRENAAFYDKELTGVPGLELLQRSPDREGSFYVYDVKVDDRPAFHRK(MSE)EAAGI(MSE)AGLVSRRNDEHSCVAHLRTSLPGLDSVYDR(MSE)VSLPVGWWLTEQDREHVVATIRSGW\", \"organism\": \"Actinomadura melliaura\", \"taxonomy_id\": 360723, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 408, \"gene_name\": null, \"uniprot_ids\": [\"Q0H2X1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNA(MSE)IPLFKVAVSPTALDRVAEVFASGYLGQGPRVAEFESALAARLGNPRVVSVHSGTSGLCLALRLLDAPEERDEVLSTPLTFEATNWAILADGRRITWVDVDPATLT(MSE)DLDDLERKISPATRAIIVVHWTGYPVDLDRLAGILDRAEREHGFRPAVIEDCAHAWGASYRGVPLGSHGN(MSE)CVFSFQAL(LLP)HLTCGDGGLLTLPGDELHERA(MSE)LRRFYGIDRTADRLRGAYDVAEWGLKWH(MSE)TDLNAAIGLANLETVDEQLRLHRENAAFYDKELTGVPGLELLQRSPDREGSFYVYDVKVDDRPAFHRK(MSE)EAAGI(MSE)AGLVSRRNDEHSCVAHLRTSLPGLDSVYDR(MSE)VSLPVGWWLTEQDREHVVATIRSGW\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T19:19:10.391293\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 408.0, \"min_sequence_length\": 408, \"max_sequence_length\": 408}, \"interface_info\": {\"interface_id\": \"4ZWV_1\", \"name\": \"Interface 4ZWV_1\", \"pdb_id\": \"4ZWV\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": {\"chain1_sequence_length\": 408, \"chain2_sequence_length\": 408, \"sequences_identical\": true, \"sequence_identity\": 100.0}, \"enrichment_timestamp\": \"2025-12-19T19:19:11.606028\"}",
@@ -281,6 +275,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -402,24 +408,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"4ZWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/4zwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:35.974035\"}",
       "description": "Results of chain validation against structure files",
@@ -469,6 +457,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4ZWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4zwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:33.622160\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:33.622160"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4ZWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4zwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:31.399182\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:31.399182"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"4ZWV_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/4zwv_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:50.001722\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:50.001722"
+        }
+      }
     }
   ]
 }

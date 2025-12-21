@@ -95,12 +95,6 @@
       },
       {
         "@type": "PropertyValue",
-        "name": "LabelInterfaceChains",
-        "value": "A-B",
-        "description": "Chains involved in the assembly interface (validated from structure file)"
-      },
-      {
-        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Comprehensive structural metadata from RCSB Protein Data Bank",
         "value": "{\"pdb_id\": \"1XUB\", \"structure_metadata\": {\"pdb_id\": \"1XUB\", \"resolution\": 1.3, \"deposition_date\": \"2004-10-26T00:00:00+0000\", \"release_date\": \"2004-11-09T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Pseudomonas fluorescens\"], \"citation\": {\"title\": \"Structure and function of the phenazine biosynthetic protein PhzF from Pseudomonas fluorescens\", \"doi\": \"10.1073/pnas.0407371101\", \"authors\": [\"Blankenfeldt, W.\", \"Kuzin, A.P.\", \"Skarina, T.\", \"Korniyenko, Y.\", \"Tong, L.\", \"Bayer, P.\", \"Janning, P.\", \"Thomashow, L.S.\", \"Mavrodi, D.V.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 56.128, \"b\": 56.128, \"c\": 154.423, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MGSSHHHHHHSSGLVPRGSHMHNYVIIDAFASVPLEGNPVAVFFDADDLPPAQMQRIAREMNLSESTFVLKPRNGGDALIRIFTPVNELPFAGAPLLGTAIALGAHTDNHRLYLETQMGTIAFELERQNGSVIAASMDQPIPTWTALGRDAELLKALGISDSTFPIEIYHNGPRHVFVGLPSIDALSALHPDHRALSNFHDMAINCFAGAGRRWRSRMFSPAYGVVEDAATGSAAGPLAIHLARHGQIEFGQPVEILQGVEIGRPSLMFAKAEGRAEQLTRVEVSGNGVTFGRGTIVL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Pseudomonas fluorescens\", \"sequence_length\": 298, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null, \"uniprot_ids\": [\"Q51792\"]}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMHNYVIIDAFASVPLEGNPVAVFFDADDLPPAQMQRIAREMNLSESTFVLKPRNGGDALIRIFTPVNELPFAGAPLLGTAIALGAHTDNHRLYLETQMGTIAFELERQNGSVIAASMDQPIPTWTALGRDAELLKALGISDSTFPIEIYHNGPRHVFVGLPSIDALSALHPDHRALSNFHDMAINCFAGAGRRWRSRMFSPAYGVVEDAATGSAAGPLAIHLARHGQIEFGQPVEILQGVEIGRPSLMFAKAEGRAEQLTRVEVSGNGVTFGRGTIVL\", \"organism\": \"Pseudomonas fluorescens\", \"taxonomy_id\": 294, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 298, \"gene_name\": null, \"uniprot_ids\": [\"Q51792\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMHNYVIIDAFASVPLEGNPVAVFFDADDLPPAQMQRIAREMNLSESTFVLKPRNGGDALIRIFTPVNELPFAGAPLLGTAIALGAHTDNHRLYLETQMGTIAFELERQNGSVIAASMDQPIPTWTALGRDAELLKALGISDSTFPIEIYHNGPRHVFVGLPSIDALSALHPDHRALSNFHDMAINCFAGAGRRWRSRMFSPAYGVVEDAATGSAAGPLAIHLARHGQIEFGQPVEILQGVEIGRPSLMFAKAEGRAEQLTRVEVSGNGVTFGRGTIVL\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"fetch_timestamp\": \"2025-12-19T18:38:43.424084\", \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 298.0, \"min_sequence_length\": 298, \"max_sequence_length\": 298}, \"interface_info\": {\"interface_id\": \"1XUB_1\", \"name\": \"Interface 1XUB_1\", \"pdb_id\": \"1XUB\", \"auth_chain1\": \"nan\", \"auth_chain2\": \"nan\", \"label_chain1\": \"A\", \"label_chain2\": \"B\", \"interface_source\": \"QSalign\", \"interface_type\": \"interface_item\"}, \"interface_sequence_analysis\": null, \"enrichment_timestamp\": \"2025-12-19T18:38:44.629699\"}",
@@ -246,6 +240,18 @@
         "name": "ClusterIDStatus",
         "value": "COMPLETE - Populated by script 4",
         "description": "ClusterID has been validated/added from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface (validated from structure file)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssemblyChainStatus",
+        "value": "Updated from structure file",
+        "description": "Assembly chain information validated from PDB file"
       }
     ],
     "hasMolecularFunction": {
@@ -367,24 +373,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "LabelChain1",
-      "value": "A",
-      "description": "First chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelChain2",
-      "value": "B",
-      "description": "Second chain in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "LabelInterfaceChains",
-      "value": "A-B",
-      "description": "Chains involved in the assembly interface (validated from structure file)"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ChainValidation",
       "value": "{\"interface_id\": \"1XUB_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"ppi_benchmark_data/pdb/1xub_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-19T18:29:31.760937\"}",
       "description": "Results of chain validation against structure files",
@@ -442,6 +430,72 @@
       "name": "ClusterIDStatus",
       "value": "COMPLETE - Populated by script 4",
       "description": "ClusterID has been validated/added from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1XUB_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1xub_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T00:56:30.974058\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T00:56:30.974058"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1XUB_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1xub_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T01:02:28.706871\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T01:02:28.706871"
+        }
+      }
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelInterfaceChains",
+      "value": "A-B",
+      "description": "Chains involved in the assembly interface (validated from structure file)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ChainValidation",
+      "value": "{\"interface_id\": \"1XUB_1\", \"auth_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\"}, \"label_chains\": {\"chain1\": \"A\", \"chain2\": \"B\"}, \"actual_chains_found\": [\"A\", \"B\"], \"chain1_exists\": false, \"chain2_exists\": false, \"all_chains_exist\": false, \"chains_updated\": true, \"file_checked\": \"PDB\", \"file_path\": \"../ppi_benchmark_data/pdb/1xub_1.pdb.gz\", \"pdb_file_provided\": true, \"mmcif_file_provided\": true, \"validation_timestamp\": \"2025-12-20T11:55:47.183847\"}",
+      "description": "Results of chain validation against structure files",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "name": "ParsedChainValidation",
+        "value": {
+          "chains_updated": true,
+          "file_checked": "PDB",
+          "all_chains_exist": false,
+          "validation_timestamp": "2025-12-20T11:55:47.183847"
+        }
+      }
     }
   ]
 }
