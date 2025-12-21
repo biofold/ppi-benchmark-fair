@@ -1,15 +1,20 @@
 {
-  "generated_date": "2025-12-21T09:58:17.443384",
+  "generated_date": "2025-12-21T11:08:31.609384",
   "dataset_file": "ppi_benchmark_3/dataset_with_interfaces.json",
   "interfaces_dir": "ppi_benchmark_3/interface_protein_pairs",
-  "total_interfaces_generated": 5,
-  "total_interfaces_available": 5,
+  "total_interfaces_generated": 1677,
+  "total_interfaces_available": 1677,
   "interface_files_sample": [
     "interface_1A17_6.json",
     "interface_1A3A_1.json",
     "interface_1A7G_1.json",
     "interface_1AC6_1.json",
-    "interface_1AFW_1.json"
+    "interface_1AFW_1.json",
+    "interface_1AIL_1.json",
+    "interface_1AIZ_1.json",
+    "interface_1ALU_1.json",
+    "interface_1AOH_1.json",
+    "interface_1AZT_1.json"
   ],
   "fair_package_file": "ppi_benchmark_3/fair_metadata_package.json",
   "html_snippet_file": "ppi_benchmark_3/embedded_markup.html",
@@ -58,24 +63,24 @@
   },
   "schema_structure": {
     "schema_type": "Dataset -> Interface items -> Protein objects",
-    "total_interfaces": 5,
-    "unique_proteins": 5,
+    "total_interfaces": 1677,
+    "unique_proteins": 1645,
     "interface_sources": {
-      "QSalign": 4,
-      "ProtCID": 1,
+      "QSalign": 977,
+      "ProtCID": 700,
       "Other": 0
     },
     "interface_id_format_qsalign": "PDBID_ASSEMBLYNUMBER (when InterfaceID is NA)",
     "interface_id_format_protcid": "ProtCID integer (when InterfaceID is an integer)",
     "features_included": "All interface features (physio, bsa, contacts, gene, superfamily, pfam, etc.) in additionalProperty",
-    "proteins_with_multiple_interfaces": 0
+    "proteins_with_multiple_interfaces": 31
   },
   "pdb_metadata": {
     "enabled": true,
     "api_base_url": "https://data.rcsb.org/rest/v1/core",
-    "unique_structures_with_metadata": 5,
-    "total_chains_with_sequences": 10,
-    "homomeric_structures": 5,
+    "unique_structures_with_metadata": 1645,
+    "total_chains_with_sequences": 4161,
+    "homomeric_structures": 1493,
     "metadata_cache_file": "pdb_metadata_cache.json"
   },
   "assembly_checks": {
@@ -83,15 +88,15 @@
     "cif_assembly_checked": false,
     "pdb_label_dir": "../ppi_benchmark_data/pdb/",
     "cif_label_dir": "default (mmcif_base_url)",
-    "interfaces_with_assembly_chains": 5,
-    "interfaces_with_updated_chains": 5
+    "interfaces_with_assembly_chains": 1677,
+    "interfaces_with_updated_chains": 1451
   },
   "cluster_information": {
     "blastclust_file": "../ppi_benchmark_data/ppi_benchmark_seqs.clust_25_05",
     "blastclust_method": "BLASTClust sequence clustering",
     "blastclust_options": "-S 25 -L 0.5 -b F",
-    "interfaces_with_cluster": 5,
-    "coverage_percentage": 100.0,
+    "interfaces_with_cluster": 1670,
+    "coverage_percentage": 99.58258795468097,
     "total_clusters": 1042,
     "clusters_with_single_member": 758,
     "clusters_with_multiple_members": 284,
