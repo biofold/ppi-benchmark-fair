@@ -75,7 +75,7 @@ The script ppi_benchmark_fair.py performs a specific transformation step in the 
 
 The ppi_benchmark_fair.py that generates the dataset of protein-protein interfaces includes 4 steps:
 
-#### Base Dataset and Interface Metadata Generation
+#### 3.1.1 Base Dataset and Interface Metadata Generation
 
 **Purpose**  
 Generate the core FAIR and Bioschemas-compliant JSON-LD metadata describing the *ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces* using **only information provided by the benchmark GitHub repository**.
@@ -110,7 +110,7 @@ manifest.json
 These outputs are fully reproducible and deterministic.
 
 
-#### Assembly Chain Validation and Labeling 
+#### 3.1.2 Assembly Chain Validation and Labeling 
 
 **Purpose**  
 Validate and correct interface chain identifiers by inspecting **actual biological assembly structure files** (PDB or mmCIF).
@@ -144,7 +144,7 @@ Stored as `PropertyValue` entries:
 No new biological annotations are introduced; this step strictly validates structure consistency.
 
 
-#### PDB Metadata Enrichment
+#### 3.1.3 PDB Metadata Enrichment
 
 **Purpose**  
 Enrich Protein entities with authoritative structural and biological metadata retrieved from the **RCSB PDB REST API**.
@@ -179,7 +179,7 @@ Stored as `PropertyValue` entries in the `Protein` entity:
 This step is network-dependent and should be versioned for reproducibility.
 
 
-#### Cluster ID Annotation from BlastClust
+#### 3.1.4 Cluster ID Annotation from BlastClust
 
 **Purpose**  
 Annotate interfaces and proteins with **cluster identifiers** derived from sequence clustering (BlastClust output).
@@ -207,7 +207,7 @@ Stored as `PropertyValue` entries:
 - Updated `dataset_with_interfaces.json`
 
 
-### Machine Learning Evaluation with Croissant (ppi_ml_croissant.py)
+### 3.2 Machine Learning Evaluation with Croissant (ppi_ml_croissant.py)
 
 **Purpose**  
 Evaluate machine learning methods on the benchmark dataset using **MLCommons Croissant-compliant metadata**.
