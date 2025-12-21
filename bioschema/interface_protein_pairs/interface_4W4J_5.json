@@ -1,0 +1,384 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4W4J_5",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "4W4J_5",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4W4J",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4W4J",
+    "name": "Protein 4W4J",
+    "description": "Protein structure with PDB ID: 4W4J. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4W4J_5 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4W4J",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Mycolicibacterium smegmatis MC2 155",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "246196",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=246196"
+    },
+    "alternateName": [
+      "PDB 4W4J",
+      "Protein ID 4W4J"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4w4j_5.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4W4J_5.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4W4J",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4W4J",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4W4J_5",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "espG3",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF14011",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4W4J\", \"structure_metadata\": {\"pdb_id\": \"4W4J\", \"resolution\": 2.803, \"deposition_date\": \"2014-08-14T00:00:00+0000\", \"release_date\": \"2014-10-01T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mycolicibacterium smegmatis MC2 155\"], \"citation\": {\"title\": \"Structure of a PE-PPE-EspG complex from Mycobacterium tuberculosis reveals molecular specificity of ESX protein secretion.\", \"doi\": \"10.1073/pnas.1409345111\", \"authors\": [\"Ekiert, D.C.\", \"Cox, J.S.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 95.21, \"b\": 95.21, \"c\": 171.54, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\", \"B\": \"(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mycolicibacterium smegmatis MC2 155\", \"sequence_length\": 333, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Mycolicibacterium smegmatis MC2 155\", \"sequence_length\": 333, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\", \"organism\": \"Mycolicibacterium smegmatis MC2 155\", \"taxonomy_id\": 246196, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 333, \"gene_name\": null, \"uniprot_ids\": [\"A0QQ45\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 333.0, \"min_sequence_length\": 333, \"max_sequence_length\": 333}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\", \"pdbx_seq_one_letter_code_can\": \"MHHHHHHENLYFQGSHMGPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTRMGVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRGMVARRSEETVVALRNAQLVTFTAMDIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIAMAVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 309, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"ATCC 700084 / mc(2)155\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 309, \"pdbx_gene_src_gene\": \"MSMEG_0622, MSMEI_0606\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"246196\", \"pdbx_gene_src_scientific_name\": \"Mycobacterium smegmatis\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"Rosetta 2 (BL21)\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET21a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.56, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/5sxlA/31017/4w4jA\", \"max_rmsd\": 2.479, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 24713, \"identity\": 100}, {\"cluster_id\": 33434, \"identity\": 95}, {\"cluster_id\": 36850, \"identity\": 90}, {\"cluster_id\": 46684, \"identity\": 70}, {\"cluster_id\": 13969, \"identity\": 50}, {\"cluster_id\": 15045, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 309, \"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 309, \"ncbi_common_names\": [\"Mycobacterium smegmatis 'MC2 155\", \"Mycobacterium smegmatis MC2 155\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Mycolicibacterium smegmatis MC2 155\", \"ncbi_taxonomy_id\": 246196, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Mycobacterium smegmatis\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinomycetota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteraeota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteria\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteriota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"actinobacteria\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinomycetes\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinobacteria Stackebrandt et al. 1997\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinomycetia\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"high G+C Gram-positive bacteria\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriales\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriales\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriales Goodfellow and Jones 2015\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriineae\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriineae corrig. Stackebrandt et al. 1997\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacterineae\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriales Janke 1924 (Approved Lists 1980)\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriineae\"}, {\"depth\": 7, \"id\": \"1762\", \"name\": \"Mycobacteriaceae\"}, {\"depth\": 8, \"id\": \"1866885\", \"name\": \"Mycolicibacterium\"}, {\"depth\": 8, \"id\": \"1866885\", \"name\": \"Mycobacterium fortuitum complex\"}, {\"depth\": 9, \"id\": \"1772\", \"name\": \"Mycolicibacterium smegmatis\"}, {\"depth\": 9, \"id\": \"1772\", \"name\": \"Bacterium smegmatis\"}, {\"depth\": 9, \"id\": \"1772\", \"name\": \"Mycobacterium paratuberculosis smegmatis\"}, {\"depth\": 9, \"id\": \"1772\", \"name\": \"Mycobacterium smegmatis (Trevisan 1889) Lehmann and Neumann 1899 (Approved Lists 1980)\"}, {\"depth\": 10, \"id\": \"246196\", \"name\": \"Mycolicibacterium smegmatis MC2 155\"}, {\"depth\": 10, \"id\": \"246196\", \"name\": \"Mycobacterium smegmatis 'MC2 155\"}, {\"depth\": 10, \"id\": \"246196\", \"name\": \"Mycobacterium smegmatis MC2 155\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"MSMEG_0622\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"MSMEI_0606\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 33.99, \"pdbx_description\": \"EspG3\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"EspG3\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"ESX-3 secretion-associated protein EspG3\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"A0QQ45\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 17, \"length\": 293, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF14011\", \"assignment_version\": \"34.0\", \"name\": \"EspG family (ESX-1_EspG)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"IPR025734\", \"name\": \"EspG family\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR025734\", \"name\": \"EspG family\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"4W4J\", \"rcsb_id\": \"4W4J_1\", \"uniprot_ids\": [\"A0QQ45\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"A0QQ45\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.948220064724919, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF14011\", \"name\": \"EspG family (ESX-1_EspG)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 25, \"end_seq_id\": 270}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 1}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 17}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 71}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_4\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 113}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_5\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 136}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_6\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 266}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 16}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-2.7, -2.49, -2.28, -1.61, -1.64, -1.33, -1.07, -1.07, -0.47, -0.12, -0.72, -0.97, -1.08, -0.22, -0.57, -0.06, 0.22, -0.07, -0.41, -0.62, -0.03, -0.33, -0.52, 0.29, 0.07, -0.24, 0.3, 1.11, 1.46, 1.46, 1.51, 1.14, 0.58, 0.2, 0.49, 0.49, 0.49, 0.73, 1.03, 1.0, 0.91, 0.88, 0.91, 0.92, 0.07, -0.71, -1.0, -1.89, -2.31, -2.22, -1.84, -1.39, -0.88, -0.29, 0.27, -0.03, 0.27, 0.97, 0.67, 0.89, 0.5, -0.42, -0.41, -0.66, 0.2, 0.76, 0.17, 0.47, 0.24, 0.28, 0.98, 1.23, 0.89, 0.24, -0.72, 0.13, 0.42, -0.17, -0.22, 0.08, -0.47, -0.16, 0.49, 1.27, 0.3, 0.3, 0.61, 0.32, -0.28, 0.22, -0.09, -0.13, -0.91, -0.1, 0.17, 0.16, 0.5, 0.42, -0.04, -0.04, -0.04, 0.88, 0.07, -0.44, -0.14, 0.37, 0.74, 0.29, 0.18, -0.33, -1.14, -1.03, -1.07, -0.81, -0.81, -0.81, 0.11, 0.11, -0.19, 0.4, 0.4, 0.9, 0.9, 0.36, 0.47, -0.03, 0.67, 1.27, 0.68, 1.57, 1.1, 0.28, -0.03, -0.7, -0.42, -0.2, 0.06, 0.27, 0.23, 0.7, 0.98, 1.57, 1.88, 2.1, 1.59, 1.08, 0.76, -0.14, -0.74, -0.47, -1.17, -0.81, -1.62, -1.92, -1.57, -0.87, -0.01, -0.01, -0.01, 0.69, 0.58, 0.92, 1.51, 0.7, 0.7, -0.11, -0.32, -0.91, -0.61, -1.31, -1.66, -1.9, -1.2, -1.58, -0.77, -0.18, -0.18, -0.21, 0.71, 0.71, 1.07, 1.29, 1.42, 1.47, 1.09, 1.3, 0.74, 0.52, 0.41, -0.08, -0.08, 0.43, -0.42, -0.33, 0.31, 0.71, 0.12, 0.58, 0.26, -0.67, -1.21, -0.97, -0.41, -1.27, -1.08, -0.22, 0.02, 0.48, 0.59, 0.31, -0.04, -0.9, -0.56, -1.41, -2.38, -2.11, -2.14, -1.83, -1.87, -0.9, -0.56, -0.04, 0.22, 1.22, 1.26, 0.94, 0.94, 1.16, 0.33, 0.33, -0.63, -0.04, -0.12, -0.16, -0.12, -0.22, -0.12, -0.2, 0.04, 0.86, -0.03, -0.5, -1.36, -1.1, -0.42, -0.43, -0.08, 0.03, -0.36, -0.14, -0.14, 0.16, 0.46, -0.43, -0.14, 0.43, 0.32, 0.61, 0.99, 1.5, 1.2, 0.5, 1.31, 1.03, 0.73, 0.44, 0.66, 0.28, -0.28, 0.07, 0.48, -0.04, 0.34, -0.03, -0.33, -1.14, -1.14, -0.63, -0.67, -1.08, -1.37, -1.37, -1.58, -1.58, -1.58, -1.2, -1.42, -1.42, -1.28, -1.39, -2.09, -1.88, -1.02, -0.21, -0.8, -1.5, -1.92, -1.64, -1.53, -1.58, -1.2]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.89, 0.78, 0.75, 0.71, 0.68, 0.64, 0.55, 0.51, 0.49, 0.45, 0.38, 0.37, 0.38, 0.3, 0.29, 0.29, 0.31, 0.35, 0.3, 0.2, 0.18, 0.2, 0.26, 0.26, 0.2, 0.13, 0.14, 0.15, 0.15, 0.13, 0.08, 0.11, 0.1, 0.06, 0.06, 0.05, 0.03, 0.03, 0.03, 0.04, 0.05, 0.07, 0.12, 0.14, 0.13, 0.18, 0.25, 0.25, 0.25, 0.17, 0.12, 0.17, 0.12, 0.18, 0.24, 0.28, 0.32, 0.32, 0.32, 0.29, 0.23, 0.33, 0.27, 0.2, 0.21, 0.21, 0.18, 0.18, 0.16, 0.13, 0.2, 0.3, 0.32, 0.28, 0.24, 0.24, 0.21, 0.14, 0.2, 0.21, 0.15, 0.13, 0.13, 0.15, 0.2, 0.2, 0.15, 0.11, 0.12, 0.09, 0.12, 0.07, 0.04, 0.04, 0.07, 0.1, 0.1, 0.14, 0.14, 0.09, 0.08, 0.12, 0.14, 0.1, 0.1, 0.09, 0.09, 0.13, 0.2, 0.2, 0.29, 0.23, 0.24, 0.27, 0.19, 0.18, 0.17, 0.13, 0.14, 0.15, 0.16, 0.17, 0.1, 0.12, 0.15, 0.15, 0.16, 0.1, 0.1, 0.1, 0.1, 0.1, 0.12, 0.12, 0.09, 0.18, 0.12, 0.07, 0.09, 0.07, 0.11, 0.1, 0.1, 0.17, 0.17, 0.19, 0.26, 0.22, 0.31, 0.23, 0.24, 0.24, 0.16, 0.17, 0.17, 0.27, 0.2, 0.23, 0.29, 0.29, 0.29, 0.29, 0.34, 0.35, 0.37, 0.39, 0.31, 0.27, 0.31, 0.31, 0.36, 0.38, 0.29, 0.35, 0.39, 0.4, 0.3, 0.35, 0.3, 0.25, 0.25, 0.22, 0.25, 0.31, 0.3, 0.25, 0.22, 0.32, 0.26, 0.2, 0.2, 0.23, 0.16, 0.15, 0.19, 0.18, 0.23, 0.28, 0.27, 0.28, 0.3, 0.31, 0.31, 0.23, 0.18, 0.19, 0.22, 0.24, 0.21, 0.28, 0.35, 0.35, 0.34, 0.33, 0.41, 0.39, 0.4, 0.35, 0.38, 0.32, 0.39, 0.39, 0.31, 0.38, 0.43, 0.48, 0.47, 0.47, 0.46, 0.41, 0.35, 0.29, 0.28, 0.31, 0.37, 0.37, 0.34, 0.25, 0.31, 0.31, 0.38, 0.31, 0.3, 0.36, 0.36, 0.27, 0.25, 0.27, 0.27, 0.27, 0.31, 0.37, 0.4, 0.34, 0.28, 0.25, 0.23, 0.21, 0.32, 0.3, 0.23, 0.21, 0.26, 0.33, 0.27, 0.3, 0.38, 0.39, 0.36, 0.28, 0.22, 0.27, 0.27, 0.31, 0.41, 0.37, 0.41, 0.42, 0.49, 0.39, 0.41, 0.49, 0.49, 0.5, 0.5, 0.55, 0.53, 0.53, 0.53, 0.57, 0.61, 0.63, 0.63, 0.61, 0.58, 0.55, 0.63, 0.63, 0.63, 0.65, 0.75, 0.78, 0.81, 0.84, 0.88, 0.91, 0.93, 0.96, 0.97]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.34, 0.35, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.39, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.42, 0.4, 0.39, 0.37, 0.36, 0.35, 0.35, 0.34, 0.33, 0.31, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.29, 0.28, 0.27, 0.27, 0.27, 0.27, 0.26, 0.26, 0.26, 0.27, 0.27, 0.28, 0.29, 0.29, 0.3, 0.31, 0.32, 0.33, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.35, 0.34, 0.33, 0.33, 0.32, 0.31, 0.31, 0.3, 0.29, 0.29, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.29, 0.3, 0.31, 0.33, 0.34, 0.36, 0.37, 0.39, 0.41, 0.42, 0.43, 0.42, 0.41, 0.4, 0.39, 0.38, 0.38, 0.38, 0.38, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.39, 0.4, 0.41, 0.43, 0.43, 0.41, 0.4, 0.39, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.39, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.44, 0.44, 0.45, 0.45, 0.46, 0.46, 0.47, 0.47, 0.48, 0.49, 0.5, 0.5, 0.51, 0.51, 0.51, 0.5, 0.5, 0.5, 0.5, 0.5, 0.51, 0.51, 0.5, 0.51, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.52, 0.51, 0.49, 0.49, 0.49, 0.49, 0.48, 0.49]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.79612, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.05178, \"maximum_length\": 16, \"minimum_length\": 16, \"type\": \"artifact\"}, {\"count\": 6, \"coverage\": 0.01942, \"type\": \"modified_monomer\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"13969_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 17, \"ref_beg_seq_id\": 4}, {\"entity_beg_seq_id\": 18, \"length\": 87, \"ref_beg_seq_id\": 23}, {\"entity_beg_seq_id\": 105, \"length\": 14, \"ref_beg_seq_id\": 115}, {\"entity_beg_seq_id\": 119, \"length\": 191, \"ref_beg_seq_id\": 141}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"33434_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 309, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"15045_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 17, \"ref_beg_seq_id\": 4}, {\"entity_beg_seq_id\": 18, \"length\": 87, \"ref_beg_seq_id\": 23}, {\"entity_beg_seq_id\": 105, \"length\": 14, \"ref_beg_seq_id\": 115}, {\"entity_beg_seq_id\": 119, \"length\": 191, \"ref_beg_seq_id\": 141}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"36850_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 309, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"46684_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 309, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"A0QQ45\", \"aligned_regions\": [{\"entity_beg_seq_id\": 17, \"length\": 293, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"24713_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 309, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"4W4J_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:43:27.382778\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 333, \"chain2_sequence_length\": 333, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.803,
+            "experimentalMethod": null,
+            "depositionDate": "2014-08-14T00:00:00+0000",
+            "releaseDate": "2014-10-01T00:00:00+0000",
+            "sourceOrganism": [
+              "Mycolicibacterium smegmatis MC2 155"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.803,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Mycolicibacterium smegmatis MC2 155",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA",
+        "description": "Amino acid sequence for chain A (length: 333)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 333
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "(MSE)HHHHHHENLYFQGSH(MSE)GPNAVELTTDQAWCLADVLGAGSYPWVLAITPPYSDHSQRSAFLAAQSAELTR(MSE)GVVNSAGAVDPRVAQWITTVCRATQWLDLRFVSGPGDLLRG(MSE)VARRSEETVVALRNAQLVTFTA(MSE)DIGHQHALVPVLTAGLSGRKPARFDDFALPAAAGARADEQIRNGAPLAEVLEFLGVPPSARPLVESVFDGRRTYVEIVAGEHRDGHRVTTEVGVSIIDTPHGRILVHPTKAFDGEWISTFTPGSADAIA(MSE)AVERLTASLPSGSWFPDQPLTRDFDEDAATHREPVLQRRTQKA",
+        "description": "Amino acid sequence for chain B (length: 333)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 333
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structure of a PE-PPE-EspG complex from Mycobacterium tuberculosis reveals molecular specificity of ESX protein secretion.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1073/pnas.1409345111",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 333",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4W4J_5",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4L4W_9"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4W4J_5",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4W4J",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "2_655",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "6_657",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3361.94,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 106,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "espG3",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF14011",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1245.18,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1928.59,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.37037543799116,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.573653902211223,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4W4J_5",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4L4W_9"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4G7N_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4G7N_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4G7N",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4G7N",
+    "name": "Protein 4G7N",
+    "description": "Protein structure with PDB ID: 4G7N. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4G7N_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4G7N",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Drosophila melanogaster",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "7227",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7227"
+    },
+    "alternateName": [
+      "PDB 4G7N",
+      "Protein ID 4G7N"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4g7n_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4g7n.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4G7N",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4G7N",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4G7N_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "SAK",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.1120.120;3.30.1120.130",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF18190;PF18409",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4G7N\", \"structure_metadata\": {\"pdb_id\": \"4G7N\", \"resolution\": 2.3, \"deposition_date\": \"2012-07-20T00:00:00+0000\", \"release_date\": \"2012-10-10T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Drosophila melanogaster\"], \"citation\": {\"title\": \"The structure of the plk4 cryptic polo box reveals two tandem polo boxes required for centriole duplication.\", \"doi\": \"10.1016/j.str.2012.08.025\", \"authors\": [\"Slevin, L.K.\", \"Nye, J.\", \"Pinkerton, D.C.\", \"Buster, D.W.\", \"Rogers, G.C.\", \"Slep, K.C.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 86.773, \"b\": 135.58, \"c\": 46.67, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\", \"B\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Drosophila melanogaster\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Drosophila melanogaster\", \"sequence_length\": 225, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\", \"organism\": \"Drosophila melanogaster\", \"taxonomy_id\": 7227, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 225, \"gene_name\": null, \"uniprot_ids\": [\"O97143\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 225.0, \"min_sequence_length\": 225, \"max_sequence_length\": 225}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\", \"pdbx_seq_one_letter_code_can\": \"GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 225, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Fruit fly\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"CG7186, Plk4, SAK\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"7227\", \"pdbx_gene_src_scientific_name\": \"Drosophila melanogaster\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21 DE3 pLysS\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET28\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.361, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/4g7nA/20920/4g7nA\", \"max_rmsd\": 1.465, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 19630, \"identity\": 100}, {\"cluster_id\": 18607, \"identity\": 95}, {\"cluster_id\": 15984, \"identity\": 90}, {\"cluster_id\": 19407, \"identity\": 70}, {\"cluster_id\": 12487, \"identity\": 50}, {\"cluster_id\": 4507, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"Fruit fly\", \"ncbi_common_names\": [\"Sophophora melanogaster\", \"fruit fly\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Drosophila melanogaster\", \"ncbi_taxonomy_id\": 7227, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Drosophila melanogaster\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33317\", \"name\": \"Protostomia\"}, {\"depth\": 8, \"id\": \"1206794\", \"name\": \"Ecdysozoa\"}, {\"depth\": 9, \"id\": \"88770\", \"name\": \"Panarthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"Arthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"arthropods\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"Mandibulata\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"mandibulates\"}, {\"depth\": 12, \"id\": \"197562\", \"name\": \"Pancrustacea\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"Hexapoda\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"hexapods\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"Insecta\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"insects\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"true insects\"}, {\"depth\": 15, \"id\": \"85512\", \"name\": \"Dicondylia\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"Pterygota\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"winged insects\"}, {\"depth\": 17, \"id\": \"33340\", \"name\": \"Neoptera\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Endopterygota\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Holometabola\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"Diptera\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"flies\"}, {\"depth\": 20, \"id\": \"7203\", \"name\": \"Brachycera\"}, {\"depth\": 21, \"id\": \"43733\", \"name\": \"Muscomorpha\"}, {\"depth\": 21, \"id\": \"43733\", \"name\": \"Asilomorpha\"}, {\"depth\": 22, \"id\": \"480118\", \"name\": \"Eremoneura\"}, {\"depth\": 23, \"id\": \"480117\", \"name\": \"Cyclorrhapha\"}, {\"depth\": 24, \"id\": \"43738\", \"name\": \"Schizophora\"}, {\"depth\": 25, \"id\": \"43741\", \"name\": \"Acalyptratae\"}, {\"depth\": 26, \"id\": \"43746\", \"name\": \"Ephydroidea\"}, {\"depth\": 27, \"id\": \"7214\", \"name\": \"Drosophilidae\"}, {\"depth\": 27, \"id\": \"7214\", \"name\": \"pomace flies\"}, {\"depth\": 28, \"id\": \"43845\", \"name\": \"Drosophilinae\"}, {\"depth\": 29, \"id\": \"46877\", \"name\": \"Drosophilini\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"Drosophila\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"fruit flies\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"fruit fly\"}, {\"depth\": 31, \"id\": \"32341\", \"name\": \"Sophophora\"}, {\"depth\": 32, \"id\": \"32346\", \"name\": \"melanogaster group\"}, {\"depth\": 33, \"id\": \"32351\", \"name\": \"melanogaster subgroup\"}, {\"depth\": 34, \"id\": \"7227\", \"name\": \"Drosophila melanogaster\"}, {\"depth\": 34, \"id\": \"7227\", \"name\": \"Sophophora melanogaster\"}, {\"depth\": 34, \"id\": \"7227\", \"name\": \"fruit fly\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"CG7186\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"Plk4\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"SAK\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"7227:3L\", \"name\": \"Chromosome 3L\"}, {\"depth\": 2, \"id\": \"7227:3L:sak_kinase\", \"name\": \"Sak kinase\"}, {\"depth\": 0, \"id\": \"7227\", \"name\": \"Drosophila melanogaster\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 25.71, \"pdbx_description\": \"Serine/threonine-protein kinase PLK4\", \"pdbx_ec\": \"2.7.11.21\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"2\", \"name\": \"Transferases\"}, {\"depth\": 2, \"id\": \"2.7\", \"name\": \"Transferring phosphorus-containing groups\"}, {\"depth\": 3, \"id\": \"2.7.11\", \"name\": \"Protein-serine/threonine kinases\"}, {\"depth\": 4, \"id\": \"2.7.11.21\", \"name\": \"polo kinase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Serine/threonine-protein kinase PLK4\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Polo-like kinase 4\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"PLK-4\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Serine/threonine-protein kinase SAK\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"2.7.11.21\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Serine/threonine-protein kinase PLK4\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"O97143\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 5, \"length\": 221, \"ref_beg_seq_id\": 382}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF18190\", \"assignment_version\": \"34.0\", \"name\": \"Polo-like Kinase 4 Polo Box 1 (Plk4_PB1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF18409\", \"assignment_version\": \"34.0\", \"name\": \"Polo-like Kinase 4 Polo Box 2 (Plk4_PB2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR017441\", \"name\": \"Protein kinase, ATP binding site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR017441\", \"name\": \"Protein kinase, ATP binding site\"}]}, {\"annotation_id\": \"GO:0046599\", \"name\": \"regulation of centriole replication\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0051128\", \"name\": \"regulation of cellular component organization\"}, {\"id\": \"GO:0000226\", \"name\": \"microtubule cytoskeleton organization\"}, {\"id\": \"GO:0140694\", \"name\": \"membraneless organelle assembly\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0044085\", \"name\": \"cellular component biogenesis\"}, {\"id\": \"GO:0051298\", \"name\": \"centrosome duplication\"}, {\"id\": \"GO:0022607\", \"name\": \"cellular component assembly\"}, {\"id\": \"GO:0007098\", \"name\": \"centrosome cycle\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0007049\", \"name\": \"cell cycle\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0051726\", \"name\": \"regulation of cell cycle\"}, {\"id\": \"GO:0046599\", \"name\": \"regulation of centriole replication\"}, {\"id\": \"GO:0022402\", \"name\": \"cell cycle process\"}, {\"id\": \"GO:0007099\", \"name\": \"centriole replication\"}, {\"id\": \"GO:0098534\", \"name\": \"centriole assembly\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0031023\", \"name\": \"microtubule organizing center organization\"}, {\"id\": \"GO:0070925\", \"name\": \"organelle assembly\"}, {\"id\": \"GO:0046605\", \"name\": \"regulation of centrosome cycle\"}, {\"id\": \"GO:0010564\", \"name\": \"regulation of cell cycle process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0032886\", \"name\": \"regulation of microtubule-based process\"}, {\"id\": \"GO:0044087\", \"name\": \"regulation of cellular component biogenesis\"}, {\"id\": \"GO:0033043\", \"name\": \"regulation of organelle organization\"}, {\"id\": \"GO:0006996\", \"name\": \"organelle organization\"}, {\"id\": \"GO:0010824\", \"name\": \"regulation of centrosome duplication\"}, {\"id\": \"GO:1902115\", \"name\": \"regulation of organelle assembly\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007017\", \"name\": \"microtubule-based process\"}, {\"id\": \"GO:0007010\", \"name\": \"cytoskeleton organization\"}]}, {\"annotation_id\": \"IPR008266\", \"name\": \"Tyrosine-protein kinase, active site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008266\", \"name\": \"Tyrosine-protein kinase, active site\"}]}, {\"annotation_id\": \"GO:0005814\", \"name\": \"centriole\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0005815\", \"name\": \"microtubule organizing center\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005856\", \"name\": \"cytoskeleton\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0043228\", \"name\": \"membraneless organelle\"}, {\"id\": \"GO:0005814\", \"name\": \"centriole\"}, {\"id\": \"GO:0043232\", \"name\": \"intracellular membraneless organelle\"}, {\"id\": \"GO:0015630\", \"name\": \"microtubule cytoskeleton\"}]}, {\"annotation_id\": \"IPR000719\", \"name\": \"Protein kinase domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR000719\", \"name\": \"Protein kinase domain\"}]}, {\"annotation_id\": \"GO:0045732\", \"name\": \"positive regulation of protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0051247\", \"name\": \"positive regulation of protein metabolic process\"}, {\"id\": \"GO:0048518\", \"name\": \"positive regulation of biological process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:0009893\", \"name\": \"positive regulation of metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0010604\", \"name\": \"positive regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0048522\", \"name\": \"positive regulation of cellular process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0051246\", \"name\": \"regulation of protein metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0009894\", \"name\": \"regulation of catabolic process\"}, {\"id\": \"GO:0045732\", \"name\": \"positive regulation of protein catabolic process\"}, {\"id\": \"GO:0009896\", \"name\": \"positive regulation of catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0042176\", \"name\": \"regulation of protein catabolic process\"}]}, {\"annotation_id\": \"GO:0007140\", \"name\": \"male meiotic nuclear division\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0019953\", \"name\": \"sexual reproduction\"}, {\"id\": \"GO:0022414\", \"name\": \"reproductive process\"}, {\"id\": \"GO:0048285\", \"name\": \"organelle fission\"}, {\"id\": \"GO:0051321\", \"name\": \"meiotic cell cycle\"}, {\"id\": \"GO:0007140\", \"name\": \"male meiotic nuclear division\"}, {\"id\": \"GO:0048609\", \"name\": \"multicellular organismal reproductive process\"}, {\"id\": \"GO:1903046\", \"name\": \"meiotic cell cycle process\"}, {\"id\": \"GO:0048232\", \"name\": \"male gamete generation\"}, {\"id\": \"GO:0007276\", \"name\": \"gamete generation\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0000280\", \"name\": \"nuclear division\"}, {\"id\": \"GO:0006996\", \"name\": \"organelle organization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0140013\", \"name\": \"meiotic nuclear division\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0007049\", \"name\": \"cell cycle\"}, {\"id\": \"GO:0022402\", \"name\": \"cell cycle process\"}]}, {\"annotation_id\": \"IPR033696\", \"name\": \"Plk4, C-terminal polo-box domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 2, \"id\": \"IPR033696\", \"name\": \"Plk4, C-terminal polo-box domain\"}, {\"depth\": 1, \"id\": \"IPR000959\", \"name\": \"POLO box domain\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"IPR000959\", \"name\": \"POLO box domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR000959\", \"name\": \"POLO box domain\"}]}, {\"annotation_id\": \"IPR033698\", \"name\": \"Plk4, second cryptic polo-box domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR033698\", \"name\": \"Plk4, second cryptic polo-box domain\"}]}, {\"annotation_id\": \"GO:0007099\", \"name\": \"centriole replication\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0098534\", \"name\": \"centriole assembly\"}, {\"id\": \"GO:0031023\", \"name\": \"microtubule organizing center organization\"}, {\"id\": \"GO:0070925\", \"name\": \"organelle assembly\"}, {\"id\": \"GO:0000226\", \"name\": \"microtubule cytoskeleton organization\"}, {\"id\": \"GO:0140694\", \"name\": \"membraneless organelle assembly\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0044085\", \"name\": \"cellular component biogenesis\"}, {\"id\": \"GO:0051298\", \"name\": \"centrosome duplication\"}, {\"id\": \"GO:0006996\", \"name\": \"organelle organization\"}, {\"id\": \"GO:0022607\", \"name\": \"cellular component assembly\"}, {\"id\": \"GO:0007098\", \"name\": \"centrosome cycle\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007017\", \"name\": \"microtubule-based process\"}, {\"id\": \"GO:0007049\", \"name\": \"cell cycle\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0007010\", \"name\": \"cytoskeleton organization\"}, {\"id\": \"GO:0007099\", \"name\": \"centriole replication\"}, {\"id\": \"GO:0022402\", \"name\": \"cell cycle process\"}]}, {\"annotation_id\": \"GO:0106310\", \"name\": \"protein serine kinase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0016301\", \"name\": \"kinase activity\"}, {\"id\": \"GO:0004672\", \"name\": \"protein kinase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0106310\", \"name\": \"protein serine kinase activity\"}, {\"id\": \"GO:0016773\", \"name\": \"phosphotransferase activity, alcohol group as acceptor\"}, {\"id\": \"GO:0016772\", \"name\": \"transferase activity, transferring phosphorus-containing groups\"}]}, {\"annotation_id\": \"IPR046437\", \"name\": \"Serine/threonine-protein kinase, first cryptic polo-box domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR046437\", \"name\": \"Serine/threonine-protein kinase, first cryptic polo-box domain superfamily\"}]}, {\"annotation_id\": \"GO:0005524\", \"name\": \"ATP binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0032559\", \"name\": \"adenyl ribonucleotide binding\"}, {\"id\": \"GO:0000166\", \"name\": \"nucleotide binding\"}, {\"id\": \"GO:0032555\", \"name\": \"purine ribonucleotide binding\"}, {\"id\": \"GO:0035639\", \"name\": \"purine ribonucleoside triphosphate binding\"}, {\"id\": \"GO:1901265\", \"name\": \"nucleoside phosphate binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0017076\", \"name\": \"purine nucleotide binding\"}, {\"id\": \"GO:0043168\", \"name\": \"anion binding\"}, {\"id\": \"GO:0030554\", \"name\": \"adenyl nucleotide binding\"}, {\"id\": \"GO:0005524\", \"name\": \"ATP binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0097367\", \"name\": \"carbohydrate derivative binding\"}, {\"id\": \"GO:0032553\", \"name\": \"ribonucleotide binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR047108\", \"name\": \"Plk4-like, second cryptic polo-box domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR047108\", \"name\": \"Plk4-like, second cryptic polo-box domain superfamily\"}]}, {\"annotation_id\": \"GO:0031647\", \"name\": \"regulation of protein stability\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0031647\", \"name\": \"regulation of protein stability\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0065008\", \"name\": \"regulation of biological quality\"}]}, {\"annotation_id\": \"GO:0035186\", \"name\": \"syncytial blastoderm mitotic cell cycle\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0035186\", \"name\": \"syncytial blastoderm mitotic cell cycle\"}, {\"id\": \"GO:0032501\", \"name\": \"multicellular organismal process\"}, {\"id\": \"GO:0009790\", \"name\": \"embryo development\"}, {\"id\": \"GO:0000278\", \"name\": \"mitotic cell cycle\"}, {\"id\": \"GO:0045448\", \"name\": \"mitotic cell cycle, embryonic\"}, {\"id\": \"GO:0007275\", \"name\": \"multicellular organism development\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007049\", \"name\": \"cell cycle\"}, {\"id\": \"GO:0033301\", \"name\": \"cell cycle comprising mitosis without cytokinesis\"}]}, {\"annotation_id\": \"GO:0004674\", \"name\": \"protein serine/threonine kinase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004674\", \"name\": \"protein serine/threonine kinase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0016301\", \"name\": \"kinase activity\"}, {\"id\": \"GO:0004672\", \"name\": \"protein kinase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016773\", \"name\": \"phosphotransferase activity, alcohol group as acceptor\"}, {\"id\": \"GO:0016772\", \"name\": \"transferase activity, transferring phosphorus-containing groups\"}]}, {\"annotation_id\": \"GO:0007288\", \"name\": \"sperm axoneme assembly\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0007286\", \"name\": \"spermatid development\"}, {\"id\": \"GO:0048515\", \"name\": \"spermatid differentiation\"}, {\"id\": \"GO:0019953\", \"name\": \"sexual reproduction\"}, {\"id\": \"GO:0048869\", \"name\": \"cellular developmental process\"}, {\"id\": \"GO:0007283\", \"name\": \"spermatogenesis\"}, {\"id\": \"GO:0044458\", \"name\": \"motile cilium assembly\"}, {\"id\": \"GO:0030030\", \"name\": \"cell projection organization\"}, {\"id\": \"GO:0022414\", \"name\": \"reproductive process\"}, {\"id\": \"GO:0120316\", \"name\": \"sperm flagellum assembly\"}, {\"id\": \"GO:0000226\", \"name\": \"microtubule cytoskeleton organization\"}, {\"id\": \"GO:0048468\", \"name\": \"cell development\"}, {\"id\": \"GO:0022412\", \"name\": \"cellular process involved in reproduction in multicellular organism\"}, {\"id\": \"GO:0120031\", \"name\": \"plasma membrane bounded cell projection assembly\"}, {\"id\": \"GO:0003006\", \"name\": \"developmental process involved in reproduction\"}, {\"id\": \"GO:0007276\", \"name\": \"gamete generation\"}, {\"id\": \"GO:0001539\", \"name\": \"cilium or flagellum-dependent cell motility\"}, {\"id\": \"GO:0044085\", \"name\": \"cellular component biogenesis\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0001578\", \"name\": \"microtubule bundle formation\"}, {\"id\": \"GO:0022607\", \"name\": \"cellular component assembly\"}, {\"id\": \"GO:0060285\", \"name\": \"cilium-dependent cell motility\"}, {\"id\": \"GO:0030154\", \"name\": \"cell differentiation\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0060271\", \"name\": \"cilium assembly\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0048870\", \"name\": \"cell motility\"}, {\"id\": \"GO:0007288\", \"name\": \"sperm axoneme assembly\"}, {\"id\": \"GO:0044782\", \"name\": \"cilium organization\"}, {\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0097722\", \"name\": \"sperm motility\"}, {\"id\": \"GO:0070925\", \"name\": \"organelle assembly\"}, {\"id\": \"GO:0120036\", \"name\": \"plasma membrane bounded cell projection organization\"}, {\"id\": \"GO:0048609\", \"name\": \"multicellular organismal reproductive process\"}, {\"id\": \"GO:0060294\", \"name\": \"cilium movement involved in cell motility\"}, {\"id\": \"GO:0048232\", \"name\": \"male gamete generation\"}, {\"id\": \"GO:0006996\", \"name\": \"organelle organization\"}, {\"id\": \"GO:0030317\", \"name\": \"flagellated sperm motility\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007018\", \"name\": \"microtubule-based movement\"}, {\"id\": \"GO:0007017\", \"name\": \"microtubule-based process\"}, {\"id\": \"GO:0007281\", \"name\": \"germ cell development\"}, {\"id\": \"GO:0003341\", \"name\": \"cilium movement\"}, {\"id\": \"GO:0035082\", \"name\": \"axoneme assembly\"}, {\"id\": \"GO:0030031\", \"name\": \"cell projection assembly\"}, {\"id\": \"GO:0007010\", \"name\": \"cytoskeleton organization\"}]}, {\"annotation_id\": \"GO:0007098\", \"name\": \"centrosome cycle\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0031023\", \"name\": \"microtubule organizing center organization\"}, {\"id\": \"GO:0000226\", \"name\": \"microtubule cytoskeleton organization\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0006996\", \"name\": \"organelle organization\"}, {\"id\": \"GO:0007098\", \"name\": \"centrosome cycle\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007017\", \"name\": \"microtubule-based process\"}, {\"id\": \"GO:0007049\", \"name\": \"cell cycle\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0007010\", \"name\": \"cytoskeleton organization\"}, {\"id\": \"GO:0022402\", \"name\": \"cell cycle process\"}]}, {\"annotation_id\": \"IPR011009\", \"name\": \"Protein kinase-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR011009\", \"name\": \"Protein kinase-like domain superfamily\"}]}, {\"annotation_id\": \"IPR033699\", \"name\": \"Plk4, first cryptic polo-box domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR033699\", \"name\": \"Plk4, first cryptic polo-box domain\"}]}, {\"annotation_id\": \"GO:0005634\", \"name\": \"nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0042802\", \"name\": \"identical protein binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4G7N\", \"rcsb_id\": \"4G7N_1\", \"uniprot_ids\": [\"O97143\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"O97143\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9822222222222222, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.28738621586475943}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF18409\", \"name\": \"Polo-like Kinase 4 Polo Box 2 (Plk4_PB2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 121, \"end_seq_id\": 219}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF18190\", \"name\": \"Polo-like Kinase 4 Polo Box 1 (Plk4_PB1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 9, \"end_seq_id\": 119}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 4}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.29, -0.42, -0.51, 0.27, -0.33, -0.02, 0.04, -0.96, -0.44, -0.49, -0.49, -0.39, -1.31, -1.07, -1.42, -1.07, -1.0, -1.81, -2.03, -1.36, -1.07, -0.66, -0.01, 0.84, 0.42, 0.47, 0.81, 0.22, 0.19, 0.44, 0.96, 0.07, -0.04, 0.88, 0.83, 1.19, 1.08, 0.43, -0.11, -0.68, -0.68, -1.38, -2.19, -2.26, -2.07, -1.96, -2.17, -1.59, -1.17, -1.28, -0.39, -0.09, 0.02, -0.87, -0.52, -0.52, -1.52, -1.3, -0.3, -0.3, -0.36, -0.36, -0.14, -0.49, -0.28, 0.18, -0.82, -1.37, -1.44, -1.48, -0.62, -0.94, -0.94, -1.16, -1.29, -0.97, -1.31, -1.31, -1.52, -1.49, -1.17, -0.87, -0.52, -0.73, -0.28, 0.58, 0.01, 0.01, -0.63, -0.84, -1.14, -0.68, -0.47, -0.83, -1.73, -1.94, -1.66, -1.94, -1.99, -1.74, -1.67, -1.63, -1.59, -0.96, -1.1, -0.69, 0.21, 0.6, 1.17, 1.13, 0.84, 0.8, 0.17, 0.59, 0.1, -0.8, -0.29, -0.79, -1.4, -0.66, -0.66, -0.3, 0.2, 0.33, 0.33, 0.14, -0.17, 0.4, 0.3, 0.0, 0.0, -0.21, -0.24, -0.2, -0.17, -0.17, -0.09, -0.8, -0.1, -0.17, -0.47, -0.43, 0.16, -0.59, 0.22, 0.14, 0.21, -0.18, -0.21, -0.21, -0.56, -0.8, 0.06, -0.8, -0.76, -0.47, -0.78, -1.1, -1.4, -1.06, -0.8, -0.8, 0.06, -0.5, -0.74, -0.5, -0.09, 0.58, 0.53, -0.07, -0.58, -1.5, -1.5, -0.69, -0.04, -0.34, -0.98, -0.93, -0.93, -1.23, -0.46, -0.06, -0.56, -1.41, -0.74, 0.08, -0.27, 0.62, 0.92, 0.26, 0.14, 0.64, 0.61, 0.8, 0.53, 0.53, -0.04, -0.39, -0.39, -0.98, -1.49, -0.82, -0.98, -1.36, -0.5, -0.5, 0.43, 0.78, 0.67, 0.26, -0.2, -0.01, 0.09, -0.77, -0.22, -1.11, -1.24]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.96, 0.89, 0.87, 0.84, 0.81, 0.77, 0.67, 0.56, 0.55, 0.5, 0.47, 0.39, 0.39, 0.38, 0.41, 0.42, 0.37, 0.37, 0.34, 0.39, 0.28, 0.18, 0.25, 0.25, 0.24, 0.23, 0.17, 0.18, 0.18, 0.16, 0.1, 0.06, 0.09, 0.05, 0.05, 0.06, 0.05, 0.04, 0.07, 0.08, 0.09, 0.13, 0.13, 0.13, 0.13, 0.08, 0.06, 0.08, 0.08, 0.13, 0.14, 0.23, 0.32, 0.34, 0.42, 0.37, 0.28, 0.24, 0.26, 0.28, 0.31, 0.32, 0.36, 0.44, 0.43, 0.42, 0.44, 0.53, 0.49, 0.55, 0.55, 0.55, 0.56, 0.58, 0.58, 0.53, 0.6, 0.58, 0.65, 0.7, 0.68, 0.67, 0.6, 0.51, 0.45, 0.46, 0.39, 0.47, 0.44, 0.42, 0.45, 0.44, 0.41, 0.38, 0.26, 0.24, 0.31, 0.21, 0.21, 0.13, 0.12, 0.1, 0.09, 0.08, 0.08, 0.11, 0.07, 0.07, 0.06, 0.06, 0.09, 0.08, 0.09, 0.09, 0.06, 0.1, 0.06, 0.03, 0.05, 0.07, 0.07, 0.07, 0.09, 0.05, 0.1, 0.09, 0.08, 0.13, 0.17, 0.14, 0.14, 0.14, 0.09, 0.08, 0.05, 0.08, 0.05, 0.05, 0.1, 0.1, 0.08, 0.12, 0.09, 0.06, 0.08, 0.08, 0.14, 0.16, 0.17, 0.18, 0.15, 0.15, 0.11, 0.12, 0.12, 0.17, 0.16, 0.24, 0.29, 0.23, 0.17, 0.2, 0.21, 0.2, 0.27, 0.17, 0.17, 0.16, 0.16, 0.15, 0.15, 0.16, 0.12, 0.17, 0.22, 0.2, 0.2, 0.22, 0.12, 0.08, 0.12, 0.16, 0.08, 0.05, 0.08, 0.06, 0.11, 0.11, 0.09, 0.06, 0.06, 0.05, 0.06, 0.09, 0.08, 0.09, 0.1, 0.1, 0.09, 0.1, 0.1, 0.12, 0.09, 0.18, 0.17, 0.17, 0.23, 0.23, 0.27, 0.23, 0.29, 0.29, 0.29, 0.32, 0.34, 0.38, 0.43, 0.46, 0.51, 0.55, 0.7, 0.81, 0.82, 0.9, 0.93]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.39, 0.38, 0.36, 0.35, 0.34, 0.33, 0.32, 0.32, 0.32, 0.32, 0.34, 0.35, 0.37, 0.39, 0.41, 0.43, 0.43, 0.41, 0.41, 0.4, 0.39, 0.4, 0.4, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.43, 0.42, 0.41, 0.4, 0.38, 0.37, 0.36, 0.35, 0.35, 0.34, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.37, 0.37, 0.37, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.36, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.37, 0.39, 0.41, 0.41, 0.41, 0.41, 0.41, 0.4, 0.39, 0.36, 0.34, 0.31, 0.28, 0.25, 0.23, 0.21, 0.2, 0.19, 0.18, 0.18, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.2, 0.2, 0.2, 0.21, 0.22, 0.22, 0.23, 0.24, 0.26, 0.27, 0.28, 0.28, 0.28, 0.28, 0.27, 0.27, 0.27, 0.28, 0.28, 0.27, 0.26, 0.25, 0.25, 0.26, 0.27, 0.3, 0.31, 0.33, 0.34, 0.35, 0.35, 0.36, 0.36, 0.37, 0.37, 0.34, 0.31, 0.29, 0.27, 0.26, 0.24, 0.24, 0.25, 0.24, 0.23, 0.23, 0.24, 0.24, 0.23, 0.22, 0.22, 0.21, 0.2, 0.19, 0.2, 0.2, 0.21, 0.21, 0.24, 0.26, 0.28, 0.3, 0.31, 0.33, 0.33, 0.31, 0.3, 0.29, 0.28, 0.26, 0.25, 0.24, 0.23, 0.23, 0.23, 0.26, 0.29, 0.32, 0.34, 0.37, 0.38, 0.39, 0.4, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.01778, \"maximum_length\": 4, \"minimum_length\": 4, \"type\": \"artifact\"}, {\"count\": 2, \"coverage\": 0.93333, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"4507_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 48, \"ref_beg_seq_id\": 657}, {\"entity_beg_seq_id\": 49, \"length\": 32, \"ref_beg_seq_id\": 716}, {\"entity_beg_seq_id\": 81, \"length\": 5, \"ref_beg_seq_id\": 770}, {\"entity_beg_seq_id\": 86, \"length\": 55, \"ref_beg_seq_id\": 777}, {\"entity_beg_seq_id\": 141, \"length\": 9, \"ref_beg_seq_id\": 834}, {\"entity_beg_seq_id\": 150, \"length\": 6, \"ref_beg_seq_id\": 844}, {\"entity_beg_seq_id\": 156, \"length\": 9, \"ref_beg_seq_id\": 851}, {\"entity_beg_seq_id\": 165, \"length\": 8, \"ref_beg_seq_id\": 873}, {\"entity_beg_seq_id\": 173, \"length\": 6, \"ref_beg_seq_id\": 885}, {\"entity_beg_seq_id\": 179, \"length\": 26, \"ref_beg_seq_id\": 894}, {\"entity_beg_seq_id\": 205, \"length\": 1, \"ref_beg_seq_id\": 924}, {\"entity_beg_seq_id\": 206, \"length\": 20, \"ref_beg_seq_id\": 928}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"19630_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 225, \"ref_beg_seq_id\": 378}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"O97143\", \"aligned_regions\": [{\"entity_beg_seq_id\": 5, \"length\": 221, \"ref_beg_seq_id\": 382}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"15984_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 225, \"ref_beg_seq_id\": 378}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"19407_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 225, \"ref_beg_seq_id\": 394}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"12487_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 85, \"ref_beg_seq_id\": 414}, {\"entity_beg_seq_id\": 86, \"length\": 70, \"ref_beg_seq_id\": 501}, {\"entity_beg_seq_id\": 156, \"length\": 50, \"ref_beg_seq_id\": 572}, {\"entity_beg_seq_id\": 206, \"length\": 20, \"ref_beg_seq_id\": 625}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"18607_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 225, \"ref_beg_seq_id\": 378}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Polo-like kinase 4, PLK-4, Serine/threonine-protein kinase SAK\"}], \"rcsb_id\": \"4G7N_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:23.042267\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.3,
+            "experimentalMethod": null,
+            "depositionDate": "2012-07-20T00:00:00+0000",
+            "releaseDate": "2012-10-10T00:00:00+0000",
+            "sourceOrganism": [
+              "Drosophila melanogaster"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.3,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Drosophila melanogaster",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP",
+        "description": "Amino acid sequence for chain A (length: 225)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 225
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "GSHMDRISVPPLNTKRLLPTRYKTKNAIMSILRNGEVVLEFLKFRPTYNEDRINDICRISDDGQRIIIYQPDPGRGLPVREQPPDLQIPSGDCVYNYDNLPSKHWKKYIYGARFVGLVKSKTPKVTYFSTLGKCQLMETMTDFEIRFYSGAKLLKTPSEGLKVYDRNGMLLSDYSCSESRSLIEHGNECFTHCVNISNALEVAQTKDNSCFPVTIGRRPITDVQP",
+        "description": "Amino acid sequence for chain B (length: 225)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 225
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The structure of the plk4 cryptic polo box reveals two tandem polo boxes required for centriole duplication.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.str.2012.08.025",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 225",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4G7N_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4G7N_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4G7N",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2608.45,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 83,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "SAK",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.1120.120;3.30.1120.130",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF18190;PF18409",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 934.389999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1674.06,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.358216565393241,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.64178343460676,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4G7N_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2RGV_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2RGV_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2RGV",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2RGV",
+    "name": "Protein 2RGV",
+    "description": "Protein structure with PDB ID: 2RGV. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2RGV_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2RGV",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Bacillus subtilis",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1423",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1423"
+    },
+    "alternateName": [
+      "PDB 2RGV",
+      "Protein ID 2RGV"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2rgv_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2rgv.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2RGV",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2RGV",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2RGV_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "perR",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.10.10.10;3.30.1490.190",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01475",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2RGV\", \"structure_metadata\": {\"pdb_id\": \"2RGV\", \"resolution\": 2.05, \"deposition_date\": \"2007-10-05T00:00:00+0000\", \"release_date\": \"2008-10-14T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Bacillus subtilis\"], \"citation\": {\"title\": \"Structural and functional characterization of 2-oxo-histidine in oxidized PerR protein.\", \"doi\": \"10.1038/nchembio.133\", \"authors\": [\"Traore, D.A.\", \"El Ghazouani, A.\", \"Jacquamet, L.\", \"Borel, F.\", \"Ferrer, J.L.\", \"Lascoux, D.\", \"Ravanat, J.L.\", \"Jaquinod, M.\", \"Blondin, G.\", \"Caux-Thang, C.\", \"Duarte, V.\", \"Latour, J.M.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 41.25, \"b\": 42.7, \"c\": 53.02, \"alpha\": 82.05, \"beta\": 79.98, \"gamma\": 61.63}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\", \"B\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 157, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Bacillus subtilis\", \"sequence_length\": 157, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\", \"organism\": \"Bacillus subtilis\", \"taxonomy_id\": 1423, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 157, \"gene_name\": null, \"uniprot_ids\": [\"P71086\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 157.0, \"min_sequence_length\": 157, \"max_sequence_length\": 157}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\", \"pdbx_seq_one_letter_code_can\": \"MAAHELKEALETLKETGVRITPQRHAILEYLVNSMAHPTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSDHYHAICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"OHI\"], \"rcsb_sample_sequence_length\": 145, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1423\", \"pdbx_gene_src_scientific_name\": \"Bacillus subtilis\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 8.194, \"label\": \"Medium\", \"link\": \"http://pdbflex.org/cluster.html#!/2fe3B/7029/2rgvA\", \"max_rmsd\": 14.997, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 28790, \"identity\": 100}, {\"cluster_id\": 38711, \"identity\": 95}, {\"cluster_id\": 42776, \"identity\": 90}, {\"cluster_id\": 7686, \"identity\": 70}, {\"cluster_id\": 9241, \"identity\": 50}, {\"cluster_id\": 2040, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Bacillus natto\", \"Bacillus uniflagellatus\", \"Vibrio subtilis\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Bacillus subtilis\", \"ncbi_taxonomy_id\": 1423, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Bacillus subtilis\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillaeota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota corrig. Gibbons and Murray 2021\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillus/Clostridium group\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Clostridium group firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Low G+C firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"clostridial firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low G+C Gram-positive bacteria\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low GC Gram+\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Bacilli\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Bacillus/Lactobacillus/Streptococcus group\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Firmibacteria\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Bacillales\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Bacillus/Staphylococcus group\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Caryophanales\"}, {\"depth\": 7, \"id\": \"186817\", \"name\": \"Bacillaceae\"}, {\"depth\": 8, \"id\": \"1386\", \"name\": \"Bacillus\"}, {\"depth\": 8, \"id\": \"1386\", \"name\": \"Bacillus rRNA group 1\"}, {\"depth\": 9, \"id\": \"653685\", \"name\": \"Bacillus subtilis group\"}, {\"depth\": 10, \"id\": \"1423\", \"name\": \"Bacillus subtilis\"}, {\"depth\": 10, \"id\": \"1423\", \"name\": \"Bacillus natto\"}, {\"depth\": 10, \"id\": \"1423\", \"name\": \"Bacillus uniflagellatus\"}, {\"depth\": 10, \"id\": \"1423\", \"name\": \"Vibrio subtilis\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"483913:peroxide_responsive_transcriptional_repressor_perr\", \"name\": \"peroxide-responsive transcriptional repressor PerR\"}, {\"depth\": 0, \"id\": \"72361\", \"name\": \"Bacillus vallismortis\"}, {\"depth\": 1, \"id\": \"224308:transcriptional_regulator_fur_family\", \"name\": \"transcriptional regulator (Fur family)\"}, {\"depth\": 1, \"id\": \"1052585:peroxide_responsive_transcriptional_repressor_perr\", \"name\": \"peroxide-responsive transcriptional repressor PerR\"}, {\"depth\": 1, \"id\": \"72361:peroxide_responsive_transcriptional_repressor_perr\", \"name\": \"peroxide-responsive transcriptional repressor PerR\"}, {\"depth\": 0, \"id\": \"1052585\", \"name\": \"Bacillus spizizenii TU-B-10\"}, {\"depth\": 1, \"id\": \"2054641:peroxide_responsive_transcriptional_repressor_perr\", \"name\": \"peroxide-responsive transcriptional repressor PerR\"}, {\"depth\": 0, \"id\": \"224308\", \"name\": \"Bacillus subtilis subsp. subtilis str. 168\"}, {\"depth\": 1, \"id\": \"703612:peroxide_responsive_transcriptional_repressor_perr\", \"name\": \"peroxide-responsive transcriptional repressor PerR\"}, {\"depth\": 0, \"id\": \"703612\", \"name\": \"Bacillus subtilis subsp. spizizenii ATCC 6633 = JCM 2499\"}, {\"depth\": 0, \"id\": \"483913\", \"name\": \"Bacillus inaquosorum\"}, {\"depth\": 0, \"id\": \"2054641\", \"name\": \"Bacillus stercoris\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 16.487, \"pdbx_description\": \"Peroxide operon regulator\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Peroxide operon regulator\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Peroxide operon regulator\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P71086\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01475\", \"assignment_version\": \"34.0\", \"name\": \"Ferric uptake regulator family (FUR)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0045892\", \"name\": \"negative regulation of DNA-templated transcription\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:1902679\", \"name\": \"negative regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0051252\", \"name\": \"regulation of RNA metabolic process\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0045934\", \"name\": \"negative regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0019219\", \"name\": \"regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:2001141\", \"name\": \"regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0010605\", \"name\": \"negative regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0009889\", \"name\": \"regulation of biosynthetic process\"}, {\"id\": \"GO:0045892\", \"name\": \"negative regulation of DNA-templated transcription\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0009892\", \"name\": \"negative regulation of metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0010468\", \"name\": \"regulation of gene expression\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0009890\", \"name\": \"negative regulation of biosynthetic process\"}, {\"id\": \"GO:0010558\", \"name\": \"negative regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0010556\", \"name\": \"regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0006355\", \"name\": \"regulation of DNA-templated transcription\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0051253\", \"name\": \"negative regulation of RNA metabolic process\"}]}, {\"annotation_id\": \"IPR043135\", \"name\": \"Ferric-uptake regulator, C-terminal domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR043135\", \"name\": \"Ferric-uptake regulator, C-terminal domain\"}]}, {\"annotation_id\": \"GO:0000976\", \"name\": \"transcription cis-regulatory region binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003677\", \"name\": \"DNA binding\"}, {\"id\": \"GO:0043565\", \"name\": \"sequence-specific DNA binding\"}, {\"id\": \"GO:1990837\", \"name\": \"sequence-specific double-stranded DNA binding\"}, {\"id\": \"GO:0000976\", \"name\": \"transcription cis-regulatory region binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003690\", \"name\": \"double-stranded DNA binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0001067\", \"name\": \"transcription regulatory region nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR036388\", \"name\": \"Winged helix-like DNA-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036388\", \"name\": \"Winged helix-like DNA-binding domain superfamily\"}]}, {\"annotation_id\": \"IPR036390\", \"name\": \"Winged helix DNA-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036390\", \"name\": \"Winged helix DNA-binding domain superfamily\"}]}, {\"annotation_id\": \"IPR002481\", \"name\": \"Ferric-uptake regulator\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR002481\", \"name\": \"Ferric-uptake regulator\"}]}, {\"annotation_id\": \"GO:0032993\", \"name\": \"protein-DNA complex\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0032993\", \"name\": \"protein-DNA complex\"}]}, {\"annotation_id\": \"GO:0001216\", \"name\": \"DNA-binding transcription activator activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0140110\", \"name\": \"transcription regulator activity\"}, {\"id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0001216\", \"name\": \"DNA-binding transcription activator activity\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0140110\", \"name\": \"transcription regulator activity\"}, {\"id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0008270\", \"name\": \"zinc ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0008270\", \"name\": \"zinc ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:1900376\", \"name\": \"regulation of secondary metabolite biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009889\", \"name\": \"regulation of biosynthetic process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:1900376\", \"name\": \"regulation of secondary metabolite biosynthetic process\"}, {\"id\": \"GO:0019748\", \"name\": \"secondary metabolic process\"}, {\"id\": \"GO:0043455\", \"name\": \"regulation of secondary metabolic process\"}, {\"id\": \"GO:0044550\", \"name\": \"secondary metabolite biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}]}, {\"annotation_id\": \"GO:0001217\", \"name\": \"DNA-binding transcription repressor activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0140110\", \"name\": \"transcription regulator activity\"}, {\"id\": \"GO:0001217\", \"name\": \"DNA-binding transcription repressor activity\"}, {\"id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"OHI\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"OHI\"], \"entity_id\": \"1\", \"entry_id\": \"2RGV\", \"rcsb_id\": \"2RGV_1\", \"uniprot_ids\": [\"P71086\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P71086\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01475\", \"name\": \"Ferric uptake regulator family (FUR)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 15, \"end_seq_id\": 133}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer HIS\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 37}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"HIS\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"Parent monomer HIS\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 91}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"HIS\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"Parent monomer HIS\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 93}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"HIS\"]}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.33, -0.12, -0.71, -0.99, -0.21, -0.26, -1.07, -0.71, -0.37, -0.1, -1.02, -0.13, -0.13, -0.73, -0.69, -0.8, -1.08, -0.83, -0.8, 0.12, -0.77, -0.83, -0.23, 0.62, 0.73, 1.0, 1.01, 0.71, -0.07, 0.14, 0.21, -0.01, -0.87, -0.87, -0.28, -0.63, -1.27, -0.71, -0.11, -0.42, -0.67, -0.71, -0.01, -0.69, -0.93, -0.29, -0.58, -0.53, 0.06, 0.02, 0.92, 0.47, 0.26, 0.26, 0.47, 0.06, 0.06, 0.17, -0.26, -1.11, -1.06, -0.71, 0.1, 0.14, 0.21, -0.64, -0.53, -0.11, 0.13, 0.18, -0.17, -0.39, -0.94, -0.6, -0.71, -0.82, -1.13, -0.68, -0.17, 0.14, -0.14, -0.44, -0.71, -0.36, -1.02, -0.43, -0.24, -0.43, -0.74, -1.04, -0.38, -0.07, -0.36, 0.5, 0.77, -0.12, -0.09, -0.06, 0.19, -0.27, -0.27, 0.59, -0.3, -1.16, -0.3, -1.0, -1.03, -0.47, -0.09, 0.16, -0.62, 0.23, 0.54, 0.03, 0.73, 0.69, 0.73, 0.44, -0.11, -0.11, -1.08, -0.58, -0.92, -0.73, -0.44, -0.96, -0.4, 0.23, 0.2, 0.31, 0.17, 0.47, -0.47, -0.76, -1.1, -1.96, -2.59]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.32, 0.33, 0.33, 0.33, 0.33, 0.34, 0.35, 0.35, 0.36, 0.37, 0.38, 0.4, 0.41, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.4, 0.4, 0.41, 0.42, 0.42, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.39, 0.38, 0.38, 0.37, 0.37, 0.35, 0.35, 0.34, 0.33, 0.32, 0.32, 0.32, 0.32, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.29, 0.28, 0.27, 0.27, 0.26, 0.25, 0.24, 0.23, 0.23, 0.23, 0.23, 0.24, 0.23, 0.23, 0.22, 0.2, 0.18, 0.16, 0.15, 0.13, 0.12, 0.1, 0.09, 0.09, 0.09, 0.09, 0.11, 0.13, 0.15, 0.18, 0.2, 0.24, 0.27, 0.31, 0.33, 0.35, 0.37, 0.37, 0.36, 0.36, 0.35, 0.34, 0.34, 0.33, 0.32, 0.31, 0.31, 0.29, 0.3, 0.3, 0.3, 0.31, 0.3, 0.28, 0.26, 0.23, 0.2, 0.17, 0.14, 0.11, 0.09, 0.07, 0.05, 0.05, 0.04, 0.04, 0.05, 0.05, 0.05, 0.05, 0.05, 0.06]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.87, 0.85, 0.74, 0.71, 0.68, 0.65, 0.62, 0.51, 0.47, 0.35, 0.31, 0.35, 0.38, 0.39, 0.39, 0.35, 0.36, 0.3, 0.3, 0.25, 0.26, 0.19, 0.19, 0.26, 0.22, 0.18, 0.18, 0.2, 0.26, 0.23, 0.31, 0.32, 0.2, 0.13, 0.14, 0.11, 0.08, 0.13, 0.18, 0.17, 0.14, 0.22, 0.29, 0.24, 0.23, 0.21, 0.21, 0.2, 0.13, 0.09, 0.11, 0.11, 0.06, 0.11, 0.12, 0.07, 0.08, 0.14, 0.13, 0.13, 0.09, 0.11, 0.09, 0.1, 0.08, 0.08, 0.07, 0.09, 0.09, 0.1, 0.15, 0.14, 0.13, 0.12, 0.12, 0.1, 0.12, 0.12, 0.11, 0.12, 0.11, 0.12, 0.15, 0.13, 0.08, 0.06, 0.07, 0.12, 0.06, 0.06, 0.07, 0.05, 0.04, 0.04, 0.04, 0.04, 0.04, 0.07, 0.07, 0.04, 0.04, 0.05, 0.05, 0.06, 0.07, 0.07, 0.12, 0.08, 0.08, 0.1, 0.1, 0.1, 0.09, 0.12, 0.08, 0.15, 0.15, 0.22, 0.18, 0.13, 0.21, 0.15, 0.1, 0.14, 0.1, 0.05, 0.08, 0.1, 0.05, 0.06, 0.08, 0.09, 0.09, 0.15, 0.15, 0.24, 0.28, 0.33, 0.38, 0.42, 0.54, 0.57, 0.67, 0.76, 0.8]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.82069, \"type\": \"Pfam\"}, {\"count\": 3, \"coverage\": 0.02069, \"type\": \"modified_monomer\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"38711_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2040_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 35, \"ref_beg_seq_id\": 12}, {\"entity_beg_seq_id\": 36, \"length\": 15, \"ref_beg_seq_id\": 50}, {\"entity_beg_seq_id\": 51, \"length\": 39, \"ref_beg_seq_id\": 67}, {\"entity_beg_seq_id\": 90, \"length\": 56, \"ref_beg_seq_id\": 110}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"28790_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P71086\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"42776_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7686_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 7}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"9241_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 145, \"ref_beg_seq_id\": 7}]}], \"rcsb_id\": \"2RGV_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:39:06.074033\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.05,
+            "experimentalMethod": null,
+            "depositionDate": "2007-10-05T00:00:00+0000",
+            "releaseDate": "2008-10-14T00:00:00+0000",
+            "sourceOrganism": [
+              "Bacillus subtilis"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.05,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Bacillus subtilis",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH",
+        "description": "Amino acid sequence for chain A (length: 157)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 157
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MAAHELKEALETLKETGVRITPQRHAILEYLVNSMA(OHI)PTADDIYKALEGKFPNMSVATVYNNLRVFRESGLVKELTYGDASSRFDFVTSD(OHI)Y(OHI)AICENCGKIVDFHYPGLDEVEQLAAHVTGFKVSHHRLEIYGVCQECSKKENH",
+        "description": "Amino acid sequence for chain B (length: 157)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 157
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural and functional characterization of 2-oxo-histidine in oxidized PerR protein.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/nchembio.133",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 157",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2RGV_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 3,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4RB0_7",
+          "4RAY_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2RGV_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2RGV",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3334.14,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 113,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "perR",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.10.10.10;3.30.1490.190",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01475",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1030.55,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 2303.6,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.309090200171559,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.690912799102617,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Comments",
+      "value": "physio after curation",
+      "description": "Additional comments about the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2RGV_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 3,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4RB0_7",
+        "4RAY_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

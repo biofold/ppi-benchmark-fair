@@ -1,0 +1,382 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2WS2_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2WS2_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2WS2",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2WS2",
+    "name": "Protein 2WS2",
+    "description": "Protein structure with PDB ID: 2WS2. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2WS2_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2WS2",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Haemonchus contortus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "6289",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6289"
+    },
+    "alternateName": [
+      "PDB 2WS2",
+      "Protein ID 2WS2"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2ws2_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2ws2.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2WS2",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2WS2",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2WS2_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.20.1050.10;3.40.30.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02798;PF14497",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2WS2\", \"structure_metadata\": {\"pdb_id\": \"2WS2\", \"resolution\": 2.01, \"deposition_date\": \"2009-09-03T00:00:00+0000\", \"release_date\": \"2010-09-29T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Haemonchus contortus\"], \"citation\": {\"title\": \"The 2 Angstrom Structure of a Nu-Class Gst from Haemonchus Contortus\", \"authors\": [\"Line, K.\", \"Isupov, M.N.\", \"Vanrossum, A.J.\", \"Brophy, P.M.\", \"Littlechild, J.A.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 47.216, \"b\": 101.382, \"c\": 47.17, \"alpha\": 90.0, \"beta\": 100.46, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\", \"B\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Haemonchus contortus\", \"sequence_length\": 204, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Haemonchus contortus\", \"sequence_length\": 204, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\", \"organism\": \"Haemonchus contortus\", \"taxonomy_id\": 6289, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 204, \"gene_name\": null, \"uniprot_ids\": [\"Q9NAW7\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 204.0, \"min_sequence_length\": 204, \"max_sequence_length\": 204}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\", \"pdbx_seq_one_letter_code_can\": \"MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 204, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"6289\", \"pdbx_gene_src_scientific_name\": \"HAEMONCHUS CONTORTUS\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"ESCHERICHIA COLI\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector\": \"PET23D\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.227, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/2ws2A/10202/2ws2A\", \"max_rmsd\": 1.227, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 190347, \"identity\": 100}, {\"cluster_id\": 206467, \"identity\": 95}, {\"cluster_id\": 213719, \"identity\": 90}, {\"cluster_id\": 85589, \"identity\": 70}, {\"cluster_id\": 10922, \"identity\": 50}, {\"cluster_id\": 1011, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"ESCHERICHIA COLI\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"barber pole worm\", \"red stomach worm\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Haemonchus contortus\", \"ncbi_taxonomy_id\": 6289, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"HAEMONCHUS CONTORTUS\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33317\", \"name\": \"Protostomia\"}, {\"depth\": 8, \"id\": \"1206794\", \"name\": \"Ecdysozoa\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"Nematoda\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"Nemata\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"nematode\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"nematodes\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"roundworm\"}, {\"depth\": 9, \"id\": \"6231\", \"name\": \"roundworms\"}, {\"depth\": 10, \"id\": \"119089\", \"name\": \"Chromadorea\"}, {\"depth\": 10, \"id\": \"119089\", \"name\": \"Adenophorea\"}, {\"depth\": 11, \"id\": \"6236\", \"name\": \"Rhabditida\"}, {\"depth\": 11, \"id\": \"6236\", \"name\": \"Strongylida\"}, {\"depth\": 12, \"id\": \"2301116\", \"name\": \"Rhabditina\"}, {\"depth\": 13, \"id\": \"2301119\", \"name\": \"Rhabditomorpha\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Strongyloidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Ancylostomatoidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Diaphanocephaloidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Heligmosomoidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Metastrongyloidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"Trichostrongyloidea\"}, {\"depth\": 14, \"id\": \"27829\", \"name\": \"lungworms\"}, {\"depth\": 15, \"id\": \"6315\", \"name\": \"Trichostrongylidae\"}, {\"depth\": 15, \"id\": \"6315\", \"name\": \"Cooperiidae\"}, {\"depth\": 16, \"id\": \"6288\", \"name\": \"Haemonchus\"}, {\"depth\": 17, \"id\": \"6289\", \"name\": \"Haemonchus contortus\"}, {\"depth\": 17, \"id\": \"6289\", \"name\": \"barber pole worm\"}, {\"depth\": 17, \"id\": \"6289\", \"name\": \"red stomach worm\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 23.493, \"pdbx_description\": \"GLUTATHIONE S-TRANSFERASE\", \"pdbx_ec\": \"2.5.1.18\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"2\", \"name\": \"Transferases\"}, {\"depth\": 2, \"id\": \"2.5\", \"name\": \"Transferring alkyl or aryl groups, other than methyl groups\"}, {\"depth\": 3, \"id\": \"2.5.1\", \"name\": \"Transferring alkyl or aryl groups, other than methyl groups (only sub-subclass identified to date)\"}, {\"depth\": 4, \"id\": \"2.5.1.18\", \"name\": \"glutathione transferase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"GLUTATHIONE S-TRANSFERASE\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"NU-CLASS GST\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"2.5.1.18\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"glutathione transferase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q9NAW7\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 204, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF14497\", \"assignment_version\": \"34.0\", \"name\": \"Glutathione S-transferase, C-terminal domain (GST_C_3)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF02798\", \"assignment_version\": \"34.0\", \"name\": \"Glutathione S-transferase, N-terminal domain (GST_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0004364\", \"name\": \"glutathione transferase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004364\", \"name\": \"glutathione transferase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0016765\", \"name\": \"transferase activity, transferring alkyl or aryl (other than methyl) groups\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR004046\", \"name\": \"Glutathione S-transferase, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\"}, {\"depth\": 2, \"id\": \"IPR004046\", \"name\": \"Glutathione S-transferase, C-terminal\"}]}, {\"annotation_id\": \"IPR050213\", \"name\": \"Glutathione S-transferase superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR050213\", \"name\": \"Glutathione S-transferase superfamily\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\"}]}, {\"annotation_id\": \"GO:0006749\", \"name\": \"glutathione metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006749\", \"name\": \"glutathione metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006575\", \"name\": \"modified amino acid metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006790\", \"name\": \"sulfur compound metabolic process\"}, {\"id\": \"GO:0043603\", \"name\": \"amide metabolic process\"}]}, {\"annotation_id\": \"IPR036282\", \"name\": \"Glutathione S-transferase, C-terminal domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036282\", \"name\": \"Glutathione S-transferase, C-terminal domain superfamily\"}]}, {\"annotation_id\": \"IPR004045\", \"name\": \"Glutathione S-transferase, N-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR004045\", \"name\": \"Glutathione S-transferase, N-terminal\"}]}, {\"annotation_id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\"}]}, {\"annotation_id\": \"GO:0004602\", \"name\": \"glutathione peroxidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004601\", \"name\": \"peroxidase activity\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0016209\", \"name\": \"antioxidant activity\"}, {\"id\": \"GO:0016684\", \"name\": \"oxidoreductase activity, acting on peroxide as acceptor\"}, {\"id\": \"GO:0004602\", \"name\": \"glutathione peroxidase activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"2WS2\", \"rcsb_id\": \"2WS2_1\", \"uniprot_ids\": [\"Q9NAW7\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q9NAW7\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.9951219512195122}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF14497\", \"name\": \"Glutathione S-transferase, C-terminal domain (GST_C_3)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 96, \"end_seq_id\": 199}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF02798\", \"name\": \"Glutathione S-transferase, N-terminal domain (GST_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 4, \"end_seq_id\": 73}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.26, -0.34, -0.86, -1.0, -0.9, -0.27, -0.49, -0.8, -0.16, 0.03, -0.08, -0.42, 0.54, 0.9, 1.17, 1.39, 1.98, 1.43, 0.54, 0.66, 0.9, 0.04, -0.66, -0.66, -1.58, -1.36, -1.39, -1.36, -1.36, -1.6, -1.31, -1.1, -2.0, -1.86, -2.71, -2.43, -2.17, -1.57, -1.36, -0.94, -0.81, -0.77, 0.01, 0.27, 0.53, 1.04, 0.44, 1.09, 0.39, 0.39, 0.34, -0.47, 0.13, -0.51, -1.32, -1.02, -1.02, -0.43, 0.11, 1.01, 0.9, 0.33, 0.93, 1.52, 1.11, 0.21, 0.32, -0.22, -0.83, -0.13, -0.03, -0.89, -1.18, -0.48, -0.14, -0.84, -1.19, -0.84, -0.58, -0.07, -0.02, -0.02, 0.28, 0.58, 0.58, 0.58, 0.69, -0.21, -1.07, -0.37, 0.14, -0.74, -1.33, -0.48, -0.59, -1.08, -0.79, -0.09, -0.83, -0.79, 0.02, 0.83, 0.32, 1.03, 0.82, 0.58, 0.22, 0.27, 0.22, -0.63, -0.86, -0.39, -0.99, -1.03, -1.03, -0.52, 0.18, -0.63, -0.38, -0.38, -1.3, -1.3, -1.3, -0.6, -0.76, -1.14, -0.26, 0.39, 0.11, 0.18, 1.07, 1.92, 1.18, 0.48, 0.17, -0.77, -1.31, -1.28, -0.99, -1.07, -1.02, -0.63, -0.63, -0.33, 0.52, 0.52, 0.88, 1.22, 0.41, 0.37, 0.27, 1.12, 1.41, 0.6, 0.89, 0.53, 0.64, 0.96, 0.14, -0.07, -0.68, -1.06, -1.1, -0.89, -0.99, -1.69, -1.66, -0.96, -0.78, -1.02, -0.38, -0.38, -0.6, -0.81, -0.22, -0.57, -1.31, -0.67, -0.78, -1.33, -1.29, -1.67, -1.74, -1.52, -1.57, -1.57, -2.13, -1.13, -1.43, -1.12, -1.44, -1.19, -1.41, -1.07, -1.07, -0.66]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.26, 0.27, 0.28, 0.28, 0.29, 0.3, 0.31, 0.32, 0.33, 0.33, 0.33, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.26, 0.27, 0.27, 0.28, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.28, 0.27, 0.26, 0.25, 0.24, 0.24, 0.23, 0.23, 0.23, 0.23, 0.22, 0.22, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.22, 0.21, 0.21, 0.21, 0.21, 0.2, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.2, 0.2, 0.19, 0.17, 0.16, 0.14, 0.14, 0.14, 0.13, 0.13, 0.12, 0.12, 0.11, 0.11, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.12, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.1, 0.1, 0.09, 0.09, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.16, 0.18, 0.21, 0.23, 0.25, 0.26, 0.28, 0.3, 0.32, 0.32, 0.34, 0.34, 0.34, 0.35, 0.34, 0.34, 0.33, 0.32, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.26, 0.25, 0.25, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.27, 0.26, 0.26, 0.26, 0.27, 0.27, 0.27, 0.27, 0.27, 0.28, 0.29, 0.29, 0.3, 0.31, 0.32, 0.33, 0.34, 0.35, 0.35, 0.36, 0.37, 0.37, 0.38]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.57, 0.52, 0.48, 0.4, 0.33, 0.29, 0.18, 0.09, 0.07, 0.05, 0.03, 0.03, 0.03, 0.02, 0.03, 0.03, 0.06, 0.06, 0.06, 0.12, 0.13, 0.09, 0.09, 0.05, 0.07, 0.09, 0.09, 0.15, 0.15, 0.18, 0.16, 0.21, 0.29, 0.32, 0.4, 0.39, 0.41, 0.31, 0.31, 0.41, 0.33, 0.35, 0.35, 0.29, 0.37, 0.31, 0.31, 0.31, 0.29, 0.39, 0.28, 0.31, 0.32, 0.32, 0.28, 0.25, 0.21, 0.13, 0.2, 0.13, 0.07, 0.1, 0.07, 0.1, 0.09, 0.09, 0.08, 0.06, 0.06, 0.06, 0.05, 0.06, 0.03, 0.03, 0.03, 0.04, 0.03, 0.03, 0.05, 0.05, 0.05, 0.06, 0.08, 0.09, 0.05, 0.09, 0.09, 0.09, 0.06, 0.06, 0.07, 0.05, 0.06, 0.12, 0.07, 0.04, 0.05, 0.05, 0.05, 0.03, 0.03, 0.04, 0.05, 0.05, 0.05, 0.1, 0.06, 0.05, 0.08, 0.07, 0.08, 0.07, 0.11, 0.07, 0.03, 0.05, 0.12, 0.1, 0.15, 0.22, 0.29, 0.2, 0.16, 0.15, 0.09, 0.05, 0.05, 0.08, 0.05, 0.04, 0.06, 0.06, 0.06, 0.06, 0.09, 0.15, 0.09, 0.04, 0.04, 0.03, 0.03, 0.04, 0.04, 0.06, 0.04, 0.05, 0.08, 0.05, 0.03, 0.04, 0.05, 0.06, 0.04, 0.04, 0.02, 0.02, 0.03, 0.04, 0.05, 0.09, 0.08, 0.05, 0.03, 0.05, 0.06, 0.06, 0.09, 0.09, 0.1, 0.15, 0.18, 0.21, 0.18, 0.22, 0.23, 0.26, 0.27, 0.25, 0.25, 0.35, 0.33, 0.28, 0.36, 0.44, 0.35, 0.3, 0.38, 0.35, 0.35, 0.42, 0.41, 0.44, 0.45, 0.41, 0.45, 0.49, 0.58, 0.62, 0.66, 0.69, 0.71, 0.75, 0.84, 0.87]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 2, \"coverage\": 0.85294, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q9NAW7\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 204, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"206467_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 204, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1011_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 36, \"ref_beg_seq_id\": 69}, {\"entity_beg_seq_id\": 37, \"length\": 4, \"ref_beg_seq_id\": 114}, {\"entity_beg_seq_id\": 41, \"length\": 4, \"ref_beg_seq_id\": 122}, {\"entity_beg_seq_id\": 45, \"length\": 12, \"ref_beg_seq_id\": 128}, {\"entity_beg_seq_id\": 57, \"length\": 3, \"ref_beg_seq_id\": 141}, {\"entity_beg_seq_id\": 60, \"length\": 41, \"ref_beg_seq_id\": 149}, {\"entity_beg_seq_id\": 101, \"length\": 4, \"ref_beg_seq_id\": 191}, {\"entity_beg_seq_id\": 105, \"length\": 6, \"ref_beg_seq_id\": 196}, {\"entity_beg_seq_id\": 111, \"length\": 3, \"ref_beg_seq_id\": 203}, {\"entity_beg_seq_id\": 114, \"length\": 29, \"ref_beg_seq_id\": 208}, {\"entity_beg_seq_id\": 143, \"length\": 1, \"ref_beg_seq_id\": 238}, {\"entity_beg_seq_id\": 144, \"length\": 20, \"ref_beg_seq_id\": 241}, {\"entity_beg_seq_id\": 164, \"length\": 5, \"ref_beg_seq_id\": 263}, {\"entity_beg_seq_id\": 169, \"length\": 10, \"ref_beg_seq_id\": 275}, {\"entity_beg_seq_id\": 179, \"length\": 6, \"ref_beg_seq_id\": 286}, {\"entity_beg_seq_id\": 185, \"length\": 20, \"ref_beg_seq_id\": 293}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"85589_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 164, \"length\": 41, \"ref_beg_seq_id\": 166}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"10922_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 44, \"ref_beg_seq_id\": 13}, {\"entity_beg_seq_id\": 45, \"length\": 119, \"ref_beg_seq_id\": 59}, {\"entity_beg_seq_id\": 164, \"length\": 5, \"ref_beg_seq_id\": 180}, {\"entity_beg_seq_id\": 169, \"length\": 36, \"ref_beg_seq_id\": 192}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"213719_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 204, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"190347_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 204, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"NU-CLASS GST\"}], \"rcsb_id\": \"2WS2_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:39:13.412330\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.01,
+            "experimentalMethod": null,
+            "depositionDate": "2009-09-03T00:00:00+0000",
+            "releaseDate": "2010-09-29T00:00:00+0000",
+            "sourceOrganism": [
+              "Haemonchus contortus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.01,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Haemonchus contortus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF",
+        "description": "Amino acid sequence for chain A (length: 204)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 204
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MVHYKLTYFNGRGAAEIIRQVFVLAGQDYEDVRLTHEEWPKHKASMPFGQLPVLEVDGKQLPQSVAIVRYLARKFGYAGKSAWEEAVVDSIADQFKDFLNEVRPYFKVLLGMDQGDLKALEKDVFEPARQKFFTIVTKILKENKTGYLVGDSLTFADLYVAEMGFTEHYPKLYDGFPEVKAHAEKVRSNPKLKKWIETRPASKF",
+        "description": "Amino acid sequence for chain B (length: 204)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 204
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The 2 Angstrom Structure of a Nu-Class Gst from Haemonchus Contortus",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 204",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5AN1_5",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 4,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5AN1_5",
+          "6GSU_1",
+          "1Q4J_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2WS2_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2WS2",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2257.19,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 69,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.20.1050.10;3.40.30.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02798;PF14497",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 865.299999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1391.89,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.383352752758961,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.616647247241037,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5AN1_5",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 4,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5AN1_5",
+        "6GSU_1",
+        "1Q4J_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

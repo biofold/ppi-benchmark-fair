@@ -1,0 +1,409 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1ERV_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1ERV_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1ERV",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1ERV",
+    "name": "Protein 1ERV",
+    "description": "Protein structure with PDB ID: 1ERV. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1ERV_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1ERV",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 1ERV",
+      "Protein ID 1ERV"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1erv_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1erv.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1ERV",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1ERV",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1ERV_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "TXN",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.30.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00085",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1ERV\", \"structure_metadata\": {\"pdb_id\": \"1ERV\", \"resolution\": 1.65, \"deposition_date\": \"1996-02-07T00:00:00+0000\", \"release_date\": \"1996-10-14T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Crystal structures of reduced, oxidized, and mutated human thioredoxins: evidence for a regulatory homodimer.\", \"doi\": \"10.1016/S0969-2126(96)00079-2\", \"authors\": [\"Weichsel, A.\", \"Gasdaska, J.R.\", \"Powis, G.\", \"Montfort, W.R.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 67.8, \"b\": 26.33, \"c\": 51.54, \"alpha\": 90.0, \"beta\": 95.04, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 105, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 105, \"gene_name\": null, \"uniprot_ids\": [\"P10599\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 105.0, \"min_sequence_length\": 105, \"max_sequence_length\": 105}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV\", \"pdbx_seq_one_letter_code_can\": \"MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 1, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 105, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"human\", \"gene_src_genus\": \"Homo\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"9606\", \"pdbx_gene_src_scientific_name\": \"Homo sapiens\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 2.115, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/4pomA/24047/1ervA\", \"max_rmsd\": 6.847, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 84644, \"identity\": 100}, {\"cluster_id\": 1854, \"identity\": 95}, {\"cluster_id\": 1599, \"identity\": 90}, {\"cluster_id\": 2392, \"identity\": 70}, {\"cluster_id\": 2520, \"identity\": 50}, {\"cluster_id\": 2806, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"human\", \"ncbi_common_names\": [\"human\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Homo sapiens\", \"ncbi_taxonomy_id\": 9606, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Homo sapiens\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"Mammalia\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"mammals\"}, {\"depth\": 19, \"id\": \"32525\", \"name\": \"Theria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Eutheria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Placentalia\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"eutherian mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placental mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placentals\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreoeutheria\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreotheria\"}, {\"depth\": 22, \"id\": \"314146\", \"name\": \"Euarchontoglires\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primates\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primata\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primate\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primates\"}, {\"depth\": 24, \"id\": \"376913\", \"name\": \"Haplorrhini\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Simiiformes\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Anthropoidea\"}, {\"depth\": 26, \"id\": \"9526\", \"name\": \"Catarrhini\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"Hominoidea\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"ape\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"apes\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Hominidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Pongidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"great apes\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homininae\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homo/Pan/Gorilla group\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"Homo\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"humans\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"human\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 2, \"id\": \"9606:9:thioredoxin\", \"name\": \"thioredoxin\"}, {\"depth\": 1, \"id\": \"9606:9\", \"name\": \"Chromosome 9\"}], \"rcsb_polymer_entity\": {\"details\": \"ACTIVE SITE CYSTEINES 32 AND 35 IN REDUCED FORM\", \"formula_weight\": 11.734, \"pdbx_description\": \"THIOREDOXIN\", \"pdbx_mutation\": \"C73S\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"THIOREDOXIN\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Thioredoxin\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P10599\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 105, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00085\", \"assignment_version\": \"34.0\", \"name\": \"Thioredoxin (Thioredoxin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0043388\", \"name\": \"positive regulation of DNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0065009\", \"name\": \"regulation of molecular function\"}, {\"id\": \"GO:0044093\", \"name\": \"positive regulation of molecular function\"}, {\"id\": \"GO:0051101\", \"name\": \"regulation of DNA binding\"}, {\"id\": \"GO:0051098\", \"name\": \"regulation of binding\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0051099\", \"name\": \"positive regulation of binding\"}, {\"id\": \"GO:0043388\", \"name\": \"positive regulation of DNA binding\"}]}, {\"annotation_id\": \"GO:2000170\", \"name\": \"positive regulation of peptidyl-cysteine S-nitrosylation\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0031399\", \"name\": \"regulation of protein modification process\"}, {\"id\": \"GO:0051247\", \"name\": \"positive regulation of protein metabolic process\"}, {\"id\": \"GO:0048518\", \"name\": \"positive regulation of biological process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:2000170\", \"name\": \"positive regulation of peptidyl-cysteine S-nitrosylation\"}, {\"id\": \"GO:0009893\", \"name\": \"positive regulation of metabolic process\"}, {\"id\": \"GO:0031401\", \"name\": \"positive regulation of protein modification process\"}, {\"id\": \"GO:0018193\", \"name\": \"peptidyl-amino acid modification\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0010604\", \"name\": \"positive regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0036211\", \"name\": \"protein modification process\"}, {\"id\": \"GO:0048522\", \"name\": \"positive regulation of cellular process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0018198\", \"name\": \"peptidyl-cysteine modification\"}, {\"id\": \"GO:0051246\", \"name\": \"regulation of protein metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0018119\", \"name\": \"peptidyl-cysteine S-nitrosylation\"}, {\"id\": \"GO:2000169\", \"name\": \"regulation of peptidyl-cysteine S-nitrosylation\"}, {\"id\": \"GO:0043412\", \"name\": \"macromolecule modification\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0017014\", \"name\": \"protein nitrosylation\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}]}, {\"annotation_id\": \"GO:0004791\", \"name\": \"thioredoxin-disulfide reductase (NADPH) activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004791\", \"name\": \"thioredoxin-disulfide reductase (NADPH) activity\"}, {\"id\": \"GO:0047134\", \"name\": \"protein-disulfide reductase [NAD(P)H] activity\"}, {\"id\": \"GO:0016667\", \"name\": \"oxidoreductase activity, acting on a sulfur group of donors\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0015036\", \"name\": \"disulfide oxidoreductase activity\"}, {\"id\": \"GO:0016209\", \"name\": \"antioxidant activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0015035\", \"name\": \"protein-disulfide reductase activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0016668\", \"name\": \"oxidoreductase activity, acting on a sulfur group of donors, NAD(P) as acceptor\"}]}, {\"annotation_id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\"}, {\"id\": \"GO:0046983\", \"name\": \"protein dimerization activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0005576\", \"name\": \"extracellular region\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}]}, {\"annotation_id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\"}, {\"id\": \"GO:0019725\", \"name\": \"cellular homeostasis\"}, {\"id\": \"GO:0042592\", \"name\": \"homeostatic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0046826\", \"name\": \"negative regulation of protein export from nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051224\", \"name\": \"negative regulation of protein transport\"}, {\"id\": \"GO:0032879\", \"name\": \"regulation of localization\"}, {\"id\": \"GO:0045184\", \"name\": \"establishment of protein localization\"}, {\"id\": \"GO:0046823\", \"name\": \"negative regulation of nucleocytoplasmic transport\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0006913\", \"name\": \"nucleocytoplasmic transport\"}, {\"id\": \"GO:0051169\", \"name\": \"nuclear transport\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0090317\", \"name\": \"negative regulation of intracellular protein transport\"}, {\"id\": \"GO:0051051\", \"name\": \"negative regulation of transport\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0051649\", \"name\": \"establishment of localization in cell\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}, {\"id\": \"GO:0051168\", \"name\": \"nuclear export\"}, {\"id\": \"GO:0046825\", \"name\": \"regulation of protein export from nucleus\"}, {\"id\": \"GO:0032386\", \"name\": \"regulation of intracellular transport\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:1904950\", \"name\": \"negative regulation of establishment of protein localization\"}, {\"id\": \"GO:0046907\", \"name\": \"intracellular transport\"}, {\"id\": \"GO:0046822\", \"name\": \"regulation of nucleocytoplasmic transport\"}, {\"id\": \"GO:0034504\", \"name\": \"protein localization to nucleus\"}, {\"id\": \"GO:0006611\", \"name\": \"protein export from nucleus\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0051235\", \"name\": \"maintenance of location\"}, {\"id\": \"GO:0033157\", \"name\": \"regulation of intracellular protein transport\"}, {\"id\": \"GO:0006886\", \"name\": \"intracellular protein transport\"}, {\"id\": \"GO:0045185\", \"name\": \"maintenance of protein location\"}, {\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0032880\", \"name\": \"regulation of protein localization\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0051651\", \"name\": \"maintenance of location in cell\"}, {\"id\": \"GO:0032507\", \"name\": \"maintenance of protein location in cell\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0046826\", \"name\": \"negative regulation of protein export from nucleus\"}, {\"id\": \"GO:1903828\", \"name\": \"negative regulation of protein localization\"}, {\"id\": \"GO:0032387\", \"name\": \"negative regulation of intracellular transport\"}, {\"id\": \"GO:0051049\", \"name\": \"regulation of transport\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0070201\", \"name\": \"regulation of establishment of protein localization\"}, {\"id\": \"GO:0051457\", \"name\": \"maintenance of protein location in nucleus\"}, {\"id\": \"GO:0051223\", \"name\": \"regulation of protein transport\"}, {\"id\": \"GO:0015031\", \"name\": \"protein transport\"}, {\"id\": \"GO:0060341\", \"name\": \"regulation of cellular localization\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0033365\", \"name\": \"protein localization to organelle\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0072595\", \"name\": \"maintenance of protein localization in organelle\"}]}, {\"annotation_id\": \"IPR013766\", \"name\": \"Thioredoxin domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR013766\", \"name\": \"Thioredoxin domain\"}]}, {\"annotation_id\": \"IPR005746\", \"name\": \"Thioredoxin\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR005746\", \"name\": \"Thioredoxin\"}]}, {\"annotation_id\": \"GO:0070062\", \"name\": \"extracellular exosome\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0070062\", \"name\": \"extracellular exosome\"}, {\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:1903561\", \"name\": \"extracellular vesicle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0043230\", \"name\": \"extracellular organelle\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005615\", \"name\": \"extracellular space\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}, {\"id\": \"GO:0065010\", \"name\": \"extracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0015035\", \"name\": \"protein-disulfide reductase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016667\", \"name\": \"oxidoreductase activity, acting on a sulfur group of donors\"}, {\"id\": \"GO:0015036\", \"name\": \"disulfide oxidoreductase activity\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0015035\", \"name\": \"protein-disulfide reductase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0009314\", \"name\": \"response to radiation\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009314\", \"name\": \"response to radiation\"}, {\"id\": \"GO:0009628\", \"name\": \"response to abiotic stimulus\"}]}, {\"annotation_id\": \"GO:0047134\", \"name\": \"protein-disulfide reductase [NAD(P)H] activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0047134\", \"name\": \"protein-disulfide reductase [NAD(P)H] activity\"}, {\"id\": \"GO:0016667\", \"name\": \"oxidoreductase activity, acting on a sulfur group of donors\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0015036\", \"name\": \"disulfide oxidoreductase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0015035\", \"name\": \"protein-disulfide reductase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016668\", \"name\": \"oxidoreductase activity, acting on a sulfur group of donors, NAD(P) as acceptor\"}]}, {\"annotation_id\": \"GO:0000122\", \"name\": \"negative regulation of transcription by RNA polymerase II\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:1902679\", \"name\": \"negative regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0051252\", \"name\": \"regulation of RNA metabolic process\"}, {\"id\": \"GO:0006366\", \"name\": \"transcription by RNA polymerase II\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0045934\", \"name\": \"negative regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0019219\", \"name\": \"regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:2001141\", \"name\": \"regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0010605\", \"name\": \"negative regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0009889\", \"name\": \"regulation of biosynthetic process\"}, {\"id\": \"GO:0006357\", \"name\": \"regulation of transcription by RNA polymerase II\"}, {\"id\": \"GO:0045892\", \"name\": \"negative regulation of DNA-templated transcription\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0000122\", \"name\": \"negative regulation of transcription by RNA polymerase II\"}, {\"id\": \"GO:0009892\", \"name\": \"negative regulation of metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0010468\", \"name\": \"regulation of gene expression\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0009890\", \"name\": \"negative regulation of biosynthetic process\"}, {\"id\": \"GO:0010558\", \"name\": \"negative regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0010556\", \"name\": \"regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0006355\", \"name\": \"regulation of DNA-templated transcription\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0051253\", \"name\": \"negative regulation of RNA metabolic process\"}]}, {\"annotation_id\": \"GO:0051897\", \"name\": \"positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0010647\", \"name\": \"positive regulation of cell communication\"}, {\"id\": \"GO:0051896\", \"name\": \"regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0009967\", \"name\": \"positive regulation of signal transduction\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0023052\", \"name\": \"signaling\"}, {\"id\": \"GO:0048518\", \"name\": \"positive regulation of biological process\"}, {\"id\": \"GO:0009966\", \"name\": \"regulation of signal transduction\"}, {\"id\": \"GO:0035556\", \"name\": \"intracellular signal transduction\"}, {\"id\": \"GO:0007154\", \"name\": \"cell communication\"}, {\"id\": \"GO:0048584\", \"name\": \"positive regulation of response to stimulus\"}, {\"id\": \"GO:1902531\", \"name\": \"regulation of intracellular signal transduction\"}, {\"id\": \"GO:0141124\", \"name\": \"intracellular signaling cassette\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0007165\", \"name\": \"signal transduction\"}, {\"id\": \"GO:0048522\", \"name\": \"positive regulation of cellular process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0023051\", \"name\": \"regulation of signaling\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:1902533\", \"name\": \"positive regulation of intracellular signal transduction\"}, {\"id\": \"GO:0051897\", \"name\": \"positive regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction\"}, {\"id\": \"GO:0048583\", \"name\": \"regulation of response to stimulus\"}, {\"id\": \"GO:0010646\", \"name\": \"regulation of cell communication\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043491\", \"name\": \"phosphatidylinositol 3-kinase/protein kinase B signal transduction\"}, {\"id\": \"GO:0023056\", \"name\": \"positive regulation of signaling\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"IPR017937\", \"name\": \"Thioredoxin, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR017937\", \"name\": \"Thioredoxin, conserved site\"}]}, {\"annotation_id\": \"GO:0003723\", \"name\": \"RNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003723\", \"name\": \"RNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0005654\", \"name\": \"nucleoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0031974\", \"name\": \"membrane-enclosed lumen\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0070013\", \"name\": \"intracellular organelle lumen\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005654\", \"name\": \"nucleoplasm\"}, {\"id\": \"GO:0043233\", \"name\": \"organelle lumen\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0031981\", \"name\": \"nuclear lumen\"}]}, {\"annotation_id\": \"GO:0061692\", \"name\": \"cellular detoxification of hydrogen peroxide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0061692\", \"name\": \"cellular detoxification of hydrogen peroxide\"}, {\"id\": \"GO:0061687\", \"name\": \"detoxification of inorganic compound\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0098754\", \"name\": \"detoxification\"}, {\"id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\"}, {\"id\": \"GO:0072593\", \"name\": \"reactive oxygen species metabolic process\"}, {\"id\": \"GO:0062197\", \"name\": \"cellular response to chemical stress\"}, {\"id\": \"GO:0098869\", \"name\": \"cellular oxidant detoxification\"}, {\"id\": \"GO:0042542\", \"name\": \"response to hydrogen peroxide\"}, {\"id\": \"GO:0034614\", \"name\": \"cellular response to reactive oxygen species\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1990748\", \"name\": \"cellular detoxification\"}, {\"id\": \"GO:0042743\", \"name\": \"hydrogen peroxide metabolic process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:1901701\", \"name\": \"cellular response to oxygen-containing compound\"}, {\"id\": \"GO:0000302\", \"name\": \"response to reactive oxygen species\"}, {\"id\": \"GO:0070301\", \"name\": \"cellular response to hydrogen peroxide\"}, {\"id\": \"GO:0009636\", \"name\": \"response to toxic substance\"}, {\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0061691\", \"name\": \"detoxification of hydrogen peroxide\"}, {\"id\": \"GO:0097237\", \"name\": \"cellular response to toxic substance\"}]}, {\"annotation_id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\"}]}, {\"annotation_id\": \"GO:0005634\", \"name\": \"nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0071731\", \"name\": \"response to nitric oxide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0071731\", \"name\": \"response to nitric oxide\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:1901698\", \"name\": \"response to nitrogen compound\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1ERV\", \"rcsb_id\": \"1ERV_1\", \"uniprot_ids\": [\"P10599\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P10599\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00085\", \"name\": \"Thioredoxin (Thioredoxin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 2, \"end_seq_id\": 103}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 73}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.63, -0.64, -0.8, -0.76, -0.76, -1.06, -0.24, -0.54, 0.09, 0.37, 0.12, -0.58, -0.62, 0.19, 0.46, 0.5, 1.36, 0.77, 0.88, 0.83, 1.42, 1.78, 1.26, 1.07, 0.56, -0.09, 0.58, -0.17, 0.13, 0.43, 0.08, 0.0, 0.03, 0.39, 0.21, -0.16, 0.7, 0.4, -0.49, -0.49, -0.46, -0.86, -1.56, -0.73, -0.14, -0.26, 0.26, 0.26, 1.16, 0.91, 1.47, 1.47, 0.61, 0.39, -0.31, -1.12, -0.27, -0.53, -0.23, -1.09, -0.42, -0.42, -0.23, -0.28, 0.02, -0.23, -0.61, -0.6, 0.1, -0.57, 0.13, -0.02, -0.02, -0.37, -0.62, -0.83, -1.19, -1.03, -0.69, -1.39, -1.39, -1.04, -0.66, -0.41, -0.41, -0.41, -1.27, -1.66, -0.84, -1.54, -1.26, -1.29, -0.99, -0.99, -0.94, -0.13, 0.77]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.15, 0.14, 0.14, 0.13, 0.13, 0.13, 0.12, 0.11, 0.11, 0.11, 0.11, 0.1, 0.1, 0.1, 0.1, 0.11, 0.11, 0.11, 0.11, 0.12, 0.13, 0.13, 0.14, 0.15, 0.14, 0.14, 0.14, 0.13, 0.13, 0.12, 0.12, 0.1, 0.1, 0.09, 0.09, 0.1, 0.11, 0.12, 0.12, 0.12, 0.12, 0.11, 0.12, 0.12, 0.13, 0.13, 0.13, 0.13, 0.14, 0.15, 0.16, 0.18, 0.19, 0.2, 0.19, 0.19, 0.18, 0.16, 0.15, 0.13, 0.11, 0.09, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.09, 0.11, 0.13, 0.14, 0.17, 0.19, 0.19, 0.19, 0.19, 0.19, 0.2, 0.2, 0.18, 0.17, 0.17, 0.16, 0.15, 0.16, 0.16, 0.17, 0.18, 0.18, 0.19, 0.21, 0.22, 0.23, 0.26, 0.28, 0.31, 0.33, 0.36, 0.38, 0.4, 0.42, 0.43, 0.4, 0.38]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.75, 0.71, 0.69, 0.62, 0.5, 0.47, 0.38, 0.31, 0.26, 0.23, 0.18, 0.14, 0.15, 0.12, 0.07, 0.13, 0.06, 0.07, 0.06, 0.06, 0.04, 0.04, 0.04, 0.05, 0.04, 0.05, 0.04, 0.03, 0.03, 0.04, 0.02, 0.01, 0.01, 0.02, 0.02, 0.03, 0.03, 0.05, 0.03, 0.04, 0.04, 0.05, 0.06, 0.03, 0.02, 0.03, 0.02, 0.03, 0.03, 0.04, 0.03, 0.04, 0.07, 0.09, 0.06, 0.08, 0.08, 0.08, 0.05, 0.1, 0.07, 0.06, 0.1, 0.11, 0.2, 0.27, 0.18, 0.25, 0.17, 0.17, 0.15, 0.13, 0.19, 0.19, 0.17, 0.17, 0.2, 0.21, 0.14, 0.21, 0.2, 0.23, 0.24, 0.24, 0.28, 0.24, 0.19, 0.28, 0.24, 0.31, 0.31, 0.34, 0.36, 0.3, 0.24, 0.31, 0.41, 0.45, 0.48, 0.6, 0.64, 0.68, 0.74, 0.77, 0.82]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.97143, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.00952, \"type\": \"mutation\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2806_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 47, \"ref_beg_seq_id\": 525}, {\"entity_beg_seq_id\": 48, \"length\": 4, \"ref_beg_seq_id\": 574}, {\"entity_beg_seq_id\": 52, \"length\": 28, \"ref_beg_seq_id\": 579}, {\"entity_beg_seq_id\": 80, \"length\": 7, \"ref_beg_seq_id\": 608}, {\"entity_beg_seq_id\": 87, \"length\": 5, \"ref_beg_seq_id\": 637}, {\"entity_beg_seq_id\": 92, \"length\": 14, \"ref_beg_seq_id\": 643}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1854_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 79, \"ref_beg_seq_id\": 13}, {\"entity_beg_seq_id\": 80, \"length\": 26, \"ref_beg_seq_id\": 93}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"84644_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 105, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2392_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 79, \"ref_beg_seq_id\": 19}, {\"entity_beg_seq_id\": 80, \"length\": 7, \"ref_beg_seq_id\": 99}, {\"entity_beg_seq_id\": 87, \"length\": 5, \"ref_beg_seq_id\": 110}, {\"entity_beg_seq_id\": 92, \"length\": 14, \"ref_beg_seq_id\": 116}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1599_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 79, \"ref_beg_seq_id\": 19}, {\"entity_beg_seq_id\": 80, \"length\": 26, \"ref_beg_seq_id\": 99}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2520_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 47, \"ref_beg_seq_id\": 449}, {\"entity_beg_seq_id\": 48, \"length\": 32, \"ref_beg_seq_id\": 498}, {\"entity_beg_seq_id\": 80, \"length\": 7, \"ref_beg_seq_id\": 531}, {\"entity_beg_seq_id\": 87, \"length\": 5, \"ref_beg_seq_id\": 542}, {\"entity_beg_seq_id\": 92, \"length\": 14, \"ref_beg_seq_id\": 548}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P10599\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 105, \"ref_beg_seq_id\": 1}]}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL2010624\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 104, \"target_beg_seq_id\": 1}]}, {\"related_resource_name\": \"DrugBank\", \"related_resource_version\": \"5.1\", \"related_target_id\": \"P10599\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 104, \"target_beg_seq_id\": 1}]}, {\"related_resource_name\": \"Pharos\", \"related_resource_version\": \"6.13.4\", \"related_target_id\": \"9016\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 104, \"target_beg_seq_id\": 1}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"DCLHRRNJOZJGKD-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCOC(=O)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL1536119\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"MYAGBISXZVERBS-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCOC(=O)C1(CCOc2ccccc2)CCN(Cc2ccc(O)cc2)CC1\", \"cofactor_resource_id\": \"CHEMBL1349584\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"QHMZVFUKNGYBOM-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(Nc1ccccc1)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL3186500\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"CJYXZKCIBAOJFS-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(NC1CCCC1)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL3184286\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"AYJKPBTXOIHUFT-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCN(C)C(=O)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL3186225\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"MOVCEQJKJVEWQF-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC(C)(C)OC(=O)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL3187354\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"binding_assay_value\": 3.52, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"XSCBAUNBSITGFU-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC(C)OC(=O)C1(CCOc2ccccc2)CCN(Cc2ccc(O)c(Cl)c2)CC1\", \"cofactor_resource_id\": \"CHEMBL3186999\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2010624\"}, {\"cofactor_in_ch_ikey\": \"BPBPYQWMFCTCNG-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCC(C)SSC1=NC=CN1\", \"cofactor_name\": \"PX-12\", \"cofactor_resource_id\": \"DB05448\", \"mechanism_of_action\": \"PX-12 irreversibly inhibits the redox protein thioredoxin, which has been associated with cancer and tumor growth.\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P10599\"}, {\"cofactor_in_ch_ikey\": \"IZJDOKYDEWTZSO-UHFFFAOYSA-N\", \"cofactor_smiles\": \"S=C=NCCC1=CC=CC=C1\", \"cofactor_name\": \"Phenethyl Isothiocyanate\", \"cofactor_resource_id\": \"DB12695\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [21838287], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P10599\"}, {\"cofactor_in_ch_ikey\": \"QTBSBXVTEAMEQO-UHFFFAOYSA-M\", \"cofactor_smiles\": \"CC([O-])=O\", \"cofactor_chem_comp_id\": \"ACT\", \"cofactor_name\": \"Acetate\", \"cofactor_resource_id\": \"DB14511\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P10599\"}, {\"binding_assay_value\": 7.05, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"O=[N+]([O-])c1ccc2nc(SSC3CCCCC3)[nH]c2c1\", \"cofactor_resource_id\": \"CHEMBL2315295\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.77, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Fc1cc2nc(SSC3CCCCC3)[nH]c2cc1Cl\", \"cofactor_resource_id\": \"CHEMBL2315297\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.62, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"O=C(c1ccccc1)c1ccc2nc(SSC3CCCCC3)[nH]c2c1\", \"cofactor_resource_id\": \"CHEMBL2315294\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.54, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Nc1nc(O)c2[nH]c(SSC3CCCCC3)nc2n1\", \"cofactor_resource_id\": \"CHEMBL2315292\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.47, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CCSSc1nc2ccccc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL2315306\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.35, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"c1ccc(-c2cnc(SSC3CCCCC3)[nH]2)cc1\", \"cofactor_resource_id\": \"CHEMBL2315290\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.29, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"c1ccc2sc(SSC3CCCCC3)nc2c1\", \"cofactor_resource_id\": \"CHEMBL2315299\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}, {\"binding_assay_value\": 6.27, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Nn1c(SSC2CCCCC2)nnc1-c1ccccc1\", \"cofactor_resource_id\": \"CHEMBL2315288\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [23327656], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"9016\"}], \"rcsb_id\": \"1ERV_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:36:27.717842\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.65,
+            "experimentalMethod": null,
+            "depositionDate": "1996-02-07T00:00:00+0000",
+            "releaseDate": "1996-10-14T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.65,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MVKQIESKTAFQEALDAAGDKLVVVDFSATWCGPCKMIKPFFHSLSEKYSNVIFLEVDVDDCQDVASECEVKSMPTFQFFKKGQKVGEFSGANKEKLEATINELV",
+        "description": "Amino acid sequence for chain A (length: 105)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 105
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structures of reduced, oxidized, and mutated human thioredoxins: evidence for a regulatory homodimer.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/S0969-2126(96)00079-2",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 105",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5XWM_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 13,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5XWM_1",
+          "5XWM_3",
+          "3DXB_16",
+          "3HZ4_1",
+          "1V98_2",
+          "5Y4T_1",
+          "1UVZ_3",
+          "4POB_1",
+          "3HHV_1",
+          "1XWB_5",
+          "3DIE_1",
+          "4AJ7_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1ERV_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1ERV",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1045.5,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 36,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "TXN",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.30.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00085",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 427.96,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 617.540000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.409335246293639,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.590664753706361,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5XWM_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 13,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5XWM_1",
+        "5XWM_3",
+        "3DXB_16",
+        "3HZ4_1",
+        "1V98_2",
+        "5Y4T_1",
+        "1UVZ_3",
+        "4POB_1",
+        "3HHV_1",
+        "1XWB_5",
+        "3DIE_1",
+        "4AJ7_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

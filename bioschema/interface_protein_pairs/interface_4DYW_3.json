@@ -1,0 +1,390 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4DYW_3",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4DYW_3",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4DYW",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4DYW",
+    "name": "Protein 4DYW",
+    "description": "Protein structure with PDB ID: 4DYW. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4DYW_3 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4DYW",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Burkholderia pseudomallei 1710b",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "320372",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=320372"
+    },
+    "alternateName": [
+      "PDB 4DYW",
+      "Protein ID 4DYW"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4dyw_3.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4dyw.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4DYW",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4DYW",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4DYW_3",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "BURPS1710b_0547",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.90.79.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00293",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4DYW\", \"structure_metadata\": {\"pdb_id\": \"4DYW\", \"resolution\": 2.5, \"deposition_date\": \"2012-02-29T00:00:00+0000\", \"release_date\": \"2012-04-11T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Burkholderia pseudomallei 1710b\"], \"citation\": {\"title\": \"Crystal structure of MutT NUDIX hydrolase from Burkholderia pseudomallei\", \"authors\": [\"Edwards, T.E.\", \"Clifton, M.C.\", \"Seattle Structural Genomics Center for Infectious Disease (SSGCID)\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 78.04, \"b\": 78.04, \"c\": 113.92, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\", \"B\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Burkholderia pseudomallei 1710b\", \"sequence_length\": 157, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Burkholderia pseudomallei 1710b\", \"sequence_length\": 157, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\", \"organism\": \"Burkholderia pseudomallei 1710b\", \"taxonomy_id\": 320372, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 157, \"gene_name\": null, \"uniprot_ids\": [\"Q3JWU2\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 157.0, \"min_sequence_length\": 157, \"max_sequence_length\": 157}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\", \"pdbx_seq_one_letter_code_can\": \"MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 157, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"1710b\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"BURPS1710b_0547\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"320372\", \"pdbx_gene_src_scientific_name\": \"Burkholderia pseudomallei\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pAVA0421\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.413, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/4dywA/20236/4dywA\", \"max_rmsd\": 0.413, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 241625, \"identity\": 100}, {\"cluster_id\": 246083, \"identity\": 95}, {\"cluster_id\": 248520, \"identity\": 90}, {\"cluster_id\": 275395, \"identity\": 70}, {\"cluster_id\": 272177, \"identity\": 50}, {\"cluster_id\": 40792, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Burkholderia pseudomallei str. 1710b\", \"Burkholderia pseudomallei strain 1710b\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Burkholderia pseudomallei 1710b\", \"ncbi_taxonomy_id\": 320372, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Burkholderia pseudomallei\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Betaproteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Proteobacteria beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Purple bacteria, beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"b-proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subgroup\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderiales\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderia/Oxalobacter/Ralstonia group\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderiaceae\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderia group\"}, {\"depth\": 8, \"id\": \"32008\", \"name\": \"Burkholderia\"}, {\"depth\": 8, \"id\": \"32008\", \"name\": \"Pseudomonas RNA homology group II\"}, {\"depth\": 9, \"id\": \"111527\", \"name\": \"pseudomallei group\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Burkholderia pseudomallei\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Bacillus pseudomallei\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Bacterium whitmori\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Loefflerella pseudomallei\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Malleomyces pseudomallei\"}, {\"depth\": 10, \"id\": \"28450\", \"name\": \"Pseudomonas pseudomallei\"}, {\"depth\": 11, \"id\": \"320372\", \"name\": \"Burkholderia pseudomallei 1710b\"}, {\"depth\": 11, \"id\": \"320372\", \"name\": \"Burkholderia pseudomallei str. 1710b\"}, {\"depth\": 11, \"id\": \"320372\", \"name\": \"Burkholderia pseudomallei strain 1710b\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"BURPS1710b_0547\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 2, \"id\": \"28450:1:nudix_domain_containing_protein\", \"name\": \"NUDIX domain-containing protein\"}, {\"depth\": 0, \"id\": \"28450\", \"name\": \"Burkholderia pseudomallei\"}, {\"depth\": 1, \"id\": \"28450:1\", \"name\": \"Chromosome 1\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 17.336, \"pdbx_description\": \"MutT/NUDIX family protein\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"MutT/NUDIX family protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"MutT/NUDIX family protein\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q3JWU2\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 22, \"length\": 136, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00293\", \"assignment_version\": \"34.0\", \"name\": \"NUDIX domain (NUDIX)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR000086\", \"name\": \"NUDIX hydrolase domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR000086\", \"name\": \"NUDIX hydrolase domain\"}]}, {\"annotation_id\": \"GO:0016787\", \"name\": \"hydrolase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR015797\", \"name\": \"NUDIX hydrolase-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR015797\", \"name\": \"NUDIX hydrolase-like domain superfamily\"}]}, {\"annotation_id\": \"IPR020084\", \"name\": \"NUDIX hydrolase, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020084\", \"name\": \"NUDIX hydrolase, conserved site\"}]}, {\"annotation_id\": \"IPR020476\", \"name\": \"NUDIX hydrolase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR000086\", \"name\": \"NUDIX hydrolase domain\"}, {\"depth\": 2, \"id\": \"IPR020476\", \"name\": \"NUDIX hydrolase\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4DYW\", \"rcsb_id\": \"4DYW_1\", \"uniprot_ids\": [\"Q3JWU2\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q3JWU2\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.8662420382165605, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00293\", \"name\": \"NUDIX domain (NUDIX)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 27, \"end_seq_id\": 153}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 21}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.51, -1.77, -2.04, -1.27, -1.3, -0.74, -0.78, -0.5, -0.53, -0.79, -0.92, -0.89, -1.4, -0.8, -1.39, -1.36, -1.36, -1.36, -1.7, -1.7, -2.16, -1.6, -1.86, -1.19, -0.88, -0.6, -0.01, 0.88, 1.52, 1.52, 0.67, 0.67, -0.11, 0.43, 0.66, 0.88, 0.88, -0.02, -0.02, -0.07, -0.52, 0.18, -0.5, -1.31, -1.53, -2.08, -1.37, -0.97, -0.58, 0.34, -0.03, 0.1, 0.44, -0.19, 0.32, -0.34, -0.34, 0.12, -0.69, -0.69, -0.18, -0.52, -0.59, -0.86, 0.0, 0.38, -0.54, -0.54, 0.13, -0.72, -0.72, -0.61, -0.39, -0.9, -0.68, 0.02, 0.83, -0.06, -0.17, 0.42, 0.73, 0.73, 1.2, 0.98, 1.24, 1.29, 1.29, 1.43, 1.73, 1.42, 1.2, 0.98, 0.31, -0.2, -1.06, -1.02, -0.77, -0.8, -0.21, -0.59, -0.32, -0.08, 0.39, 0.98, 0.98, 1.28, 1.12, 0.83, 0.97, 0.11, 0.08, -0.84, -0.58, 0.24, -0.34, -0.83, -1.13, -1.59, -1.56, -1.77, -1.07, -1.11, -1.62, -1.33, -0.84, -0.26, 0.67, 0.63, 0.63, 0.86, 0.26, -0.09, -0.17, -0.06, -0.33, -1.11, -0.52, -0.21, -1.13, -0.46, 0.13, 0.73, -0.08, -0.39, 0.43, 0.16, -0.27, 0.43, 0.13]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.97, 0.97, 0.96, 0.95, 0.93, 0.91, 0.89, 0.85, 0.8, 0.75, 0.69, 0.65, 0.61, 0.58, 0.55, 0.52, 0.49, 0.48, 0.47, 0.46, 0.47, 0.46, 0.46, 0.46, 0.45, 0.45, 0.46, 0.46, 0.46, 0.47, 0.47, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.44, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.38, 0.36, 0.37, 0.39, 0.4, 0.41, 0.41, 0.42, 0.41, 0.42, 0.42, 0.43, 0.42, 0.39, 0.35, 0.32, 0.29, 0.27, 0.24, 0.23, 0.21, 0.19, 0.18, 0.18, 0.18, 0.19, 0.21, 0.22, 0.24, 0.26, 0.27, 0.29, 0.3, 0.31, 0.32, 0.33, 0.34, 0.35, 0.35, 0.35, 0.35, 0.35, 0.36, 0.36, 0.37, 0.39, 0.39, 0.4, 0.4, 0.41, 0.43, 0.43, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.42, 0.4, 0.39, 0.39, 0.38, 0.37, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.43, 0.42, 0.4, 0.39, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.4, 0.4, 0.39, 0.38]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.99, 0.97, 0.96, 0.94, 0.93, 0.91, 0.89, 0.87, 0.86, 0.83, 0.8, 0.79, 0.8, 0.8, 0.78, 0.76, 0.76, 0.77, 0.77, 0.75, 0.75, 0.66, 0.71, 0.68, 0.67, 0.6, 0.55, 0.54, 0.55, 0.52, 0.52, 0.45, 0.42, 0.35, 0.28, 0.28, 0.27, 0.24, 0.2, 0.17, 0.23, 0.22, 0.28, 0.28, 0.21, 0.17, 0.22, 0.19, 0.2, 0.2, 0.2, 0.19, 0.18, 0.24, 0.23, 0.2, 0.2, 0.24, 0.18, 0.2, 0.2, 0.16, 0.12, 0.08, 0.07, 0.13, 0.12, 0.13, 0.21, 0.2, 0.13, 0.13, 0.08, 0.1, 0.06, 0.1, 0.13, 0.11, 0.1, 0.08, 0.05, 0.03, 0.02, 0.02, 0.05, 0.05, 0.03, 0.05, 0.03, 0.03, 0.02, 0.04, 0.05, 0.08, 0.05, 0.06, 0.05, 0.06, 0.05, 0.03, 0.03, 0.05, 0.07, 0.09, 0.07, 0.07, 0.07, 0.14, 0.15, 0.16, 0.14, 0.1, 0.11, 0.12, 0.12, 0.18, 0.23, 0.28, 0.23, 0.22, 0.31, 0.3, 0.24, 0.24, 0.19, 0.3, 0.31, 0.23, 0.24, 0.23, 0.27, 0.26, 0.32, 0.31, 0.26, 0.25, 0.25, 0.19, 0.16, 0.12, 0.2, 0.2, 0.22, 0.31, 0.32, 0.37, 0.33, 0.36, 0.48, 0.49, 0.52, 0.53, 0.64, 0.67, 0.71, 0.77, 0.8]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.80892, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.13376, \"maximum_length\": 21, \"minimum_length\": 21, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"272177_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q3JWU2\", \"aligned_regions\": [{\"entity_beg_seq_id\": 22, \"length\": 136, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"248520_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"40792_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 52, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 53, \"length\": 60, \"ref_beg_seq_id\": 54}, {\"entity_beg_seq_id\": 113, \"length\": 45, \"ref_beg_seq_id\": 115}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"275395_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"246083_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"241625_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"4DYW_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:10.396434\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.5,
+            "experimentalMethod": null,
+            "depositionDate": "2012-02-29T00:00:00+0000",
+            "releaseDate": "2012-04-11T00:00:00+0000",
+            "sourceOrganism": [
+              "Burkholderia pseudomallei 1710b"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.5,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Burkholderia pseudomallei 1710b",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA",
+        "description": "Amino acid sequence for chain A (length: 157)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 157
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MAHHHHHHMGTLEAQTQGPGSMQHTEQPRVGCGAAIVRDGRILLIKRKRAPEAGCWGLPGGKVDWLEPVERAVCREIEEELGIALERATLLCVVDHIDAANGEHWVAPVYLAHAFSGEPRVVEPDRHEALGWFALDDLPQPLTHATRIALEQVTRAA",
+        "description": "Amino acid sequence for chain B (length: 157)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 157
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of MutT NUDIX hydrolase from Burkholderia pseudomallei",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 157",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4DYW_3",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4KYX_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4DYW_3",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4DYW",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2134.35,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 82,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "BURPS1710b_0547",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.90.79.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00293",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 566.120000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1568.23,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.265242345444749,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.734757654555251,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4DYW_3",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4KYX_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

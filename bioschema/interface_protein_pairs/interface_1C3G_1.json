@@ -1,0 +1,387 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1C3G_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1C3G_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1C3G",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1C3G",
+    "name": "Protein 1C3G",
+    "description": "Protein structure with PDB ID: 1C3G. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1C3G_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1C3G",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Saccharomyces cerevisiae",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "4932",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4932"
+    },
+    "alternateName": [
+      "PDB 1C3G",
+      "Protein ID 1C3G"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1c3g_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1c3g.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1C3G",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1C3G",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1C3G_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "SIS1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.60.260.20",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01556",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1C3G\", \"structure_metadata\": {\"pdb_id\": \"1C3G\", \"resolution\": 2.7, \"deposition_date\": \"1999-07-27T00:00:00+0000\", \"release_date\": \"2000-08-03T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Saccharomyces cerevisiae\"], \"citation\": {\"title\": \"The crystal structure of the peptide-binding fragment from the yeast Hsp40 protein Sis1.\", \"doi\": \"10.1107/S090744499900476X\", \"authors\": [\"Sha, B.\", \"Lee, S.\", \"Cyr, D.M.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 73.42, \"b\": 73.42, \"c\": 80.09, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 170, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID\", \"organism\": \"Saccharomyces cerevisiae\", \"taxonomy_id\": 4932, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 170, \"gene_name\": null, \"uniprot_ids\": [\"P25294\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 170.0, \"min_sequence_length\": 170, \"max_sequence_length\": 170}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID\", \"pdbx_seq_one_letter_code_can\": \"ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 170, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"baker's yeast\", \"gene_src_genus\": \"Saccharomyces\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"4932\", \"pdbx_gene_src_scientific_name\": \"Saccharomyces cerevisiae\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_src_id\": 1, \"plasmid_name\": \"PET9D\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.197, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/1c3gA/407/1c3gA\", \"max_rmsd\": 1.489, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 16182, \"identity\": 100}, {\"cluster_id\": 22719, \"identity\": 95}, {\"cluster_id\": 24982, \"identity\": 90}, {\"cluster_id\": 33369, \"identity\": 70}, {\"cluster_id\": 32091, \"identity\": 50}, {\"cluster_id\": 2150, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"baker's yeast\", \"ncbi_common_names\": [\"Candida robusta\", \"Mycoderma cerevisiae\", \"Saccharomyces boulardii\", \"Saccharomyces boulardii (nom. inval.)\", \"Saccharomyces capensis\", \"Saccharomyces cerevisiae 'var. diastaticus\", \"Saccharomyces cerevisiae (Desm.) Meyen ex E.C. Hansen, 1883\", \"Saccharomyces diastaticus\", \"Saccharomyces italicus\", \"Saccharomyces oviformis\", \"Saccharomyces uvarum var. melibiosus\", \"baker's yeast\", \"brewer's yeast\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Saccharomyces cerevisiae\", \"ncbi_taxonomy_id\": 4932, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Saccharomyces cerevisiae\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Fungi\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Mycota\"}, {\"depth\": 5, \"id\": \"451864\", \"name\": \"Dikarya\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"Ascomycota\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"ascomycete fungi\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"sac fungi\"}, {\"depth\": 7, \"id\": \"716545\", \"name\": \"saccharomyceta\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"Saccharomycotina\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"budding yeasts & allies\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"true yeasts\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Saccharomycetes\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Hemiascomycetes\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Saccharomycetales\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Endomycetales\"}, {\"depth\": 11, \"id\": \"4893\", \"name\": \"Saccharomycetaceae\"}, {\"depth\": 12, \"id\": \"4930\", \"name\": \"Saccharomyces\"}, {\"depth\": 12, \"id\": \"4930\", \"name\": \"Pachytichospora\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Candida robusta\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Mycoderma cerevisiae\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces boulardii\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces boulardii (nom. inval.)\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces capensis\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae 'var. diastaticus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae (Desm.) Meyen ex E.C. Hansen, 1883\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces diastaticus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces italicus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces oviformis\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces uvarum var. melibiosus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"baker's yeast\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"brewer's yeast\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"559292:XIV\", \"name\": \"Chromosome XIV\"}, {\"depth\": 2, \"id\": \"559292:XIV:type_ii_hsp40_co_chaperone_sis1\", \"name\": \"type II HSP40 co-chaperone SIS1\"}, {\"depth\": 0, \"id\": \"559292\", \"name\": \"Saccharomyces cerevisiae S288C\"}], \"rcsb_polymer_entity\": {\"details\": \"MOLECULAR CHAPERONE\", \"formula_weight\": 19.098, \"pdbx_description\": \"HEAT SHOCK PROTEIN 40\", \"pdbx_fragment\": \"SIS1 C-TERMINAL PEPTIDE-BINDING DOMAIN\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"HEAT SHOCK PROTEIN 40\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Protein SIS1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P25294\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 180}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01556\", \"assignment_version\": \"34.0\", \"name\": \"DnaJ C terminal domain (DnaJ_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0003677\", \"name\": \"DNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003677\", \"name\": \"DNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0009267\", \"name\": \"cellular response to starvation\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0031669\", \"name\": \"cellular response to nutrient levels\"}, {\"id\": \"GO:0031667\", \"name\": \"response to nutrient levels\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0042594\", \"name\": \"response to starvation\"}, {\"id\": \"GO:0009267\", \"name\": \"cellular response to starvation\"}]}, {\"annotation_id\": \"GO:0005730\", \"name\": \"nucleolus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0031974\", \"name\": \"membrane-enclosed lumen\"}, {\"id\": \"GO:0043232\", \"name\": \"intracellular membraneless organelle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0005730\", \"name\": \"nucleolus\"}, {\"id\": \"GO:0070013\", \"name\": \"intracellular organelle lumen\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0043233\", \"name\": \"organelle lumen\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0043228\", \"name\": \"membraneless organelle\"}, {\"id\": \"GO:0031981\", \"name\": \"nuclear lumen\"}]}, {\"annotation_id\": \"GO:0070843\", \"name\": \"misfolded protein transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0045184\", \"name\": \"establishment of protein localization\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0070843\", \"name\": \"misfolded protein transport\"}, {\"id\": \"GO:0046907\", \"name\": \"intracellular transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0015031\", \"name\": \"protein transport\"}, {\"id\": \"GO:0051649\", \"name\": \"establishment of localization in cell\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}, {\"id\": \"GO:0006886\", \"name\": \"intracellular protein transport\"}]}, {\"annotation_id\": \"GO:0071630\", \"name\": \"nuclear protein quality control by the ubiquitin-proteasome system\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0051603\", \"name\": \"proteolysis involved in protein catabolic process\"}, {\"id\": \"GO:0043161\", \"name\": \"proteasome-mediated ubiquitin-dependent protein catabolic process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}, {\"id\": \"GO:0071218\", \"name\": \"cellular response to misfolded protein\"}, {\"id\": \"GO:0051788\", \"name\": \"response to misfolded protein\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0043632\", \"name\": \"modification-dependent macromolecule catabolic process\"}, {\"id\": \"GO:0006508\", \"name\": \"proteolysis\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0035967\", \"name\": \"cellular response to topologically incorrect protein\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0010498\", \"name\": \"proteasomal protein catabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0071630\", \"name\": \"nuclear protein quality control by the ubiquitin-proteasome system\"}, {\"id\": \"GO:0019941\", \"name\": \"modification-dependent protein catabolic process\"}, {\"id\": \"GO:0035966\", \"name\": \"response to topologically incorrect protein\"}, {\"id\": \"GO:0006511\", \"name\": \"ubiquitin-dependent protein catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0006515\", \"name\": \"protein quality control for misfolded or incompletely synthesized proteins\"}]}, {\"annotation_id\": \"GO:0006413\", \"name\": \"translational initiation\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006412\", \"name\": \"translation\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0160307\", \"name\": \"protein biosynthetic process\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006413\", \"name\": \"translational initiation\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"GO:0051082\", \"name\": \"unfolded protein binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051082\", \"name\": \"unfolded protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR018253\", \"name\": \"DnaJ domain, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018253\", \"name\": \"DnaJ domain, conserved site\"}]}, {\"annotation_id\": \"GO:0072671\", \"name\": \"mitochondria-associated ubiquitin-dependent protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0051603\", \"name\": \"proteolysis involved in protein catabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0010498\", \"name\": \"proteasomal protein catabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0072671\", \"name\": \"mitochondria-associated ubiquitin-dependent protein catabolic process\"}, {\"id\": \"GO:0043161\", \"name\": \"proteasome-mediated ubiquitin-dependent protein catabolic process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}, {\"id\": \"GO:0043632\", \"name\": \"modification-dependent macromolecule catabolic process\"}, {\"id\": \"GO:0019941\", \"name\": \"modification-dependent protein catabolic process\"}, {\"id\": \"GO:0006508\", \"name\": \"proteolysis\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006511\", \"name\": \"ubiquitin-dependent protein catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}]}, {\"annotation_id\": \"IPR002939\", \"name\": \"Chaperone DnaJ, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR002939\", \"name\": \"Chaperone DnaJ, C-terminal\"}]}, {\"annotation_id\": \"GO:0006457\", \"name\": \"protein folding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006457\", \"name\": \"protein folding\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0051604\", \"name\": \"protein maturation\"}]}, {\"annotation_id\": \"GO:0051085\", \"name\": \"chaperone cofactor-dependent protein refolding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051085\", \"name\": \"chaperone cofactor-dependent protein refolding\"}]}, {\"annotation_id\": \"GO:0051787\", \"name\": \"misfolded protein binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0051787\", \"name\": \"misfolded protein binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR036869\", \"name\": \"Chaperone J-domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036869\", \"name\": \"Chaperone J-domain superfamily\"}]}, {\"annotation_id\": \"GO:0034605\", \"name\": \"cellular response to heat\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0034605\", \"name\": \"cellular response to heat\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009408\", \"name\": \"response to heat\"}, {\"id\": \"GO:0009628\", \"name\": \"response to abiotic stimulus\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0009266\", \"name\": \"response to temperature stimulus\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"IPR001623\", \"name\": \"DnaJ domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001623\", \"name\": \"DnaJ domain\"}]}, {\"annotation_id\": \"IPR008971\", \"name\": \"HSP40/DnaJ peptide-binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008971\", \"name\": \"HSP40/DnaJ peptide-binding\"}]}, {\"annotation_id\": \"GO:0022627\", \"name\": \"cytosolic small ribosomal subunit\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0022627\", \"name\": \"cytosolic small ribosomal subunit\"}, {\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0015935\", \"name\": \"small ribosomal subunit\"}, {\"id\": \"GO:0043232\", \"name\": \"intracellular membraneless organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0044391\", \"name\": \"ribosomal subunit\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0022626\", \"name\": \"cytosolic ribosome\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:1990904\", \"name\": \"ribonucleoprotein complex\"}, {\"id\": \"GO:0043228\", \"name\": \"membraneless organelle\"}, {\"id\": \"GO:0005840\", \"name\": \"ribosome\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0035719\", \"name\": \"tRNA import into nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0006404\", \"name\": \"RNA import into nucleus\"}, {\"id\": \"GO:0050658\", \"name\": \"RNA transport\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0006913\", \"name\": \"nucleocytoplasmic transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0051169\", \"name\": \"nuclear transport\"}, {\"id\": \"GO:0050657\", \"name\": \"nucleic acid transport\"}, {\"id\": \"GO:0035719\", \"name\": \"tRNA import into nucleus\"}, {\"id\": \"GO:0046907\", \"name\": \"intracellular transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0051170\", \"name\": \"import into nucleus\"}, {\"id\": \"GO:0051031\", \"name\": \"tRNA transport\"}, {\"id\": \"GO:0051236\", \"name\": \"establishment of RNA localization\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0051649\", \"name\": \"establishment of localization in cell\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006403\", \"name\": \"RNA localization\"}, {\"id\": \"GO:0015931\", \"name\": \"nucleobase-containing compound transport\"}]}, {\"annotation_id\": \"GO:0051087\", \"name\": \"protein-folding chaperone binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0051087\", \"name\": \"protein-folding chaperone binding\"}]}, {\"annotation_id\": \"GO:0005634\", \"name\": \"nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0002236\", \"name\": \"detection of misfolded protein\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051606\", \"name\": \"detection of stimulus\"}, {\"id\": \"GO:0051788\", \"name\": \"response to misfolded protein\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0035966\", \"name\": \"response to topologically incorrect protein\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0009593\", \"name\": \"detection of chemical stimulus\"}, {\"id\": \"GO:0002236\", \"name\": \"detection of misfolded protein\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"IPR051339\", \"name\": \"DnaJ homolog subfamily B\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR051339\", \"name\": \"DnaJ homolog subfamily B\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1C3G\", \"rcsb_id\": \"1C3G_1\", \"uniprot_ids\": [\"P25294\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P25294\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.48295454545454547}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01556\", \"name\": \"DnaJ C terminal domain (DnaJ_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 3, \"end_seq_id\": 158}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.4, 0.7, 1.2, 0.34, 0.34, 0.3, 1.0, 1.04, 1.18, 0.28, -0.07, -0.92, -0.62, 0.08, -0.78, -0.59, -1.1, -1.56, -1.56, -1.17, -0.91, -1.18, -1.53, -0.9, -1.49, -1.83, -1.77, -1.41, -1.76, -1.08, -1.11, -0.57, -1.16, -0.64, -0.69, -0.43, -0.4, -0.11, -1.04, -0.46, -1.0, -0.69, -1.54, -0.61, -0.51, -0.61, -0.94, -0.9, -1.49, -1.49, -1.8, -1.51, -2.4, -2.5, -2.74, -2.39, -2.04, -2.16, -2.61, -2.66, -2.59, -1.78, -1.99, -1.29, -0.74, -0.2, -0.09, 0.02, 0.02, 0.01, -0.77, -0.56, -1.26, -1.41, -2.34, -2.46, -2.46, -2.07, -2.37, -2.4, -1.8, -0.91, -1.37, -1.01, -0.09, 0.12, 0.59, 0.89, 1.59, 0.73, -0.16, -0.1, 0.4, 0.4, 0.53, 0.42, 0.42, -0.32, 0.03, 0.92, 0.62, 0.12, 0.2, -0.14, -0.5, -0.91, -0.56, -0.06, -0.73, 0.08, 0.07, -0.93, -0.08, -0.42, -0.1, 0.44, -0.37, -0.37, -0.88, -1.18, -0.76, -1.31, -1.0, -0.97, -1.61, -1.27, -1.48, -1.43, -0.83, -0.93, -0.92, -1.02, -1.31, -1.52, -1.66, -1.36, -1.7, -2.41, -2.28, -2.59, -1.99, -1.06, -0.2, -0.46, -0.51, -0.56, 0.41, 0.07, 0.31, -0.29, -0.29, -0.84, 0.01, -0.23, -0.19, -0.46, -0.46, -0.74, -1.07, -1.37, -0.78, -1.59]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.4, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.44, 0.45, 0.45, 0.45, 0.46, 0.46, 0.47, 0.47, 0.48, 0.47, 0.47, 0.45, 0.45, 0.44, 0.43, 0.43, 0.42, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.43, 0.43, 0.43, 0.44, 0.44, 0.45, 0.46, 0.46, 0.47, 0.48, 0.48, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.5, 0.5, 0.51, 0.51, 0.51, 0.5, 0.5, 0.49, 0.48, 0.47, 0.46, 0.45, 0.44, 0.44, 0.43, 0.43, 0.44, 0.44, 0.45, 0.45, 0.45, 0.45, 0.45, 0.46, 0.45, 0.45, 0.46, 0.47, 0.49, 0.51, 0.53, 0.56, 0.59, 0.62, 0.65, 0.69, 0.72, 0.73, 0.74, 0.75, 0.75, 0.75, 0.75, 0.74, 0.72, 0.71, 0.69, 0.67, 0.65, 0.63, 0.6, 0.58, 0.56, 0.55, 0.53, 0.51, 0.49]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.82, 0.77, 0.74, 0.66, 0.55, 0.46, 0.42, 0.38, 0.34, 0.29, 0.25, 0.18, 0.19, 0.19, 0.18, 0.25, 0.24, 0.31, 0.31, 0.38, 0.38, 0.42, 0.42, 0.41, 0.47, 0.53, 0.6, 0.54, 0.54, 0.5, 0.51, 0.47, 0.55, 0.58, 0.64, 0.58, 0.58, 0.56, 0.56, 0.52, 0.51, 0.46, 0.48, 0.41, 0.41, 0.42, 0.43, 0.42, 0.48, 0.41, 0.47, 0.49, 0.55, 0.53, 0.5, 0.51, 0.58, 0.58, 0.59, 0.53, 0.55, 0.48, 0.49, 0.43, 0.51, 0.52, 0.51, 0.5, 0.5, 0.53, 0.6, 0.53, 0.49, 0.47, 0.49, 0.49, 0.48, 0.48, 0.41, 0.35, 0.34, 0.32, 0.3, 0.39, 0.36, 0.35, 0.26, 0.25, 0.27, 0.27, 0.17, 0.12, 0.18, 0.12, 0.12, 0.12, 0.11, 0.07, 0.08, 0.12, 0.11, 0.17, 0.18, 0.27, 0.23, 0.26, 0.29, 0.32, 0.32, 0.33, 0.27, 0.35, 0.45, 0.39, 0.48, 0.51, 0.52, 0.54, 0.61, 0.59, 0.6, 0.61, 0.63, 0.63, 0.63, 0.64, 0.67, 0.67, 0.71, 0.73, 0.72, 0.77, 0.79, 0.76, 0.82, 0.82, 0.8, 0.8, 0.75, 0.71, 0.67, 0.68, 0.68, 0.65, 0.6, 0.6, 0.53, 0.58, 0.49, 0.5, 0.41, 0.42, 0.42, 0.36, 0.38, 0.36, 0.35, 0.32, 0.22, 0.27, 0.36, 0.44, 0.48, 0.58, 0.61, 0.69, 0.72, 0.82, 0.83, 0.91]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.91765, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"32091_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 189}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"24982_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 183}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"33369_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 183}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P25294\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 180}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2150_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 28, \"ref_beg_seq_id\": 462}, {\"entity_beg_seq_id\": 29, \"length\": 1, \"ref_beg_seq_id\": 491}, {\"entity_beg_seq_id\": 30, \"length\": 1, \"ref_beg_seq_id\": 495}, {\"entity_beg_seq_id\": 31, \"length\": 37, \"ref_beg_seq_id\": 501}, {\"entity_beg_seq_id\": 68, \"length\": 31, \"ref_beg_seq_id\": 541}, {\"entity_beg_seq_id\": 99, \"length\": 21, \"ref_beg_seq_id\": 574}, {\"entity_beg_seq_id\": 120, \"length\": 1, \"ref_beg_seq_id\": 611}, {\"entity_beg_seq_id\": 121, \"length\": 23, \"ref_beg_seq_id\": 613}, {\"entity_beg_seq_id\": 144, \"length\": 1, \"ref_beg_seq_id\": 643}, {\"entity_beg_seq_id\": 145, \"length\": 6, \"ref_beg_seq_id\": 645}, {\"entity_beg_seq_id\": 151, \"length\": 20, \"ref_beg_seq_id\": 652}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"22719_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 183}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"16182_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"ref_beg_seq_id\": 183}]}], \"rcsb_id\": \"1C3G_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:36:19.709094\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.7,
+            "experimentalMethod": null,
+            "depositionDate": "1999-07-27T00:00:00+0000",
+            "releaseDate": "2000-08-03T00:00:00+0000",
+            "sourceOrganism": [
+              "Saccharomyces cerevisiae"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.7,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Saccharomyces cerevisiae",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "ETVQVNLPVSLEDLFVGKKKSFKIGRKGPHGASEKTQIDIQLKPGWKAGTKITYKNQGDYNPQTGRRKTLQFVIQEKSHPNFKRDGDDLIYTLPLSFKESLLGFSKTIQTIDGRTLPLSRVQPVQPSQTSTYPGQGMPTPKNPSQRGNLIVKYKVDYPISLNDAQKRAID",
+        "description": "Amino acid sequence for chain A (length: 170)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 170
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The crystal structure of the peptide-binding fragment from the yeast Hsp40 protein Sis1.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S090744499900476X",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 170",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2QLD_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "2QLD_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1C3G_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1C3G",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1237.17,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 35,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "SIS1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.60.260.20",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01556",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 577.719999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 659.450000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.466968969502977,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.533031030497021,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2QLD_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2QLD_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

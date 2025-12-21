@@ -1,0 +1,389 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4I6S_9",
+  "description": "Protein-protein interaction interface between chains C and C",
+  "identifier": "4I6S_9",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4I6S",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4I6S",
+    "name": "Protein 4I6S",
+    "description": "Protein structure with PDB ID: 4I6S. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4I6S_9 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4I6S",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Ralstonia solanacearum",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "305",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=305"
+    },
+    "alternateName": [
+      "PDB 4I6S",
+      "Protein ID 4I6S"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4i6s_9.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4I6S_9.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4I6S",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4I6S",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4I6S_9",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "C-C",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "CMR15_11270",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.40.128.190",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF07938",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4I6S\", \"structure_metadata\": {\"pdb_id\": \"4I6S\", \"resolution\": 1.54, \"deposition_date\": \"2012-11-30T00:00:00+0000\", \"release_date\": \"2013-07-31T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Ralstonia solanacearum\"], \"citation\": {\"title\": \"Reduction of lectin valency drastically changes glycolipid dynamics in membranes but not surface avidity\", \"doi\": \"10.1021/cb400254b\", \"authors\": [\"Arnaud, J.\", \"Claudinon, J.\", \"Trondle, K.\", \"Trovaslet, M.\", \"Larson, G.\", \"Thomas, A.\", \"Varrot, A.\", \"Romer, W.\", \"Imberty, A.\", \"Audfray, A.\"]}, \"entity_count\": 6, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 103.765, \"b\": 103.765, \"c\": 100.834, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"B\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"C\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Ralstonia solanacearum\", \"sequence_length\": 91, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Ralstonia solanacearum\", \"sequence_length\": 91, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Ralstonia solanacearum\", \"sequence_length\": 91, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"organism\": \"Ralstonia solanacearum\", \"taxonomy_id\": 305, \"chain_ids\": [\"A\", \"B\", \"C\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 91, \"gene_name\": null, \"uniprot_ids\": [\"D8NA05\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"entities\": [\"1\"], \"chain_count\": 3}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 3, \"chain_count\": 3, \"unique_sequences\": 1, \"avg_sequence_length\": 91.0, \"min_sequence_length\": 91, \"max_sequence_length\": 91}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"pdbx_seq_one_letter_code_can\": \"MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN\", \"pdbx_strand_id\": \"A,B,C\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 1, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 91, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"ATCC 11696\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"CMR15_11270, rsc2107\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"305\", \"pdbx_gene_src_scientific_name\": \"Ralstonia solanacearum\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"Tuner\", \"pdbx_host_org_vector_type\": \"Plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET25\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.85, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/4i6sB/21610/4i6sA\", \"max_rmsd\": 11.656, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 1003, \"identity\": 100}, {\"cluster_id\": 1173, \"identity\": 95}, {\"cluster_id\": 1321, \"identity\": 90}, {\"cluster_id\": 2079, \"identity\": 70}, {\"cluster_id\": 2890, \"identity\": 50}, {\"cluster_id\": 3627, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Burkholderia solanacearum (Smith 1896) Yabuuchi et al. 1993\", \"Pseudomonas solanacearum (Smith 1896) Smith 1914 (Approved Lists 1980)\", \"Ralstonia solanacearum (Smith 1896) Yabuuchi et al. 1996\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Ralstonia solanacearum\", \"ncbi_taxonomy_id\": 305, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Ralstonia solanacearum\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Betaproteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Proteobacteria beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Purple bacteria, beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"b-proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subgroup\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderiales\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderia/Oxalobacter/Ralstonia group\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderiaceae\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderia group\"}, {\"depth\": 8, \"id\": \"48736\", \"name\": \"Ralstonia\"}, {\"depth\": 9, \"id\": \"3116862\", \"name\": \"Ralstonia solanacearum species complex\"}, {\"depth\": 10, \"id\": \"305\", \"name\": \"Ralstonia solanacearum\"}, {\"depth\": 10, \"id\": \"305\", \"name\": \"Burkholderia solanacearum (Smith 1896) Yabuuchi et al. 1993\"}, {\"depth\": 10, \"id\": \"305\", \"name\": \"Pseudomonas solanacearum (Smith 1896) Smith 1914 (Approved Lists 1980)\"}, {\"depth\": 10, \"id\": \"305\", \"name\": \"Ralstonia solanacearum (Smith 1896) Yabuuchi et al. 1996\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"CMR15_11270\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"rsc2107\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 9.75, \"pdbx_description\": \"Putative fucose-binding lectin protein\", \"pdbx_mutation\": \"W76A\", \"pdbx_number_of_molecules\": 3, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Putative fucose-binding lectin protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Putative fucose-binding lectin protein\"], \"provenance_source\": \"PDB Preferred Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"PDB\", \"reference_database_accession\": \"D8NA05\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4I6S\", \"rcsb_id\": \"4I6S_1\", \"uniprot_ids\": [\"D8NA05\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"D8NA05\", \"database_name\": \"UniProt\", \"provenance_source\": \"PDB\"}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 77}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.36, 0.06, 0.04, 0.09, -0.46, 0.4, 0.3, 0.01, 0.31, -0.11, 0.44, 0.4, 0.37, 0.64, -0.21, -0.42, -0.38, -1.31, -0.31, -0.86, -1.1, -1.52, -1.44, -1.16, -1.16, -1.16, -1.16, -1.7, -1.72, -1.48, -1.06, -1.38, -1.08, -0.38, -0.72, -0.68, -0.81, -0.76, -1.0, -1.31, -0.8, -1.09, -0.93, -0.62, -0.32, -0.24, 0.22, 1.08, 1.42, 0.87, 1.16, 1.19, 0.91, 1.5, 1.1, 1.14, 0.53, 0.78, 0.78, 0.5, -0.04, 0.23, -0.34, 0.08, -0.47, -0.71, -1.01, -0.64, -0.37, -0.71, -0.68, -0.99, -0.96, -0.98, -0.67, -1.0, -1.32, -1.32, -1.08, -1.11, -0.52, -0.56, -0.84]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.87, 0.84, 0.8, 0.72, 0.7, 0.66, 0.56, 0.52, 0.43, 0.31, 0.26, 0.26, 0.27, 0.27, 0.31, 0.3, 0.25, 0.27, 0.31, 0.31, 0.25, 0.25, 0.25, 0.26, 0.3, 0.27, 0.23, 0.21, 0.2, 0.25, 0.3, 0.22, 0.24, 0.26, 0.28, 0.27, 0.28, 0.33, 0.29, 0.27, 0.23, 0.28, 0.32, 0.27, 0.22, 0.19, 0.19, 0.23, 0.29, 0.23, 0.22, 0.18, 0.27, 0.22, 0.14, 0.11, 0.11, 0.11, 0.11, 0.13, 0.13, 0.17, 0.16, 0.18, 0.17, 0.17, 0.18, 0.18, 0.18, 0.2, 0.25, 0.22, 0.28, 0.27, 0.31, 0.37, 0.32, 0.31, 0.3, 0.29, 0.29, 0.34, 0.38, 0.43, 0.47, 0.55, 0.66, 0.71, 0.76, 0.8, 0.85]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.39, 0.4, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.39, 0.38, 0.37, 0.37, 0.38, 0.38, 0.38, 0.4, 0.41, 0.43, 0.43, 0.41, 0.39, 0.38, 0.38, 0.37, 0.37, 0.36, 0.38, 0.39, 0.41, 0.42, 0.43, 0.41, 0.41, 0.42, 0.43, 0.43, 0.42, 0.4, 0.38, 0.36, 0.35, 0.33, 0.3, 0.29, 0.29, 0.29, 0.3, 0.31, 0.32, 0.34, 0.36, 0.38, 0.41, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.37, 0.38, 0.39, 0.4, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.4, 0.38, 0.36, 0.34, 0.34, 0.34, 0.34, 0.33, 0.33]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.01099, \"type\": \"mutation\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3627_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2079_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2890_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1003_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1173_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1321_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 91, \"ref_beg_seq_id\": 24}]}], \"rcsb_id\": \"4I6S_1\"}}, \"interface_chains\": {\"chain1\": \"C\", \"chain2\": \"C\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:32.898707\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 91, \"chain2_sequence_length\": 91, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.54,
+            "experimentalMethod": null,
+            "depositionDate": "2012-11-30T00:00:00+0000",
+            "releaseDate": "2013-07-31T00:00:00+0000",
+            "sourceOrganism": [
+              "Ralstonia solanacearum"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 6,
+            "chainCount": 3,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.54,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Ralstonia solanacearum",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 3,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN",
+        "description": "Amino acid sequence for chain A (length: 91)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 91
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN",
+        "description": "Amino acid sequence for chain B (length: 91)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 91
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MSSVQTAATSWGTVPSIRVYTANNGKITERCWDGKGWYTGAFNEPGDNVSVTSWLVGSAIHIRVYASTGTTTTEWCADGNGWTKGAYTATN",
+        "description": "Amino acid sequence for chain C (length: 91)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 91
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Reduction of lectin valency drastically changes glycolipid dynamics in membranes but not surface avidity",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/cb400254b",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, Length: 91",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4I6S_9",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4I6S_9",
+      "description": "Homodimer interaction partner in chain C"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4I6S",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "C",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "C",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "10_344",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2527.26,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 77,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "CMR15_11270",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.40.128.190",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF07938",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 943.13,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1584.13,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.373182814589714,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.626817185410286,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4I6S_9",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4LD8_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4LD8_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4LD8",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4LD8",
+    "name": "Protein 4LD8",
+    "description": "Protein structure with PDB ID: 4LD8. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4LD8_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4LD8",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Sudan ebolavirus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "186540",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=186540"
+    },
+    "alternateName": [
+      "PDB 4LD8",
+      "Protein ID 4LD8"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4ld8_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4ld8.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4LD8",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4LD8",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4LD8_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "VP40",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.60.510.10;2.70.20.20",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF07447",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4LD8\", \"structure_metadata\": {\"pdb_id\": \"4LD8\", \"resolution\": 1.83, \"deposition_date\": \"2013-06-24T00:00:00+0000\", \"release_date\": \"2013-08-21T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Sudan ebolavirus\"], \"citation\": {\"title\": \"Structural Rearrangement of Ebola Virus VP40 Begets Multiple Functions in the Virus Life Cycle.\", \"doi\": \"10.1016/j.cell.2013.07.015\", \"authors\": [\"Bornholdt, Z.A.\", \"Noda, T.\", \"Abelson, D.M.\", \"Halfmann, P.\", \"Wood, M.R.\", \"Kawaoka, Y.\", \"Saphire, E.O.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 63.364, \"b\": 91.494, \"c\": 48.021, \"alpha\": 90.0, \"beta\": 96.08, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Sudan ebolavirus\", \"sequence_length\": 297, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK\", \"organism\": \"Sudan ebolavirus\", \"taxonomy_id\": 186540, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 297, \"gene_name\": null, \"uniprot_ids\": [\"Q5XX06\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 297.0, \"min_sequence_length\": 297, \"max_sequence_length\": 297}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK\", \"pdbx_seq_one_letter_code_can\": \"MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 297, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"SEBOV\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"VP40\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"186540\", \"pdbx_gene_src_scientific_name\": \"Sudan ebolavirus\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.422, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/3tcqA/17678/4ld8A\", \"max_rmsd\": 0.422, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 21008, \"identity\": 100}, {\"cluster_id\": 14007, \"identity\": 95}, {\"cluster_id\": 15515, \"identity\": 90}, {\"cluster_id\": 7193, \"identity\": 70}, {\"cluster_id\": 9124, \"identity\": 50}, {\"cluster_id\": 9738, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"SEBOV\", \"ncbi_common_names\": [\"Ebolavirus Sudan\", \"SEBOV\", \"SUDV\", \"Sudan Ebola virus\", \"Sudan virus\"], \"ncbi_parent_scientific_name\": \"Riboviria\", \"ncbi_scientific_name\": \"Sudan ebolavirus\", \"ncbi_taxonomy_id\": 186540, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Sudan ebolavirus\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"10239\", \"name\": \"Viruses\"}, {\"depth\": 1, \"id\": \"10239\", \"name\": \"Vira\"}, {\"depth\": 1, \"id\": \"10239\", \"name\": \"Viridae\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"Riboviria\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses and retroviruses\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses and viroids\"}, {\"depth\": 3, \"id\": \"2732396\", \"name\": \"Orthornavirae\"}, {\"depth\": 4, \"id\": \"2497569\", \"name\": \"Negarnaviricota\"}, {\"depth\": 4, \"id\": \"2497569\", \"name\": \"Negative-strand RNA viruses\"}, {\"depth\": 5, \"id\": \"2497570\", \"name\": \"Haploviricotina\"}, {\"depth\": 6, \"id\": \"2497574\", \"name\": \"Monjiviricetes\"}, {\"depth\": 6, \"id\": \"2497574\", \"name\": \"Mono-Chu-like virus sp.\"}, {\"depth\": 7, \"id\": \"11157\", \"name\": \"Mononegavirales\"}, {\"depth\": 7, \"id\": \"11157\", \"name\": \"negative-sense genome single-stranded RNA viruses\"}, {\"depth\": 8, \"id\": \"1955138\", \"name\": \"unclassified Mononegavirales\"}, {\"depth\": 8, \"id\": \"1955138\", \"name\": \"unassigned Mononegavirales\"}, {\"depth\": 9, \"id\": \"11266\", \"name\": \"Filoviridae\"}, {\"depth\": 9, \"id\": \"11266\", \"name\": \"Filovirus\"}, {\"depth\": 10, \"id\": \"3044781\", \"name\": \"Orthoebolavirus\"}, {\"depth\": 11, \"id\": \"3052460\", \"name\": \"Orthoebolavirus sudanense\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"Sudan ebolavirus\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"Ebolavirus Sudan\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"SEBOV\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"SUDV\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"Sudan Ebola virus\"}, {\"depth\": 12, \"id\": \"186540\", \"name\": \"Sudan virus\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"VP40\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"186540\", \"name\": \"Sudan ebolavirus\"}, {\"depth\": 1, \"id\": \"186540:matrix_protein\", \"name\": \"matrix protein\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 32.604, \"pdbx_description\": \"Matrix protein VP40\", \"pdbx_fragment\": \"UNP residues 44-326\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Matrix protein VP40\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Membrane-associated protein VP40\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Matrix protein VP40\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q5XX06\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 15, \"length\": 283, \"ref_beg_seq_id\": 44}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF07447\", \"assignment_version\": \"34.0\", \"name\": \"Matrix protein VP40 (Matrix_Filo)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR043079\", \"name\": \"EV matrix protein, N-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR043079\", \"name\": \"EV matrix protein, N-terminal\"}]}, {\"annotation_id\": \"GO:0033645\", \"name\": \"host cell endomembrane system\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033645\", \"name\": \"host cell endomembrane system\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0033644\", \"name\": \"host cell membrane\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}]}, {\"annotation_id\": \"GO:0016020\", \"name\": \"membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"GO:0055036\", \"name\": \"virion membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0044423\", \"name\": \"virion component\"}, {\"id\": \"GO:0055036\", \"name\": \"virion membrane\"}]}, {\"annotation_id\": \"IPR008986\", \"name\": \"EV matrix protein\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008986\", \"name\": \"EV matrix protein\"}]}, {\"annotation_id\": \"GO:0044185\", \"name\": \"host cell late endosome membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033648\", \"name\": \"host intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0033646\", \"name\": \"host intracellular part\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033644\", \"name\": \"host cell membrane\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}, {\"id\": \"GO:0033655\", \"name\": \"host cell cytoplasm part\"}, {\"id\": \"GO:0044185\", \"name\": \"host cell late endosome membrane\"}, {\"id\": \"GO:0033647\", \"name\": \"host intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0030430\", \"name\": \"host cell cytoplasm\"}, {\"id\": \"GO:0044175\", \"name\": \"host cell endosome membrane\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0044184\", \"name\": \"host cell late endosome\"}, {\"id\": \"GO:0044174\", \"name\": \"host cell endosome\"}, {\"id\": \"GO:0043656\", \"name\": \"host intracellular region\"}]}, {\"annotation_id\": \"IPR038057\", \"name\": \"EV matrix domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR038057\", \"name\": \"EV matrix domain superfamily\"}]}, {\"annotation_id\": \"GO:0020002\", \"name\": \"host cell plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0020002\", \"name\": \"host cell plasma membrane\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0033644\", \"name\": \"host cell membrane\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}]}, {\"annotation_id\": \"GO:1990904\", \"name\": \"ribonucleoprotein complex\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:1990904\", \"name\": \"ribonucleoprotein complex\"}]}, {\"annotation_id\": \"GO:0039660\", \"name\": \"structural constituent of virion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0039660\", \"name\": \"structural constituent of virion\"}, {\"id\": \"GO:0005198\", \"name\": \"structural molecule activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0052170\", \"name\": \"symbiont-mediated suppression of host innate immune response\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0052031\", \"name\": \"symbiont-mediated perturbation of host defense response\"}, {\"id\": \"GO:0052562\", \"name\": \"symbiont-mediated suppression of host immune response\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0052170\", \"name\": \"symbiont-mediated suppression of host innate immune response\"}, {\"id\": \"GO:0044003\", \"name\": \"symbiont-mediated perturbation of host process\"}, {\"id\": \"GO:0052553\", \"name\": \"symbiont-mediated perturbation of host immune response\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0052167\", \"name\": \"symbiont-mediated perturbation of host innate immune response\"}, {\"id\": \"GO:0035821\", \"name\": \"modulation of process of another organism\"}, {\"id\": \"GO:0051701\", \"name\": \"biological process involved in interaction with host\"}, {\"id\": \"GO:0044403\", \"name\": \"biological process involved in symbiotic interaction\"}]}, {\"annotation_id\": \"GO:0003723\", \"name\": \"RNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003723\", \"name\": \"RNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0039702\", \"name\": \"viral budding via host ESCRT complex\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0019068\", \"name\": \"virion assembly\"}, {\"id\": \"GO:0016032\", \"name\": \"viral process\"}, {\"id\": \"GO:0046755\", \"name\": \"viral budding\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0039702\", \"name\": \"viral budding via host ESCRT complex\"}, {\"id\": \"GO:0019058\", \"name\": \"viral life cycle\"}]}, {\"annotation_id\": \"IPR035092\", \"name\": \"EV matrix protein, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR035092\", \"name\": \"EV matrix protein, C-terminal\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4LD8\", \"rcsb_id\": \"4LD8_1\", \"uniprot_ids\": [\"Q5XX06\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q5XX06\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9528619528619529, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.8680981595092024}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 14}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.26, -1.86, -2.44, -2.48, -2.51, -2.59, -2.02, -2.06, -1.78, -2.42, -2.12, -2.12, -1.82, -1.22, -1.29, -1.68, -0.82, -0.54, -0.76, -1.06, -1.06, -0.47, -1.07, -0.92, -0.82, -1.38, -1.93, -1.62, -1.41, -1.41, -1.96, -1.1, -0.54, -0.56, -0.27, 0.4, 0.98, 1.58, 1.58, 1.82, 1.28, 1.54, 1.24, 1.51, 1.7, 1.11, 0.64, 0.86, 0.22, 0.77, 0.72, 1.32, 0.42, -0.47, 0.12, -0.01, 0.67, 1.0, 0.96, 0.36, 0.57, 0.96, 1.84, 1.54, 1.33, 0.44, 0.11, -0.39, -0.36, -0.87, -0.51, -1.4, -1.69, -1.38, -1.07, -0.43, -0.16, 0.49, 0.79, 0.9, 1.49, 1.49, 1.42, 1.42, 1.72, 1.44, 0.59, 0.69, 0.22, -0.41, -0.12, -0.37, -0.68, -1.36, -0.86, -0.03, -0.84, -0.33, -0.29, -0.99, -0.18, 0.17, -0.04, -0.51, -0.48, -0.16, -1.01, -0.98, -0.66, -0.66, -1.11, -0.3, 0.17, -0.83, -0.44, -0.1, -0.13, -0.34, -0.57, 0.24, 0.24, -0.57, -0.46, -0.36, 0.16, 0.97, 1.18, 0.8, 0.96, 0.14, 0.96, 1.17, 0.47, -0.14, -0.26, -0.16, 0.33, -0.52, 0.29, -0.21, 0.17, 0.98, 0.69, 0.8, 1.34, 0.96, 0.96, 0.36, 0.86, 0.48, 0.26, 0.89, 0.39, -0.18, -0.18, -0.18, -0.39, -0.89, -0.89, -1.18, -1.77, -1.27, -1.26, -1.22, -0.63, 0.18, -0.24, -0.24, -0.2, 0.61, 0.1, 0.5, 0.19, -0.19, -1.04, -0.12, -0.44, -0.58, -0.53, -0.02, 0.09, 0.27, 0.4, 0.4, -0.1, 0.36, 0.1, -0.8, -1.27, -2.04, -1.4, -1.44, -1.4, -0.9, -0.93, -0.3, -0.04, -0.39, -0.47, -0.43, -0.73, -0.42, -0.34, 0.2, -0.39, 0.21, 0.81, 0.86, -0.03, 0.67, 0.31, 0.31, 0.31, 0.52, 0.6, 0.0, 0.21, 0.8, 0.06, 0.4, 0.4, 0.43, 0.57, 0.57, 0.57, 1.21, 0.83, 0.88, 1.39, 1.31, 1.28, 0.97, 0.03, 0.84, 0.3, 0.43, 0.39, -0.47, -0.68, -1.23, -1.27, -1.27, -2.08, -2.04, -2.39, -2.13, -1.2, -0.91, -1.0, -0.14, 0.71, 1.52, 1.39, 1.34, 1.38, 1.38, 0.83, 1.43, 0.58, -0.02, 0.06, 0.14, 0.4, 0.5, -0.39, 0.08, -0.42, 0.18, 0.82, 0.82, 0.83, 0.83, 0.49, 0.73, -0.08, -0.39, -0.32, -1.14, -1.73, -1.83, -1.46, -1.16, -0.73, -0.43, -0.19, -0.04, 0.22, -0.08, -0.33]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.95, 0.94, 0.93, 0.91, 0.89, 0.87, 0.84, 0.8, 0.76, 0.69, 0.64, 0.59, 0.56, 0.55, 0.54, 0.53, 0.52, 0.52, 0.52, 0.52, 0.53, 0.54, 0.54, 0.53, 0.53, 0.51, 0.5, 0.49, 0.48, 0.47, 0.47, 0.46, 0.45, 0.45, 0.45, 0.45, 0.45, 0.44, 0.44, 0.43, 0.42, 0.41, 0.4, 0.39, 0.38, 0.37, 0.37, 0.38, 0.39, 0.39, 0.41, 0.42, 0.43, 0.42, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.39, 0.38, 0.38, 0.37, 0.37, 0.38, 0.36, 0.34, 0.32, 0.3, 0.29, 0.29, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.27, 0.27, 0.27, 0.26, 0.25, 0.25, 0.24, 0.24, 0.25, 0.25, 0.25, 0.25, 0.25, 0.26, 0.26, 0.27, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.27, 0.26, 0.26, 0.25, 0.25, 0.25, 0.26, 0.26, 0.27, 0.28, 0.28, 0.29, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.42, 0.42, 0.43, 0.43, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.4, 0.39, 0.38, 0.36, 0.35, 0.34, 0.33, 0.32, 0.32, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.3, 0.3, 0.3, 0.29, 0.29, 0.29, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.29, 0.29, 0.3, 0.31, 0.32, 0.32, 0.33, 0.35, 0.36, 0.37, 0.38, 0.39, 0.39, 0.39, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.4, 0.38, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.96, 0.94, 0.92, 0.9, 0.86, 0.82, 0.78, 0.76, 0.73, 0.7, 0.67, 0.66, 0.66, 0.69, 0.66, 0.65, 0.65, 0.65, 0.66, 0.63, 0.64, 0.65, 0.65, 0.65, 0.64, 0.66, 0.68, 0.69, 0.67, 0.61, 0.58, 0.58, 0.58, 0.5, 0.39, 0.35, 0.37, 0.34, 0.33, 0.26, 0.31, 0.23, 0.16, 0.16, 0.16, 0.18, 0.18, 0.11, 0.07, 0.05, 0.07, 0.09, 0.05, 0.06, 0.06, 0.06, 0.05, 0.06, 0.04, 0.04, 0.03, 0.02, 0.04, 0.06, 0.06, 0.06, 0.03, 0.03, 0.02, 0.04, 0.05, 0.05, 0.05, 0.07, 0.05, 0.05, 0.07, 0.07, 0.05, 0.09, 0.05, 0.09, 0.07, 0.07, 0.07, 0.04, 0.04, 0.07, 0.06, 0.11, 0.11, 0.13, 0.08, 0.05, 0.07, 0.06, 0.1, 0.13, 0.13, 0.16, 0.17, 0.25, 0.17, 0.27, 0.28, 0.28, 0.4, 0.31, 0.31, 0.26, 0.18, 0.18, 0.12, 0.19, 0.27, 0.27, 0.3, 0.2, 0.12, 0.2, 0.22, 0.13, 0.08, 0.08, 0.08, 0.1, 0.05, 0.05, 0.05, 0.06, 0.1, 0.1, 0.06, 0.08, 0.04, 0.04, 0.02, 0.03, 0.05, 0.05, 0.05, 0.03, 0.03, 0.05, 0.09, 0.08, 0.04, 0.08, 0.06, 0.1, 0.08, 0.04, 0.07, 0.13, 0.14, 0.22, 0.23, 0.31, 0.31, 0.27, 0.36, 0.37, 0.43, 0.45, 0.46, 0.47, 0.45, 0.48, 0.45, 0.41, 0.44, 0.47, 0.56, 0.5, 0.51, 0.52, 0.47, 0.39, 0.34, 0.36, 0.43, 0.44, 0.44, 0.46, 0.53, 0.52, 0.5, 0.5, 0.49, 0.49, 0.56, 0.49, 0.46, 0.42, 0.51, 0.5, 0.48, 0.45, 0.51, 0.56, 0.47, 0.39, 0.38, 0.3, 0.27, 0.27, 0.27, 0.18, 0.18, 0.16, 0.11, 0.13, 0.12, 0.13, 0.18, 0.13, 0.12, 0.13, 0.13, 0.08, 0.08, 0.07, 0.12, 0.07, 0.14, 0.17, 0.1, 0.06, 0.06, 0.07, 0.12, 0.1, 0.08, 0.13, 0.13, 0.11, 0.11, 0.11, 0.12, 0.17, 0.24, 0.24, 0.34, 0.35, 0.35, 0.24, 0.26, 0.28, 0.29, 0.3, 0.32, 0.32, 0.34, 0.27, 0.27, 0.21, 0.22, 0.28, 0.2, 0.19, 0.22, 0.22, 0.23, 0.16, 0.13, 0.17, 0.19, 0.12, 0.16, 0.24, 0.33, 0.23, 0.24, 0.33, 0.31, 0.3, 0.36, 0.38, 0.32, 0.39, 0.3, 0.27, 0.21, 0.16, 0.21, 0.25, 0.27, 0.37, 0.48, 0.53, 0.54, 0.57, 0.68, 0.7, 0.73, 0.84, 0.88]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.04714, \"maximum_length\": 14, \"minimum_length\": 14, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7193_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 30}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"21008_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 30}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"15515_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 30}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q5XX06\", \"aligned_regions\": [{\"entity_beg_seq_id\": 15, \"length\": 283, \"ref_beg_seq_id\": 44}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"14007_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 30}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"9738_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 50}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"9124_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 297, \"ref_beg_seq_id\": 30}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Membrane-associated protein VP40\"}], \"rcsb_id\": \"4LD8_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:43.891674\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.83,
+            "experimentalMethod": null,
+            "depositionDate": "2013-06-24T00:00:00+0000",
+            "releaseDate": "2013-08-21T00:00:00+0000",
+            "sourceOrganism": [
+              "Sudan ebolavirus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.83,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Sudan ebolavirus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAHHHHHHVDDDDKMDTPSNSMRPVADDNIDHTSHTPNGVASAFILEATVNVISGPKVLMKQIPIWLPLGIADQKTYSFDSTTAAIMLASYTITHFGKANNPLVRVNRLGQGIPDHPLRLLRMGNQAFLQEFVLPPVQLPQYFTFDLTALKLVTQPLPAATWTDETPSNLSGALRPGLSFHPKLRPVLLPGKTGKKGHVSDLTAPDKIQTIVNLMQDFKIVPIDPAKSIIGIEVPELLVHKLTGKKMSQKNGQPIIPVLLPKYIGLDPISPGDLTMVITPDYDDCHSPASCSYLSEK",
+        "description": "Amino acid sequence for chain A (length: 297)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 297
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural Rearrangement of Ebola Virus VP40 Begets Multiple Functions in the Virus Life Cycle.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.cell.2013.07.015",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 297",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4LD8_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4LDB_4"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4LD8_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4LD8",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1696.58,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 46,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "VP40",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.60.510.10;2.70.20.20",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF07447",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 542.150000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1154.43,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.319554633439037,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.680445366560963,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4LD8_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4LDB_4"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

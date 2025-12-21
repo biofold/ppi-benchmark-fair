@@ -1,0 +1,388 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2XHF_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2XHF_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2XHF",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2XHF",
+    "name": "Protein 2XHF",
+    "description": "Protein structure with PDB ID: 2XHF. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2XHF_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2XHF",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Alvinella pompejana",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "6376",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6376"
+    },
+    "alternateName": [
+      "PDB 2XHF",
+      "Protein ID 2XHF"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2xhf_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2xhf.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2XHF",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2XHF",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2XHF_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.30.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF08534",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2XHF\", \"structure_metadata\": {\"pdb_id\": \"2XHF\", \"resolution\": 1.3, \"deposition_date\": \"2010-06-15T00:00:00+0000\", \"release_date\": \"2011-07-06T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Alvinella pompejana\"], \"citation\": {\"title\": \"Crystal Structure of Peroxiredoxin 5 from Alvinella Pompejana\", \"authors\": [\"Smeets, A.\", \"Knoops, B.\", \"Declercq, J.P.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 39.54, \"b\": 92.92, \"c\": 49.34, \"alpha\": 90.0, \"beta\": 109.55, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\", \"B\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Alvinella pompejana\", \"sequence_length\": 171, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Alvinella pompejana\", \"sequence_length\": 171, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\", \"organism\": \"Alvinella pompejana\", \"taxonomy_id\": 6376, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 171, \"gene_name\": null, \"uniprot_ids\": [\"G1K3P1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 171.0, \"min_sequence_length\": 171, \"max_sequence_length\": 171}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\", \"pdbx_seq_one_letter_code_can\": \"MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 171, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"6376\", \"pdbx_gene_src_scientific_name\": \"ALVINELLA POMPEJANA\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"ESCHERICHIA COLI\", \"pdbx_host_org_strain\": \"M15\", \"pdbx_host_org_vector\": \"PQE-30\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.334, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/2xhfA/10445/2xhfA\", \"max_rmsd\": 0.334, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 476641, \"identity\": 100}, {\"cluster_id\": 427181, \"identity\": 95}, {\"cluster_id\": 407284, \"identity\": 90}, {\"cluster_id\": 472661, \"identity\": 70}, {\"cluster_id\": 274323, \"identity\": 50}, {\"cluster_id\": 24109, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"ESCHERICHIA COLI\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Alvinella pompejana\", \"ncbi_taxonomy_id\": 6376, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"ALVINELLA POMPEJANA\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33317\", \"name\": \"Protostomia\"}, {\"depth\": 8, \"id\": \"2697495\", \"name\": \"Spiralia\"}, {\"depth\": 9, \"id\": \"1206795\", \"name\": \"Lophotrochozoa\"}, {\"depth\": 10, \"id\": \"6340\", \"name\": \"Annelida\"}, {\"depth\": 10, \"id\": \"6340\", \"name\": \"annelid worms\"}, {\"depth\": 10, \"id\": \"6340\", \"name\": \"segmented worms\"}, {\"depth\": 11, \"id\": \"6341\", \"name\": \"Polychaeta\"}, {\"depth\": 11, \"id\": \"6341\", \"name\": \"polychaetes\"}, {\"depth\": 12, \"id\": \"105389\", \"name\": \"Sedentaria\"}, {\"depth\": 12, \"id\": \"105389\", \"name\": \"Palpata\"}, {\"depth\": 13, \"id\": \"105391\", \"name\": \"Canalipalpata\"}, {\"depth\": 14, \"id\": \"6373\", \"name\": \"Terebellida\"}, {\"depth\": 15, \"id\": \"2784887\", \"name\": \"Terebelliformia\"}, {\"depth\": 16, \"id\": \"36108\", \"name\": \"Alvinellidae\"}, {\"depth\": 16, \"id\": \"36108\", \"name\": \"Pompeii worms\"}, {\"depth\": 17, \"id\": \"6375\", \"name\": \"Alvinella\"}, {\"depth\": 18, \"id\": \"6376\", \"name\": \"Alvinella pompejana\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 19.268, \"pdbx_description\": \"PEROXIREDOXIN 5\", \"pdbx_ec\": \"1.11.1.15\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.11\", \"name\": \"Acting on a peroxide as acceptor\"}, {\"depth\": 3, \"id\": \"1.11.1\", \"name\": \"Peroxidases\"}, {\"depth\": 4, \"id\": \"1.11.1.15\", \"name\": \"peroxiredoxin\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"PEROXIREDOXIN 5\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"1.11.1.15\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Peroxiredoxin 5\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"G1K3P1\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 91, \"length\": 81, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF08534\", \"assignment_version\": \"34.0\", \"name\": \"Redoxin (Redoxin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005739\", \"name\": \"mitochondrion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005739\", \"name\": \"mitochondrion\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0042744\", \"name\": \"hydrogen peroxide catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0042743\", \"name\": \"hydrogen peroxide metabolic process\"}, {\"id\": \"GO:0072593\", \"name\": \"reactive oxygen species metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0042744\", \"name\": \"hydrogen peroxide catabolic process\"}]}, {\"annotation_id\": \"GO:0008379\", \"name\": \"thioredoxin peroxidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004601\", \"name\": \"peroxidase activity\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0140824\", \"name\": \"thioredoxin-dependent peroxiredoxin activity\"}, {\"id\": \"GO:0016209\", \"name\": \"antioxidant activity\"}, {\"id\": \"GO:0016684\", \"name\": \"oxidoreductase activity, acting on peroxide as acceptor\"}, {\"id\": \"GO:0008379\", \"name\": \"thioredoxin peroxidase activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0051920\", \"name\": \"peroxiredoxin activity\"}]}, {\"annotation_id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\"}, {\"id\": \"GO:0019725\", \"name\": \"cellular homeostasis\"}, {\"id\": \"GO:0042592\", \"name\": \"homeostatic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"IPR013740\", \"name\": \"Redoxin\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR013766\", \"name\": \"Thioredoxin domain\"}, {\"depth\": 2, \"id\": \"IPR013740\", \"name\": \"Redoxin\"}]}, {\"annotation_id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0062197\", \"name\": \"cellular response to chemical stress\"}]}, {\"annotation_id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\"}]}, {\"annotation_id\": \"GO:0005777\", \"name\": \"peroxisome\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005777\", \"name\": \"peroxisome\"}, {\"id\": \"GO:0042579\", \"name\": \"microbody\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"IPR037944\", \"name\": \"Peroxiredoxin-5-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR037944\", \"name\": \"Peroxiredoxin-5-like\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"2XHF\", \"rcsb_id\": \"2XHF_1\", \"uniprot_ids\": [\"G1K3P1\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"G1K3P1\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.47368421052631576, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF08534\", \"name\": \"Redoxin (Redoxin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 91, \"end_seq_id\": 162}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-2.2, -2.77, -2.31, -2.36, -2.44, -1.59, -1.67, -0.84, -0.53, -0.57, 0.29, 0.83, 0.74, 0.53, 0.5, 1.36, 1.36, 1.26, 1.26, 0.37, 0.33, 0.33, 0.63, -0.27, -0.78, -0.93, -0.97, -0.08, -0.04, -0.9, -0.26, 0.14, 0.08, 0.12, -0.69, -0.94, -1.49, -0.63, 0.18, 0.02, -0.38, 0.59, 1.1, 1.56, 2.19, 2.54, 2.51, 1.91, 1.56, 1.56, 0.7, -0.16, -0.47, -0.17, -0.66, -1.51, -1.48, -1.01, -1.01, -0.2, 0.04, 0.01, -0.92, -0.43, -0.48, -0.72, -1.53, -1.49, -2.06, -2.27, -1.96, -1.02, -1.13, -0.42, 0.47, 1.06, 1.57, 1.32, 1.29, 1.19, 1.0, 1.27, 1.2, 0.9, 0.9, 0.33, 0.68, 0.63, 0.73, 0.89, 0.03, -0.36, -0.94, -1.5, -1.83, -1.29, -1.36, -1.07, -1.11, -0.52, -0.73, -0.13, -0.13, 0.26, -0.63, 0.18, -0.11, -1.03, -1.03, -0.22, -0.48, -0.2, -0.54, 0.27, -0.43, -0.44, -0.03, -0.67, -0.88, -0.41, -0.38, -0.38, -1.19, -1.3, -1.3, -1.71, -1.78, -2.13, -2.36, -2.1, -1.29, -0.4, -0.29, -0.59, -0.48, -0.41, 0.23, -0.47, -0.77, -0.72, -1.31, -1.0, -1.0, -0.79, -0.74, -0.74, -0.32, -0.28, -0.32, -0.03, 0.32, 1.13, 1.73, 2.03, 2.03, 1.72, 1.27, 0.46, -0.18, -0.84, -1.66, -2.51, -2.5]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.98, 0.97, 0.96, 0.91, 0.89, 0.82, 0.79, 0.75, 0.67, 0.58, 0.56, 0.6, 0.54, 0.47, 0.41, 0.32, 0.32, 0.31, 0.24, 0.26, 0.25, 0.25, 0.24, 0.13, 0.21, 0.13, 0.18, 0.18, 0.13, 0.1, 0.13, 0.12, 0.11, 0.15, 0.21, 0.18, 0.18, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.03, 0.03, 0.03, 0.05, 0.05, 0.05, 0.07, 0.12, 0.07, 0.08, 0.1, 0.06, 0.03, 0.05, 0.05, 0.05, 0.06, 0.09, 0.07, 0.07, 0.09, 0.16, 0.21, 0.12, 0.12, 0.12, 0.08, 0.07, 0.05, 0.05, 0.04, 0.02, 0.04, 0.07, 0.08, 0.08, 0.1, 0.07, 0.06, 0.1, 0.06, 0.05, 0.05, 0.05, 0.05, 0.06, 0.07, 0.12, 0.13, 0.17, 0.18, 0.2, 0.23, 0.17, 0.15, 0.13, 0.18, 0.24, 0.28, 0.32, 0.26, 0.35, 0.35, 0.33, 0.27, 0.33, 0.32, 0.3, 0.22, 0.23, 0.24, 0.32, 0.32, 0.34, 0.34, 0.37, 0.37, 0.39, 0.4, 0.4, 0.39, 0.49, 0.41, 0.38, 0.39, 0.38, 0.31, 0.31, 0.31, 0.37, 0.37, 0.3, 0.3, 0.3, 0.27, 0.33, 0.32, 0.32, 0.35, 0.35, 0.28, 0.28, 0.28, 0.29, 0.29, 0.26, 0.27, 0.27, 0.27, 0.2, 0.21, 0.2, 0.28, 0.27, 0.27, 0.33, 0.31, 0.31, 0.36, 0.37, 0.41, 0.53, 0.57, 0.61, 0.7, 0.76, 0.84, 0.92]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.37, 0.36, 0.36, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.37, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.34, 0.34, 0.33, 0.33, 0.33, 0.34, 0.34, 0.34, 0.33, 0.33, 0.34, 0.34, 0.35, 0.35, 0.35, 0.34, 0.32, 0.31, 0.29, 0.27, 0.25, 0.23, 0.21, 0.19, 0.17, 0.15, 0.14, 0.13, 0.12, 0.12, 0.11, 0.11, 0.11, 0.11, 0.12, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.17, 0.18, 0.18, 0.19, 0.2, 0.21, 0.22, 0.23, 0.24, 0.25, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3, 0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.36, 0.36, 0.35, 0.35, 0.36, 0.38, 0.39, 0.4, 0.41, 0.41, 0.43, 0.43, 0.43, 0.42, 0.43, 0.43, 0.41, 0.4, 0.38, 0.37, 0.36, 0.34, 0.33, 0.32, 0.32, 0.32, 0.34, 0.36, 0.38, 0.4, 0.42, 0.43, 0.41, 0.4, 0.38, 0.36]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.42105, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"24109_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 25, \"ref_beg_seq_id\": 29}, {\"entity_beg_seq_id\": 26, \"length\": 15, \"ref_beg_seq_id\": 55}, {\"entity_beg_seq_id\": 41, \"length\": 19, \"ref_beg_seq_id\": 71}, {\"entity_beg_seq_id\": 60, \"length\": 41, \"ref_beg_seq_id\": 91}, {\"entity_beg_seq_id\": 101, \"length\": 71, \"ref_beg_seq_id\": 135}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"476641_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"407284_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"G1K3P1\", \"aligned_regions\": [{\"entity_beg_seq_id\": 91, \"length\": 81, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"427181_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"274323_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"472661_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"2XHF_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:39:18.304504\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.3,
+            "experimentalMethod": null,
+            "depositionDate": "2010-06-15T00:00:00+0000",
+            "releaseDate": "2011-07-06T00:00:00+0000",
+            "sourceOrganism": [
+              "Alvinella pompejana"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.3,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Alvinella pompejana",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT",
+        "description": "Amino acid sequence for chain A (length: 171)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 171
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MRGSHHHHHHGSPIKVGDIIPDVLVYEDVPSKSFPIHDVFRGRKGILFSVVGAFVPGSNNHIPEYLSLYDKFKEEGYHTIACIAVNDPFVMAAWGKTVDPEHKIRMLADMHGEFTRALGTELDSSKMLGNNRSRRYAMLIDDNKIRSVSTEPDITGLACLLSIQRQKENKT",
+        "description": "Amino acid sequence for chain B (length: 171)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 171
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal Structure of Peroxiredoxin 5 from Alvinella Pompejana",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 171",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4F82_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 7,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4F82_1",
+          "5J9C_1",
+          "2PWJ_2",
+          "4MMM_5",
+          "2WFC_1",
+          "5K2I_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2XHF_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2XHF",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1421.81,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 54,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.30.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF08534",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 389.01,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1032.8,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.273601958067534,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.726398041932466,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4F82_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 7,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4F82_1",
+        "5J9C_1",
+        "2PWJ_2",
+        "4MMM_5",
+        "2WFC_1",
+        "5K2I_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4OV8_5",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "4OV8_5",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4OV8",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4OV8",
+    "name": "Protein 4OV8",
+    "description": "Protein structure with PDB ID: 4OV8. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4OV8_5 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4OV8",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Pleurotus ostreatus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "5322",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5322"
+    },
+    "alternateName": [
+      "PDB 4OV8",
+      "Protein ID 4OV8"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4ov8_5.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4OV8_5.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4OV8",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4OV8",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4OV8_5",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "plyB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01823;PF18684",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4OV8\", \"structure_metadata\": {\"pdb_id\": \"4OV8\", \"resolution\": 2.15, \"deposition_date\": \"2014-02-20T00:00:00+0000\", \"release_date\": \"2015-02-18T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Pleurotus ostreatus\"], \"citation\": {\"title\": \"Conformational Changes during Pore Formation by the Perforin-Related Protein Pleurotolysin\", \"doi\": \"10.1371/journal.pbio.1002049\", \"authors\": [\"Lukoyanova, N.\", \"Kondos, S.C.\", \"Farabella, I.\", \"Law, R.H.P.\", \"Reboul, C.F.\", \"Caradoc-Davies, T.T.\", \"Spicer, B.A.\", \"Kleifeld, O.\", \"Traore, D.A.\", \"Ekkel, S.M.\", \"Voskoboinik, I.\", \"Trapani, J.A.\", \"Hatfaludi, T.\", \"Oliver, K.\", \"Hotze, E.M.\", \"Tweten, R.K.\", \"Whisstock, J.C.\", \"Topf, M.\", \"Saibil, H.R.\", \"Dunstone, M.A.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 71.181, \"b\": 71.181, \"c\": 174.675, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Pleurotus ostreatus\", \"sequence_length\": 476, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"organism\": \"Pleurotus ostreatus\", \"taxonomy_id\": 5322, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 476, \"gene_name\": null, \"uniprot_ids\": [\"Q5W9E8\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 476.0, \"min_sequence_length\": 476, \"max_sequence_length\": 476}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"pdbx_seq_one_letter_code_can\": \"MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 3, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 476, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Oyster mushroom\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"mPlyB, plyB\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"5322\", \"pdbx_gene_src_scientific_name\": \"Pleurotus ostreatus\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21(DE3) pLysS codon plus\", \"pdbx_host_org_vector_type\": \"Plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET3a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.678, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/4ov8A/23775/4ov8A\", \"max_rmsd\": 0.678, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 971459, \"identity\": 100}, {\"cluster_id\": 11348, \"identity\": 95}, {\"cluster_id\": 12536, \"identity\": 90}, {\"cluster_id\": 13063, \"identity\": 70}, {\"cluster_id\": 15601, \"identity\": 50}, {\"cluster_id\": 16480, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"Oyster mushroom\", \"ncbi_common_names\": [\"Agaricus ostreatus\", \"oyster mushroom\", \"shimeji\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Pleurotus ostreatus\", \"ncbi_taxonomy_id\": 5322, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Pleurotus ostreatus\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Fungi\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Mycota\"}, {\"depth\": 5, \"id\": \"451864\", \"name\": \"Dikarya\"}, {\"depth\": 6, \"id\": \"5204\", \"name\": \"Basidiomycota\"}, {\"depth\": 6, \"id\": \"5204\", \"name\": \"basidiomycete fungi\"}, {\"depth\": 6, \"id\": \"5204\", \"name\": \"basidiomycetes\"}, {\"depth\": 7, \"id\": \"5302\", \"name\": \"Agaricomycotina\"}, {\"depth\": 7, \"id\": \"5302\", \"name\": \"Hymenomycetes\"}, {\"depth\": 8, \"id\": \"155619\", \"name\": \"Agaricomycetes\"}, {\"depth\": 9, \"id\": \"452333\", \"name\": \"Agaricomycetidae\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Agaricales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Agaricales anamorphs\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Hymenogastrales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Lycoperdales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Nidulariales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"Tulostomatales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"anamorphic Agaricales\"}, {\"depth\": 10, \"id\": \"5338\", \"name\": \"gill mushrooms\"}, {\"depth\": 11, \"id\": \"2983527\", \"name\": \"Pleurotineae\"}, {\"depth\": 12, \"id\": \"104366\", \"name\": \"Pleurotaceae\"}, {\"depth\": 13, \"id\": \"5320\", \"name\": \"Pleurotus\"}, {\"depth\": 14, \"id\": \"5322\", \"name\": \"Pleurotus ostreatus\"}, {\"depth\": 14, \"id\": \"5322\", \"name\": \"Agaricus ostreatus\"}, {\"depth\": 14, \"id\": \"5322\", \"name\": \"oyster mushroom\"}, {\"depth\": 14, \"id\": \"5322\", \"name\": \"shimeji\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"mPlyB\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"plyB\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 52.159, \"pdbx_description\": \"Pleurotolysin B\", \"pdbx_fragment\": \"TMH1-lock, UNP residues 49-523\", \"pdbx_mutation\": \"Y166C, G266C, C487A\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Pleurotolysin B\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Pleurotolysin B\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q5W9E8\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 2, \"length\": 475, \"ref_beg_seq_id\": 49}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF18684\", \"assignment_version\": \"34.0\", \"name\": \"Pleurotolysin B C-terminal domain (PlyB_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF22693\", \"assignment_version\": \"34.0\", \"name\": \"Fungal MACPF-like domain (MACPF_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR020864\", \"name\": \"Membrane attack complex component/perforin (MACPF) domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020864\", \"name\": \"Membrane attack complex component/perforin (MACPF) domain\"}]}, {\"annotation_id\": \"IPR040971\", \"name\": \"Pleurotolysin B, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR040971\", \"name\": \"Pleurotolysin B, C-terminal\"}]}, {\"annotation_id\": \"IPR054586\", \"name\": \"MACPF-like domain, fungal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR054586\", \"name\": \"MACPF-like domain, fungal\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4OV8\", \"rcsb_id\": \"4OV8_1\", \"uniprot_ids\": [\"Q5W9E8\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q5W9E8\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9978991596638656, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.9082217973231358}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF18684\", \"name\": \"Pleurotolysin B C-terminal domain (PlyB_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 300, \"end_seq_id\": 472}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF22693\", \"name\": \"Fungal MACPF-like domain (MACPF_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 27, \"end_seq_id\": 294}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 91}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 174}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 440}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"initiating methionine\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 1}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.54, -1.14, -0.59, 0.3, -0.29, -0.63, -0.42, -0.42, -1.34, -1.46, -1.46, -2.36, -2.43, -1.54, -1.54, -1.76, -2.07, -1.96, -1.03, -0.22, -0.22, -0.69, -0.69, 0.2, 0.8, 1.14, 1.03, 0.22, -0.24, 0.01, 0.52, -0.16, -0.74, -1.04, -1.5, -1.39, -0.58, -0.03, 0.61, -0.36, -0.36, -0.66, -0.64, 0.28, 0.17, -0.06, -0.06, -0.02, 0.09, -0.12, -0.23, 0.04, -0.46, 0.54, -0.04, -0.62, -1.2, -0.89, -0.29, -0.18, -0.18, -0.49, -0.68, -0.37, -0.68, -0.68, -0.18, -0.18, -0.18, -0.47, -0.47, -0.92, -1.23, -0.93, -0.66, -1.17, -0.91, -0.96, -0.4, -0.1, 0.24, 0.46, 0.82, 1.12, 1.13, 0.87, 0.91, 0.36, 0.06, -0.29, -0.2, -0.87, -1.46, -1.47, -1.76, -1.06, -1.4, -1.4, -1.33, -1.63, -1.32, -1.62, -1.97, -1.97, -2.07, -1.78, -1.47, -1.48, -1.18, -1.6, -1.36, -0.5, -0.1, -0.49, -0.73, -0.7, -1.11, -0.52, -0.41, 0.04, -0.46, -0.84, -0.84, -0.84, -0.89, -0.43, -0.62, -0.62, -1.32, -0.78, -0.2, -0.46, 0.36, 0.36, 0.22, -0.48, 0.22, 0.53, -0.02, -0.57, 0.33, -0.48, -0.19, 0.19, 1.0, 0.89, 0.53, 0.82, 0.79, 0.28, 0.59, 0.0, -0.63, -1.56, -2.14, -1.51, -1.29, -1.6, -1.94, -1.44, -0.74, -0.7, -0.59, -0.34, -0.59, -0.73, 0.12, 0.82, -0.1, -0.49, -0.53, 0.32, 0.11, 0.66, 0.33, -0.18, -0.02, 0.9, 0.89, 1.52, 0.7, 0.98, 0.69, 0.34, 0.31, 0.16, -0.36, -0.77, -1.06, -1.09, -1.4, -2.0, -1.69, -2.0, -1.84, -2.19, -2.08, -2.38, -1.52, -1.57, -0.98, -0.94, -0.13, -0.99, -0.6, -0.01, 0.84, -0.06, 0.33, 0.03, 0.03, -0.43, -0.09, 0.16, -0.12, -0.39, 0.0, -0.31, -0.26, -0.6, -0.63, -0.98, -1.22, -1.22, -0.92, -0.96, -0.68, -0.72, -0.72, -1.03, -1.14, -1.53, -1.03, -1.92, -1.38, -1.73, -1.79, -0.9, -0.04, 0.07, 0.46, -0.01, -0.01, -0.62, -0.27, -0.56, -0.56, -1.41, -1.41, -1.44, -1.79, -1.79, -1.74, -1.2, -0.57, -1.16, -0.84, -0.84, -1.16, -0.86, -0.86, -1.11, -1.68, -2.38, -1.82, -1.24, -1.24, -0.39, -0.38, -0.38, 0.44, 0.47, 1.17, 1.17, 0.87, 0.87, 0.82, 1.32, 1.53, 0.68, 0.58, 0.88, -0.09, -0.33, -0.33, -0.29, -1.14, -1.36, -0.54, 0.06, -0.88, -0.56, -0.09, 0.72, 0.21, 0.21, 0.5, 0.54, -0.27, 0.63, 0.42, -0.43, -0.39, -0.52, -0.13, 0.39, -0.47, -0.17, -0.21, 0.0, 0.9, 0.34, 0.99, 0.89, -0.03, 0.18, -0.17, -0.63, -0.26, -0.22, -0.31, -0.58, -0.48, -0.08, 0.41, 0.74, 1.21, 0.97, 0.08, 0.18, 0.18, -0.17, 0.13, -0.27, -0.6, -0.82, -0.36, 0.46, 1.0, 0.37, 0.58, 0.3, 0.81, 1.07, 1.07, 0.14, -0.37, -0.88, -0.94, -1.16, -1.26, -1.48, -0.88, -1.16, -0.74, -0.23, -0.54, -0.43, -0.09, 0.0, -0.24, -0.46, -0.46, -0.76, -1.57, -1.39, -0.69, -0.18, -0.48, -0.01, -0.4, -0.71, -0.47, -0.47, -0.43, -0.32, -0.88, -0.57, -1.13, -0.64, -0.3, -0.24, 0.46, 0.8, 0.02, -0.28, -0.28, -0.31, -0.8, -0.8, -0.8, -1.19, -0.97, -1.11, -0.77, -0.27, -0.59, -0.59, -0.93, -1.2, -0.66, -0.66, -0.33, -0.33, -1.26, -0.9, -1.11, -0.51, -0.51, -1.02, -1.83, -1.73, -1.19, -0.78, -0.71, -0.12, 0.13, 0.34, 0.86, 1.17, 0.74, 0.07, 0.62, 0.31, 0.58, -0.07, 0.39, -0.26, -0.57, -0.46, -0.67, -0.93, -0.23, -1.09, -0.49, -1.23, -1.14, -0.33, 0.52, 0.41, 0.68, -0.07, 0.74, 0.14, 0.53, 0.53, 0.07, -0.79, -0.47, -1.11, -1.11, -1.71, -2.03, -2.08, -1.79, -1.32, -1.37, -1.62, -1.53, -0.89, -0.24, 0.68, 1.08, 0.49, -0.02, 0.37, 0.41, 0.07]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.53, 0.53, 0.53, 0.52, 0.52, 0.51, 0.5, 0.5, 0.49, 0.48, 0.48, 0.47, 0.47, 0.46, 0.46, 0.45, 0.45, 0.44, 0.44, 0.44, 0.45, 0.45, 0.45, 0.46, 0.47, 0.48, 0.49, 0.5, 0.5, 0.51, 0.51, 0.51, 0.51, 0.5, 0.5, 0.5, 0.5, 0.49, 0.49, 0.49, 0.49, 0.48, 0.48, 0.48, 0.49, 0.49, 0.48, 0.48, 0.47, 0.47, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.45, 0.45, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.45, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.37, 0.37, 0.38, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.42, 0.42, 0.41, 0.4, 0.4, 0.41, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.44, 0.44, 0.45, 0.45, 0.46, 0.46, 0.47, 0.47, 0.46, 0.45, 0.44, 0.44, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.4, 0.4, 0.39, 0.38, 0.38, 0.37, 0.36, 0.36, 0.36, 0.36, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.4, 0.4, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.35, 0.34, 0.34, 0.34, 0.34, 0.33, 0.34, 0.34, 0.35, 0.35, 0.35, 0.36, 0.38, 0.4, 0.42, 0.42, 0.4, 0.38, 0.36, 0.34, 0.33, 0.32, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.44, 0.44, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.46, 0.45, 0.45, 0.44, 0.44, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.44, 0.44, 0.45, 0.45, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.46, 0.45, 0.46, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.44, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49, 0.51, 0.52, 0.53, 0.54, 0.54, 0.55, 0.55, 0.55, 0.55, 0.56]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.92, 0.84, 0.82, 0.79, 0.78, 0.74, 0.71, 0.68, 0.64, 0.6, 0.5, 0.44, 0.44, 0.43, 0.46, 0.45, 0.39, 0.33, 0.41, 0.41, 0.34, 0.31, 0.36, 0.34, 0.34, 0.31, 0.31, 0.35, 0.28, 0.31, 0.32, 0.38, 0.46, 0.47, 0.39, 0.31, 0.25, 0.31, 0.4, 0.41, 0.41, 0.41, 0.49, 0.48, 0.41, 0.35, 0.35, 0.34, 0.3, 0.33, 0.31, 0.23, 0.23, 0.23, 0.23, 0.3, 0.35, 0.41, 0.38, 0.37, 0.28, 0.28, 0.36, 0.37, 0.33, 0.37, 0.45, 0.45, 0.45, 0.38, 0.4, 0.39, 0.44, 0.42, 0.37, 0.35, 0.3, 0.32, 0.28, 0.34, 0.27, 0.31, 0.31, 0.26, 0.27, 0.31, 0.35, 0.27, 0.27, 0.27, 0.34, 0.34, 0.34, 0.29, 0.28, 0.33, 0.34, 0.4, 0.39, 0.43, 0.4, 0.45, 0.47, 0.41, 0.44, 0.43, 0.43, 0.42, 0.43, 0.39, 0.32, 0.36, 0.38, 0.39, 0.47, 0.42, 0.43, 0.36, 0.35, 0.35, 0.37, 0.38, 0.39, 0.41, 0.4, 0.41, 0.42, 0.37, 0.31, 0.36, 0.34, 0.4, 0.41, 0.4, 0.32, 0.32, 0.37, 0.37, 0.38, 0.39, 0.37, 0.31, 0.23, 0.21, 0.2, 0.23, 0.22, 0.21, 0.27, 0.34, 0.34, 0.41, 0.42, 0.35, 0.27, 0.35, 0.35, 0.28, 0.2, 0.26, 0.26, 0.21, 0.24, 0.23, 0.21, 0.15, 0.18, 0.18, 0.18, 0.14, 0.13, 0.1, 0.1, 0.09, 0.08, 0.08, 0.08, 0.07, 0.11, 0.16, 0.14, 0.14, 0.2, 0.13, 0.2, 0.25, 0.32, 0.34, 0.34, 0.35, 0.41, 0.41, 0.44, 0.43, 0.43, 0.49, 0.51, 0.5, 0.51, 0.51, 0.47, 0.52, 0.51, 0.5, 0.55, 0.54, 0.54, 0.5, 0.5, 0.5, 0.49, 0.47, 0.45, 0.47, 0.47, 0.47, 0.47, 0.51, 0.51, 0.54, 0.53, 0.56, 0.49, 0.48, 0.49, 0.52, 0.53, 0.53, 0.58, 0.57, 0.52, 0.52, 0.5, 0.5, 0.47, 0.41, 0.36, 0.37, 0.37, 0.38, 0.38, 0.32, 0.32, 0.37, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.24, 0.24, 0.22, 0.26, 0.26, 0.32, 0.37, 0.41, 0.41, 0.42, 0.36, 0.35, 0.37, 0.3, 0.32, 0.33, 0.33, 0.33, 0.27, 0.27, 0.24, 0.26, 0.29, 0.33, 0.25, 0.18, 0.19, 0.19, 0.22, 0.13, 0.12, 0.17, 0.18, 0.17, 0.23, 0.23, 0.21, 0.15, 0.13, 0.2, 0.14, 0.11, 0.15, 0.17, 0.1, 0.1, 0.17, 0.1, 0.11, 0.1, 0.1, 0.13, 0.12, 0.07, 0.11, 0.12, 0.06, 0.12, 0.13, 0.13, 0.08, 0.07, 0.1, 0.11, 0.11, 0.17, 0.2, 0.13, 0.2, 0.17, 0.17, 0.17, 0.1, 0.06, 0.07, 0.07, 0.07, 0.12, 0.09, 0.13, 0.12, 0.17, 0.27, 0.25, 0.17, 0.13, 0.1, 0.12, 0.2, 0.18, 0.15, 0.17, 0.21, 0.29, 0.36, 0.42, 0.42, 0.42, 0.45, 0.45, 0.39, 0.41, 0.41, 0.35, 0.38, 0.45, 0.51, 0.55, 0.55, 0.49, 0.49, 0.57, 0.57, 0.63, 0.55, 0.5, 0.52, 0.46, 0.48, 0.47, 0.43, 0.51, 0.44, 0.38, 0.45, 0.45, 0.37, 0.3, 0.3, 0.3, 0.27, 0.25, 0.23, 0.22, 0.2, 0.29, 0.38, 0.36, 0.42, 0.39, 0.3, 0.38, 0.35, 0.36, 0.42, 0.44, 0.45, 0.51, 0.53, 0.47, 0.49, 0.56, 0.58, 0.53, 0.53, 0.49, 0.46, 0.43, 0.45, 0.45, 0.38, 0.46, 0.46, 0.43, 0.44, 0.36, 0.28, 0.27, 0.27, 0.35, 0.35, 0.35, 0.28, 0.31, 0.29, 0.29, 0.34, 0.35, 0.36, 0.32, 0.24, 0.32, 0.26, 0.25, 0.28, 0.27, 0.28, 0.34, 0.28, 0.28, 0.2, 0.28, 0.27, 0.33, 0.31, 0.4, 0.41, 0.42, 0.41, 0.43, 0.45, 0.53, 0.5, 0.5, 0.5, 0.51, 0.57, 0.62, 0.57, 0.59, 0.53, 0.59, 0.57, 0.57, 0.57, 0.57, 0.61, 0.62, 0.64, 0.68, 0.69, 0.72, 0.76, 0.82, 0.89, 0.92]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 3, \"coverage\": 0.0063, \"type\": \"mutation\"}, {\"count\": 1, \"coverage\": 0.0021, \"maximum_length\": 1, \"minimum_length\": 1, \"type\": \"artifact\"}, {\"count\": 2, \"coverage\": 0.92647, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"15601_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 48}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"12536_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 48}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"11348_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 48}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"16480_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 48}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"13063_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 48}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"971459_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 476, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q5W9E8\", \"aligned_regions\": [{\"entity_beg_seq_id\": 2, \"length\": 475, \"ref_beg_seq_id\": 49}]}], \"rcsb_id\": \"4OV8_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:43:03.721081\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 476, \"chain2_sequence_length\": 476, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.15,
+            "experimentalMethod": null,
+            "depositionDate": "2014-02-20T00:00:00+0000",
+            "releaseDate": "2015-02-18T00:00:00+0000",
+            "sourceOrganism": [
+              "Pleurotus ostreatus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.15,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Pleurotus ostreatus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MSQAGDTLNDVIQDPTRRNKLINDNNLLKGIIMGRDGPVPSSRELIVRPDTLRAIINNRATIETTTMEAEFTETLMESNYNSASVKVSAPCITANSEYSESSSFKNTETEKSMYTSSRYLFPQGRIDFTTPDSGFDDVIKLSPQFTSGVQAALAKATGTEKREALQNLFQEYGCVFRTKVHIGGVLSAHTMETFSRSENETEVKQDVKAGLEGAVKGWGGGATAGHGNTQGTITTSQNRKLNVKYIVNGGDYTKIQNTEEWVASTNQSEHWRVIEVTEVTAVADLLPQPIRGQVKDLLKPLLGKWVDVEKVPGLESLPVSVYRPKGAIPAGWFWLGDTADASKALLVKPTLPARSGRNPALTSLHQGSGMTEQPFVDLPQYQYLSTYFGSFAHDTPPGSTLRGLRPDHVLPGRYEMHGDTISTAVYVTRPVDVPFPEDEAFDLKSLVRVKLPGSGNPPKPRSALKKSMVLFDSGEK",
+        "description": "Amino acid sequence for chain A (length: 476)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 476
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Conformational Changes during Pore Formation by the Perforin-Related Protein Pleurotolysin",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1371/journal.pbio.1002049",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 476",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4OV8_5",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4OV8_5",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4OV8",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "2_665",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "6_665",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3905.18,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 132,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "plyB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01823;PF18684",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1796.8,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 2108.39,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.460106832463548,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.53989572823788,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4OV8_5",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

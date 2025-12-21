@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2ISY_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2ISY_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2ISY",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2ISY",
+    "name": "Protein 2ISY",
+    "description": "Protein structure with PDB ID: 2ISY. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2ISY_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2ISY",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Mycobacterium tuberculosis",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1773",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1773"
+    },
+    "alternateName": [
+      "PDB 2ISY",
+      "Protein ID 2ISY"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2isy_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2isy.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2ISY",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2ISY",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2ISY_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "ideR",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.10.10.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01325;PF02742",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2ISY\", \"structure_metadata\": {\"pdb_id\": \"2ISY\", \"resolution\": 1.955, \"deposition_date\": \"2006-10-18T00:00:00+0000\", \"release_date\": \"2007-02-13T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Mycobacterium tuberculosis\"], \"citation\": {\"title\": \"Crystal structures, metal activation, and DNA-binding properties of two-domain IdeR from Mycobacterium tuberculosis\", \"doi\": \"10.1021/bi0609826\", \"authors\": [\"Wisedchaisri, G.\", \"Chou, C.J.\", \"Wu, M.\", \"Roach, C.\", \"Rice, A.E.\", \"Holmes, R.K.\", \"Beeson, C.\", \"Hol, W.G.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 41.954, \"b\": 44.743, \"c\": 49.641, \"alpha\": 110.18, \"beta\": 96.57, \"gamma\": 108.29}, \"found_in_api\": true, \"sequences\": {\"A\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\", \"B\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Mycobacterium tuberculosis\", \"sequence_length\": 161, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Mycobacterium tuberculosis\", \"sequence_length\": 161, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\", \"organism\": \"Mycobacterium tuberculosis\", \"taxonomy_id\": 1773, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 161, \"gene_name\": null, \"uniprot_ids\": [\"P9WMH1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 161.0, \"min_sequence_length\": 161, \"max_sequence_length\": 161}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\", \"pdbx_seq_one_letter_code_can\": \"MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEACRWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 1, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"CSO\"], \"rcsb_sample_sequence_length\": 157, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_genus\": \"Mycobacterium\", \"host_org_genus\": \"Escherichia\", \"host_org_species\": \"Escherichia coli\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"IdeR,dtxR\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1773\", \"pdbx_gene_src_scientific_name\": \"Mycobacterium tuberculosis\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_host_org_strain\": \"BL21 (DE3)\", \"pdbx_host_org_vector_type\": \"Plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pAER36\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.43, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/2isyA/7932/2isyA\", \"max_rmsd\": 0.744, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 34142, \"identity\": 100}, {\"cluster_id\": 13563, \"identity\": 95}, {\"cluster_id\": 11633, \"identity\": 90}, {\"cluster_id\": 14003, \"identity\": 70}, {\"cluster_id\": 4078, \"identity\": 50}, {\"cluster_id\": 4645, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Bacillus tuberculosis\", \"Bacterium tuberculosis\", \"Mycobacterium tuberculosis (Zopf 1883) Lehmann and Neumann 1896 (Approved Lists 1980)\", \"Mycobacterium tuberculosis typus humanus\", \"Mycobacterium tuberculosis var. hominis\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Mycobacterium tuberculosis\", \"ncbi_taxonomy_id\": 1773, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Mycobacterium tuberculosis\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinomycetota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteraeota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteria\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"Actinobacteriota\"}, {\"depth\": 4, \"id\": \"201174\", \"name\": \"actinobacteria\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinomycetes\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinobacteria Stackebrandt et al. 1997\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"Actinomycetia\"}, {\"depth\": 5, \"id\": \"1760\", \"name\": \"high G+C Gram-positive bacteria\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriales\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriales\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriales Goodfellow and Jones 2015\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriineae\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacteriineae corrig. Stackebrandt et al. 1997\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Corynebacterineae\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriales Janke 1924 (Approved Lists 1980)\"}, {\"depth\": 6, \"id\": \"85007\", \"name\": \"Mycobacteriineae\"}, {\"depth\": 7, \"id\": \"1762\", \"name\": \"Mycobacteriaceae\"}, {\"depth\": 8, \"id\": \"1763\", \"name\": \"Mycobacterium\"}, {\"depth\": 8, \"id\": \"1763\", \"name\": \"Mycobacterium Lehmann and Neumann 1896 (Approved Lists 1980)\"}, {\"depth\": 9, \"id\": \"77643\", \"name\": \"Mycobacterium tuberculosis complex\"}, {\"depth\": 9, \"id\": \"77643\", \"name\": \"Mycobacterium complex\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Mycobacterium tuberculosis\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Bacillus tuberculosis\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Bacterium tuberculosis\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Mycobacterium tuberculosis (Zopf 1883) Lehmann and Neumann 1896 (Approved Lists 1980)\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Mycobacterium tuberculosis typus humanus\"}, {\"depth\": 10, \"id\": \"1773\", \"name\": \"Mycobacterium tuberculosis var. hominis\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"IdeR\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"dtxR\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"1048245\", \"name\": \"Mycobacterium canettii CIPT 140010059\"}, {\"depth\": 1, \"id\": \"83332:iron_dependent_repressor_and_activator_ider\", \"name\": \"iron-dependent repressor and activator IdeR\"}, {\"depth\": 0, \"id\": \"83332\", \"name\": \"Mycobacterium tuberculosis H37Rv\"}, {\"depth\": 1, \"id\": \"1048245:iron_dependent_transcriptional_regulator_ider\", \"name\": \"iron-dependent transcriptional regulator IdeR\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 17.871, \"pdbx_description\": \"Iron-dependent repressor ideR\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Iron-dependent repressor ideR\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Iron-dependent repressor IdeR\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P9WMH1\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 140, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF02742\", \"assignment_version\": \"34.0\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain (Fe_dep_repr_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF01325\", \"assignment_version\": \"34.0\", \"name\": \"Iron dependent repressor, N-terminal DNA binding domain (Fe_dep_repress)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0050897\", \"name\": \"cobalt ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0050897\", \"name\": \"cobalt ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0045892\", \"name\": \"negative regulation of DNA-templated transcription\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:1902679\", \"name\": \"negative regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0051252\", \"name\": \"regulation of RNA metabolic process\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0045934\", \"name\": \"negative regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0019219\", \"name\": \"regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:2001141\", \"name\": \"regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0010605\", \"name\": \"negative regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0009889\", \"name\": \"regulation of biosynthetic process\"}, {\"id\": \"GO:0045892\", \"name\": \"negative regulation of DNA-templated transcription\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0009892\", \"name\": \"negative regulation of metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0010468\", \"name\": \"regulation of gene expression\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0009890\", \"name\": \"negative regulation of biosynthetic process\"}, {\"id\": \"GO:0010558\", \"name\": \"negative regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0010556\", \"name\": \"regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0006355\", \"name\": \"regulation of DNA-templated transcription\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0051253\", \"name\": \"negative regulation of RNA metabolic process\"}]}, {\"annotation_id\": \"IPR036421\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036421\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain superfamily\"}]}, {\"annotation_id\": \"IPR022687\", \"name\": \"DTXR-type HTH domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR022687\", \"name\": \"DTXR-type HTH domain\"}]}, {\"annotation_id\": \"GO:0016151\", \"name\": \"nickel cation binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0016151\", \"name\": \"nickel cation binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR001367\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001367\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain\"}]}, {\"annotation_id\": \"GO:0008198\", \"name\": \"ferrous iron binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0005506\", \"name\": \"iron ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0008198\", \"name\": \"ferrous iron binding\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR050536\", \"name\": \"DtxR/MntR Metal-Dependent Regulators\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR050536\", \"name\": \"DtxR/MntR Metal-Dependent Regulators\"}]}, {\"annotation_id\": \"IPR040767\", \"name\": \"Diphteria toxin repressor/Iron-dependent repressor IdeR, SH3 domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR040767\", \"name\": \"Diphteria toxin repressor/Iron-dependent repressor IdeR, SH3 domain\"}]}, {\"annotation_id\": \"GO:0030145\", \"name\": \"manganese ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0030145\", \"name\": \"manganese ion binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0005886\", \"name\": \"plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005886\", \"name\": \"plasma membrane\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"GO:0009274\", \"name\": \"peptidoglycan-based cell wall\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030312\", \"name\": \"external encapsulating structure\"}, {\"id\": \"GO:0005618\", \"name\": \"cell wall\"}, {\"id\": \"GO:0009274\", \"name\": \"peptidoglycan-based cell wall\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0140110\", \"name\": \"transcription regulator activity\"}, {\"id\": \"GO:0003700\", \"name\": \"DNA-binding transcription factor activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0019540\", \"name\": \"catechol-containing siderophore biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0019540\", \"name\": \"catechol-containing siderophore biosynthetic process\"}, {\"id\": \"GO:0009712\", \"name\": \"catechol-containing compound metabolic process\"}, {\"id\": \"GO:0019748\", \"name\": \"secondary metabolic process\"}, {\"id\": \"GO:0019290\", \"name\": \"siderophore biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0043043\", \"name\": \"peptide biosynthetic process\"}, {\"id\": \"GO:0044550\", \"name\": \"secondary metabolite biosynthetic process\"}, {\"id\": \"GO:0009237\", \"name\": \"siderophore metabolic process\"}, {\"id\": \"GO:0018958\", \"name\": \"phenol-containing compound metabolic process\"}, {\"id\": \"GO:0046189\", \"name\": \"phenol-containing compound biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009713\", \"name\": \"catechol-containing compound biosynthetic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019184\", \"name\": \"nonribosomal peptide biosynthetic process\"}, {\"id\": \"GO:0006518\", \"name\": \"peptide metabolic process\"}]}, {\"annotation_id\": \"GO:0003677\", \"name\": \"DNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003677\", \"name\": \"DNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR022689\", \"name\": \"Iron dependent repressor\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR022689\", \"name\": \"Iron dependent repressor\"}]}, {\"annotation_id\": \"GO:0006355\", \"name\": \"regulation of DNA-templated transcription\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\"}, {\"id\": \"GO:0051252\", \"name\": \"regulation of RNA metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0019219\", \"name\": \"regulation of nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:2001141\", \"name\": \"regulation of RNA biosynthetic process\"}, {\"id\": \"GO:0009889\", \"name\": \"regulation of biosynthetic process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0010468\", \"name\": \"regulation of gene expression\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0010556\", \"name\": \"regulation of macromolecule biosynthetic process\"}, {\"id\": \"GO:0006355\", \"name\": \"regulation of DNA-templated transcription\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}]}, {\"annotation_id\": \"GO:0046870\", \"name\": \"cadmium ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0046870\", \"name\": \"cadmium ion binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR007167\", \"name\": \"Ferrous iron transporter FeoA-like domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR007167\", \"name\": \"Ferrous iron transporter FeoA-like domain\"}]}, {\"annotation_id\": \"IPR036388\", \"name\": \"Winged helix-like DNA-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036388\", \"name\": \"Winged helix-like DNA-binding domain superfamily\"}]}, {\"annotation_id\": \"IPR038157\", \"name\": \"Ferrous iron transporter, core domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR038157\", \"name\": \"Ferrous iron transporter, core domain\"}]}, {\"annotation_id\": \"IPR008988\", \"name\": \"Transcriptional repressor, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008988\", \"name\": \"Transcriptional repressor, C-terminal\"}]}, {\"annotation_id\": \"IPR036390\", \"name\": \"Winged helix DNA-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036390\", \"name\": \"Winged helix DNA-binding domain superfamily\"}]}, {\"annotation_id\": \"GO:0005506\", \"name\": \"iron ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0005506\", \"name\": \"iron ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0006979\", \"name\": \"response to oxidative stress\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0008270\", \"name\": \"zinc ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0008270\", \"name\": \"zinc ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0046983\", \"name\": \"protein dimerization activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0046983\", \"name\": \"protein dimerization activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CSO\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"CSO\"], \"entity_id\": \"1\", \"entry_id\": \"2ISY\", \"rcsb_id\": \"2ISY_1\", \"uniprot_ids\": [\"P9WMH1\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P9WMH1\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.89171974522293, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.6086956521739131}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01325\", \"name\": \"Iron dependent repressor, N-terminal DNA binding domain (Fe_dep_repress)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 3, \"end_seq_id\": 62}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF02742\", \"name\": \"Iron dependent repressor, metal binding and dimerisation domain (Fe_dep_repr_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 65, \"end_seq_id\": 134}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer CYS\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 102}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"CYS\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 102}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 141, \"end_seq_id\": 157}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.61, -0.61, -0.37, 0.44, -0.48, -1.02, -0.13, -0.2, -0.51, 0.3, -0.3, -0.54, -1.36, -0.9, -0.36, -0.93, -0.97, -0.16, -1.08, -0.49, -0.6, 0.29, 0.53, -0.32, -0.74, -0.14, -0.96, -0.84, -1.13, -0.68, -1.36, -1.63, -0.78, -0.37, -1.18, -0.87, -0.01, -0.01, -0.47, -0.08, -0.39, -1.36, -1.66, -1.31, -0.81, -0.86, -1.27, -0.3, -0.31, 0.03, 0.14, 0.03, -0.28, -0.28, -1.09, -0.17, -0.71, -1.3, -1.69, -1.34, -1.34, -0.79, -0.79, -0.2, -0.12, 0.16, 1.01, 1.66, 1.2, 1.27, 0.71, -0.21, 0.01, -0.29, -0.88, -1.84, -1.63, -0.71, 0.19, 0.16, 1.12, 1.2, 0.96, 1.77, 2.09, 1.57, 0.76, -0.1, 0.76, -0.07, -0.37, -0.71, -0.93, -0.48, -0.88, -0.59, -0.59, -1.41, -0.59, -0.58, -0.28, -0.87, -1.53, -0.57, -0.86, -0.97, -1.11, -1.16, -0.9, -1.24, -0.39, 0.42, -0.43, -0.43, -0.11, 0.31, -0.19, -0.74, -0.49, -0.64, -1.11, -1.11, -0.9, -0.22, -0.32, -0.29, 0.22, 0.87, 0.17, 0.63, 0.98, 1.62, 1.32, 1.41, 1.07, 0.26, 0.21, 0.46, 0.34, 0.0, -0.51, -0.76, -0.71, -0.68, -0.64, -1.42, -1.63, -2.3, -2.27]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.28, 0.28, 0.28, 0.28, 0.29, 0.29, 0.3, 0.3, 0.3, 0.31, 0.32, 0.33, 0.35, 0.36, 0.37, 0.37, 0.38, 0.39, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.42, 0.4, 0.39, 0.38, 0.38, 0.38, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.42, 0.42, 0.43, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.88, 0.79, 0.74, 0.71, 0.61, 0.5, 0.47, 0.37, 0.34, 0.31, 0.28, 0.33, 0.27, 0.26, 0.35, 0.35, 0.33, 0.3, 0.28, 0.2, 0.2, 0.27, 0.33, 0.28, 0.29, 0.37, 0.44, 0.43, 0.53, 0.53, 0.46, 0.45, 0.46, 0.53, 0.47, 0.45, 0.5, 0.5, 0.53, 0.54, 0.61, 0.64, 0.56, 0.51, 0.57, 0.51, 0.49, 0.49, 0.48, 0.44, 0.45, 0.42, 0.42, 0.33, 0.32, 0.37, 0.37, 0.38, 0.39, 0.35, 0.27, 0.24, 0.16, 0.19, 0.19, 0.16, 0.19, 0.21, 0.2, 0.18, 0.11, 0.09, 0.15, 0.13, 0.13, 0.08, 0.05, 0.05, 0.03, 0.02, 0.03, 0.03, 0.04, 0.03, 0.04, 0.06, 0.05, 0.05, 0.04, 0.05, 0.05, 0.05, 0.06, 0.03, 0.04, 0.06, 0.06, 0.08, 0.08, 0.12, 0.19, 0.13, 0.23, 0.19, 0.27, 0.2, 0.16, 0.21, 0.17, 0.14, 0.15, 0.16, 0.23, 0.24, 0.34, 0.34, 0.37, 0.34, 0.38, 0.38, 0.39, 0.31, 0.39, 0.38, 0.33, 0.31, 0.38, 0.37, 0.38, 0.38, 0.41, 0.42, 0.44, 0.42, 0.36, 0.29, 0.22, 0.23, 0.31, 0.31, 0.31, 0.29, 0.37, 0.35, 0.35, 0.42, 0.47, 0.5, 0.61, 0.64, 0.73, 0.78, 0.82, 0.84, 0.87, 0.93, 0.97]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.00637, \"type\": \"modified_monomer\"}, {\"count\": 1, \"coverage\": 0.00637, \"type\": \"mutation\"}, {\"count\": 1, \"coverage\": 0.10828, \"maximum_length\": 17, \"minimum_length\": 17, \"type\": \"artifact\"}, {\"count\": 2, \"coverage\": 0.82803, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P9WMH1\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 140, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"13563_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"4645_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 149, \"ref_beg_seq_id\": 3}, {\"entity_beg_seq_id\": 150, \"length\": 8, \"ref_beg_seq_id\": 163}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"4078_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 150, \"ref_beg_seq_id\": 3}, {\"entity_beg_seq_id\": 151, \"length\": 7, \"ref_beg_seq_id\": 164}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"34142_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"11633_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"14003_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 157, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"2ISY_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:38:35.839612\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.955,
+            "experimentalMethod": null,
+            "depositionDate": "2006-10-18T00:00:00+0000",
+            "releaseDate": "2007-02-13T00:00:00+0000",
+            "sourceOrganism": [
+              "Mycobacterium tuberculosis"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 4,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.955,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Mycobacterium tuberculosis",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH",
+        "description": "Amino acid sequence for chain A (length: 161)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 161
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MNELVDTTEMYLRTIYDLEEEGVTPLRARIAERLDQSGPTVSQTVSRMERDGLLRVAGDRHLELTEKGRALAIAVMRKHRLAERLLVDVIGLPWEEVHAEA(CSO)RWEHVMSEDVERRLVKVLNNPTTSPFGNPIPGLVELGVASENLYFQGGGHHHHHH",
+        "description": "Amino acid sequence for chain B (length: 161)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 161
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structures, metal activation, and DNA-binding properties of two-domain IdeR from Mycobacterium tuberculosis",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/bi0609826",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 161",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3HRU_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 3,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "3HRU_1",
+          "2F5E_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2ISY_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2ISY",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1615.45,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 52,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "ideR",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.10.10.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01325;PF02742",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 437.76,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1177.69,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.270983317341917,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.729016682658083,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3HRU_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 3,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3HRU_1",
+        "2F5E_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

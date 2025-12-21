@@ -1,0 +1,368 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5EG8_1",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "5EG8_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5EG8",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5EG8",
+    "name": "Protein 5EG8",
+    "description": "Protein structure with PDB ID: 5EG8. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5EG8_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5EG8",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1076704",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1076704"
+    },
+    "alternateName": [
+      "PDB 5EG8",
+      "Protein ID 5EG8"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5eg8_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5EG8_1.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5EG8",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5EG8",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5EG8_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "PB2",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00604",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5EG8\", \"structure_metadata\": {\"pdb_id\": \"5EG8\", \"resolution\": 1.54, \"deposition_date\": \"2015-10-26T00:00:00+0000\", \"release_date\": \"2016-02-10T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\"], \"citation\": {\"title\": \"The cap-binding site of influenza virus protein PB2 as a drug target.\", \"doi\": \"10.1107/S2059798316000085\", \"authors\": [\"Severin, C.\", \"Rocha de Moura, T.\", \"Liu, Y.\", \"Li, K.\", \"Zheng, X.\", \"Luo, M.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 54.611, \"b\": 54.611, \"c\": 196.486, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\", \"B\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"sequence_length\": 163, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"sequence_length\": 163, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\", \"organism\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"taxonomy_id\": 1076704, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 163, \"gene_name\": null, \"uniprot_ids\": [\"G3LZH2\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 163.0, \"min_sequence_length\": 163, \"max_sequence_length\": 163}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\", \"pdbx_seq_one_letter_code_can\": \"SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 163, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"A/swine/Quebec/1257777/2010(H3N2)\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 163, \"pdbx_gene_src_gene\": \"PB2\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1076704\", \"pdbx_gene_src_scientific_name\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"pdbx_host_org_ncbi_taxonomy_id\": \"511693\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21\", \"pdbx_host_org_vector_type\": \"Plasmid\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pet28a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.326, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/3wi0A/18676/5eg8A\", \"max_rmsd\": 2.962, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 93879, \"identity\": 100}, {\"cluster_id\": 708, \"identity\": 95}, {\"cluster_id\": 638, \"identity\": 90}, {\"cluster_id\": 760, \"identity\": 70}, {\"cluster_id\": 1153, \"identity\": 50}, {\"cluster_id\": 1059, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 163, \"ncbi_common_names\": [\"Escherichia coli str. BL21\", \"Escherichia coli strain BL21\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21\", \"ncbi_taxonomy_id\": 511693, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli BL21\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli str. BL21\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli strain BL21\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 163, \"ncbi_parent_scientific_name\": \"Riboviria\", \"ncbi_scientific_name\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"ncbi_taxonomy_id\": 1076704, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"10239\", \"name\": \"Viruses\"}, {\"depth\": 1, \"id\": \"10239\", \"name\": \"Vira\"}, {\"depth\": 1, \"id\": \"10239\", \"name\": \"Viridae\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"Riboviria\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses and retroviruses\"}, {\"depth\": 2, \"id\": \"2559587\", \"name\": \"RNA viruses and viroids\"}, {\"depth\": 3, \"id\": \"2732396\", \"name\": \"Orthornavirae\"}, {\"depth\": 4, \"id\": \"2497569\", \"name\": \"Negarnaviricota\"}, {\"depth\": 4, \"id\": \"2497569\", \"name\": \"Negative-strand RNA viruses\"}, {\"depth\": 5, \"id\": \"2497571\", \"name\": \"Polyploviricotina\"}, {\"depth\": 6, \"id\": \"2497577\", \"name\": \"Insthoviricetes\"}, {\"depth\": 7, \"id\": \"2499411\", \"name\": \"Articulavirales\"}, {\"depth\": 8, \"id\": \"11308\", \"name\": \"Orthomyxoviridae\"}, {\"depth\": 9, \"id\": \"197911\", \"name\": \"Alphainfluenzavirus\"}, {\"depth\": 10, \"id\": \"2955291\", \"name\": \"Alphainfluenzavirus influenzae\"}, {\"depth\": 11, \"id\": \"11320\", \"name\": \"Influenza A virus\"}, {\"depth\": 11, \"id\": \"11320\", \"name\": \"FLUAV\"}, {\"depth\": 11, \"id\": \"11320\", \"name\": \"Human Influenza A Virus\"}, {\"depth\": 11, \"id\": \"11320\", \"name\": \"Influenza virus type A\"}, {\"depth\": 11, \"id\": \"11320\", \"name\": \"influenza A virus\"}, {\"depth\": 12, \"id\": \"119210\", \"name\": \"H3N2 subtype\"}, {\"depth\": 12, \"id\": \"119210\", \"name\": \"H3N2\"}, {\"depth\": 13, \"id\": \"1076704\", \"name\": \"Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"PB2\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 18.477, \"pdbx_description\": \"Polymerase basic protein 2\", \"pdbx_fragment\": \"UNP residues 108-270\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Polymerase basic protein 2\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Polymerase basic protein 2\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"G3LZH2\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 108}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00604\", \"assignment_version\": \"34.0\", \"name\": \"Influenza RNA polymerase PB2 CAP binding domain (Flu_PB2_5th)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0039523\", \"name\": \"symbiont-mediated suppression of host mRNA transcription via inhibition of RNA polymerase II activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0039653\", \"name\": \"symbiont-mediated suppression of host transcription\"}, {\"id\": \"GO:0044068\", \"name\": \"symbiont-mediated perturbation of host cellular process\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0039523\", \"name\": \"symbiont-mediated suppression of host mRNA transcription via inhibition of RNA polymerase II activity\"}, {\"id\": \"GO:0044003\", \"name\": \"symbiont-mediated perturbation of host process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0039656\", \"name\": \"symbiont-mediated perturbation of host gene expression\"}, {\"id\": \"GO:0052026\", \"name\": \"symbiont-mediated perturbation of host transcription\"}, {\"id\": \"GO:0035821\", \"name\": \"modulation of process of another organism\"}, {\"id\": \"GO:0051701\", \"name\": \"biological process involved in interaction with host\"}, {\"id\": \"GO:0044403\", \"name\": \"biological process involved in symbiotic interaction\"}]}, {\"annotation_id\": \"GO:0075526\", \"name\": \"cap snatching\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0019080\", \"name\": \"viral gene expression\"}, {\"id\": \"GO:0075526\", \"name\": \"cap snatching\"}, {\"id\": \"GO:0039697\", \"name\": \"negative stranded viral RNA transcription\"}, {\"id\": \"GO:0016032\", \"name\": \"viral process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0019083\", \"name\": \"viral transcription\"}, {\"id\": \"GO:0039696\", \"name\": \"RNA-templated viral transcription\"}]}, {\"annotation_id\": \"IPR049115\", \"name\": \"Influenza RNA polymerase PB2, C-terminal domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR049115\", \"name\": \"Influenza RNA polymerase PB2, C-terminal domain\"}]}, {\"annotation_id\": \"GO:0039657\", \"name\": \"symbiont-mediated suppression of host gene expression\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0044068\", \"name\": \"symbiont-mediated perturbation of host cellular process\"}, {\"id\": \"GO:0039657\", \"name\": \"symbiont-mediated suppression of host gene expression\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0044003\", \"name\": \"symbiont-mediated perturbation of host process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0039656\", \"name\": \"symbiont-mediated perturbation of host gene expression\"}, {\"id\": \"GO:0035821\", \"name\": \"modulation of process of another organism\"}, {\"id\": \"GO:0051701\", \"name\": \"biological process involved in interaction with host\"}, {\"id\": \"GO:0044403\", \"name\": \"biological process involved in symbiotic interaction\"}]}, {\"annotation_id\": \"GO:0033650\", \"name\": \"host cell mitochondrion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033648\", \"name\": \"host intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0033646\", \"name\": \"host intracellular part\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}, {\"id\": \"GO:0033650\", \"name\": \"host cell mitochondrion\"}, {\"id\": \"GO:0033655\", \"name\": \"host cell cytoplasm part\"}, {\"id\": \"GO:0033647\", \"name\": \"host intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0030430\", \"name\": \"host cell cytoplasm\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0043656\", \"name\": \"host intracellular region\"}]}, {\"annotation_id\": \"IPR049114\", \"name\": \"Influenza RNA polymerase PB2, sixth domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR049114\", \"name\": \"Influenza RNA polymerase PB2, sixth domain\"}]}, {\"annotation_id\": \"IPR049113\", \"name\": \"Polymerase basic protein 2, helical domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR049113\", \"name\": \"Polymerase basic protein 2, helical domain\"}]}, {\"annotation_id\": \"GO:0042025\", \"name\": \"host cell nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033648\", \"name\": \"host intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0033646\", \"name\": \"host intracellular part\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0043656\", \"name\": \"host intracellular region\"}, {\"id\": \"GO:0042025\", \"name\": \"host cell nucleus\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}, {\"id\": \"GO:0033647\", \"name\": \"host intracellular organelle\"}]}, {\"annotation_id\": \"GO:0044423\", \"name\": \"virion component\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0044423\", \"name\": \"virion component\"}]}, {\"annotation_id\": \"IPR049111\", \"name\": \"Influenza RNA polymerase PB2, middle domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR049111\", \"name\": \"Influenza RNA polymerase PB2, middle domain\"}]}, {\"annotation_id\": \"GO:0006370\", \"name\": \"7-methylguanosine mRNA capping\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006370\", \"name\": \"7-methylguanosine mRNA capping\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0009452\", \"name\": \"7-methylguanosine RNA capping\"}, {\"id\": \"GO:0036260\", \"name\": \"RNA capping\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0006397\", \"name\": \"mRNA processing\"}, {\"id\": \"GO:0016071\", \"name\": \"mRNA metabolic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0000966\", \"name\": \"RNA 5'-end processing\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006396\", \"name\": \"RNA processing\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"IPR048298\", \"name\": \"Influenza RNA polymerase PB2, CAP binding domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR048298\", \"name\": \"Influenza RNA polymerase PB2, CAP binding domain\"}]}, {\"annotation_id\": \"GO:0003723\", \"name\": \"RNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003723\", \"name\": \"RNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006351\", \"name\": \"DNA-templated transcription\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"IPR037258\", \"name\": \"PB2, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR037258\", \"name\": \"PB2, C-terminal\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5EG8\", \"rcsb_id\": \"5EG8_1\", \"uniprot_ids\": [\"G3LZH2\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"G3LZH2\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.29853479853479853}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00604\", \"name\": \"Influenza RNA polymerase PB2 CAP binding domain (Flu_PB2_5th)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 163}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.5, 0.9, 0.56, -0.26, -0.24, -0.64, -0.64, -0.69, -1.09, -0.54, -1.29, -1.29, -1.18, -1.49, -1.79, -1.28, -0.77, -0.76, -1.27, -1.22, -0.37, -0.37, -0.06, 0.76, -0.14, -0.07, -0.49, 0.02, 0.06, -0.76, -0.41, -0.48, -1.29, -1.24, -1.43, -1.01, -1.27, -0.44, -0.1, -0.56, -0.91, -0.32, -0.01, -0.12, 0.46, 0.67, -0.3, -0.69, 0.01, 0.43, -0.27, -0.69, -0.47, -0.47, -1.28, -0.36, 0.58, 0.84, 0.83, 1.29, 1.29, 0.48, -0.41, -0.41, -0.92, -0.92, -1.19, -1.49, -1.24, -0.24, 0.64, 1.5, 2.09, 2.39, 2.36, 2.47, 2.77, 2.18, 1.29, 0.4, 0.21, 0.22, 0.51, -0.39, -0.5, 0.06, -0.06, 0.29, 0.29, 0.43, -0.17, -0.36, 0.54, -0.04, -1.01, -0.31, -0.66, -0.66, -1.58, -0.77, -1.47, -2.11, -1.51, -1.37, -1.96, -1.14, -0.33, -0.33, -1.11, -0.41, -0.62, -1.27, -1.3, -0.71, -1.57, -1.52, -0.6, 0.07, -0.63, -0.63, -0.3, 0.04, 0.34, 0.39, -0.17, -0.09, -0.79, -0.79, 0.07, 0.38, 0.38, 0.09, 0.98, 1.02, 1.02, 1.83, 2.04, 1.19, 1.19, 1.16, 0.77, 0.18, 0.14, -0.74, -0.96, -0.87, -0.06, -0.77, -0.73, -0.06, -0.47, 0.08, 0.38, -0.27, 0.03]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.76, 0.73, 0.69, 0.65, 0.61, 0.57, 0.53, 0.42, 0.36, 0.31, 0.28, 0.3, 0.32, 0.33, 0.27, 0.35, 0.35, 0.34, 0.35, 0.36, 0.44, 0.38, 0.38, 0.31, 0.32, 0.26, 0.27, 0.28, 0.35, 0.28, 0.29, 0.28, 0.18, 0.18, 0.21, 0.2, 0.21, 0.2, 0.2, 0.23, 0.23, 0.2, 0.18, 0.12, 0.17, 0.17, 0.18, 0.17, 0.17, 0.16, 0.15, 0.1, 0.1, 0.1, 0.06, 0.04, 0.07, 0.06, 0.07, 0.07, 0.09, 0.08, 0.1, 0.1, 0.13, 0.13, 0.11, 0.08, 0.04, 0.03, 0.02, 0.04, 0.04, 0.02, 0.04, 0.06, 0.11, 0.11, 0.07, 0.06, 0.04, 0.04, 0.03, 0.02, 0.03, 0.04, 0.04, 0.03, 0.06, 0.05, 0.05, 0.07, 0.08, 0.1, 0.17, 0.17, 0.17, 0.1, 0.1, 0.17, 0.17, 0.24, 0.25, 0.2, 0.19, 0.19, 0.19, 0.11, 0.19, 0.19, 0.3, 0.34, 0.35, 0.28, 0.23, 0.16, 0.16, 0.17, 0.16, 0.16, 0.08, 0.11, 0.12, 0.07, 0.12, 0.18, 0.13, 0.1, 0.18, 0.15, 0.09, 0.09, 0.07, 0.04, 0.07, 0.12, 0.16, 0.15, 0.16, 0.25, 0.25, 0.34, 0.3, 0.3, 0.31, 0.3, 0.31, 0.3, 0.34, 0.28, 0.32, 0.39, 0.36, 0.48, 0.59, 0.61, 0.64, 0.71, 0.74, 0.76, 0.8, 0.83, 0.85]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.38, 0.38, 0.37, 0.38, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.4, 0.37, 0.35, 0.32, 0.3, 0.29, 0.27, 0.26, 0.25, 0.25, 0.24, 0.24, 0.25, 0.26, 0.27, 0.27, 0.29, 0.3, 0.31, 0.32, 0.33, 0.35, 0.36, 0.37, 0.37, 0.38, 0.39, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.36, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.29, 0.27, 0.26, 0.24, 0.23, 0.22, 0.21, 0.21, 0.2, 0.19, 0.18, 0.18, 0.18, 0.18, 0.18, 0.17, 0.17, 0.18, 0.18, 0.18, 0.19, 0.2, 0.22, 0.23, 0.24, 0.25, 0.27, 0.28, 0.3, 0.32, 0.33, 0.33, 0.32, 0.31, 0.3, 0.3, 0.29, 0.28, 0.26, 0.24, 0.22, 0.2, 0.19, 0.18, 0.18, 0.17, 0.16, 0.16, 0.16, 0.17, 0.17, 0.18, 0.19, 0.2, 0.22, 0.23, 0.25, 0.28, 0.3, 0.31, 0.32, 0.33, 0.35, 0.37, 0.38, 0.39, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.39, 0.38, 0.36, 0.35, 0.34, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.34, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.42, 0.42, 0.41, 0.4, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.34, 0.34, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 1.0, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"760_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 330}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"708_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 324}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"638_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 321}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1153_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 330}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"93879_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1059_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 102, \"ref_beg_seq_id\": 340}, {\"entity_beg_seq_id\": 103, \"length\": 34, \"ref_beg_seq_id\": 445}, {\"entity_beg_seq_id\": 137, \"length\": 27, \"ref_beg_seq_id\": 488}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"G3LZH2\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 163, \"ref_beg_seq_id\": 108}]}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL3317339\", \"target_taxonomy_id\": 211044, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 162, \"target_beg_seq_id\": 321}]}, {\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL4523676\", \"target_taxonomy_id\": 211044, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 162, \"target_beg_seq_id\": 321}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 4.7, \"binding_assay_value_type\": \"pEC50\", \"cofactor_in_ch_ikey\": \"LOBDJIYGRIVZBK-CERTXYRMSA-N\", \"cofactor_smiles\": \"O=C(O)[C@H]1C2CCC(CC2)[C@@H]1Nc1nc(-c2c[nH]c3ncc(F)cc23)nc2c1CS(=O)(=O)C2\", \"cofactor_resource_id\": \"CHEMBL4519832\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3317339\"}, {\"binding_assay_value\": 4.66, \"binding_assay_value_type\": \"pKd\", \"cofactor_in_ch_ikey\": \"FYSHUOMEMCKYCI-OAHLLOKOSA-N\", \"cofactor_smiles\": \"O=C1c2ccccc2C(=O)c2cc(OC[C@H](O)Cn3cnc4ccccc43)ccc21\", \"cofactor_resource_id\": \"CHEMBL5079585\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3317339\"}, {\"binding_assay_value\": 4.44, \"binding_assay_value_type\": \"pKd\", \"cofactor_in_ch_ikey\": \"VLXAGAKGJMXVQF-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=c1oc2cc(O)cc(O)c2c2ccccc12\", \"cofactor_resource_id\": \"CHEMBL4472996\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3317339\"}, {\"binding_assay_value\": 4.31, \"binding_assay_value_type\": \"pKd\", \"cofactor_in_ch_ikey\": \"SULNOIBYGOBLSZ-ZIAGYGMSSA-N\", \"cofactor_smiles\": \"N[C@@H]1CCCC[C@H]1Nc1nc(-c2c[nH]c3ncc(Cl)cc23)ncc1F\", \"cofactor_resource_id\": \"CHEMBL3317979\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3317339\"}, {\"binding_assay_value\": 4.19, \"binding_assay_value_type\": \"pKd\", \"cofactor_in_ch_ikey\": \"HVYPUHVRVVLWMA-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=c1[nH]c2ccc(NCc3ccc(Cl)c(Cl)c3)cc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL5075807\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3317339\"}, {\"binding_assay_value\": 4.24, \"binding_assay_value_type\": \"pEC50\", \"cofactor_in_ch_ikey\": \"XJCLHNWHERQQAB-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1cc(-c2ccccc2)nc2nc(C(=O)Nc3ccccc3C(N)=O)nn12\", \"cofactor_resource_id\": \"CHEMBL4743427\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL4523676\"}, {\"binding_assay_value\": 3.8, \"binding_assay_value_type\": \"pEC50\", \"cofactor_in_ch_ikey\": \"IWUCXVSUMQZMFG-AFCXAGJDSA-N\", \"cofactor_smiles\": \"NC(=O)c1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1\", \"cofactor_chem_comp_id\": \"RBV\", \"cofactor_name\": \"RIBAVIRIN\", \"cofactor_resource_id\": \"CHEMBL1643\", \"mechanism_of_action\": \"Inosine-5'-monophosphate dehydrogenase 1 inhibitor\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL4523676\"}, {\"binding_assay_value\": 3.68, \"binding_assay_value_type\": \"pEC50\", \"cofactor_in_ch_ikey\": \"IUMYHPIDLATEJW-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1cc(-c2ccccc2)n2nc(-c3nc4ccccc4c(=O)o3)nc2n1\", \"cofactor_resource_id\": \"CHEMBL4870823\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL4523676\"}], \"rcsb_id\": \"5EG8_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"B\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:43:59.223077\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 163, \"chain2_sequence_length\": 163, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.54,
+            "experimentalMethod": null,
+            "depositionDate": "2015-10-26T00:00:00+0000",
+            "releaseDate": "2016-02-10T00:00:00+0000",
+            "sourceOrganism": [
+              "Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.54,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Influenza A virus (A/swine/Quebec/1257777/2010(H3N2))",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM",
+        "description": "Amino acid sequence for chain A (length: 163)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 163
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "SSFSFGGFTFKRTSGSSVKKEEEVLTGNLQTLKIRVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIESIDNVMGMIGILPDMTPSTEMSLRGIRVSKM",
+        "description": "Amino acid sequence for chain B (length: 163)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 163
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The cap-binding site of influenza virus protein PB2 as a drug target.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S2059798316000085",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 163",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5EG8_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5EG8_1",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5EG8",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2538.23,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 84,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "PB2",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00604",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1378.55,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1159.68,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.543114690158102,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.456885309841897,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5EG8_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

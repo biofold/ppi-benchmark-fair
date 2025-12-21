@@ -1,0 +1,384 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 6FHM_1",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "6FHM_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_6FHM",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "6FHM",
+    "name": "Protein 6FHM",
+    "description": "Protein structure with PDB ID: 6FHM. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 6FHM_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/6FHM",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Escherichia coli K-12",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "83333",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333"
+    },
+    "alternateName": [
+      "PDB 6FHM",
+      "Protein ID 6FHM"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/6fhm_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/6FHM_1.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "6FHM",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "6FHM",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "6FHM_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "lolA",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF03548",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"6FHM\", \"structure_metadata\": {\"pdb_id\": \"6FHM\", \"resolution\": 2.39, \"deposition_date\": \"2018-01-15T00:00:00+0000\", \"release_date\": \"2018-07-25T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Escherichia coli K-12\"], \"citation\": {\"title\": \"Insights into bacterial lipoprotein trafficking from a structure of LolA bound to the LolC periplasmic domain.\", \"doi\": \"10.1073/pnas.1806822115\", \"authors\": [\"Kaplan, E.\", \"Greene, N.P.\", \"Crow, A.\", \"Koronakis, V.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 61.03, \"b\": 77.6, \"c\": 103.6, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\", \"B\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Escherichia coli K-12\", \"sequence_length\": 206, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Escherichia coli K-12\", \"sequence_length\": 206, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\", \"organism\": \"Escherichia coli K-12\", \"taxonomy_id\": 83333, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 206, \"gene_name\": null, \"uniprot_ids\": [\"P61316\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 206.0, \"min_sequence_length\": 206, \"max_sequence_length\": 206}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\", \"pdbx_seq_one_letter_code_can\": \"MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 1, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 206, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"K12\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 206, \"pdbx_gene_src_gene\": \"lolA, lplA, yzzV, b0891, JW0874\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"83333\", \"pdbx_gene_src_scientific_name\": \"Escherichia coli (strain K12)\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 13.586, \"label\": \"High\", \"link\": \"http://pdbflex.org/cluster.html#!/6fhmA/34781/6fhmA\", \"max_rmsd\": 20.115, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 185111, \"identity\": 100}, {\"cluster_id\": 2232, \"identity\": 95}, {\"cluster_id\": 2441, \"identity\": 90}, {\"cluster_id\": 2212, \"identity\": 70}, {\"cluster_id\": 3062, \"identity\": 50}, {\"cluster_id\": 2022, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 206, \"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 206, \"ncbi_common_names\": [\"Escherichia coli K12\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli K-12\", \"ncbi_taxonomy_id\": 83333, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli (strain K12)\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"83333\", \"name\": \"Escherichia coli K-12\"}, {\"depth\": 10, \"id\": \"83333\", \"name\": \"Escherichia coli K12\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"lolA\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"lplA\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"yzzV\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"b0891\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"JW0874\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"511145\", \"name\": \"Escherichia coli str. K-12 substr. MG1655\"}, {\"depth\": 0, \"id\": \"621\", \"name\": \"Shigella boydii\"}, {\"depth\": 1, \"id\": \"622:outer_membrane_lipoprotein_chaperone_lola\", \"name\": \"outer membrane lipoprotein chaperone LolA\"}, {\"depth\": 1, \"id\": \"621:outer_membrane_lipoprotein_chaperone_lola\", \"name\": \"outer membrane lipoprotein chaperone LolA\"}, {\"depth\": 0, \"id\": \"622\", \"name\": \"Shigella dysenteriae\"}, {\"depth\": 0, \"id\": \"624\", \"name\": \"Shigella sonnei\"}, {\"depth\": 1, \"id\": \"511145:outer_membrane_lipoprotein_carrier_protein\", \"name\": \"outer membrane lipoprotein carrier protein\"}, {\"depth\": 1, \"id\": \"624:outer_membrane_lipoprotein_chaperone_lola\", \"name\": \"outer membrane lipoprotein chaperone LolA\"}, {\"depth\": 0, \"id\": \"564\", \"name\": \"Escherichia fergusonii\"}, {\"depth\": 1, \"id\": \"564:outer_membrane_lipoprotein_chaperone_lola\", \"name\": \"outer membrane lipoprotein chaperone LolA\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 22.917, \"pdbx_description\": \"Outer-membrane lipoprotein carrier protein\", \"pdbx_mutation\": \"F47E\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Outer-membrane lipoprotein carrier protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Outer-membrane lipoprotein carrier protein\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P61316\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 25, \"length\": 182, \"ref_beg_seq_id\": 22}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF03548\", \"assignment_version\": \"34.0\", \"name\": \"Outer membrane lipoprotein carrier protein LolA (LolA)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0042953\", \"name\": \"lipoprotein transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0045184\", \"name\": \"establishment of protein localization\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0015031\", \"name\": \"protein transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0042953\", \"name\": \"lipoprotein transport\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}, {\"id\": \"GO:0044872\", \"name\": \"lipoprotein localization\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}]}, {\"annotation_id\": \"GO:0044874\", \"name\": \"lipoprotein localization to outer membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044872\", \"name\": \"lipoprotein localization\"}, {\"id\": \"GO:0051668\", \"name\": \"localization within membrane\"}, {\"id\": \"GO:0044874\", \"name\": \"lipoprotein localization to outer membrane\"}, {\"id\": \"GO:0044873\", \"name\": \"lipoprotein localization to membrane\"}]}, {\"annotation_id\": \"IPR018323\", \"name\": \"Outer membrane lipoprotein carrier protein LolA, Proteobacteria\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 2, \"id\": \"IPR018323\", \"name\": \"Outer membrane lipoprotein carrier protein LolA, Proteobacteria\"}, {\"depth\": 1, \"id\": \"IPR004564\", \"name\": \"Outer membrane lipoprotein carrier protein LolA-like\"}]}, {\"annotation_id\": \"GO:0030288\", \"name\": \"outer membrane-bounded periplasmic space\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030288\", \"name\": \"outer membrane-bounded periplasmic space\"}, {\"id\": \"GO:0030313\", \"name\": \"cell envelope\"}, {\"id\": \"GO:0042597\", \"name\": \"periplasmic space\"}]}, {\"annotation_id\": \"IPR004564\", \"name\": \"Outer membrane lipoprotein carrier protein LolA-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR004564\", \"name\": \"Outer membrane lipoprotein carrier protein LolA-like\"}]}, {\"annotation_id\": \"IPR029046\", \"name\": \"Lipoprotein localisation LolA/LolB/LppX\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029046\", \"name\": \"Lipoprotein localisation LolA/LolB/LppX\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"6FHM\", \"rcsb_id\": \"6FHM_1\", \"uniprot_ids\": [\"P61316\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P61316\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.883495145631068, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.896551724137931}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF03548\", \"name\": \"Outer membrane lipoprotein carrier protein LolA (LolA)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 35, \"end_seq_id\": 194}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 71}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"initiating methionine,expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 24}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.79, -2.36, -2.4, -2.4, -2.36, -1.58, -0.76, -0.58, -0.72, -0.41, -0.14, -0.41, -0.11, 0.13, -0.38, -0.63, -0.84, -0.14, 0.1, 0.1, 0.07, 0.28, -0.36, -0.36, -1.07, -0.26, -0.84, -1.48, -0.92, -0.62, -1.13, -0.39, -0.66, 0.04, -0.47, 0.23, 0.59, -0.27, -0.61, -0.06, -0.44, -0.48, -0.72, -0.72, -1.08, -0.8, -0.21, 0.69, -0.17, -0.48, -0.13, -0.48, -0.43, -0.78, -0.56, -0.86, -0.86, -0.9, -1.01, -1.14, -1.14, -0.68, -0.68, -1.49, -1.49, -2.31, -1.67, -1.24, -1.46, -1.24, -2.06, -2.06, -1.76, -1.16, -0.38, -0.12, -0.13, -0.13, 0.0, -0.04, 0.27, 0.78, 0.18, 0.07, -0.54, -0.84, -0.63, -0.28, 0.62, 0.31, -0.5, -0.2, -0.59, -0.24, 0.07, 0.14, 0.26, -0.64, -0.64, -0.06, -0.33, -0.3, -0.89, -0.89, -0.97, -1.08, -0.43, 0.38, 0.68, 0.96, 0.5, 0.5, 0.19, 0.28, -0.12, -0.72, -1.24, -2.13, -2.72, -2.37, -2.37, -1.48, -1.82, -2.12, -2.12, -2.07, -2.07, -2.07, -1.61, -0.76, -0.83, -0.48, -0.27, -0.31, -0.07, 0.23, 0.23, -0.12, -0.98, -0.98, -1.33, -1.54, -0.8, -1.08, -0.49, -0.49, 0.02, 0.37, -0.56, -0.51, -0.17, -0.56, 0.02, -0.83, -0.83, -0.99, -1.03, -0.33, 0.52, 0.18, -0.13, -1.02, -1.06, -1.06, -1.87, -1.87, -2.16, -2.77, -2.77, -1.96, -2.0, -1.7, -1.7, -1.59, -1.89, -1.84, -1.5, -0.64, -1.46, -0.82, -0.53, -0.58, 0.12, 0.43, 0.79, 0.51, -0.13, 0.08, -0.51, -0.76, 0.14, -0.24, 0.3, -0.4, -0.71, -0.92, -1.24, -1.29]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.99, 0.98, 0.98, 0.95, 0.91, 0.9, 0.87, 0.85, 0.81, 0.78, 0.73, 0.73, 0.73, 0.7, 0.69, 0.67, 0.64, 0.63, 0.62, 0.55, 0.55, 0.54, 0.55, 0.49, 0.54, 0.57, 0.5, 0.49, 0.49, 0.41, 0.41, 0.4, 0.41, 0.34, 0.36, 0.38, 0.39, 0.35, 0.35, 0.36, 0.41, 0.41, 0.41, 0.39, 0.42, 0.38, 0.39, 0.45, 0.45, 0.47, 0.55, 0.55, 0.53, 0.47, 0.5, 0.49, 0.47, 0.5, 0.55, 0.5, 0.5, 0.5, 0.44, 0.42, 0.41, 0.42, 0.47, 0.48, 0.48, 0.48, 0.47, 0.4, 0.32, 0.32, 0.38, 0.43, 0.44, 0.45, 0.41, 0.35, 0.34, 0.26, 0.17, 0.23, 0.26, 0.22, 0.17, 0.17, 0.16, 0.13, 0.12, 0.11, 0.15, 0.14, 0.13, 0.13, 0.13, 0.1, 0.1, 0.11, 0.16, 0.2, 0.31, 0.32, 0.28, 0.19, 0.2, 0.23, 0.21, 0.2, 0.23, 0.24, 0.27, 0.28, 0.29, 0.38, 0.4, 0.31, 0.35, 0.28, 0.27, 0.28, 0.3, 0.27, 0.35, 0.4, 0.4, 0.41, 0.37, 0.36, 0.4, 0.39, 0.36, 0.37, 0.37, 0.43, 0.42, 0.35, 0.42, 0.43, 0.44, 0.43, 0.35, 0.35, 0.29, 0.29, 0.29, 0.37, 0.43, 0.49, 0.43, 0.4, 0.41, 0.37, 0.37, 0.35, 0.28, 0.29, 0.36, 0.38, 0.38, 0.45, 0.47, 0.54, 0.53, 0.53, 0.53, 0.47, 0.44, 0.44, 0.47, 0.54, 0.54, 0.55, 0.59, 0.53, 0.57, 0.6, 0.57, 0.55, 0.5, 0.47, 0.41, 0.4, 0.44, 0.48, 0.55, 0.55, 0.55, 0.55, 0.49, 0.49, 0.49, 0.49, 0.48, 0.49, 0.58, 0.61, 0.67, 0.72, 0.76, 0.85, 0.89, 0.94, 0.96, 0.96]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.77, 0.75, 0.74, 0.73, 0.73, 0.72, 0.72, 0.71, 0.7, 0.68, 0.68, 0.67, 0.67, 0.67, 0.67, 0.65, 0.64, 0.63, 0.63, 0.63, 0.63, 0.63, 0.62, 0.61, 0.6, 0.59, 0.58, 0.58, 0.57, 0.58, 0.57, 0.57, 0.56, 0.56, 0.56, 0.56, 0.56, 0.56, 0.55, 0.55, 0.54, 0.53, 0.51, 0.5, 0.49, 0.48, 0.47, 0.47, 0.46, 0.45, 0.45, 0.45, 0.44, 0.45, 0.45, 0.45, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.39, 0.38, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.46, 0.46, 0.46, 0.46, 0.47, 0.47, 0.47, 0.47, 0.47, 0.47, 0.46, 0.46, 0.46, 0.45, 0.45, 0.45, 0.44, 0.44, 0.44, 0.45, 0.45, 0.45, 0.45, 0.45, 0.46, 0.46, 0.48, 0.49, 0.5, 0.52, 0.53, 0.54, 0.56, 0.57, 0.59, 0.59, 0.59, 0.58, 0.57, 0.55, 0.53, 0.51, 0.5, 0.47, 0.46, 0.45, 0.44, 0.42, 0.41, 0.4]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.00485, \"type\": \"mutation\"}, {\"count\": 1, \"coverage\": 0.1165, \"maximum_length\": 24, \"minimum_length\": 24, \"type\": \"artifact\"}, {\"count\": 1, \"coverage\": 0.7767, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2212_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 206, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2022_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 7, \"ref_beg_seq_id\": 2}, {\"entity_beg_seq_id\": 8, \"length\": 2, \"ref_beg_seq_id\": 13}, {\"entity_beg_seq_id\": 10, \"length\": 1, \"ref_beg_seq_id\": 16}, {\"entity_beg_seq_id\": 11, \"length\": 14, \"ref_beg_seq_id\": 18}, {\"entity_beg_seq_id\": 25, \"length\": 108, \"ref_beg_seq_id\": 34}, {\"entity_beg_seq_id\": 133, \"length\": 11, \"ref_beg_seq_id\": 147}, {\"entity_beg_seq_id\": 144, \"length\": 15, \"ref_beg_seq_id\": 159}, {\"entity_beg_seq_id\": 159, \"length\": 27, \"ref_beg_seq_id\": 175}, {\"entity_beg_seq_id\": 186, \"length\": 21, \"ref_beg_seq_id\": 203}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"185111_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 206, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3062_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 206, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2232_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 206, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2441_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 206, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P61316\", \"aligned_regions\": [{\"entity_beg_seq_id\": 25, \"length\": 182, \"ref_beg_seq_id\": 22}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"P20\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL3309024\", \"target_taxonomy_id\": 83333, \"aligned_target\": [{\"entity_beg_seq_id\": 25, \"length\": 181, \"target_beg_seq_id\": 22}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 4.12, \"binding_assay_value_type\": \"pKd\", \"cofactor_in_ch_ikey\": \"JRZNGLZDQHVIOO-UHFFFAOYSA-N\", \"cofactor_smiles\": \"COc1ccc(CCN2CN=C(SCc3ccc(Cl)cc3)NC2)cc1OC\", \"cofactor_resource_id\": \"CHEMBL1213376\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3309024\"}], \"rcsb_id\": \"6FHM_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"B\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:45:25.844613\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 206, \"chain2_sequence_length\": 206, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.39,
+            "experimentalMethod": null,
+            "depositionDate": "2018-01-15T00:00:00+0000",
+            "releaseDate": "2018-07-25T00:00:00+0000",
+            "sourceOrganism": [
+              "Escherichia coli K-12"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.39,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Escherichia coli K-12",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK",
+        "description": "Amino acid sequence for chain A (length: 206)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 206
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MGSSHHHHHHSSGLVPRGSHMASMDAASDLKSRLDKVSSFHASFTQKVTDGSGAAVQEGQGDLWVKRPNLENWHMTQPDESILVSDGKTLWFYNPFVEQATATWLKDATGNTPFMLIARNQSSDWQQYNIKQNGDDFVLTPKASNGNLKQFTINVGRDGTIHQFSAVEQDDQRSSYQLKSQQNGAVDAAKFTFTPPQGVTVDDQRK",
+        "description": "Amino acid sequence for chain B (length: 206)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 206
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Insights into bacterial lipoprotein trafficking from a structure of LolA bound to the LolC periplasmic domain.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1073/pnas.1806822115",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 206",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3WNK_2",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "3WNK_2"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 6FHM_1",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "6FHM",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 7978.78,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 318,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "lolA",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF03548",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 3187.16,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 4791.61,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.39945455320237,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.600544193473188,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3WNK_2",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3WNK_2"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

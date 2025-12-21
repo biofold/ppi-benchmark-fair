@@ -1,0 +1,400 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5C2X_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "5C2X_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5C2X",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5C2X",
+    "name": "Protein 5C2X",
+    "description": "Protein structure with PDB ID: 5C2X. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5C2X_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5C2X",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Colwellia psychrerythraea",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "28229",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28229"
+    },
+    "alternateName": [
+      "PDB 5C2X",
+      "Protein ID 5C2X"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5c2x_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5c2x.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5C2X",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5C2X",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5C2X_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "deoC",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.20.20.70",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01791",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5C2X\", \"structure_metadata\": {\"pdb_id\": \"5C2X\", \"resolution\": 2.11, \"deposition_date\": \"2015-06-16T00:00:00+0000\", \"release_date\": \"2016-02-03T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Colwellia psychrerythraea\"], \"citation\": {\"title\": \"Trading off stability against activity in extremophilic aldolases.\", \"doi\": \"10.1038/srep17908\", \"authors\": [\"Dick, M.\", \"Weiergraber, O.H.\", \"Classen, T.\", \"Bisterfeld, C.\", \"Bramski, J.\", \"Gohlke, H.\", \"Pietruszka, J.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 103.76, \"b\": 103.76, \"c\": 112.98, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\", \"B\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea\", \"sequence_length\": 263, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea\", \"sequence_length\": 263, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\", \"organism\": \"Colwellia psychrerythraea\", \"taxonomy_id\": 28229, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 263, \"gene_name\": null, \"uniprot_ids\": [\"Q483R4\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 263.0, \"min_sequence_length\": 263, \"max_sequence_length\": 263}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\", \"pdbx_seq_one_letter_code_can\": \"MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 263, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 263, \"pdbx_gene_src_gene\": \"deoC, CPS_1972\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"28229\", \"pdbx_gene_src_scientific_name\": \"Colwellia psychrerythraea\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET21a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.429, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/5c5yA/27064/5c2xA\", \"max_rmsd\": 0.673, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 104160, \"identity\": 100}, {\"cluster_id\": 134714, \"identity\": 95}, {\"cluster_id\": 147770, \"identity\": 90}, {\"cluster_id\": 141599, \"identity\": 70}, {\"cluster_id\": 1402, \"identity\": 50}, {\"cluster_id\": 1654, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 263, \"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 263, \"ncbi_common_names\": [\"Colwellia psychroerythraea\", \"Colwellia psychroerythrea\", \"Colwellia psychroerythrus\", \"Vibrio psychroerythreus\", \"Vibrio psychroerythrus\", \"Vibrio psychroerythus\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Colwellia psychrerythraea\", \"ncbi_taxonomy_id\": 28229, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Colwellia psychrerythraea\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadales\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadaceae group\"}, {\"depth\": 7, \"id\": \"267889\", \"name\": \"Colwelliaceae\"}, {\"depth\": 8, \"id\": \"28228\", \"name\": \"Colwellia\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychrerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythreus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythus\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"deoC\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"CPS_1972\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 28.33, \"pdbx_description\": \"Deoxyribose-phosphate aldolase\", \"pdbx_ec\": \"4.1.2.4\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"4\", \"name\": \"Lyases\"}, {\"depth\": 2, \"id\": \"4.1\", \"name\": \"Carbon-carbon lyases\"}, {\"depth\": 3, \"id\": \"4.1.2\", \"name\": \"Aldehyde-lyases\"}, {\"depth\": 4, \"id\": \"4.1.2.4\", \"name\": \"deoxyribose-phosphate aldolase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Deoxyribose-phosphate aldolase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"4.1.2.4\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Deoxyribose-phosphate aldolase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q483R4\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 257, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01791\", \"assignment_version\": \"34.0\", \"name\": \"DeoC/LacD family aldolase (DeoC)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR011343\", \"name\": \"Deoxyribose-phosphate aldolase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR011343\", \"name\": \"Deoxyribose-phosphate aldolase\"}]}, {\"annotation_id\": \"IPR002915\", \"name\": \"DeoC/FbaB/LacD aldolase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR002915\", \"name\": \"DeoC/FbaB/LacD aldolase\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0016052\", \"name\": \"carbohydrate catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005975\", \"name\": \"carbohydrate metabolic process\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0016052\", \"name\": \"carbohydrate catabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"IPR013785\", \"name\": \"Aldolase-type TIM barrel\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR013785\", \"name\": \"Aldolase-type TIM barrel\"}]}, {\"annotation_id\": \"GO:0004139\", \"name\": \"deoxyribose-phosphate aldolase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004139\", \"name\": \"deoxyribose-phosphate aldolase activity\"}, {\"id\": \"GO:0016829\", \"name\": \"lyase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016830\", \"name\": \"carbon-carbon lyase activity\"}, {\"id\": \"GO:0016832\", \"name\": \"aldehyde-lyase activity\"}]}, {\"annotation_id\": \"GO:0009264\", \"name\": \"deoxyribonucleotide catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006753\", \"name\": \"nucleoside phosphate metabolic process\"}, {\"id\": \"GO:1901136\", \"name\": \"carbohydrate derivative catabolic process\"}, {\"id\": \"GO:0009264\", \"name\": \"deoxyribonucleotide catabolic process\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:1901135\", \"name\": \"carbohydrate derivative metabolic process\"}, {\"id\": \"GO:0046434\", \"name\": \"organophosphate catabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:1901292\", \"name\": \"nucleoside phosphate catabolic process\"}, {\"id\": \"GO:0009117\", \"name\": \"nucleotide metabolic process\"}, {\"id\": \"GO:0034655\", \"name\": \"nucleobase-containing compound catabolic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0009262\", \"name\": \"deoxyribonucleotide metabolic process\"}, {\"id\": \"GO:0019637\", \"name\": \"organophosphate metabolic process\"}, {\"id\": \"GO:0055086\", \"name\": \"nucleobase-containing small molecule metabolic process\"}, {\"id\": \"GO:0006796\", \"name\": \"phosphate-containing compound metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044281\", \"name\": \"small molecule metabolic process\"}, {\"id\": \"GO:0006793\", \"name\": \"phosphorus metabolic process\"}, {\"id\": \"GO:0009166\", \"name\": \"nucleotide catabolic process\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5C2X\", \"rcsb_id\": \"5C2X_1\", \"uniprot_ids\": [\"Q483R4\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q483R4\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9771863117870723, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01791\", \"name\": \"DeoC/LacD family aldolase (DeoC)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 10, \"end_seq_id\": 240}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 258, \"end_seq_id\": 263}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.28, -0.43, -0.14, 0.67, 0.08, 0.93, 0.94, 0.09, 0.31, 0.62, 1.03, 1.26, 0.76, 0.46, -0.04, -0.64, -0.33, -1.14, -1.46, -1.76, -1.68, -1.1, -1.1, -0.6, 0.07, -0.36, -0.36, 0.23, 0.19, -0.4, -1.08, -0.49, -0.96, -1.62, -1.2, -0.61, -0.61, 0.32, 0.69, 1.37, 1.48, 1.34, 1.23, 1.62, 1.92, 1.54, 1.51, 1.43, 0.5, -0.24, 0.13, 1.06, 0.31, 0.01, -0.2, -1.06, -1.33, -1.08, -1.0, -0.7, -1.56, -0.62, -0.62, -0.31, 0.54, 0.54, 0.33, 1.0, 0.32, 0.37, -0.18, -0.77, -1.08, -1.93, -1.43, -1.43, -1.24, -0.87, -0.06, 0.19, 0.19, 0.5, 0.39, 0.17, 0.76, 0.72, 0.72, 0.16, -0.09, 0.5, 0.19, 0.3, 0.57, -0.02, -0.07, 0.2, 0.66, 0.52, 0.18, 0.07, 0.66, 0.61, 1.5, 0.69, 0.18, -0.52, -0.73, -0.67, 0.33, 0.09, -0.02, -0.91, -0.31, 0.2, 0.16, 1.01, 1.37, 0.43, 0.09, -0.02, 0.64, 0.34, -0.17, -0.12, -0.39, -1.1, -0.24, -0.29, -0.02, 0.2, 0.79, 0.44, 0.76, 0.51, 0.56, 0.56, 0.56, 0.0, -0.89, -1.78, -0.97, -0.39, -0.84, -0.89, -1.11, -0.77, -1.07, -0.18, 0.41, 0.49, -0.4, 0.3, 0.69, 0.69, 0.39, 1.09, 1.09, 0.46, -0.12, 0.18, -0.1, -0.1, -0.73, 0.12, 0.01, 0.01, 0.06, 0.33, 0.34, 0.24, -0.1, 0.53, 0.27, -0.37, -0.4, 0.2, 0.42, 0.42, 1.07, 1.96, 1.32, 0.73, 0.73, -0.12, -0.41, -0.63, -0.09, -0.6, -0.79, -0.79, -0.58, 0.06, 0.4, 0.43, 0.7, -0.27, -0.61, -0.72, -0.68, -0.89, -0.89, -0.64, -0.1, -0.71, 0.21, 0.21, 0.43, 1.02, 1.02, 0.43, 0.73, 0.66, 0.76, -0.06, -0.06, -0.58, -0.58, -0.58, 0.01, -0.88, -1.66, -1.3, -1.41, -0.71, -0.66, -0.66, -0.36, -0.64, 0.17, 0.94, 1.13, 1.54, 1.66, 2.12, 1.53, 1.54, 2.06, 1.59, 0.81, -0.12, -0.12, -0.93, -1.43, -1.48, -1.49, -2.0, -2.04, -2.08, -1.79, -2.06, -2.02, -2.3, -2.22, -2.49, -2.76]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.82, 0.71, 0.68, 0.58, 0.52, 0.49, 0.38, 0.33, 0.3, 0.19, 0.15, 0.17, 0.16, 0.17, 0.23, 0.25, 0.28, 0.36, 0.32, 0.24, 0.26, 0.21, 0.2, 0.2, 0.27, 0.25, 0.23, 0.31, 0.35, 0.31, 0.38, 0.4, 0.39, 0.37, 0.33, 0.27, 0.17, 0.12, 0.07, 0.13, 0.2, 0.13, 0.13, 0.23, 0.17, 0.14, 0.17, 0.18, 0.16, 0.08, 0.1, 0.08, 0.08, 0.09, 0.1, 0.15, 0.2, 0.21, 0.28, 0.27, 0.2, 0.18, 0.18, 0.25, 0.22, 0.21, 0.28, 0.28, 0.28, 0.31, 0.4, 0.41, 0.37, 0.37, 0.27, 0.25, 0.14, 0.12, 0.19, 0.19, 0.27, 0.27, 0.23, 0.24, 0.21, 0.15, 0.22, 0.15, 0.16, 0.18, 0.12, 0.12, 0.07, 0.07, 0.04, 0.08, 0.06, 0.1, 0.09, 0.05, 0.03, 0.03, 0.04, 0.05, 0.08, 0.09, 0.08, 0.08, 0.05, 0.05, 0.04, 0.04, 0.03, 0.04, 0.03, 0.05, 0.04, 0.06, 0.03, 0.05, 0.07, 0.12, 0.1, 0.1, 0.06, 0.05, 0.04, 0.04, 0.03, 0.05, 0.05, 0.06, 0.09, 0.06, 0.09, 0.14, 0.15, 0.15, 0.12, 0.13, 0.13, 0.13, 0.11, 0.13, 0.15, 0.15, 0.13, 0.12, 0.17, 0.2, 0.2, 0.17, 0.18, 0.12, 0.13, 0.13, 0.13, 0.12, 0.12, 0.17, 0.23, 0.17, 0.15, 0.12, 0.12, 0.09, 0.13, 0.18, 0.26, 0.23, 0.23, 0.23, 0.2, 0.18, 0.19, 0.25, 0.2, 0.14, 0.13, 0.14, 0.14, 0.15, 0.2, 0.19, 0.21, 0.2, 0.15, 0.16, 0.16, 0.12, 0.15, 0.17, 0.13, 0.17, 0.19, 0.22, 0.22, 0.28, 0.33, 0.3, 0.23, 0.16, 0.1, 0.11, 0.08, 0.1, 0.11, 0.17, 0.11, 0.05, 0.06, 0.06, 0.07, 0.06, 0.05, 0.05, 0.05, 0.05, 0.05, 0.03, 0.04, 0.04, 0.06, 0.08, 0.07, 0.12, 0.09, 0.06, 0.04, 0.07, 0.08, 0.05, 0.05, 0.04, 0.05, 0.06, 0.06, 0.08, 0.08, 0.08, 0.14, 0.16, 0.24, 0.24, 0.27, 0.28, 0.21, 0.3, 0.38, 0.45, 0.46, 0.53, 0.61, 0.66, 0.69, 0.8, 0.84, 0.87, 0.89, 0.92, 0.94, 0.96, 0.97]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.38, 0.4, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.37, 0.35, 0.34, 0.33, 0.32, 0.3, 0.29, 0.29, 0.29, 0.28, 0.29, 0.29, 0.3, 0.31, 0.32, 0.32, 0.32, 0.32, 0.32, 0.32, 0.32, 0.31, 0.31, 0.32, 0.33, 0.34, 0.36, 0.37, 0.4, 0.42, 0.43, 0.41, 0.39, 0.37, 0.37, 0.37, 0.37, 0.39, 0.41, 0.43, 0.41, 0.39, 0.37, 0.35, 0.33, 0.31, 0.3, 0.28, 0.27, 0.26, 0.26, 0.26, 0.26, 0.25, 0.25, 0.25, 0.26, 0.26, 0.27, 0.28, 0.29, 0.29, 0.28, 0.28, 0.28, 0.29, 0.28, 0.27, 0.26, 0.25, 0.25, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.25, 0.25, 0.27, 0.28, 0.3, 0.31, 0.33, 0.35, 0.36, 0.38, 0.39, 0.39, 0.4, 0.38, 0.36, 0.33, 0.31, 0.3, 0.28, 0.27, 0.25, 0.24, 0.23, 0.22, 0.22, 0.21, 0.22, 0.21, 0.2, 0.18, 0.16, 0.14, 0.13, 0.12, 0.11, 0.11, 0.1, 0.1, 0.1, 0.1, 0.11, 0.12, 0.14, 0.15, 0.16, 0.18, 0.19, 0.2, 0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.27, 0.28, 0.28, 0.28, 0.27, 0.27, 0.27, 0.28, 0.28, 0.28, 0.29, 0.28, 0.29, 0.29, 0.3, 0.31, 0.33, 0.32, 0.31, 0.3, 0.29, 0.29, 0.28, 0.28, 0.28, 0.27, 0.27, 0.27, 0.27, 0.29, 0.3, 0.31, 0.32, 0.32, 0.33, 0.33, 0.33, 0.33, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.26, 0.26, 0.25, 0.25, 0.24, 0.23, 0.23, 0.23, 0.22, 0.22, 0.22, 0.22, 0.23, 0.24, 0.25, 0.26, 0.28, 0.29, 0.3, 0.31, 0.32, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.4, 0.4, 0.41, 0.42, 0.43, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.43, 0.43, 0.44]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.87833, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.02281, \"maximum_length\": 6, \"minimum_length\": 6, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"134714_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 263, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"104160_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 263, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"147770_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 263, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"141599_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 263, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q483R4\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 257, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1402_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 19, \"ref_beg_seq_id\": 8}, {\"entity_beg_seq_id\": 20, \"length\": 112, \"ref_beg_seq_id\": 28}, {\"entity_beg_seq_id\": 132, \"length\": 37, \"ref_beg_seq_id\": 141}, {\"entity_beg_seq_id\": 169, \"length\": 24, \"ref_beg_seq_id\": 179}, {\"entity_beg_seq_id\": 193, \"length\": 43, \"ref_beg_seq_id\": 205}, {\"entity_beg_seq_id\": 236, \"length\": 28, \"ref_beg_seq_id\": 249}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1654_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 19, \"ref_beg_seq_id\": 54}, {\"entity_beg_seq_id\": 20, \"length\": 23, \"ref_beg_seq_id\": 74}, {\"entity_beg_seq_id\": 43, \"length\": 23, \"ref_beg_seq_id\": 115}, {\"entity_beg_seq_id\": 66, \"length\": 8, \"ref_beg_seq_id\": 140}, {\"entity_beg_seq_id\": 74, \"length\": 51, \"ref_beg_seq_id\": 149}, {\"entity_beg_seq_id\": 125, \"length\": 7, \"ref_beg_seq_id\": 203}, {\"entity_beg_seq_id\": 132, \"length\": 37, \"ref_beg_seq_id\": 211}, {\"entity_beg_seq_id\": 169, \"length\": 24, \"ref_beg_seq_id\": 249}, {\"entity_beg_seq_id\": 193, \"length\": 43, \"ref_beg_seq_id\": 280}, {\"entity_beg_seq_id\": 236, \"length\": 27, \"ref_beg_seq_id\": 324}, {\"entity_beg_seq_id\": 263, \"length\": 1, \"ref_beg_seq_id\": 355}]}], \"rcsb_id\": \"5C2X_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:43:47.570491\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.11,
+            "experimentalMethod": null,
+            "depositionDate": "2015-06-16T00:00:00+0000",
+            "releaseDate": "2016-02-03T00:00:00+0000",
+            "sourceOrganism": [
+              "Colwellia psychrerythraea"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.11,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Colwellia psychrerythraea",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH",
+        "description": "Amino acid sequence for chain A (length: 263)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 263
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MSDIKAVAQRALSLMDLTSLTNTETDQEIIDLCRQAKSPAGETAAICIFPRFIPVAKKALKAQQTPHIKIATVTNFPQGNDDLDIALAETRAAVAYGADEVDLVFPYRALIQGNETIGFDMVKVCKQACSGNAKLKVIIETGELKSEELIRKASEIAINAGADFIKTSTGKVAINATPEAAKVMLTVIKNKNTAVGFKPAGGVRNADDAAIYLDLADNILGNEWADANHFRFGASSLLISLLDTLGHKSNTKSSSNYHHHHHH",
+        "description": "Amino acid sequence for chain B (length: 263)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 263
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Trading off stability against activity in extremophilic aldolases.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/srep17908",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 263",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2A4A_3",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 4,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "2A4A_3",
+          "5C6M_2",
+          "1KTN_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5C2X_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5C2X",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1242.14,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 40,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "deoC",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.20.20.70",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01791",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 404.540000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 837.610000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.325679875054343,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.674328175567972,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2A4A_3",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 4,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2A4A_3",
+        "5C6M_2",
+        "1KTN_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

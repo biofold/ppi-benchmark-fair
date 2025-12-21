@@ -1,0 +1,440 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5XO7_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "5XO7_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5XO7",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5XO7",
+    "name": "Protein 5XO7",
+    "description": "Protein structure with PDB ID: 5XO7. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5XO7_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5XO7",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Rhinocladiella mackenziei CBS 650.93",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1442369",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1442369"
+    },
+    "alternateName": [
+      "PDB 5XO7",
+      "Protein ID 5XO7"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5xo7_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5xo7.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5XO7",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5XO7",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5XO7_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-F",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "Z518_04590",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00561",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5XO7\", \"structure_metadata\": {\"pdb_id\": \"5XO7\", \"resolution\": 1.88, \"deposition_date\": \"2017-05-27T00:00:00+0000\", \"release_date\": \"2018-05-02T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Rhinocladiella mackenziei CBS 650.93\"], \"citation\": {\"title\": \"Crystal Structure of a Mycoestrogen-Detoxifying Lactonase from Rhinocladiella mackenziei: Molecular Insight into ZHD Substrate Selectivity\", \"doi\": \"10.1021/acscatal.8b00464\", \"authors\": [\"Zheng, Y.Y.\", \"Liu, W.T.\", \"Chen, C.C.\", \"Hu, X.Y.\", \"Liu, W.D.\", \"Ko, T.P.\", \"Tang, X.K.\", \"Wei, H.L.\", \"Huang, J.W.\", \"Guo, R.T.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 75.462, \"b\": 95.158, \"c\": 101.444, \"alpha\": 90.2, \"beta\": 92.13, \"gamma\": 91.6}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"B\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"C\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"D\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"E\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"F\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"G\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"H\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"sequence_length\": 266, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"organism\": \"Rhinocladiella mackenziei CBS 650.93\", \"taxonomy_id\": 1442369, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 266, \"gene_name\": null, \"uniprot_ids\": [\"A0A0D2ILK1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 266.0, \"min_sequence_length\": 266, \"max_sequence_length\": 266}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"pdbx_seq_one_letter_code_can\": \"MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK\", \"pdbx_strand_id\": \"A,B,C,D,E,F,G,H\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 1, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 266, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 266, \"pdbx_gene_src_gene\": \"Z518_04590\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1442369\", \"pdbx_gene_src_scientific_name\": \"Rhinocladiella mackenziei CBS 650.93\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET-46 EK/LIC\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.328, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/5xo7F/32524/5xo7A\", \"max_rmsd\": 0.739, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 43930, \"identity\": 100}, {\"cluster_id\": 23782, \"identity\": 95}, {\"cluster_id\": 26166, \"identity\": 90}, {\"cluster_id\": 22706, \"identity\": 70}, {\"cluster_id\": 6423, \"identity\": 50}, {\"cluster_id\": 7532, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 266, \"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 266, \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Rhinocladiella mackenziei CBS 650.93\", \"ncbi_taxonomy_id\": 1442369, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Rhinocladiella mackenziei CBS 650.93\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Fungi\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Mycota\"}, {\"depth\": 5, \"id\": \"451864\", \"name\": \"Dikarya\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"Ascomycota\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"ascomycete fungi\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"sac fungi\"}, {\"depth\": 7, \"id\": \"716545\", \"name\": \"saccharomyceta\"}, {\"depth\": 8, \"id\": \"147538\", \"name\": \"Pezizomycotina\"}, {\"depth\": 8, \"id\": \"147538\", \"name\": \"Euascomycota\"}, {\"depth\": 8, \"id\": \"147538\", \"name\": \"filamentous ascomycetes\"}, {\"depth\": 9, \"id\": \"716546\", \"name\": \"leotiomyceta\"}, {\"depth\": 10, \"id\": \"147545\", \"name\": \"Eurotiomycetes\"}, {\"depth\": 11, \"id\": \"451870\", \"name\": \"Chaetothyriomycetidae\"}, {\"depth\": 12, \"id\": \"34395\", \"name\": \"Chaetothyriales\"}, {\"depth\": 12, \"id\": \"34395\", \"name\": \"black yeasts\"}, {\"depth\": 13, \"id\": \"43219\", \"name\": \"Herpotrichiellaceae\"}, {\"depth\": 14, \"id\": \"5587\", \"name\": \"Rhinocladiella\"}, {\"depth\": 15, \"id\": \"86056\", \"name\": \"Rhinocladiella mackenziei\"}, {\"depth\": 15, \"id\": \"86056\", \"name\": \"Ramichloridium mackenziei\"}, {\"depth\": 16, \"id\": \"1442369\", \"name\": \"Rhinocladiella mackenziei CBS 650.93\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"Z518_04590\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"1442369:Unknown\", \"name\": \"Chromosome Unknown\"}, {\"depth\": 2, \"id\": \"1442369:Unknown:hypothetical_protein\", \"name\": \"hypothetical protein, 1442369:Unknown:hypothetical_protein\"}, {\"depth\": 0, \"id\": \"1442369\", \"name\": \"Rhinocladiella mackenziei CBS 650.93\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 29.449, \"pdbx_description\": \"lactonase for protein\", \"pdbx_mutation\": \"S105A\", \"pdbx_number_of_molecules\": 8, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"lactonase for protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"AB hydrolase-1 domain-containing protein\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"A0A0D2ILK1\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 266, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00561\", \"assignment_version\": \"34.0\", \"name\": \"alpha/beta hydrolase fold (Abhydrolase_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR050471\", \"name\": \"AB hydrolase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR050471\", \"name\": \"AB hydrolase\"}]}, {\"annotation_id\": \"IPR000073\", \"name\": \"Alpha/beta hydrolase fold-1\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR000073\", \"name\": \"Alpha/beta hydrolase fold-1\"}]}, {\"annotation_id\": \"IPR029058\", \"name\": \"Alpha/Beta hydrolase fold\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029058\", \"name\": \"Alpha/Beta hydrolase fold\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5XO7\", \"rcsb_id\": \"5XO7_1\", \"uniprot_ids\": [\"A0A0D2ILK1\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"A0A0D2ILK1\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00561\", \"name\": \"alpha/beta hydrolase fold (Abhydrolase_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 28, \"end_seq_id\": 193}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 105}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.73, -0.48, -0.76, -1.03, -1.39, -1.28, -1.24, -0.24, -0.63, -0.59, -1.2, -1.27, -1.58, -1.53, -1.53, -1.53, -2.12, -1.73, -1.81, -2.06, -1.44, -0.59, 0.22, 1.11, 0.98, 0.68, 0.68, 1.28, 1.62, 0.77, 0.58, -0.23, -0.52, -0.03, -0.03, -0.42, -1.02, -0.77, -0.47, -0.32, 0.57, 0.56, 0.16, 0.16, 0.54, 1.03, 0.32, 0.88, 0.38, -0.2, -0.09, -0.39, 0.21, 0.08, -0.28, 0.43, -0.12, -0.54, -0.56, -0.96, -0.96, -0.97, -0.97, -1.1, -1.7, -1.69, -1.33, -1.63, -1.93, -1.04, -1.32, -1.19, -1.51, -1.56, -1.06, -0.71, -0.37, -0.12, -0.12, 0.46, 0.42, 1.34, 2.2, 1.39, 1.11, 1.58, 1.33, 1.33, 0.4, 0.98, 0.76, 0.24, 1.1, 1.08, 0.61, 1.28, 0.98, 1.32, 0.78, 0.78, 0.78, 0.23, 0.8, 1.27, 1.19, 1.41, 1.78, 1.73, 1.14, 1.09, 0.99, 0.13, -0.79, -0.52, -1.44, -2.11, -2.07, -1.47, -1.5, -1.68, -1.68, -0.71, -1.36, -0.93, -0.93, -1.28, -1.67, -1.88, -1.02, -0.21, -0.26, -0.43, 0.14, 0.18, 0.18, 0.82, 0.82, 0.14, -0.08, -0.58, 0.28, -0.31, -0.34, -0.34, -0.6, -0.01, 0.37, -0.22, -0.23, -1.23, -0.94, -0.7, -0.4, -0.66, -1.24, -0.98, -0.98, -0.69, -0.29, -0.88, -0.53, -0.02, -0.02, 0.19, -0.67, 0.19, -0.37, -0.07, -0.18, 0.04, -0.73, -1.08, -1.29, -1.04, -1.69, -1.83, -2.13, -1.43, -2.0, -1.69, -1.44, -1.23, -1.59, -1.49, -0.49, -0.57, -0.94, -0.89, -0.64, -0.68, -0.03, 0.03, 0.03, -0.86, -1.07, -0.47, -0.73, -1.37, -0.72, -1.37, -0.43, -0.74, -0.46, -0.14, -0.1, 0.21, 0.84, 0.29, 0.39, -0.29, 0.02, -0.31, 0.19, 0.03, 0.39, -0.2, -0.5, 0.08, 0.72, 1.3, 1.93, 1.71, 0.9, 0.2, 0.54, 1.43, 0.54, 0.58, 0.03, -0.24, -0.02, 0.3, 0.64, 0.3, -0.56, 0.14, -0.53, -0.63, -0.09, -0.6, -0.78, -0.91, -0.91, -0.94, -0.94, -0.57, -0.86, -1.47, -0.91, -0.09, -0.3, 0.01, 0.31, -0.5, -1.13, -0.84, -0.28, -1.18]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.86, 0.82, 0.77, 0.75, 0.71, 0.61, 0.56, 0.45, 0.34, 0.23, 0.2, 0.24, 0.27, 0.29, 0.3, 0.31, 0.34, 0.35, 0.3, 0.31, 0.3, 0.24, 0.27, 0.29, 0.28, 0.21, 0.27, 0.31, 0.32, 0.4, 0.44, 0.35, 0.36, 0.34, 0.37, 0.34, 0.35, 0.27, 0.22, 0.25, 0.31, 0.37, 0.44, 0.33, 0.32, 0.27, 0.34, 0.34, 0.25, 0.31, 0.27, 0.33, 0.41, 0.35, 0.36, 0.34, 0.37, 0.36, 0.42, 0.43, 0.5, 0.53, 0.54, 0.53, 0.53, 0.54, 0.6, 0.53, 0.52, 0.59, 0.58, 0.59, 0.5, 0.46, 0.5, 0.41, 0.34, 0.26, 0.26, 0.17, 0.13, 0.12, 0.09, 0.05, 0.05, 0.05, 0.04, 0.02, 0.03, 0.03, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.04, 0.04, 0.05, 0.05, 0.04, 0.02, 0.03, 0.02, 0.04, 0.03, 0.05, 0.08, 0.08, 0.08, 0.13, 0.13, 0.19, 0.2, 0.22, 0.22, 0.28, 0.23, 0.25, 0.31, 0.4, 0.43, 0.53, 0.62, 0.56, 0.51, 0.54, 0.52, 0.45, 0.46, 0.53, 0.49, 0.5, 0.53, 0.53, 0.52, 0.46, 0.44, 0.52, 0.51, 0.48, 0.44, 0.42, 0.4, 0.39, 0.44, 0.47, 0.43, 0.43, 0.49, 0.49, 0.42, 0.48, 0.44, 0.32, 0.36, 0.33, 0.34, 0.33, 0.33, 0.32, 0.31, 0.32, 0.32, 0.31, 0.25, 0.26, 0.3, 0.38, 0.3, 0.32, 0.31, 0.27, 0.24, 0.19, 0.3, 0.2, 0.24, 0.29, 0.29, 0.21, 0.21, 0.29, 0.29, 0.29, 0.31, 0.31, 0.31, 0.3, 0.31, 0.38, 0.3, 0.29, 0.38, 0.34, 0.43, 0.35, 0.44, 0.35, 0.35, 0.29, 0.35, 0.31, 0.3, 0.3, 0.34, 0.32, 0.37, 0.3, 0.22, 0.15, 0.15, 0.21, 0.16, 0.12, 0.12, 0.09, 0.12, 0.11, 0.18, 0.18, 0.16, 0.16, 0.12, 0.12, 0.12, 0.06, 0.07, 0.08, 0.12, 0.18, 0.17, 0.18, 0.12, 0.12, 0.16, 0.22, 0.27, 0.31, 0.31, 0.21, 0.18, 0.26, 0.19, 0.21, 0.16, 0.17, 0.23, 0.21, 0.21, 0.2, 0.14, 0.17, 0.15, 0.27, 0.38, 0.42, 0.46, 0.48, 0.52, 0.55, 0.67, 0.73, 0.77]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.33, 0.33, 0.33, 0.33, 0.32, 0.33, 0.33, 0.33, 0.33, 0.34, 0.34, 0.35, 0.36, 0.37, 0.39, 0.4, 0.41, 0.42, 0.42, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.35, 0.33, 0.31, 0.3, 0.29, 0.28, 0.28, 0.29, 0.29, 0.29, 0.3, 0.31, 0.32, 0.33, 0.35, 0.36, 0.38, 0.39, 0.39, 0.4, 0.41, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.37, 0.37, 0.36, 0.35, 0.34, 0.33, 0.33, 0.33, 0.32, 0.32, 0.32, 0.33, 0.34, 0.35, 0.36, 0.38, 0.4, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.39, 0.39, 0.38, 0.38, 0.39, 0.39, 0.39, 0.39, 0.4, 0.41, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.31, 0.31, 0.3, 0.3, 0.3, 0.3, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.32, 0.31]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.00376, \"type\": \"mutation\"}, {\"count\": 1, \"coverage\": 0.62406, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"6423_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 68, \"ref_beg_seq_id\": 12}, {\"entity_beg_seq_id\": 69, \"length\": 72, \"ref_beg_seq_id\": 81}, {\"entity_beg_seq_id\": 141, \"length\": 6, \"ref_beg_seq_id\": 156}, {\"entity_beg_seq_id\": 147, \"length\": 9, \"ref_beg_seq_id\": 163}, {\"entity_beg_seq_id\": 156, \"length\": 46, \"ref_beg_seq_id\": 173}, {\"entity_beg_seq_id\": 202, \"length\": 65, \"ref_beg_seq_id\": 220}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"22706_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 68, \"ref_beg_seq_id\": 7}, {\"entity_beg_seq_id\": 69, \"length\": 78, \"ref_beg_seq_id\": 76}, {\"entity_beg_seq_id\": 147, \"length\": 120, \"ref_beg_seq_id\": 155}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"A0A0D2ILK1\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 266, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7532_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 68, \"ref_beg_seq_id\": 12}, {\"entity_beg_seq_id\": 69, \"length\": 72, \"ref_beg_seq_id\": 81}, {\"entity_beg_seq_id\": 141, \"length\": 6, \"ref_beg_seq_id\": 156}, {\"entity_beg_seq_id\": 147, \"length\": 9, \"ref_beg_seq_id\": 163}, {\"entity_beg_seq_id\": 156, \"length\": 46, \"ref_beg_seq_id\": 173}, {\"entity_beg_seq_id\": 202, \"length\": 65, \"ref_beg_seq_id\": 220}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"26166_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 266, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"43930_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 266, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"23782_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 266, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"5XO7_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"F\"}, \"enrichment_timestamp\": \"2025-12-21T02:44:53.705061\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.88,
+            "experimentalMethod": null,
+            "depositionDate": "2017-05-27T00:00:00+0000",
+            "releaseDate": "2018-05-02T00:00:00+0000",
+            "sourceOrganism": [
+              "Rhinocladiella mackenziei CBS 650.93"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 8,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.88,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Rhinocladiella mackenziei CBS 650.93",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 8,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain A (length: 266)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain B (length: 266)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain C (length: 266)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain D (length: 266)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain E (length: 266)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_F_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain F (length: 266)",
+        "chainId": "F",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_G_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain G (length: 266)",
+        "chainId": "G",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_H_Sequence",
+        "value": "MAATRTRGYVTTKDGIKWYYEQEGSGPDVVLIPDGLGECQMFDKPMSLIASNGFRVTTFDMPGMSRSSDAPPETYQDITGRKLAGYIITLLDTLDIKIASVWGCASGASTVLALCSDYPERVRNGMPHEVPTENPDILLHIHEVDPATISQEMAANSRAYSGNVEAWDALGPEVHARLHDNYPRWAYGYPRTIPPSAPVKTEDLHKVPIDWTVGASTPTKLFFENIVIAAREGINIGTLPGNHFPYVSHPEEFAKYVVETSRKYLK",
+        "description": "Amino acid sequence for chain H (length: 266)",
+        "chainId": "H",
+        "entityId": "1",
+        "sequenceLength": 266
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal Structure of a Mycoestrogen-Detoxifying Lactonase from Rhinocladiella mackenziei: Molecular Insight into ZHD Substrate Selectivity",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/acscatal.8b00464",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, E, F, G, H, Length: 266",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5XWZ_2",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 3,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5XWZ_2",
+          "5IE7_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5XO7_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5XO7",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "F",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1298.09,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 54,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "Z518_04590",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00561",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 321.93,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 976.16,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.248002834934405,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.751997165065598,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5XWZ_2",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 3,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5XWZ_2",
+        "5IE7_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

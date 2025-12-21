@@ -1,0 +1,372 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3V6N_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "3V6N_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3V6N",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3V6N",
+    "name": "Protein 3V6N",
+    "description": "Protein structure with PDB ID: 3V6N. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3V6N_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3V6N",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Cicer arietinum",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "3827",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3827"
+    },
+    "alternateName": [
+      "PDB 3V6N",
+      "Protein ID 3V6N"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3v6n_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3v6n.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3V6N",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3V6N",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3V6N_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.110.10.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3V6N\", \"structure_metadata\": {\"pdb_id\": \"3V6N\", \"resolution\": 2.2, \"deposition_date\": \"2011-12-20T00:00:00+0000\", \"release_date\": \"2012-01-04T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Cicer arietinum\"], \"citation\": {\"title\": \"Crystal structure of a plant albumin from Cicer arietinum (chickpea) possessing hemopexin fold and hemagglutination activity\", \"doi\": \"10.1007/s00425-014-2236-6\", \"authors\": [\"Sharma, U.\", \"Katre, U.V.\", \"Suresh, C.G.\"]}, \"entity_count\": 7, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 71.246, \"b\": 73.36, \"c\": 87.174, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\", \"B\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Cicer arietinum\", \"sequence_length\": 227, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Cicer arietinum\", \"sequence_length\": 227, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\", \"organism\": \"Cicer arietinum\", \"taxonomy_id\": 3827, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 227, \"gene_name\": null, \"uniprot_ids\": [\"G1K3R9\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 227.0, \"min_sequence_length\": 227, \"max_sequence_length\": 227}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\", \"pdbx_seq_one_letter_code_can\": \"TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 227, \"type\": \"polypeptide(L)\"}, \"entity_src_nat\": [{\"common_name\": \"Chickpea, garbanzo\", \"details\": \"SEEDS\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_ncbi_taxonomy_id\": \"3827\", \"pdbx_organism_scientific\": \"Cicer arietinum\", \"pdbx_src_id\": 1, \"strain\": \"BDN9-3\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.594, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/4ll2A/22683/3v6nA\", \"max_rmsd\": 1.027, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 24381, \"identity\": 100}, {\"cluster_id\": 26052, \"identity\": 95}, {\"cluster_id\": 28730, \"identity\": 90}, {\"cluster_id\": 21958, \"identity\": 70}, {\"cluster_id\": 18838, \"identity\": 50}, {\"cluster_id\": 17935, \"identity\": 30}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"chickpea\", \"garbanzo\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Cicer arietinum\", \"ncbi_taxonomy_id\": 3827, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Cicer arietinum\", \"source_type\": \"natural\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"Viridiplantae\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"Chlorobionta\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"Chlorophyta/Embryophyta group\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"Chloroplastida\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"chlorophyte/embryophyte group\"}, {\"depth\": 3, \"id\": \"33090\", \"name\": \"green plants\"}, {\"depth\": 4, \"id\": \"35493\", \"name\": \"Streptophyta\"}, {\"depth\": 5, \"id\": \"131221\", \"name\": \"Streptophytina\"}, {\"depth\": 5, \"id\": \"131221\", \"name\": \"Charophyta/Embryophyta group\"}, {\"depth\": 5, \"id\": \"131221\", \"name\": \"charophyte/embryophyte group\"}, {\"depth\": 6, \"id\": \"3193\", \"name\": \"Embryophyta\"}, {\"depth\": 6, \"id\": \"3193\", \"name\": \"higher plants\"}, {\"depth\": 6, \"id\": \"3193\", \"name\": \"land plants\"}, {\"depth\": 6, \"id\": \"3193\", \"name\": \"plants\"}, {\"depth\": 7, \"id\": \"58023\", \"name\": \"Tracheophyta\"}, {\"depth\": 7, \"id\": \"58023\", \"name\": \"vascular plants\"}, {\"depth\": 8, \"id\": \"78536\", \"name\": \"Euphyllophyta\"}, {\"depth\": 8, \"id\": \"78536\", \"name\": \"euphyllophytes\"}, {\"depth\": 9, \"id\": \"58024\", \"name\": \"Spermatophyta\"}, {\"depth\": 9, \"id\": \"58024\", \"name\": \"seed plants\"}, {\"depth\": 10, \"id\": \"3398\", \"name\": \"Magnoliopsida\"}, {\"depth\": 10, \"id\": \"3398\", \"name\": \"Angiospermae\"}, {\"depth\": 10, \"id\": \"3398\", \"name\": \"Magnoliophyta\"}, {\"depth\": 10, \"id\": \"3398\", \"name\": \"angiosperms\"}, {\"depth\": 10, \"id\": \"3398\", \"name\": \"flowering plants\"}, {\"depth\": 11, \"id\": \"1437183\", \"name\": \"Mesangiospermae\"}, {\"depth\": 12, \"id\": \"71240\", \"name\": \"eudicotyledons\"}, {\"depth\": 12, \"id\": \"71240\", \"name\": \"eudicots\"}, {\"depth\": 13, \"id\": \"91827\", \"name\": \"Gunneridae\"}, {\"depth\": 13, \"id\": \"91827\", \"name\": \"core eudicots\"}, {\"depth\": 13, \"id\": \"91827\", \"name\": \"core eudicotyledons\"}, {\"depth\": 14, \"id\": \"1437201\", \"name\": \"Pentapetalae\"}, {\"depth\": 15, \"id\": \"71275\", \"name\": \"rosids\"}, {\"depth\": 16, \"id\": \"91835\", \"name\": \"fabids\"}, {\"depth\": 16, \"id\": \"91835\", \"name\": \"eurosids I\"}, {\"depth\": 17, \"id\": \"72025\", \"name\": \"Fabales\"}, {\"depth\": 18, \"id\": \"3803\", \"name\": \"Fabaceae\"}, {\"depth\": 18, \"id\": \"3803\", \"name\": \"Leguminosae\"}, {\"depth\": 18, \"id\": \"3803\", \"name\": \"pea family\"}, {\"depth\": 19, \"id\": \"3814\", \"name\": \"Papilionoideae\"}, {\"depth\": 19, \"id\": \"3814\", \"name\": \"Faboideae\"}, {\"depth\": 20, \"id\": \"2231393\", \"name\": \"50 kb inversion clade\"}, {\"depth\": 21, \"id\": \"2231382\", \"name\": \"NPAAA clade\"}, {\"depth\": 21, \"id\": \"2231382\", \"name\": \"canavanine-accumulating clade\"}, {\"depth\": 21, \"id\": \"2231382\", \"name\": \"non-protein amino acid accumulating clade\"}, {\"depth\": 22, \"id\": \"2233838\", \"name\": \"Hologalegina\"}, {\"depth\": 23, \"id\": \"2233839\", \"name\": \"IRL clade\"}, {\"depth\": 23, \"id\": \"2233839\", \"name\": \"inverted repeat lacking clade\"}, {\"depth\": 23, \"id\": \"2233839\", \"name\": \"inverted repeat loss clade\"}, {\"depth\": 23, \"id\": \"2233839\", \"name\": \"temperate herbaceous clade\"}, {\"depth\": 24, \"id\": \"163722\", \"name\": \"Cicereae\"}, {\"depth\": 25, \"id\": \"3826\", \"name\": \"Cicer\"}, {\"depth\": 26, \"id\": \"3827\", \"name\": \"Cicer arietinum\"}, {\"depth\": 26, \"id\": \"3827\", \"name\": \"chickpea\"}, {\"depth\": 26, \"id\": \"3827\", \"name\": \"garbanzo\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 25.729, \"pdbx_description\": \"Lectin\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"nat\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Lectin\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Lectin\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"G1K3R9\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 227, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00045\", \"assignment_version\": \"34.0\", \"name\": \"Hemopexin (Hemopexin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR036375\", \"name\": \"Hemopexin-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036375\", \"name\": \"Hemopexin-like domain superfamily\"}]}, {\"annotation_id\": \"IPR018487\", \"name\": \"Hemopexin-like repeats\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018487\", \"name\": \"Hemopexin-like repeats\"}]}, {\"annotation_id\": \"GO:0046872\", \"name\": \"metal ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"3V6N\", \"rcsb_id\": \"3V6N_1\", \"uniprot_ids\": [\"G1K3R9\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"G1K3R9\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00045\", \"name\": \"Hemopexin (Hemopexin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 120, \"end_seq_id\": 165}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.27, 0.12, 0.06, 0.04, 0.0, -0.36, -1.24, -1.24, -1.83, -1.83, -2.29, -1.37, -0.97, -0.38, -0.27, -0.27, -0.31, -0.07, 0.2, 0.77, 0.77, 0.07, -0.58, 0.01, 0.22, 0.61, 0.68, 0.12, -0.69, -1.5, -1.54, -0.93, -0.71, -0.68, -0.68, -0.78, -0.78, -0.08, 0.78, 0.71, -0.14, -0.61, -0.61, -1.0, -0.91, -0.4, -0.51, -1.41, -0.99, -0.1, 0.26, 0.36, 0.71, 0.66, 0.19, 0.49, 0.53, 0.89, 0.3, 0.3, -0.04, -0.04, -0.29, -0.39, -1.28, -1.28, -1.36, -0.96, -0.77, -0.07, -0.13, -0.13, -0.38, 0.32, 0.99, 0.99, 0.18, 0.18, -0.52, -0.52, 0.07, 0.28, -0.39, -0.76, -1.34, -1.28, -2.17, -2.21, -1.57, -1.27, -1.18, -0.87, -0.96, -1.0, -1.0, -0.11, 0.52, -0.37, -0.66, -0.26, -0.39, 0.1, 0.84, 0.84, 0.3, 0.02, 0.88, 0.98, 0.28, 0.07, -0.29, -0.1, -0.06, 0.19, 0.47, 0.31, -0.5, -0.2, 0.11, -0.28, -0.82, -0.87, -1.46, -1.19, -1.64, -0.72, -0.32, -0.68, -0.29, -0.63, -0.63, -0.39, -0.66, -1.01, -0.93, -1.63, -1.34, -0.88, -0.57, -0.52, -0.88, -0.66, 0.31, -0.58, -0.58, 0.07, -0.79, -0.8, 0.09, 0.5, -0.31, -0.82, -0.12, 0.09, -0.13, 0.72, 0.31, -0.23, -0.22, 0.67, 1.02, 0.32, 0.7, 0.38, 0.17, 0.28, 0.23, 0.51, 0.32, 0.21, 0.51, -0.04, -0.43, -0.72, -0.72, -1.02, -1.02, -1.48, -1.26, -0.86, -0.93, -0.54, -0.86, -0.61, -0.37, -0.37, -0.72, -0.64, -1.34, -0.6, -0.63, -0.42, -0.32, -0.27, -0.54, -0.43, -1.32, -0.43, -0.53, -0.5, -0.37, 0.14, -0.2, -0.56, -0.24, 0.57, -0.32, -0.68, -0.73, -0.87, -1.42, -0.57, -0.63, -0.6, -0.52, 0.37, 0.33, 0.86, 0.64]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.15, 0.15, 0.15, 0.16, 0.16, 0.16, 0.16, 0.16, 0.17, 0.18, 0.19, 0.21, 0.22, 0.23, 0.23, 0.24, 0.25, 0.27, 0.3, 0.32, 0.33, 0.33, 0.33, 0.32, 0.31, 0.31, 0.3, 0.28, 0.25, 0.21, 0.18, 0.16, 0.14, 0.13, 0.11, 0.1, 0.09, 0.09, 0.08, 0.08, 0.09, 0.09, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.07, 0.07, 0.06, 0.06, 0.06, 0.06, 0.05, 0.05, 0.05, 0.06, 0.06, 0.06, 0.07, 0.08, 0.08, 0.09, 0.09, 0.1, 0.11, 0.12, 0.13, 0.13, 0.14, 0.15, 0.15, 0.15, 0.15, 0.16, 0.16, 0.16, 0.15, 0.14, 0.13, 0.12, 0.11, 0.1, 0.1, 0.09, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.08, 0.09, 0.09, 0.09, 0.1, 0.11, 0.11, 0.12, 0.12, 0.12, 0.13, 0.13, 0.12, 0.12, 0.12, 0.12, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.14, 0.14, 0.15, 0.15, 0.15, 0.14, 0.15, 0.15, 0.15, 0.15, 0.16, 0.16, 0.16, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.16, 0.16, 0.15, 0.15, 0.16, 0.16, 0.16, 0.17, 0.17, 0.16, 0.16, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.16, 0.17, 0.18, 0.19, 0.19, 0.2, 0.2, 0.2, 0.2, 0.21, 0.21, 0.2, 0.18, 0.17, 0.17, 0.16, 0.16, 0.16, 0.17, 0.17, 0.17, 0.18, 0.18, 0.2, 0.21, 0.22, 0.23, 0.25, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.25, 0.24, 0.23, 0.22, 0.21, 0.2, 0.19, 0.18, 0.18, 0.17, 0.17, 0.16, 0.16, 0.17, 0.17, 0.17, 0.18, 0.19, 0.2, 0.21, 0.23, 0.25, 0.27, 0.28, 0.29, 0.3, 0.3, 0.3, 0.3, 0.29, 0.29, 0.29, 0.28, 0.27, 0.27]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.74, 0.7, 0.66, 0.63, 0.58, 0.55, 0.51, 0.43, 0.32, 0.22, 0.12, 0.07, 0.07, 0.08, 0.08, 0.08, 0.1, 0.06, 0.05, 0.07, 0.08, 0.06, 0.07, 0.07, 0.07, 0.06, 0.06, 0.06, 0.08, 0.08, 0.07, 0.08, 0.12, 0.14, 0.13, 0.08, 0.08, 0.12, 0.18, 0.24, 0.17, 0.22, 0.25, 0.15, 0.12, 0.12, 0.12, 0.07, 0.04, 0.04, 0.05, 0.05, 0.08, 0.05, 0.05, 0.02, 0.04, 0.03, 0.04, 0.03, 0.04, 0.04, 0.04, 0.04, 0.06, 0.04, 0.03, 0.02, 0.02, 0.04, 0.04, 0.02, 0.02, 0.02, 0.03, 0.02, 0.04, 0.02, 0.03, 0.04, 0.04, 0.03, 0.05, 0.05, 0.05, 0.06, 0.07, 0.06, 0.1, 0.15, 0.17, 0.17, 0.23, 0.25, 0.26, 0.27, 0.31, 0.23, 0.34, 0.3, 0.18, 0.2, 0.21, 0.19, 0.15, 0.09, 0.1, 0.15, 0.2, 0.15, 0.15, 0.1, 0.09, 0.05, 0.08, 0.09, 0.09, 0.1, 0.16, 0.13, 0.2, 0.21, 0.15, 0.1, 0.06, 0.08, 0.13, 0.13, 0.13, 0.08, 0.11, 0.11, 0.08, 0.1, 0.1, 0.06, 0.06, 0.06, 0.06, 0.04, 0.03, 0.03, 0.05, 0.05, 0.07, 0.12, 0.07, 0.07, 0.07, 0.07, 0.07, 0.11, 0.07, 0.07, 0.07, 0.11, 0.17, 0.12, 0.07, 0.07, 0.09, 0.12, 0.09, 0.09, 0.14, 0.12, 0.07, 0.1, 0.1, 0.09, 0.09, 0.15, 0.12, 0.18, 0.23, 0.15, 0.11, 0.07, 0.12, 0.18, 0.18, 0.15, 0.09, 0.1, 0.1, 0.07, 0.08, 0.08, 0.1, 0.12, 0.12, 0.12, 0.12, 0.13, 0.12, 0.09, 0.12, 0.16, 0.22, 0.16, 0.16, 0.14, 0.22, 0.23, 0.27, 0.19, 0.18, 0.2, 0.29, 0.22, 0.19, 0.2, 0.15, 0.11, 0.12, 0.07, 0.13, 0.19, 0.23, 0.28, 0.39, 0.44, 0.49, 0.53, 0.64, 0.68, 0.78]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.20264, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"21958_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 155, \"ref_beg_seq_id\": 2}, {\"entity_beg_seq_id\": 156, \"length\": 48, \"ref_beg_seq_id\": 158}, {\"entity_beg_seq_id\": 204, \"length\": 24, \"ref_beg_seq_id\": 207}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"17935_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 71, \"ref_beg_seq_id\": 39}, {\"entity_beg_seq_id\": 72, \"length\": 84, \"ref_beg_seq_id\": 118}, {\"entity_beg_seq_id\": 156, \"length\": 12, \"ref_beg_seq_id\": 203}, {\"entity_beg_seq_id\": 168, \"length\": 36, \"ref_beg_seq_id\": 216}, {\"entity_beg_seq_id\": 204, \"length\": 11, \"ref_beg_seq_id\": 253}, {\"entity_beg_seq_id\": 215, \"length\": 13, \"ref_beg_seq_id\": 265}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"18838_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 155, \"ref_beg_seq_id\": 2}, {\"entity_beg_seq_id\": 156, \"length\": 48, \"ref_beg_seq_id\": 158}, {\"entity_beg_seq_id\": 204, \"length\": 24, \"ref_beg_seq_id\": 207}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"24381_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 227, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"28730_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 227, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"G1K3R9\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 227, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"26052_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 227, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"3V6N_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:41:39.818006\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.2,
+            "experimentalMethod": null,
+            "depositionDate": "2011-12-20T00:00:00+0000",
+            "releaseDate": "2012-01-04T00:00:00+0000",
+            "sourceOrganism": [
+              "Cicer arietinum"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 7,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.2,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Cicer arietinum",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE",
+        "description": "Amino acid sequence for chain A (length: 227)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 227
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "TKTGYINAAFRSSRNNEAYLFINDKYVLLDYAPGTSNDKVLYGPSFVRDGYKSLAKTIFGTYGIDCSFDTEYNEAFIFYENFCARIDYAPHSDKDKIISGPKKIADMFPFFKGTVFENGIDAAFRSTKGKEVYLFKGDKYARIDYLTNRLVQNIKSISDGFPCLRGTIFEAGMDSAFASHKTNEAYLFKGEYYARINFTPGSTNDIMGGVKKTLDYWPSLRGIIPLE",
+        "description": "Amino acid sequence for chain B (length: 227)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 227
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of a plant albumin from Cicer arietinum (chickpea) possessing hemopexin fold and hemagglutination activity",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1007/s00425-014-2236-6",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 227",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3LP9_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "3LP9_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3V6N_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3V6N",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1350.86,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 48,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.110.10.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 555.73,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 795.129999999999,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.411389781324489,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.58861021867551,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3LP9_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3LP9_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

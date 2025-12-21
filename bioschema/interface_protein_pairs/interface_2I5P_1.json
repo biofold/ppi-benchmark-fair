@@ -1,0 +1,380 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2I5P_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2I5P_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2I5P",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2I5P",
+    "name": "Protein 2I5P",
+    "description": "Protein structure with PDB ID: 2I5P. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2I5P_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2I5P",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Kluyveromyces marxianus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "4911",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4911"
+    },
+    "alternateName": [
+      "PDB 2I5P",
+      "Protein ID 2I5P"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2i5p_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2i5p.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2I5P",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2I5P",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2I5P_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "O-P",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "GAP1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.360.10;3.40.50.720",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00044;PF02800",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2I5P\", \"structure_metadata\": {\"pdb_id\": \"2I5P\", \"resolution\": 2.3, \"deposition_date\": \"2006-08-25T00:00:00+0000\", \"release_date\": \"2006-09-12T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Kluyveromyces marxianus\"], \"citation\": {\"title\": \"The Crystal and Solution Structures of Glyceraldehyde-3-phosphate Dehydrogenase Reveal Different Quaternary Structures.\", \"doi\": \"10.1074/jbc.M605267200\", \"authors\": [\"Ferreira-da-Silva, F.\", \"Pereira, P.J.\", \"Gales, L.\", \"Roessle, M.\", \"Svergun, D.I.\", \"Moradas-Ferreira, P.\", \"Damas, A.M.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 70.9, \"b\": 70.9, \"c\": 358.4, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"O\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\", \"P\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\"}, \"chain_info\": {\"O\": {\"entity_id\": \"1\", \"organism\": \"Kluyveromyces marxianus\", \"sequence_length\": 342, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"P\": {\"entity_id\": \"1\", \"organism\": \"Kluyveromyces marxianus\", \"sequence_length\": 342, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\", \"organism\": \"Kluyveromyces marxianus\", \"taxonomy_id\": 4911, \"chain_ids\": [\"O\", \"P\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 342, \"gene_name\": null, \"uniprot_ids\": [\"P17819\", \"P84998\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 342.0, \"min_sequence_length\": 342, \"max_sequence_length\": 342}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\", \"pdbx_seq_one_letter_code_can\": \"MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA\", \"pdbx_strand_id\": \"O,P\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 342, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_genus\": \"Kluyveromyces\", \"gene_src_strain\": \"ATCC10022\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"GAP1\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"4911\", \"pdbx_gene_src_scientific_name\": \"Kluyveromyces marxianus\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"M15\", \"pdbx_host_org_vector_type\": \"Plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pQE32\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.173, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/2i5pO/7743/2i5pO\", \"max_rmsd\": 0.173, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 63922, \"identity\": 100}, {\"cluster_id\": 83259, \"identity\": 95}, {\"cluster_id\": 91627, \"identity\": 90}, {\"cluster_id\": 5493, \"identity\": 70}, {\"cluster_id\": 1072, \"identity\": 50}, {\"cluster_id\": 1665, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Candida kefyr\", \"Candida pseudotropicalis\", \"Dekkeromyces marxianus\", \"Guilliermondella marxiana\", \"Kluyveromyces cicerisporus\", \"Kluyveromyces fragilis\", \"Saccharomyces kefyr\", \"Saccharomyces marxianus\", \"Zygofabospora marxiana\", \"Zygorenospora marxiana\", \"Zygosaccharomyces marxianus\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Kluyveromyces marxianus\", \"ncbi_taxonomy_id\": 4911, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Kluyveromyces marxianus\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Fungi\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Mycota\"}, {\"depth\": 5, \"id\": \"451864\", \"name\": \"Dikarya\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"Ascomycota\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"ascomycete fungi\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"sac fungi\"}, {\"depth\": 7, \"id\": \"716545\", \"name\": \"saccharomyceta\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"Saccharomycotina\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"budding yeasts & allies\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"true yeasts\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Saccharomycetes\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Hemiascomycetes\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Saccharomycetales\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Endomycetales\"}, {\"depth\": 11, \"id\": \"4893\", \"name\": \"Saccharomycetaceae\"}, {\"depth\": 12, \"id\": \"4910\", \"name\": \"Kluyveromyces\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Kluyveromyces marxianus\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Candida kefyr\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Candida pseudotropicalis\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Dekkeromyces marxianus\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Guilliermondella marxiana\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Kluyveromyces cicerisporus\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Kluyveromyces fragilis\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Saccharomyces kefyr\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Saccharomyces marxianus\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Zygofabospora marxiana\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Zygorenospora marxiana\"}, {\"depth\": 13, \"id\": \"4911\", \"name\": \"Zygosaccharomyces marxianus\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"GAP1\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 2, \"id\": \"28985:F:uncharacterized_protein\", \"name\": \"uncharacterized protein\"}, {\"depth\": 1, \"id\": \"28985:F\", \"name\": \"Chromosome F\"}, {\"depth\": 0, \"id\": \"28985\", \"name\": \"Kluyveromyces lactis\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 36.858, \"pdbx_description\": \"Glyceraldehyde-3-phosphate dehydrogenase 1\", \"pdbx_ec\": \"1.2.1.12\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.2\", \"name\": \"Acting on the aldehyde or oxo group of donors\"}, {\"depth\": 3, \"id\": \"1.2.1\", \"name\": \"With NAD+ or NADP+ as acceptor\"}, {\"depth\": 4, \"id\": \"1.2.1.12\", \"name\": \"glyceraldehyde-3-phosphate dehydrogenase (phosphorylating)\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Glyceraldehyde-3-phosphate dehydrogenase 1\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"GAPDH 1\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"1.2.1.12\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Glyceraldehyde-3-phosphate dehydrogenase 1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P17819\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 14, \"length\": 329, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF02800\", \"assignment_version\": \"34.0\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, C-terminal domain (Gp_dh_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF00044\", \"assignment_version\": \"34.0\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, NAD binding domain (Gp_dh_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0006096\", \"name\": \"glycolytic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009261\", \"name\": \"ribonucleotide catabolic process\"}, {\"id\": \"GO:0019364\", \"name\": \"pyridine nucleotide catabolic process\"}, {\"id\": \"GO:0009060\", \"name\": \"aerobic respiration\"}, {\"id\": \"GO:0043436\", \"name\": \"oxoacid metabolic process\"}, {\"id\": \"GO:0016052\", \"name\": \"carbohydrate catabolic process\"}, {\"id\": \"GO:1901135\", \"name\": \"carbohydrate derivative metabolic process\"}, {\"id\": \"GO:0046434\", \"name\": \"organophosphate catabolic process\"}, {\"id\": \"GO:1901292\", \"name\": \"nucleoside phosphate catabolic process\"}, {\"id\": \"GO:0006082\", \"name\": \"organic acid metabolic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006096\", \"name\": \"glycolytic process\"}, {\"id\": \"GO:0006796\", \"name\": \"phosphate-containing compound metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0072524\", \"name\": \"pyridine-containing compound metabolic process\"}, {\"id\": \"GO:0044281\", \"name\": \"small molecule metabolic process\"}, {\"id\": \"GO:0009154\", \"name\": \"purine ribonucleotide catabolic process\"}, {\"id\": \"GO:0006793\", \"name\": \"phosphorus metabolic process\"}, {\"id\": \"GO:0006753\", \"name\": \"nucleoside phosphate metabolic process\"}, {\"id\": \"GO:0046496\", \"name\": \"nicotinamide nucleotide metabolic process\"}, {\"id\": \"GO:0006090\", \"name\": \"pyruvate metabolic process\"}, {\"id\": \"GO:0009135\", \"name\": \"purine nucleoside diphosphate metabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0072523\", \"name\": \"purine-containing compound catabolic process\"}, {\"id\": \"GO:0009117\", \"name\": \"nucleotide metabolic process\"}, {\"id\": \"GO:0034655\", \"name\": \"nucleobase-containing compound catabolic process\"}, {\"id\": \"GO:0009132\", \"name\": \"nucleoside diphosphate metabolic process\"}, {\"id\": \"GO:0009137\", \"name\": \"purine nucleoside diphosphate catabolic process\"}, {\"id\": \"GO:0009134\", \"name\": \"nucleoside diphosphate catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009141\", \"name\": \"nucleoside triphosphate metabolic process\"}, {\"id\": \"GO:0032787\", \"name\": \"monocarboxylic acid metabolic process\"}, {\"id\": \"GO:0009150\", \"name\": \"purine ribonucleotide metabolic process\"}, {\"id\": \"GO:0072526\", \"name\": \"pyridine-containing compound catabolic process\"}, {\"id\": \"GO:0019693\", \"name\": \"ribose phosphate metabolic process\"}, {\"id\": \"GO:0045333\", \"name\": \"cellular respiration\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0046034\", \"name\": \"ATP metabolic process\"}, {\"id\": \"GO:0015980\", \"name\": \"energy derivation by oxidation of organic compounds\"}, {\"id\": \"GO:0006163\", \"name\": \"purine nucleotide metabolic process\"}, {\"id\": \"GO:0009259\", \"name\": \"ribonucleotide metabolic process\"}, {\"id\": \"GO:0055086\", \"name\": \"nucleobase-containing small molecule metabolic process\"}, {\"id\": \"GO:0009205\", \"name\": \"purine ribonucleoside triphosphate metabolic process\"}, {\"id\": \"GO:0009185\", \"name\": \"ribonucleoside diphosphate metabolic process\"}, {\"id\": \"GO:0009191\", \"name\": \"ribonucleoside diphosphate catabolic process\"}, {\"id\": \"GO:0009166\", \"name\": \"nucleotide catabolic process\"}, {\"id\": \"GO:0009144\", \"name\": \"purine nucleoside triphosphate metabolic process\"}, {\"id\": \"GO:0006195\", \"name\": \"purine nucleotide catabolic process\"}, {\"id\": \"GO:0005975\", \"name\": \"carbohydrate metabolic process\"}, {\"id\": \"GO:1901136\", \"name\": \"carbohydrate derivative catabolic process\"}, {\"id\": \"GO:0046032\", \"name\": \"ADP catabolic process\"}, {\"id\": \"GO:0019752\", \"name\": \"carboxylic acid metabolic process\"}, {\"id\": \"GO:0006091\", \"name\": \"generation of precursor metabolites and energy\"}, {\"id\": \"GO:0072521\", \"name\": \"purine-containing compound metabolic process\"}, {\"id\": \"GO:0046031\", \"name\": \"ADP metabolic process\"}, {\"id\": \"GO:0019637\", \"name\": \"organophosphate metabolic process\"}, {\"id\": \"GO:0009179\", \"name\": \"purine ribonucleoside diphosphate metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0009181\", \"name\": \"purine ribonucleoside diphosphate catabolic process\"}]}, {\"annotation_id\": \"GO:0006006\", \"name\": \"glucose metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005996\", \"name\": \"monosaccharide metabolic process\"}, {\"id\": \"GO:0005975\", \"name\": \"carbohydrate metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0019318\", \"name\": \"hexose metabolic process\"}, {\"id\": \"GO:0044281\", \"name\": \"small molecule metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006006\", \"name\": \"glucose metabolic process\"}]}, {\"annotation_id\": \"IPR006424\", \"name\": \"Glyceraldehyde-3-phosphate dehydrogenase, type I\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR020831\", \"name\": \"Glyceraldehyde/Erythrose phosphate dehydrogenase family\"}, {\"depth\": 2, \"id\": \"IPR006424\", \"name\": \"Glyceraldehyde-3-phosphate dehydrogenase, type I\"}]}, {\"annotation_id\": \"GO:0004365\", \"name\": \"glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004365\", \"name\": \"glyceraldehyde-3-phosphate dehydrogenase (NAD+) (phosphorylating) activity\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0043891\", \"name\": \"glyceraldehyde-3-phosphate dehydrogenase [NAD(P)+] (phosphorylating) activity\"}, {\"id\": \"GO:0016903\", \"name\": \"oxidoreductase activity, acting on the aldehyde or oxo group of donors\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016620\", \"name\": \"oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor\"}]}, {\"annotation_id\": \"IPR020830\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, active site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020830\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, active site\"}]}, {\"annotation_id\": \"GO:0050661\", \"name\": \"NADP binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:1901265\", \"name\": \"nucleoside phosphate binding\"}, {\"id\": \"GO:0017076\", \"name\": \"purine nucleotide binding\"}, {\"id\": \"GO:0030554\", \"name\": \"adenyl nucleotide binding\"}, {\"id\": \"GO:0000166\", \"name\": \"nucleotide binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0050661\", \"name\": \"NADP binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR020831\", \"name\": \"Glyceraldehyde/Erythrose phosphate dehydrogenase family\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR020831\", \"name\": \"Glyceraldehyde/Erythrose phosphate dehydrogenase family\"}]}, {\"annotation_id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\"}]}, {\"annotation_id\": \"GO:0051287\", \"name\": \"NAD binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051287\", \"name\": \"NAD binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:1901265\", \"name\": \"nucleoside phosphate binding\"}, {\"id\": \"GO:0017076\", \"name\": \"purine nucleotide binding\"}, {\"id\": \"GO:0030554\", \"name\": \"adenyl nucleotide binding\"}, {\"id\": \"GO:0000166\", \"name\": \"nucleotide binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"IPR020828\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, NAD(P) binding domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020828\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, NAD(P) binding domain\"}]}, {\"annotation_id\": \"IPR020829\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, catalytic domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020829\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, catalytic domain\"}]}, {\"annotation_id\": \"GO:0030312\", \"name\": \"external encapsulating structure\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030312\", \"name\": \"external encapsulating structure\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"O\", \"P\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"2I5P\", \"rcsb_id\": \"2I5P_1\", \"uniprot_ids\": [\"P17819\", \"P84998\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P17819\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9619883040935673, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}, {\"database_accession\": \"P84998\", \"database_name\": \"UniProt\", \"provenance_source\": \"SIFTS\"}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF02800\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, C-terminal domain (Gp_dh_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 167, \"end_seq_id\": 324}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF00044\", \"name\": \"Glyceraldehyde 3-phosphate dehydrogenase, NAD binding domain (Gp_dh_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 15, \"end_seq_id\": 116}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"cloning artifact\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 13}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-2.2, -2.77, -2.31, -1.77, -2.07, -1.5, -0.68, -0.41, 0.44, 1.0, 1.86, 1.51, 0.97, 1.67, 1.41, 0.44, 1.03, 0.49, -0.21, -0.29, 0.57, 1.03, 0.22, 0.77, 1.47, 1.39, 1.04, 1.04, 0.19, -0.67, -0.59, -0.48, -0.51, -0.24, -0.47, 0.42, 0.53, 0.58, 0.79, 0.6, 1.49, 0.93, 0.93, 0.34, -0.3, 0.29, 0.88, 0.91, 0.81, 0.62, 0.28, -0.33, -0.33, -0.28, -0.56, -1.11, -1.01, -1.66, -2.11, -2.11, -2.01, -2.01, -1.46, -1.47, -1.47, -1.81, -1.42, -1.37, -1.32, -0.86, 0.03, 0.07, -0.23, 0.08, 0.03, -0.36, 0.2, 0.79, 0.83, 0.64, -0.24, -0.24, -0.63, -0.59, -0.33, -0.6, -0.88, -0.92, -1.41, -1.12, -0.78, -0.78, 0.03, 0.17, 0.43, 0.12, 0.2, 0.58, 1.14, 0.8, 1.14, 0.64, 0.64, 0.64, 1.34, 0.41, -0.18, -0.22, -0.22, -0.22, 0.06, -0.29, -1.19, -1.86, -0.92, -0.92, -1.14, -0.8, -0.51, -1.14, -1.19, -0.29, 0.53, 0.53, 0.84, 0.84, 0.71, 0.42, 0.42, 0.78, 0.51, -0.13, -0.42, -0.03, 0.23, 0.88, 0.92, 1.82, 1.51, 0.92, 0.71, 0.07, -0.39, -1.24, -1.76, -2.1, -3.0, -2.11, -1.26, -0.96, -0.91, -0.57, -0.27, 0.06, 0.37, 0.72, -0.17, -0.36, 0.16, 0.74, 0.37, 0.96, 0.88, 0.52, 1.1, 1.99, 1.32, 0.51, -0.08, 0.41, -0.13, 0.17, 0.21, -0.68, -1.22, -0.41, 0.19, 0.5, 0.11, 0.62, -0.23, 0.07, 0.96, 0.92, 0.7, 0.41, 0.1, -0.26, -0.8, 0.02, -0.28, -0.82, -0.92, -1.21, -1.49, -1.53, -1.49, -1.51, -2.48, -2.13, -2.13, -2.46, -2.44, -1.89, -1.54, -1.2, -1.49, -0.49, 0.06, -0.08, 0.33, 0.32, 0.04, 0.09, 0.33, 0.92, -0.01, -0.31, 0.33, 0.38, 0.03, 0.58, 1.04, 0.67, 0.08, 0.93, 0.34, -0.17, -0.56, 0.3, -0.24, -0.71, -0.32, 0.27, 0.16, 0.04, 0.56, 0.81, 0.31, 0.31, -0.03, 0.22, -0.07, 0.09, 1.06, 0.2, 0.8, 0.8, 1.34, 1.3, 1.26, 1.81, 0.91, 0.64, 1.23, 0.73, 0.67, -0.19, -0.14, -0.07, -0.97, -0.33, -0.33, -0.07, -0.42, -0.71, 0.14, 0.44, -0.44, -0.06, -0.69, -0.47, -1.37, -1.32, -0.42, -0.42, -0.38, -0.13, -0.17, -0.12, -0.93, -0.3, 0.56, 0.56, 0.0, -0.04, -0.29, 0.1, 0.91, 1.26, 0.67, 0.12, -0.7, -0.7, -0.69, 0.2, 0.2, -0.61, -0.37, 0.22, 0.5, 0.81, 1.4, 1.09, 1.01, 0.61, 0.82, 0.19, 0.3, 0.57, 0.18, 0.1, 0.96, 0.73, 0.72, 0.76, 0.8, 0.1, -0.76, -0.47, -0.93, -1.54, -1.83, -1.81, -2.17, -1.31, -0.46, -0.46, 0.11, 0.62, 0.38, 0.11, 0.66, 1.36]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.23, 0.24, 0.24, 0.24, 0.24, 0.25, 0.27, 0.29, 0.33, 0.38, 0.42, 0.36, 0.31, 0.27, 0.22, 0.19, 0.16, 0.15, 0.14, 0.13, 0.14, 0.14, 0.15, 0.16, 0.17, 0.19, 0.21, 0.22, 0.23, 0.25, 0.25, 0.25, 0.25, 0.25, 0.24, 0.24, 0.23, 0.21, 0.2, 0.19, 0.18, 0.17, 0.17, 0.16, 0.15, 0.15, 0.15, 0.15, 0.16, 0.17, 0.17, 0.18, 0.2, 0.21, 0.22, 0.24, 0.25, 0.26, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.24, 0.24, 0.24, 0.23, 0.24, 0.25, 0.25, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.27, 0.28, 0.28, 0.28, 0.29, 0.29, 0.3, 0.31, 0.32, 0.33, 0.35, 0.36, 0.37, 0.39, 0.4, 0.42, 0.43, 0.43, 0.41, 0.4, 0.39, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.42, 0.41, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.37, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.37, 0.37, 0.38, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.33, 0.32, 0.33, 0.33, 0.33, 0.34, 0.34, 0.33, 0.34, 0.35, 0.35, 0.36, 0.38, 0.4, 0.41, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.37, 0.36, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.4, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.4, 0.4, 0.4, 0.39, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.37, 0.38, 0.39, 0.41, 0.43, 0.43, 0.42, 0.4, 0.39, 0.37, 0.36, 0.35, 0.34, 0.33, 0.33, 0.32, 0.3, 0.28, 0.27, 0.26, 0.24, 0.23, 0.21, 0.21, 0.19, 0.18, 0.17, 0.16, 0.16, 0.15, 0.15, 0.15, 0.15, 0.15, 0.16, 0.16, 0.17, 0.17, 0.18, 0.18, 0.19, 0.19, 0.19, 0.19, 0.2, 0.2, 0.2, 0.2, 0.21, 0.21, 0.21, 0.21, 0.21, 0.2, 0.2, 0.2, 0.19, 0.19, 0.18, 0.17, 0.16, 0.16, 0.15, 0.15, 0.14, 0.13, 0.12, 0.12, 0.11, 0.12, 0.12, 0.13, 0.13, 0.14, 0.15, 0.17, 0.19, 0.21, 0.23, 0.25, 0.25, 0.25, 0.24, 0.24, 0.22, 0.2, 0.19, 0.17, 0.15, 0.14, 0.12, 0.12, 0.11, 0.1, 0.1, 0.1, 0.1, 0.09, 0.09]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.99, 0.94, 0.93, 0.89, 0.81, 0.77, 0.66, 0.59, 0.47, 0.42, 0.38, 0.31, 0.31, 0.31, 0.2, 0.2, 0.19, 0.11, 0.07, 0.03, 0.03, 0.01, 0.02, 0.01, 0.01, 0.02, 0.01, 0.03, 0.02, 0.03, 0.02, 0.01, 0.02, 0.01, 0.01, 0.01, 0.02, 0.01, 0.01, 0.01, 0.02, 0.02, 0.02, 0.03, 0.04, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.02, 0.03, 0.04, 0.07, 0.07, 0.04, 0.04, 0.06, 0.12, 0.08, 0.12, 0.12, 0.18, 0.21, 0.24, 0.32, 0.29, 0.32, 0.26, 0.34, 0.33, 0.33, 0.33, 0.28, 0.27, 0.23, 0.23, 0.24, 0.26, 0.24, 0.31, 0.35, 0.32, 0.3, 0.23, 0.27, 0.2, 0.27, 0.32, 0.31, 0.31, 0.24, 0.26, 0.19, 0.21, 0.18, 0.22, 0.3, 0.28, 0.27, 0.22, 0.15, 0.12, 0.16, 0.12, 0.17, 0.15, 0.17, 0.18, 0.18, 0.26, 0.18, 0.25, 0.22, 0.29, 0.28, 0.34, 0.32, 0.27, 0.23, 0.16, 0.2, 0.24, 0.27, 0.26, 0.32, 0.3, 0.27, 0.33, 0.3, 0.24, 0.18, 0.21, 0.2, 0.17, 0.17, 0.21, 0.23, 0.23, 0.21, 0.26, 0.32, 0.34, 0.37, 0.27, 0.21, 0.22, 0.22, 0.22, 0.19, 0.14, 0.2, 0.24, 0.29, 0.22, 0.2, 0.17, 0.19, 0.13, 0.11, 0.16, 0.11, 0.08, 0.07, 0.08, 0.13, 0.12, 0.12, 0.08, 0.12, 0.12, 0.18, 0.14, 0.13, 0.13, 0.19, 0.21, 0.24, 0.22, 0.23, 0.25, 0.24, 0.31, 0.38, 0.38, 0.38, 0.31, 0.39, 0.39, 0.49, 0.47, 0.47, 0.47, 0.53, 0.5, 0.52, 0.53, 0.58, 0.59, 0.59, 0.63, 0.63, 0.66, 0.66, 0.6, 0.55, 0.58, 0.63, 0.63, 0.63, 0.6, 0.58, 0.55, 0.55, 0.53, 0.53, 0.51, 0.51, 0.46, 0.38, 0.41, 0.44, 0.37, 0.37, 0.37, 0.41, 0.39, 0.35, 0.35, 0.31, 0.28, 0.19, 0.22, 0.18, 0.2, 0.22, 0.27, 0.27, 0.2, 0.25, 0.25, 0.16, 0.16, 0.15, 0.14, 0.1, 0.1, 0.1, 0.07, 0.06, 0.06, 0.06, 0.1, 0.06, 0.09, 0.08, 0.05, 0.05, 0.04, 0.05, 0.03, 0.04, 0.06, 0.04, 0.06, 0.07, 0.1, 0.09, 0.09, 0.12, 0.13, 0.11, 0.1, 0.1, 0.1, 0.09, 0.1, 0.17, 0.15, 0.13, 0.12, 0.16, 0.17, 0.19, 0.16, 0.11, 0.1, 0.11, 0.11, 0.17, 0.18, 0.16, 0.15, 0.12, 0.13, 0.15, 0.13, 0.1, 0.09, 0.07, 0.1, 0.09, 0.08, 0.1, 0.09, 0.09, 0.1, 0.09, 0.05, 0.03, 0.03, 0.01, 0.01, 0.02, 0.04, 0.04, 0.03, 0.03, 0.02, 0.02, 0.04, 0.03, 0.04, 0.02, 0.02, 0.01, 0.02, 0.03, 0.03, 0.03, 0.04, 0.06, 0.13, 0.23, 0.27, 0.31, 0.33, 0.47, 0.51, 0.64, 0.68]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.03801, \"maximum_length\": 13, \"minimum_length\": 13, \"type\": \"artifact\"}, {\"count\": 2, \"coverage\": 0.76023, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1072_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 3, \"ref_beg_seq_id\": 148}, {\"entity_beg_seq_id\": 4, \"length\": 7, \"ref_beg_seq_id\": 159}, {\"entity_beg_seq_id\": 11, \"length\": 25, \"ref_beg_seq_id\": 173}, {\"entity_beg_seq_id\": 36, \"length\": 36, \"ref_beg_seq_id\": 202}, {\"entity_beg_seq_id\": 72, \"length\": 19, \"ref_beg_seq_id\": 246}, {\"entity_beg_seq_id\": 91, \"length\": 48, \"ref_beg_seq_id\": 267}, {\"entity_beg_seq_id\": 139, \"length\": 2, \"ref_beg_seq_id\": 320}, {\"entity_beg_seq_id\": 141, \"length\": 14, \"ref_beg_seq_id\": 323}, {\"entity_beg_seq_id\": 155, \"length\": 20, \"ref_beg_seq_id\": 339}, {\"entity_beg_seq_id\": 175, \"length\": 104, \"ref_beg_seq_id\": 360}, {\"entity_beg_seq_id\": 279, \"length\": 36, \"ref_beg_seq_id\": 468}, {\"entity_beg_seq_id\": 315, \"length\": 28, \"ref_beg_seq_id\": 508}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"83259_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 342, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"91627_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 342, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"5493_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 154, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 155, \"length\": 188, \"ref_beg_seq_id\": 156}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1665_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 3, \"ref_beg_seq_id\": 148}, {\"entity_beg_seq_id\": 4, \"length\": 5, \"ref_beg_seq_id\": 163}, {\"entity_beg_seq_id\": 9, \"length\": 2, \"ref_beg_seq_id\": 171}, {\"entity_beg_seq_id\": 11, \"length\": 26, \"ref_beg_seq_id\": 180}, {\"entity_beg_seq_id\": 37, \"length\": 35, \"ref_beg_seq_id\": 210}, {\"entity_beg_seq_id\": 72, \"length\": 19, \"ref_beg_seq_id\": 253}, {\"entity_beg_seq_id\": 91, \"length\": 48, \"ref_beg_seq_id\": 274}, {\"entity_beg_seq_id\": 139, \"length\": 2, \"ref_beg_seq_id\": 327}, {\"entity_beg_seq_id\": 141, \"length\": 14, \"ref_beg_seq_id\": 330}, {\"entity_beg_seq_id\": 155, \"length\": 20, \"ref_beg_seq_id\": 346}, {\"entity_beg_seq_id\": 175, \"length\": 103, \"ref_beg_seq_id\": 367}, {\"entity_beg_seq_id\": 278, \"length\": 2, \"ref_beg_seq_id\": 474}, {\"entity_beg_seq_id\": 280, \"length\": 35, \"ref_beg_seq_id\": 477}, {\"entity_beg_seq_id\": 315, \"length\": 28, \"ref_beg_seq_id\": 516}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P17819\", \"aligned_regions\": [{\"entity_beg_seq_id\": 14, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"63922_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 342, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"GAPDH 1\"}], \"rcsb_id\": \"2I5P_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"O\", \"assembly_chain2\": \"P\"}, \"enrichment_timestamp\": \"2025-12-21T02:38:30.941411\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.3,
+            "experimentalMethod": null,
+            "depositionDate": "2006-08-25T00:00:00+0000",
+            "releaseDate": "2006-09-12T00:00:00+0000",
+            "sourceOrganism": [
+              "Kluyveromyces marxianus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 4,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.3,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Kluyveromyces marxianus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_O_Sequence",
+        "value": "MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA",
+        "description": "Amino acid sequence for chain O (length: 342)",
+        "chainId": "O",
+        "entityId": "1",
+        "sequenceLength": 342
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_P_Sequence",
+        "value": "MRGSHHHHHHGIQMVSIAINGFGRIGRLVLRIALERKNIDVVAINDPFISVDYAAYMFKYDSTHGKYKGEVSHDGSNLIINGKKVAVFQEKDPATLPWGKLGVDIAVDSTGVFKELDSAQKHIDAGAKKVVITAPSKTAPMFVVGVNEDKYNGEKIVSNASCTTNCLAPIAKIINDEFGIEEGLMTTVHSITATQKTVDGPSHKDWRGGRTASGNIIPSSTGAAKAVGKVLPELQGKLTGMAFRVPTTDVSVVDLTVKLVKAATYDEIKAAVKKVSEGKLKDVVGYTEDAVVSSDFLGDTHSTIFDAAAGIQLSPKFVKLVAWYDNEYGYSTRVVDLVEHVA",
+        "description": "Amino acid sequence for chain P (length: 342)",
+        "chainId": "P",
+        "entityId": "1",
+        "sequenceLength": 342
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The Crystal and Solution Structures of Glyceraldehyde-3-phosphate Dehydrogenase Reveal Different Quaternary Structures.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1074/jbc.M605267200",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: O, P, Length: 342",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2I5P_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2I5P_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2I5P",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "O",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "P",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 3290.92,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 132,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "GAP1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.360.10;3.40.50.720",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00044;PF02800",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 810.549999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 2480.38,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.24629890729644,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.75370413136752,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2I5P_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

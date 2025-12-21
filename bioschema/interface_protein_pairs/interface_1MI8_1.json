@@ -1,0 +1,387 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1MI8_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1MI8_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1MI8",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1MI8",
+    "name": "Protein 1MI8",
+    "description": "Protein structure with PDB ID: 1MI8. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1MI8_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1MI8",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Synechocystis sp. PCC 6803",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1148",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1148"
+    },
+    "alternateName": [
+      "PDB 1MI8",
+      "Protein ID 1MI8"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1mi8_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1mi8.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1MI8",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1MI8",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1MI8_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "dnaB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.170.16.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF03796;PF14890",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1MI8\", \"structure_metadata\": {\"pdb_id\": \"1MI8\", \"resolution\": 2.0, \"deposition_date\": \"2002-08-22T00:00:00+0000\", \"release_date\": \"2003-08-19T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Synechocystis sp. PCC 6803\"], \"citation\": {\"title\": \"Crystal structure of mini-intein reveals a conserved catalytic module involved in side chain cyclization of asparagine during protein splicing\", \"doi\": \"10.1074/jbc.M306197200\", \"authors\": [\"Ding, Y.\", \"Xu, M.Q.\", \"Ghosh, I.\", \"Chen, X.\", \"Ferrandon, S.\", \"Lesage, G.\", \"Rao, Z.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 58.17, \"b\": 58.17, \"c\": 70.28, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Synechocystis sp. PCC 6803\", \"sequence_length\": 158, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI\", \"organism\": \"Synechocystis sp. PCC 6803\", \"taxonomy_id\": 1148, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 158, \"gene_name\": null, \"uniprot_ids\": [\"Q55418\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 158.0, \"min_sequence_length\": 158, \"max_sequence_length\": 158}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI\", \"pdbx_seq_one_letter_code_can\": \"SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 4, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 158, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_genus\": \"Synechocystis\", \"gene_src_strain\": \"PCC 6803\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 100, \"pdbx_gene_src_ncbi_taxonomy_id\": \"1148\", \"pdbx_gene_src_scientific_name\": \"Synechocystis sp.\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pTWIN\"}, {\"gene_src_genus\": \"Synechocystis\", \"gene_src_strain\": \"PCC 6803\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 118, \"pdbx_end_seq_num\": 158, \"pdbx_gene_src_ncbi_taxonomy_id\": \"1148\", \"pdbx_gene_src_scientific_name\": \"Synechocystis sp.\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_src_id\": 2, \"plasmid_name\": \"pTWIN\"}], \"rcsb_cluster_membership\": [{\"cluster_id\": 952263, \"identity\": 100}, {\"cluster_id\": 793926, \"identity\": 95}, {\"cluster_id\": 39782, \"identity\": 90}, {\"cluster_id\": 53930, \"identity\": 70}, {\"cluster_id\": 47031, \"identity\": 50}, {\"cluster_id\": 42276, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 100, \"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}, {\"beg_seq_num\": 118, \"end_seq_num\": 158, \"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 2, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 100, \"ncbi_common_names\": [\"Aphanocapsa sp. (strain N-1)\", \"Aphanocapsa sp. N-1\", \"Synechocystis sp. (ATCC 27184)\", \"Synechocystis sp. (PCC 6803)\", \"Synechocystis sp. (strain PCC 6803)\", \"Synechocystis sp. ATCC 27184\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Synechocystis sp. PCC 6803\", \"ncbi_taxonomy_id\": 1148, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Synechocystis sp.\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"1798711\", \"name\": \"Cyanobacteriota/Melainabacteria group\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanobacteriota\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanophycota\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanophyta\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Oxygenic photosynthetic bacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Oxyphotobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"blue-green algae\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"blue-green bacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"cyanobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"cyanophytes\"}, {\"depth\": 6, \"id\": \"3028117\", \"name\": \"Cyanophyceae\"}, {\"depth\": 6, \"id\": \"3028117\", \"name\": \"Gloeobacteria\"}, {\"depth\": 7, \"id\": \"1890424\", \"name\": \"Synechococcales\"}, {\"depth\": 8, \"id\": \"1890428\", \"name\": \"Merismopediaceae\"}, {\"depth\": 9, \"id\": \"1142\", \"name\": \"Synechocystis\"}, {\"depth\": 10, \"id\": \"2640012\", \"name\": \"unclassified Synechocystis\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. PCC 6803\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Aphanocapsa sp. (strain N-1)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Aphanocapsa sp. N-1\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (ATCC 27184)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (PCC 6803)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (strain PCC 6803)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. ATCC 27184\"}]}, {\"beg_seq_num\": 118, \"end_seq_num\": 158, \"ncbi_common_names\": [\"Aphanocapsa sp. (strain N-1)\", \"Aphanocapsa sp. N-1\", \"Synechocystis sp. (ATCC 27184)\", \"Synechocystis sp. (PCC 6803)\", \"Synechocystis sp. (strain PCC 6803)\", \"Synechocystis sp. ATCC 27184\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Synechocystis sp. PCC 6803\", \"ncbi_taxonomy_id\": 1148, \"pdbx_src_id\": 2, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Synechocystis sp.\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"1798711\", \"name\": \"Cyanobacteriota/Melainabacteria group\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanobacteriota\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanophycota\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Cyanophyta\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Oxygenic photosynthetic bacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"Oxyphotobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"blue-green algae\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"blue-green bacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"cyanobacteria\"}, {\"depth\": 5, \"id\": \"1117\", \"name\": \"cyanophytes\"}, {\"depth\": 6, \"id\": \"3028117\", \"name\": \"Cyanophyceae\"}, {\"depth\": 6, \"id\": \"3028117\", \"name\": \"Gloeobacteria\"}, {\"depth\": 7, \"id\": \"1890424\", \"name\": \"Synechococcales\"}, {\"depth\": 8, \"id\": \"1890428\", \"name\": \"Merismopediaceae\"}, {\"depth\": 9, \"id\": \"1142\", \"name\": \"Synechocystis\"}, {\"depth\": 10, \"id\": \"2640012\", \"name\": \"unclassified Synechocystis\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. PCC 6803\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Aphanocapsa sp. (strain N-1)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Aphanocapsa sp. N-1\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (ATCC 27184)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (PCC 6803)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. (strain PCC 6803)\"}, {\"depth\": 11, \"id\": \"1148\", \"name\": \"Synechocystis sp. ATCC 27184\"}]}], \"rcsb_polymer_entity\": {\"details\": \"TETHERED DIMER LINKED BY LESSSLQLSPEIEKLSQ\", \"formula_weight\": 17.6, \"pdbx_description\": \"DnaB intein\", \"pdbx_ec\": \"3.6.1\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"Y\", \"rcsb_source_part_count\": 2, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"3\", \"name\": \"Hydrolases\"}, {\"depth\": 2, \"id\": \"3.6\", \"name\": \"Acting on acid anhydrides\"}, {\"depth\": 3, \"id\": \"3.6.1\", \"name\": \"In phosphorus-containing anhydrides\"}, {\"depth\": 1, \"id\": \"5\", \"name\": \"Isomerases\"}, {\"depth\": 2, \"id\": \"5.6\", \"name\": \"Isomerases altering macromolecular conformation\"}, {\"depth\": 3, \"id\": \"5.6.2\", \"name\": \"Enzymes altering nucleic acid conformation\"}, {\"depth\": 4, \"id\": \"5.6.2.3\", \"name\": \"DNA 5'-3' helicase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"DnaB intein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Replicative DNA helicase\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 3, \"ec\": \"3.6.1\", \"provenance_source\": \"PDB Primary Data\"}, {\"depth\": 4, \"ec\": \"5.6.2.3\", \"provenance_source\": \"UniProt\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Replicative DNA helicase DnaB\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q55418\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 100, \"ref_beg_seq_id\": 379}, {\"entity_beg_seq_id\": 118, \"length\": 2, \"ref_beg_seq_id\": 500}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"IPR036844\", \"name\": \"Hint domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036844\", \"name\": \"Hint domain superfamily\"}]}, {\"annotation_id\": \"GO:0006260\", \"name\": \"DNA replication\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006260\", \"name\": \"DNA replication\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006259\", \"name\": \"DNA metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}]}, {\"annotation_id\": \"GO:1990077\", \"name\": \"primosome complex\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:1990077\", \"name\": \"primosome complex\"}, {\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0032993\", \"name\": \"protein-DNA complex\"}, {\"id\": \"GO:0043232\", \"name\": \"intracellular membraneless organelle\"}, {\"id\": \"GO:0005694\", \"name\": \"chromosome\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0043228\", \"name\": \"membraneless organelle\"}, {\"id\": \"GO:0005657\", \"name\": \"replication fork\"}, {\"id\": \"GO:0030894\", \"name\": \"replisome\"}]}, {\"annotation_id\": \"IPR006142\", \"name\": \"Intein\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR006142\", \"name\": \"Intein\"}]}, {\"annotation_id\": \"IPR004042\", \"name\": \"Intein DOD homing endonuclease, central region\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR004042\", \"name\": \"Intein DOD homing endonuclease, central region\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"IPR007692\", \"name\": \"DNA helicase, DnaB type\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR007692\", \"name\": \"DNA helicase, DnaB type\"}]}, {\"annotation_id\": \"IPR006141\", \"name\": \"Intein N-terminal splicing region\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR006141\", \"name\": \"Intein N-terminal splicing region\"}]}, {\"annotation_id\": \"GO:0003678\", \"name\": \"DNA helicase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0008094\", \"name\": \"ATP-dependent activity, acting on DNA\"}, {\"id\": \"GO:0120545\", \"name\": \"nucleic acid conformation isomerase activity\"}, {\"id\": \"GO:0016853\", \"name\": \"isomerase activity\"}, {\"id\": \"GO:0003678\", \"name\": \"DNA helicase activity\"}, {\"id\": \"GO:0140097\", \"name\": \"catalytic activity, acting on DNA\"}, {\"id\": \"GO:0140640\", \"name\": \"catalytic activity, acting on a nucleic acid\"}, {\"id\": \"GO:0004386\", \"name\": \"helicase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0120543\", \"name\": \"macromolecular conformation isomerase activity\"}, {\"id\": \"GO:0140657\", \"name\": \"ATP-dependent activity\"}]}, {\"annotation_id\": \"GO:0006269\", \"name\": \"DNA replication, synthesis of primer\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006261\", \"name\": \"DNA-templated DNA replication\"}, {\"id\": \"GO:0006269\", \"name\": \"DNA replication, synthesis of primer\"}, {\"id\": \"GO:0016070\", \"name\": \"RNA metabolic process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006259\", \"name\": \"DNA metabolic process\"}, {\"id\": \"GO:0034654\", \"name\": \"nucleobase-containing compound biosynthetic process\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0032774\", \"name\": \"RNA biosynthetic process\"}, {\"id\": \"GO:0141187\", \"name\": \"nucleic acid biosynthetic process\"}, {\"id\": \"GO:0006260\", \"name\": \"DNA replication\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"IPR003586\", \"name\": \"Hint domain C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR003586\", \"name\": \"Hint domain C-terminal\"}]}, {\"annotation_id\": \"IPR027417\", \"name\": \"P-loop containing nucleoside triphosphate hydrolase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR027417\", \"name\": \"P-loop containing nucleoside triphosphate hydrolase\"}]}, {\"annotation_id\": \"GO:0005524\", \"name\": \"ATP binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0032559\", \"name\": \"adenyl ribonucleotide binding\"}, {\"id\": \"GO:0000166\", \"name\": \"nucleotide binding\"}, {\"id\": \"GO:0032555\", \"name\": \"purine ribonucleotide binding\"}, {\"id\": \"GO:0035639\", \"name\": \"purine ribonucleoside triphosphate binding\"}, {\"id\": \"GO:1901265\", \"name\": \"nucleoside phosphate binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0017076\", \"name\": \"purine nucleotide binding\"}, {\"id\": \"GO:0043168\", \"name\": \"anion binding\"}, {\"id\": \"GO:0030554\", \"name\": \"adenyl nucleotide binding\"}, {\"id\": \"GO:0005524\", \"name\": \"ATP binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0097367\", \"name\": \"carbohydrate derivative binding\"}, {\"id\": \"GO:0032553\", \"name\": \"ribonucleotide binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0003677\", \"name\": \"DNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003677\", \"name\": \"DNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR016136\", \"name\": \"DNA helicase DnaB, N-terminal/DNA primase DnaG, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR016136\", \"name\": \"DNA helicase DnaB, N-terminal/DNA primase DnaG, C-terminal\"}]}, {\"annotation_id\": \"IPR030934\", \"name\": \"Intein C-terminal splicing region\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR030934\", \"name\": \"Intein C-terminal splicing region\"}]}, {\"annotation_id\": \"GO:0016539\", \"name\": \"intein-mediated protein splicing\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016539\", \"name\": \"intein-mediated protein splicing\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0051604\", \"name\": \"protein maturation\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0006508\", \"name\": \"proteolysis\"}, {\"id\": \"GO:0016485\", \"name\": \"protein processing\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0030908\", \"name\": \"protein splicing\"}]}, {\"annotation_id\": \"IPR007693\", \"name\": \"DNA helicase, DnaB-like, N-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR007693\", \"name\": \"DNA helicase, DnaB-like, N-terminal\"}]}, {\"annotation_id\": \"IPR007694\", \"name\": \"DNA helicase, DnaB-like, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR007694\", \"name\": \"DNA helicase, DnaB-like, C-terminal\"}]}, {\"annotation_id\": \"IPR027434\", \"name\": \"Homing endonuclease\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR027434\", \"name\": \"Homing endonuclease\"}]}, {\"annotation_id\": \"GO:0016887\", \"name\": \"ATP hydrolysis activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016462\", \"name\": \"pyrophosphatase activity\"}, {\"id\": \"GO:0016887\", \"name\": \"ATP hydrolysis activity\"}, {\"id\": \"GO:0017111\", \"name\": \"ribonucleoside triphosphate phosphatase activity\"}, {\"id\": \"GO:0016818\", \"name\": \"hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016817\", \"name\": \"hydrolase activity, acting on acid anhydrides\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0140657\", \"name\": \"ATP-dependent activity\"}]}, {\"annotation_id\": \"IPR004860\", \"name\": \"Homing endonuclease, LAGLIDADG domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR004860\", \"name\": \"Homing endonuclease, LAGLIDADG domain\"}]}, {\"annotation_id\": \"GO:0004519\", \"name\": \"endonuclease activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004519\", \"name\": \"endonuclease activity\"}, {\"id\": \"GO:0004518\", \"name\": \"nuclease activity\"}, {\"id\": \"GO:0140640\", \"name\": \"catalytic activity, acting on a nucleic acid\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR003587\", \"name\": \"Hint domain N-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR003587\", \"name\": \"Hint domain N-terminal\"}]}, {\"annotation_id\": \"IPR036185\", \"name\": \"DNA helicase, DnaB-like, N-terminal domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036185\", \"name\": \"DNA helicase, DnaB-like, N-terminal domain superfamily\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1MI8\", \"rcsb_id\": \"1MI8_1\", \"uniprot_ids\": [\"Q55418\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q55418\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.6455696202531646, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.11697247706422019}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 3}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 52}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 121}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_4\", \"name\": \"engineered mutation\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 156}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"linker\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 101, \"end_seq_id\": 117}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.38, 0.97, 0.92, 1.14, 0.84, 0.84, 0.81, 1.16, 0.81, -0.11, -0.14, -0.14, -0.07, -0.7, -1.0, -0.5, -0.03, 0.01, 0.12, -0.78, -1.08, -1.27, -1.22, -0.33, -0.86, -1.08, -0.19, -0.19, -0.14, -0.14, -0.53, 0.07, -0.87, -0.34, -0.93, -1.52, -0.93, -0.98, -0.12, -0.13, -0.84, 0.06, -0.06, 0.54, 0.56, 0.31, 0.31, -0.59, -0.08, 0.89, 0.28, 0.47, 0.68, 0.32, 0.29, 0.22, 1.08, 0.61, -0.36, -0.29, -0.29, -1.14, -0.51, -0.51, 0.19, -0.62, -0.93, -0.93, -0.54, -0.62, -0.27, 0.03, -0.28, -0.52, -0.23, -0.31, -0.31, -0.2, -1.01, -1.32, -1.4, -1.1, -0.63, -0.97, -0.92, -0.78, -0.7, -0.11, 0.7, 0.1, -0.31, -1.17, -0.31, -0.31, -0.04, -0.63, -0.92, -0.92, -1.13, -0.21, 0.13, -0.47, -0.47, 0.12, -0.18, -0.52, -0.52, -0.22, -1.03, -1.03, -1.24, -0.36, -0.94, -0.66, -0.61, -1.12, -0.53, 0.32, 0.32, 1.21, 0.63, 0.33, 0.36, 0.7, 1.26, 0.37, -0.49, 0.07, -0.12, -0.43, 0.38, 0.38, 0.89, 0.24, 0.59, 0.8, -0.02, -0.72, -0.02, 0.02, 0.3, -0.56, -0.77, -0.22, 0.46, 1.28, 1.31, 1.2, 0.64, 0.94]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.83, 0.71, 0.65, 0.61, 0.56, 0.53, 0.47, 0.42, 0.31, 0.27, 0.16, 0.16, 0.16, 0.13, 0.12, 0.13, 0.13, 0.13, 0.13, 0.13, 0.19, 0.13, 0.13, 0.13, 0.08, 0.08, 0.08, 0.09, 0.1, 0.12, 0.11, 0.11, 0.11, 0.11, 0.13, 0.18, 0.13, 0.12, 0.12, 0.08, 0.09, 0.07, 0.11, 0.17, 0.2, 0.28, 0.2, 0.14, 0.09, 0.05, 0.04, 0.04, 0.07, 0.08, 0.05, 0.05, 0.06, 0.09, 0.05, 0.05, 0.06, 0.1, 0.1, 0.1, 0.1, 0.11, 0.06, 0.06, 0.09, 0.09, 0.13, 0.2, 0.11, 0.12, 0.11, 0.12, 0.11, 0.11, 0.07, 0.12, 0.07, 0.09, 0.1, 0.12, 0.08, 0.07, 0.04, 0.09, 0.13, 0.13, 0.13, 0.14, 0.14, 0.23, 0.23, 0.17, 0.25, 0.18, 0.18, 0.28, 0.3, 0.3, 0.31, 0.3, 0.22, 0.29, 0.31, 0.39, 0.38, 0.32, 0.33, 0.33, 0.34, 0.34, 0.27, 0.21, 0.28, 0.2, 0.27, 0.29, 0.25, 0.24, 0.25, 0.26, 0.29, 0.31, 0.22, 0.23, 0.15, 0.13, 0.14, 0.16, 0.24, 0.25, 0.24, 0.31, 0.27, 0.21, 0.26, 0.26, 0.25, 0.18, 0.12, 0.12, 0.11, 0.08, 0.11, 0.11, 0.13, 0.23, 0.28, 0.39, 0.4, 0.44, 0.46, 0.5, 0.55, 0.68]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.28, 0.28, 0.29, 0.29, 0.29, 0.29, 0.29, 0.28, 0.28, 0.27, 0.26, 0.24, 0.22, 0.21, 0.2, 0.19, 0.18, 0.17, 0.16, 0.15, 0.15, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22, 0.24, 0.25, 0.27, 0.28, 0.27, 0.26, 0.25, 0.24, 0.23, 0.23, 0.22, 0.21, 0.21, 0.21, 0.21, 0.22, 0.23, 0.24, 0.25, 0.27, 0.28, 0.29, 0.3, 0.29, 0.28, 0.27, 0.27, 0.26, 0.25, 0.24, 0.22, 0.21, 0.19, 0.18, 0.18, 0.19, 0.19, 0.2, 0.21, 0.22, 0.24, 0.26, 0.28, 0.3, 0.32, 0.34, 0.35, 0.35, 0.34, 0.32, 0.29, 0.27, 0.26, 0.25, 0.23, 0.22, 0.21, 0.21, 0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.27, 0.28, 0.27, 0.28, 0.27, 0.27, 0.28, 0.28, 0.28, 0.29, 0.29, 0.3, 0.3, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.32, 0.32, 0.33, 0.34, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.38, 0.39, 0.39, 0.4, 0.4, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.41, 0.4, 0.4, 0.39, 0.39, 0.38, 0.37, 0.36, 0.35, 0.35, 0.34, 0.34, 0.34, 0.32, 0.32, 0.31, 0.31, 0.3, 0.29]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 4, \"coverage\": 0.02532, \"type\": \"mutation\"}, {\"count\": 1, \"coverage\": 0.10759, \"maximum_length\": 17, \"minimum_length\": 17, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"952263_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"39782_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"793926_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"53930_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"47031_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"42276_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 158, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q55418\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 100, \"ref_beg_seq_id\": 379}, {\"entity_beg_seq_id\": 118, \"length\": 2, \"ref_beg_seq_id\": 500}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Replicative DNA helicase\"}], \"rcsb_id\": \"1MI8_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:36:59.772283\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.0,
+            "experimentalMethod": null,
+            "depositionDate": "2002-08-22T00:00:00+0000",
+            "releaseDate": "2003-08-19T00:00:00+0000",
+            "sourceOrganism": [
+              "Synechocystis sp. PCC 6803"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.0,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Synechocystis sp. PCC 6803",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "SGAISGDSLISLASTGKRVSIKDLLDEKDFEIWAINEQTMKLESAKVSRVFMTGKKLVYILKTRLGRTIKATANHRFLTIDGWKRLDELSLKEHIALPRKLESSSLQLSPEIEKLSQSDISWDSIVSITETGVEEVFDLTVPGPHNFVANDIIVHASI",
+        "description": "Amino acid sequence for chain A (length: 158)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 158
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of mini-intein reveals a conserved catalytic module involved in side chain cyclization of asparagine during protein splicing",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1074/jbc.M306197200",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 158",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1MI8_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "4O1R_2"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1MI8_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1MI8",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1086.14,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 44,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "dnaB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.170.16.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF03796;PF14890",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 393.0,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 693.13,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.36183180805421,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.638158985029554,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1MI8_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "4O1R_2"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

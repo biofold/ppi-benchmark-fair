@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1V2A_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1V2A_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1V2A",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1V2A",
+    "name": "Protein 1V2A",
+    "description": "Protein structure with PDB ID: 1V2A. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1V2A_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1V2A",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Anopheles dirus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "7168",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7168"
+    },
+    "alternateName": [
+      "PDB 1V2A",
+      "Protein ID 1V2A"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1v2a_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1v2a.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1V2A",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1V2A",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1V2A_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "gst1-6",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.20.1050.10;3.40.30.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00043;PF13417",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1V2A\", \"structure_metadata\": {\"pdb_id\": \"1V2A\", \"resolution\": 2.15, \"deposition_date\": \"2003-10-10T00:00:00+0000\", \"release_date\": \"2003-10-28T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Anopheles dirus\"], \"citation\": {\"title\": \"Identification, characterization and structure of a new Delta class glutathione transferase isoenzyme.\", \"doi\": \"10.1042/BJ20042015\", \"authors\": [\"Udomsinprasert, R.\", \"Pongjaroenkit, S.\", \"Wongsantichon, J.\", \"Oakley, A.J.\", \"Prapanthadara, L.A.\", \"Wilce, M.C.\", \"Ketterman, A.J.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 48.203, \"b\": 88.136, \"c\": 200.446, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"B\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"C\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"D\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Anopheles dirus\", \"sequence_length\": 210, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Anopheles dirus\", \"sequence_length\": 210, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Anopheles dirus\", \"sequence_length\": 210, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Anopheles dirus\", \"sequence_length\": 210, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"organism\": \"Anopheles dirus\", \"taxonomy_id\": 7168, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 210, \"gene_name\": null, \"uniprot_ids\": [\"Q9BHB0\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 210.0, \"min_sequence_length\": 210, \"max_sequence_length\": 210}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"pdbx_seq_one_letter_code_can\": \"MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK\", \"pdbx_strand_id\": \"A,B,C,D\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 210, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_genus\": \"Anopheles\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"AdGST1-6\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"7168\", \"pdbx_gene_src_scientific_name\": \"Anopheles dirus\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.871, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/1v2aB/4463/1v2aA\", \"max_rmsd\": 1.35, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 619476, \"identity\": 100}, {\"cluster_id\": 537194, \"identity\": 95}, {\"cluster_id\": 503655, \"identity\": 90}, {\"cluster_id\": 201063, \"identity\": 70}, {\"cluster_id\": 178804, \"identity\": 50}, {\"cluster_id\": 2075, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Anopheles (Cellia) dirus\", \"Anopheles dirus sensu stricto\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Anopheles dirus\", \"ncbi_taxonomy_id\": 7168, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Anopheles dirus\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33317\", \"name\": \"Protostomia\"}, {\"depth\": 8, \"id\": \"1206794\", \"name\": \"Ecdysozoa\"}, {\"depth\": 9, \"id\": \"88770\", \"name\": \"Panarthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"Arthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"arthropods\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"Mandibulata\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"mandibulates\"}, {\"depth\": 12, \"id\": \"197562\", \"name\": \"Pancrustacea\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"Hexapoda\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"hexapods\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"Insecta\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"insects\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"true insects\"}, {\"depth\": 15, \"id\": \"85512\", \"name\": \"Dicondylia\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"Pterygota\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"winged insects\"}, {\"depth\": 17, \"id\": \"33340\", \"name\": \"Neoptera\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Endopterygota\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Holometabola\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"Diptera\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"flies\"}, {\"depth\": 20, \"id\": \"7148\", \"name\": \"Nematocera\"}, {\"depth\": 21, \"id\": \"43786\", \"name\": \"Culicomorpha\"}, {\"depth\": 22, \"id\": \"41827\", \"name\": \"Culicoidea\"}, {\"depth\": 23, \"id\": \"7157\", \"name\": \"Culicidae\"}, {\"depth\": 23, \"id\": \"7157\", \"name\": \"mosquitos\"}, {\"depth\": 24, \"id\": \"43816\", \"name\": \"Anophelinae\"}, {\"depth\": 25, \"id\": \"7164\", \"name\": \"Anopheles\"}, {\"depth\": 26, \"id\": \"44534\", \"name\": \"Cellia\"}, {\"depth\": 27, \"id\": \"44536\", \"name\": \"Neomyzomyia\"}, {\"depth\": 28, \"id\": \"44538\", \"name\": \"leucosphyrus group\"}, {\"depth\": 29, \"id\": \"44539\", \"name\": \"leucosphyrus subgroup\"}, {\"depth\": 30, \"id\": \"409350\", \"name\": \"dirus species complex\"}, {\"depth\": 31, \"id\": \"7168\", \"name\": \"Anopheles dirus\"}, {\"depth\": 31, \"id\": \"7168\", \"name\": \"Anopheles (Cellia) dirus\"}, {\"depth\": 31, \"id\": \"7168\", \"name\": \"Anopheles dirus sensu stricto\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"AdGST1-6\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 24.161, \"pdbx_description\": \"glutathione transferase gst1-6\", \"pdbx_ec\": \"2.5.1.18\", \"pdbx_number_of_molecules\": 4, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"2\", \"name\": \"Transferases\"}, {\"depth\": 2, \"id\": \"2.5\", \"name\": \"Transferring alkyl or aryl groups, other than methyl groups\"}, {\"depth\": 3, \"id\": \"2.5.1\", \"name\": \"Transferring alkyl or aryl groups, other than methyl groups (only sub-subclass identified to date)\"}, {\"depth\": 4, \"id\": \"2.5.1.18\", \"name\": \"glutathione transferase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"glutathione transferase gst1-6\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"glutathione S-transferase 1-6\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"2.5.1.18\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"glutathione transferase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q9BHB0\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF13417\", \"assignment_version\": \"34.0\", \"name\": \"Glutathione S-transferase, N-terminal domain (GST_N_3)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF00043\", \"assignment_version\": \"34.0\", \"name\": \"Glutathione S-transferase, C-terminal domain (GST_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0004364\", \"name\": \"glutathione transferase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004364\", \"name\": \"glutathione transferase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0016765\", \"name\": \"transferase activity, transferring alkyl or aryl (other than methyl) groups\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR004046\", \"name\": \"Glutathione S-transferase, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\"}, {\"depth\": 2, \"id\": \"IPR004046\", \"name\": \"Glutathione S-transferase, C-terminal\"}]}, {\"annotation_id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR010987\", \"name\": \"Glutathione S-transferase, C-terminal-like\"}]}, {\"annotation_id\": \"GO:0006749\", \"name\": \"glutathione metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006749\", \"name\": \"glutathione metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006575\", \"name\": \"modified amino acid metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006790\", \"name\": \"sulfur compound metabolic process\"}, {\"id\": \"GO:0043603\", \"name\": \"amide metabolic process\"}]}, {\"annotation_id\": \"IPR036282\", \"name\": \"Glutathione S-transferase, C-terminal domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036282\", \"name\": \"Glutathione S-transferase, C-terminal domain superfamily\"}]}, {\"annotation_id\": \"IPR004045\", \"name\": \"Glutathione S-transferase, N-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR004045\", \"name\": \"Glutathione S-transferase, N-terminal\"}]}, {\"annotation_id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036249\", \"name\": \"Thioredoxin-like superfamily\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1V2A\", \"rcsb_id\": \"1V2A_1\", \"uniprot_ids\": [\"Q9BHB0\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q9BHB0\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF13417\", \"name\": \"Glutathione S-transferase, N-terminal domain (GST_N_3)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 4, \"end_seq_id\": 79}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF00043\", \"name\": \"Glutathione S-transferase, C-terminal domain (GST_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 86, \"end_seq_id\": 187}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.13, -0.26, -0.04, 0.38, 0.13, 0.19, 0.48, 0.56, 0.48, 0.99, 1.37, 1.11, 0.4, 1.21, 1.26, 1.56, 0.98, 0.98, 0.17, 0.39, 0.39, 0.39, -0.11, -0.46, -0.49, -0.77, -1.58, -1.37, -1.32, -1.28, -1.34, -1.66, -1.07, -1.11, -0.83, -0.88, -0.28, -1.13, -0.92, -0.81, -0.78, -1.06, -0.98, -1.08, -0.72, -0.72, 0.13, -0.08, -0.08, 0.23, -0.04, -0.08, 0.57, 0.54, -0.27, -0.82, -0.58, 0.01, 0.56, 1.38, 1.33, 0.72, 1.24, 2.1, 1.8, 1.87, 1.52, 1.22, 0.32, -0.49, -0.73, -1.23, -1.28, -1.03, -1.13, -1.42, -2.01, -1.76, -1.8, -0.94, -1.37, -1.88, -1.27, -0.62, -0.58, -0.58, -0.9, -0.04, -0.2, 0.61, 0.31, 0.34, -0.17, 0.14, 0.96, 1.31, 0.46, -0.36, -0.17, 0.72, -0.17, 0.34, 0.92, 0.14, 0.71, 1.61, 2.32, 1.39, 0.46, 0.46, -0.4, -1.08, -0.81, -1.62, -2.48, -3.08, -2.43, -2.39, -2.43, -1.62, -1.88, -1.83, -1.24, -0.43, -0.43, -0.22, 0.59, 0.63, -0.18, 0.57, 1.08, 0.8, -0.01, -0.12, -0.34, -0.91, -0.32, 0.27, 0.16, -0.7, -0.98, -0.17, 0.26, 0.52, 0.87, 0.28, 0.58, 0.66, 1.47, 2.24, 1.78, 1.78, 1.78, 1.5, 2.09, 2.01, 1.34, 0.82, 0.82, 0.43, 0.16, -0.7, -0.2, -0.79, -1.39, -0.69, -0.77, -1.54, -0.61, -0.76, -0.17, -0.69, 0.12, -0.09, -0.9, -0.26, -0.4, -0.7, -0.59, -0.58, -0.66, -1.47, -1.22, -1.11, -1.97, -1.16, -1.44, -1.49, -2.09, -1.44, -0.86, -1.1, -1.1, -0.79, -0.68, -0.39, -0.1, 0.76, 0.49, 0.2, 0.09, 0.04]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.41, 0.42, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.42, 0.4, 0.38, 0.36, 0.34, 0.32, 0.3, 0.28, 0.27, 0.26, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.25, 0.26, 0.26, 0.26, 0.27, 0.27, 0.27, 0.26, 0.26, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.26, 0.26, 0.27, 0.28, 0.3, 0.32, 0.33, 0.34, 0.36, 0.37, 0.38, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.39, 0.37, 0.35, 0.33, 0.31, 0.29, 0.28, 0.27, 0.25, 0.24, 0.23, 0.22, 0.21, 0.2, 0.18, 0.17, 0.16, 0.16, 0.16, 0.15, 0.15, 0.15, 0.14, 0.15, 0.16, 0.16, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.18, 0.18, 0.18, 0.19, 0.19, 0.19, 0.2, 0.22, 0.23, 0.24, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.24, 0.23, 0.22, 0.21, 0.2, 0.19, 0.18, 0.18, 0.17, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.17, 0.18, 0.18, 0.2, 0.21, 0.22, 0.23, 0.25, 0.26, 0.28, 0.29, 0.31, 0.34, 0.36, 0.38, 0.4, 0.41, 0.43, 0.43, 0.42, 0.41, 0.4, 0.41, 0.43, 0.41, 0.39, 0.38, 0.36, 0.35, 0.33, 0.32, 0.3, 0.28, 0.27, 0.27, 0.27, 0.28, 0.28, 0.27, 0.27, 0.26, 0.25, 0.25, 0.26, 0.27, 0.26, 0.25, 0.24, 0.24, 0.23, 0.23, 0.24, 0.24, 0.24, 0.23, 0.23, 0.24, 0.25, 0.27, 0.28, 0.3, 0.32, 0.35, 0.36, 0.37, 0.39, 0.4, 0.41, 0.41, 0.41, 0.41, 0.41, 0.4, 0.38, 0.37]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.65, 0.55, 0.52, 0.48, 0.4, 0.28, 0.17, 0.09, 0.05, 0.04, 0.03, 0.03, 0.02, 0.03, 0.05, 0.05, 0.05, 0.05, 0.1, 0.1, 0.08, 0.07, 0.07, 0.07, 0.07, 0.1, 0.11, 0.17, 0.25, 0.29, 0.27, 0.19, 0.26, 0.27, 0.27, 0.28, 0.39, 0.39, 0.47, 0.46, 0.36, 0.38, 0.38, 0.37, 0.31, 0.31, 0.28, 0.35, 0.33, 0.27, 0.21, 0.15, 0.23, 0.23, 0.17, 0.22, 0.14, 0.09, 0.05, 0.04, 0.02, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.02, 0.02, 0.04, 0.04, 0.04, 0.07, 0.08, 0.09, 0.12, 0.17, 0.15, 0.15, 0.2, 0.2, 0.2, 0.2, 0.16, 0.11, 0.11, 0.06, 0.07, 0.11, 0.11, 0.06, 0.06, 0.06, 0.03, 0.02, 0.04, 0.02, 0.01, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.03, 0.05, 0.06, 0.1, 0.11, 0.12, 0.18, 0.21, 0.23, 0.22, 0.21, 0.28, 0.28, 0.32, 0.31, 0.32, 0.33, 0.32, 0.38, 0.38, 0.3, 0.23, 0.22, 0.2, 0.19, 0.16, 0.09, 0.07, 0.08, 0.06, 0.06, 0.1, 0.06, 0.06, 0.04, 0.06, 0.06, 0.05, 0.05, 0.03, 0.01, 0.03, 0.04, 0.02, 0.02, 0.02, 0.01, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.01, 0.02, 0.03, 0.03, 0.05, 0.08, 0.04, 0.02, 0.04, 0.04, 0.03, 0.05, 0.05, 0.09, 0.12, 0.14, 0.16, 0.1, 0.16, 0.16, 0.08, 0.15, 0.12, 0.15, 0.17, 0.16, 0.19, 0.29, 0.38, 0.3, 0.29, 0.28, 0.25, 0.25, 0.24, 0.27, 0.23, 0.27, 0.39, 0.43, 0.47, 0.59, 0.63, 0.67, 0.69, 0.78, 0.84]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 2, \"coverage\": 0.84762, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2075_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 25, \"ref_beg_seq_id\": 33}, {\"entity_beg_seq_id\": 26, \"length\": 4, \"ref_beg_seq_id\": 60}, {\"entity_beg_seq_id\": 30, \"length\": 7, \"ref_beg_seq_id\": 65}, {\"entity_beg_seq_id\": 37, \"length\": 20, \"ref_beg_seq_id\": 73}, {\"entity_beg_seq_id\": 57, \"length\": 22, \"ref_beg_seq_id\": 94}, {\"entity_beg_seq_id\": 79, \"length\": 28, \"ref_beg_seq_id\": 121}, {\"entity_beg_seq_id\": 107, \"length\": 11, \"ref_beg_seq_id\": 150}, {\"entity_beg_seq_id\": 118, \"length\": 2, \"ref_beg_seq_id\": 163}, {\"entity_beg_seq_id\": 120, \"length\": 1, \"ref_beg_seq_id\": 167}, {\"entity_beg_seq_id\": 121, \"length\": 27, \"ref_beg_seq_id\": 169}, {\"entity_beg_seq_id\": 148, \"length\": 18, \"ref_beg_seq_id\": 197}, {\"entity_beg_seq_id\": 166, \"length\": 24, \"ref_beg_seq_id\": 217}, {\"entity_beg_seq_id\": 190, \"length\": 21, \"ref_beg_seq_id\": 243}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"537194_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q9BHB0\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"619476_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"201063_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"178804_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"503655_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 210, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"glutathione S-transferase 1-6\"}], \"rcsb_id\": \"1V2A_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:36.283339\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.15,
+            "experimentalMethod": null,
+            "depositionDate": "2003-10-10T00:00:00+0000",
+            "releaseDate": "2003-10-28T00:00:00+0000",
+            "sourceOrganism": [
+              "Anopheles dirus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.15,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Anopheles dirus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK",
+        "description": "Amino acid sequence for chain A (length: 210)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 210
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK",
+        "description": "Amino acid sequence for chain B (length: 210)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 210
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK",
+        "description": "Amino acid sequence for chain C (length: 210)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 210
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "MDYYYSLISPPCQSAILLAKKLGITLNLKKTNVHDPVERDALTKLNPQHTIPTLVDNGHVVWESYAIVLYLVETYAKDDTLYPKDPKVRSVVNQRLFFDIGTLYKRIIDVIHLVMKKEQPSDEQMEKLKGALDLLEQFVTERAYAAADHLTVADICLLGTVTALNWLKHDLEPFPHIRAWLERVRAEMPDYEEFSKQVADDTLAYVASRK",
+        "description": "Amino acid sequence for chain D (length: 210)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 210
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Identification, characterization and structure of a new Delta class glutathione transferase isoenzyme.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1042/BJ20042015",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 210",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1V2A_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1V2A_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1V2A",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2640.08,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 89,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "gst1-6",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.20.1050.10;3.40.30.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00043;PF13417",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 788.01,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1852.07,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.29847959152753,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.701520408472471,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1V2A_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

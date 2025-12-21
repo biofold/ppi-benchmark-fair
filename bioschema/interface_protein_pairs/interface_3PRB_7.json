@@ -1,0 +1,380 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3PRB_7",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "3PRB_7",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3PRB",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3PRB",
+    "name": "Protein 3PRB",
+    "description": "Protein structure with PDB ID: 3PRB. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3PRB_7 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3PRB",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Methanocaldococcus jannaschii",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "2190",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2190"
+    },
+    "alternateName": [
+      "PDB 3PRB",
+      "Protein ID 3PRB"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3prb_7.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3PRB_7.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3PRB",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3PRB",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3PRB_7",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "MJ0825",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.70.2210;2.40.10.330;3.10.50.40",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF18046;PF00254",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3PRB\", \"structure_metadata\": {\"pdb_id\": \"3PRB\", \"resolution\": 2.2, \"deposition_date\": \"2010-11-29T00:00:00+0000\", \"release_date\": \"2011-01-19T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Methanocaldococcus jannaschii\"], \"citation\": {\"title\": \"Structural Analysis of Protein Folding by the Long-Chain Archaeal Chaperone FKBP26.\", \"doi\": \"10.1016/j.jmb.2011.01.027\", \"authors\": [\"Martinez-Hackert, E.\", \"Hendrickson, W.A.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 55.532, \"b\": 65.199, \"c\": 148.616, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\", \"B\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Methanocaldococcus jannaschii\", \"sequence_length\": 231, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Methanocaldococcus jannaschii\", \"sequence_length\": 231, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\", \"organism\": \"Methanocaldococcus jannaschii\", \"taxonomy_id\": 2190, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 231, \"gene_name\": null, \"uniprot_ids\": [\"Q58235\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 231.0, \"min_sequence_length\": 231, \"max_sequence_length\": 231}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\", \"pdbx_seq_one_letter_code_can\": \"MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 231, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Methanococcus jannaschii\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"MJ0825\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"2190\", \"pdbx_gene_src_scientific_name\": \"Methanocaldococcus jannaschii\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET24\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 2.69, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/3prbB/16563/3prbA\", \"max_rmsd\": 3.335, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 22848, \"identity\": 100}, {\"cluster_id\": 31132, \"identity\": 95}, {\"cluster_id\": 34355, \"identity\": 90}, {\"cluster_id\": 40293, \"identity\": 70}, {\"cluster_id\": 45207, \"identity\": 50}, {\"cluster_id\": 22832, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"Methanococcus jannaschii\", \"ncbi_common_names\": [\"Methanococcus jannaschii\"], \"ncbi_parent_scientific_name\": \"Archaea\", \"ncbi_scientific_name\": \"Methanocaldococcus jannaschii\", \"ncbi_taxonomy_id\": 2190, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Methanocaldococcus jannaschii\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaea\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaebacteria\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaebiota\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Mendosicutes\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Metabacteria\"}, {\"depth\": 3, \"id\": \"3366610\", \"name\": \"Methanobacteriati\"}, {\"depth\": 3, \"id\": \"3366610\", \"name\": \"Euryarchaeida\"}, {\"depth\": 4, \"id\": \"28890\", \"name\": \"Methanobacteriota\"}, {\"depth\": 4, \"id\": \"28890\", \"name\": \"Euryarchaeota\"}, {\"depth\": 4, \"id\": \"28890\", \"name\": \"Methanobacteraeota\"}, {\"depth\": 4, \"id\": \"28890\", \"name\": \"euryarchaeotes\"}, {\"depth\": 5, \"id\": \"2283794\", \"name\": \"Methanomada group\"}, {\"depth\": 5, \"id\": \"2283794\", \"name\": \"Methanogen Class I\"}, {\"depth\": 5, \"id\": \"2283794\", \"name\": \"Methanomada\"}, {\"depth\": 6, \"id\": \"183939\", \"name\": \"Methanococci\"}, {\"depth\": 6, \"id\": \"183939\", \"name\": \"Methanothermea\"}, {\"depth\": 7, \"id\": \"2182\", \"name\": \"Methanococcales\"}, {\"depth\": 8, \"id\": \"196117\", \"name\": \"Methanocaldococcaceae\"}, {\"depth\": 9, \"id\": \"196118\", \"name\": \"Methanocaldococcus\"}, {\"depth\": 10, \"id\": \"2190\", \"name\": \"Methanocaldococcus jannaschii\"}, {\"depth\": 10, \"id\": \"2190\", \"name\": \"Methanococcus jannaschii\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"MJ0825\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"243232:peptidylprolyl_isomerase\", \"name\": \"peptidylprolyl isomerase\"}, {\"depth\": 0, \"id\": \"243232\", \"name\": \"Methanocaldococcus jannaschii DSM 2661\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 25.987, \"pdbx_description\": \"FKBP-type peptidyl-prolyl cis-trans isomerase\", \"pdbx_ec\": \"5.2.1.8\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"5\", \"name\": \"Isomerases\"}, {\"depth\": 2, \"id\": \"5.2\", \"name\": \"cis-trans-Isomerases\"}, {\"depth\": 3, \"id\": \"5.2.1\", \"name\": \"cis-trans Isomerases (only sub-subclass identified to date)\"}, {\"depth\": 4, \"id\": \"5.2.1.8\", \"name\": \"peptidylprolyl isomerase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"FKBP-type peptidyl-prolyl cis-trans isomerase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"PPIase\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Rotamase\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Long-type FKBP\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"5.2.1.8\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Long-type peptidyl-prolyl cis-trans isomerase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q58235\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00254\", \"assignment_version\": \"34.0\", \"name\": \"FKBP-type peptidyl-prolyl cis-trans isomerase (FKBP_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF22199\", \"assignment_version\": \"34.0\", \"name\": \"FKBP26, IF domain (FKBP26_IF)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF18046\", \"assignment_version\": \"34.0\", \"name\": \"FKBP26_C-terminal (FKBP26_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0042026\", \"name\": \"protein refolding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042026\", \"name\": \"protein refolding\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0010467\", \"name\": \"gene expression\"}, {\"id\": \"GO:0009059\", \"name\": \"macromolecule biosynthetic process\"}, {\"id\": \"GO:0051604\", \"name\": \"protein maturation\"}, {\"id\": \"GO:0006457\", \"name\": \"protein folding\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"IPR046357\", \"name\": \"Peptidyl-prolyl cis-trans isomerase domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR046357\", \"name\": \"Peptidyl-prolyl cis-trans isomerase domain superfamily\"}]}, {\"annotation_id\": \"GO:0003755\", \"name\": \"peptidyl-prolyl cis-trans isomerase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016853\", \"name\": \"isomerase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0003755\", \"name\": \"peptidyl-prolyl cis-trans isomerase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016859\", \"name\": \"cis-trans isomerase activity\"}]}, {\"annotation_id\": \"IPR001179\", \"name\": \"FKBP-type peptidyl-prolyl cis-trans isomerase domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001179\", \"name\": \"FKBP-type peptidyl-prolyl cis-trans isomerase domain\"}]}, {\"annotation_id\": \"IPR048261\", \"name\": \"PPIase chaperone SlpA/SlyD-like, insertion domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR048261\", \"name\": \"PPIase chaperone SlpA/SlyD-like, insertion domain superfamily\"}]}, {\"annotation_id\": \"IPR054016\", \"name\": \"FKBP26, IF domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR054016\", \"name\": \"FKBP26, IF domain\"}]}, {\"annotation_id\": \"IPR040825\", \"name\": \"FKBP26, C-terminal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR040825\", \"name\": \"FKBP26, C-terminal\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"3PRB\", \"rcsb_id\": \"3PRB_1\", \"uniprot_ids\": [\"Q58235\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q58235\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF18046\", \"name\": \"FKBP26_C-terminal (FKBP26_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 152, \"end_seq_id\": 221}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF22199\", \"name\": \"FKBP26, IF domain (FKBP26_IF)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 89, \"end_seq_id\": 134}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF00254\", \"name\": \"FKBP-type peptidyl-prolyl cis-trans isomerase (FKBP_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 111}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.38, -0.09, -0.64, -0.4, -0.36, -0.36, -0.07, 0.19, -0.67, -0.28, -1.21, -0.7, -0.24, -0.24, -0.28, -0.21, -1.07, -1.07, -1.41, -0.56, -0.78, -1.52, -1.57, -1.88, -1.84, -0.96, -0.71, -0.71, -1.31, -1.31, -0.67, 0.27, 0.51, 0.51, -0.17, 0.44, 1.03, 1.71, 1.82, 1.81, 1.27, 1.02, 1.02, 0.81, 0.81, 1.03, 0.36, 0.0, 0.22, -0.12, -0.12, 0.12, 1.01, 0.97, 0.16, 0.54, 0.2, 0.24, 0.59, 0.59, 0.0, -1.0, -1.81, -0.96, -0.7, 0.11, -0.53, -0.67, -0.67, -0.71, -0.01, 0.69, 0.18, -0.72, -1.64, -1.86, -1.86, -1.56, -1.56, -1.26, -2.0, -1.53, -0.6, -0.28, 0.53, 0.62, 0.32, 1.07, 0.49, 0.49, -0.43, -0.98, -0.3, -1.16, -1.24, -0.36, -1.1, -1.07, -0.21, 0.21, 0.76, 0.18, 1.11, 0.9, 0.36, 1.29, 1.16, 0.69, 0.33, 0.33, 0.88, 0.29, 1.18, 0.83, 0.24, 0.38, -0.08, 0.82, 0.74, 0.74, 0.44, 0.26, 0.26, -0.01, -0.36, 0.57, 0.3, -0.17, -1.07, -1.07, -0.91, -0.96, -0.74, -0.86, -0.78, -1.41, -0.87, -0.82, -0.82, -0.82, 0.08, -0.17, -0.06, -0.99, -0.99, -1.88, -0.99, -0.13, -1.03, -1.89, -1.0, -0.14, -0.14, 0.5, 0.74, 0.71, 0.07, 0.0, 0.81, 0.22, -0.63, 0.27, -0.38, 0.23, -0.31, 0.37, 0.37, -0.44, -0.4, -0.09, -0.09, -0.09, -0.06, -0.37, -0.44, -0.12, -0.12, 0.23, 0.51, -0.13, 0.61, 0.61, 0.82, 0.01, 0.69, 0.69, 0.3, 0.3, 0.04, -0.06, -0.36, 0.32, 0.91, 0.02, 0.02, 0.6, 0.82, 0.82, 0.11, 0.33, -0.56, -1.14, -0.56, -0.56, -1.49, -1.44, -1.1, -0.29, -0.24, -0.24, 0.07, 0.18, 0.18, 0.11, -0.79, -1.13, -1.83, -2.38, -2.42, -2.73, -3.43, -3.43, -3.37]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.82, 0.72, 0.69, 0.64, 0.53, 0.43, 0.39, 0.35, 0.3, 0.19, 0.1, 0.13, 0.16, 0.14, 0.15, 0.17, 0.19, 0.15, 0.16, 0.16, 0.22, 0.24, 0.31, 0.22, 0.16, 0.23, 0.32, 0.27, 0.23, 0.17, 0.16, 0.23, 0.25, 0.19, 0.17, 0.12, 0.07, 0.06, 0.09, 0.13, 0.13, 0.15, 0.09, 0.06, 0.12, 0.17, 0.12, 0.11, 0.15, 0.16, 0.18, 0.19, 0.2, 0.15, 0.23, 0.19, 0.26, 0.35, 0.39, 0.38, 0.38, 0.31, 0.25, 0.25, 0.35, 0.36, 0.37, 0.44, 0.39, 0.31, 0.35, 0.4, 0.46, 0.45, 0.52, 0.5, 0.56, 0.49, 0.47, 0.39, 0.33, 0.35, 0.34, 0.4, 0.46, 0.35, 0.31, 0.31, 0.32, 0.35, 0.34, 0.34, 0.38, 0.3, 0.29, 0.26, 0.18, 0.18, 0.17, 0.17, 0.15, 0.2, 0.18, 0.16, 0.19, 0.19, 0.26, 0.18, 0.13, 0.13, 0.07, 0.11, 0.12, 0.1, 0.15, 0.1, 0.06, 0.07, 0.07, 0.07, 0.07, 0.13, 0.13, 0.08, 0.11, 0.09, 0.09, 0.09, 0.1, 0.13, 0.09, 0.14, 0.08, 0.08, 0.04, 0.04, 0.06, 0.07, 0.07, 0.07, 0.12, 0.12, 0.11, 0.11, 0.11, 0.1, 0.09, 0.09, 0.05, 0.06, 0.05, 0.08, 0.05, 0.06, 0.07, 0.12, 0.08, 0.08, 0.12, 0.12, 0.12, 0.07, 0.07, 0.04, 0.04, 0.07, 0.11, 0.11, 0.07, 0.11, 0.09, 0.1, 0.06, 0.11, 0.17, 0.09, 0.07, 0.15, 0.09, 0.05, 0.1, 0.1, 0.1, 0.1, 0.16, 0.13, 0.13, 0.11, 0.09, 0.1, 0.08, 0.15, 0.15, 0.17, 0.11, 0.1, 0.15, 0.12, 0.11, 0.17, 0.22, 0.2, 0.19, 0.2, 0.2, 0.16, 0.14, 0.15, 0.17, 0.14, 0.2, 0.22, 0.2, 0.18, 0.24, 0.31, 0.31, 0.31, 0.38, 0.38, 0.35, 0.42, 0.46, 0.5, 0.61, 0.64, 0.73, 0.81, 0.85, 0.88, 0.94]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.16, 0.17, 0.18, 0.17, 0.18, 0.18, 0.18, 0.18, 0.18, 0.19, 0.2, 0.21, 0.23, 0.24, 0.26, 0.28, 0.3, 0.32, 0.34, 0.36, 0.37, 0.37, 0.37, 0.36, 0.35, 0.34, 0.33, 0.31, 0.29, 0.27, 0.26, 0.26, 0.26, 0.26, 0.27, 0.28, 0.3, 0.32, 0.34, 0.36, 0.38, 0.4, 0.41, 0.42, 0.43, 0.42, 0.41, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.37, 0.36, 0.36, 0.36, 0.37, 0.38, 0.4, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.34, 0.34, 0.34, 0.34, 0.34, 0.35, 0.35, 0.35, 0.36, 0.37, 0.37, 0.38, 0.38, 0.38, 0.38, 0.38, 0.36, 0.35, 0.34, 0.33, 0.32, 0.31, 0.3, 0.3, 0.29, 0.29, 0.28, 0.28, 0.28, 0.28, 0.27, 0.27, 0.26, 0.26, 0.25, 0.25, 0.24, 0.24, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.22, 0.22, 0.21, 0.2, 0.19, 0.18, 0.18, 0.17, 0.17, 0.16, 0.15, 0.14, 0.14, 0.14, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22, 0.24, 0.24, 0.24, 0.24, 0.24, 0.23, 0.23, 0.22, 0.21, 0.2, 0.19, 0.18, 0.18, 0.17, 0.17, 0.17, 0.18, 0.18, 0.2, 0.22, 0.24, 0.27, 0.3, 0.33, 0.37, 0.39, 0.42, 0.42, 0.41, 0.4, 0.4, 0.41, 0.41, 0.4, 0.4, 0.41, 0.4, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.41, 0.4, 0.4, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.4, 0.39, 0.37, 0.34, 0.32, 0.31, 0.3, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 3, \"coverage\": 0.98268, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"22848_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"45207_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"31132_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"22832_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 16, \"ref_beg_seq_id\": 4}, {\"entity_beg_seq_id\": 17, \"length\": 151, \"ref_beg_seq_id\": 22}, {\"entity_beg_seq_id\": 168, \"length\": 24, \"ref_beg_seq_id\": 177}, {\"entity_beg_seq_id\": 192, \"length\": 40, \"ref_beg_seq_id\": 205}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"34355_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"40293_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q58235\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 231, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"PPIase, Rotamase, Long-type FKBP\"}], \"rcsb_id\": \"3PRB_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"B\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:41:13.974512\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 231, \"chain2_sequence_length\": 231, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.2,
+            "experimentalMethod": null,
+            "depositionDate": "2010-11-29T00:00:00+0000",
+            "releaseDate": "2011-01-19T00:00:00+0000",
+            "sourceOrganism": [
+              "Methanocaldococcus jannaschii"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.2,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Methanocaldococcus jannaschii",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK",
+        "description": "Amino acid sequence for chain A (length: 231)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 231
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MVEKGKMVKISYDGYVDGKLFDTTNEELAKKEGIYNPAMIYGPVAIFAGEGQVLPGLDEAILEMDVGEEREVVLPPEKAFGKRDPSKIKLIPLSEFTKRGIKPIKGLTITIDGIPGKIVSINSGRVLVDFNHELAGKEVKYRIKIEEVVDDKKNIVKEIVKMYVPRLSDVKVTIRNGTVKIELPEFAPFIPNIQTAKMAIANEILKRLEDAEKVSFVETFERKKETKEENK",
+        "description": "Amino acid sequence for chain B (length: 231)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 231
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural Analysis of Protein Folding by the Long-Chain Archaeal Chaperone FKBP26.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.jmb.2011.01.027",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 231",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3PRB_7",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3PRB_7",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3PRB",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "3_655",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "2_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2454.12,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 70,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "MJ0825",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.70.2210;2.40.10.330;3.10.50.40",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF18046;PF00254",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 937.190000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1516.92,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.381884341433997,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.618111583785634,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3PRB_7",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

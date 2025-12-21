@@ -1,0 +1,390 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1TXN_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1TXN_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1TXN",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1TXN",
+    "name": "Protein 1TXN",
+    "description": "Protein structure with PDB ID: 1TXN. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1TXN_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1TXN",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Saccharomyces cerevisiae",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "4932",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=4932"
+    },
+    "alternateName": [
+      "PDB 1TXN",
+      "Protein ID 1TXN"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1txn_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1txn.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1TXN",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1TXN",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1TXN_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "HEM13",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.1500.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01218",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1TXN\", \"structure_metadata\": {\"pdb_id\": \"1TXN\", \"resolution\": 1.7, \"deposition_date\": \"2004-07-05T00:00:00+0000\", \"release_date\": \"2004-11-30T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Saccharomyces cerevisiae\"], \"citation\": {\"title\": \"Crystal structure of coproporphyrinogen III oxidase\", \"authors\": [\"Kumaran, D.\", \"Swaminathan, S.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 71.754, \"b\": 71.754, \"c\": 117.741, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\", \"B\": \"(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 360, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Saccharomyces cerevisiae\", \"sequence_length\": 360, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\", \"organism\": \"Saccharomyces cerevisiae\", \"taxonomy_id\": 4932, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 360, \"gene_name\": null, \"uniprot_ids\": [\"P11353\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 360.0, \"min_sequence_length\": 360, \"max_sequence_length\": 360}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\", \"pdbx_seq_one_letter_code_can\": \"MPAPQDPRNLPIRQQMEALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTSMVIQDGTTFEKGGVNVSVVYGQLSPAAVSAMKADHKNLRLPEDPKTGLPVTDGVKFFACGLSMVIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILKMVEDCFDAFLPSYLTIVKRRKDMPYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESILMSLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK\", \"pdbx_strand_id\": \"A,B\", \"pdbx_target_identifier\": \"NYSGXRC-P035\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 8, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 328, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"baker's yeast\", \"gene_src_genus\": \"Saccharomyces\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"HEM13, YDR044W, YD5112.02\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"4932\", \"pdbx_gene_src_scientific_name\": \"Saccharomyces cerevisiae\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 3.006, \"label\": \"Medium\", \"link\": \"http://pdbflex.org/cluster.html#!/1tlbA/4124/1txnA\", \"max_rmsd\": 5.387, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 20169, \"identity\": 100}, {\"cluster_id\": 27826, \"identity\": 95}, {\"cluster_id\": 30798, \"identity\": 90}, {\"cluster_id\": 32269, \"identity\": 70}, {\"cluster_id\": 16147, \"identity\": 50}, {\"cluster_id\": 5356, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"baker's yeast\", \"ncbi_common_names\": [\"Candida robusta\", \"Mycoderma cerevisiae\", \"Saccharomyces boulardii\", \"Saccharomyces boulardii (nom. inval.)\", \"Saccharomyces capensis\", \"Saccharomyces cerevisiae 'var. diastaticus\", \"Saccharomyces cerevisiae (Desm.) Meyen ex E.C. Hansen, 1883\", \"Saccharomyces diastaticus\", \"Saccharomyces italicus\", \"Saccharomyces oviformis\", \"Saccharomyces uvarum var. melibiosus\", \"baker's yeast\", \"brewer's yeast\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Saccharomyces cerevisiae\", \"ncbi_taxonomy_id\": 4932, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Saccharomyces cerevisiae\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Fungi\"}, {\"depth\": 4, \"id\": \"4751\", \"name\": \"Mycota\"}, {\"depth\": 5, \"id\": \"451864\", \"name\": \"Dikarya\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"Ascomycota\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"ascomycete fungi\"}, {\"depth\": 6, \"id\": \"4890\", \"name\": \"sac fungi\"}, {\"depth\": 7, \"id\": \"716545\", \"name\": \"saccharomyceta\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"Saccharomycotina\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"budding yeasts & allies\"}, {\"depth\": 8, \"id\": \"147537\", \"name\": \"true yeasts\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Saccharomycetes\"}, {\"depth\": 9, \"id\": \"4891\", \"name\": \"Hemiascomycetes\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Saccharomycetales\"}, {\"depth\": 10, \"id\": \"4892\", \"name\": \"Endomycetales\"}, {\"depth\": 11, \"id\": \"4893\", \"name\": \"Saccharomycetaceae\"}, {\"depth\": 12, \"id\": \"4930\", \"name\": \"Saccharomyces\"}, {\"depth\": 12, \"id\": \"4930\", \"name\": \"Pachytichospora\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Candida robusta\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Mycoderma cerevisiae\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces boulardii\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces boulardii (nom. inval.)\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces capensis\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae 'var. diastaticus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces cerevisiae (Desm.) Meyen ex E.C. Hansen, 1883\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces diastaticus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces italicus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces oviformis\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"Saccharomyces uvarum var. melibiosus\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"baker's yeast\"}, {\"depth\": 13, \"id\": \"4932\", \"name\": \"brewer's yeast\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"HEM13\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"YDR044W\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"YD5112.02\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"559292:IV\", \"name\": \"Chromosome IV\"}, {\"depth\": 2, \"id\": \"559292:IV:coproporphyrinogen_oxidase\", \"name\": \"coproporphyrinogen oxidase\"}, {\"depth\": 0, \"id\": \"559292\", \"name\": \"Saccharomyces cerevisiae S288C\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 38.139, \"pdbx_description\": \"Coproporphyrinogen III oxidase\", \"pdbx_ec\": \"1.3.3.3\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.3\", \"name\": \"Acting on the CH-CH group of donors\"}, {\"depth\": 3, \"id\": \"1.3.3\", \"name\": \"With oxygen as acceptor\"}, {\"depth\": 4, \"id\": \"1.3.3.3\", \"name\": \"coproporphyrinogen oxidase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Coproporphyrinogen III oxidase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Coproporphyrinogenase\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Coprogen oxidase\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"COX\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"1.3.3.3\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Oxygen-dependent coproporphyrinogen-III oxidase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P11353\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 328, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01218\", \"assignment_version\": \"34.0\", \"name\": \"Coproporphyrinogen III oxidase (Coprogen_oxidas)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0006783\", \"name\": \"heme biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042168\", \"name\": \"heme metabolic process\"}, {\"id\": \"GO:0042440\", \"name\": \"pigment metabolic process\"}, {\"id\": \"GO:0006779\", \"name\": \"porphyrin-containing compound biosynthetic process\"}, {\"id\": \"GO:0033013\", \"name\": \"tetrapyrrole metabolic process\"}, {\"id\": \"GO:0006783\", \"name\": \"heme biosynthetic process\"}, {\"id\": \"GO:0046148\", \"name\": \"pigment biosynthetic process\"}, {\"id\": \"GO:0033014\", \"name\": \"tetrapyrrole biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006778\", \"name\": \"porphyrin-containing compound metabolic process\"}]}, {\"annotation_id\": \"IPR036406\", \"name\": \"Oxygen-dependent coproporphyrinogen III oxidase superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036406\", \"name\": \"Oxygen-dependent coproporphyrinogen III oxidase superfamily\"}]}, {\"annotation_id\": \"GO:0006782\", \"name\": \"protoporphyrinogen IX biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042168\", \"name\": \"heme metabolic process\"}, {\"id\": \"GO:0042440\", \"name\": \"pigment metabolic process\"}, {\"id\": \"GO:0006779\", \"name\": \"porphyrin-containing compound biosynthetic process\"}, {\"id\": \"GO:0033013\", \"name\": \"tetrapyrrole metabolic process\"}, {\"id\": \"GO:0006783\", \"name\": \"heme biosynthetic process\"}, {\"id\": \"GO:0046501\", \"name\": \"protoporphyrinogen IX metabolic process\"}, {\"id\": \"GO:0046148\", \"name\": \"pigment biosynthetic process\"}, {\"id\": \"GO:0006782\", \"name\": \"protoporphyrinogen IX biosynthetic process\"}, {\"id\": \"GO:0033014\", \"name\": \"tetrapyrrole biosynthetic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006778\", \"name\": \"porphyrin-containing compound metabolic process\"}]}, {\"annotation_id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\"}, {\"id\": \"GO:0046983\", \"name\": \"protein dimerization activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR001260\", \"name\": \"Coproporphyrinogen III oxidase, aerobic\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001260\", \"name\": \"Coproporphyrinogen III oxidase, aerobic\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"IPR018375\", \"name\": \"Coproporphyrinogen III oxidase, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018375\", \"name\": \"Coproporphyrinogen III oxidase, conserved site\"}]}, {\"annotation_id\": \"GO:0004109\", \"name\": \"coproporphyrinogen oxidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0004109\", \"name\": \"coproporphyrinogen oxidase activity\"}, {\"id\": \"GO:0016627\", \"name\": \"oxidoreductase activity, acting on the CH-CH group of donors\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016634\", \"name\": \"oxidoreductase activity, acting on the CH-CH group of donors, oxygen as acceptor\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"1TXN\", \"rcsb_id\": \"1TXN_1\", \"uniprot_ids\": [\"P11353\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P11353\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 1}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 16}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 56}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_4\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 86}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_5\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 118}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_6\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 227}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_7\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 249}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_8\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 293}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_9\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 1}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_10\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 16}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_11\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 56}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_12\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 86}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_13\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 118}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_14\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 227}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_15\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 249}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_16\", \"name\": \"modified residue\", \"provenance_source\": \"PDB\", \"type\": \"mutation\", \"feature_positions\": [{\"beg_seq_id\": 293}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.79, -1.58, -1.58, -1.28, -1.6, -1.6, -1.6, -1.21, -1.1, -0.51, -0.51, 0.17, -0.83, -0.83, -0.88, -0.88, -0.89, -0.89, -0.59, -1.09, -1.98, -1.52, -0.6, -0.56, -0.26, 0.04, 0.04, -0.53, 0.01, -0.03, 0.32, -0.46, 0.13, -0.17, -0.74, -0.46, -0.46, -1.42, -1.03, -1.73, -1.77, -2.01, -1.67, -1.63, -1.58, -1.58, -1.17, -0.91, -0.06, 0.83, 0.49, 0.14, 0.14, 0.11, 0.11, 0.51, -0.09, -0.99, -1.53, -1.19, -0.33, -0.68, -0.13, -0.14, 0.01, 0.87, 1.16, 1.16, 0.81, 0.77, 1.07, 0.42, 0.71, 0.44, 0.44, 0.5, 0.74, 1.34, 0.49, 0.78, 0.57, 0.01, -0.62, -1.48, -0.97, -1.67, -1.46, -1.2, -1.79, -1.79, -1.61, -1.61, -1.3, -1.77, -0.84, -1.44, -0.8, -0.49, -0.49, -0.36, 0.54, 0.19, 0.54, 0.43, 0.81, 0.62, 0.66, 1.47, 1.42, 1.17, 2.07, 2.26, 1.59, 1.21, 1.4, 1.06, 0.46, 0.19, 0.18, -0.47, -1.04, -0.77, -0.94, -0.99, -0.99, -0.96, -1.1, -1.44, -0.96, -1.27, -1.27, -1.01, -1.82, -1.82, -2.07, -1.61, -1.54, -2.03, -2.03, -2.03, -2.03, -1.74, -1.04, -0.7, -0.7, -0.67, -0.29, -0.29, 0.21, 0.23, 0.16, -0.24, -0.34, 0.12, 0.02, -0.57, -0.57, -1.38, -1.34, -1.56, -1.04, -0.59, -1.37, -1.61, -0.8, -0.77, -0.81, -1.16, -0.57, -0.57, -1.27, -1.34, -1.31, -2.12, -1.84, -1.21, -0.4, -0.74, -1.34, -1.46, -0.71, -0.79, -0.83, -0.86, -0.78, -1.59, -1.83, -1.8, -0.99, -1.44, -0.51, -0.16, -0.41, -1.19, -1.23, -1.23, -1.17, -1.98, -1.88, -1.88, -1.84, -1.53, -0.53, 0.21, 0.91, 0.6, 0.71, 0.61, -0.28, -0.62, -1.08, -1.97, -2.46, -3.16, -3.16, -2.27, -1.7, -1.74, -1.14, -0.18, -0.18, -0.39, 0.28, 0.98, 0.09, -0.13, 0.61, 0.82, 0.18, 0.48, 0.72, 0.87, 0.48, 1.37, 1.63, 0.89, -0.03, -0.36, -0.7, -0.94, -1.16, -1.26, -1.9, -2.44, -2.44, -2.33, -2.22, -2.18, -2.18, -2.49, -2.7, -2.36, -1.78, -1.84, -1.96, -1.61, -1.72, -1.48, -0.91, -0.91, -0.8, -1.69, -0.77, 0.23, 0.13, 0.24, -0.11, -0.62, -0.31, -1.01, -0.31, -0.78, -0.86, -1.21, -0.9, -0.58, -0.58, -0.59, -0.7, -0.54, -0.89, -1.4, -0.4, 0.1, 0.49, 0.44, 0.96, 1.28, 0.42, 0.46, 0.74, 0.16, -0.37, -0.16, -0.21, -1.02, -1.2, -1.17, -0.99, -0.99, -1.08, -1.02, -1.53, -1.89, -1.89, -1.33, -1.41, -0.81, -0.59, -0.8, -0.29, -0.28, 0.14, 0.1, -0.28, -0.34, -1.16, -1.68, -0.82, -1.72]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.99, 0.97, 0.96, 0.94, 0.93, 0.89, 0.87, 0.82, 0.73, 0.64, 0.6, 0.61, 0.58, 0.61, 0.55, 0.55, 0.49, 0.45, 0.47, 0.47, 0.47, 0.44, 0.51, 0.44, 0.44, 0.42, 0.39, 0.38, 0.34, 0.39, 0.43, 0.43, 0.43, 0.37, 0.35, 0.37, 0.36, 0.42, 0.42, 0.41, 0.41, 0.47, 0.46, 0.45, 0.51, 0.48, 0.43, 0.43, 0.44, 0.51, 0.5, 0.52, 0.51, 0.44, 0.52, 0.52, 0.52, 0.51, 0.46, 0.46, 0.41, 0.41, 0.36, 0.31, 0.25, 0.25, 0.29, 0.28, 0.34, 0.35, 0.32, 0.3, 0.25, 0.26, 0.31, 0.26, 0.26, 0.23, 0.24, 0.3, 0.29, 0.35, 0.27, 0.32, 0.29, 0.38, 0.39, 0.38, 0.47, 0.47, 0.44, 0.47, 0.43, 0.5, 0.44, 0.47, 0.5, 0.5, 0.48, 0.48, 0.39, 0.31, 0.28, 0.28, 0.27, 0.28, 0.26, 0.21, 0.16, 0.1, 0.09, 0.11, 0.08, 0.12, 0.12, 0.13, 0.12, 0.13, 0.12, 0.16, 0.13, 0.14, 0.21, 0.15, 0.21, 0.13, 0.13, 0.13, 0.17, 0.13, 0.18, 0.2, 0.2, 0.25, 0.25, 0.25, 0.3, 0.32, 0.2, 0.13, 0.09, 0.11, 0.16, 0.17, 0.23, 0.24, 0.26, 0.34, 0.35, 0.36, 0.37, 0.31, 0.21, 0.22, 0.23, 0.24, 0.22, 0.22, 0.16, 0.18, 0.25, 0.34, 0.25, 0.21, 0.19, 0.22, 0.19, 0.19, 0.2, 0.16, 0.15, 0.21, 0.27, 0.32, 0.23, 0.15, 0.18, 0.17, 0.1, 0.13, 0.18, 0.12, 0.06, 0.1, 0.13, 0.09, 0.06, 0.05, 0.05, 0.05, 0.05, 0.05, 0.04, 0.05, 0.05, 0.07, 0.12, 0.06, 0.06, 0.11, 0.08, 0.05, 0.06, 0.11, 0.11, 0.06, 0.1, 0.17, 0.21, 0.27, 0.31, 0.35, 0.37, 0.31, 0.24, 0.23, 0.22, 0.16, 0.23, 0.24, 0.19, 0.18, 0.27, 0.32, 0.24, 0.17, 0.28, 0.28, 0.2, 0.16, 0.15, 0.09, 0.06, 0.05, 0.07, 0.1, 0.1, 0.13, 0.15, 0.16, 0.1, 0.13, 0.19, 0.18, 0.21, 0.29, 0.38, 0.23, 0.24, 0.28, 0.27, 0.27, 0.34, 0.4, 0.4, 0.35, 0.3, 0.3, 0.21, 0.26, 0.17, 0.19, 0.13, 0.15, 0.14, 0.14, 0.14, 0.14, 0.16, 0.15, 0.11, 0.16, 0.16, 0.18, 0.18, 0.18, 0.25, 0.25, 0.27, 0.34, 0.27, 0.26, 0.29, 0.36, 0.27, 0.31, 0.31, 0.31, 0.28, 0.37, 0.27, 0.3, 0.23, 0.23, 0.2, 0.2, 0.22, 0.2, 0.27, 0.27, 0.27, 0.33, 0.41, 0.43, 0.43, 0.44, 0.36, 0.36, 0.31, 0.34, 0.34, 0.43, 0.5, 0.57, 0.57, 0.48, 0.44, 0.43, 0.49, 0.51, 0.55, 0.59, 0.64, 0.67, 0.72, 0.75, 0.84, 0.91]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.65, 0.64, 0.63, 0.62, 0.6, 0.6, 0.59, 0.58, 0.59, 0.61, 0.62, 0.62, 0.63, 0.63, 0.64, 0.65, 0.65, 0.65, 0.64, 0.63, 0.61, 0.59, 0.58, 0.58, 0.58, 0.57, 0.57, 0.56, 0.56, 0.56, 0.58, 0.58, 0.58, 0.59, 0.58, 0.57, 0.57, 0.56, 0.55, 0.54, 0.53, 0.51, 0.5, 0.48, 0.47, 0.45, 0.45, 0.44, 0.44, 0.43, 0.43, 0.43, 0.43, 0.43, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.46, 0.46, 0.46, 0.46, 0.47, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.45, 0.44, 0.44, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.41, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.36, 0.35, 0.34, 0.34, 0.35, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.36, 0.36, 0.37, 0.38, 0.39, 0.39, 0.38, 0.37, 0.36, 0.36, 0.35, 0.35, 0.33, 0.3, 0.27, 0.24, 0.21, 0.2, 0.2, 0.2, 0.2, 0.19, 0.18, 0.18, 0.18, 0.19, 0.2, 0.2, 0.2, 0.2, 0.19, 0.19, 0.2, 0.2, 0.2, 0.2, 0.21, 0.21, 0.21, 0.21, 0.2, 0.2, 0.18, 0.17, 0.17, 0.17, 0.18, 0.18, 0.19, 0.2, 0.22, 0.23, 0.25, 0.27, 0.29, 0.28, 0.27, 0.27, 0.26, 0.25, 0.25, 0.24, 0.23, 0.24, 0.24, 0.25, 0.27, 0.28, 0.29, 0.31, 0.32, 0.33, 0.35, 0.37, 0.39, 0.4, 0.41, 0.41, 0.41, 0.4, 0.39, 0.39, 0.37, 0.36, 0.34, 0.32, 0.29, 0.27, 0.26, 0.25, 0.26, 0.26, 0.26, 0.26, 0.26, 0.25, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.27, 0.27, 0.29, 0.3, 0.32, 0.34, 0.36, 0.37, 0.39, 0.41, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.37, 0.36, 0.35, 0.36, 0.36, 0.37, 0.38, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.39, 0.39, 0.39, 0.4, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 8, \"coverage\": 0.02439, \"type\": \"modified_monomer\"}, {\"count\": 8, \"coverage\": 0.02439, \"type\": \"mutation\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P11353\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 328, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"30798_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 328, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"16147_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 35, \"ref_beg_seq_id\": 103}, {\"entity_beg_seq_id\": 36, \"length\": 110, \"ref_beg_seq_id\": 157}, {\"entity_beg_seq_id\": 146, \"length\": 74, \"ref_beg_seq_id\": 274}, {\"entity_beg_seq_id\": 220, \"length\": 88, \"ref_beg_seq_id\": 368}, {\"entity_beg_seq_id\": 308, \"length\": 21, \"ref_beg_seq_id\": 480}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"32269_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 143, \"ref_beg_seq_id\": 3}, {\"entity_beg_seq_id\": 144, \"length\": 185, \"ref_beg_seq_id\": 147}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"5356_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 34, \"ref_beg_seq_id\": 161}, {\"entity_beg_seq_id\": 35, \"length\": 1, \"ref_beg_seq_id\": 196}, {\"entity_beg_seq_id\": 36, \"length\": 1, \"ref_beg_seq_id\": 198}, {\"entity_beg_seq_id\": 37, \"length\": 12, \"ref_beg_seq_id\": 208}, {\"entity_beg_seq_id\": 49, \"length\": 95, \"ref_beg_seq_id\": 223}, {\"entity_beg_seq_id\": 144, \"length\": 1, \"ref_beg_seq_id\": 319}, {\"entity_beg_seq_id\": 145, \"length\": 19, \"ref_beg_seq_id\": 326}, {\"entity_beg_seq_id\": 164, \"length\": 19, \"ref_beg_seq_id\": 350}, {\"entity_beg_seq_id\": 183, \"length\": 37, \"ref_beg_seq_id\": 370}, {\"entity_beg_seq_id\": 220, \"length\": 89, \"ref_beg_seq_id\": 427}, {\"entity_beg_seq_id\": 309, \"length\": 20, \"ref_beg_seq_id\": 540}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"27826_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 328, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"20169_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 328, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Coproporphyrinogenase, Coprogen oxidase, COX\"}], \"rcsb_id\": \"1TXN_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:30.379970\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.7,
+            "experimentalMethod": null,
+            "depositionDate": "2004-07-05T00:00:00+0000",
+            "releaseDate": "2004-11-30T00:00:00+0000",
+            "sourceOrganism": [
+              "Saccharomyces cerevisiae"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.7,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Saccharomyces cerevisiae",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK",
+        "description": "Amino acid sequence for chain A (length: 360)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 360
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "(MSE)PAPQDPRNLPIRQQ(MSE)EALIRRKQAEITQGLESIDTVKFHADTWTRGNDGGGGTS(MSE)VIQDGTTFEKGGVNVSVVYGQLSPAAVSA(MSE)KADHKNLRLPEDPKTGLPVTDGVKFFACGLS(MSE)VIHPVNPHAPTTHLNYRYFETWNQDGTPQTWWFGGGADLTPSYLYEEDGQLFHQLHKDALDKHDTALYPRFKKWCDEYFYITHRKETRGIGGIFFDDYDERDPQEILK(MSE)VEDCFDAFLPSYLTIVKRRKD(MSE)PYTKEEQQWQAIRRGRYVEFNLIYDRGTQFGLRTPGSRVESIL(MSE)SLPEHASWLYNHHPAPGSREAKLLEVTTKPREWVK",
+        "description": "Amino acid sequence for chain B (length: 360)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 360
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of coproporphyrinogen III oxidase",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 360",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1TXN_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5EO6_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1TXN_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1TXN",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 5523.74,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 190,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "HEM13",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.1500.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01218",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 2223.67,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 3300.07,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.402566015055017,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.597433984944983,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1TXN_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5EO6_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

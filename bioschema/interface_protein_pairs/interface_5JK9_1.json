@@ -1,0 +1,404 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5JK9_1",
+  "description": "Protein-protein interaction interface between chains A and B",
+  "identifier": "5JK9_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5JK9",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5JK9",
+    "name": "Protein 5JK9",
+    "description": "Protein structure with PDB ID: 5JK9. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5JK9_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5JK9",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 5JK9",
+      "Protein ID 5JK9"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5jk9_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5JK9_1.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5JK9",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5JK9",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5JK9_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "IZUMO1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF16706;PF15005",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5JK9\", \"structure_metadata\": {\"pdb_id\": \"5JK9\", \"resolution\": 2.1, \"deposition_date\": \"2016-04-26T00:00:00+0000\", \"release_date\": \"2016-06-22T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Structure of IZUMO1-JUNO reveals sperm-oocyte recognition during mammalian fertilization\", \"doi\": \"10.1038/nature18596\", \"authors\": [\"Ohto, U.\", \"Ishida, H.\", \"Krayukhina, E.\", \"Uchiyama, S.\", \"Inoue, N.\", \"Shimizu, T.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 64.936, \"b\": 75.067, \"c\": 108.885, \"alpha\": 77.65, \"beta\": 79.11, \"gamma\": 70.66}, \"found_in_api\": true, \"sequences\": {\"A\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"B\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"C\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"D\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"E\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"F\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 246, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 246, \"gene_name\": null, \"uniprot_ids\": [\"Q8IYV9\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"entities\": [\"1\"], \"chain_count\": 6}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 6, \"chain_count\": 6, \"unique_sequences\": 1, \"avg_sequence_length\": 246.0, \"min_sequence_length\": 246, \"max_sequence_length\": 246}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"pdbx_seq_one_letter_code_can\": \"RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ\", \"pdbx_strand_id\": \"A,B,C,D,E,F\", \"rcsb_artifact_monomer_count\": 2, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 246, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Human\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 246, \"pdbx_gene_src_gene\": \"IZUMO1\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"9606\", \"pdbx_gene_src_scientific_name\": \"Homo sapiens\", \"pdbx_host_org_ncbi_taxonomy_id\": \"7215\", \"pdbx_host_org_scientific_name\": \"Drosophila\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.559, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/5jk9A/29374/5jk9A\", \"max_rmsd\": 3.744, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 26987, \"identity\": 100}, {\"cluster_id\": 17711, \"identity\": 95}, {\"cluster_id\": 19407, \"identity\": 90}, {\"cluster_id\": 20156, \"identity\": 70}, {\"cluster_id\": 14930, \"identity\": 50}, {\"cluster_id\": 15925, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 246, \"ncbi_common_names\": [\"fruit flies\", \"fruit fly\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Drosophila\", \"ncbi_taxonomy_id\": 7215, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Drosophila\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33317\", \"name\": \"Protostomia\"}, {\"depth\": 8, \"id\": \"1206794\", \"name\": \"Ecdysozoa\"}, {\"depth\": 9, \"id\": \"88770\", \"name\": \"Panarthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"Arthropoda\"}, {\"depth\": 10, \"id\": \"6656\", \"name\": \"arthropods\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"Mandibulata\"}, {\"depth\": 11, \"id\": \"197563\", \"name\": \"mandibulates\"}, {\"depth\": 12, \"id\": \"197562\", \"name\": \"Pancrustacea\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"Hexapoda\"}, {\"depth\": 13, \"id\": \"6960\", \"name\": \"hexapods\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"Insecta\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"insects\"}, {\"depth\": 14, \"id\": \"50557\", \"name\": \"true insects\"}, {\"depth\": 15, \"id\": \"85512\", \"name\": \"Dicondylia\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"Pterygota\"}, {\"depth\": 16, \"id\": \"7496\", \"name\": \"winged insects\"}, {\"depth\": 17, \"id\": \"33340\", \"name\": \"Neoptera\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Endopterygota\"}, {\"depth\": 18, \"id\": \"33392\", \"name\": \"Holometabola\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"Diptera\"}, {\"depth\": 19, \"id\": \"7147\", \"name\": \"flies\"}, {\"depth\": 20, \"id\": \"7203\", \"name\": \"Brachycera\"}, {\"depth\": 21, \"id\": \"43733\", \"name\": \"Muscomorpha\"}, {\"depth\": 21, \"id\": \"43733\", \"name\": \"Asilomorpha\"}, {\"depth\": 22, \"id\": \"480118\", \"name\": \"Eremoneura\"}, {\"depth\": 23, \"id\": \"480117\", \"name\": \"Cyclorrhapha\"}, {\"depth\": 24, \"id\": \"43738\", \"name\": \"Schizophora\"}, {\"depth\": 25, \"id\": \"43741\", \"name\": \"Acalyptratae\"}, {\"depth\": 26, \"id\": \"43746\", \"name\": \"Ephydroidea\"}, {\"depth\": 27, \"id\": \"7214\", \"name\": \"Drosophilidae\"}, {\"depth\": 27, \"id\": \"7214\", \"name\": \"pomace flies\"}, {\"depth\": 28, \"id\": \"43845\", \"name\": \"Drosophilinae\"}, {\"depth\": 29, \"id\": \"46877\", \"name\": \"Drosophilini\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"Drosophila\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"fruit flies\"}, {\"depth\": 30, \"id\": \"7215\", \"name\": \"fruit fly\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"common_name\": \"Human\", \"end_seq_num\": 246, \"ncbi_common_names\": [\"human\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Homo sapiens\", \"ncbi_taxonomy_id\": 9606, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Homo sapiens\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"Mammalia\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"mammals\"}, {\"depth\": 19, \"id\": \"32525\", \"name\": \"Theria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Eutheria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Placentalia\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"eutherian mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placental mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placentals\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreoeutheria\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreotheria\"}, {\"depth\": 22, \"id\": \"314146\", \"name\": \"Euarchontoglires\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primates\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primata\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primate\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primates\"}, {\"depth\": 24, \"id\": \"376913\", \"name\": \"Haplorrhini\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Simiiformes\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Anthropoidea\"}, {\"depth\": 26, \"id\": \"9526\", \"name\": \"Catarrhini\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"Hominoidea\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"ape\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"apes\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Hominidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Pongidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"great apes\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homininae\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homo/Pan/Gorilla group\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"Homo\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"humans\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"human\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"IZUMO1\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 2, \"id\": \"9606:19:izumo_sperm_egg_fusion_1\", \"name\": \"izumo sperm-egg fusion 1\"}, {\"depth\": 1, \"id\": \"9606:19\", \"name\": \"Chromosome 19\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 28.163, \"pdbx_description\": \"Izumo sperm-egg fusion protein 1\", \"pdbx_fragment\": \"UNP residues 22-255\", \"pdbx_number_of_molecules\": 6, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Izumo sperm-egg fusion protein 1\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Oocyte binding/fusion factor\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Sperm-specific protein izumo\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Izumo sperm-egg fusion protein 1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q8IYV9\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 5, \"length\": 234, \"ref_beg_seq_id\": 22}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF15005\", \"assignment_version\": \"34.0\", \"name\": \"Izumo sperm-egg fusion, Ig domain-associated (IZUMO)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF16706\", \"assignment_version\": \"34.0\", \"name\": \"Izumo-like Immunoglobulin domain (Izumo-Ig)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005102\", \"name\": \"signaling receptor binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0005102\", \"name\": \"signaling receptor binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0007342\", \"name\": \"fusion of sperm to egg plasma membrane involved in single fertilization\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0061024\", \"name\": \"membrane organization\"}, {\"id\": \"GO:0019953\", \"name\": \"sexual reproduction\"}, {\"id\": \"GO:0061025\", \"name\": \"membrane fusion\"}, {\"id\": \"GO:0022414\", \"name\": \"reproductive process\"}, {\"id\": \"GO:0045026\", \"name\": \"plasma membrane fusion\"}, {\"id\": \"GO:0009566\", \"name\": \"fertilization\"}, {\"id\": \"GO:0048609\", \"name\": \"multicellular organismal reproductive process\"}, {\"id\": \"GO:0022412\", \"name\": \"cellular process involved in reproduction in multicellular organism\"}, {\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0007342\", \"name\": \"fusion of sperm to egg plasma membrane involved in single fertilization\"}, {\"id\": \"GO:0007009\", \"name\": \"plasma membrane organization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0010256\", \"name\": \"endomembrane system organization\"}, {\"id\": \"GO:0007338\", \"name\": \"single fertilization\"}]}, {\"annotation_id\": \"IPR029389\", \"name\": \"Izumo sperm-egg fusion protein\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR029389\", \"name\": \"Izumo sperm-egg fusion protein\"}]}, {\"annotation_id\": \"GO:0035036\", \"name\": \"sperm-egg recognition\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0035036\", \"name\": \"sperm-egg recognition\"}, {\"id\": \"GO:0019953\", \"name\": \"sexual reproduction\"}, {\"id\": \"GO:0009988\", \"name\": \"cell-cell recognition\"}, {\"id\": \"GO:0022414\", \"name\": \"reproductive process\"}, {\"id\": \"GO:0009566\", \"name\": \"fertilization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008037\", \"name\": \"cell recognition\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007338\", \"name\": \"single fertilization\"}]}, {\"annotation_id\": \"GO:0000768\", \"name\": \"syncytium formation by plasma membrane fusion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0000768\", \"name\": \"syncytium formation by plasma membrane fusion\"}, {\"id\": \"GO:0009653\", \"name\": \"anatomical structure morphogenesis\"}, {\"id\": \"GO:0048646\", \"name\": \"anatomical structure formation involved in morphogenesis\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0140253\", \"name\": \"cell-cell fusion\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006949\", \"name\": \"syncytium formation\"}]}, {\"annotation_id\": \"GO:0016020\", \"name\": \"membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"IPR036179\", \"name\": \"Immunoglobulin-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036179\", \"name\": \"Immunoglobulin-like domain superfamily\"}]}, {\"annotation_id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0042803\", \"name\": \"protein homodimerization activity\"}, {\"id\": \"GO:0046983\", \"name\": \"protein dimerization activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR032699\", \"name\": \"Izumo protein, immunoglobulin domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR032699\", \"name\": \"Izumo protein, immunoglobulin domain\"}]}, {\"annotation_id\": \"GO:0048018\", \"name\": \"receptor ligand activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0140677\", \"name\": \"molecular function activator activity\"}, {\"id\": \"GO:0005102\", \"name\": \"signaling receptor binding\"}, {\"id\": \"GO:0098772\", \"name\": \"molecular function regulator activity\"}, {\"id\": \"GO:0030545\", \"name\": \"signaling receptor regulator activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0048018\", \"name\": \"receptor ligand activity\"}, {\"id\": \"GO:0030546\", \"name\": \"signaling receptor activator activity\"}]}, {\"annotation_id\": \"GO:0007155\", \"name\": \"cell adhesion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0007155\", \"name\": \"cell adhesion\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0098635\", \"name\": \"protein complex involved in cell-cell adhesion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0098635\", \"name\": \"protein complex involved in cell-cell adhesion\"}, {\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0098636\", \"name\": \"protein complex involved in cell adhesion\"}]}, {\"annotation_id\": \"IPR032700\", \"name\": \"Izumo sperm-egg fusion protein 1\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 2, \"id\": \"IPR032700\", \"name\": \"Izumo sperm-egg fusion protein 1\"}, {\"depth\": 1, \"id\": \"IPR029389\", \"name\": \"Izumo sperm-egg fusion protein\"}]}, {\"annotation_id\": \"GO:0005886\", \"name\": \"plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005886\", \"name\": \"plasma membrane\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"IPR013783\", \"name\": \"Immunoglobulin-like fold\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR013783\", \"name\": \"Immunoglobulin-like fold\"}]}, {\"annotation_id\": \"GO:0002080\", \"name\": \"acrosomal membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0001669\", \"name\": \"acrosomal vesicle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0002080\", \"name\": \"acrosomal membrane\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0030659\", \"name\": \"cytoplasmic vesicle membrane\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0098588\", \"name\": \"bounding membrane of organelle\"}, {\"id\": \"GO:0012506\", \"name\": \"vesicle membrane\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0030141\", \"name\": \"secretory granule\"}, {\"id\": \"GO:0099503\", \"name\": \"secretory vesicle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}, {\"id\": \"GO:0031090\", \"name\": \"organelle membrane\"}, {\"id\": \"GO:0030667\", \"name\": \"secretory granule membrane\"}]}, {\"annotation_id\": \"GO:0034113\", \"name\": \"heterotypic cell-cell adhesion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0034113\", \"name\": \"heterotypic cell-cell adhesion\"}, {\"id\": \"GO:0007155\", \"name\": \"cell adhesion\"}, {\"id\": \"GO:0098609\", \"name\": \"cell-cell adhesion\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0086080\", \"name\": \"protein binding involved in heterotypic cell-cell adhesion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050839\", \"name\": \"cell adhesion molecule binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0098631\", \"name\": \"cell adhesion mediator activity\"}, {\"id\": \"GO:0098632\", \"name\": \"cell-cell adhesion mediator activity\"}, {\"id\": \"GO:0086080\", \"name\": \"protein binding involved in heterotypic cell-cell adhesion\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0007339\", \"name\": \"binding of sperm to zona pellucida\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0035036\", \"name\": \"sperm-egg recognition\"}, {\"id\": \"GO:0019953\", \"name\": \"sexual reproduction\"}, {\"id\": \"GO:0009988\", \"name\": \"cell-cell recognition\"}, {\"id\": \"GO:0022414\", \"name\": \"reproductive process\"}, {\"id\": \"GO:0009566\", \"name\": \"fertilization\"}, {\"id\": \"GO:0007339\", \"name\": \"binding of sperm to zona pellucida\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008037\", \"name\": \"cell recognition\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0007338\", \"name\": \"single fertilization\"}]}, {\"annotation_id\": \"GO:0042802\", \"name\": \"identical protein binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0001669\", \"name\": \"acrosomal vesicle\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0001669\", \"name\": \"acrosomal vesicle\"}, {\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0030141\", \"name\": \"secretory granule\"}, {\"id\": \"GO:0099503\", \"name\": \"secretory vesicle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}]}, {\"annotation_id\": \"GO:0005789\", \"name\": \"endoplasmic reticulum membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0031984\", \"name\": \"organelle subcompartment\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0098827\", \"name\": \"endoplasmic reticulum subcompartment\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0042175\", \"name\": \"nuclear outer membrane-endoplasmic reticulum membrane network\"}, {\"id\": \"GO:0005783\", \"name\": \"endoplasmic reticulum\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031090\", \"name\": \"organelle membrane\"}, {\"id\": \"GO:0005789\", \"name\": \"endoplasmic reticulum membrane\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5JK9\", \"rcsb_id\": \"5JK9_1\", \"uniprot_ids\": [\"Q8IYV9\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q8IYV9\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9512195121951219, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.6685714285714286}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF16706\", \"name\": \"Izumo-like Immunoglobulin domain (Izumo-Ig)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 151, \"end_seq_id\": 238}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF15005\", \"name\": \"Izumo sperm-egg fusion, Ig domain-associated (IZUMO)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 5, \"end_seq_id\": 148}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 4}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_2\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 239, \"end_seq_id\": 246}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.27, 0.59, 0.59, 1.23, 1.8, 1.94, 1.68, 1.6, 0.89, 1.19, 1.79, 1.49, 0.59, -0.27, -0.83, -0.61, -1.21, -0.82, -1.09, -1.09, -1.09, -0.46, -0.5, -0.71, -1.49, -1.74, -1.5, -0.93, -1.14, -1.14, -1.84, -0.94, -0.98, -1.01, -0.38, -0.11, -0.76, -1.36, -0.66, -0.54, -1.4, -0.59, -0.29, -0.07, -0.92, -0.88, -0.88, -0.99, -0.74, -0.14, -0.61, -0.06, -0.01, -0.01, -0.01, 0.58, 0.3, 0.87, 0.27, -0.12, -0.63, -1.19, -0.9, -0.6, -0.38, 0.12, -0.73, -0.73, 0.12, -0.27, -0.68, -0.08, -0.07, -0.88, -1.39, -1.34, -0.49, -1.34, -0.96, -0.84, -0.92, -0.53, 0.32, -0.02, -0.02, -0.07, 0.68, 0.62, 1.22, 1.22, 0.56, 0.51, 0.56, 0.51, -0.3, -0.69, -0.28, -0.29, -0.79, -0.58, -0.53, 0.06, -0.01, 0.69, 0.38, -0.37, -0.96, -0.68, -0.68, -0.87, -1.24, -1.13, -1.88, -1.21, -0.82, 0.03, 0.04, 0.61, -0.06, 0.04, 0.86, 1.79, 1.41, 1.73, 0.83, 0.23, 0.09, 0.04, -0.31, -1.12, -1.16, -1.41, -1.49, -0.78, -0.89, -1.6, -1.26, -0.97, -0.97, -1.16, -0.84, -1.43, -2.21, -2.1, -1.2, -1.5, -0.89, -0.68, -1.34, -1.09, -1.09, -0.98, -0.38, -0.34, 0.47, -0.39, 0.07, 0.07, 0.28, 0.28, 0.57, 0.0, -0.89, -1.11, -0.81, -1.48, -1.13, -1.13, -0.82, -1.11, -0.9, -0.6, -0.49, -0.54, -0.66, -0.14, -0.67, -0.63, -0.63, -0.88, -0.87, -1.57, -1.5, -0.58, -0.58, -0.57, -0.96, -0.61, -0.66, -0.97, -0.38, -0.38, -0.38, -0.92, -1.27, -1.01, -0.76, 0.14, 0.49, 0.11, -0.2, -1.01, -0.73, -0.34, -0.26, -0.61, -1.58, -1.26, -1.47, -0.66, -0.31, -0.6, -0.09, -0.39, -0.33, 0.08, -0.38, 0.21, -0.29, 0.26, 0.84, -0.01, 0.69, 0.42, 0.98, 1.08, 1.34, 1.84, 1.17, 0.23, 0.23, 0.23, 1.01, 0.16, 0.7, 0.66, 0.54, 0.33]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.22, 0.22, 0.23, 0.25, 0.27, 0.29, 0.31, 0.32, 0.35, 0.38, 0.41, 0.42, 0.39, 0.37, 0.37, 0.37, 0.38, 0.38, 0.38, 0.39, 0.4, 0.41, 0.43, 0.42, 0.41, 0.4, 0.41, 0.41, 0.41, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.4, 0.39, 0.38, 0.37, 0.37, 0.36, 0.37, 0.37, 0.38, 0.37, 0.37, 0.37, 0.38, 0.39, 0.4, 0.4, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.38, 0.37, 0.35, 0.34, 0.33, 0.32, 0.32, 0.32, 0.31, 0.3, 0.29, 0.28, 0.27, 0.26, 0.25, 0.24, 0.22, 0.19, 0.17, 0.15, 0.13, 0.12, 0.12, 0.11, 0.11, 0.11, 0.11, 0.11, 0.12, 0.14, 0.17, 0.19, 0.22, 0.24, 0.26, 0.27, 0.29, 0.3, 0.31, 0.28, 0.24, 0.21, 0.18, 0.15, 0.13, 0.11, 0.1, 0.09, 0.08, 0.07, 0.06, 0.06, 0.05, 0.05, 0.04, 0.03, 0.02, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.02, 0.02, 0.03, 0.03, 0.04, 0.04, 0.04, 0.03, 0.04, 0.03, 0.03, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.03, 0.04, 0.06, 0.1, 0.13, 0.17, 0.2, 0.24, 0.29, 0.35, 0.39, 0.42, 0.43, 0.43, 0.4, 0.38, 0.39, 0.41, 0.42, 0.43, 0.42, 0.42, 0.43, 0.42, 0.4, 0.36, 0.33, 0.32, 0.31, 0.3, 0.3, 0.29, 0.29, 0.3, 0.31, 0.32, 0.36, 0.4, 0.42, 0.43, 0.42, 0.41, 0.4, 0.38, 0.37, 0.35, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.37, 0.36, 0.37, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.34, 0.35, 0.35, 0.36, 0.36, 0.37, 0.39, 0.4, 0.41, 0.42, 0.43, 0.41, 0.4, 0.39, 0.37, 0.36, 0.35, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.3, 0.29, 0.28, 0.29]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.69, 0.6, 0.51, 0.4, 0.33, 0.22, 0.18, 0.15, 0.07, 0.06, 0.05, 0.05, 0.03, 0.02, 0.04, 0.07, 0.1, 0.09, 0.17, 0.15, 0.13, 0.13, 0.17, 0.2, 0.24, 0.23, 0.27, 0.28, 0.27, 0.3, 0.31, 0.31, 0.29, 0.31, 0.38, 0.37, 0.28, 0.3, 0.39, 0.32, 0.35, 0.29, 0.3, 0.31, 0.31, 0.32, 0.28, 0.3, 0.29, 0.23, 0.23, 0.22, 0.22, 0.22, 0.26, 0.19, 0.19, 0.26, 0.25, 0.24, 0.22, 0.22, 0.21, 0.13, 0.12, 0.12, 0.08, 0.12, 0.13, 0.07, 0.1, 0.13, 0.13, 0.12, 0.09, 0.09, 0.15, 0.14, 0.09, 0.05, 0.03, 0.05, 0.05, 0.05, 0.05, 0.03, 0.02, 0.02, 0.02, 0.01, 0.03, 0.03, 0.03, 0.03, 0.01, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.02, 0.03, 0.03, 0.01, 0.02, 0.02, 0.04, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.0, 0.01, 0.01, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01, 0.01, 0.03, 0.03, 0.02, 0.08, 0.08, 0.07, 0.07, 0.11, 0.11, 0.09, 0.19, 0.2, 0.13, 0.13, 0.14, 0.14, 0.2, 0.18, 0.18, 0.17, 0.18, 0.24, 0.23, 0.21, 0.19, 0.2, 0.16, 0.16, 0.1, 0.08, 0.1, 0.11, 0.06, 0.13, 0.12, 0.17, 0.16, 0.25, 0.26, 0.2, 0.19, 0.18, 0.17, 0.16, 0.21, 0.23, 0.2, 0.27, 0.21, 0.29, 0.36, 0.38, 0.41, 0.43, 0.43, 0.45, 0.47, 0.47, 0.43, 0.44, 0.49, 0.47, 0.47, 0.42, 0.43, 0.38, 0.36, 0.39, 0.33, 0.38, 0.38, 0.39, 0.4, 0.38, 0.44, 0.37, 0.27, 0.26, 0.17, 0.19, 0.13, 0.13, 0.13, 0.07, 0.13, 0.12, 0.17, 0.1, 0.06, 0.1, 0.06, 0.03, 0.02, 0.01, 0.03, 0.03, 0.07, 0.14, 0.17, 0.3, 0.35, 0.46, 0.5, 0.61]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 2, \"coverage\": 0.94309, \"type\": \"Pfam\"}, {\"count\": 2, \"coverage\": 0.04878, \"maximum_length\": 8, \"minimum_length\": 4, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"19407_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 18}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"26987_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"15925_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 18}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"14930_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 18}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q8IYV9\", \"aligned_regions\": [{\"entity_beg_seq_id\": 5, \"length\": 234, \"ref_beg_seq_id\": 22}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"20156_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 18}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"17711_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 246, \"ref_beg_seq_id\": 18}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Oocyte binding/fusion factor,OBF,Sperm-specific protein izumo\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"Pharos\", \"related_resource_version\": \"6.13.4\", \"related_target_id\": \"6988\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 5, \"length\": 237, \"target_beg_seq_id\": 22}]}], \"rcsb_id\": \"5JK9_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"B\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:44:21.714631\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 246, \"chain2_sequence_length\": 246, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.1,
+            "experimentalMethod": null,
+            "depositionDate": "2016-04-26T00:00:00+0000",
+            "releaseDate": "2016-06-22T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 6,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.1,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 6,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain A (length: 246)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain B (length: 246)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain C (length: 246)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain D (length: 246)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain E (length: 246)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_F_Sequence",
+        "value": "RSPWCVICDPSVVLALKSLEKDYLPGHLDAKHHKAMMERVENAVKDFQELSLNEDAYMGVVDEATLQKGSWSLLKDLKRITDSDVKGDLFVKELFWMLHLQKETFATYVARFQKEAYCPNKCGVMLQTLIWCKNCKKEVHACRKSYDCGERNVEVPQMEDMILDCELNWHQASEGLTDYSFYRVWGNNTETLVSKGKEATLTKPMVGPEDAGSYRCELGSVNSSPATIINFHVTVLPKEFLEVLFQ",
+        "description": "Amino acid sequence for chain F (length: 246)",
+        "chainId": "F",
+        "entityId": "1",
+        "sequenceLength": 246
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structure of IZUMO1-JUNO reveals sperm-oocyte recognition during mammalian fertilization",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1038/nature18596",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, E, F, Length: 246",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5JK9_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5JK9_1",
+      "description": "Homodimer interaction partner in chain B"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5JK9",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "B",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1809.31,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 51,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "IZUMO1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF16706;PF15005",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 796.550000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1012.76,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.440250703306786,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.559749296693213,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5JK9_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 3OET_2",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "3OET_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_3OET",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "3OET",
+    "name": "Protein 3OET",
+    "description": "Protein structure with PDB ID: 3OET. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3OET_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/3OET",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "99287",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=99287"
+    },
+    "alternateName": [
+      "PDB 3OET",
+      "Protein ID 3OET"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3oet_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3oet.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "3OET",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "3OET",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "3OET_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "B-E",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "pdxB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.30.1370.170;3.40.50.720",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00389;PF02826;PF11890",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"3OET\", \"structure_metadata\": {\"pdb_id\": \"3OET\", \"resolution\": 2.36, \"deposition_date\": \"2010-08-13T00:00:00+0000\", \"release_date\": \"2010-08-25T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"], \"citation\": {\"title\": \"D-Erythronate-4-Phosphate Dehydrogenase complexed with NAD\", \"authors\": [\"Filippova, E.V.\", \"Wawrzak, Z.\", \"Onopriyenko, O.\", \"Savchenko, A.\", \"Edwards, A.\", \"Anderson, W.F.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 93.279, \"b\": 167.765, \"c\": 103.949, \"alpha\": 90.0, \"beta\": 93.88, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"B\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"C\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"D\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"E\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"F\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"G\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"H\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 401, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"taxonomy_id\": 99287, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 401, \"gene_name\": null, \"uniprot_ids\": [\"P60802\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"entities\": [\"1\"], \"chain_count\": 8}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 8, \"chain_count\": 8, \"unique_sequences\": 1, \"avg_sequence_length\": 401.0, \"min_sequence_length\": 401, \"max_sequence_length\": 401}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH\", \"pdbx_seq_one_letter_code_can\": \"SNAMKILVDENMPYARELFSRLGEVKAVPGRPIPVEELNHADALMVRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALLMLAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYVMCDDETAAALLCKLGFNAVHHPAH\", \"pdbx_strand_id\": \"A,B,C,D,E,F,G,H\", \"pdbx_target_identifier\": \"idp90820\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 381, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"LT2\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"pdxB, STM2370\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"99287\", \"pdbx_gene_src_scientific_name\": \"Salmonella enterica subsp. enterica serovar Typhimurium\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21-CodonPlus(DE3)-RIPL\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"p15Tv lic\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.262, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/3oetH/16079/3oetA\", \"max_rmsd\": 2.426, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 9304, \"identity\": 100}, {\"cluster_id\": 6201, \"identity\": 95}, {\"cluster_id\": 6428, \"identity\": 90}, {\"cluster_id\": 1890, \"identity\": 70}, {\"cluster_id\": 2433, \"identity\": 50}, {\"cluster_id\": 1302, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Salmonella enterica subsp. enterica serovar Typhimurium LT2\", \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2\", \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2-LTL2\", \"Salmonella typhimurium LT2\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"ncbi_taxonomy_id\": 99287, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Salmonella enterica subsp. enterica serovar Typhimurium\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"590\", \"name\": \"Salmonella\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella enterica\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Bacillus cholerae-suis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella cholerae-suis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella choleraesuis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella enterica ser. choleraesuis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. enterica\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella cholerae-suis subsp. cholerae-suis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella choleraesuis subsp. choleraesuis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. Subsp. I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. Subsp. Ixxx\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Bacillus typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella choleraesuis serotype typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica 1,4,[5],12,:i:1,2\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica ser. typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica serotype Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica serovar Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica subsp. enterica serovar 1,4,[5],12:i:1,2\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella typhi-murium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella typhimurium\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2-LTL2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella typhimurium LT2\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"pdxB\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"STM2370\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"99287:erythronate_4_phosphate_dehydrogenase\", \"name\": \"erythronate-4-phosphate dehydrogenase\"}, {\"depth\": 0, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 41.856, \"pdbx_description\": \"Erythronate-4-phosphate dehydrogenase\", \"pdbx_ec\": \"1.1.1.290\", \"pdbx_number_of_molecules\": 8, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.1\", \"name\": \"Acting on the CH-OH group of donors\"}, {\"depth\": 3, \"id\": \"1.1.1\", \"name\": \"With NAD+ or NADP+ as acceptor\"}, {\"depth\": 4, \"id\": \"1.1.1.290\", \"name\": \"4-phosphoerythronate dehydrogenase\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Erythronate-4-phosphate dehydrogenase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"1.1.1.290\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Erythronate-4-phosphate dehydrogenase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P60802\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 378, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF02826\", \"assignment_version\": \"34.0\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD binding domain (2-Hacid_dh_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF00389\", \"assignment_version\": \"34.0\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain (2-Hacid_dh)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF11890\", \"assignment_version\": \"34.0\", \"name\": \"Domain of unknown function (DUF3410) (DUF3410)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR038251\", \"name\": \"PdxB, dimerisation domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR038251\", \"name\": \"PdxB, dimerisation domain superfamily\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"IPR006139\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR006139\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain\"}]}, {\"annotation_id\": \"IPR020921\", \"name\": \"Erythronate-4-phosphate dehydrogenase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR020921\", \"name\": \"Erythronate-4-phosphate dehydrogenase\"}]}, {\"annotation_id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\"}]}, {\"annotation_id\": \"GO:0008615\", \"name\": \"pyridoxine biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042819\", \"name\": \"vitamin B6 biosynthetic process\"}, {\"id\": \"GO:0042364\", \"name\": \"water-soluble vitamin biosynthetic process\"}, {\"id\": \"GO:0044283\", \"name\": \"small molecule biosynthetic process\"}, {\"id\": \"GO:0072525\", \"name\": \"pyridine-containing compound biosynthetic process\"}, {\"id\": \"GO:0009110\", \"name\": \"vitamin biosynthetic process\"}, {\"id\": \"GO:0008615\", \"name\": \"pyridoxine biosynthetic process\"}, {\"id\": \"GO:0006766\", \"name\": \"vitamin metabolic process\"}, {\"id\": \"GO:0008614\", \"name\": \"pyridoxine metabolic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0072524\", \"name\": \"pyridine-containing compound metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0042816\", \"name\": \"vitamin B6 metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044281\", \"name\": \"small molecule metabolic process\"}]}, {\"annotation_id\": \"IPR029752\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain conserved site 1\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029752\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain conserved site 1\"}]}, {\"annotation_id\": \"IPR024531\", \"name\": \"Erythronate-4-phosphate dehydrogenase, dimerisation domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR024531\", \"name\": \"Erythronate-4-phosphate dehydrogenase, dimerisation domain\"}]}, {\"annotation_id\": \"GO:0033711\", \"name\": \"4-phosphoerythronate dehydrogenase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0016616\", \"name\": \"oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor\"}, {\"id\": \"GO:0016614\", \"name\": \"oxidoreductase activity, acting on CH-OH group of donors\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0033711\", \"name\": \"4-phosphoerythronate dehydrogenase activity\"}]}, {\"annotation_id\": \"GO:0051287\", \"name\": \"NAD binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051287\", \"name\": \"NAD binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:1901265\", \"name\": \"nucleoside phosphate binding\"}, {\"id\": \"GO:0017076\", \"name\": \"purine nucleotide binding\"}, {\"id\": \"GO:0030554\", \"name\": \"adenyl nucleotide binding\"}, {\"id\": \"GO:0000166\", \"name\": \"nucleotide binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0036001\", \"name\": \"'de novo' pyridoxal 5'-phosphate biosynthetic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042819\", \"name\": \"vitamin B6 biosynthetic process\"}, {\"id\": \"GO:0042364\", \"name\": \"water-soluble vitamin biosynthetic process\"}, {\"id\": \"GO:0036001\", \"name\": \"'de novo' pyridoxal 5'-phosphate biosynthetic process\"}, {\"id\": \"GO:0044283\", \"name\": \"small molecule biosynthetic process\"}, {\"id\": \"GO:0072525\", \"name\": \"pyridine-containing compound biosynthetic process\"}, {\"id\": \"GO:0009110\", \"name\": \"vitamin biosynthetic process\"}, {\"id\": \"GO:0046184\", \"name\": \"aldehyde biosynthetic process\"}, {\"id\": \"GO:0006081\", \"name\": \"aldehyde metabolic process\"}, {\"id\": \"GO:0006766\", \"name\": \"vitamin metabolic process\"}, {\"id\": \"GO:0009058\", \"name\": \"biosynthetic process\"}, {\"id\": \"GO:0019637\", \"name\": \"organophosphate metabolic process\"}, {\"id\": \"GO:0090407\", \"name\": \"organophosphate biosynthetic process\"}, {\"id\": \"GO:0042823\", \"name\": \"pyridoxal phosphate biosynthetic process\"}, {\"id\": \"GO:0006796\", \"name\": \"phosphate-containing compound metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0072524\", \"name\": \"pyridine-containing compound metabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0042816\", \"name\": \"vitamin B6 metabolic process\"}, {\"id\": \"GO:0044281\", \"name\": \"small molecule metabolic process\"}, {\"id\": \"GO:0006793\", \"name\": \"phosphorus metabolic process\"}, {\"id\": \"GO:0042822\", \"name\": \"pyridoxal phosphate metabolic process\"}]}, {\"annotation_id\": \"IPR029753\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029753\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain conserved site\"}]}, {\"annotation_id\": \"GO:0046983\", \"name\": \"protein dimerization activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0046983\", \"name\": \"protein dimerization activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR006140\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR006140\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"3OET\", \"rcsb_id\": \"3OET_1\", \"uniprot_ids\": [\"P60802\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P60802\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9921259842519685, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF02826\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, NAD binding domain (2-Hacid_dh_C)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 107, \"end_seq_id\": 259}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF11890\", \"name\": \"Domain of unknown function (DUF3410) (DUF3410)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 292, \"end_seq_id\": 372}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF00389\", \"name\": \"D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain (2-Hacid_dh)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 6, \"end_seq_id\": 288}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 4}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 12}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 45}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_4\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 108}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_5\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 358}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 3}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.5, 0.2, 0.2, 0.21, -0.18, 0.11, -0.19, -1.11, -1.97, -1.16, -0.46, -0.16, -0.87, -0.27, -0.17, -0.76, 0.21, 0.17, -0.06, 0.1, 0.01, 0.47, -0.46, -0.59, 0.3, -0.34, 0.56, -0.03, -0.89, -0.29, -0.63, -0.49, -0.11, -1.0, -0.62, -0.67, -0.07, 0.79, -0.13, 0.17, 0.99, 0.71, 0.67, 0.93, 0.12, -0.48, -1.03, -0.11, 0.4, -0.16, -0.12, 0.23, -0.41, 0.48, 0.48, 0.88, 0.92, 0.46, 0.47, 0.71, 0.71, 1.09, 0.54, 0.86, 0.16, -0.67, -0.16, -0.47, -1.06, -0.78, -1.08, -0.61, -0.97, -0.97, -0.41, -0.92, -0.03, 0.31, 0.42, 0.43, 0.21, 0.84, 1.06, 0.81, 1.13, 0.24, 0.49, 0.68, 0.97, 1.23, 1.5, 1.29, 1.19, 1.38, 2.08, 1.79, 1.49, 1.71, 1.67, 1.41, 2.22, 2.57, 1.71, 0.9, 0.6, 0.36, 0.24, -0.27, -0.06, -0.98, -1.57, -1.68, -1.26, -0.37, -0.37, -0.18, 0.38, -0.09, 0.88, 1.22, 1.33, 1.88, 1.33, 1.29, 0.29, 0.24, -0.1, -0.64, -1.1, -0.29, -1.14, -0.9, -0.39, 0.07, 0.14, 0.03, 0.03, 0.96, 0.96, 1.62, 1.03, 0.43, 0.3, -0.7, 0.0, 0.28, -0.64, -1.11, -1.78, -1.78, -1.64, -1.86, -1.04, -1.74, -2.02, -1.1, -1.44, -1.44, -0.63, -0.12, -0.12, -0.82, -0.12, -0.43, -0.39, 0.42, 0.73, 0.62, -0.2, 0.11, 0.32, 0.54, 0.79, -0.11, -0.92, -0.89, -1.38, -1.17, -1.52, -1.42, -1.42, -1.63, -0.78, -0.19, -0.53, -0.74, -0.68, 0.18, 0.76, -0.17, -0.31, -0.31, -0.94, -0.73, -0.39, -0.11, -0.03, -0.11, 0.89, 1.0, 0.78, 1.49, 1.17, 1.17, 0.79, 0.76, 0.8, -0.09, -0.09, -0.09, -0.17, 0.76, 1.22, 1.6, 0.63, 0.59, 0.59, 1.18, 0.93, 0.34, -0.26, -0.26, -0.54, 0.42, 0.47, 1.28, 0.69, 1.2, 1.49, 1.28, 0.81, 0.51, -0.13, -0.99, -0.99, -0.99, -0.99, -0.69, 0.12, 0.59, 0.59, 0.97, 1.82, 1.01, 1.9, 1.39, 1.11, 0.6, -0.18, 0.71, 0.71, 0.2, 0.44, -0.13, 0.33, 0.02, 0.07, -0.01, -0.31, -1.01, -1.01, -0.94, -0.94, -1.76, -0.9, -0.54, -0.5, -0.5, -0.14, -0.19, 0.09, 0.48, 1.37, 0.86, 0.04, 0.04, -0.54, -0.9, -0.34, -0.34, -0.23, -1.12, -1.16, -0.23, 0.58, 0.79, 1.49, 0.84, 0.26, 0.14, 0.49, 0.07, 0.14, -0.36, 0.24, -0.31, -0.18, 0.03, 0.14, -0.2, -0.09, -0.77, -0.77, -0.77, -0.84, -1.3, -0.7, -0.92, -0.89, -0.08, 0.57, 0.5, -0.31, 0.59, 0.59, -0.33, -0.92, -0.96, -1.18, -1.82, -1.26, -1.37, -2.27, -1.3, -0.6, -0.26, 0.63, 0.26, 0.39, -0.42, 0.39, 0.43, -0.47, -0.24, -0.7, -1.63, -1.84, -1.94, -1.13, -1.83, -1.94, -2.01, -2.82, -2.42, -2.08, -1.78, -1.21, -1.78, -0.92, -0.21, 0.57, 0.57, 0.28, -0.02, -0.01, -0.23, 0.11, -0.16, 0.06, 0.2, 0.87, 0.82, 1.63, 1.67, 1.78, 1.19, 1.19, 1.23, 0.46, -0.18, 0.08, -0.14, -0.46]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.85, 0.78, 0.76, 0.66, 0.6, 0.55, 0.53, 0.42, 0.3, 0.26, 0.21, 0.15, 0.15, 0.18, 0.16, 0.16, 0.2, 0.19, 0.27, 0.26, 0.25, 0.27, 0.22, 0.22, 0.23, 0.26, 0.27, 0.19, 0.26, 0.34, 0.31, 0.32, 0.37, 0.3, 0.27, 0.27, 0.27, 0.3, 0.31, 0.29, 0.28, 0.24, 0.22, 0.32, 0.3, 0.29, 0.22, 0.21, 0.28, 0.28, 0.3, 0.25, 0.24, 0.19, 0.2, 0.22, 0.28, 0.24, 0.23, 0.26, 0.25, 0.25, 0.32, 0.32, 0.24, 0.25, 0.34, 0.36, 0.31, 0.22, 0.21, 0.19, 0.23, 0.22, 0.21, 0.26, 0.17, 0.17, 0.16, 0.13, 0.18, 0.18, 0.13, 0.12, 0.1, 0.09, 0.06, 0.04, 0.03, 0.04, 0.04, 0.03, 0.01, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.03, 0.02, 0.02, 0.03, 0.03, 0.02, 0.03, 0.03, 0.06, 0.07, 0.08, 0.11, 0.11, 0.1, 0.06, 0.07, 0.13, 0.12, 0.14, 0.15, 0.12, 0.09, 0.09, 0.11, 0.1, 0.17, 0.18, 0.12, 0.13, 0.13, 0.17, 0.27, 0.26, 0.23, 0.21, 0.27, 0.27, 0.26, 0.28, 0.36, 0.36, 0.31, 0.37, 0.36, 0.37, 0.38, 0.39, 0.39, 0.41, 0.49, 0.5, 0.44, 0.41, 0.36, 0.33, 0.35, 0.28, 0.27, 0.27, 0.3, 0.22, 0.15, 0.21, 0.23, 0.23, 0.34, 0.26, 0.24, 0.31, 0.28, 0.26, 0.16, 0.16, 0.15, 0.21, 0.27, 0.18, 0.17, 0.18, 0.18, 0.09, 0.14, 0.23, 0.23, 0.2, 0.12, 0.06, 0.06, 0.06, 0.05, 0.05, 0.05, 0.09, 0.13, 0.08, 0.05, 0.05, 0.1, 0.13, 0.11, 0.06, 0.06, 0.05, 0.04, 0.02, 0.03, 0.04, 0.06, 0.1, 0.12, 0.08, 0.12, 0.08, 0.05, 0.03, 0.05, 0.05, 0.03, 0.03, 0.04, 0.05, 0.11, 0.18, 0.14, 0.15, 0.17, 0.15, 0.12, 0.08, 0.09, 0.06, 0.08, 0.08, 0.07, 0.11, 0.17, 0.16, 0.21, 0.2, 0.16, 0.16, 0.09, 0.07, 0.04, 0.08, 0.08, 0.12, 0.11, 0.16, 0.22, 0.2, 0.24, 0.31, 0.23, 0.24, 0.25, 0.22, 0.16, 0.16, 0.21, 0.17, 0.11, 0.17, 0.17, 0.26, 0.25, 0.25, 0.2, 0.21, 0.16, 0.17, 0.17, 0.11, 0.07, 0.12, 0.16, 0.17, 0.21, 0.19, 0.2, 0.22, 0.21, 0.29, 0.21, 0.21, 0.2, 0.22, 0.15, 0.22, 0.25, 0.35, 0.35, 0.26, 0.34, 0.41, 0.3, 0.31, 0.27, 0.19, 0.23, 0.17, 0.17, 0.19, 0.19, 0.27, 0.27, 0.26, 0.2, 0.31, 0.23, 0.21, 0.18, 0.13, 0.18, 0.18, 0.12, 0.2, 0.23, 0.23, 0.2, 0.26, 0.32, 0.25, 0.3, 0.29, 0.28, 0.21, 0.15, 0.17, 0.14, 0.19, 0.2, 0.13, 0.18, 0.2, 0.14, 0.14, 0.08, 0.07, 0.04, 0.07, 0.06, 0.07, 0.11, 0.1, 0.09, 0.07, 0.07, 0.07, 0.04, 0.04, 0.02, 0.02, 0.02, 0.02, 0.01, 0.02, 0.02, 0.03, 0.05, 0.06, 0.05, 0.07, 0.09, 0.12, 0.17, 0.24, 0.31, 0.42, 0.54, 0.68, 0.72]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.4, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.38, 0.38, 0.37, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.37, 0.38, 0.39, 0.42, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.4, 0.4, 0.41, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.4, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.39, 0.38, 0.38, 0.37, 0.36, 0.36, 0.36, 0.35, 0.34, 0.33, 0.33, 0.34, 0.34, 0.35, 0.36, 0.37, 0.37, 0.36, 0.36, 0.36, 0.35, 0.34, 0.31, 0.28, 0.26, 0.23, 0.22, 0.2, 0.2, 0.19, 0.18, 0.18, 0.17, 0.18, 0.18, 0.19, 0.18, 0.18, 0.18, 0.18, 0.19, 0.19, 0.2, 0.2, 0.2, 0.21, 0.21, 0.21, 0.22, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.23, 0.22, 0.22, 0.21, 0.2, 0.19, 0.19, 0.18, 0.17, 0.16, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22, 0.23, 0.25, 0.27, 0.28, 0.3, 0.32, 0.33, 0.35, 0.38, 0.4, 0.41, 0.41, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.37, 0.36, 0.35, 0.35, 0.36, 0.36, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.39, 0.39, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.4, 0.41, 0.42, 0.42, 0.43, 0.41, 0.39, 0.37, 0.34, 0.31, 0.28, 0.25, 0.22, 0.21, 0.19, 0.18, 0.18, 0.18, 0.18, 0.17, 0.18, 0.18, 0.18, 0.19, 0.19, 0.19, 0.2, 0.2, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.2, 0.2, 0.2, 0.19, 0.2, 0.2, 0.21, 0.23, 0.25, 0.27, 0.29, 0.32, 0.34, 0.36, 0.37, 0.38, 0.39, 0.38, 0.37, 0.36, 0.34, 0.33, 0.31, 0.29, 0.28, 0.27, 0.27, 0.26, 0.25, 0.25, 0.24, 0.24, 0.24, 0.25, 0.26, 0.26, 0.27, 0.26, 0.26, 0.27, 0.27, 0.28, 0.28, 0.28, 0.28, 0.28, 0.29, 0.3, 0.32, 0.34, 0.35, 0.37, 0.38, 0.4, 0.4, 0.41, 0.4, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.41, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.37, 0.35, 0.34, 0.33, 0.32, 0.32, 0.31, 0.3, 0.3, 0.29, 0.28, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.28, 0.28, 0.29, 0.3, 0.29, 0.3, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.29, 0.3, 0.3, 0.3, 0.31, 0.31, 0.31, 0.31, 0.3, 0.29, 0.29, 0.28, 0.26, 0.25, 0.23, 0.22, 0.21, 0.2, 0.19, 0.19, 0.2, 0.2]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 3, \"coverage\": 1.35696, \"type\": \"Pfam\"}, {\"count\": 5, \"coverage\": 0.01312, \"type\": \"modified_monomer\"}, {\"count\": 1, \"coverage\": 0.00787, \"maximum_length\": 3, \"minimum_length\": 3, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"6201_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 381, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1302_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 21, \"ref_beg_seq_id\": 4}, {\"entity_beg_seq_id\": 22, \"length\": 3, \"ref_beg_seq_id\": 37}, {\"entity_beg_seq_id\": 25, \"length\": 1, \"ref_beg_seq_id\": 41}, {\"entity_beg_seq_id\": 26, \"length\": 14, \"ref_beg_seq_id\": 51}, {\"entity_beg_seq_id\": 40, \"length\": 19, \"ref_beg_seq_id\": 67}, {\"entity_beg_seq_id\": 59, \"length\": 51, \"ref_beg_seq_id\": 87}, {\"entity_beg_seq_id\": 110, \"length\": 6, \"ref_beg_seq_id\": 139}, {\"entity_beg_seq_id\": 116, \"length\": 1, \"ref_beg_seq_id\": 149}, {\"entity_beg_seq_id\": 117, \"length\": 39, \"ref_beg_seq_id\": 151}, {\"entity_beg_seq_id\": 156, \"length\": 28, \"ref_beg_seq_id\": 199}, {\"entity_beg_seq_id\": 184, \"length\": 20, \"ref_beg_seq_id\": 244}, {\"entity_beg_seq_id\": 204, \"length\": 23, \"ref_beg_seq_id\": 265}, {\"entity_beg_seq_id\": 227, \"length\": 1, \"ref_beg_seq_id\": 293}, {\"entity_beg_seq_id\": 228, \"length\": 60, \"ref_beg_seq_id\": 296}, {\"entity_beg_seq_id\": 288, \"length\": 1, \"ref_beg_seq_id\": 357}, {\"entity_beg_seq_id\": 289, \"length\": 2, \"ref_beg_seq_id\": 359}, {\"entity_beg_seq_id\": 291, \"length\": 17, \"ref_beg_seq_id\": 369}, {\"entity_beg_seq_id\": 308, \"length\": 27, \"ref_beg_seq_id\": 393}, {\"entity_beg_seq_id\": 335, \"length\": 14, \"ref_beg_seq_id\": 432}, {\"entity_beg_seq_id\": 349, \"length\": 11, \"ref_beg_seq_id\": 449}, {\"entity_beg_seq_id\": 360, \"length\": 5, \"ref_beg_seq_id\": 466}, {\"entity_beg_seq_id\": 365, \"length\": 17, \"ref_beg_seq_id\": 474}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1890_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 381, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2433_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 59, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 60, \"length\": 94, \"ref_beg_seq_id\": 61}, {\"entity_beg_seq_id\": 154, \"length\": 49, \"ref_beg_seq_id\": 159}, {\"entity_beg_seq_id\": 203, \"length\": 179, \"ref_beg_seq_id\": 209}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"6428_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 381, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P60802\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 378, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"9304_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 381, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"3OET_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"B\", \"assembly_chain2\": \"E\"}, \"enrichment_timestamp\": \"2025-12-21T02:41:05.702917\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.36,
+            "experimentalMethod": null,
+            "depositionDate": "2010-08-13T00:00:00+0000",
+            "releaseDate": "2010-08-25T00:00:00+0000",
+            "sourceOrganism": [
+              "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 8,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.36,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 8,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain A (length: 401)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain B (length: 401)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain C (length: 401)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain D (length: 401)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain E (length: 401)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_F_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain F (length: 401)",
+        "chainId": "F",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_G_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain G (length: 401)",
+        "chainId": "G",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_H_Sequence",
+        "value": "SNA(MSE)KILVDEN(MSE)PYARELFSRLGEVKAVPGRPIPVEELNHADAL(MSE)VRSVTKVNESLLSGTPINFVGTATAGTDHVDEAWLKQAGIGFSAAPGCNAIAVVEYVFSALL(MSE)LAERDGFSLRDRTIGIVGVGNVGSRLQTRLEALGIRTLLCDPPRAARGDEGDFRTLDELVQEADVLTFHTPLYKDGPYKTLHLADETLIRRLKPGAILINACRGPVVDNAALLARLNAGQPLSVVLDVWEGEPDLNVALLEAVDIGTSHIAGYTLEGKARGTTQVFEAYSAFIGREQRVALETLLPAPEFGRITLHGPLDQPTLKRLAHLVYDVRRDDAPLRKVAGIPGEFDKLRKNYLERREWSSLYV(MSE)CDDETAAALLCKLGFNAVHHPAH",
+        "description": "Amino acid sequence for chain H (length: 401)",
+        "chainId": "H",
+        "entityId": "1",
+        "sequenceLength": 401
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "D-Erythronate-4-Phosphate Dehydrogenase complexed with NAD",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, E, F, G, H, Length: 401",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "3OET_2",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 3OET_2",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "3OET",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "B",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "E",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2270.73,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 67,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "pdxB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.30.1370.170;3.40.50.720",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00389;PF02826;PF11890",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1043.23,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1227.49,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.459424942639593,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.540570653490289,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "3OET_2",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

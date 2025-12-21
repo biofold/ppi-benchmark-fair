@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1XKZ_2",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1XKZ_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1XKZ",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1XKZ",
+    "name": "Protein 1XKZ",
+    "description": "Protein structure with PDB ID: 1XKZ. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1XKZ_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1XKZ",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Staphylococcus aureus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1280",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280"
+    },
+    "alternateName": [
+      "PDB 1XKZ",
+      "Protein ID 1XKZ"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1xkz_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1xkz.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1XKZ",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1XKZ",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1XKZ_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "C-D",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "blaR1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.710.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00905",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1XKZ\", \"structure_metadata\": {\"pdb_id\": \"1XKZ\", \"resolution\": 1.75, \"deposition_date\": \"2004-09-30T00:00:00+0000\", \"release_date\": \"2004-11-30T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Staphylococcus aureus\"], \"citation\": {\"title\": \"X-ray crystal structure of the acylated beta-lactam sensor domain of BlaR1 from Staphylococcus aureus and the mechanism of receptor activation for signal transduction\", \"doi\": \"10.1021/ja044742u\", \"authors\": [\"Birck, C.\", \"Cha, J.Y.\", \"Cross, J.\", \"Schulze-Briese, C.\", \"Meroueh, S.O.\", \"Schlegel, H.B.\", \"Mobashery, S.\", \"Samama, J.-P.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 59.205, \"b\": 109.791, \"c\": 91.605, \"alpha\": 90.0, \"beta\": 106.13, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"B\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"C\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"D\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus\", \"sequence_length\": 255, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus\", \"sequence_length\": 255, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus\", \"sequence_length\": 255, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Staphylococcus aureus\", \"sequence_length\": 255, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"organism\": \"Staphylococcus aureus\", \"taxonomy_id\": 1280, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 255, \"gene_name\": null, \"uniprot_ids\": [\"P18357\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 255.0, \"min_sequence_length\": 255, \"max_sequence_length\": 255}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"pdbx_seq_one_letter_code_can\": \"GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ\", \"pdbx_strand_id\": \"A,B,C,D\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 255, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_genus\": \"Staphylococcus\", \"host_org_genus\": \"Escherichia\", \"host_org_species\": \"Escherichia coli\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1280\", \"pdbx_gene_src_scientific_name\": \"Staphylococcus aureus\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET24a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.505, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/3q81A/16703/1xkzA\", \"max_rmsd\": 1.321, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 13265, \"identity\": 100}, {\"cluster_id\": 5079, \"identity\": 95}, {\"cluster_id\": 5606, \"identity\": 90}, {\"cluster_id\": 8109, \"identity\": 70}, {\"cluster_id\": 10071, \"identity\": 50}, {\"cluster_id\": 7849, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Micrococcus aureus\", \"Micrococcus pyogenes\", \"Staphlococcus pyogenes citreus\", \"Staphylococcus aureus subsp. anaerobius\", \"Staphylococcus pyogenes aureus\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Staphylococcus aureus\", \"ncbi_taxonomy_id\": 1280, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Staphylococcus aureus\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillaeota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota corrig. Gibbons and Murray 2021\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillus/Clostridium group\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Clostridium group firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Low G+C firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"clostridial firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low G+C Gram-positive bacteria\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low GC Gram+\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Bacilli\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Bacillus/Lactobacillus/Streptococcus group\"}, {\"depth\": 5, \"id\": \"91061\", \"name\": \"Firmibacteria\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Bacillales\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Bacillus/Staphylococcus group\"}, {\"depth\": 6, \"id\": \"1385\", \"name\": \"Caryophanales\"}, {\"depth\": 7, \"id\": \"90964\", \"name\": \"Staphylococcaceae\"}, {\"depth\": 7, \"id\": \"90964\", \"name\": \"Staphylococcaceae Schleifer and Bell 2010\"}, {\"depth\": 7, \"id\": \"90964\", \"name\": \"Staphylococcus group\"}, {\"depth\": 8, \"id\": \"1279\", \"name\": \"Staphylococcus\"}, {\"depth\": 8, \"id\": \"1279\", \"name\": \"Aurococcus\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Staphylococcus aureus\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Micrococcus aureus\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Micrococcus pyogenes\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Staphlococcus pyogenes citreus\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Staphylococcus aureus subsp. anaerobius\"}, {\"depth\": 9, \"id\": \"1280\", \"name\": \"Staphylococcus pyogenes aureus\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 30.002, \"pdbx_description\": \"Regulatory protein blaR1\", \"pdbx_fragment\": \"sensor domain\", \"pdbx_number_of_molecules\": 4, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Regulatory protein blaR1\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"BlaR1 beta-lactam receptor\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Regulatory protein BlaR1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P18357\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00905\", \"assignment_version\": \"34.0\", \"name\": \"Penicillin binding protein transpeptidase domain (Transpeptidase)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0005886\", \"name\": \"plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005886\", \"name\": \"plasma membrane\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"GO:0008658\", \"name\": \"penicillin binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033218\", \"name\": \"amide binding\"}, {\"id\": \"GO:0043177\", \"name\": \"organic acid binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0043168\", \"name\": \"anion binding\"}, {\"id\": \"GO:0008658\", \"name\": \"penicillin binding\"}, {\"id\": \"GO:0031406\", \"name\": \"carboxylic acid binding\"}, {\"id\": \"GO:1901363\", \"name\": \"heterocyclic compound binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0033293\", \"name\": \"monocarboxylic acid binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}, {\"id\": \"GO:1901681\", \"name\": \"sulfur compound binding\"}]}, {\"annotation_id\": \"IPR012338\", \"name\": \"Beta-lactamase/transpeptidase-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR012338\", \"name\": \"Beta-lactamase/transpeptidase-like\"}]}, {\"annotation_id\": \"IPR052173\", \"name\": \"Beta-lactam antibiotic response regulator\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR052173\", \"name\": \"Beta-lactam antibiotic response regulator\"}]}, {\"annotation_id\": \"IPR001460\", \"name\": \"Penicillin-binding protein, transpeptidase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001460\", \"name\": \"Penicillin-binding protein, transpeptidase\"}]}, {\"annotation_id\": \"IPR008756\", \"name\": \"Peptidase M56\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008756\", \"name\": \"Peptidase M56\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1XKZ\", \"rcsb_id\": \"1XKZ_1\", \"uniprot_ids\": [\"P18357\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P18357\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.4358974358974359}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00905\", \"name\": \"Penicillin binding protein transpeptidase domain (Transpeptidase)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 29, \"end_seq_id\": 249}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.17, -1.56, -1.6, -1.69, -1.77, -2.04, -2.04, -2.29, -2.04, -2.29, -1.36, -0.5, -0.71, -1.57, -1.3, -1.34, -0.46, 0.0, 0.34, -0.24, -1.06, -0.76, -0.37, -0.37, 0.38, 0.34, 0.24, 0.14, 0.14, 0.74, 0.4, 0.01, -0.29, -1.03, -1.64, -2.0, -1.36, -1.41, -2.01, -1.97, -1.97, -1.97, -1.62, -1.98, -2.27, -3.27, -3.27, -2.97, -2.76, -2.71, -2.41, -2.4, -2.04, -2.04, -1.04, -1.04, -0.53, -0.16, 0.44, 0.84, 0.88, 1.44, 1.49, 0.49, 0.28, 0.36, 0.66, 0.06, -0.64, -0.99, -1.8, -1.5, -1.5, -0.93, -1.52, -2.12, -2.12, -2.09, -2.13, -2.1, -2.16, -1.83, -1.73, -2.03, -1.73, -1.44, -1.48, -1.48, -1.51, -1.76, -1.97, -1.86, -1.86, -2.13, -1.83, -1.23, -1.19, -1.19, -0.89, -0.03, -0.84, -0.56, -0.62, -0.51, -1.11, -1.22, -0.33, -0.33, -1.19, -1.19, -0.59, -0.62, -1.37, -1.37, -1.01, -1.59, -1.3, -0.99, -0.99, -1.07, -1.32, -1.28, -0.47, -0.71, -0.78, -1.02, -1.33, -1.38, -2.19, -1.33, -0.99, -1.5, -1.26, -1.54, -1.59, -1.34, -1.01, -0.41, -1.22, -1.57, -1.57, -1.0, -1.0, -0.41, -0.36, -0.64, -0.43, -0.43, -0.43, 0.12, 0.2, 1.1, 0.91, 0.57, 0.57, 0.36, 0.96, 0.96, 0.1, -0.79, -1.64, -2.31, -1.57, -1.27, -1.91, -2.56, -1.97, -2.01, -2.01, -2.01, -1.23, -1.63, -1.63, -1.29, -0.43, -0.21, 0.72, 0.68, 0.63, -0.18, -0.48, -0.82, -0.88, -1.69, -1.69, -2.33, -1.94, -1.94, -1.63, -1.29, -0.93, -0.83, 0.06, 0.1, -0.14, -0.14, -0.14, -0.21, -0.56, -0.87, -0.87, -1.47, -1.62, -0.77, -0.77, -0.48, 0.13, 1.02, 1.33, 0.99, 0.73, 0.03, -0.87, -0.97, -0.97, -1.12, -1.42, -1.42, -1.39, -0.61, -0.31, -0.27, -0.17, -0.46, -0.94, -1.23, -1.2, -1.28, -2.09, -1.8, -1.8, -1.33, -0.4, -0.31, -0.61, -1.0, -0.07, 0.74, 0.11, 0.11, -0.1, -0.64, -0.09, 0.72, 0.77, 0.22, -0.59]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.3, 0.3, 0.3, 0.31, 0.3, 0.31, 0.32, 0.33, 0.35, 0.37, 0.39, 0.41, 0.43, 0.41, 0.39, 0.37, 0.35, 0.35, 0.35, 0.36, 0.39, 0.41, 0.43, 0.41, 0.39, 0.38, 0.36, 0.34, 0.32, 0.31, 0.3, 0.31, 0.32, 0.32, 0.33, 0.34, 0.34, 0.35, 0.36, 0.37, 0.38, 0.4, 0.41, 0.41, 0.42, 0.41, 0.39, 0.37, 0.36, 0.35, 0.33, 0.32, 0.31, 0.3, 0.3, 0.3, 0.3, 0.32, 0.34, 0.37, 0.39, 0.42, 0.43, 0.41, 0.4, 0.39, 0.39, 0.38, 0.39, 0.4, 0.42, 0.43, 0.41, 0.39, 0.37, 0.34, 0.32, 0.3, 0.29, 0.28, 0.27, 0.27, 0.28, 0.28, 0.29, 0.3, 0.32, 0.34, 0.36, 0.37, 0.38, 0.38, 0.38, 0.37, 0.36, 0.36, 0.35, 0.35, 0.34, 0.34, 0.34, 0.35, 0.36, 0.37, 0.39, 0.4, 0.42, 0.43, 0.42, 0.41, 0.4, 0.39, 0.4, 0.41, 0.42, 0.43, 0.41, 0.39, 0.38, 0.35, 0.34, 0.32, 0.31, 0.31, 0.31, 0.31, 0.31, 0.33, 0.33, 0.33, 0.34, 0.34, 0.34, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.4, 0.4, 0.39, 0.38, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.42, 0.41, 0.39, 0.39, 0.38, 0.38, 0.4, 0.41, 0.42, 0.43, 0.41, 0.39, 0.37, 0.36, 0.35, 0.34, 0.32, 0.32, 0.31, 0.31, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.32, 0.33, 0.34, 0.34, 0.34, 0.34, 0.34, 0.33, 0.32, 0.32, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.28, 0.28, 0.29, 0.3, 0.31, 0.31, 0.32, 0.34, 0.37, 0.38, 0.4, 0.42, 0.43, 0.42, 0.42, 0.42, 0.41, 0.4, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.4, 0.41, 0.43, 0.41, 0.39, 0.37, 0.33, 0.3, 0.28, 0.26, 0.25, 0.24, 0.24, 0.25, 0.26, 0.27, 0.29, 0.31, 0.33, 0.34, 0.35, 0.36, 0.37, 0.37, 0.37, 0.37, 0.36, 0.36, 0.35, 0.36, 0.35, 0.35, 0.35]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.87, 0.86, 0.75, 0.72, 0.68, 0.65, 0.54, 0.52, 0.41, 0.3, 0.27, 0.27, 0.25, 0.25, 0.26, 0.19, 0.18, 0.23, 0.24, 0.3, 0.3, 0.3, 0.19, 0.21, 0.19, 0.13, 0.13, 0.16, 0.14, 0.19, 0.27, 0.26, 0.18, 0.13, 0.08, 0.08, 0.13, 0.14, 0.15, 0.14, 0.14, 0.15, 0.15, 0.22, 0.2, 0.22, 0.3, 0.31, 0.35, 0.35, 0.27, 0.27, 0.21, 0.22, 0.23, 0.28, 0.31, 0.23, 0.22, 0.16, 0.15, 0.16, 0.15, 0.11, 0.07, 0.12, 0.12, 0.11, 0.11, 0.11, 0.11, 0.13, 0.13, 0.1, 0.15, 0.18, 0.2, 0.23, 0.23, 0.25, 0.24, 0.24, 0.23, 0.15, 0.2, 0.26, 0.26, 0.28, 0.29, 0.22, 0.23, 0.23, 0.25, 0.21, 0.33, 0.33, 0.35, 0.29, 0.32, 0.32, 0.23, 0.25, 0.26, 0.28, 0.3, 0.3, 0.3, 0.3, 0.2, 0.23, 0.29, 0.29, 0.22, 0.23, 0.23, 0.21, 0.22, 0.16, 0.2, 0.2, 0.22, 0.28, 0.27, 0.27, 0.27, 0.33, 0.34, 0.26, 0.25, 0.32, 0.22, 0.22, 0.21, 0.22, 0.15, 0.15, 0.16, 0.15, 0.21, 0.15, 0.15, 0.14, 0.13, 0.2, 0.15, 0.14, 0.16, 0.12, 0.12, 0.09, 0.05, 0.09, 0.09, 0.07, 0.1, 0.16, 0.19, 0.2, 0.2, 0.2, 0.19, 0.19, 0.27, 0.27, 0.23, 0.31, 0.31, 0.31, 0.29, 0.36, 0.42, 0.51, 0.44, 0.38, 0.34, 0.37, 0.38, 0.37, 0.37, 0.36, 0.28, 0.36, 0.29, 0.22, 0.21, 0.24, 0.23, 0.21, 0.2, 0.25, 0.17, 0.13, 0.13, 0.17, 0.21, 0.2, 0.2, 0.19, 0.18, 0.11, 0.07, 0.09, 0.08, 0.08, 0.1, 0.06, 0.06, 0.06, 0.07, 0.07, 0.08, 0.08, 0.07, 0.04, 0.04, 0.04, 0.06, 0.04, 0.04, 0.04, 0.07, 0.1, 0.15, 0.16, 0.22, 0.26, 0.34, 0.31, 0.32, 0.26, 0.19, 0.19, 0.28, 0.36, 0.37, 0.35, 0.35, 0.37, 0.42, 0.42, 0.38, 0.33, 0.34, 0.31, 0.33, 0.37, 0.42, 0.46, 0.53, 0.57, 0.67, 0.76, 0.8, 0.83, 0.86]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.86667, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"8109_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"5606_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P18357\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7849_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 18, \"ref_beg_seq_id\": 347}, {\"entity_beg_seq_id\": 19, \"length\": 213, \"ref_beg_seq_id\": 366}, {\"entity_beg_seq_id\": 232, \"length\": 24, \"ref_beg_seq_id\": 580}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"10071_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"5079_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"13265_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 255, \"ref_beg_seq_id\": 331}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"BlaR1 beta-lactam receptor\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"DrugBank\", \"related_resource_version\": \"5.1\", \"related_target_id\": \"P18357\", \"target_taxonomy_id\": 1280, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 254, \"target_beg_seq_id\": 331}]}], \"rcsb_target_cofactors\": [{\"cofactor_in_ch_ikey\": \"USNINKBPBVKHHZ-CYUUQNCZSA-L\", \"cofactor_smiles\": \"[H][C@](N)(COC(=O)[C@@]([H])(N=C([O-])CC1=CC=CC=C1)[C@]1([H])N[C@@]([H])(C(O)=O)C(C)(C)S1)C([O-])=O\", \"cofactor_name\": \"Penicillin G Acyl-Serine\", \"cofactor_resource_id\": \"DB02968\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [17139284, 17016423], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P18357\"}, {\"cofactor_in_ch_ikey\": \"VEHPZKIFULQYFS-BZXVCXBKSA-N\", \"cofactor_smiles\": \"[H]N([H])C1=NC(=CS1)C(=N\\\\OC(C)(C)C(O)=O)\\\\C(=O)N([H])[C@H](C=O)[C@@]1([H])SCC(=C)C(=N1)C(O)=O\", \"cofactor_chem_comp_id\": \"CAZ\", \"cofactor_name\": \"Acylated ceftazidime\", \"cofactor_resource_id\": \"DB03530\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [17139284, 17016423], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P18357\"}], \"rcsb_id\": \"1XKZ_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"C\", \"assembly_chain2\": \"D\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:44.685376\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.75,
+            "experimentalMethod": null,
+            "depositionDate": "2004-09-30T00:00:00+0000",
+            "releaseDate": "2004-11-30T00:00:00+0000",
+            "sourceOrganism": [
+              "Staphylococcus aureus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.75,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Staphylococcus aureus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ",
+        "description": "Amino acid sequence for chain A (length: 255)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 255
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ",
+        "description": "Amino acid sequence for chain B (length: 255)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 255
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ",
+        "description": "Amino acid sequence for chain C (length: 255)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 255
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "GQSITDYNYKKPLHNDYQILDKSKIFGSNSGSFVMYSMKKDKYYIYNEKESRKRYSPNSTYKIYLAMFGLDRHIINDENSRMSWNHKHYPFDAWNKEQDLNTAMQNSVNWYFERISDQIPKNYTATQLKQLNYGNKNLGSYKSYWMEDSLKISNLEQVIVFKNMMEQNNHFSKKAKNQLSSSLLIKKNEKYELYGKTGTGIVNGKYNNGWFVGYVITNHDKYYFATHLSDGKPSGKNAELISEKILKEMGVLNGQ",
+        "description": "Amino acid sequence for chain D (length: 255)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 255
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "X-ray crystal structure of the acylated beta-lactam sensor domain of BlaR1 from Staphylococcus aureus and the mechanism of receptor activation for signal transduction",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/ja044742u",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 255",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1XKZ_2",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1XKZ_2",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1XKZ",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "C",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "D",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 882.639999999999,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 34,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "blaR1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.710.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00905",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 392.780000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 489.860000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.44500589141666,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.554994108583342,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1XKZ_2",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

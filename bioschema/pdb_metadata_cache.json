@@ -1,0 +1,482 @@
+{
+  "1A17": {
+    "pdb_id": "1A17",
+    "resolution": 2.45,
+    "deposition_date": "1997-12-23T00:00:00+0000",
+    "release_date": "1998-04-29T00:00:00+0000",
+    "experimental_method": null,
+    "source_organism": [
+      "Homo sapiens"
+    ],
+    "citation": {
+      "title": "The structure of the tetratricopeptide repeats of protein phosphatase 5: implications for TPR-mediated protein-protein interactions.",
+      "doi": "10.1093/emboj/17.5.1192",
+      "authors": [
+        "Das, A.K.",
+        "Cohen, P.W.",
+        "Barford, D."
+      ]
+    },
+    "entity_count": 3,
+    "r_factor": null,
+    "space_group": null,
+    "unit_cell": {
+      "a": 90.06,
+      "b": 90.06,
+      "c": 104.45,
+      "alpha": 90.0,
+      "beta": 90.0,
+      "gamma": 90.0
+    },
+    "found_in_api": true,
+    "sequences": {
+      "A": "RDEPPADGALKRAEELKTQANDYFKAKDYENAIKFYSQAIELNPSNAIYYGNRSLAYLRTECYGYALGDATRAIELDKKYIKGYYRRAASNMALGKFRAALRDYETVVKVKPHDKDAKMKYQECNKIVKQKAFERAIAGDEHKRSVVDSLDIESMTIEDEYSGPKL"
+    },
+    "chain_info": {
+      "A": {
+        "entity_id": "1",
+        "organism": "Homo sapiens",
+        "sequence_length": 166,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      }
+    },
+    "entity_info": {
+      "1": {
+        "entity_id": "1",
+        "sequence": "RDEPPADGALKRAEELKTQANDYFKAKDYENAIKFYSQAIELNPSNAIYYGNRSLAYLRTECYGYALGDATRAIELDKKYIKGYYRRAASNMALGKFRAALRDYETVVKVKPHDKDAKMKYQECNKIVKQKAFERAIAGDEHKRSVVDSLDIESMTIEDEYSGPKL",
+        "organism": "Homo sapiens",
+        "taxonomy_id": 9606,
+        "chain_ids": [
+          "A"
+        ],
+        "polymer_type": "polypeptide(L)",
+        "sequence_length": 166,
+        "gene_name": null,
+        "uniprot_ids": [
+          "P53041"
+        ]
+      }
+    },
+    "is_homomer": true,
+    "sequence_clusters": [
+      {
+        "sequence": "RDEPPADGALKRAEELKTQANDYFKAKDYENAIKFYSQAIELNPSNAIYYGNRSLAYLRTECYGYALGDATRAIELDKKYIKGYYRRAASNMALGKFRAALRDYETVVKVKPHDKDAKMKYQECNKIVKQKAFERAIAGDEHKRSVVDSLDIESMTIEDEYSGPKL",
+        "entities": [
+          "1"
+        ],
+        "chain_count": 1
+      }
+    ],
+    "chain_ids": [],
+    "entity_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "polymer_composition": "homomeric protein",
+    "homomer_type": "monomer",
+    "homomer_chains": 1,
+    "chain_count": 1,
+    "unique_sequences": 1,
+    "avg_sequence_length": 166.0,
+    "min_sequence_length": 166,
+    "max_sequence_length": 166
+  },
+  "1A3A": {
+    "pdb_id": "1A3A",
+    "resolution": 1.8,
+    "deposition_date": "1998-01-19T00:00:00+0000",
+    "release_date": "1998-08-12T00:00:00+0000",
+    "experimental_method": null,
+    "source_organism": [
+      "Escherichia coli K-12"
+    ],
+    "citation": {
+      "title": "The structure of the Escherichia coli phosphotransferase IIAmannitol reveals a novel fold with two conformations of the active site.",
+      "doi": "10.1016/S0969-2126(98)00039-2",
+      "authors": [
+        "van Montfort, R.L.",
+        "Pijning, T.",
+        "Kalk, K.H.",
+        "Hangyi, I.",
+        "Kouwijzer, M.L.",
+        "Robillard, G.T.",
+        "Dijkstra, B.W."
+      ]
+    },
+    "entity_count": 2,
+    "r_factor": null,
+    "space_group": null,
+    "unit_cell": {
+      "a": 53.57,
+      "b": 66.01,
+      "c": 73.86,
+      "alpha": 90.0,
+      "beta": 99.76,
+      "gamma": 90.0
+    },
+    "found_in_api": true,
+    "sequences": {
+      "A": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK",
+      "B": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK",
+      "C": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK",
+      "D": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK"
+    },
+    "chain_info": {
+      "A": {
+        "entity_id": "1",
+        "organism": "Escherichia coli K-12",
+        "sequence_length": 148,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      },
+      "B": {
+        "entity_id": "1",
+        "organism": "Escherichia coli K-12",
+        "sequence_length": 148,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      },
+      "C": {
+        "entity_id": "1",
+        "organism": "Escherichia coli K-12",
+        "sequence_length": 148,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      },
+      "D": {
+        "entity_id": "1",
+        "organism": "Escherichia coli K-12",
+        "sequence_length": 148,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      }
+    },
+    "entity_info": {
+      "1": {
+        "entity_id": "1",
+        "sequence": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK",
+        "organism": "Escherichia coli K-12",
+        "taxonomy_id": 83333,
+        "chain_ids": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "polymer_type": "polypeptide(L)",
+        "sequence_length": 148,
+        "gene_name": null,
+        "uniprot_ids": [
+          "P00550"
+        ]
+      }
+    },
+    "is_homomer": true,
+    "sequence_clusters": [
+      {
+        "sequence": "MANLFKLGAENIFLGRKAATKEEAIRFAGEQLVKGGYVEPEYVQAMLDREKLTPTYLGESIAVPHGTVEAKDRVLKTGVVFCQYPEGVRFGEEEDDIARLVIGIAARNNEHIQVITSLTNALDDESVIERLAHTTSVDEVLELLAGRK",
+        "entities": [
+          "1"
+        ],
+        "chain_count": 4
+      }
+    ],
+    "chain_ids": [],
+    "entity_ids": [
+      "1",
+      "2"
+    ],
+    "polymer_composition": "homomeric protein",
+    "homomer_type": "monomer",
+    "homomer_chains": 4,
+    "chain_count": 4,
+    "unique_sequences": 1,
+    "avg_sequence_length": 148.0,
+    "min_sequence_length": 148,
+    "max_sequence_length": 148
+  },
+  "1A7G": {
+    "pdb_id": "1A7G",
+    "resolution": 2.4,
+    "deposition_date": "1998-03-13T00:00:00+0000",
+    "release_date": "1999-04-27T00:00:00+0000",
+    "experimental_method": null,
+    "source_organism": [
+      "human papillomavirus 31"
+    ],
+    "citation": {
+      "title": "Structure of the E2 DNA-binding domain from human papillomavirus serotype 31 at 2.4 A.",
+      "doi": "10.1107/S0907444998005587",
+      "authors": [
+        "Bussiere, D.E.",
+        "Kong, X.",
+        "Egan, D.A.",
+        "Walter, K.",
+        "Holzman, T.F.",
+        "Lindh, F.",
+        "Robins, T.",
+        "Giranda, V.L."
+      ]
+    },
+    "entity_count": 3,
+    "r_factor": null,
+    "space_group": null,
+    "unit_cell": {
+      "a": 45.89,
+      "b": 45.89,
+      "c": 195.636,
+      "alpha": 90.0,
+      "beta": 90.0,
+      "gamma": 120.0
+    },
+    "found_in_api": true,
+    "sequences": {
+      "E": "ATTPIIHLKGDANILKCLRYRLSKYKQLYEQVSSTWHWTCTDGKHKNAIVTLTYISTSQRDDFLNTVVIPNTVSVSTGYMTI"
+    },
+    "chain_info": {
+      "E": {
+        "entity_id": "1",
+        "organism": "human papillomavirus 31",
+        "sequence_length": 82,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      }
+    },
+    "entity_info": {
+      "1": {
+        "entity_id": "1",
+        "sequence": "ATTPIIHLKGDANILKCLRYRLSKYKQLYEQVSSTWHWTCTDGKHKNAIVTLTYISTSQRDDFLNTVVIPNTVSVSTGYMTI",
+        "organism": "human papillomavirus 31",
+        "taxonomy_id": 10585,
+        "chain_ids": [
+          "E"
+        ],
+        "polymer_type": "polypeptide(L)",
+        "sequence_length": 82,
+        "gene_name": null,
+        "uniprot_ids": [
+          "P17383"
+        ]
+      }
+    },
+    "is_homomer": true,
+    "sequence_clusters": [
+      {
+        "sequence": "ATTPIIHLKGDANILKCLRYRLSKYKQLYEQVSSTWHWTCTDGKHKNAIVTLTYISTSQRDDFLNTVVIPNTVSVSTGYMTI",
+        "entities": [
+          "1"
+        ],
+        "chain_count": 1
+      }
+    ],
+    "chain_ids": [],
+    "entity_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "polymer_composition": "homomeric protein",
+    "homomer_type": "monomer",
+    "homomer_chains": 1,
+    "chain_count": 1,
+    "unique_sequences": 1,
+    "avg_sequence_length": 82.0,
+    "min_sequence_length": 82,
+    "max_sequence_length": 82
+  },
+  "1AC6": {
+    "pdb_id": "1AC6",
+    "resolution": 2.3,
+    "deposition_date": "1997-02-13T00:00:00+0000",
+    "release_date": "1998-02-25T00:00:00+0000",
+    "experimental_method": null,
+    "source_organism": [
+      "Mus musculus"
+    ],
+    "citation": {
+      "title": "Dual conformations of a T cell receptor V alpha homodimer: implications for variability in V alpha V beta domain association.",
+      "doi": "10.1006/jmbi.1997.1047",
+      "authors": [
+        "Li, H.",
+        "Lebedeva, M.I.",
+        "Ward, E.S.",
+        "Mariuzza, R.A."
+      ]
+    },
+    "entity_count": 2,
+    "r_factor": null,
+    "space_group": null,
+    "unit_cell": {
+      "a": 72.43,
+      "b": 64.82,
+      "c": 45.54,
+      "alpha": 90.0,
+      "beta": 90.0,
+      "gamma": 90.0
+    },
+    "found_in_api": true,
+    "sequences": {
+      "A": "DSVTQTEGQVALSEEDFLTIHCNYSASGYPALFWYVQYPGEGPQFLFRASRDKEKGSSRGFEATYNKEATSFHLQKASVQESDSAVYYCALSGGNNKLTFGAGTKLTIKP",
+      "B": "DSVTQTEGQVALSEEDFLTIHCNYSASGYPALFWYVQYPGEGPQFLFRASRDKEKGSSRGFEATYNKEATSFHLQKASVQESDSAVYYCALSGGNNKLTFGAGTKLTIKP"
+    },
+    "chain_info": {
+      "A": {
+        "entity_id": "1",
+        "organism": "Mus musculus",
+        "sequence_length": 110,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      },
+      "B": {
+        "entity_id": "1",
+        "organism": "Mus musculus",
+        "sequence_length": 110,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      }
+    },
+    "entity_info": {
+      "1": {
+        "entity_id": "1",
+        "sequence": "DSVTQTEGQVALSEEDFLTIHCNYSASGYPALFWYVQYPGEGPQFLFRASRDKEKGSSRGFEATYNKEATSFHLQKASVQESDSAVYYCALSGGNNKLTFGAGTKLTIKP",
+        "organism": "Mus musculus",
+        "taxonomy_id": 10090,
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "polymer_type": "polypeptide(L)",
+        "sequence_length": 110,
+        "gene_name": null,
+        "uniprot_ids": [
+          "P06323"
+        ]
+      }
+    },
+    "is_homomer": true,
+    "sequence_clusters": [
+      {
+        "sequence": "DSVTQTEGQVALSEEDFLTIHCNYSASGYPALFWYVQYPGEGPQFLFRASRDKEKGSSRGFEATYNKEATSFHLQKASVQESDSAVYYCALSGGNNKLTFGAGTKLTIKP",
+        "entities": [
+          "1"
+        ],
+        "chain_count": 2
+      }
+    ],
+    "chain_ids": [],
+    "entity_ids": [
+      "1",
+      "2"
+    ],
+    "polymer_composition": "homomeric protein",
+    "homomer_type": "monomer",
+    "homomer_chains": 2,
+    "chain_count": 2,
+    "unique_sequences": 1,
+    "avg_sequence_length": 110.0,
+    "min_sequence_length": 110,
+    "max_sequence_length": 110
+  },
+  "1AFW": {
+    "pdb_id": "1AFW",
+    "resolution": 1.8,
+    "deposition_date": "1997-03-15T00:00:00+0000",
+    "release_date": "1997-06-16T00:00:00+0000",
+    "experimental_method": null,
+    "source_organism": [
+      "Saccharomyces cerevisiae"
+    ],
+    "citation": {
+      "title": "The 1.8 A crystal structure of the dimeric peroxisomal 3-ketoacyl-CoA thiolase of Saccharomyces cerevisiae: implications for substrate binding and reaction mechanism.",
+      "doi": "10.1006/jmbi.1997.1331",
+      "authors": [
+        "Mathieu, M.",
+        "Modis, Y.",
+        "Zeelen, J.P.",
+        "Engel, C.K.",
+        "Abagyan, R.A.",
+        "Ahlberg, A.",
+        "Rasmussen, B.",
+        "Lamzin, V.S.",
+        "Kunau, W.H.",
+        "Wierenga, R.K."
+      ]
+    },
+    "entity_count": 3,
+    "r_factor": null,
+    "space_group": null,
+    "unit_cell": {
+      "a": 71.17,
+      "b": 92.65,
+      "c": 116.72,
+      "alpha": 90.0,
+      "beta": 90.0,
+      "gamma": 90.0
+    },
+    "found_in_api": true,
+    "sequences": {
+      "A": "KNSLLEKRPEDVVIVAANRSAIGKGFKGAFKDVNTDYLLYNFLNEFIGRFPEPLRADLNLIEEVACGNVLNVGAGATEHRAACLASGIPYSTPFVALNRQCSSGLTAVNDIANKIKVGQIDIGLALGVESMTNNYKNVNPLGMISSEELQKNREAKKCLIPMGITNENVAANFKISRKDQDEFAANSYQKAYKAKNEGLFEDEILPIKLPDGSICQSDEGPRPNVTAESLSSIRPAFIKDRGTTTAGNASQVSDGVAGVLLARRSVANQLNLPVLGRYIDFQTVGVPPEIMGVGPAYAIPKVLEATGLQVQDIDIFEINEAFAAQALYCIHKLGIDLNKVNPRGGAIALGHPLGCTGARQVATILRELKKDQIGVVSMCIGTGMGAAAIFIKE",
+      "B": "KNSLLEKRPEDVVIVAANRSAIGKGFKGAFKDVNTDYLLYNFLNEFIGRFPEPLRADLNLIEEVACGNVLNVGAGATEHRAACLASGIPYSTPFVALNRQCSSGLTAVNDIANKIKVGQIDIGLALGVESMTNNYKNVNPLGMISSEELQKNREAKKCLIPMGITNENVAANFKISRKDQDEFAANSYQKAYKAKNEGLFEDEILPIKLPDGSICQSDEGPRPNVTAESLSSIRPAFIKDRGTTTAGNASQVSDGVAGVLLARRSVANQLNLPVLGRYIDFQTVGVPPEIMGVGPAYAIPKVLEATGLQVQDIDIFEINEAFAAQALYCIHKLGIDLNKVNPRGGAIALGHPLGCTGARQVATILRELKKDQIGVVSMCIGTGMGAAAIFIKE"
+    },
+    "chain_info": {
+      "A": {
+        "entity_id": "1",
+        "organism": "Saccharomyces cerevisiae",
+        "sequence_length": 393,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      },
+      "B": {
+        "entity_id": "1",
+        "organism": "Saccharomyces cerevisiae",
+        "sequence_length": 393,
+        "polymer_type": "polypeptide(L)",
+        "gene_name": null
+      }
+    },
+    "entity_info": {
+      "1": {
+        "entity_id": "1",
+        "sequence": "KNSLLEKRPEDVVIVAANRSAIGKGFKGAFKDVNTDYLLYNFLNEFIGRFPEPLRADLNLIEEVACGNVLNVGAGATEHRAACLASGIPYSTPFVALNRQCSSGLTAVNDIANKIKVGQIDIGLALGVESMTNNYKNVNPLGMISSEELQKNREAKKCLIPMGITNENVAANFKISRKDQDEFAANSYQKAYKAKNEGLFEDEILPIKLPDGSICQSDEGPRPNVTAESLSSIRPAFIKDRGTTTAGNASQVSDGVAGVLLARRSVANQLNLPVLGRYIDFQTVGVPPEIMGVGPAYAIPKVLEATGLQVQDIDIFEINEAFAAQALYCIHKLGIDLNKVNPRGGAIALGHPLGCTGARQVATILRELKKDQIGVVSMCIGTGMGAAAIFIKE",
+        "organism": "Saccharomyces cerevisiae",
+        "taxonomy_id": 4932,
+        "chain_ids": [
+          "A",
+          "B"
+        ],
+        "polymer_type": "polypeptide(L)",
+        "sequence_length": 393,
+        "gene_name": null,
+        "uniprot_ids": [
+          "P27796"
+        ]
+      }
+    },
+    "is_homomer": true,
+    "sequence_clusters": [
+      {
+        "sequence": "KNSLLEKRPEDVVIVAANRSAIGKGFKGAFKDVNTDYLLYNFLNEFIGRFPEPLRADLNLIEEVACGNVLNVGAGATEHRAACLASGIPYSTPFVALNRQCSSGLTAVNDIANKIKVGQIDIGLALGVESMTNNYKNVNPLGMISSEELQKNREAKKCLIPMGITNENVAANFKISRKDQDEFAANSYQKAYKAKNEGLFEDEILPIKLPDGSICQSDEGPRPNVTAESLSSIRPAFIKDRGTTTAGNASQVSDGVAGVLLARRSVANQLNLPVLGRYIDFQTVGVPPEIMGVGPAYAIPKVLEATGLQVQDIDIFEINEAFAAQALYCIHKLGIDLNKVNPRGGAIALGHPLGCTGARQVATILRELKKDQIGVVSMCIGTGMGAAAIFIKE",
+        "entities": [
+          "1"
+        ],
+        "chain_count": 2
+      }
+    ],
+    "chain_ids": [],
+    "entity_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "polymer_composition": "homomeric protein",
+    "homomer_type": "monomer",
+    "homomer_chains": 2,
+    "chain_count": 2,
+    "unique_sequences": 1,
+    "avg_sequence_length": 393.0,
+    "min_sequence_length": 393,
+    "max_sequence_length": 393
+  }
+}

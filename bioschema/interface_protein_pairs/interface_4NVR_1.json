@@ -1,0 +1,408 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4NVR_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4NVR_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4NVR",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4NVR",
+    "name": "Protein 4NVR",
+    "description": "Protein structure with PDB ID: 4NVR. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4NVR_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4NVR",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "99287",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=99287"
+    },
+    "alternateName": [
+      "PDB 4NVR",
+      "Protein ID 4NVR"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4nvr_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4nvr.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4NVR",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4NVR",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4NVR_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-C",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "STM0332",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.1820",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00561",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4NVR\", \"structure_metadata\": {\"pdb_id\": \"4NVR\", \"resolution\": 2.22, \"deposition_date\": \"2013-12-05T00:00:00+0000\", \"release_date\": \"2013-12-18T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"], \"citation\": {\"title\": \"2.22 Angstrom Resolution Crystal Structure of a Putative Acyltransferase from Salmonella enterica.\", \"authors\": [\"Minasov, G.\", \"Wawrzak, Z.\", \"Skarina, T.\", \"Gordon, E.\", \"Stam, J.\", \"Kwon, K.\", \"Savchenko, A.\", \"Anderson, W.F.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 47.931, \"b\": 71.38, \"c\": 90.327, \"alpha\": 113.03, \"beta\": 92.41, \"gamma\": 90.09}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"B\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"C\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"D\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 335, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 335, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 335, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"sequence_length\": 335, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"organism\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"taxonomy_id\": 99287, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 335, \"gene_name\": null, \"uniprot_ids\": [\"Q8ZRI7\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 335.0, \"min_sequence_length\": 335, \"max_sequence_length\": 335}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"pdbx_seq_one_letter_code_can\": \"SNAMSTLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRTMAQDIVMLMDALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTATMYALTDKSFATRYFWWFFLIQPFPLPETMIAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPEMIHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL\", \"pdbx_strand_id\": \"A,B,C,D\", \"pdbx_target_identifier\": \"CSGID-IDP01787\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 307, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"LT2 / SGSC1412 / ATCC 700720\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"MhpC, STM0332\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"99287\", \"pdbx_gene_src_scientific_name\": \"Salmonella enterica\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21-CodonPlus(DE3)-RIPL\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pMCSG7\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.409, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/4nvrA/23464/4nvrA\", \"max_rmsd\": 0.534, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 96279, \"identity\": 100}, {\"cluster_id\": 124467, \"identity\": 95}, {\"cluster_id\": 136621, \"identity\": 90}, {\"cluster_id\": 121787, \"identity\": 70}, {\"cluster_id\": 2501, \"identity\": 50}, {\"cluster_id\": 3063, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Salmonella enterica subsp. enterica serovar Typhimurium LT2\", \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2\", \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2-LTL2\", \"Salmonella typhimurium LT2\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\", \"ncbi_taxonomy_id\": 99287, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Salmonella enterica\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"590\", \"name\": \"Salmonella\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella enterica\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Bacillus cholerae-suis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella cholerae-suis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella choleraesuis\"}, {\"depth\": 9, \"id\": \"28901\", \"name\": \"Salmonella enterica ser. choleraesuis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. enterica\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella cholerae-suis subsp. cholerae-suis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella choleraesuis subsp. choleraesuis\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. Subsp. I\"}, {\"depth\": 10, \"id\": \"59201\", \"name\": \"Salmonella enterica subsp. Subsp. Ixxx\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Bacillus typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella choleraesuis serotype typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica 1,4,[5],12,:i:1,2\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica ser. typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica serotype Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica serovar Typhimurium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella enterica subsp. enterica serovar 1,4,[5],12:i:1,2\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella typhi-murium\"}, {\"depth\": 11, \"id\": \"90371\", \"name\": \"Salmonella typhimurium\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium strain LT2-LTL2\"}, {\"depth\": 12, \"id\": \"99287\", \"name\": \"Salmonella typhimurium LT2\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"MhpC\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"STM0332\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 1, \"id\": \"99287:putative_hydrolase_or_acyltransferase\", \"name\": \"putative hydrolase or acyltransferase\"}, {\"depth\": 0, \"id\": \"99287\", \"name\": \"Salmonella enterica subsp. enterica serovar Typhimurium str. LT2\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 34.542, \"pdbx_description\": \"Putative acyltransferase\", \"pdbx_number_of_molecules\": 4, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Putative acyltransferase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Hydrolase or acyltransferase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q8ZRI7\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 304, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00561\", \"assignment_version\": \"34.0\", \"name\": \"alpha/beta hydrolase fold (Abhydrolase_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0016787\", \"name\": \"hydrolase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR000073\", \"name\": \"Alpha/beta hydrolase fold-1\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR000073\", \"name\": \"Alpha/beta hydrolase fold-1\"}]}, {\"annotation_id\": \"GO:0016746\", \"name\": \"acyltransferase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016746\", \"name\": \"acyltransferase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0046872\", \"name\": \"metal ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR029058\", \"name\": \"Alpha/Beta hydrolase fold\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029058\", \"name\": \"Alpha/Beta hydrolase fold\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"4NVR\", \"rcsb_id\": \"4NVR_1\", \"uniprot_ids\": [\"Q8ZRI7\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q8ZRI7\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.990228013029316, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00561\", \"name\": \"alpha/beta hydrolase fold (Abhydrolase_1)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 41, \"end_seq_id\": 292}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 4}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_2\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 97}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_3\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 103}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_4\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 105}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_5\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 150}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_6\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 178}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_7\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 218}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 3}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.3, 0.67, 1.01, 1.01, 0.71, 0.62, 1.01, 1.09, 0.41, 0.76, 0.79, 1.03, 1.26, 0.91, 0.7, 0.86, -0.14, 0.46, 0.11, -0.59, -0.83, -0.83, -0.48, 0.38, -0.59, 0.38, 0.16, 1.04, 1.39, 1.39, 0.88, 0.91, 0.36, 0.68, 0.63, 0.9, 0.82, 1.29, 0.98, 1.02, 0.71, 0.62, 0.41, -0.4, -1.22, -1.72, -2.22, -1.97, -2.42, -2.5, -1.86, -1.27, -1.06, -0.78, -0.28, 0.0, -0.29, -0.18, -0.1, -0.64, -0.38, 0.3, 0.8, 0.2, -0.39, 0.42, 0.31, 0.62, 0.56, 0.04, -0.84, -1.36, -1.57, -1.61, -2.21, -1.79, -1.83, -2.08, -2.21, -1.62, -1.89, -2.0, -1.64, -1.61, -1.62, -1.97, -2.08, -1.98, -1.97, -1.41, -1.3, -1.61, -0.97, -0.41, 0.23, 1.16, 1.44, 0.84, 0.84, 1.66, 2.0, 1.81, 1.26, 0.54, 0.43, 0.42, 1.12, 1.39, 0.92, 0.61, -0.09, -0.5, -0.04, -0.4, -1.1, -0.94, -1.46, -1.77, -1.91, -1.1, -0.4, 0.07, -0.28, 0.08, -0.57, -0.91, -1.06, -0.09, -0.59, -0.51, -0.66, -0.34, 0.11, 0.79, 0.79, 1.79, 1.52, 1.42, 1.07, 0.99, 0.99, 0.89, 0.24, 0.83, 0.76, 0.48, 0.27, -0.09, -0.38, 0.01, 0.0, 0.07, -0.63, -1.2, -0.81, -0.52, -0.19, 0.21, 0.21, 0.43, 1.01, 1.12, 1.09, 1.09, 1.01, 1.53, 1.04, 0.34, -0.16, -0.44, 0.44, 0.82, 0.16, -0.06, -0.66, -0.28, 0.42, 0.81, 1.02, 0.02, -0.61, -0.61, 0.28, 0.37, 0.12, -0.58, -0.47, -1.32, -0.32, -0.28, 0.03, -0.27, -0.26, -0.3, -0.3, -1.11, -0.48, -0.67, -0.67, -1.01, -1.36, -0.86, -1.27, -0.6, -0.36, -0.94, -1.64, -1.43, -1.43, -1.08, -1.0, -0.86, -0.93, -0.29, 0.38, 0.38, 0.17, 0.41, -0.3, -0.6, -0.04, -0.04, -0.62, -0.4, -0.4, 0.41, 0.17, 0.28, -0.31, -0.31, -0.31, -0.62, -1.2, -0.9, -1.12, -1.23, -0.34, -0.46, -0.38, -0.76, 0.06, -0.26, 0.26, 0.48, 0.88, 0.33, 0.79, 0.93, 1.07, 0.57, 1.42, 0.96, 0.14, 0.67, 0.57, 0.22, 0.27, 0.78, 0.81, 0.27, 0.21, 0.17, -0.64, -0.93, -0.34, -0.39, -1.24, -0.73, -1.04, -0.99, -0.94, -0.36, 0.5, 0.12, -0.02, 0.32, -0.5, -0.2, -0.33, -0.33, -0.92, -1.73, -1.28, -1.73, -2.08, -1.87, -1.47, -0.79, -0.79, -0.83, -0.02, -0.69, -0.6, 0.1, 0.67, 0.0, -0.59, 0.27, 1.12]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.81, 0.74, 0.7, 0.69, 0.57, 0.45, 0.43, 0.39, 0.26, 0.18, 0.09, 0.09, 0.1, 0.08, 0.1, 0.06, 0.07, 0.11, 0.16, 0.1, 0.14, 0.09, 0.12, 0.09, 0.06, 0.06, 0.11, 0.1, 0.1, 0.16, 0.2, 0.31, 0.24, 0.18, 0.18, 0.12, 0.19, 0.18, 0.18, 0.21, 0.3, 0.3, 0.37, 0.37, 0.43, 0.37, 0.45, 0.46, 0.4, 0.38, 0.41, 0.4, 0.32, 0.38, 0.46, 0.53, 0.61, 0.6, 0.55, 0.5, 0.44, 0.45, 0.45, 0.4, 0.41, 0.41, 0.44, 0.44, 0.43, 0.49, 0.51, 0.48, 0.52, 0.56, 0.58, 0.56, 0.58, 0.55, 0.55, 0.6, 0.64, 0.6, 0.58, 0.58, 0.62, 0.6, 0.57, 0.6, 0.62, 0.62, 0.56, 0.52, 0.49, 0.39, 0.37, 0.36, 0.33, 0.23, 0.26, 0.17, 0.17, 0.18, 0.16, 0.14, 0.08, 0.05, 0.05, 0.06, 0.07, 0.06, 0.06, 0.08, 0.1, 0.08, 0.11, 0.12, 0.12, 0.08, 0.1, 0.06, 0.1, 0.06, 0.07, 0.12, 0.15, 0.17, 0.22, 0.16, 0.12, 0.11, 0.06, 0.04, 0.04, 0.02, 0.03, 0.04, 0.04, 0.03, 0.05, 0.04, 0.04, 0.03, 0.03, 0.02, 0.03, 0.02, 0.03, 0.02, 0.02, 0.04, 0.04, 0.03, 0.03, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.0, 0.01, 0.01, 0.01, 0.01, 0.02, 0.03, 0.03, 0.03, 0.03, 0.05, 0.08, 0.12, 0.07, 0.06, 0.12, 0.11, 0.13, 0.11, 0.06, 0.07, 0.09, 0.12, 0.14, 0.15, 0.15, 0.14, 0.14, 0.15, 0.22, 0.33, 0.26, 0.19, 0.2, 0.19, 0.13, 0.14, 0.13, 0.22, 0.24, 0.29, 0.2, 0.2, 0.2, 0.15, 0.07, 0.08, 0.08, 0.06, 0.09, 0.08, 0.06, 0.08, 0.13, 0.08, 0.14, 0.13, 0.13, 0.14, 0.12, 0.09, 0.09, 0.13, 0.14, 0.17, 0.19, 0.28, 0.18, 0.17, 0.16, 0.2, 0.15, 0.18, 0.15, 0.1, 0.11, 0.11, 0.17, 0.1, 0.1, 0.09, 0.08, 0.09, 0.09, 0.06, 0.03, 0.04, 0.03, 0.04, 0.04, 0.07, 0.04, 0.06, 0.06, 0.1, 0.13, 0.11, 0.12, 0.08, 0.13, 0.13, 0.14, 0.16, 0.11, 0.13, 0.11, 0.17, 0.17, 0.22, 0.3, 0.3, 0.31, 0.39, 0.3, 0.31, 0.33, 0.28, 0.29, 0.23, 0.29, 0.28, 0.21, 0.2, 0.23, 0.24, 0.16, 0.23, 0.23, 0.18, 0.13, 0.14, 0.18, 0.2, 0.23, 0.38, 0.39, 0.42, 0.54, 0.65, 0.75]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.29, 0.29, 0.3, 0.31, 0.32, 0.32, 0.33, 0.34, 0.36, 0.37, 0.39, 0.4, 0.42, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.42, 0.43, 0.42, 0.42, 0.41, 0.4, 0.4, 0.4, 0.39, 0.4, 0.4, 0.41, 0.42, 0.43, 0.41, 0.4, 0.38, 0.37, 0.36, 0.35, 0.35, 0.36, 0.36, 0.37, 0.37, 0.38, 0.39, 0.39, 0.39, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.41, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.37, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.43, 0.4, 0.37, 0.33, 0.29, 0.25, 0.2, 0.17, 0.13, 0.11, 0.08, 0.07, 0.06, 0.06, 0.06, 0.05, 0.05, 0.06, 0.06, 0.07, 0.08, 0.09, 0.09, 0.1, 0.09, 0.08, 0.08, 0.07, 0.06, 0.05, 0.05, 0.05, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.05, 0.05, 0.06, 0.07, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.13, 0.13, 0.12, 0.12, 0.11, 0.11, 0.1, 0.1, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.1, 0.1, 0.1, 0.1, 0.1, 0.11, 0.11, 0.1, 0.1, 0.1, 0.09, 0.09, 0.1, 0.1, 0.1, 0.11, 0.12, 0.13, 0.14, 0.16, 0.18, 0.2, 0.22, 0.23, 0.24, 0.25, 0.25, 0.26, 0.25, 0.25, 0.25, 0.25, 0.24, 0.23, 0.23, 0.23, 0.23, 0.24, 0.24, 0.24, 0.23, 0.23, 0.22, 0.21, 0.21, 0.21, 0.21, 0.22, 0.22, 0.22, 0.23, 0.25, 0.26, 0.29, 0.31, 0.32, 0.32, 0.31, 0.29, 0.26, 0.24, 0.22, 0.2, 0.18, 0.18, 0.19, 0.19, 0.21, 0.23, 0.27, 0.32, 0.37, 0.41, 0.42, 0.4, 0.42, 0.43, 0.42, 0.4, 0.38, 0.36, 0.34, 0.33, 0.31, 0.3, 0.3, 0.31, 0.31, 0.31, 0.32, 0.32, 0.31, 0.3, 0.28, 0.26, 0.24, 0.22, 0.2, 0.18, 0.17, 0.15, 0.14, 0.13, 0.12, 0.11, 0.11, 0.12, 0.12, 0.13, 0.14, 0.15, 0.16, 0.16, 0.19, 0.21, 0.24, 0.26, 0.27, 0.28, 0.29, 0.32, 0.34, 0.37, 0.41, 0.41, 0.42, 0.43, 0.43, 0.4]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 7, \"coverage\": 0.0228, \"type\": \"modified_monomer\"}, {\"count\": 1, \"coverage\": 0.00977, \"maximum_length\": 3, \"minimum_length\": 3, \"type\": \"artifact\"}, {\"count\": 1, \"coverage\": 0.82085, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"121787_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 307, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"124467_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 307, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3063_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 8, \"ref_beg_seq_id\": 8}, {\"entity_beg_seq_id\": 9, \"length\": 14, \"ref_beg_seq_id\": 20}, {\"entity_beg_seq_id\": 23, \"length\": 2, \"ref_beg_seq_id\": 36}, {\"entity_beg_seq_id\": 25, \"length\": 12, \"ref_beg_seq_id\": 39}, {\"entity_beg_seq_id\": 37, \"length\": 160, \"ref_beg_seq_id\": 55}, {\"entity_beg_seq_id\": 197, \"length\": 44, \"ref_beg_seq_id\": 217}, {\"entity_beg_seq_id\": 241, \"length\": 33, \"ref_beg_seq_id\": 263}, {\"entity_beg_seq_id\": 274, \"length\": 34, \"ref_beg_seq_id\": 299}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"96279_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 307, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"136621_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 307, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2501_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 26, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 27, \"length\": 171, \"ref_beg_seq_id\": 28}, {\"entity_beg_seq_id\": 198, \"length\": 44, \"ref_beg_seq_id\": 201}, {\"entity_beg_seq_id\": 242, \"length\": 66, \"ref_beg_seq_id\": 247}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q8ZRI7\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 304, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"4NVR_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"C\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:56.090736\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.22,
+            "experimentalMethod": null,
+            "depositionDate": "2013-12-05T00:00:00+0000",
+            "releaseDate": "2013-12-18T00:00:00+0000",
+            "sourceOrganism": [
+              "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 4,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.22,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL",
+        "description": "Amino acid sequence for chain A (length: 335)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 335
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL",
+        "description": "Amino acid sequence for chain B (length: 335)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 335
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL",
+        "description": "Amino acid sequence for chain C (length: 335)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 335
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "SNA(MSE)STLIECGASPFIPGFALKDVRLENGLTVRVAIGGSGSPLVLLHGHPQNHTTWRKVAPTLAQNHTVILPDLRGYGDSDKPTSDPAHRTYSKRT(MSE)AQDIV(MSE)L(MSE)DALGFSRFAFVGHDRGGRVGHRLALDYPDRVTCCTFIDIAPTAT(MSE)YALTDKSFATRYFWWFFLIQPFPLPET(MSE)IAHDPAFFLRKHISGQLKIEGATSQEAFNEYLRCYQNPE(MSE)IHAICEDYRAAATIDLDDDAADTSARIRCPLQLLWGGLGTVGQLYNVVGTWKEKALNVQGEALPCGHSPQEECPEYFIQKLQSFLHSVL",
+        "description": "Amino acid sequence for chain D (length: 335)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 335
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "2.22 Angstrom Resolution Crystal Structure of a Putative Acyltransferase from Salmonella enterica.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 335",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4NVR_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "3QYJ_3"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4NVR_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4NVR",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "C",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1882.6,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 55,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "STM0332",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.1820",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00561",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 392.58,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1490.02,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.208530755338362,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.791469244661636,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4NVR_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "3QYJ_3"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

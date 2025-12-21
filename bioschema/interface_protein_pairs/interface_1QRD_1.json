@@ -1,0 +1,380 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1QRD_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1QRD_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1QRD",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1QRD",
+    "name": "Protein 1QRD",
+    "description": "Protein structure with PDB ID: 1QRD. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1QRD_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1QRD",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Rattus rattus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "10117",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10117"
+    },
+    "alternateName": [
+      "PDB 1QRD",
+      "Protein ID 1QRD"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1qrd_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1qrd.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1QRD",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1QRD",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1QRD_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "Nqo1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.360",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02525",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1QRD\", \"structure_metadata\": {\"pdb_id\": \"1QRD\", \"resolution\": 2.4, \"deposition_date\": \"1995-07-28T00:00:00+0000\", \"release_date\": \"1996-10-14T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Rattus rattus\"], \"citation\": {\"title\": \"The three-dimensional structure of NAD(P)H:quinone reductase, a flavoprotein involved in cancer chemoprotection and chemotherapy: mechanism of the two-electron reduction.\", \"doi\": \"10.1073/pnas.92.19.8846\", \"authors\": [\"Li, R.\", \"Bianchet, M.A.\", \"Talalay, P.\", \"Amzel, L.M.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 72.0, \"b\": 107.0, \"c\": 88.4, \"alpha\": 90.0, \"beta\": 92.6, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\", \"B\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Rattus rattus\", \"sequence_length\": 273, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Rattus rattus\", \"sequence_length\": 273, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\", \"organism\": \"Rattus rattus\", \"taxonomy_id\": 10117, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 273, \"gene_name\": null, \"uniprot_ids\": [\"P05982\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 273.0, \"min_sequence_length\": 273, \"max_sequence_length\": 273}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\", \"pdbx_seq_one_letter_code_can\": \"AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 273, \"type\": \"polypeptide(L)\"}, \"entity_src_nat\": [{\"common_name\": \"black rat\", \"genus\": \"Rattus\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_ncbi_taxonomy_id\": \"10117\", \"pdbx_organism_scientific\": \"Rattus rattus\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.203, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/1qrdA/3518/1qrdA\", \"max_rmsd\": 0.203, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 100275, \"identity\": 100}, {\"cluster_id\": 129531, \"identity\": 95}, {\"cluster_id\": 47860, \"identity\": 90}, {\"cluster_id\": 3914, \"identity\": 70}, {\"cluster_id\": 1410, \"identity\": 50}, {\"cluster_id\": 1856, \"identity\": 30}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Mus rattus\", \"Rattus rattoides\", \"Rattus wroughtoni\", \"black rat\", \"house rat\", \"roof rat\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Rattus rattus\", \"ncbi_taxonomy_id\": 10117, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Rattus rattus\", \"source_type\": \"natural\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"Mammalia\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"mammals\"}, {\"depth\": 19, \"id\": \"32525\", \"name\": \"Theria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Eutheria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Placentalia\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"eutherian mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placental mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placentals\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreoeutheria\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreotheria\"}, {\"depth\": 22, \"id\": \"314146\", \"name\": \"Euarchontoglires\"}, {\"depth\": 23, \"id\": \"314147\", \"name\": \"Glires\"}, {\"depth\": 23, \"id\": \"314147\", \"name\": \"Rodents and rabbits\"}, {\"depth\": 24, \"id\": \"9989\", \"name\": \"Rodentia\"}, {\"depth\": 24, \"id\": \"9989\", \"name\": \"rodent\"}, {\"depth\": 24, \"id\": \"9989\", \"name\": \"rodents\"}, {\"depth\": 25, \"id\": \"1963758\", \"name\": \"Myomorpha\"}, {\"depth\": 25, \"id\": \"1963758\", \"name\": \"mice and others\"}, {\"depth\": 26, \"id\": \"337687\", \"name\": \"Muroidea\"}, {\"depth\": 27, \"id\": \"10066\", \"name\": \"Muridae\"}, {\"depth\": 28, \"id\": \"39107\", \"name\": \"Murinae\"}, {\"depth\": 29, \"id\": \"10114\", \"name\": \"Rattus\"}, {\"depth\": 29, \"id\": \"10114\", \"name\": \"rat\"}, {\"depth\": 29, \"id\": \"10114\", \"name\": \"rats\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"Rattus rattus\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"Mus rattus\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"Rattus rattoides\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"Rattus wroughtoni\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"black rat\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"house rat\"}, {\"depth\": 30, \"id\": \"10117\", \"name\": \"roof rat\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"10116\", \"name\": \"Rattus norvegicus (brown rat)\"}, {\"depth\": 2, \"id\": \"10116:19:nadph_quinone_dehydrogenase_1\", \"name\": \"NAD(P)H quinone dehydrogenase 1\"}, {\"depth\": 1, \"id\": \"10116:19\", \"name\": \"Chromosome 19\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 30.852, \"pdbx_description\": \"QUINONE-REDUCTASE\", \"pdbx_ec\": \"1.6.99.2\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"nat\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.6\", \"name\": \"Acting on NADH or NADPH\"}, {\"depth\": 3, \"id\": \"1.6.99\", \"name\": \"With unknown physiological acceptors\"}, {\"depth\": 4, \"id\": \"1.6.99.2\", \"name\": \"1.6.99.2\"}, {\"depth\": 1, \"id\": \"1\", \"name\": \"Oxidoreductases\"}, {\"depth\": 2, \"id\": \"1.6\", \"name\": \"Acting on NADH or NADPH\"}, {\"depth\": 3, \"id\": \"1.6.5\", \"name\": \"With a quinone or similar compound as acceptor\"}, {\"depth\": 4, \"id\": \"1.6.5.2\", \"name\": \"NAD(P)H dehydrogenase (quinone)\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"QUINONE-REDUCTASE\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"DT-DIAPHORASE\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"1.6.99.2\", \"provenance_source\": \"PDB Primary Data\"}, {\"depth\": 4, \"ec\": \"1.6.5.2\", \"provenance_source\": \"UniProt\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"NAD(P)H dehydrogenase [quinone] 1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P05982\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 2}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF02525\", \"assignment_version\": \"34.0\", \"name\": \"Flavodoxin-like fold (Flavodoxin_2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:1904844\", \"name\": \"response to L-glutamine\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0001101\", \"name\": \"response to acid chemical\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:1904844\", \"name\": \"response to L-glutamine\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:1901698\", \"name\": \"response to nitrogen compound\"}, {\"id\": \"GO:0043200\", \"name\": \"response to amino acid\"}]}, {\"annotation_id\": \"GO:0009410\", \"name\": \"response to xenobiotic stimulus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009410\", \"name\": \"response to xenobiotic stimulus\"}]}, {\"annotation_id\": \"GO:0050136\", \"name\": \"NADH:ubiquinone reductase (non-electrogenic) activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0003955\", \"name\": \"NAD(P)H dehydrogenase (quinone) activity\"}, {\"id\": \"GO:0016651\", \"name\": \"oxidoreductase activity, acting on NAD(P)H\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0016655\", \"name\": \"oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor\"}, {\"id\": \"GO:0050136\", \"name\": \"NADH dehydrogenase (quinone) (non-electrogenic) activity\"}, {\"id\": \"GO:0003954\", \"name\": \"NADH dehydrogenase activity\"}]}, {\"annotation_id\": \"GO:0042360\", \"name\": \"vitamin E metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042360\", \"name\": \"vitamin E metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0019430\", \"name\": \"removal of superoxide radicals\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\"}, {\"id\": \"GO:0098754\", \"name\": \"detoxification\"}, {\"id\": \"GO:0072593\", \"name\": \"reactive oxygen species metabolic process\"}, {\"id\": \"GO:0062197\", \"name\": \"cellular response to chemical stress\"}, {\"id\": \"GO:0000303\", \"name\": \"response to superoxide\"}, {\"id\": \"GO:0098869\", \"name\": \"cellular oxidant detoxification\"}, {\"id\": \"GO:0071450\", \"name\": \"cellular response to oxygen radical\"}, {\"id\": \"GO:0034614\", \"name\": \"cellular response to reactive oxygen species\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1990748\", \"name\": \"cellular detoxification\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:1901701\", \"name\": \"cellular response to oxygen-containing compound\"}, {\"id\": \"GO:0000302\", \"name\": \"response to reactive oxygen species\"}, {\"id\": \"GO:0009636\", \"name\": \"response to toxic substance\"}, {\"id\": \"GO:0019430\", \"name\": \"removal of superoxide radicals\"}, {\"id\": \"GO:0006801\", \"name\": \"superoxide metabolic process\"}, {\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0071451\", \"name\": \"cellular response to superoxide\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0097237\", \"name\": \"cellular response to toxic substance\"}, {\"id\": \"GO:0000305\", \"name\": \"response to oxygen radical\"}]}, {\"annotation_id\": \"GO:0006801\", \"name\": \"superoxide metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006801\", \"name\": \"superoxide metabolic process\"}, {\"id\": \"GO:0072593\", \"name\": \"reactive oxygen species metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0043066\", \"name\": \"negative regulation of apoptotic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0043069\", \"name\": \"negative regulation of programmed cell death\"}, {\"id\": \"GO:0042981\", \"name\": \"regulation of apoptotic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0043067\", \"name\": \"regulation of programmed cell death\"}, {\"id\": \"GO:0008219\", \"name\": \"cell death\"}, {\"id\": \"GO:0043066\", \"name\": \"negative regulation of apoptotic process\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006915\", \"name\": \"apoptotic process\"}, {\"id\": \"GO:0012501\", \"name\": \"programmed cell death\"}]}, {\"annotation_id\": \"GO:0002931\", \"name\": \"response to ischemia\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0002931\", \"name\": \"response to ischemia\"}]}, {\"annotation_id\": \"GO:0033574\", \"name\": \"response to testosterone\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:1901654\", \"name\": \"response to ketone\"}, {\"id\": \"GO:0033993\", \"name\": \"response to lipid\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0033574\", \"name\": \"response to testosterone\"}]}, {\"annotation_id\": \"GO:0004784\", \"name\": \"superoxide dismutase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004784\", \"name\": \"superoxide dismutase activity\"}, {\"id\": \"GO:0016721\", \"name\": \"oxidoreductase activity, acting on superoxide radicals as acceptor\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0016209\", \"name\": \"antioxidant activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0006743\", \"name\": \"ubiquinone metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042180\", \"name\": \"ketone metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006743\", \"name\": \"ubiquinone metabolic process\"}, {\"id\": \"GO:1901661\", \"name\": \"quinone metabolic process\"}]}, {\"annotation_id\": \"GO:0045087\", \"name\": \"innate immune response\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0006955\", \"name\": \"immune response\"}, {\"id\": \"GO:0051707\", \"name\": \"response to other organism\"}, {\"id\": \"GO:0006952\", \"name\": \"defense response\"}, {\"id\": \"GO:0140546\", \"name\": \"defense response to symbiont\"}, {\"id\": \"GO:0009605\", \"name\": \"response to external stimulus\"}, {\"id\": \"GO:0009607\", \"name\": \"response to biotic stimulus\"}, {\"id\": \"GO:0002376\", \"name\": \"immune system process\"}, {\"id\": \"GO:0098542\", \"name\": \"defense response to other organism\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0045087\", \"name\": \"innate immune response\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0043207\", \"name\": \"response to external biotic stimulus\"}]}, {\"annotation_id\": \"GO:0030163\", \"name\": \"protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}]}, {\"annotation_id\": \"GO:0003955\", \"name\": \"NAD(P)H dehydrogenase (quinone) activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0003955\", \"name\": \"NAD(P)H dehydrogenase (quinone) activity\"}, {\"id\": \"GO:0016651\", \"name\": \"oxidoreductase activity, acting on NAD(P)H\"}, {\"id\": \"GO:0016655\", \"name\": \"oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0043525\", \"name\": \"positive regulation of neuron apoptotic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0051402\", \"name\": \"neuron apoptotic process\"}, {\"id\": \"GO:0043068\", \"name\": \"positive regulation of programmed cell death\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0042981\", \"name\": \"regulation of apoptotic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0048518\", \"name\": \"positive regulation of biological process\"}, {\"id\": \"GO:0043067\", \"name\": \"regulation of programmed cell death\"}, {\"id\": \"GO:0008219\", \"name\": \"cell death\"}, {\"id\": \"GO:0043065\", \"name\": \"positive regulation of apoptotic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006915\", \"name\": \"apoptotic process\"}, {\"id\": \"GO:0043525\", \"name\": \"positive regulation of neuron apoptotic process\"}, {\"id\": \"GO:0012501\", \"name\": \"programmed cell death\"}, {\"id\": \"GO:0048522\", \"name\": \"positive regulation of cellular process\"}, {\"id\": \"GO:0043523\", \"name\": \"regulation of neuron apoptotic process\"}]}, {\"annotation_id\": \"GO:0008753\", \"name\": \"NADPH dehydrogenase (quinone) activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003959\", \"name\": \"NADPH dehydrogenase activity\"}, {\"id\": \"GO:0008753\", \"name\": \"NADPH dehydrogenase (quinone) activity\"}, {\"id\": \"GO:0016491\", \"name\": \"oxidoreductase activity\"}, {\"id\": \"GO:0003955\", \"name\": \"NAD(P)H dehydrogenase (quinone) activity\"}, {\"id\": \"GO:0016651\", \"name\": \"oxidoreductase activity, acting on NAD(P)H\"}, {\"id\": \"GO:0016655\", \"name\": \"oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0071248\", \"name\": \"cellular response to metal ion\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0071248\", \"name\": \"cellular response to metal ion\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0010038\", \"name\": \"response to metal ion\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"IPR003680\", \"name\": \"Flavodoxin-like fold\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR003680\", \"name\": \"Flavodoxin-like fold\"}]}, {\"annotation_id\": \"GO:0030425\", \"name\": \"dendrite\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0036477\", \"name\": \"somatodendritic compartment\"}, {\"id\": \"GO:0042995\", \"name\": \"cell projection\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030425\", \"name\": \"dendrite\"}, {\"id\": \"GO:0097447\", \"name\": \"dendritic tree\"}, {\"id\": \"GO:0043005\", \"name\": \"neuron projection\"}, {\"id\": \"GO:0120025\", \"name\": \"plasma membrane bounded cell projection\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0110076\", \"name\": \"negative regulation of ferroptosis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110076\", \"name\": \"negative regulation of ferroptosis\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0043069\", \"name\": \"negative regulation of programmed cell death\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0043067\", \"name\": \"regulation of programmed cell death\"}, {\"id\": \"GO:0008219\", \"name\": \"cell death\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0110075\", \"name\": \"regulation of ferroptosis\"}, {\"id\": \"GO:0097707\", \"name\": \"ferroptosis\"}, {\"id\": \"GO:0012501\", \"name\": \"programmed cell death\"}]}, {\"annotation_id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0062197\", \"name\": \"cellular response to chemical stress\"}]}, {\"annotation_id\": \"GO:0045471\", \"name\": \"response to ethanol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0097305\", \"name\": \"response to alcohol\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0045471\", \"name\": \"response to ethanol\"}]}, {\"annotation_id\": \"GO:0051602\", \"name\": \"response to electrical stimulus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051602\", \"name\": \"response to electrical stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009628\", \"name\": \"response to abiotic stimulus\"}]}, {\"annotation_id\": \"GO:0070301\", \"name\": \"cellular response to hydrogen peroxide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0034599\", \"name\": \"cellular response to oxidative stress\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0062197\", \"name\": \"cellular response to chemical stress\"}, {\"id\": \"GO:1901701\", \"name\": \"cellular response to oxygen-containing compound\"}, {\"id\": \"GO:0070301\", \"name\": \"cellular response to hydrogen peroxide\"}, {\"id\": \"GO:0000302\", \"name\": \"response to reactive oxygen species\"}, {\"id\": \"GO:0042542\", \"name\": \"response to hydrogen peroxide\"}, {\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0034614\", \"name\": \"cellular response to reactive oxygen species\"}, {\"id\": \"GO:0070887\", \"name\": \"cellular response to chemical stimulus\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0000209\", \"name\": \"protein polyubiquitination\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0000209\", \"name\": \"protein polyubiquitination\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0016567\", \"name\": \"protein ubiquitination\"}, {\"id\": \"GO:0043412\", \"name\": \"macromolecule modification\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0043687\", \"name\": \"post-translational protein modification\"}, {\"id\": \"GO:0036211\", \"name\": \"protein modification process\"}, {\"id\": \"GO:0032446\", \"name\": \"protein modification by small protein conjugation\"}, {\"id\": \"GO:0070647\", \"name\": \"protein modification by small protein conjugation or removal\"}]}, {\"annotation_id\": \"GO:1905395\", \"name\": \"response to flavonoid\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1905395\", \"name\": \"response to flavonoid\"}]}, {\"annotation_id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0045454\", \"name\": \"cell redox homeostasis\"}, {\"id\": \"GO:0019725\", \"name\": \"cellular homeostasis\"}, {\"id\": \"GO:0042592\", \"name\": \"homeostatic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0043279\", \"name\": \"response to alkaloid\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901698\", \"name\": \"response to nitrogen compound\"}, {\"id\": \"GO:0043279\", \"name\": \"response to alkaloid\"}]}, {\"annotation_id\": \"GO:0043025\", \"name\": \"neuronal cell body\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0036477\", \"name\": \"somatodendritic compartment\"}, {\"id\": \"GO:0044297\", \"name\": \"cell body\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0043025\", \"name\": \"neuronal cell body\"}]}, {\"annotation_id\": \"GO:0042177\", \"name\": \"negative regulation of protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0048519\", \"name\": \"negative regulation of biological process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}, {\"id\": \"GO:0042177\", \"name\": \"negative regulation of protein catabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:0048523\", \"name\": \"negative regulation of cellular process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0051248\", \"name\": \"negative regulation of protein metabolic process\"}, {\"id\": \"GO:0010605\", \"name\": \"negative regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0009895\", \"name\": \"negative regulation of catabolic process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0051246\", \"name\": \"regulation of protein metabolic process\"}, {\"id\": \"GO:0009892\", \"name\": \"negative regulation of metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0009894\", \"name\": \"regulation of catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0042176\", \"name\": \"regulation of protein catabolic process\"}]}, {\"annotation_id\": \"GO:0007584\", \"name\": \"response to nutrient\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0031667\", \"name\": \"response to nutrient levels\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0007584\", \"name\": \"response to nutrient\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0006979\", \"name\": \"response to oxidative stress\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006979\", \"name\": \"response to oxidative stress\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"IPR029039\", \"name\": \"Flavoprotein-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029039\", \"name\": \"Flavoprotein-like superfamily\"}]}, {\"annotation_id\": \"GO:1904880\", \"name\": \"response to hydrogen sulfide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1904880\", \"name\": \"response to hydrogen sulfide\"}]}, {\"annotation_id\": \"GO:0032496\", \"name\": \"response to lipopolysaccharide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033993\", \"name\": \"response to lipid\"}, {\"id\": \"GO:0051707\", \"name\": \"response to other organism\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0009605\", \"name\": \"response to external stimulus\"}, {\"id\": \"GO:0032496\", \"name\": \"response to lipopolysaccharide\"}, {\"id\": \"GO:0009607\", \"name\": \"response to biotic stimulus\"}, {\"id\": \"GO:0009617\", \"name\": \"response to bacterium\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0043207\", \"name\": \"response to external biotic stimulus\"}, {\"id\": \"GO:0002237\", \"name\": \"response to molecule of bacterial origin\"}]}, {\"annotation_id\": \"GO:0042373\", \"name\": \"vitamin K metabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042373\", \"name\": \"vitamin K metabolic process\"}, {\"id\": \"GO:0042180\", \"name\": \"ketone metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"GO:0014075\", \"name\": \"response to amine\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0014075\", \"name\": \"response to amine\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901698\", \"name\": \"response to nitrogen compound\"}]}, {\"annotation_id\": \"GO:0009743\", \"name\": \"response to carbohydrate\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009743\", \"name\": \"response to carbohydrate\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0009725\", \"name\": \"response to hormone\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0009725\", \"name\": \"response to hormone\"}, {\"id\": \"GO:0009719\", \"name\": \"response to endogenous stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"GO:0032355\", \"name\": \"response to estradiol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033993\", \"name\": \"response to lipid\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0032355\", \"name\": \"response to estradiol\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}]}, {\"annotation_id\": \"GO:0005634\", \"name\": \"nucleus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0042802\", \"name\": \"identical protein binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0042802\", \"name\": \"identical protein binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:1904772\", \"name\": \"response to tetrachloromethane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:1904772\", \"name\": \"response to tetrachloromethane\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}]}, {\"annotation_id\": \"IPR051545\", \"name\": \"NAD(P)H dehydrogenase (quinone)\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR051545\", \"name\": \"NAD(P)H dehydrogenase (quinone)\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1QRD\", \"rcsb_id\": \"1QRD_1\", \"uniprot_ids\": [\"P05982\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P05982\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.9963503649635036}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF02525\", \"name\": \"Flavodoxin-like fold (Flavodoxin_2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 3, \"end_seq_id\": 211}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [1.68, 1.68, 0.86, 1.56, 1.67, 0.97, 0.47, -0.12, -0.28, -1.09, -1.43, -0.88, -0.87, -0.91, -0.8, -0.52, -0.23, -0.08, -0.08, 0.27, 0.49, -0.16, -0.16, -0.2, -0.44, -0.74, -1.6, -0.74, -0.48, -1.29, -0.94, -0.9, -0.04, -0.14, 0.16, 0.76, -0.1, -0.26, -0.26, -0.34, 0.47, 0.54, 0.6, -0.1, -0.7, -0.7, -0.51, -0.2, -0.07, -0.88, -1.56, -1.9, -1.79, -1.49, -1.49, -2.38, -1.99, -2.33, -2.09, -2.09, -1.19, -1.19, -1.19, -0.89, -0.08, -0.19, 0.06, -0.23, -0.44, -0.96, -1.07, -0.56, -0.56, -1.16, -1.74, -1.1, -0.2, 0.39, 0.04, 0.16, -0.7, -1.04, -0.44, -0.44, -0.74, -1.01, -1.6, -0.79, 0.07, 1.0, 1.74, 0.93, 1.63, 1.26, 1.48, 1.72, 1.2, 1.04, 0.5, 0.66, 0.87, 0.76, 1.43, 1.43, 1.14, 1.2, 0.79, 1.14, 0.29, -0.03, 0.23, 0.16, 0.2, 0.83, 0.83, 1.24, 1.13, 1.38, 1.8, 1.19, 0.97, 0.42, 0.43, 0.33, -0.37, -1.0, -0.9, -1.0, -0.54, -1.13, -1.44, -2.09, -2.38, -2.07, -1.21, -0.74, -0.66, -0.47, -0.16, 0.16, 0.54, 0.93, 0.92, 0.46, -0.06, 0.24, -0.4, -0.41, 0.09, -0.26, -0.26, 0.3, -0.01, 0.03, -0.57, -0.21, -0.51, -0.47, 0.42, 0.89, 0.32, 0.5, 1.04, 1.04, 0.74, 1.09, 1.12, 1.04, 0.12, 0.53, 0.99, 0.44, 1.14, 0.84, 1.36, 1.28, 0.47, 0.79, 0.09, 0.23, 0.74, 0.29, 0.59, 0.62, 0.16, 0.19, 0.29, 0.5, -0.1, -0.96, -0.61, -1.02, -1.06, -1.4, -0.58, -0.08, -0.29, -0.16, 0.13, -0.5, -0.43, -1.4, -0.59, -1.44, -1.94, -1.09, -1.14, -1.43, -1.39, -1.04, -0.72, -0.72, -0.48, -0.09, -0.36, -0.43, -0.13, 0.17, 0.68, 1.17, 0.36, 0.92, 0.22, 0.33, 0.12, 0.41, 0.46, 0.34, 0.46, 1.27, 0.41, 0.37, -0.33, 0.52, -0.07, -0.41, -1.11, -1.92, -2.78, -2.78, -2.73, -2.78, -2.93, -2.59, -1.78, -1.48, -0.62, -0.23, -0.16, -0.12, 0.73, 0.38, -0.01, -0.52, 0.07, -0.58, -0.33, -0.37, -0.4, -1.21, -0.67, -0.67, -0.38, -1.38, -1.63]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.63, 0.55, 0.51, 0.47, 0.42, 0.38, 0.23, 0.2, 0.1, 0.06, 0.03, 0.04, 0.07, 0.06, 0.05, 0.04, 0.06, 0.09, 0.07, 0.12, 0.13, 0.12, 0.15, 0.09, 0.1, 0.07, 0.05, 0.11, 0.1, 0.18, 0.15, 0.13, 0.12, 0.09, 0.12, 0.09, 0.14, 0.16, 0.13, 0.15, 0.15, 0.14, 0.15, 0.16, 0.17, 0.17, 0.22, 0.28, 0.3, 0.29, 0.3, 0.36, 0.46, 0.48, 0.45, 0.46, 0.47, 0.5, 0.42, 0.5, 0.56, 0.57, 0.52, 0.49, 0.41, 0.47, 0.49, 0.49, 0.47, 0.36, 0.37, 0.38, 0.4, 0.3, 0.23, 0.26, 0.26, 0.33, 0.29, 0.34, 0.22, 0.23, 0.2, 0.22, 0.26, 0.22, 0.15, 0.08, 0.04, 0.04, 0.04, 0.04, 0.02, 0.01, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.01, 0.02, 0.04, 0.07, 0.06, 0.04, 0.07, 0.05, 0.1, 0.1, 0.17, 0.2, 0.2, 0.25, 0.34, 0.3, 0.21, 0.22, 0.13, 0.22, 0.21, 0.15, 0.14, 0.15, 0.16, 0.19, 0.27, 0.2, 0.19, 0.13, 0.08, 0.1, 0.06, 0.06, 0.06, 0.06, 0.05, 0.05, 0.05, 0.05, 0.03, 0.03, 0.03, 0.03, 0.02, 0.01, 0.01, 0.01, 0.02, 0.02, 0.03, 0.03, 0.02, 0.02, 0.02, 0.02, 0.02, 0.04, 0.08, 0.08, 0.12, 0.16, 0.11, 0.19, 0.13, 0.12, 0.2, 0.2, 0.11, 0.1, 0.15, 0.2, 0.22, 0.23, 0.31, 0.23, 0.16, 0.17, 0.16, 0.13, 0.15, 0.12, 0.08, 0.08, 0.06, 0.12, 0.17, 0.16, 0.1, 0.11, 0.12, 0.08, 0.09, 0.09, 0.09, 0.07, 0.12, 0.13, 0.08, 0.05, 0.05, 0.04, 0.06, 0.07, 0.12, 0.15, 0.13, 0.14, 0.15, 0.21, 0.3, 0.3, 0.29, 0.29, 0.31, 0.3, 0.26, 0.26, 0.36, 0.45, 0.47, 0.48, 0.49, 0.47, 0.48, 0.5, 0.47, 0.46, 0.46, 0.47, 0.41, 0.42, 0.39, 0.5, 0.51, 0.62, 0.66, 0.75, 0.78, 0.8, 0.82, 0.9, 0.92, 0.94, 0.96]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.15, 0.15, 0.15, 0.16, 0.16, 0.16, 0.17, 0.18, 0.19, 0.19, 0.21, 0.21, 0.22, 0.24, 0.25, 0.26, 0.27, 0.27, 0.29, 0.3, 0.3, 0.29, 0.29, 0.29, 0.29, 0.29, 0.28, 0.28, 0.28, 0.27, 0.27, 0.29, 0.31, 0.33, 0.35, 0.37, 0.39, 0.41, 0.43, 0.41, 0.38, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.42, 0.42, 0.4, 0.38, 0.37, 0.36, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.3, 0.3, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.25, 0.24, 0.23, 0.23, 0.22, 0.21, 0.2, 0.2, 0.19, 0.18, 0.17, 0.16, 0.16, 0.15, 0.14, 0.13, 0.13, 0.12, 0.12, 0.11, 0.11, 0.11, 0.11, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.09, 0.09, 0.09, 0.08, 0.08, 0.07, 0.07, 0.06, 0.06, 0.06, 0.07, 0.07, 0.07, 0.07, 0.07, 0.08, 0.08, 0.07, 0.07, 0.06, 0.06, 0.05, 0.05, 0.04, 0.04, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.03, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.04, 0.05, 0.04, 0.04, 0.05, 0.05, 0.05, 0.06, 0.06, 0.06, 0.06, 0.07, 0.07, 0.08, 0.08, 0.09, 0.1, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.29, 0.31, 0.34, 0.35, 0.35, 0.35, 0.36, 0.36, 0.37, 0.37, 0.36, 0.36, 0.34, 0.31, 0.29, 0.26, 0.24, 0.22, 0.2, 0.18, 0.16, 0.15, 0.14, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.12, 0.12, 0.11, 0.1, 0.1, 0.1, 0.1, 0.11, 0.12, 0.12, 0.12, 0.12, 0.13, 0.15, 0.17, 0.19, 0.21, 0.23, 0.24, 0.26, 0.29, 0.33, 0.37, 0.4, 0.43, 0.42, 0.41, 0.39, 0.37, 0.34, 0.32, 0.31, 0.31, 0.31, 0.31, 0.32, 0.32, 0.34, 0.36, 0.39, 0.43, 0.38, 0.34, 0.31, 0.29, 0.27, 0.26, 0.25, 0.25, 0.26, 0.27, 0.3, 0.33, 0.36, 0.38, 0.4, 0.41, 0.43, 0.42, 0.41, 0.41, 0.41, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.76557, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3914_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 22}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"129531_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P05982\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1410_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 99, \"ref_beg_seq_id\": 22}, {\"entity_beg_seq_id\": 100, \"length\": 174, \"ref_beg_seq_id\": 135}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"100275_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 2}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1856_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 99, \"ref_beg_seq_id\": 29}, {\"entity_beg_seq_id\": 100, \"length\": 30, \"ref_beg_seq_id\": 142}, {\"entity_beg_seq_id\": 130, \"length\": 144, \"ref_beg_seq_id\": 180}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"47860_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 273, \"ref_beg_seq_id\": 2}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"DT-DIAPHORASE\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL3091269\", \"target_taxonomy_id\": 10116, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 272, \"target_beg_seq_id\": 2}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 8.0, \"binding_assay_value_type\": \"pKi\", \"cofactor_in_ch_ikey\": \"DOBMPNYZJYQDGZ-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=c1oc2ccccc2c(O)c1Cc1c(O)c2ccccc2oc1=O\", \"cofactor_name\": \"DICUMAROL\", \"cofactor_resource_id\": \"CHEMBL1466\", \"mechanism_of_action\": \"Vitamin k epoxide reductase complex subunit 1 isoform 1 inhibitor\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3091269\"}], \"rcsb_id\": \"1QRD_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:17.464530\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.4,
+            "experimentalMethod": null,
+            "depositionDate": "1995-07-28T00:00:00+0000",
+            "releaseDate": "1996-10-14T00:00:00+0000",
+            "sourceOrganism": [
+              "Rattus rattus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.4,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Rattus rattus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK",
+        "description": "Amino acid sequence for chain A (length: 273)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 273
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "AVRRALIVLAHAERTSFNYAMKEAAVEALKKKGWEVVESDLYAMNFNPLISRNDITGEPKDSENFQYPVESSLAYKEGRLSPDIVAEQKKLEAADLVIFQFPLYWFGVPAILKGWFERVLVAGFAYTYATMYDKGPFQNKKTLLSITTGGSGSMYSLQGVHGDMNVILWPIQSGILRFCGFQVLEPQLVYSIGHTPPDARVQVLEGWKKRLETVWEESPLYFAPSSLFDLNFQAGFLLKKEVQEEQKKNKFGLSVGHHLGKSIPADNQIKARK",
+        "description": "Amino acid sequence for chain B (length: 273)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 273
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "The three-dimensional structure of NAD(P)H:quinone reductase, a flavoprotein involved in cancer chemoprotection and chemotherapy: mechanism of the two-electron reduction.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1073/pnas.92.19.8846",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 273",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1QRD_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1QRD_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1QRD",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1218.02,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 39,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "Nqo1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.360",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02525",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 406.480000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 811.550000000001,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.333721942168437,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.666286267877373,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1QRD_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

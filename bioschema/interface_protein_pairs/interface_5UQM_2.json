@@ -1,0 +1,411 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5UQM_2",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "5UQM_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5UQM",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5UQM",
+    "name": "Protein 5UQM",
+    "description": "Protein structure with PDB ID: 5UQM. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5UQM_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5UQM",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Clostridioides difficile",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "1496",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1496"
+    },
+    "alternateName": [
+      "PDB 5UQM",
+      "Protein ID 5UQM"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5uqm_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5UQM_2.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5UQM",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5UQM",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5UQM_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "tcdB",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "1.20.58.1190;1.10.10.1780",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF12918;PF11647;PF12919",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5UQM\", \"structure_metadata\": {\"pdb_id\": \"5UQM\", \"resolution\": 2.03, \"deposition_date\": \"2017-02-08T00:00:00+0000\", \"release_date\": \"2017-05-10T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Clostridioides difficile\"], \"citation\": {\"title\": \"Clostridium difficile toxin glucosyltransferase domains in complex with a non-hydrolyzable UDP-glucose analogue.\", \"doi\": \"10.1016/j.jsb.2017.04.006\", \"authors\": [\"Alvin, J.W.\", \"Lacy, D.B.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 61.91, \"b\": 61.91, \"c\": 325.98, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Clostridioides difficile\", \"sequence_length\": 563, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL\", \"organism\": \"Clostridioides difficile\", \"taxonomy_id\": 1496, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 563, \"gene_name\": null, \"uniprot_ids\": [\"P18177\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 563.0, \"min_sequence_length\": 563, \"max_sequence_length\": 563}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL\", \"pdbx_seq_one_letter_code_can\": \"MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 563, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 563, \"pdbx_gene_src_gene\": \"toxB, tcdB\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"1496\", \"pdbx_gene_src_scientific_name\": \"Clostridioides difficile\", \"pdbx_host_org_ncbi_taxonomy_id\": \"511693\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21 STAR\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET28a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.316, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/2bvlA/6192/5uqmA\", \"max_rmsd\": 1.787, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 3590, \"identity\": 100}, {\"cluster_id\": 2368, \"identity\": 95}, {\"cluster_id\": 2669, \"identity\": 90}, {\"cluster_id\": 2524, \"identity\": 70}, {\"cluster_id\": 3437, \"identity\": 50}, {\"cluster_id\": 3055, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 563, \"ncbi_common_names\": [\"Escherichia coli str. BL21\", \"Escherichia coli strain BL21\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21\", \"ncbi_taxonomy_id\": 511693, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli BL21\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli str. BL21\"}, {\"depth\": 10, \"id\": \"511693\", \"name\": \"Escherichia coli strain BL21\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 563, \"ncbi_common_names\": [\"Clostridium difficile (Hall and O'Toole 1935) Prevot 1938 (Approved Lists 1980)\", \"Peptoclostridium difficile\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Clostridioides difficile\", \"ncbi_taxonomy_id\": 1496, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Clostridioides difficile\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Bacillati\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmacutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicuteota\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Firmicutes corrig. Gibbons and Murray 1978 (Approved Lists 1980)\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacteria group\"}, {\"depth\": 3, \"id\": \"1783272\", \"name\": \"Terrabacterida\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillaeota\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillota corrig. Gibbons and Murray 2021\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Bacillus/Clostridium group\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Clostridium group firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"Low G+C firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"clostridial firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"firmicutes\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low G+C Gram-positive bacteria\"}, {\"depth\": 4, \"id\": \"1239\", \"name\": \"low GC Gram+\"}, {\"depth\": 5, \"id\": \"186801\", \"name\": \"Clostridia\"}, {\"depth\": 6, \"id\": \"3082720\", \"name\": \"Peptostreptococcales\"}, {\"depth\": 7, \"id\": \"186804\", \"name\": \"Peptostreptococcaceae\"}, {\"depth\": 7, \"id\": \"186804\", \"name\": \"Clostridium cluster XI\"}, {\"depth\": 8, \"id\": \"1870884\", \"name\": \"Clostridioides\"}, {\"depth\": 9, \"id\": \"1496\", \"name\": \"Clostridioides difficile\"}, {\"depth\": 9, \"id\": \"1496\", \"name\": \"Clostridium difficile (Hall and O'Toole 1935) Prevot 1938 (Approved Lists 1980)\"}, {\"depth\": 9, \"id\": \"1496\", \"name\": \"Peptoclostridium difficile\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"toxB\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"tcdB\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 65.357, \"pdbx_description\": \"Toxin B\", \"pdbx_ec\": \"3.4.22\", \"pdbx_fragment\": \"residues 1-543\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"3\", \"name\": \"Hydrolases\"}, {\"depth\": 2, \"id\": \"3.4\", \"name\": \"Acting on peptide bonds (peptidases)\"}, {\"depth\": 3, \"id\": \"3.4.22\", \"name\": \"Cysteine endopeptidases\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Toxin B\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 3, \"ec\": \"3.4.22\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Toxin B\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P18177\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 21, \"length\": 543, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF12918\", \"assignment_version\": \"34.0\", \"name\": \"TcdB toxin N-terminal helical domain (TcdB_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"PF12919\", \"assignment_version\": \"34.0\", \"name\": \"TcdA/TcdB catalytic glycosyltransferase domain (TcdA_TcdB)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0141030\", \"name\": \"symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0141027\", \"name\": \"symbiont-mediated perturbation of host actin cytoskeleton\"}, {\"id\": \"GO:0052111\", \"name\": \"symbiont-mediated disruption of host anatomical structure\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0141030\", \"name\": \"symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0052039\", \"name\": \"symbiont-mediated perturbation of host cytoskeleton\"}, {\"id\": \"GO:0141060\", \"name\": \"disruption of anatomical structure in another organism\"}, {\"id\": \"GO:0052008\", \"name\": \"symbiont-mediated disruption of host cellular anatomical structure\"}]}, {\"annotation_id\": \"GO:0016020\", \"name\": \"membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"GO:0008289\", \"name\": \"lipid binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0008289\", \"name\": \"lipid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0005576\", \"name\": \"extracellular region\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}]}, {\"annotation_id\": \"IPR038383\", \"name\": \"CGT/MARTX, cysteine protease (CPD) domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR038383\", \"name\": \"CGT/MARTX, cysteine protease (CPD) domain superfamily\"}]}, {\"annotation_id\": \"IPR024772\", \"name\": \"TcdA/TcdB toxin, N-terminal helical domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR024772\", \"name\": \"TcdA/TcdB toxin, N-terminal helical domain\"}]}, {\"annotation_id\": \"GO:0044175\", \"name\": \"host cell endosome membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0033648\", \"name\": \"host intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0033646\", \"name\": \"host intracellular part\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033644\", \"name\": \"host cell membrane\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}, {\"id\": \"GO:0033655\", \"name\": \"host cell cytoplasm part\"}, {\"id\": \"GO:0033647\", \"name\": \"host intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0044175\", \"name\": \"host cell endosome membrane\"}, {\"id\": \"GO:0030430\", \"name\": \"host cell cytoplasm\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0044174\", \"name\": \"host cell endosome\"}, {\"id\": \"GO:0043656\", \"name\": \"host intracellular region\"}]}, {\"annotation_id\": \"GO:0090729\", \"name\": \"toxin activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0090729\", \"name\": \"toxin activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR020974\", \"name\": \"CGT/MARTX, cysteine protease (CPD) domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR020974\", \"name\": \"CGT/MARTX, cysteine protease (CPD) domain\"}]}, {\"annotation_id\": \"IPR024769\", \"name\": \"TcdA/TcdB toxin, pore forming domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR024769\", \"name\": \"TcdA/TcdB toxin, pore forming domain\"}]}, {\"annotation_id\": \"GO:0046527\", \"name\": \"glucosyltransferase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016757\", \"name\": \"glycosyltransferase activity\"}, {\"id\": \"GO:0016740\", \"name\": \"transferase activity\"}, {\"id\": \"GO:0046527\", \"name\": \"glucosyltransferase activity\"}, {\"id\": \"GO:0016758\", \"name\": \"hexosyltransferase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0020002\", \"name\": \"host cell plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0020002\", \"name\": \"host cell plasma membrane\"}, {\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0033644\", \"name\": \"host cell membrane\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}]}, {\"annotation_id\": \"GO:0008234\", \"name\": \"cysteine-type peptidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0008234\", \"name\": \"cysteine-type peptidase activity\"}, {\"id\": \"GO:0008233\", \"name\": \"peptidase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0006508\", \"name\": \"proteolysis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006508\", \"name\": \"proteolysis\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"IPR029044\", \"name\": \"Nucleotide-diphospho-sugar transferases\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR029044\", \"name\": \"Nucleotide-diphospho-sugar transferases\"}]}, {\"annotation_id\": \"IPR024770\", \"name\": \"TcdA/TcdB toxin, catalytic glycosyltransferase domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR024770\", \"name\": \"TcdA/TcdB toxin, catalytic glycosyltransferase domain\"}]}, {\"annotation_id\": \"GO:0044164\", \"name\": \"host cell cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0018995\", \"name\": \"host cellular component\"}, {\"id\": \"GO:0033646\", \"name\": \"host intracellular part\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030430\", \"name\": \"host cell cytoplasm\"}, {\"id\": \"GO:0033643\", \"name\": \"host cell part\"}, {\"id\": \"GO:0043656\", \"name\": \"host intracellular region\"}, {\"id\": \"GO:0044164\", \"name\": \"host cell cytosol\"}, {\"id\": \"GO:0044217\", \"name\": \"other organism part\"}, {\"id\": \"GO:0033655\", \"name\": \"host cell cytoplasm part\"}]}, {\"annotation_id\": \"IPR018337\", \"name\": \"Cell wall/choline-binding repeat\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018337\", \"name\": \"Cell wall/choline-binding repeat\"}]}, {\"annotation_id\": \"GO:0046872\", \"name\": \"metal ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5UQM\", \"rcsb_id\": \"5UQM_1\", \"uniprot_ids\": [\"P18177\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P18177\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9644760213143873, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.22950126796280643}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF12918\", \"name\": \"TcdB toxin N-terminal helical domain (TcdB_N)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 42, \"end_seq_id\": 103}]}, {\"assignment_version\": \"34.0\", \"feature_id\": \"PF12919\", \"name\": \"TcdA/TcdB catalytic glycosyltransferase domain (TcdA_TcdB)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 116, \"end_seq_id\": 488}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag,initiating methionine\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 20}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.79, -2.36, -2.4, -2.4, -2.36, -1.58, -0.76, -0.58, -0.72, -0.41, -0.14, -0.41, -0.11, -0.16, -0.16, -0.16, -0.37, -0.37, -0.76, -1.06, -0.28, -0.88, -1.22, -1.43, -1.7, -1.7, -0.73, -0.8, -0.1, -1.02, -0.71, -0.67, -1.27, -1.86, -1.86, -2.47, -1.5, -1.61, -0.61, -0.11, -0.11, 0.48, 1.29, 1.29, 1.04, 0.43, -0.12, -1.01, -1.22, -0.92, -1.51, -2.32, -2.01, -1.16, -0.54, -0.58, -0.62, -0.98, -0.47, -0.51, 0.3, -0.06, -0.91, -0.88, -0.88, -0.53, 0.03, -0.47, -0.42, -0.34, -0.06, 0.83, -0.06, 0.26, 0.2, -0.66, -1.01, -0.71, -1.26, -1.61, -2.5, -2.54, -2.27, -1.7, -1.7, -1.7, -1.3, -1.69, -1.58, -1.33, -0.48, -0.21, -0.71, -0.67, 0.23, 0.34, 0.39, 1.2, 0.91, 0.1, -0.76, -1.07, -0.26, -0.8, -1.4, -0.54, -1.36, -1.36, -1.36, -0.54, -0.51, -0.62, -0.08, 0.0, 0.03, 0.38, 0.77, 0.77, 0.84, 0.81, 0.11, -0.43, -0.13, -0.13, -0.48, -0.58, 0.31, -0.58, -0.58, -0.29, -0.64, -1.23, -1.27, -1.27, -1.21, -2.1, -1.86, -1.86, -1.29, -1.24, -0.39, -0.54, -0.3, -0.6, -0.3, -0.54, 0.04, -0.11, 0.7, 0.73, 0.03, 0.1, 0.91, 0.57, 0.52, 0.24, 0.4, 0.44, -0.44, -0.14, 0.13, 0.21, 0.26, 0.3, 0.3, 0.26, -0.6, -0.3, 0.1, -0.6, -1.49, -1.49, -0.68, -0.99, -1.8, -1.59, -2.0, -2.0, -1.89, -1.64, -1.64, -2.5, -1.8, -1.1, -1.42, -1.36, -2.17, -1.57, -1.81, -0.92, 0.01, -0.44, -1.14, -1.08, -1.03, -0.97, -1.57, -0.87, -0.87, -1.76, -1.76, -1.51, -1.51, -0.92, -0.88, -0.99, -1.69, -2.58, -2.58, -2.61, -2.86, -2.0, -1.7, -0.81, -0.7, -0.7, 0.19, 1.04, 0.79, 1.1, 0.53, 0.46, -0.13, -0.13, -0.13, -0.78, -1.33, -1.33, -1.64, -1.0, -1.81, -2.11, -1.3, -1.3, -1.23, -1.29, -0.36, -0.36, -1.24, -0.94, -0.13, -0.94, -0.99, -0.41, -0.34, -1.23, -1.23, -0.93, -0.89, -1.7, -1.7, -0.8, -1.8, -2.11, -1.41, -1.41, -1.71, -1.36, -1.4, -1.4, -1.91, -1.8, -1.5, -1.5, -1.5, -0.69, -1.14, -1.1, -1.1, -1.44, -0.63, -0.08, -0.78, -0.89, -1.41, -1.66, -0.84, -0.26, 0.33, 0.11, -0.44, -0.44, 0.56, 1.08, 0.97, 1.04, 0.76, 0.76, 0.98, 0.63, 0.63, 0.63, 0.17, 0.62, 0.33, 0.28, 0.5, -0.31, 0.59, 0.59, 0.3, 0.77, 0.63, 0.38, 1.02, 0.21, 0.42, -0.43, 0.38, 0.48, -0.33, -0.24, 0.3, -0.59, -0.63, -0.63, -0.33, -0.84, -0.69, -0.38, 0.18, -0.71, -0.01, 0.32, 0.11, 0.41, 0.42, -0.48, 0.02, -0.83, -0.24, -0.06, 0.26, 0.21, -0.14, -0.5, -0.46, -1.02, -0.13, -0.51, -1.4, -1.76, -1.4, -1.34, -1.3, -1.27, -0.81, -1.7, -1.31, -0.5, -0.74, -1.06, -1.36, -0.5, -0.53, -0.93, -0.63, -0.53, -1.34, -1.04, -0.19, 0.62, 0.36, 0.66, 0.31, 0.31, -0.39, -0.43, -0.43, -1.29, -1.21, -1.1, -1.1, -0.76, -0.24, 0.1, 0.14, 0.44, 0.44, 0.14, -0.26, -0.34, 0.17, -0.64, -0.13, -0.18, 0.11, 0.7, 0.81, 0.51, 0.6, -0.26, 0.09, 0.12, 1.06, 0.17, -0.42, -0.78, 0.03, 0.62, 0.97, 1.48, 0.54, -0.34, -0.04, 0.2, 0.52, 0.01, -0.88, -0.37, -0.33, 0.57, 0.52, 0.22, 0.87, 0.2, -0.1, -0.21, -0.78, -1.71, -1.68, -0.82, -0.82, -1.71, -1.41, -0.6, -0.49, -0.52, 0.11, 0.11, -0.4, -0.4, -0.4, -0.7, -1.51, -0.81, -1.02, -1.3, -1.88, -1.87, -1.87, -1.56, -0.86, 0.03, -0.67, -0.37, 0.21, 0.5, 0.78, 0.78, 1.06, 0.36, 0.06, 0.06, -0.24, -0.79, -1.5, -1.39, -0.79, -0.78, -0.78, -0.56, -0.21, -0.26, -0.36, 0.57, -0.24, 0.01, -0.24, 0.46, 0.34, 0.21, 0.26, 0.87, 0.01, 0.43, -0.11, 0.43, -0.27, -0.16, -0.07, 0.28, -0.37, -0.32, -0.04, -0.11, -0.41, 0.18, -0.04, -0.1, -0.44, -0.66, 0.16, 0.38, 0.73, 0.84, 0.21, -0.38, -0.28, 0.02, 0.62, -0.19, -0.11, -0.68, -0.57, 0.37, 0.37, 0.61, 0.31, 0.52, 0.41, -0.48, 0.19, -0.62, -0.62, -0.32, -0.96, -0.64, -1.46, -0.46, -0.16, -0.86, -0.56, -1.13, -1.43, -1.39, -1.7, -1.1, -1.4, -1.4, -0.59, -0.6, -0.61, 0.09, 0.09, 0.09, 0.08, -0.62, -0.33, -1.19, -0.89, -1.19, -1.19, -1.19, -1.19, -1.53, -1.47, -2.17, -2.12, -2.47, -1.77, -2.47, -2.12, -1.82, -1.26]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [1.0, 0.99, 0.99, 0.96, 0.93, 0.92, 0.9, 0.88, 0.85, 0.83, 0.77, 0.79, 0.73, 0.68, 0.68, 0.67, 0.66, 0.67, 0.58, 0.57, 0.56, 0.53, 0.5, 0.5, 0.5, 0.53, 0.41, 0.4, 0.39, 0.4, 0.39, 0.41, 0.41, 0.4, 0.39, 0.35, 0.27, 0.19, 0.18, 0.21, 0.15, 0.14, 0.18, 0.13, 0.13, 0.17, 0.14, 0.21, 0.23, 0.23, 0.21, 0.16, 0.12, 0.12, 0.16, 0.16, 0.12, 0.18, 0.17, 0.16, 0.18, 0.17, 0.17, 0.16, 0.15, 0.15, 0.15, 0.12, 0.08, 0.04, 0.04, 0.04, 0.04, 0.05, 0.05, 0.05, 0.07, 0.12, 0.13, 0.18, 0.16, 0.11, 0.17, 0.16, 0.1, 0.16, 0.16, 0.11, 0.11, 0.11, 0.17, 0.17, 0.13, 0.12, 0.12, 0.08, 0.08, 0.09, 0.09, 0.09, 0.05, 0.06, 0.12, 0.08, 0.08, 0.13, 0.14, 0.09, 0.13, 0.12, 0.13, 0.08, 0.04, 0.07, 0.11, 0.11, 0.1, 0.1, 0.11, 0.1, 0.08, 0.08, 0.08, 0.04, 0.03, 0.03, 0.04, 0.02, 0.04, 0.04, 0.04, 0.06, 0.09, 0.16, 0.1, 0.1, 0.06, 0.11, 0.08, 0.04, 0.03, 0.04, 0.06, 0.06, 0.09, 0.09, 0.05, 0.03, 0.05, 0.05, 0.03, 0.05, 0.04, 0.04, 0.03, 0.03, 0.04, 0.05, 0.04, 0.04, 0.06, 0.1, 0.1, 0.06, 0.06, 0.07, 0.07, 0.12, 0.18, 0.18, 0.12, 0.18, 0.19, 0.23, 0.23, 0.2, 0.27, 0.18, 0.2, 0.22, 0.23, 0.17, 0.16, 0.16, 0.22, 0.18, 0.18, 0.2, 0.14, 0.1, 0.1, 0.15, 0.16, 0.16, 0.14, 0.09, 0.09, 0.1, 0.1, 0.06, 0.06, 0.08, 0.12, 0.12, 0.13, 0.14, 0.17, 0.2, 0.28, 0.27, 0.26, 0.17, 0.19, 0.18, 0.13, 0.09, 0.14, 0.2, 0.15, 0.14, 0.2, 0.21, 0.25, 0.19, 0.2, 0.18, 0.19, 0.13, 0.12, 0.12, 0.13, 0.18, 0.26, 0.19, 0.12, 0.19, 0.26, 0.27, 0.21, 0.27, 0.32, 0.26, 0.26, 0.26, 0.31, 0.31, 0.33, 0.31, 0.41, 0.34, 0.3, 0.37, 0.3, 0.31, 0.38, 0.38, 0.36, 0.35, 0.35, 0.43, 0.42, 0.36, 0.44, 0.36, 0.28, 0.29, 0.3, 0.31, 0.23, 0.16, 0.23, 0.23, 0.15, 0.22, 0.13, 0.1, 0.13, 0.12, 0.12, 0.13, 0.07, 0.04, 0.06, 0.03, 0.05, 0.07, 0.03, 0.03, 0.03, 0.03, 0.05, 0.04, 0.04, 0.04, 0.02, 0.05, 0.03, 0.05, 0.04, 0.02, 0.03, 0.05, 0.05, 0.06, 0.12, 0.13, 0.1, 0.11, 0.12, 0.11, 0.12, 0.12, 0.11, 0.15, 0.23, 0.31, 0.23, 0.3, 0.22, 0.27, 0.29, 0.17, 0.18, 0.22, 0.21, 0.16, 0.1, 0.18, 0.24, 0.17, 0.14, 0.18, 0.11, 0.11, 0.1, 0.06, 0.04, 0.07, 0.08, 0.07, 0.07, 0.11, 0.19, 0.17, 0.13, 0.15, 0.14, 0.15, 0.14, 0.17, 0.24, 0.22, 0.26, 0.34, 0.35, 0.25, 0.35, 0.41, 0.34, 0.26, 0.31, 0.31, 0.3, 0.28, 0.3, 0.37, 0.35, 0.4, 0.4, 0.31, 0.29, 0.27, 0.26, 0.25, 0.27, 0.24, 0.34, 0.28, 0.28, 0.37, 0.35, 0.38, 0.32, 0.33, 0.26, 0.2, 0.15, 0.15, 0.13, 0.18, 0.25, 0.17, 0.12, 0.17, 0.17, 0.15, 0.11, 0.06, 0.07, 0.05, 0.04, 0.07, 0.07, 0.06, 0.05, 0.08, 0.1, 0.1, 0.06, 0.04, 0.04, 0.05, 0.05, 0.08, 0.08, 0.08, 0.05, 0.09, 0.09, 0.06, 0.09, 0.09, 0.08, 0.05, 0.08, 0.13, 0.11, 0.07, 0.11, 0.18, 0.25, 0.25, 0.24, 0.25, 0.25, 0.25, 0.24, 0.31, 0.32, 0.39, 0.39, 0.31, 0.32, 0.32, 0.32, 0.29, 0.22, 0.27, 0.32, 0.32, 0.27, 0.27, 0.27, 0.27, 0.34, 0.26, 0.23, 0.19, 0.21, 0.15, 0.15, 0.21, 0.2, 0.13, 0.14, 0.14, 0.16, 0.12, 0.06, 0.09, 0.09, 0.07, 0.07, 0.07, 0.07, 0.04, 0.07, 0.05, 0.06, 0.05, 0.1, 0.11, 0.09, 0.09, 0.12, 0.09, 0.12, 0.07, 0.13, 0.22, 0.13, 0.07, 0.09, 0.05, 0.05, 0.06, 0.1, 0.1, 0.13, 0.14, 0.09, 0.08, 0.04, 0.04, 0.07, 0.07, 0.1, 0.07, 0.12, 0.11, 0.06, 0.11, 0.11, 0.13, 0.2, 0.2, 0.19, 0.13, 0.13, 0.17, 0.17, 0.24, 0.24, 0.33, 0.41, 0.36, 0.37, 0.35, 0.38, 0.31, 0.31, 0.32, 0.31, 0.4, 0.37, 0.37, 0.34, 0.33, 0.37, 0.38, 0.3, 0.31, 0.33, 0.24, 0.21, 0.18, 0.22, 0.17, 0.12, 0.17, 0.24, 0.23, 0.23, 0.27, 0.3, 0.37, 0.42, 0.49, 0.54, 0.61, 0.64, 0.73, 0.76]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.82, 0.8, 0.78, 0.77, 0.77, 0.75, 0.74, 0.71, 0.68, 0.65, 0.63, 0.6, 0.58, 0.57, 0.55, 0.54, 0.52, 0.51, 0.51, 0.5, 0.5, 0.49, 0.48, 0.48, 0.47, 0.46, 0.46, 0.45, 0.45, 0.44, 0.44, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.4, 0.39, 0.39, 0.38, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.39, 0.41, 0.43, 0.42, 0.4, 0.39, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.38, 0.37, 0.36, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.37, 0.36, 0.36, 0.36, 0.34, 0.32, 0.31, 0.29, 0.26, 0.25, 0.23, 0.23, 0.22, 0.22, 0.23, 0.24, 0.25, 0.25, 0.26, 0.28, 0.28, 0.29, 0.3, 0.3, 0.28, 0.27, 0.26, 0.25, 0.25, 0.24, 0.23, 0.22, 0.21, 0.21, 0.2, 0.21, 0.21, 0.23, 0.23, 0.24, 0.24, 0.25, 0.25, 0.26, 0.26, 0.26, 0.24, 0.22, 0.2, 0.19, 0.18, 0.17, 0.17, 0.16, 0.16, 0.16, 0.16, 0.17, 0.18, 0.19, 0.2, 0.21, 0.22, 0.22, 0.23, 0.25, 0.26, 0.27, 0.29, 0.3, 0.32, 0.33, 0.35, 0.36, 0.37, 0.36, 0.34, 0.32, 0.3, 0.29, 0.28, 0.26, 0.24, 0.22, 0.2, 0.18, 0.17, 0.17, 0.17, 0.17, 0.17, 0.16, 0.17, 0.17, 0.18, 0.18, 0.19, 0.19, 0.2, 0.2, 0.21, 0.22, 0.22, 0.23, 0.23, 0.24, 0.25, 0.26, 0.27, 0.27, 0.28, 0.29, 0.3, 0.31, 0.32, 0.34, 0.35, 0.35, 0.35, 0.35, 0.37, 0.37, 0.39, 0.4, 0.42, 0.42, 0.42, 0.42, 0.43, 0.42, 0.4, 0.4, 0.41, 0.42, 0.43, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.41, 0.43, 0.41, 0.39, 0.39, 0.37, 0.36, 0.36, 0.37, 0.36, 0.36, 0.37, 0.39, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.38, 0.38, 0.4, 0.41, 0.43, 0.42, 0.4, 0.38, 0.36, 0.34, 0.33, 0.31, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.31, 0.32, 0.32, 0.33, 0.35, 0.35, 0.36, 0.37, 0.39, 0.41, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.37, 0.35, 0.34, 0.32, 0.31, 0.3, 0.29, 0.28, 0.27, 0.27, 0.27, 0.27, 0.27, 0.27, 0.28, 0.28, 0.27, 0.27, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.26, 0.27, 0.28, 0.29, 0.29, 0.29, 0.29, 0.28, 0.29, 0.28, 0.29, 0.3, 0.29, 0.3, 0.3, 0.31, 0.33, 0.34, 0.35, 0.36, 0.35, 0.35, 0.34, 0.35, 0.36, 0.36, 0.36, 0.35, 0.34, 0.35, 0.35, 0.37, 0.38, 0.4, 0.41, 0.42, 0.43, 0.42, 0.4, 0.39, 0.38, 0.37, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.43, 0.42, 0.39, 0.38, 0.36, 0.34, 0.32, 0.31, 0.3, 0.3, 0.29, 0.28, 0.28, 0.28, 0.29, 0.3, 0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.36, 0.37, 0.36, 0.36, 0.34, 0.33, 0.31, 0.3, 0.29, 0.27, 0.26, 0.25, 0.24, 0.24, 0.23, 0.23, 0.23, 0.24, 0.25, 0.25, 0.26, 0.28, 0.29, 0.31, 0.32, 0.33, 0.34, 0.34, 0.35, 0.36, 0.37, 0.37, 0.36, 0.35, 0.35, 0.35, 0.34, 0.34, 0.34, 0.33, 0.32, 0.31, 0.31, 0.31, 0.3, 0.29, 0.29, 0.28, 0.28, 0.27, 0.27, 0.27, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28, 0.29, 0.3, 0.31, 0.31, 0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.34, 0.33, 0.33, 0.33, 0.33, 0.32, 0.32, 0.32, 0.33, 0.34, 0.34, 0.35, 0.35, 0.36, 0.36, 0.36, 0.37, 0.37, 0.37, 0.36, 0.35, 0.35, 0.35, 0.33, 0.3, 0.29, 0.27, 0.26, 0.25, 0.24, 0.24, 0.24, 0.23, 0.23, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3, 0.32, 0.33, 0.34, 0.34, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.38, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.35, 0.35, 0.34, 0.33, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.32, 0.33, 0.34, 0.36, 0.37, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.4, 0.4, 0.39, 0.38, 0.38, 0.36, 0.35, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.39, 0.42, 0.43, 0.43, 0.43, 0.43, 0.41]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 2, \"coverage\": 0.77265, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.03552, \"maximum_length\": 20, \"minimum_length\": 20, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2524_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 20}, {\"entity_beg_seq_id\": 330, \"length\": 234, \"ref_beg_seq_id\": 350}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2669_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 563, \"ref_beg_seq_id\": 20}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3437_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 20}, {\"entity_beg_seq_id\": 330, \"length\": 234, \"ref_beg_seq_id\": 350}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"2368_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 563, \"ref_beg_seq_id\": 20}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3055_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 59, \"ref_beg_seq_id\": 20}, {\"entity_beg_seq_id\": 60, \"length\": 270, \"ref_beg_seq_id\": 82}, {\"entity_beg_seq_id\": 330, \"length\": 234, \"ref_beg_seq_id\": 353}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P18177\", \"aligned_regions\": [{\"entity_beg_seq_id\": 21, \"length\": 543, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3590_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 563, \"ref_beg_seq_id\": 2}]}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL3580505\", \"target_taxonomy_id\": 1496, \"aligned_target\": [{\"entity_beg_seq_id\": 21, \"length\": 542, \"target_beg_seq_id\": 1}]}, {\"related_resource_name\": \"DrugBank\", \"related_resource_version\": \"5.1\", \"related_target_id\": \"P18177\", \"target_taxonomy_id\": 1496, \"aligned_target\": [{\"entity_beg_seq_id\": 21, \"length\": 542, \"target_beg_seq_id\": 1}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"NFVCXYRJOLISDM-OAQYLSRUSA-N\", \"cofactor_smiles\": \"CN1C(=O)[C@@H](Cc2cccnc2)N(Cc2ccc(C(=O)O)cc2)C(=O)c2ccc(Cl)cc21\", \"cofactor_resource_id\": \"CHEMBL4207045\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"BSEDUPUIJSQEOK-GOSISDBHSA-N\", \"cofactor_smiles\": \"CC(C)C[C@@H]1C(=O)Nc2cc(Cl)ccc2C(=O)N1Cc1ccc(C(=O)O)cc1\", \"cofactor_resource_id\": \"CHEMBL4205987\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"AGYYEUYTMBCNEG-OAQYLSRUSA-N\", \"cofactor_smiles\": \"COC(=O)c1ccc(CN2C(=O)c3ccc(Cl)cc3NC(=O)[C@H]2Cc2cccnc2)cc1\", \"cofactor_resource_id\": \"CHEMBL4218048\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"HZQWTEQVFAISGU-HXUWFJFHSA-N\", \"cofactor_smiles\": \"O=C(O)c1ccc(CN2C(=O)c3cc(Cl)ccc3NC(=O)[C@H]2Cc2cccnc2)cc1\", \"cofactor_resource_id\": \"CHEMBL4212511\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"ZEKZDFVXWKTDQE-HXUWFJFHSA-N\", \"cofactor_smiles\": \"O=C(O)c1ccc(CN2C(=O)c3ccc(Cl)cc3NC(=O)[C@H]2c2ccccc2)cc1\", \"cofactor_resource_id\": \"CHEMBL4204302\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.1, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"ITFJICWYTOWIMF-RUZDIDTESA-N\", \"cofactor_smiles\": \"O=C(Nc1ccncc1)c1ccc(CN2C(=O)c3ccc(Cl)cc3NC(=O)[C@H]2Cc2cccnc2)cc1\", \"cofactor_resource_id\": \"CHEMBL4203507\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.08, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"JTGZXUIOSZNCCA-OAQYLSRUSA-N\", \"cofactor_smiles\": \"O=C(O)c1ccc(CN2C(=O)c3ccc(Cl)cc3NC(=O)[C@H]2CC2CCCCC2)cc1\", \"cofactor_resource_id\": \"CHEMBL4213965\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.0, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"YNHFHINMEVHGQM-HSZRJFAPSA-N\", \"cofactor_smiles\": \"Cn1ccnc1C(=O)c1ccc(CN2C(=O)c3ccc(Cl)cc3NC(=O)[C@H]2Cc2ccccn2)cc1\", \"cofactor_resource_id\": \"CHEMBL4461295\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"binding_assay_value\": 3.0, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"RXCMLFMTRSPDPU-XMMPIXPASA-N\", \"cofactor_smiles\": \"Cn1cnc(C(=O)c2ccc(CN3C(=O)c4ccc(Cl)cc4NC(=O)[C@H]3Cc3ccccn3)cc2)c1\", \"cofactor_resource_id\": \"CHEMBL4551502\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL3580505\"}, {\"cofactor_name\": \"Bezlotoxumab\", \"cofactor_resource_id\": \"DB13140\", \"mechanism_of_action\": \"_C. difficile_ infections are caused by two exotoxins, toxin A and toxin B. Exotoxins are believed to bind to cell surface receptors expressed on colonocytes and are internalized via endocytosis. This process is followed by the acidification of the endosome, leading to a conformation change of the toxin, allowing for the transport of the endosome, autocleavage of the toxin via a cysteine protease domain, and the release of glucosyltransferase domain (GTD) from the endosome to the host cell cytoplasm. GTD glucosylates and inactivates small GTPases, such as Rac and Rho, critical for maintaining the actin cytoskeleton, cell adhesion, epithelial permeability, and other cellular function and homeostasis processes. Exotoxins eventually induce apoptosis and cell loss.[A18722, A260101] Endotoxins also promote the release of proinflammatory mediators that recruit neutrophils and macrophages to the injury site, further aggravating the gut injury and damage.[A18722] _C. difficile_ infections are associated with a high risk of recurrence.[A260101, A260106]\\r\\n\\r\\nBezlotoxumab binds to _C. difficile_ toxin B and neutralizes it.[L46976] According to the findings of surface plasmon resonance analysis, bezlotoxumab binds to the toxin via two epitopes in the C-terminal CROP domain of the toxin, partially blocking the putative receptor binding pockets and preventing it from binding to host cell receptors.[A260096] Bezlotoxumab does not bind to _C. difficile_ toxin A.[L46976] \", \"neighbor_flag\": \"N\", \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P18177\"}], \"rcsb_id\": \"5UQM_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:44:45.140262\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 563, \"chain2_sequence_length\": 563, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.03,
+            "experimentalMethod": null,
+            "depositionDate": "2017-02-08T00:00:00+0000",
+            "releaseDate": "2017-05-10T00:00:00+0000",
+            "sourceOrganism": [
+              "Clostridioides difficile"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.03,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Clostridioides difficile",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MGSSHHHHHHSSGLVPRGSHMSLVNRKQLEKMANVRFRTQEDEYVAILDALEEYHNMSENTVVEKYLKLKDINSLTDIYIDTYKKSGRNKALKKFKEYLVTEVLELKNNNLTPVEKNLHFVWIGGQINDTAINYINQWKDVNSDYNVNVFYDSNAFLINTLKKTVVESAINDTLESFRENLNDPRFDYNKFFRKRMEIIYDKQKNFINYYKAQREENPELIIDDIVKTYLSNEYSKEIDELNTYIEESLNKITQNSGNDVRNFEEFKNGESFNLYEQELVERWNLAAASDILRISALKEIGGMYLDVDMLPGIQPDLFESIEKPSSVTVDFWEMTKLEAIMKYKEYIPEYTSEHFDMLDEEVQSSFESVLASKSDKSEIFSSLGDMEASPLEVKIAFNSKGIINQGLISVKDSYCSNLIVKQIENRYKILNNSLNPAISEDNDFNTTTNTFIDSIMAEANADNGRFMMELGKYLRVGFFPDVKTTINLSGPEAYAAAYQDLLMFKEGSMNIHLIEADLRNFEISKTNISQSTEQEMASLWSFDDARAKAQFEEYKRNYFEGSL",
+        "description": "Amino acid sequence for chain A (length: 563)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 563
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Clostridium difficile toxin glucosyltransferase domains in complex with a non-hydrolyzable UDP-glucose analogue.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.jsb.2017.04.006",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 563",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5UQM_2",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 14,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5LB8_1",
+          "6QU4_11",
+          "4U5K_1",
+          "6JTZ_1",
+          "3N3M_1",
+          "3K55_9",
+          "2JFP_1",
+          "4RNJ_1",
+          "2DWU_1",
+          "4O1H_1",
+          "5U0K_4",
+          "5U0I_1",
+          "4O1I_2"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5UQM_2",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5UQM",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "7_555",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2146.5,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 75,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "tcdB",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "1.20.58.1190;1.10.10.1780",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF12918;PF11647;PF12919",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 1355.1,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 791.399999999998,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.631306778476589,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.368693221523409,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5UQM_2",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 14,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5LB8_1",
+        "6QU4_11",
+        "4U5K_1",
+        "6JTZ_1",
+        "3N3M_1",
+        "3K55_9",
+        "2JFP_1",
+        "4RNJ_1",
+        "2DWU_1",
+        "4O1H_1",
+        "5U0K_4",
+        "5U0I_1",
+        "4O1I_2"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 5EXV_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "5EXV_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_5EXV",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "5EXV",
+    "name": "Protein 5EXV",
+    "description": "Protein structure with PDB ID: 5EXV. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 5EXV_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/5EXV",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Vibrio cholerae",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "666",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=666"
+    },
+    "alternateName": [
+      "PDB 5EXV",
+      "Protein ID 5EXV"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/5exv_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/5exv.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "5EXV",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "5EXV",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "5EXV_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "hutX",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.1570.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF06228",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"5EXV\", \"structure_metadata\": {\"pdb_id\": \"5EXV\", \"resolution\": 2.901, \"deposition_date\": \"2015-11-24T00:00:00+0000\", \"release_date\": \"2016-07-13T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Vibrio cholerae\"], \"citation\": {\"title\": \"Cytoplasmic Heme-Binding Protein (HutX) from Vibrio cholerae Is an Intracellular Heme Transport Protein for the Heme-Degrading Enzyme, HutZ\", \"doi\": \"10.1021/acs.biochem.5b01273\", \"authors\": [\"Sekine, Y.\", \"Tanzawa, T.\", \"Tanaka, Y.\", \"Ishimori, K.\", \"Uchida, T.\"]}, \"entity_count\": 1, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 61.2, \"b\": 80.88, \"c\": 111.09, \"alpha\": 90.0, \"beta\": 95.55, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"B\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"C\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"D\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"E\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"F\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Vibrio cholerae\", \"sequence_length\": 189, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"organism\": \"Vibrio cholerae\", \"taxonomy_id\": 666, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 189, \"gene_name\": null, \"uniprot_ids\": [\"Q9KL40\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"entities\": [\"1\"], \"chain_count\": 6}], \"chain_ids\": [], \"entity_ids\": [\"1\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 6, \"chain_count\": 6, \"unique_sequences\": 1, \"avg_sequence_length\": 189.0, \"min_sequence_length\": 189, \"max_sequence_length\": 189}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"pdbx_seq_one_letter_code_can\": \"MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ\", \"pdbx_strand_id\": \"A,B,C,D,E,F\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 189, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"pdbx_alt_source_flag\": \"sample\", \"pdbx_beg_seq_num\": 1, \"pdbx_end_seq_num\": 189, \"pdbx_gene_src_gene\": \"hutX\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"666\", \"pdbx_gene_src_scientific_name\": \"Vibrio cholerae\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_seq_type\": \"Biological sequence\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.923, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/5exvB/27980/5exvA\", \"max_rmsd\": 1.603, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 74498, \"identity\": 100}, {\"cluster_id\": 96829, \"identity\": 95}, {\"cluster_id\": 106352, \"identity\": 90}, {\"cluster_id\": 141567, \"identity\": 70}, {\"cluster_id\": 101262, \"identity\": 50}, {\"cluster_id\": 79484, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 189, \"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"beg_seq_num\": 1, \"end_seq_num\": 189, \"ncbi_common_names\": [\"Bacillo virgola del Koch\", \"Bacillus cholerae\", \"Bacillus cholerae-asiaticae\", \"Kommabacillus\", \"Liquidivibrio cholerae\", \"Microspira comma\", \"Pacinia cholerae-asiaticae\", \"Spirillum cholerae\", \"Spirillum cholerae-asiaticae\", \"Vibrio albensis\", \"Vibrio cholera\", \"Vibrio cholerae biovar albensis\", \"Vibrio cholerae bv. albensis\", \"Vibrio cholerae-asiaticae\", \"Vibrio comma\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Vibrio cholerae\", \"ncbi_taxonomy_id\": 666, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Vibrio cholerae\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"135623\", \"name\": \"Vibrionales\"}, {\"depth\": 6, \"id\": \"135623\", \"name\": \"Vibrionaceae group\"}, {\"depth\": 7, \"id\": \"641\", \"name\": \"Vibrionaceae\"}, {\"depth\": 8, \"id\": \"662\", \"name\": \"Vibrio\"}, {\"depth\": 8, \"id\": \"662\", \"name\": \"Beneckea\"}, {\"depth\": 8, \"id\": \"662\", \"name\": \"Listonella\"}, {\"depth\": 8, \"id\": \"662\", \"name\": \"Microspira\"}, {\"depth\": 8, \"id\": \"662\", \"name\": \"Pacinia\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio cholerae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Bacillo virgola del Koch\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Bacillus cholerae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Bacillus cholerae-asiaticae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Kommabacillus\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Liquidivibrio cholerae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Microspira comma\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Pacinia cholerae-asiaticae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Spirillum cholerae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Spirillum cholerae-asiaticae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio albensis\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio cholera\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio cholerae biovar albensis\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio cholerae bv. albensis\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio cholerae-asiaticae\"}, {\"depth\": 9, \"id\": \"666\", \"name\": \"Vibrio comma\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"hutX\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 21.241, \"pdbx_description\": \"Hemin-degrading HemS.ChuX domain protein\", \"pdbx_number_of_molecules\": 6, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Hemin-degrading HemS.ChuX domain protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"HutX protein\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"HuvX protein\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"Putative heme iron utilization protein\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Intracellular heme transport protein HutX\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q9KL40\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 23, \"length\": 167, \"ref_beg_seq_id\": 27}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF06228\", \"assignment_version\": \"34.0\", \"name\": \"Haem utilisation ChuX/HutX (ChuX_HutX)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR053733\", \"name\": \"Heme Transport and Utilization Superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR053733\", \"name\": \"Heme Transport and Utilization Superfamily\"}]}, {\"annotation_id\": \"GO:0005737\", \"name\": \"cytoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0046872\", \"name\": \"metal ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"IPR010413\", \"name\": \"Intracellular heme transport protein HutX-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR010413\", \"name\": \"Intracellular heme transport protein HutX-like\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"5EXV\", \"rcsb_id\": \"5EXV_1\", \"uniprot_ids\": [\"Q9KL40\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q9KL40\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.8835978835978836, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.8652849740932642}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF06228\", \"name\": \"Haem utilisation ChuX/HutX (ChuX_HutX)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 46, \"end_seq_id\": 183}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 22}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.79, -2.36, -2.4, -2.4, -2.36, -1.58, -1.61, -0.79, -0.01, 0.66, 0.62, 0.67, 0.58, 0.27, 0.06, 0.06, -0.5, -0.5, -1.2, -1.2, -1.54, -0.9, -0.34, -0.94, -0.13, 0.38, -0.43, -0.43, -0.43, -0.22, -0.77, -0.54, 0.27, -0.33, -0.56, 0.03, 0.63, 1.22, 1.01, 0.7, 0.7, -0.11, 0.53, 0.26, -0.33, -0.23, -0.82, 0.07, 0.92, 0.14, 0.73, 0.69, 0.59, 0.59, -0.11, 0.49, 0.46, 0.19, 1.01, 1.28, 0.47, 0.6, 0.9, 0.93, 0.92, 0.07, -0.21, -0.18, -0.22, -0.22, -0.27, 0.24, 0.42, -0.17, 0.12, 0.16, -0.52, -0.48, -0.17, -0.16, -0.08, 0.31, 0.62, 1.22, 1.47, 1.6, 1.04, 1.62, 2.01, 1.12, 1.38, 1.02, 0.72, 0.34, 0.7, 0.61, -0.32, -0.68, -0.72, -0.72, -0.09, -0.79, -0.66, -1.11, -1.08, -1.03, -0.57, 0.08, -0.43, -1.13, -1.02, -1.02, -1.27, -0.7, -0.67, -1.13, -1.7, -1.23, -1.17, -0.36, -0.7, -0.7, -0.62, -0.36, -0.67, 0.16, -0.07, 0.79, 0.83, 1.13, 1.09, 0.41, 0.81, 1.38, 0.87, 0.17, -0.64, -1.2, -1.47, -1.18, -0.69, -1.04, -0.94, -0.59, -0.17, 0.42, 0.12, 0.43, 0.19, -0.51, -0.27, -0.27, -1.01, -0.43, -0.78, 0.03, 0.03, -0.08, -0.08, -0.67, -1.41, -1.48, -2.37, -1.8, -1.72, -1.86, -1.74, -1.74, -0.89, -0.26, -0.26, 0.44, -0.41, -0.71, -0.32, -0.32, -0.32, -1.18, -1.73, -1.67, -2.37]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [1.0, 0.99, 0.99, 0.96, 0.95, 0.9, 0.82, 0.71, 0.69, 0.66, 0.65, 0.69, 0.66, 0.67, 0.67, 0.58, 0.58, 0.58, 0.57, 0.5, 0.47, 0.47, 0.38, 0.29, 0.37, 0.36, 0.41, 0.5, 0.58, 0.5, 0.4, 0.4, 0.36, 0.36, 0.31, 0.27, 0.36, 0.35, 0.26, 0.25, 0.23, 0.26, 0.27, 0.26, 0.36, 0.24, 0.18, 0.17, 0.13, 0.08, 0.15, 0.24, 0.23, 0.22, 0.18, 0.19, 0.16, 0.09, 0.1, 0.16, 0.16, 0.22, 0.19, 0.17, 0.26, 0.16, 0.17, 0.26, 0.26, 0.2, 0.3, 0.29, 0.2, 0.18, 0.23, 0.24, 0.27, 0.33, 0.32, 0.26, 0.26, 0.18, 0.16, 0.19, 0.18, 0.13, 0.13, 0.2, 0.13, 0.13, 0.16, 0.16, 0.09, 0.15, 0.15, 0.13, 0.18, 0.13, 0.11, 0.17, 0.2, 0.13, 0.13, 0.15, 0.1, 0.07, 0.11, 0.18, 0.17, 0.23, 0.24, 0.2, 0.19, 0.27, 0.25, 0.18, 0.19, 0.12, 0.18, 0.21, 0.14, 0.14, 0.21, 0.24, 0.21, 0.21, 0.19, 0.19, 0.18, 0.21, 0.13, 0.1, 0.15, 0.15, 0.16, 0.15, 0.22, 0.14, 0.13, 0.13, 0.08, 0.08, 0.08, 0.06, 0.1, 0.12, 0.19, 0.26, 0.22, 0.15, 0.13, 0.15, 0.12, 0.08, 0.09, 0.08, 0.09, 0.09, 0.14, 0.22, 0.23, 0.24, 0.26, 0.3, 0.33, 0.33, 0.26, 0.23, 0.23, 0.21, 0.29, 0.27, 0.31, 0.39, 0.47, 0.47, 0.49, 0.47, 0.48, 0.52, 0.56, 0.59, 0.69, 0.8, 0.8, 0.83, 0.86, 0.93, 0.96]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.72, 0.71, 0.7, 0.69, 0.68, 0.66, 0.66, 0.65, 0.63, 0.61, 0.59, 0.57, 0.56, 0.55, 0.54, 0.53, 0.52, 0.51, 0.49, 0.48, 0.47, 0.47, 0.46, 0.46, 0.45, 0.45, 0.44, 0.44, 0.44, 0.43, 0.43, 0.42, 0.42, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.36, 0.35, 0.35, 0.35, 0.34, 0.34, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.39, 0.39, 0.39, 0.39, 0.4, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.39, 0.41, 0.42, 0.43, 0.42, 0.42, 0.42, 0.41, 0.41, 0.4, 0.4, 0.41, 0.42, 0.43, 0.42, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.42, 0.43, 0.42, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.34, 0.34, 0.34, 0.33, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.25, 0.25, 0.25, 0.26, 0.27, 0.27, 0.28, 0.29, 0.3, 0.3, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.3, 0.31, 0.32, 0.32, 0.33, 0.34, 0.34, 0.35, 0.36, 0.37, 0.38, 0.4, 0.42, 0.43, 0.42, 0.41, 0.39, 0.38, 0.38, 0.37, 0.38, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.41, 0.42, 0.41, 0.41, 0.4, 0.39, 0.39, 0.39, 0.39, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.73016, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.1164, \"maximum_length\": 22, \"minimum_length\": 22, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"74498_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"79484_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"141567_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"101262_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q9KL40\", \"aligned_regions\": [{\"entity_beg_seq_id\": 23, \"length\": 167, \"ref_beg_seq_id\": 27}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"106352_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"96829_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 189, \"ref_beg_seq_id\": 5}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"HutX protein,HuvX protein,Putative heme iron utilization protein\"}], \"rcsb_id\": \"5EXV_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:44:01.032588\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.901,
+            "experimentalMethod": null,
+            "depositionDate": "2015-11-24T00:00:00+0000",
+            "releaseDate": "2016-07-13T00:00:00+0000",
+            "sourceOrganism": [
+              "Vibrio cholerae"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 1,
+            "chainCount": 6,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.901,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Vibrio cholerae",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 6,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain A (length: 189)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain B (length: 189)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain C (length: 189)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain D (length: 189)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_E_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain E (length: 189)",
+        "chainId": "E",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_F_Sequence",
+        "value": "MGSSHHHHHHSSGLEVLFQGPHMESLQQQVAQLLEQQPTLLPAAMAEQLNVTEFDIVHALPEEMVAVVDGSHAQTILESLPEWGPVTTIMTIAGSIFEVKAPFPKGKVARGYYNLMGRDGELHGHLKLENISHVALVSKPFMGRESHYFGFFTAQGENAFKIYLGRDEKRELIPEQVARFKAMQQQHKQ",
+        "description": "Amino acid sequence for chain F (length: 189)",
+        "chainId": "F",
+        "entityId": "1",
+        "sequenceLength": 189
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Cytoplasmic Heme-Binding Protein (HutX) from Vibrio cholerae Is an Intracellular Heme Transport Protein for the Heme-Degrading Enzyme, HutZ",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1021/acs.biochem.5b01273",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, E, F, Length: 189",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5EXV_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 3,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "2PH0_1",
+          "2OVI_2"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 5EXV_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "5EXV",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2157.67,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 75,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "hutX",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.1570.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF06228",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 778.869999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1378.81,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.360977350567973,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.639027284061047,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5EXV_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 3,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "2PH0_1",
+        "2OVI_2"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1NFT_2",
+  "description": "Protein-protein interaction interface between chains A and A",
+  "identifier": "1NFT_2",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1NFT",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1NFT",
+    "name": "Protein 1NFT",
+    "description": "Protein structure with PDB ID: 1NFT. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1NFT_2 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1NFT",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Gallus gallus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9031",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9031"
+    },
+    "alternateName": [
+      "PDB 1NFT",
+      "Protein ID 1NFT"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1nft_2.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1NFT_2.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1NFT",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1NFT",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1NFT_2",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "ProtCID",
+        "description": "Source of interface ID: ProtCID"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "A-A",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.190.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00405",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1NFT\", \"structure_metadata\": {\"pdb_id\": \"1NFT\", \"resolution\": 2.1, \"deposition_date\": \"1999-01-07T00:00:00+0000\", \"release_date\": \"1999-01-13T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Gallus gallus\"], \"citation\": {\"title\": \"Alternative structural state of transferrin. The crystallographic analysis of iron-loaded but domain-opened ovotransferrin N-lobe.\", \"doi\": \"10.1074/jbc.274.15.10190\", \"authors\": [\"Mizutani, K.\", \"Yamashita, H.\", \"Kurokawa, H.\", \"Mikami, B.\", \"Hirose, M.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 125.29, \"b\": 125.29, \"c\": 87.53, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Gallus gallus\", \"sequence_length\": 329, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR\", \"organism\": \"Gallus gallus\", \"taxonomy_id\": 9031, \"chain_ids\": [\"A\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 329, \"gene_name\": null, \"uniprot_ids\": [\"P02789\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR\", \"entities\": [\"1\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 1, \"chain_count\": 1, \"unique_sequences\": 1, \"avg_sequence_length\": 329.0, \"min_sequence_length\": 329, \"max_sequence_length\": 329}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR\", \"pdbx_seq_one_letter_code_can\": \"KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR\", \"pdbx_strand_id\": \"A\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 3, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 329, \"type\": \"polypeptide(L)\"}, \"entity_src_nat\": [{\"common_name\": \"chicken\", \"genus\": \"Gallus\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_ncbi_taxonomy_id\": \"9031\", \"pdbx_organ\": \"EGG\", \"pdbx_organism_scientific\": \"Gallus gallus\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 3.988, \"label\": \"Medium\", \"link\": \"http://pdbflex.org/cluster.html#!/1iejA/1711/1nftA\", \"max_rmsd\": 5.939, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 110691, \"identity\": 100}, {\"cluster_id\": 8837, \"identity\": 95}, {\"cluster_id\": 9724, \"identity\": 90}, {\"cluster_id\": 8328, \"identity\": 70}, {\"cluster_id\": 612, \"identity\": 50}, {\"cluster_id\": 698, \"identity\": 30}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Gallus domesticus\", \"Gallus gallus domesticus\", \"Phasianus gallus\", \"bantam\", \"chicken\", \"chickens\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Gallus gallus\", \"ncbi_taxonomy_id\": 9031, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Gallus gallus\", \"source_type\": \"natural\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"8457\", \"name\": \"Sauropsida\"}, {\"depth\": 18, \"id\": \"8457\", \"name\": \"sauropsids\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"Sauria\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"Diapsida\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"diapsids\"}, {\"depth\": 20, \"id\": \"1329799\", \"name\": \"Archelosauria\"}, {\"depth\": 20, \"id\": \"1329799\", \"name\": \"Archosauria-Testudines\"}, {\"depth\": 20, \"id\": \"1329799\", \"name\": \"Testudines + Archosauria group\"}, {\"depth\": 21, \"id\": \"8492\", \"name\": \"Archosauria\"}, {\"depth\": 22, \"id\": \"436486\", \"name\": \"Dinosauria\"}, {\"depth\": 22, \"id\": \"436486\", \"name\": \"dinosaurs\"}, {\"depth\": 23, \"id\": \"436489\", \"name\": \"Saurischia\"}, {\"depth\": 24, \"id\": \"436491\", \"name\": \"Theropoda\"}, {\"depth\": 25, \"id\": \"436492\", \"name\": \"Coelurosauria\"}, {\"depth\": 26, \"id\": \"8782\", \"name\": \"Aves\"}, {\"depth\": 26, \"id\": \"8782\", \"name\": \"avian\"}, {\"depth\": 26, \"id\": \"8782\", \"name\": \"birds\"}, {\"depth\": 27, \"id\": \"8825\", \"name\": \"Neognathae\"}, {\"depth\": 28, \"id\": \"1549675\", \"name\": \"Galloanserae\"}, {\"depth\": 28, \"id\": \"1549675\", \"name\": \"Galloanseri\"}, {\"depth\": 28, \"id\": \"1549675\", \"name\": \"ducks, geese, chickens, fowl, quail, currasows and allies\"}, {\"depth\": 29, \"id\": \"8976\", \"name\": \"Galliformes\"}, {\"depth\": 29, \"id\": \"8976\", \"name\": \"landfowls\"}, {\"depth\": 30, \"id\": \"9005\", \"name\": \"Phasianidae\"}, {\"depth\": 30, \"id\": \"9005\", \"name\": \"turkeys\"}, {\"depth\": 31, \"id\": \"9072\", \"name\": \"Phasianinae\"}, {\"depth\": 32, \"id\": \"9030\", \"name\": \"Gallus\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"Gallus gallus\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"Gallus domesticus\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"Gallus gallus domesticus\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"Phasianus gallus\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"bantam\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"chicken\"}, {\"depth\": 33, \"id\": \"9031\", \"name\": \"chickens\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 36.249, \"pdbx_description\": \"PROTEIN (OVOTRANSFERRIN)\", \"pdbx_fragment\": \"N-TERMINAL LOBE\", \"pdbx_number_of_molecules\": 1, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"nat\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"PROTEIN (OVOTRANSFERRIN)\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Ovotransferrin\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P02789\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 23}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00405\", \"assignment_version\": \"34.0\", \"name\": \"Transferrin (Transferrin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0006879\", \"name\": \"intracellular iron ion homeostasis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006879\", \"name\": \"intracellular iron ion homeostasis\"}, {\"id\": \"GO:0098771\", \"name\": \"inorganic ion homeostasis\"}, {\"id\": \"GO:0019725\", \"name\": \"cellular homeostasis\"}, {\"id\": \"GO:0048878\", \"name\": \"chemical homeostasis\"}, {\"id\": \"GO:0042592\", \"name\": \"homeostatic process\"}, {\"id\": \"GO:0030003\", \"name\": \"intracellular monoatomic cation homeostasis\"}, {\"id\": \"GO:0050801\", \"name\": \"monoatomic ion homeostasis\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0055082\", \"name\": \"intracellular chemical homeostasis\"}, {\"id\": \"GO:0055080\", \"name\": \"monoatomic cation homeostasis\"}, {\"id\": \"GO:0006873\", \"name\": \"intracellular monoatomic ion homeostasis\"}]}, {\"annotation_id\": \"GO:0009410\", \"name\": \"response to xenobiotic stimulus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009410\", \"name\": \"response to xenobiotic stimulus\"}]}, {\"annotation_id\": \"GO:0005769\", \"name\": \"early endosome\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005769\", \"name\": \"early endosome\"}, {\"id\": \"GO:0005768\", \"name\": \"endosome\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}]}, {\"annotation_id\": \"GO:0006826\", \"name\": \"iron ion transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0006826\", \"name\": \"iron ion transport\"}, {\"id\": \"GO:0000041\", \"name\": \"transition metal ion transport\"}, {\"id\": \"GO:0006811\", \"name\": \"monoatomic ion transport\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006812\", \"name\": \"monoatomic cation transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0030001\", \"name\": \"metal ion transport\"}]}, {\"annotation_id\": \"GO:0006953\", \"name\": \"acute-phase response\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006953\", \"name\": \"acute-phase response\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0006952\", \"name\": \"defense response\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0006954\", \"name\": \"inflammatory response\"}, {\"id\": \"GO:0002526\", \"name\": \"acute inflammatory response\"}]}, {\"annotation_id\": \"IPR016357\", \"name\": \"Transferrin\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR016357\", \"name\": \"Transferrin\"}]}, {\"annotation_id\": \"IPR001156\", \"name\": \"Transferrin-like domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR001156\", \"name\": \"Transferrin-like domain\"}]}, {\"annotation_id\": \"GO:0019730\", \"name\": \"antimicrobial humoral response\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006959\", \"name\": \"humoral immune response\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0051707\", \"name\": \"response to other organism\"}, {\"id\": \"GO:0006952\", \"name\": \"defense response\"}, {\"id\": \"GO:0006955\", \"name\": \"immune response\"}, {\"id\": \"GO:0140546\", \"name\": \"defense response to symbiont\"}, {\"id\": \"GO:0009605\", \"name\": \"response to external stimulus\"}, {\"id\": \"GO:0019730\", \"name\": \"antimicrobial humoral response\"}, {\"id\": \"GO:0009607\", \"name\": \"response to biotic stimulus\"}, {\"id\": \"GO:0098542\", \"name\": \"defense response to other organism\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0002376\", \"name\": \"immune system process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0043207\", \"name\": \"response to external biotic stimulus\"}]}, {\"annotation_id\": \"GO:0055037\", \"name\": \"recycling endosome\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005768\", \"name\": \"endosome\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0055037\", \"name\": \"recycling endosome\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}]}, {\"annotation_id\": \"GO:0008199\", \"name\": \"ferric iron binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0008199\", \"name\": \"ferric iron binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0005506\", \"name\": \"iron ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0005506\", \"name\": \"iron ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0005506\", \"name\": \"iron ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0034755\", \"name\": \"iron ion transmembrane transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0034220\", \"name\": \"monoatomic ion transmembrane transport\"}, {\"id\": \"GO:0006826\", \"name\": \"iron ion transport\"}, {\"id\": \"GO:0034755\", \"name\": \"iron ion transmembrane transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0030001\", \"name\": \"metal ion transport\"}, {\"id\": \"GO:0098655\", \"name\": \"monoatomic cation transmembrane transport\"}, {\"id\": \"GO:0055085\", \"name\": \"transmembrane transport\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0000041\", \"name\": \"transition metal ion transport\"}, {\"id\": \"GO:0006811\", \"name\": \"monoatomic ion transport\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0006812\", \"name\": \"monoatomic cation transport\"}]}, {\"annotation_id\": \"GO:0019731\", \"name\": \"antibacterial humoral response\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006959\", \"name\": \"humoral immune response\"}, {\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0051707\", \"name\": \"response to other organism\"}, {\"id\": \"GO:0006952\", \"name\": \"defense response\"}, {\"id\": \"GO:0006955\", \"name\": \"immune response\"}, {\"id\": \"GO:0019731\", \"name\": \"antibacterial humoral response\"}, {\"id\": \"GO:0140546\", \"name\": \"defense response to symbiont\"}, {\"id\": \"GO:0009605\", \"name\": \"response to external stimulus\"}, {\"id\": \"GO:0019730\", \"name\": \"antimicrobial humoral response\"}, {\"id\": \"GO:0009607\", \"name\": \"response to biotic stimulus\"}, {\"id\": \"GO:0042742\", \"name\": \"defense response to bacterium\"}, {\"id\": \"GO:0098542\", \"name\": \"defense response to other organism\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0002376\", \"name\": \"immune system process\"}, {\"id\": \"GO:0009617\", \"name\": \"response to bacterium\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0043207\", \"name\": \"response to external biotic stimulus\"}]}, {\"annotation_id\": \"GO:1990377\", \"name\": \"organomineral extracellular matrix\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:1990377\", \"name\": \"organomineral extracellular matrix\"}, {\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0031012\", \"name\": \"extracellular matrix\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030312\", \"name\": \"external encapsulating structure\"}, {\"id\": \"GO:0140047\", \"name\": \"specialized extracellular matrix\"}]}, {\"annotation_id\": \"GO:0005886\", \"name\": \"plasma membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005886\", \"name\": \"plasma membrane\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"IPR018195\", \"name\": \"Transferrin family, iron binding site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018195\", \"name\": \"Transferrin family, iron binding site\"}]}, {\"annotation_id\": \"GO:0005615\", \"name\": \"extracellular space\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}, {\"id\": \"GO:0005615\", \"name\": \"extracellular space\"}]}, {\"annotation_id\": \"GO:0032496\", \"name\": \"response to lipopolysaccharide\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0044419\", \"name\": \"biological process involved in interspecies interaction between organisms\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0033993\", \"name\": \"response to lipid\"}, {\"id\": \"GO:0051707\", \"name\": \"response to other organism\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:0009605\", \"name\": \"response to external stimulus\"}, {\"id\": \"GO:0032496\", \"name\": \"response to lipopolysaccharide\"}, {\"id\": \"GO:0009607\", \"name\": \"response to biotic stimulus\"}, {\"id\": \"GO:0009617\", \"name\": \"response to bacterium\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0043207\", \"name\": \"response to external biotic stimulus\"}, {\"id\": \"GO:0002237\", \"name\": \"response to molecule of bacterial origin\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\"], \"auth_asym_ids\": [\"A\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1NFT\", \"rcsb_id\": \"1NFT_1\", \"uniprot_ids\": [\"P02789\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P02789\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.4666666666666667}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00405\", \"name\": \"Transferrin (Transferrin)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 4, \"end_seq_id\": 329}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.51, 0.86, 0.86, 0.21, -0.68, -0.57, -0.9, -1.61, -1.26, -2.11, -2.41, -1.9, -2.22, -2.22, -1.41, -1.06, -1.01, -1.68, -1.68, -1.79, -1.71, -1.3, -0.49, -0.99, -0.63, 0.22, 0.22, 0.18, 0.88, 0.3, 0.24, 0.24, -0.07, -0.07, -0.03, -0.08, 0.56, 0.86, 1.13, 0.89, 0.08, 0.08, 0.0, -0.89, -0.26, 0.04, -0.54, -0.32, -0.32, 0.02, 0.37, -0.22, 0.63, 0.74, -0.14, 0.14, -0.32, 0.49, 0.73, 0.6, 0.84, -0.06, 0.06, 0.01, -0.37, 0.18, -0.04, -0.04, -0.26, 0.36, 0.64, -0.17, -0.09, 0.01, -0.88, -1.12, -1.41, -1.1, -1.64, -1.59, -1.34, -1.13, -0.86, 0.0, 0.24, 0.8, 1.34, 0.99, 0.64, 0.74, 0.81, 0.22, 0.07, -0.21, -0.21, -1.07, -1.02, -0.17, -0.51, -0.48, -0.52, -0.91, -0.92, -1.11, -1.08, -0.77, -1.23, -0.42, -0.42, -0.49, -0.5, -0.21, -0.53, -0.28, -0.59, -0.04, -0.64, -0.1, 0.36, 0.37, 0.59, 1.13, 0.88, 0.77, 0.22, 0.6, 0.6, 0.26, 0.23, -0.58, -1.12, -0.27, -0.16, -0.2, -0.44, -1.03, -0.18, -0.47, -0.47, -0.22, -0.26, 0.33, -0.01, 0.34, 0.74, 0.19, 0.78, 1.08, 1.16, 1.16, 0.78, 1.17, 1.06, 0.67, 1.26, 0.67, 0.37, -0.34, -0.39, 0.07, -0.39, -0.98, -0.62, -1.56, -1.21, -1.21, -0.96, -1.81, -2.17, -2.1, -1.43, -1.51, -1.58, -1.92, -1.33, -1.33, -1.04, -1.06, -0.67, -1.09, -1.38, -0.92, -0.33, -0.22, -0.4, 0.02, 0.53, 0.14, -0.1, -0.06, -0.44, -0.69, -1.39, -0.57, -0.64, -0.76, 0.14, 0.1, -0.21, 0.14, 0.11, 0.97, 0.11, -0.48, -1.18, -1.44, -1.19, -1.22, -1.53, -1.89, -2.74, -2.74, -2.5, -2.5, -2.28, -1.68, -1.01, -0.2, -0.16, 0.19, 0.49, 0.13, 0.13, -0.47, -0.42, -1.09, -1.9, -1.66, -2.04, -2.03, -1.26, -1.26, -1.18, -1.44, -1.56, -0.7, -0.36, 0.28, 0.0, -0.08, 0.78, 1.34, 1.34, 1.34, 0.49, -0.1, -0.69, -0.77, -0.5, -1.36, -2.21, -1.91, -1.51, -1.21, -0.51, 0.3, 0.64, -0.26, 0.33, 0.33, -0.26, -0.54, -0.14, -0.5, -0.46, -0.76, -0.4, -1.03, -0.73, -1.03, -0.33, -1.0, -0.53, -0.69, -0.34, -0.44, -0.19, -0.14, -0.19, -0.93, -0.97, -1.57, -1.41, -0.94, -1.2, -1.41, -0.94, -0.09, 0.66, 0.61, 0.4, -0.16, -0.38, 0.56, 1.16, 1.16, 0.3, -0.51, 0.39, 0.6, 0.6, 0.82, 0.53, -0.07, -0.58, -0.53, 0.39, -0.22, 0.38, 0.42, 0.31, -0.29, -0.04, -0.1, 0.2, -0.02, 0.62, -0.19, -0.23, -0.33, -0.44]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.8, 0.79, 0.74, 0.7, 0.66, 0.61, 0.44, 0.39, 0.35, 0.24, 0.2, 0.2, 0.14, 0.16, 0.19, 0.19, 0.26, 0.34, 0.27, 0.33, 0.25, 0.24, 0.13, 0.1, 0.1, 0.1, 0.09, 0.17, 0.12, 0.08, 0.13, 0.06, 0.04, 0.05, 0.05, 0.03, 0.02, 0.02, 0.02, 0.04, 0.03, 0.05, 0.04, 0.04, 0.06, 0.03, 0.04, 0.05, 0.05, 0.07, 0.08, 0.05, 0.11, 0.14, 0.15, 0.12, 0.15, 0.21, 0.15, 0.13, 0.08, 0.1, 0.11, 0.09, 0.12, 0.1, 0.17, 0.12, 0.07, 0.09, 0.09, 0.12, 0.19, 0.17, 0.2, 0.2, 0.26, 0.3, 0.2, 0.21, 0.19, 0.22, 0.2, 0.14, 0.16, 0.18, 0.2, 0.18, 0.24, 0.33, 0.23, 0.22, 0.18, 0.17, 0.17, 0.13, 0.13, 0.13, 0.13, 0.19, 0.25, 0.22, 0.27, 0.29, 0.34, 0.31, 0.32, 0.33, 0.34, 0.32, 0.31, 0.33, 0.33, 0.32, 0.35, 0.27, 0.34, 0.34, 0.27, 0.21, 0.21, 0.21, 0.27, 0.24, 0.18, 0.2, 0.22, 0.24, 0.24, 0.17, 0.21, 0.2, 0.26, 0.26, 0.26, 0.24, 0.31, 0.27, 0.21, 0.25, 0.3, 0.24, 0.18, 0.18, 0.18, 0.25, 0.12, 0.12, 0.13, 0.13, 0.16, 0.14, 0.11, 0.12, 0.12, 0.16, 0.12, 0.05, 0.06, 0.1, 0.04, 0.04, 0.06, 0.09, 0.1, 0.12, 0.11, 0.21, 0.12, 0.09, 0.09, 0.11, 0.09, 0.15, 0.1, 0.1, 0.1, 0.09, 0.19, 0.18, 0.16, 0.25, 0.25, 0.16, 0.13, 0.11, 0.12, 0.12, 0.12, 0.24, 0.28, 0.22, 0.2, 0.16, 0.11, 0.16, 0.15, 0.15, 0.19, 0.15, 0.16, 0.19, 0.26, 0.23, 0.38, 0.42, 0.43, 0.42, 0.43, 0.44, 0.39, 0.39, 0.39, 0.36, 0.34, 0.32, 0.33, 0.34, 0.35, 0.35, 0.4, 0.42, 0.37, 0.37, 0.4, 0.31, 0.3, 0.29, 0.21, 0.21, 0.14, 0.17, 0.15, 0.15, 0.17, 0.23, 0.28, 0.24, 0.19, 0.15, 0.14, 0.13, 0.12, 0.15, 0.14, 0.13, 0.14, 0.15, 0.16, 0.17, 0.11, 0.17, 0.13, 0.1, 0.13, 0.14, 0.15, 0.18, 0.2, 0.26, 0.22, 0.25, 0.19, 0.19, 0.18, 0.17, 0.18, 0.23, 0.15, 0.15, 0.14, 0.13, 0.13, 0.23, 0.33, 0.34, 0.34, 0.37, 0.35, 0.39, 0.32, 0.34, 0.33, 0.4, 0.32, 0.25, 0.17, 0.17, 0.17, 0.26, 0.22, 0.21, 0.26, 0.17, 0.14, 0.12, 0.07, 0.09, 0.09, 0.05, 0.03, 0.05, 0.08, 0.09, 0.05, 0.04, 0.04, 0.07, 0.03, 0.03, 0.02, 0.01, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.03, 0.06, 0.1, 0.12, 0.15, 0.17, 0.31, 0.44, 0.58, 0.62]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.39, 0.38, 0.37, 0.36, 0.34, 0.32, 0.25, 0.22, 0.19, 0.17, 0.15, 0.13, 0.11, 0.1, 0.09, 0.09, 0.08, 0.1, 0.11, 0.12, 0.14, 0.15, 0.16, 0.17, 0.17, 0.18, 0.19, 0.2, 0.2, 0.2, 0.19, 0.18, 0.17, 0.18, 0.18, 0.19, 0.2, 0.21, 0.22, 0.23, 0.23, 0.22, 0.24, 0.26, 0.27, 0.29, 0.29, 0.29, 0.29, 0.28, 0.29, 0.3, 0.31, 0.31, 0.31, 0.31, 0.3, 0.3, 0.3, 0.31, 0.32, 0.33, 0.32, 0.32, 0.32, 0.32, 0.32, 0.33, 0.34, 0.34, 0.35, 0.35, 0.36, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.37, 0.38, 0.38, 0.37, 0.37, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.34, 0.34, 0.34, 0.35, 0.36, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.41, 0.42, 0.42, 0.41, 0.41, 0.4, 0.39, 0.37, 0.36, 0.35, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.33, 0.35, 0.37, 0.39, 0.41, 0.41, 0.4, 0.4, 0.41, 0.42, 0.43, 0.42, 0.43, 0.43, 0.43, 0.41, 0.38, 0.34, 0.3, 0.27, 0.25, 0.23, 0.21, 0.19, 0.17, 0.15, 0.14, 0.12, 0.11, 0.1, 0.09, 0.07, 0.06, 0.06, 0.05, 0.06, 0.06, 0.07, 0.07, 0.08, 0.1, 0.11, 0.14, 0.17, 0.2, 0.23, 0.24, 0.26, 0.28, 0.29, 0.31, 0.31, 0.32, 0.32, 0.32, 0.31, 0.31, 0.33, 0.34, 0.36, 0.37, 0.38, 0.4, 0.43, 0.42, 0.4, 0.38, 0.38, 0.4, 0.42, 0.43, 0.41, 0.39, 0.37, 0.35, 0.33, 0.32, 0.31, 0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.36, 0.37, 0.37, 0.36, 0.37, 0.36, 0.35, 0.35, 0.34, 0.34, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.39, 0.42, 0.42, 0.38, 0.36, 0.34, 0.32, 0.31, 0.3, 0.3, 0.3, 0.31, 0.33, 0.35, 0.39, 0.41, 0.42, 0.43, 0.41, 0.41, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.41, 0.39, 0.38, 0.37, 0.36, 0.34, 0.32, 0.3, 0.29, 0.28, 0.26, 0.26, 0.25, 0.25, 0.24, 0.24, 0.24, 0.24, 0.24, 0.25, 0.25, 0.26, 0.26, 0.26, 0.27, 0.27, 0.27, 0.27, 0.26, 0.26, 0.25, 0.24, 0.24, 0.23, 0.23, 0.22, 0.22, 0.22, 0.22, 0.23, 0.24, 0.24, 0.25, 0.26, 0.27, 0.26, 0.26, 0.25, 0.24, 0.22, 0.2, 0.18, 0.15, 0.13, 0.12, 0.1, 0.09, 0.08, 0.08, 0.08, 0.07, 0.07, 0.07, 0.07, 0.07, 0.08]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.99088, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"110691_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"9724_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 23}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"612_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 26, \"ref_beg_seq_id\": 23}, {\"entity_beg_seq_id\": 27, \"length\": 138, \"ref_beg_seq_id\": 53}, {\"entity_beg_seq_id\": 165, \"length\": 15, \"ref_beg_seq_id\": 193}, {\"entity_beg_seq_id\": 180, \"length\": 38, \"ref_beg_seq_id\": 210}, {\"entity_beg_seq_id\": 218, \"length\": 37, \"ref_beg_seq_id\": 250}, {\"entity_beg_seq_id\": 255, \"length\": 75, \"ref_beg_seq_id\": 288}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P02789\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 23}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"698_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 25, \"ref_beg_seq_id\": 26}, {\"entity_beg_seq_id\": 26, \"length\": 59, \"ref_beg_seq_id\": 59}, {\"entity_beg_seq_id\": 85, \"length\": 14, \"ref_beg_seq_id\": 263}, {\"entity_beg_seq_id\": 99, \"length\": 64, \"ref_beg_seq_id\": 278}, {\"entity_beg_seq_id\": 163, \"length\": 1, \"ref_beg_seq_id\": 344}, {\"entity_beg_seq_id\": 164, \"length\": 13, \"ref_beg_seq_id\": 346}, {\"entity_beg_seq_id\": 177, \"length\": 3, \"ref_beg_seq_id\": 365}, {\"entity_beg_seq_id\": 180, \"length\": 36, \"ref_beg_seq_id\": 370}, {\"entity_beg_seq_id\": 216, \"length\": 41, \"ref_beg_seq_id\": 416}, {\"entity_beg_seq_id\": 257, \"length\": 17, \"ref_beg_seq_id\": 459}, {\"entity_beg_seq_id\": 274, \"length\": 19, \"ref_beg_seq_id\": 478}, {\"entity_beg_seq_id\": 293, \"length\": 37, \"ref_beg_seq_id\": 498}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"8328_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 23}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"8837_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 23}]}], \"rcsb_id\": \"1NFT_1\"}}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:03.441679\", \"interface_sequence_analysis\": {\"chain1_sequence_length\": 329, \"chain2_sequence_length\": 329, \"sequences_identical\": true, \"sequence_identity\": 100.0}}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.1,
+            "experimentalMethod": null,
+            "depositionDate": "1999-01-07T00:00:00+0000",
+            "releaseDate": "1999-01-13T00:00:00+0000",
+            "sourceOrganism": [
+              "Gallus gallus"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 1,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.1,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Gallus gallus",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "KSVIRWCTVSSPEEKKCNNLRDLTQQERISLTCVQKATYLDCIKAIANNEADAISLDGGQVFEAGLAPYKLKPIAAEVYEHTEGSTTSYYAVAVVKKGTEFTVNDLQGKTSCHTGLGRSAGWNIPIGTLIHRGAIEWEGIESGSVEQAVAKFFSASCVPGATIEQKLCRQCKGDPKTKCARNAPYSGYSGAFHCLKDGKGDVAFVKHTTVNENAPDQKDEYELLCLDGSRQPVDNYKTCNWARVAAHAVVARDDNKVEDIWSFLSKAQSDFGVDTKSDFHLFGPPGKKDPVLKDLLFKDSAIMLKRVPSLMDSQLYLGFEYYSAIQSMR",
+        "description": "Amino acid sequence for chain A (length: 329)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 329
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Alternative structural state of transferrin. The crystallographic analysis of iron-loaded but domain-opened ovotransferrin N-lobe.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1074/jbc.274.15.10190",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, Length: 329",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1NFT_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 2,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "1NFT_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1NFT_2",
+      "description": "Homodimer interaction partner in chain A"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "ProtCID",
+      "description": "Source of interface ID: ProtCID"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1NFT",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "A",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "A",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "1_555",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "12_566",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2099.46,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 68,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.190.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00405",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 875.370000000001,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1224.09,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.416950072875883,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.583049927124118,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1NFT_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 2,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1NFT_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

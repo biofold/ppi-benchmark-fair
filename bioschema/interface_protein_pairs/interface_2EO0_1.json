@@ -1,0 +1,374 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2EO0_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2EO0_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2EO0",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2EO0",
+    "name": "Protein 2EO0",
+    "description": "Protein structure with PDB ID: 2EO0. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2EO0_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2EO0",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Sulfurisphaera tokodaii str. 7",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "273063",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=273063"
+    },
+    "alternateName": [
+      "PDB 2EO0",
+      "Protein ID 2EO0"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2eo0_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2eo0.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2EO0",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2EO0",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2EO0_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "hjc",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.1350.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF01870",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2EO0\", \"structure_metadata\": {\"pdb_id\": \"2EO0\", \"resolution\": 2.4, \"deposition_date\": \"2007-03-28T00:00:00+0000\", \"release_date\": \"2007-10-02T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Sulfurisphaera tokodaii str. 7\"], \"citation\": {\"title\": \"Crystal Structure of Holliday Junction Resolvase ST1444\", \"authors\": [\"Sarai, N.\", \"Kagawa, W.\", \"Kurumizaka, H.\", \"Yokoyama, S.\"]}, \"entity_count\": 1, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 44.661, \"b\": 49.326, \"c\": 69.894, \"alpha\": 90.0, \"beta\": 103.28, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\", \"B\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Sulfurisphaera tokodaii str. 7\", \"sequence_length\": 147, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Sulfurisphaera tokodaii str. 7\", \"sequence_length\": 147, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\", \"organism\": \"Sulfurisphaera tokodaii str. 7\", \"taxonomy_id\": 273063, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 147, \"gene_name\": null, \"uniprot_ids\": [\"F9VND5\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 147.0, \"min_sequence_length\": 147, \"max_sequence_length\": 147}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\", \"pdbx_seq_one_letter_code_can\": \"MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL\", \"pdbx_strand_id\": \"A,B\", \"pdbx_target_identifier\": \"sto001001444.1\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 147, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_species\": \"Sulfolobus tokodaii\", \"gene_src_strain\": \"7\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"273063\", \"pdbx_gene_src_scientific_name\": \"Sulfolobus tokodaii\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21 codon plus\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pET21a\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.218, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/2eo0A/6848/2eo0A\", \"max_rmsd\": 1.218, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 205171, \"identity\": 100}, {\"cluster_id\": 110996, \"identity\": 95}, {\"cluster_id\": 121851, \"identity\": 90}, {\"cluster_id\": 94804, \"identity\": 70}, {\"cluster_id\": 30023, \"identity\": 50}, {\"cluster_id\": 10860, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Sulfolobus sp. (strain 7)\", \"Sulfolobus sp. 7\", \"Sulfolobus tokodaii str. 7\", \"Sulfurisphaera tokodaii strain 7\"], \"ncbi_parent_scientific_name\": \"Archaea\", \"ncbi_scientific_name\": \"Sulfurisphaera tokodaii str. 7\", \"ncbi_taxonomy_id\": 273063, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Sulfolobus tokodaii\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaea\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaebacteria\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Archaebiota\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Mendosicutes\"}, {\"depth\": 2, \"id\": \"2157\", \"name\": \"Metabacteria\"}, {\"depth\": 3, \"id\": \"1783275\", \"name\": \"Thermoproteati\"}, {\"depth\": 3, \"id\": \"1783275\", \"name\": \"Crenarchaeida\"}, {\"depth\": 3, \"id\": \"1783275\", \"name\": \"TACK group\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Thermoproteota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"\\\"Candidatus Marsarchaeota\\\" Jay et al. 2018\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"\\\"Candidatus Verstraetearchaeota\\\" Vanwonterghem et al. 2016\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Candidatus Korarchaeota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Candidatus Martarchaeota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Candidatus Methanomethylicota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Crenarchaeota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Eocyta\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Korarchaeota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Methanomethylicota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Thermoproteaeota\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Thermoproteota corrig. Garrity and Holt 2021\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Xenarchaea\"}, {\"depth\": 4, \"id\": \"28889\", \"name\": \"Xenarchaeota\"}, {\"depth\": 5, \"id\": \"183924\", \"name\": \"Thermoprotei\"}, {\"depth\": 5, \"id\": \"183924\", \"name\": \"Crenarchaeota\"}, {\"depth\": 5, \"id\": \"183924\", \"name\": \"Thermoprotea\"}, {\"depth\": 6, \"id\": \"2281\", \"name\": \"Sulfolobales\"}, {\"depth\": 7, \"id\": \"118883\", \"name\": \"Sulfolobaceae\"}, {\"depth\": 8, \"id\": \"69655\", \"name\": \"Sulfurisphaera\"}, {\"depth\": 9, \"id\": \"111955\", \"name\": \"Sulfurisphaera tokodaii\"}, {\"depth\": 9, \"id\": \"111955\", \"name\": \"Sulfolobus tokodaii\"}, {\"depth\": 10, \"id\": \"273063\", \"name\": \"Sulfurisphaera tokodaii str. 7\"}, {\"depth\": 10, \"id\": \"273063\", \"name\": \"Sulfolobus sp. (strain 7)\"}, {\"depth\": 10, \"id\": \"273063\", \"name\": \"Sulfolobus sp. 7\"}, {\"depth\": 10, \"id\": \"273063\", \"name\": \"Sulfolobus tokodaii str. 7\"}, {\"depth\": 10, \"id\": \"273063\", \"name\": \"Sulfurisphaera tokodaii strain 7\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 16.741, \"pdbx_description\": \"Hypothetical protein ST1444\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"3\", \"name\": \"Hydrolases\"}, {\"depth\": 2, \"id\": \"3.1\", \"name\": \"Acting on ester bonds\"}, {\"depth\": 3, \"id\": \"3.1.21\", \"name\": \"Endodeoxyribonucleases producing 5'-phosphomonoesters\"}, {\"depth\": 4, \"id\": \"3.1.21.10\", \"name\": \"crossover junction endodeoxyribonuclease\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Hypothetical protein ST1444\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Holliday junction resolvase ST1444\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 4, \"ec\": \"3.1.21.10\", \"provenance_source\": \"UniProt\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Crossover junction endodeoxyribonuclease Hjc\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"F9VND5\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 144, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01870\", \"assignment_version\": \"34.0\", \"name\": \"Archaeal holliday junction resolvase (hjc) (Hjc)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0000287\", \"name\": \"magnesium ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0000287\", \"name\": \"magnesium ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0003677\", \"name\": \"DNA binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0003677\", \"name\": \"DNA binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003676\", \"name\": \"nucleic acid binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR014428\", \"name\": \"Crossover junction endodeoxyribonuclease Hjc, archaeal\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR002732\", \"name\": \"Holliday junction resolvase Hjc\"}, {\"depth\": 2, \"id\": \"IPR014428\", \"name\": \"Crossover junction endodeoxyribonuclease Hjc, archaeal\"}]}, {\"annotation_id\": \"GO:0008821\", \"name\": \"crossover junction DNA endonuclease activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0004519\", \"name\": \"endonuclease activity\"}, {\"id\": \"GO:0140640\", \"name\": \"catalytic activity, acting on a nucleic acid\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0008821\", \"name\": \"crossover junction DNA endonuclease activity\"}, {\"id\": \"GO:0004536\", \"name\": \"DNA nuclease activity\"}, {\"id\": \"GO:0004520\", \"name\": \"DNA endonuclease activity\"}, {\"id\": \"GO:0016889\", \"name\": \"DNA endonuclease activity, producing 3'-phosphomonoesters\"}, {\"id\": \"GO:0016788\", \"name\": \"hydrolase activity, acting on ester bonds\"}, {\"id\": \"GO:0140097\", \"name\": \"catalytic activity, acting on DNA\"}, {\"id\": \"GO:0004518\", \"name\": \"nuclease activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR011335\", \"name\": \"Restriction endonuclease type II-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR011335\", \"name\": \"Restriction endonuclease type II-like\"}]}, {\"annotation_id\": \"IPR011856\", \"name\": \"tRNA endonuclease-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR011856\", \"name\": \"tRNA endonuclease-like domain superfamily\"}]}, {\"annotation_id\": \"IPR002732\", \"name\": \"Holliday junction resolvase Hjc\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR002732\", \"name\": \"Holliday junction resolvase Hjc\"}]}, {\"annotation_id\": \"GO:0006281\", \"name\": \"DNA repair\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051716\", \"name\": \"cellular response to stimulus\"}, {\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006259\", \"name\": \"DNA metabolic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}, {\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0033554\", \"name\": \"cellular response to stress\"}, {\"id\": \"GO:0006974\", \"name\": \"DNA damage response\"}, {\"id\": \"GO:0006950\", \"name\": \"response to stress\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0006281\", \"name\": \"DNA repair\"}]}, {\"annotation_id\": \"GO:0006310\", \"name\": \"DNA recombination\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006139\", \"name\": \"nucleobase-containing compound metabolic process\"}, {\"id\": \"GO:0006310\", \"name\": \"DNA recombination\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0006259\", \"name\": \"DNA metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0090304\", \"name\": \"nucleic acid metabolic process\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"2EO0\", \"rcsb_id\": \"2EO0_1\", \"uniprot_ids\": [\"F9VND5\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"F9VND5\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9795918367346939, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01870\", \"name\": \"Archaeal holliday junction resolvase (hjc) (Hjc)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 13, \"end_seq_id\": 106}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.36, -1.07, -0.97, -1.56, -2.11, -1.26, -1.56, -1.67, -1.38, -0.79, 0.18, 0.13, -0.28, 0.23, -0.73, -0.73, -0.67, -0.57, -0.76, -1.02, -0.47, 0.53, -0.39, 0.31, 0.52, 1.16, 1.11, 0.76, 0.47, -0.43, -1.43, -1.37, -1.96, -2.13, -1.87, -1.96, -2.3, -1.71, -0.78, -0.08, 0.78, 0.73, 1.0, 0.49, 1.13, 2.02, 2.02, 1.94, 2.24, 1.43, 2.33, 1.99, 1.94, 0.98, 0.04, -0.84, -1.31, -2.2, -2.24, -2.21, -1.92, -1.33, -1.22, -1.22, -1.22, -1.57, -0.98, -0.93, -1.48, -0.83, -1.83, -1.83, -1.09, -0.5, -0.54, -1.24, -0.94, -0.94, -1.49, -1.38, -0.57, -0.57, -0.34, 0.04, 1.01, 0.67, 1.13, 1.0, 0.96, 0.74, 0.86, -0.07, 0.29, 0.32, 0.32, 0.21, 0.0, 0.64, 0.86, -0.07, 0.04, -0.34, -1.23, -0.84, -1.2, -1.2, -1.56, -1.78, -0.78, -0.78, -0.28, -0.28, -0.31, 0.2, 0.2, -0.09, -0.33, -0.62, -0.62, -0.62, -0.62, -0.93, -0.98, -0.12, -0.19, -0.29, -0.03, -0.03, -0.54, -0.59, 0.3, -0.21, -1.18, -0.76, -0.19, -1.04, -0.74, -0.34, 0.51]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.88, 0.85, 0.81, 0.72, 0.67, 0.64, 0.54, 0.44, 0.35, 0.31, 0.27, 0.21, 0.27, 0.35, 0.41, 0.41, 0.33, 0.3, 0.24, 0.18, 0.18, 0.15, 0.18, 0.15, 0.2, 0.21, 0.2, 0.27, 0.33, 0.38, 0.38, 0.4, 0.4, 0.42, 0.41, 0.33, 0.25, 0.31, 0.25, 0.31, 0.38, 0.38, 0.35, 0.24, 0.22, 0.16, 0.11, 0.11, 0.07, 0.07, 0.07, 0.07, 0.06, 0.09, 0.08, 0.08, 0.13, 0.12, 0.09, 0.08, 0.08, 0.08, 0.08, 0.13, 0.15, 0.2, 0.27, 0.25, 0.25, 0.31, 0.23, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.22, 0.23, 0.24, 0.24, 0.17, 0.16, 0.1, 0.15, 0.15, 0.12, 0.13, 0.13, 0.08, 0.08, 0.1, 0.06, 0.06, 0.05, 0.03, 0.03, 0.03, 0.04, 0.07, 0.12, 0.12, 0.18, 0.12, 0.16, 0.08, 0.09, 0.06, 0.11, 0.11, 0.12, 0.19, 0.18, 0.27, 0.23, 0.28, 0.28, 0.3, 0.3, 0.22, 0.16, 0.15, 0.1, 0.07, 0.12, 0.15, 0.2, 0.12, 0.18, 0.16, 0.16, 0.15, 0.15, 0.16, 0.09, 0.07, 0.09, 0.17, 0.2, 0.23, 0.35, 0.45, 0.5, 0.61, 0.7, 0.73]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.2, 0.22, 0.25, 0.27, 0.3, 0.32, 0.35, 0.38, 0.41, 0.43, 0.4, 0.39, 0.38, 0.37, 0.37, 0.37, 0.38, 0.38, 0.38, 0.38, 0.39, 0.39, 0.39, 0.39, 0.39, 0.38, 0.38, 0.36, 0.36, 0.35, 0.34, 0.33, 0.33, 0.32, 0.32, 0.32, 0.34, 0.35, 0.37, 0.39, 0.4, 0.42, 0.43, 0.43, 0.43, 0.42, 0.42, 0.43, 0.41, 0.39, 0.37, 0.36, 0.34, 0.33, 0.32, 0.31, 0.29, 0.27, 0.27, 0.26, 0.26, 0.25, 0.24, 0.23, 0.22, 0.21, 0.2, 0.2, 0.19, 0.18, 0.17, 0.17, 0.16, 0.16, 0.16, 0.16, 0.16, 0.17, 0.17, 0.19, 0.2, 0.21, 0.22, 0.23, 0.24, 0.24, 0.25, 0.27, 0.28, 0.3, 0.3, 0.31, 0.32, 0.33, 0.36, 0.39, 0.41, 0.42, 0.41, 0.41, 0.4, 0.4, 0.41, 0.42, 0.43, 0.41, 0.37, 0.33, 0.29, 0.26, 0.24, 0.22, 0.2, 0.19, 0.18, 0.17, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.17, 0.17, 0.18, 0.18, 0.18, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17, 0.18, 0.19, 0.2, 0.23, 0.25, 0.3, 0.32, 0.34, 0.36, 0.39, 0.42]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.63946, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"30023_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 64, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 65, \"length\": 83, \"ref_beg_seq_id\": 66}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"110996_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 147, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"94804_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 147, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"F9VND5\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 144, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"121851_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 147, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"205171_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 147, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"10860_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 64, \"ref_beg_seq_id\": 1}, {\"entity_beg_seq_id\": 65, \"length\": 34, \"ref_beg_seq_id\": 66}, {\"entity_beg_seq_id\": 99, \"length\": 24, \"ref_beg_seq_id\": 101}, {\"entity_beg_seq_id\": 123, \"length\": 13, \"ref_beg_seq_id\": 126}, {\"entity_beg_seq_id\": 136, \"length\": 12, \"ref_beg_seq_id\": 140}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Holliday junction resolvase ST1444\"}], \"rcsb_id\": \"2EO0_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:38:16.303735\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.4,
+            "experimentalMethod": null,
+            "depositionDate": "2007-03-28T00:00:00+0000",
+            "releaseDate": "2007-10-02T00:00:00+0000",
+            "sourceOrganism": [
+              "Sulfurisphaera tokodaii str. 7"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 1,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.4,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Sulfurisphaera tokodaii str. 7",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL",
+        "description": "Amino acid sequence for chain A (length: 147)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 147
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MYIVNSNKSRGSSVERYIVSRLRDKGFAVIRAPASGSKRKDHVPDIIALKSGVIILIEVKSRKNGQKIYIEKEQAEGIREFAKRSGGELFLGVKLPKMLRFIKFDMLRQTEGGNYAIDLETVEKGMELEDLVRYVESKISRTLDSFL",
+        "description": "Amino acid sequence for chain B (length: 147)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 147
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal Structure of Holliday Junction Resolvase ST1444",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 147",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2EO0_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2EO0_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2EO0",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1502.31,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 62,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "hjc",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.1350.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF01870",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 478.36,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1023.95,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.31841630555611,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.68158369444389,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2EO0_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

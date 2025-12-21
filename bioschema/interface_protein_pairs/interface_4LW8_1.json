@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 4LW8_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "4LW8_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_4LW8",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "4LW8",
+    "name": "Protein 4LW8",
+    "description": "Protein structure with PDB ID: 4LW8. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4LW8_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/4LW8",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Burkholderia cenocepacia J2315",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "216591",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=216591"
+    },
+    "alternateName": [
+      "PDB 4LW8",
+      "Protein ID 4LW8"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4lw8_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4lw8.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "4LW8",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "4LW8",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "4LW8_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "BCAM1003",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.50.720;3.90.25.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF16363",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"4LW8\", \"structure_metadata\": {\"pdb_id\": \"4LW8\", \"resolution\": 2.1, \"deposition_date\": \"2013-07-26T00:00:00+0000\", \"release_date\": \"2013-09-04T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Burkholderia cenocepacia J2315\"], \"citation\": {\"title\": \"Crystal structure of a putative epimerase from Burkholderia cenocepacia J2315\", \"authors\": [\"Abendroth, J.\", \"Lorimer, D.\", \"Edwards, T.E.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 98.97, \"b\": 98.97, \"c\": 173.59, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\", \"B\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Burkholderia cenocepacia J2315\", \"sequence_length\": 329, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Burkholderia cenocepacia J2315\", \"sequence_length\": 329, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\", \"organism\": \"Burkholderia cenocepacia J2315\", \"taxonomy_id\": 216591, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 329, \"gene_name\": null, \"uniprot_ids\": [\"B4EFL1\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 329.0, \"min_sequence_length\": 329, \"max_sequence_length\": 329}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\", \"pdbx_seq_one_letter_code_can\": \"MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG\", \"pdbx_strand_id\": \"A,B\", \"pdbx_target_identifier\": \"BuceA.00050.a\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 329, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_strain\": \"J2315 / LMG 16656\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"BCAM1003, BceJ2315_44580\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"216591\", \"pdbx_gene_src_scientific_name\": \"Burkholderia cenocepacia\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"BuceA.00050.a.B1\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.447, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/4lw8A/22803/4lw8A\", \"max_rmsd\": 0.447, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 675426, \"identity\": 100}, {\"cluster_id\": 580393, \"identity\": 95}, {\"cluster_id\": 541580, \"identity\": 90}, {\"cluster_id\": 247935, \"identity\": 70}, {\"cluster_id\": 237840, \"identity\": 50}, {\"cluster_id\": 28475, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Burkholderia cenocepacia str. J2315\", \"Burkholderia cepacia J2315\", \"Burkholderia cepacia str. J2315\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Burkholderia cenocepacia J2315\", \"ncbi_taxonomy_id\": 216591, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Burkholderia cenocepacia\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Betaproteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Proteobacteria beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"Purple bacteria, beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"b-proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta proteobacteria\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subdivision\"}, {\"depth\": 5, \"id\": \"28216\", \"name\": \"beta subgroup\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderiales\"}, {\"depth\": 6, \"id\": \"80840\", \"name\": \"Burkholderia/Oxalobacter/Ralstonia group\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderiaceae\"}, {\"depth\": 7, \"id\": \"119060\", \"name\": \"Burkholderia group\"}, {\"depth\": 8, \"id\": \"32008\", \"name\": \"Burkholderia\"}, {\"depth\": 8, \"id\": \"32008\", \"name\": \"Pseudomonas RNA homology group II\"}, {\"depth\": 9, \"id\": \"87882\", \"name\": \"Burkholderia cepacia complex\"}, {\"depth\": 10, \"id\": \"95486\", \"name\": \"Burkholderia cenocepacia\"}, {\"depth\": 10, \"id\": \"95486\", \"name\": \"Burkholderia cepacia genomovar III\"}, {\"depth\": 11, \"id\": \"216591\", \"name\": \"Burkholderia cenocepacia J2315\"}, {\"depth\": 11, \"id\": \"216591\", \"name\": \"Burkholderia cenocepacia str. J2315\"}, {\"depth\": 11, \"id\": \"216591\", \"name\": \"Burkholderia cepacia J2315\"}, {\"depth\": 11, \"id\": \"216591\", \"name\": \"Burkholderia cepacia str. J2315\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"BCAM1003\"}, {\"provenance_source\": \"Primary Data\", \"value\": \"BceJ2315_44580\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 2, \"id\": \"95486:2:gdp_mannose_46_dehydratase\", \"name\": \"GDP-mannose 4,6-dehydratase\"}, {\"depth\": 1, \"id\": \"95486:2\", \"name\": \"Chromosome 2\"}, {\"depth\": 0, \"id\": \"95486\", \"name\": \"Burkholderia cenocepacia\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 35.502, \"pdbx_description\": \"Putative epimerase\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"Putative epimerase\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Epimerase\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"B4EFL1\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 9, \"length\": 321, \"ref_beg_seq_id\": 1}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF01370\", \"assignment_version\": \"34.0\", \"name\": \"NAD dependent epimerase/dehydratase family (Epimerase)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036291\", \"name\": \"NAD(P)-binding domain superfamily\"}]}, {\"annotation_id\": \"IPR001509\", \"name\": \"NAD-dependent epimerase/dehydratase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR001509\", \"name\": \"NAD-dependent epimerase/dehydratase\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"4LW8\", \"rcsb_id\": \"4LW8_1\", \"uniprot_ids\": [\"B4EFL1\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"B4EFL1\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9756838905775076, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 1.0}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF01370\", \"name\": \"NAD dependent epimerase/dehydratase family (Epimerase)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 21, \"end_seq_id\": 250}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 8}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-1.51, -1.8, -2.5, -2.23, -2.27, -1.99, -1.68, -1.82, -1.64, -1.94, -2.37, -2.37, -2.08, -1.38, -0.83, -0.87, -0.41, 0.19, 0.2, 0.66, 1.47, 1.19, 0.83, -0.13, -0.2, 0.06, -0.17, -0.48, -0.93, -0.82, -1.13, -0.89, -0.19, -0.09, -0.44, -1.03, -0.18, 0.22, -0.24, 0.07, 0.33, 0.33, 0.2, 0.3, 0.61, -0.03, -0.43, -0.57, -0.29, -1.14, -1.52, -1.14, -0.79, -0.51, -0.72, 0.06, 0.16, 0.38, 1.19, 1.19, 1.46, 0.76, 0.98, 1.79, 1.12, 1.4, 0.59, 0.37, 0.76, -0.21, 0.38, 0.16, -0.07, 0.52, -0.07, 0.52, -0.18, -0.57, -0.46, -0.46, -0.19, 0.08, -0.48, 0.33, 0.33, 1.03, 0.71, 1.3, 0.74, 0.74, 0.48, 0.44, -0.37, -0.96, -1.33, -0.92, -1.51, -1.23, -1.84, -1.84, -0.99, -0.99, -0.1, 0.54, 0.59, 0.9, 0.48, 0.23, 0.46, 0.41, 1.0, 0.7, 0.66, 0.61, 0.64, 1.57, 1.57, 0.64, -0.28, -0.66, -0.94, -1.17, -0.61, -0.14, -0.14, 0.44, 0.86, 1.27, 1.64, 1.34, 1.64, 1.03, 0.57, -0.24, -0.53, -0.52, -0.23, -0.48, 0.38, 0.3, 0.06, -0.29, 0.02, 0.58, 0.86, 0.48, 0.72, 0.08, -0.14, -0.14, -0.14, -0.21, -0.48, -0.21, -0.12, -0.76, -0.16, -0.16, 0.44, 0.44, 0.44, 0.44, 0.18, -0.17, 0.69, 0.17, 0.17, -0.43, -0.54, 0.02, -0.36, -0.06, 0.84, 0.92, 1.22, 0.52, 0.73, 1.54, 0.73, 0.77, 0.19, -0.32, -0.36, -0.6, -0.49, -0.4, -1.1, -0.51, -0.51, -0.01, 0.46, -0.19, -0.58, 0.23, 0.79, 1.38, 0.82, 0.82, 0.6, -0.32, -0.53, 0.1, -0.5, -1.47, -1.17, -0.9, -0.33, -0.58, -0.47, 0.34, -0.24, 0.4, 0.81, -0.19, -0.49, -0.6, -0.64, -0.64, -0.6, -0.71, -1.57, -1.01, -0.59, 0.0, -0.11, -0.17, 0.64, -0.26, 0.67, 1.56, 0.7, 0.98, 0.98, 0.6, 0.94, 0.48, 0.52, 0.02, -0.17, -0.17, 0.1, 0.18, 0.27, -0.32, -0.78, -0.19, -0.26, -0.66, 0.16, -0.74, -1.41, -0.86, -0.04, 0.66, 0.67, 1.23, 1.23, 0.31, 1.24, 1.83, 1.32, 0.76, 1.02, 1.31, 0.5, 1.06, 1.48, 1.48, 0.89, 0.76, 0.4, 0.24, 0.21, 0.1, -0.72, -1.03, -1.92, -1.07, -1.32, -0.91, -0.8, -1.36, -0.9, -0.63, -0.74, -0.74, -1.64, -0.79, -1.2, -2.12, -1.83, -1.32, -1.28, -1.17, -0.36, -0.1, -0.06, 0.37, 0.69, 0.91, 0.06, -0.29, 0.02, 0.02, -0.3, -0.87, -0.58, 0.07, -0.74, -0.16, 0.44, 0.02, -0.2, 0.5, 0.42, 0.03, -0.48, -0.44, -0.44, -0.46, 0.0]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.98, 0.96, 0.95, 0.93, 0.91, 0.89, 0.88, 0.86, 0.83, 0.8, 0.75, 0.69, 0.66, 0.65, 0.65, 0.58, 0.58, 0.58, 0.5, 0.53, 0.53, 0.53, 0.45, 0.42, 0.39, 0.4, 0.4, 0.31, 0.33, 0.29, 0.25, 0.27, 0.26, 0.31, 0.24, 0.18, 0.23, 0.22, 0.16, 0.2, 0.23, 0.22, 0.21, 0.31, 0.34, 0.38, 0.34, 0.35, 0.43, 0.38, 0.34, 0.34, 0.35, 0.37, 0.36, 0.36, 0.37, 0.4, 0.33, 0.41, 0.38, 0.28, 0.3, 0.27, 0.26, 0.23, 0.17, 0.2, 0.17, 0.12, 0.13, 0.16, 0.2, 0.15, 0.21, 0.24, 0.32, 0.35, 0.27, 0.27, 0.27, 0.26, 0.3, 0.25, 0.28, 0.23, 0.27, 0.24, 0.21, 0.25, 0.28, 0.31, 0.38, 0.36, 0.41, 0.41, 0.31, 0.27, 0.24, 0.31, 0.28, 0.2, 0.28, 0.31, 0.35, 0.35, 0.31, 0.22, 0.25, 0.25, 0.17, 0.17, 0.16, 0.09, 0.09, 0.09, 0.09, 0.15, 0.17, 0.2, 0.14, 0.15, 0.15, 0.12, 0.12, 0.12, 0.09, 0.15, 0.14, 0.11, 0.13, 0.19, 0.19, 0.19, 0.23, 0.2, 0.16, 0.11, 0.1, 0.1, 0.13, 0.13, 0.15, 0.24, 0.23, 0.26, 0.21, 0.25, 0.26, 0.26, 0.29, 0.23, 0.22, 0.22, 0.15, 0.16, 0.12, 0.18, 0.17, 0.13, 0.1, 0.1, 0.08, 0.06, 0.04, 0.06, 0.05, 0.04, 0.05, 0.02, 0.03, 0.01, 0.02, 0.02, 0.02, 0.02, 0.03, 0.02, 0.02, 0.03, 0.02, 0.03, 0.03, 0.05, 0.09, 0.09, 0.05, 0.03, 0.03, 0.03, 0.06, 0.05, 0.06, 0.07, 0.07, 0.04, 0.06, 0.06, 0.11, 0.08, 0.1, 0.16, 0.1, 0.09, 0.05, 0.05, 0.06, 0.06, 0.11, 0.12, 0.1, 0.1, 0.16, 0.14, 0.17, 0.17, 0.17, 0.2, 0.2, 0.15, 0.18, 0.13, 0.11, 0.13, 0.08, 0.13, 0.08, 0.05, 0.09, 0.06, 0.08, 0.1, 0.08, 0.07, 0.13, 0.13, 0.07, 0.1, 0.06, 0.04, 0.06, 0.07, 0.08, 0.08, 0.07, 0.11, 0.06, 0.1, 0.17, 0.11, 0.08, 0.08, 0.05, 0.04, 0.04, 0.04, 0.02, 0.04, 0.04, 0.04, 0.04, 0.02, 0.02, 0.01, 0.02, 0.02, 0.02, 0.04, 0.04, 0.02, 0.02, 0.04, 0.05, 0.06, 0.1, 0.07, 0.07, 0.12, 0.09, 0.09, 0.14, 0.2, 0.27, 0.28, 0.35, 0.27, 0.35, 0.34, 0.29, 0.24, 0.35, 0.42, 0.36, 0.38, 0.32, 0.32, 0.41, 0.35, 0.35, 0.44, 0.44, 0.38, 0.38, 0.31, 0.29, 0.23, 0.32, 0.31, 0.28, 0.3, 0.33, 0.3, 0.32, 0.4, 0.38, 0.43, 0.4, 0.36, 0.42, 0.47, 0.5, 0.53, 0.63, 0.67, 0.77, 0.83, 0.9, 0.92, 0.95]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.7, 0.67, 0.64, 0.62, 0.6, 0.57, 0.55, 0.52, 0.5, 0.49, 0.48, 0.47, 0.47, 0.47, 0.48, 0.49, 0.49, 0.5, 0.51, 0.52, 0.52, 0.53, 0.52, 0.52, 0.51, 0.51, 0.5, 0.5, 0.5, 0.49, 0.49, 0.48, 0.47, 0.47, 0.46, 0.45, 0.45, 0.44, 0.43, 0.42, 0.41, 0.41, 0.41, 0.4, 0.4, 0.4, 0.4, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.41, 0.41, 0.4, 0.4, 0.39, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.37, 0.37, 0.38, 0.38, 0.38, 0.39, 0.4, 0.4, 0.41, 0.42, 0.42, 0.43, 0.43, 0.43, 0.43, 0.42, 0.42, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.39, 0.4, 0.4, 0.41, 0.41, 0.41, 0.42, 0.43, 0.43, 0.43, 0.42, 0.41, 0.41, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.39, 0.4, 0.41, 0.42, 0.43, 0.41, 0.41, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.4, 0.41, 0.42, 0.43, 0.42, 0.41, 0.4, 0.38, 0.36, 0.34, 0.31, 0.29, 0.27, 0.26, 0.25, 0.24, 0.23, 0.23, 0.22, 0.22, 0.23, 0.23, 0.24, 0.24, 0.24, 0.24, 0.23, 0.23, 0.23, 0.22, 0.22, 0.22, 0.22, 0.21, 0.2, 0.2, 0.19, 0.19, 0.19, 0.19, 0.18, 0.19, 0.19, 0.2, 0.2, 0.21, 0.22, 0.23, 0.24, 0.24, 0.24, 0.24, 0.23, 0.22, 0.21, 0.21, 0.2, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.18, 0.18, 0.17, 0.17, 0.17, 0.16, 0.16, 0.15, 0.15, 0.15, 0.14, 0.14, 0.14, 0.14, 0.14, 0.14, 0.14, 0.15, 0.16, 0.16, 0.17, 0.18, 0.2, 0.21, 0.22, 0.23, 0.24, 0.24, 0.24, 0.24, 0.23, 0.22, 0.21, 0.2, 0.19, 0.17, 0.16, 0.15, 0.14, 0.13, 0.12, 0.12, 0.11, 0.11, 0.11, 0.12, 0.12, 0.13, 0.14, 0.15, 0.17, 0.19, 0.2, 0.22, 0.23, 0.24, 0.25, 0.27, 0.29, 0.31, 0.31, 0.32, 0.32, 0.32, 0.33, 0.33, 0.34, 0.34, 0.33, 0.32, 0.31, 0.3, 0.29, 0.29, 0.3, 0.29, 0.29, 0.29, 0.29, 0.29, 0.29, 0.3, 0.3, 0.31, 0.32, 0.32, 0.33, 0.33, 0.34, 0.35, 0.36, 0.36, 0.37, 0.37, 0.38, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.39, 0.4, 0.41, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.39, 0.39, 0.38, 0.37, 0.37, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.37, 0.36, 0.37]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.02432, \"maximum_length\": 8, \"minimum_length\": 8, \"type\": \"artifact\"}, {\"count\": 1, \"coverage\": 0.69909, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"580393_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"247935_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"B4EFL1\", \"aligned_regions\": [{\"entity_beg_seq_id\": 9, \"length\": 321, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"237840_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"28475_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 8, \"ref_beg_seq_id\": 5}, {\"entity_beg_seq_id\": 9, \"length\": 33, \"ref_beg_seq_id\": 14}, {\"entity_beg_seq_id\": 42, \"length\": 15, \"ref_beg_seq_id\": 48}, {\"entity_beg_seq_id\": 57, \"length\": 3, \"ref_beg_seq_id\": 68}, {\"entity_beg_seq_id\": 60, \"length\": 40, \"ref_beg_seq_id\": 73}, {\"entity_beg_seq_id\": 100, \"length\": 29, \"ref_beg_seq_id\": 115}, {\"entity_beg_seq_id\": 129, \"length\": 17, \"ref_beg_seq_id\": 147}, {\"entity_beg_seq_id\": 146, \"length\": 31, \"ref_beg_seq_id\": 166}, {\"entity_beg_seq_id\": 177, \"length\": 31, \"ref_beg_seq_id\": 199}, {\"entity_beg_seq_id\": 208, \"length\": 34, \"ref_beg_seq_id\": 235}, {\"entity_beg_seq_id\": 242, \"length\": 26, \"ref_beg_seq_id\": 274}, {\"entity_beg_seq_id\": 268, \"length\": 62, \"ref_beg_seq_id\": 302}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"675426_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"541580_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 329, \"ref_beg_seq_id\": 1}]}], \"rcsb_id\": \"4LW8_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:42:48.189252\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.1,
+            "experimentalMethod": null,
+            "depositionDate": "2013-07-26T00:00:00+0000",
+            "releaseDate": "2013-09-04T00:00:00+0000",
+            "sourceOrganism": [
+              "Burkholderia cenocepacia J2315"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 3,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.1,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Burkholderia cenocepacia J2315",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG",
+        "description": "Amino acid sequence for chain A (length: 329)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 329
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "MAHHHHHHMTRSETGRPSRRAFVTGLTGFTGRYMAERLQAAGYDVWGTVAPGTPRPADPAFAQCTLLPVDLLDAEAMRAAAADARPDAVVHLAARAHVAQDEPSQTYAVNIVGTRNLLAALSGLDRRPSAVLLASSANIYGNSTAGVLDETVAPAPANDYAVSKLAMEYAAKLWADRLPIVIARPFNYTGVGQSDAYLLPKLVAHYARNAPRISLGNLDVSRDFSDVRDVTAAYLKLIEAAPAGETFNVCSERAYSLKEVLAMLSRIAGYVIDVTIDPRFVRHNEVKSLSGSRDKLRRAVGELPVTPLDETLRWMVDAMRAAPPGHAAG",
+        "description": "Amino acid sequence for chain B (length: 329)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 329
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of a putative epimerase from Burkholderia cenocepacia J2315",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 329",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4LW8_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 6,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "1BWS_1",
+          "4E5Y_1",
+          "5LC1_5",
+          "4ZRN_1",
+          "2P5U_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 4LW8_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "4LW8",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 1449.71,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 44,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "BCAM1003",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.50.720;3.90.25.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF16363",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 299.049999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1150.66,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.206282635837512,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.793717364162488,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4LW8_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 6,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1BWS_1",
+        "4E5Y_1",
+        "5LC1_5",
+        "4ZRN_1",
+        "2P5U_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

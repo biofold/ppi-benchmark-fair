@@ -1,0 +1,398 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 2DWY_6",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "2DWY_6",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_2DWY",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "2DWY",
+    "name": "Protein 2DWY",
+    "description": "Protein structure with PDB ID: 2DWY. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2DWY_6 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/2DWY",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 2DWY",
+      "Protein ID 2DWY"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/2dwy_6.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/2dwy.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "2DWY",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "2DWY",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "2DWY_6",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "GGA1",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.60.40.1230",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF02883",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"2DWY\", \"structure_metadata\": {\"pdb_id\": \"2DWY\", \"resolution\": 2.3, \"deposition_date\": \"2006-08-21T00:00:00+0000\", \"release_date\": \"2007-04-17T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Molecular Basis for Autoregulatory Interaction Between GAE Domain and Hinge Region of GGA1\", \"doi\": \"10.1111/j.1600-0854.2007.00577.x\", \"authors\": [\"Inoue, M.\", \"Shiba, T.\", \"Ihara, K.\", \"Yamada, Y.\", \"Hirano, S.\", \"Kamikubo, H.\", \"Kataoka, M.\", \"Kawasaki, M.\", \"Kato, R.\", \"Nakayama, K.\", \"Wakatsuki, S.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 47.482, \"b\": 88.238, \"c\": 67.224, \"alpha\": 90.0, \"beta\": 96.1, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"B\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"C\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"D\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 133, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 133, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 133, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 133, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 133, \"gene_name\": null, \"uniprot_ids\": [\"Q9UJY5\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"entities\": [\"1\"], \"chain_count\": 4}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 4, \"chain_count\": 4, \"unique_sequences\": 1, \"avg_sequence_length\": 133.0, \"min_sequence_length\": 133, \"max_sequence_length\": 133}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"pdbx_seq_one_letter_code_can\": \"IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL\", \"pdbx_strand_id\": \"A,B,C,D\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 133, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"human\", \"gene_src_genus\": \"Homo\", \"host_org_genus\": \"Escherichia\", \"host_org_species\": \"Escherichia coli\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"9606\", \"pdbx_gene_src_scientific_name\": \"Homo sapiens\", \"pdbx_host_org_ncbi_taxonomy_id\": \"469008\", \"pdbx_host_org_scientific_name\": \"Escherichia coli BL21(DE3)\", \"pdbx_host_org_strain\": \"BL21(DE3)\", \"pdbx_host_org_vector_type\": \"PLASMID\", \"pdbx_src_id\": 1, \"plasmid_name\": \"PGEX4T-2\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.275, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/2dwyC/6684/2dwyA\", \"max_rmsd\": 1.909, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 3487, \"identity\": 100}, {\"cluster_id\": 4662, \"identity\": 95}, {\"cluster_id\": 5097, \"identity\": 90}, {\"cluster_id\": 6393, \"identity\": 70}, {\"cluster_id\": 7771, \"identity\": 50}, {\"cluster_id\": 4730, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Escherichia coli str. BL21(DE3)\", \"Escherichia coli strain BL21(DE3)\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli BL21(DE3)\", \"ncbi_taxonomy_id\": 469008, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli BL21(DE3)\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli str. BL21(DE3)\"}, {\"depth\": 10, \"id\": \"469008\", \"name\": \"Escherichia coli strain BL21(DE3)\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"human\", \"ncbi_common_names\": [\"human\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Homo sapiens\", \"ncbi_taxonomy_id\": 9606, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Homo sapiens\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"Mammalia\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"mammals\"}, {\"depth\": 19, \"id\": \"32525\", \"name\": \"Theria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Eutheria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Placentalia\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"eutherian mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placental mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placentals\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreoeutheria\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreotheria\"}, {\"depth\": 22, \"id\": \"314146\", \"name\": \"Euarchontoglires\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primates\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primata\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primate\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primates\"}, {\"depth\": 24, \"id\": \"376913\", \"name\": \"Haplorrhini\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Simiiformes\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Anthropoidea\"}, {\"depth\": 26, \"id\": \"9526\", \"name\": \"Catarrhini\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"Hominoidea\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"ape\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"apes\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Hominidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Pongidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"great apes\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homininae\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homo/Pan/Gorilla group\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"Homo\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"humans\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"human\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 1, \"id\": \"9606:22\", \"name\": \"Chromosome 22\"}, {\"depth\": 2, \"id\": \"9606:22:golgi_associated_gamma_adaptin_ear_containing_arf_binding_protein_1\", \"name\": \"golgi associated, gamma adaptin ear containing, ARF binding protein 1\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 14.891, \"pdbx_description\": \"ADP-RIBOSYLATION FACTOR BINDING PROTEIN GGA1\", \"pdbx_fragment\": \"GAE DOMAIN, RESIDUES 507-639\", \"pdbx_number_of_molecules\": 4, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"ADP-RIBOSYLATION FACTOR BINDING PROTEIN GGA1\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"GOLGI-LOCALIZED\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"GAMMA EAR-CONTAINING\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"ARF-BINDING PROTEIN 1\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"GAMMA-ADAPTIN RELATED PROTEIN 1\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"ADP-ribosylation factor-binding protein GGA1\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q9UJY5\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 507}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF02883\", \"assignment_version\": \"34.0\", \"name\": \"Adaptin C-terminal domain (Alpha_adaptinC2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0035091\", \"name\": \"phosphatidylinositol binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0005543\", \"name\": \"phospholipid binding\"}, {\"id\": \"GO:0008289\", \"name\": \"lipid binding\"}, {\"id\": \"GO:0035091\", \"name\": \"phosphatidylinositol binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0031267\", \"name\": \"small GTPase binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0031267\", \"name\": \"small GTPase binding\"}, {\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0019899\", \"name\": \"enzyme binding\"}, {\"id\": \"GO:0051020\", \"name\": \"GTPase binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0043001\", \"name\": \"Golgi to plasma membrane protein transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006893\", \"name\": \"Golgi to plasma membrane transport\"}, {\"id\": \"GO:0045184\", \"name\": \"establishment of protein localization\"}, {\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:1990778\", \"name\": \"protein localization to cell periphery\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0006892\", \"name\": \"post-Golgi vesicle-mediated transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0090150\", \"name\": \"establishment of protein localization to membrane\"}, {\"id\": \"GO:0072659\", \"name\": \"protein localization to plasma membrane\"}, {\"id\": \"GO:0061951\", \"name\": \"establishment of protein localization to plasma membrane\"}, {\"id\": \"GO:0043001\", \"name\": \"Golgi to plasma membrane protein transport\"}, {\"id\": \"GO:0051668\", \"name\": \"localization within membrane\"}, {\"id\": \"GO:0072657\", \"name\": \"protein localization to membrane\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0016192\", \"name\": \"vesicle-mediated transport\"}, {\"id\": \"GO:0098876\", \"name\": \"vesicle-mediated transport to the plasma membrane\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0015031\", \"name\": \"protein transport\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}, {\"id\": \"GO:0048193\", \"name\": \"Golgi vesicle transport\"}]}, {\"annotation_id\": \"IPR002014\", \"name\": \"VHS domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR002014\", \"name\": \"VHS domain\"}]}, {\"annotation_id\": \"GO:0016020\", \"name\": \"membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}]}, {\"annotation_id\": \"IPR008942\", \"name\": \"ENTH/VHS\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR008942\", \"name\": \"ENTH/VHS\"}]}, {\"annotation_id\": \"GO:0006893\", \"name\": \"Golgi to plasma membrane transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006893\", \"name\": \"Golgi to plasma membrane transport\"}, {\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0006892\", \"name\": \"post-Golgi vesicle-mediated transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0051668\", \"name\": \"localization within membrane\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0016192\", \"name\": \"vesicle-mediated transport\"}, {\"id\": \"GO:0098876\", \"name\": \"vesicle-mediated transport to the plasma membrane\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0048193\", \"name\": \"Golgi vesicle transport\"}]}, {\"annotation_id\": \"IPR041198\", \"name\": \"N-terminal extension of GAT domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR041198\", \"name\": \"N-terminal extension of GAT domain\"}]}, {\"annotation_id\": \"GO:0008104\", \"name\": \"protein localization\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}]}, {\"annotation_id\": \"GO:0034394\", \"name\": \"protein localization to cell surface\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0034394\", \"name\": \"protein localization to cell surface\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}]}, {\"annotation_id\": \"GO:0005829\", \"name\": \"cytosol\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0005829\", \"name\": \"cytosol\"}]}, {\"annotation_id\": \"GO:0030163\", \"name\": \"protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}]}, {\"annotation_id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}]}, {\"annotation_id\": \"GO:0043130\", \"name\": \"ubiquitin binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005515\", \"name\": \"protein binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0043130\", \"name\": \"ubiquitin binding\"}, {\"id\": \"GO:0032182\", \"name\": \"ubiquitin-like protein binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0045732\", \"name\": \"positive regulation of protein catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050794\", \"name\": \"regulation of cellular process\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0051247\", \"name\": \"positive regulation of protein metabolic process\"}, {\"id\": \"GO:0048518\", \"name\": \"positive regulation of biological process\"}, {\"id\": \"GO:0009057\", \"name\": \"macromolecule catabolic process\"}, {\"id\": \"GO:0080090\", \"name\": \"regulation of primary metabolic process\"}, {\"id\": \"GO:0009893\", \"name\": \"positive regulation of metabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0010604\", \"name\": \"positive regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0048522\", \"name\": \"positive regulation of cellular process\"}, {\"id\": \"GO:0050789\", \"name\": \"regulation of biological process\"}, {\"id\": \"GO:0051246\", \"name\": \"regulation of protein metabolic process\"}, {\"id\": \"GO:0065007\", \"name\": \"biological regulation\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0060255\", \"name\": \"regulation of macromolecule metabolic process\"}, {\"id\": \"GO:0030163\", \"name\": \"protein catabolic process\"}, {\"id\": \"GO:0009894\", \"name\": \"regulation of catabolic process\"}, {\"id\": \"GO:0045732\", \"name\": \"positive regulation of protein catabolic process\"}, {\"id\": \"GO:0009896\", \"name\": \"positive regulation of catabolic process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}, {\"id\": \"GO:0019222\", \"name\": \"regulation of metabolic process\"}, {\"id\": \"GO:0042176\", \"name\": \"regulation of protein catabolic process\"}]}, {\"annotation_id\": \"IPR008153\", \"name\": \"Gamma-adaptin ear (GAE) domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 2, \"id\": \"IPR008153\", \"name\": \"Gamma-adaptin ear (GAE) domain\"}, {\"depth\": 1, \"id\": \"IPR008152\", \"name\": \"Clathrin adaptor, alpha/beta/gamma-adaptin, appendage, Ig-like subdomain\"}]}, {\"annotation_id\": \"GO:0005654\", \"name\": \"nucleoplasm\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005634\", \"name\": \"nucleus\"}, {\"id\": \"GO:0031974\", \"name\": \"membrane-enclosed lumen\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0070013\", \"name\": \"intracellular organelle lumen\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005654\", \"name\": \"nucleoplasm\"}, {\"id\": \"GO:0043233\", \"name\": \"organelle lumen\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0031981\", \"name\": \"nuclear lumen\"}]}, {\"annotation_id\": \"GO:0032991\", \"name\": \"protein-containing complex\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032991\", \"name\": \"protein-containing complex\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}]}, {\"annotation_id\": \"GO:0005769\", \"name\": \"early endosome\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005769\", \"name\": \"early endosome\"}, {\"id\": \"GO:0005768\", \"name\": \"endosome\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}]}, {\"annotation_id\": \"GO:0006886\", \"name\": \"intracellular protein transport\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0045184\", \"name\": \"establishment of protein localization\"}, {\"id\": \"GO:0071705\", \"name\": \"nitrogen compound transport\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0046907\", \"name\": \"intracellular transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0015031\", \"name\": \"protein transport\"}, {\"id\": \"GO:0051649\", \"name\": \"establishment of localization in cell\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}, {\"id\": \"GO:0006886\", \"name\": \"intracellular protein transport\"}]}, {\"annotation_id\": \"GO:0005802\", \"name\": \"trans-Golgi network\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0098791\", \"name\": \"Golgi apparatus subcompartment\"}, {\"id\": \"GO:0005794\", \"name\": \"Golgi apparatus\"}, {\"id\": \"GO:0031984\", \"name\": \"organelle subcompartment\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005802\", \"name\": \"trans-Golgi network\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}]}, {\"annotation_id\": \"GO:0005794\", \"name\": \"Golgi apparatus\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005794\", \"name\": \"Golgi apparatus\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}]}, {\"annotation_id\": \"GO:0031901\", \"name\": \"early endosome membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0010008\", \"name\": \"endosome membrane\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0005769\", \"name\": \"early endosome\"}, {\"id\": \"GO:0005768\", \"name\": \"endosome\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0031901\", \"name\": \"early endosome membrane\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0030659\", \"name\": \"cytoplasmic vesicle membrane\"}, {\"id\": \"GO:0098588\", \"name\": \"bounding membrane of organelle\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0012506\", \"name\": \"vesicle membrane\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}, {\"id\": \"GO:0031090\", \"name\": \"organelle membrane\"}]}, {\"annotation_id\": \"GO:0042147\", \"name\": \"retrograde transport, endosome to Golgi\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0006810\", \"name\": \"transport\"}, {\"id\": \"GO:0046907\", \"name\": \"intracellular transport\"}, {\"id\": \"GO:0051234\", \"name\": \"establishment of localization\"}, {\"id\": \"GO:0016192\", \"name\": \"vesicle-mediated transport\"}, {\"id\": \"GO:0016197\", \"name\": \"endosomal transport\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0016482\", \"name\": \"cytosolic transport\"}, {\"id\": \"GO:0042147\", \"name\": \"retrograde transport, endosome to Golgi\"}, {\"id\": \"GO:0051649\", \"name\": \"establishment of localization in cell\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}]}, {\"annotation_id\": \"IPR038425\", \"name\": \"GAT domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR038425\", \"name\": \"GAT domain superfamily\"}]}, {\"annotation_id\": \"IPR013041\", \"name\": \"Clathrin adaptor, appendage, Ig-like subdomain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR013041\", \"name\": \"Clathrin adaptor, appendage, Ig-like subdomain superfamily\"}]}, {\"annotation_id\": \"GO:0010008\", \"name\": \"endosome membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0010008\", \"name\": \"endosome membrane\"}, {\"id\": \"GO:0043227\", \"name\": \"membrane-bounded organelle\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005622\", \"name\": \"intracellular anatomical structure\"}, {\"id\": \"GO:0016020\", \"name\": \"membrane\"}, {\"id\": \"GO:0005768\", \"name\": \"endosome\"}, {\"id\": \"GO:0097708\", \"name\": \"intracellular vesicle\"}, {\"id\": \"GO:0043231\", \"name\": \"intracellular membrane-bounded organelle\"}, {\"id\": \"GO:0012505\", \"name\": \"endomembrane system\"}, {\"id\": \"GO:0043229\", \"name\": \"intracellular organelle\"}, {\"id\": \"GO:0030659\", \"name\": \"cytoplasmic vesicle membrane\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0098588\", \"name\": \"bounding membrane of organelle\"}, {\"id\": \"GO:0012506\", \"name\": \"vesicle membrane\"}, {\"id\": \"GO:0031410\", \"name\": \"cytoplasmic vesicle\"}, {\"id\": \"GO:0043226\", \"name\": \"organelle\"}, {\"id\": \"GO:0005737\", \"name\": \"cytoplasm\"}, {\"id\": \"GO:0031982\", \"name\": \"vesicle\"}, {\"id\": \"GO:0031090\", \"name\": \"organelle membrane\"}]}, {\"annotation_id\": \"IPR004152\", \"name\": \"GAT domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR004152\", \"name\": \"GAT domain\"}]}, {\"annotation_id\": \"GO:1903441\", \"name\": \"protein localization to ciliary membrane\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:1990778\", \"name\": \"protein localization to cell periphery\"}, {\"id\": \"GO:0051641\", \"name\": \"cellular localization\"}, {\"id\": \"GO:0061512\", \"name\": \"protein localization to cilium\"}, {\"id\": \"GO:0051668\", \"name\": \"localization within membrane\"}, {\"id\": \"GO:0072657\", \"name\": \"protein localization to membrane\"}, {\"id\": \"GO:1903441\", \"name\": \"protein localization to ciliary membrane\"}, {\"id\": \"GO:0051179\", \"name\": \"localization\"}, {\"id\": \"GO:0033036\", \"name\": \"macromolecule localization\"}, {\"id\": \"GO:0033365\", \"name\": \"protein localization to organelle\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0008104\", \"name\": \"intracellular protein localization\"}]}, {\"annotation_id\": \"IPR008152\", \"name\": \"Clathrin adaptor, alpha/beta/gamma-adaptin, appendage, Ig-like subdomain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR008152\", \"name\": \"Clathrin adaptor, alpha/beta/gamma-adaptin, appendage, Ig-like subdomain\"}]}, {\"annotation_id\": \"IPR027422\", \"name\": \"ADP-ribosylation factor-binding protein GGA1-3\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR027422\", \"name\": \"ADP-ribosylation factor-binding protein GGA1-3\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"2DWY\", \"rcsb_id\": \"2DWY_1\", \"uniprot_ids\": [\"Q9UJY5\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q9UJY5\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.2081377151799687}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF02883\", \"name\": \"Adaptin C-terminal domain (Alpha_adaptinC2)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 7, \"end_seq_id\": 125}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [0.62, 0.04, 0.94, 0.98, 0.68, 0.68, -0.18, -0.64, -0.16, -1.12, -0.54, -0.59, -0.13, -0.1, 0.6, 1.16, 0.7, 0.0, 0.32, 0.24, -0.36, -0.71, -0.86, -1.26, -1.84, -0.88, -0.07, 0.58, 0.62, 1.27, 1.78, 2.19, 2.49, 3.3, 2.74, 2.24, 1.98, 1.33, 0.48, -0.17, 0.42, -0.29, -1.1, -0.51, 0.03, 0.14, -0.07, 0.23, 0.61, 0.58, 0.9, 0.86, 0.82, 0.57, -0.18, 0.68, 0.33, 0.56, -0.3, -0.3, -0.04, -0.6, -0.86, -0.5, -1.36, -0.5, -1.1, -0.51, -0.02, -0.23, -0.32, 0.22, 0.77, 0.8, 0.2, 0.29, 0.29, 0.48, 0.79, 0.58, 0.54, 0.5, 1.28, 1.88, 2.17, 1.58, 0.9, 0.59, 0.54, -0.31, -1.17, -1.12, -2.04, -1.82, -1.93, -1.9, -1.94, -1.09, -0.78, -0.03, -0.58, 0.13, -0.33, -0.22, -0.47, -0.11, -0.68, -0.99, -1.69, -1.4, -1.66, -2.0, -1.14, -1.14, -1.46, -1.0, -0.79, -0.58, -0.97, -1.31, -1.0, -1.57, -1.22, -0.92, -0.81]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.76, 0.65, 0.62, 0.59, 0.54, 0.51, 0.35, 0.3, 0.17, 0.09, 0.03, 0.06, 0.03, 0.02, 0.02, 0.02, 0.04, 0.04, 0.04, 0.06, 0.06, 0.1, 0.17, 0.1, 0.06, 0.04, 0.02, 0.03, 0.02, 0.03, 0.04, 0.05, 0.04, 0.08, 0.08, 0.09, 0.09, 0.09, 0.1, 0.09, 0.09, 0.06, 0.04, 0.02, 0.03, 0.06, 0.08, 0.08, 0.13, 0.2, 0.14, 0.15, 0.24, 0.17, 0.17, 0.14, 0.13, 0.14, 0.15, 0.22, 0.22, 0.21, 0.3, 0.28, 0.39, 0.35, 0.26, 0.3, 0.4, 0.31, 0.23, 0.32, 0.38, 0.38, 0.41, 0.33, 0.41, 0.41, 0.32, 0.23, 0.17, 0.12, 0.11, 0.11, 0.18, 0.17, 0.2, 0.31, 0.29, 0.2, 0.29, 0.28, 0.27, 0.18, 0.18, 0.15, 0.22, 0.16, 0.14, 0.17, 0.23, 0.3, 0.37, 0.4, 0.32, 0.3, 0.3, 0.27, 0.26, 0.27, 0.28, 0.28, 0.37, 0.29, 0.38, 0.42, 0.52, 0.54, 0.61, 0.53, 0.58, 0.57, 0.52, 0.55, 0.59, 0.7, 0.73, 0.76, 0.82, 0.85, 0.87, 0.93, 0.95]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.1, 0.1, 0.11, 0.11, 0.12, 0.13, 0.14, 0.14, 0.15, 0.16, 0.17, 0.18, 0.18, 0.2, 0.21, 0.23, 0.24, 0.25, 0.26, 0.27, 0.26, 0.26, 0.26, 0.26, 0.26, 0.25, 0.24, 0.24, 0.23, 0.23, 0.22, 0.23, 0.23, 0.24, 0.25, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.23, 0.23, 0.23, 0.22, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.29, 0.31, 0.32, 0.33, 0.34, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.36, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.43, 0.41, 0.4, 0.38, 0.37, 0.37, 0.37, 0.36, 0.36, 0.36, 0.36, 0.37, 0.38, 0.39, 0.4, 0.41, 0.41, 0.41, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.38, 0.37, 0.37, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.42, 0.42, 0.42, 0.43, 0.43, 0.43]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.89474, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"4730_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 653}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"4662_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 509}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3487_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 509}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q9UJY5\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 507}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"6393_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 509}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7771_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 515}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"5097_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 133, \"ref_beg_seq_id\": 509}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"GOLGI-LOCALIZED, GAMMA EAR-CONTAINING, ARF-BINDING PROTEIN 1, GAMMA-ADAPTIN RELATED PROTEIN 1\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"Pharos\", \"related_resource_version\": \"6.13.4\", \"related_target_id\": \"962\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 132, \"target_beg_seq_id\": 507}]}], \"rcsb_id\": \"2DWY_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:38:13.258357\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 2.3,
+            "experimentalMethod": null,
+            "depositionDate": "2006-08-21T00:00:00+0000",
+            "releaseDate": "2007-04-17T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.3,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL",
+        "description": "Amino acid sequence for chain A (length: 133)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 133
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL",
+        "description": "Amino acid sequence for chain B (length: 133)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 133
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL",
+        "description": "Amino acid sequence for chain C (length: 133)",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 133
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "IKPSNILPVTVYDQHGFRILFHFARDPLPGRSDVLVVVVSMLSTAPQPIRNIVFQSAVPKVMKVKLQPPSGTELPAFNPIVHPSAITQVLLLANPQKEKVRLRYKLTFTMGDQTYNEMGDVDQFPPPETWGSL",
+        "description": "Amino acid sequence for chain D (length: 133)",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 133
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Molecular Basis for Autoregulatory Interaction Between GAE Domain and Hinge Region of GGA1",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1111/j.1600-0854.2007.00577.x",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 133",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "2DWY_6",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 2DWY_6",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "2DWY",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2898.4,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 89,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "GGA1",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.60.40.1230",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF02883",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 898.69,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1999.69,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.310064173337013,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.689928926304168,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "2DWY_6",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

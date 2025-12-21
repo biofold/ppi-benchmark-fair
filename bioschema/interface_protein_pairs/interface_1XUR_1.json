@@ -1,0 +1,402 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1XUR_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1XUR_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1XUR",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1XUR",
+    "name": "Protein 1XUR",
+    "description": "Protein structure with PDB ID: 1XUR. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1XUR_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1XUR",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Homo sapiens",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+    },
+    "alternateName": [
+      "PDB 1XUR",
+      "Protein ID 1XUR"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1xur_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1xur.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1XUR",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1XUR",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1XUR_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Non-physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gene",
+        "value": "MMP13",
+        "description": "Gene name associated with the protein"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "3.40.390.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pfam",
+        "value": "PF00413",
+        "description": "Pfam domain classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1XUR\", \"structure_metadata\": {\"pdb_id\": \"1XUR\", \"resolution\": 1.85, \"deposition_date\": \"2004-10-26T00:00:00+0000\", \"release_date\": \"2005-10-26T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Homo sapiens\"], \"citation\": {\"title\": \"Structural basis for the highly selective inhibition of MMP-13.\", \"doi\": \"10.1016/j.chembiol.2004.11.014\", \"authors\": [\"Engel, C.K.\", \"Pirard, B.\", \"Schimanski, S.\", \"Kirsch, R.\", \"Habermann, J.\", \"Klingler, O.\", \"Schlotte, V.\", \"Weithmann, K.U.\", \"Wendt, K.U.\"]}, \"entity_count\": 5, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 134.508, \"b\": 36.486, \"c\": 95.586, \"alpha\": 90.0, \"beta\": 130.523, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\", \"B\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 171, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Homo sapiens\", \"sequence_length\": 171, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\", \"organism\": \"Homo sapiens\", \"taxonomy_id\": 9606, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 171, \"gene_name\": null, \"uniprot_ids\": [\"P45452\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 171.0, \"min_sequence_length\": 171, \"max_sequence_length\": 171}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\", \"pdbx_seq_one_letter_code_can\": \"YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 171, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"human\", \"gene_src_genus\": \"Homo\", \"host_org_genus\": \"Escherichia\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"9606\", \"pdbx_gene_src_scientific_name\": \"Homo sapiens\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 1.7, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/5uwnB/31628/1xurA\", \"max_rmsd\": 4.023, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 1309, \"identity\": 100}, {\"cluster_id\": 1633, \"identity\": 95}, {\"cluster_id\": 1416, \"identity\": 90}, {\"cluster_id\": 1926, \"identity\": 70}, {\"cluster_id\": 673, \"identity\": 50}, {\"cluster_id\": 435, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"human\", \"ncbi_common_names\": [\"human\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Homo sapiens\", \"ncbi_taxonomy_id\": 9606, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Homo sapiens\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"Mammalia\"}, {\"depth\": 18, \"id\": \"40674\", \"name\": \"mammals\"}, {\"depth\": 19, \"id\": \"32525\", \"name\": \"Theria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Eutheria\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"Placentalia\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"eutherian mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placental mammals\"}, {\"depth\": 20, \"id\": \"9347\", \"name\": \"placentals\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreoeutheria\"}, {\"depth\": 21, \"id\": \"1437010\", \"name\": \"Boreotheria\"}, {\"depth\": 22, \"id\": \"314146\", \"name\": \"Euarchontoglires\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primates\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"Primata\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primate\"}, {\"depth\": 23, \"id\": \"9443\", \"name\": \"primates\"}, {\"depth\": 24, \"id\": \"376913\", \"name\": \"Haplorrhini\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Simiiformes\"}, {\"depth\": 25, \"id\": \"314293\", \"name\": \"Anthropoidea\"}, {\"depth\": 26, \"id\": \"9526\", \"name\": \"Catarrhini\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"Hominoidea\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"ape\"}, {\"depth\": 27, \"id\": \"314295\", \"name\": \"apes\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Hominidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"Pongidae\"}, {\"depth\": 28, \"id\": \"9604\", \"name\": \"great apes\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homininae\"}, {\"depth\": 29, \"id\": \"207598\", \"name\": \"Homo/Pan/Gorilla group\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"Homo\"}, {\"depth\": 30, \"id\": \"9605\", \"name\": \"humans\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 31, \"id\": \"9606\", \"name\": \"human\"}]}], \"rcsb_genomic_lineage\": [{\"depth\": 0, \"id\": \"9606\", \"name\": \"Homo sapiens\"}, {\"depth\": 1, \"id\": \"9606:11\", \"name\": \"Chromosome 11\"}, {\"depth\": 2, \"id\": \"9606:11:matrix_metallopeptidase_13\", \"name\": \"matrix metallopeptidase 13\"}], \"rcsb_polymer_entity\": {\"formula_weight\": 19.235, \"pdbx_description\": \"Collagenase 3\", \"pdbx_ec\": \"3.4.24\", \"pdbx_fragment\": \"Catalytic domain\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_ec_lineage\": [{\"depth\": 1, \"id\": \"3\", \"name\": \"Hydrolases\"}, {\"depth\": 2, \"id\": \"3.4\", \"name\": \"Acting on peptide bonds (peptidases)\"}, {\"depth\": 3, \"id\": \"3.4.24\", \"name\": \"Metalloendopeptidases\"}], \"rcsb_macromolecular_names_combined\": [{\"name\": \"Collagenase 3\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}, {\"name\": \"Matrix metalloproteinase-13\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}, {\"name\": \"MMP-13\", \"provenance_code\": \"ECO:0000303\", \"provenance_source\": \"PDB Synonym\"}], \"rcsb_enzyme_class_combined\": [{\"depth\": 3, \"ec\": \"3.4.24\", \"provenance_source\": \"PDB Primary Data\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Collagenase 3\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P45452\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 104}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF00413\", \"assignment_version\": \"34.0\", \"name\": \"Matrixin (Peptidase_M10)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0003417\", \"name\": \"growth plate cartilage development\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032501\", \"name\": \"multicellular organismal process\"}, {\"id\": \"GO:0061448\", \"name\": \"connective tissue development\"}, {\"id\": \"GO:0048589\", \"name\": \"developmental growth\"}, {\"id\": \"GO:0060350\", \"name\": \"endochondral bone morphogenesis\"}, {\"id\": \"GO:0035265\", \"name\": \"organ growth\"}, {\"id\": \"GO:0007275\", \"name\": \"multicellular organism development\"}, {\"id\": \"GO:0001501\", \"name\": \"skeletal system development\"}, {\"id\": \"GO:0003417\", \"name\": \"growth plate cartilage development\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0003416\", \"name\": \"endochondral bone growth\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0009887\", \"name\": \"animal organ morphogenesis\"}, {\"id\": \"GO:0060348\", \"name\": \"bone development\"}, {\"id\": \"GO:0048731\", \"name\": \"system development\"}, {\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0040007\", \"name\": \"growth\"}, {\"id\": \"GO:0048513\", \"name\": \"animal organ development\"}, {\"id\": \"GO:0009888\", \"name\": \"tissue development\"}, {\"id\": \"GO:0009653\", \"name\": \"anatomical structure morphogenesis\"}, {\"id\": \"GO:0098868\", \"name\": \"bone growth\"}, {\"id\": \"GO:0048705\", \"name\": \"skeletal system morphogenesis\"}, {\"id\": \"GO:0060351\", \"name\": \"cartilage development involved in endochondral bone morphogenesis\"}, {\"id\": \"GO:0060349\", \"name\": \"bone morphogenesis\"}, {\"id\": \"GO:0051216\", \"name\": \"cartilage development\"}]}, {\"annotation_id\": \"IPR018486\", \"name\": \"Hemopexin, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018486\", \"name\": \"Hemopexin, conserved site\"}]}, {\"annotation_id\": \"GO:0060349\", \"name\": \"bone morphogenesis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0032501\", \"name\": \"multicellular organismal process\"}, {\"id\": \"GO:0048513\", \"name\": \"animal organ development\"}, {\"id\": \"GO:0007275\", \"name\": \"multicellular organism development\"}, {\"id\": \"GO:0009653\", \"name\": \"anatomical structure morphogenesis\"}, {\"id\": \"GO:0001501\", \"name\": \"skeletal system development\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0048705\", \"name\": \"skeletal system morphogenesis\"}, {\"id\": \"GO:0009887\", \"name\": \"animal organ morphogenesis\"}, {\"id\": \"GO:0060349\", \"name\": \"bone morphogenesis\"}, {\"id\": \"GO:0060348\", \"name\": \"bone development\"}, {\"id\": \"GO:0048731\", \"name\": \"system development\"}]}, {\"annotation_id\": \"GO:0005509\", \"name\": \"calcium ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0005509\", \"name\": \"calcium ion binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0030574\", \"name\": \"collagen catabolic process\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0030574\", \"name\": \"collagen catabolic process\"}, {\"id\": \"GO:0009056\", \"name\": \"catabolic process\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0032963\", \"name\": \"collagen metabolic process\"}]}, {\"annotation_id\": \"IPR036375\", \"name\": \"Hemopexin-like domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036375\", \"name\": \"Hemopexin-like domain superfamily\"}]}, {\"annotation_id\": \"GO:0030282\", \"name\": \"bone mineralization\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0032501\", \"name\": \"multicellular organismal process\"}, {\"id\": \"GO:0001503\", \"name\": \"ossification\"}, {\"id\": \"GO:0030282\", \"name\": \"bone mineralization\"}, {\"id\": \"GO:0048513\", \"name\": \"animal organ development\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0031214\", \"name\": \"biomineral tissue development\"}, {\"id\": \"GO:0009888\", \"name\": \"tissue development\"}]}, {\"annotation_id\": \"GO:0004222\", \"name\": \"metalloendopeptidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0008233\", \"name\": \"peptidase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0004222\", \"name\": \"metalloendopeptidase activity\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0008237\", \"name\": \"metallopeptidase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0004175\", \"name\": \"endopeptidase activity\"}]}, {\"annotation_id\": \"IPR021158\", \"name\": \"Peptidase M10A, cysteine switch, zinc binding site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR021158\", \"name\": \"Peptidase M10A, cysteine switch, zinc binding site\"}]}, {\"annotation_id\": \"IPR036365\", \"name\": \"PGBD-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR036365\", \"name\": \"PGBD-like superfamily\"}]}, {\"annotation_id\": \"GO:0030198\", \"name\": \"extracellular matrix organization\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0030198\", \"name\": \"extracellular matrix organization\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0043062\", \"name\": \"extracellular structure organization\"}, {\"id\": \"GO:0045229\", \"name\": \"external encapsulating structure organization\"}]}, {\"annotation_id\": \"GO:0004252\", \"name\": \"serine-type endopeptidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0008233\", \"name\": \"peptidase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0017171\", \"name\": \"serine hydrolase activity\"}, {\"id\": \"GO:0008236\", \"name\": \"serine-type peptidase activity\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0004252\", \"name\": \"serine-type endopeptidase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0004175\", \"name\": \"endopeptidase activity\"}]}, {\"annotation_id\": \"GO:0001958\", \"name\": \"endochondral ossification\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0032502\", \"name\": \"developmental process\"}, {\"id\": \"GO:0001958\", \"name\": \"endochondral ossification\"}, {\"id\": \"GO:0032501\", \"name\": \"multicellular organismal process\"}, {\"id\": \"GO:0036075\", \"name\": \"replacement ossification\"}, {\"id\": \"GO:0048513\", \"name\": \"animal organ development\"}, {\"id\": \"GO:0060350\", \"name\": \"endochondral bone morphogenesis\"}, {\"id\": \"GO:0007275\", \"name\": \"multicellular organism development\"}, {\"id\": \"GO:0009653\", \"name\": \"anatomical structure morphogenesis\"}, {\"id\": \"GO:0001501\", \"name\": \"skeletal system development\"}, {\"id\": \"GO:0001503\", \"name\": \"ossification\"}, {\"id\": \"GO:0048856\", \"name\": \"anatomical structure development\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0048705\", \"name\": \"skeletal system morphogenesis\"}, {\"id\": \"GO:0009887\", \"name\": \"animal organ morphogenesis\"}, {\"id\": \"GO:0060349\", \"name\": \"bone morphogenesis\"}, {\"id\": \"GO:0060348\", \"name\": \"bone development\"}, {\"id\": \"GO:0048731\", \"name\": \"system development\"}]}, {\"annotation_id\": \"IPR001818\", \"name\": \"Peptidase M10, metallopeptidase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR006026\", \"name\": \"Peptidase, metallopeptidase\"}, {\"depth\": 2, \"id\": \"IPR001818\", \"name\": \"Peptidase M10, metallopeptidase\"}]}, {\"annotation_id\": \"GO:0031012\", \"name\": \"extracellular matrix\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0071944\", \"name\": \"cell periphery\"}, {\"id\": \"GO:0031012\", \"name\": \"extracellular matrix\"}, {\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0030312\", \"name\": \"external encapsulating structure\"}]}, {\"annotation_id\": \"GO:0022617\", \"name\": \"extracellular matrix disassembly\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016043\", \"name\": \"cellular component organization\"}, {\"id\": \"GO:0022411\", \"name\": \"cellular component disassembly\"}, {\"id\": \"GO:0022617\", \"name\": \"extracellular matrix disassembly\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0030198\", \"name\": \"extracellular matrix organization\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0071840\", \"name\": \"cellular component organization or biogenesis\"}, {\"id\": \"GO:0043062\", \"name\": \"extracellular structure organization\"}, {\"id\": \"GO:0045229\", \"name\": \"external encapsulating structure organization\"}]}, {\"annotation_id\": \"GO:0005518\", \"name\": \"collagen binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0005518\", \"name\": \"collagen binding\"}, {\"id\": \"GO:0044877\", \"name\": \"protein-containing complex binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR021190\", \"name\": \"Peptidase M10A\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR021190\", \"name\": \"Peptidase M10A\"}]}, {\"annotation_id\": \"IPR002477\", \"name\": \"Peptidoglycan binding-like\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR002477\", \"name\": \"Peptidoglycan binding-like\"}]}, {\"annotation_id\": \"GO:1904645\", \"name\": \"response to amyloid-beta\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0050896\", \"name\": \"response to stimulus\"}, {\"id\": \"GO:0042221\", \"name\": \"response to chemical\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:1901700\", \"name\": \"response to oxygen-containing compound\"}, {\"id\": \"GO:1901698\", \"name\": \"response to nitrogen compound\"}, {\"id\": \"GO:1904645\", \"name\": \"response to amyloid-beta\"}]}, {\"annotation_id\": \"IPR006026\", \"name\": \"Peptidase, metallopeptidase\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR006026\", \"name\": \"Peptidase, metallopeptidase\"}]}, {\"annotation_id\": \"IPR024079\", \"name\": \"Metallopeptidase, catalytic domain superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR024079\", \"name\": \"Metallopeptidase, catalytic domain superfamily\"}]}, {\"annotation_id\": \"IPR018487\", \"name\": \"Hemopexin-like repeats\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018487\", \"name\": \"Hemopexin-like repeats\"}]}, {\"annotation_id\": \"GO:0005576\", \"name\": \"extracellular region\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}]}, {\"annotation_id\": \"GO:0004175\", \"name\": \"endopeptidase activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0008233\", \"name\": \"peptidase activity\"}, {\"id\": \"GO:0140096\", \"name\": \"catalytic activity, acting on a protein\"}, {\"id\": \"GO:0016787\", \"name\": \"hydrolase activity\"}, {\"id\": \"GO:0003824\", \"name\": \"catalytic activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0004175\", \"name\": \"endopeptidase activity\"}]}, {\"annotation_id\": \"IPR000585\", \"name\": \"Hemopexin-like domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR000585\", \"name\": \"Hemopexin-like domain\"}]}, {\"annotation_id\": \"IPR033739\", \"name\": \"Peptidase M10A, catalytic domain\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR006026\", \"name\": \"Peptidase, metallopeptidase\"}, {\"depth\": 3, \"id\": \"IPR033739\", \"name\": \"Peptidase M10A, catalytic domain\"}, {\"depth\": 2, \"id\": \"IPR001818\", \"name\": \"Peptidase M10, metallopeptidase\"}]}, {\"annotation_id\": \"GO:0008270\", \"name\": \"zinc ion binding\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0043169\", \"name\": \"cation binding\"}, {\"id\": \"GO:0046914\", \"name\": \"transition metal ion binding\"}, {\"id\": \"GO:0008270\", \"name\": \"zinc ion binding\"}, {\"id\": \"GO:0043167\", \"name\": \"ion binding\"}, {\"id\": \"GO:0005488\", \"name\": \"binding\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}, {\"id\": \"GO:0046872\", \"name\": \"metal ion binding\"}, {\"id\": \"GO:0036094\", \"name\": \"small molecule binding\"}]}, {\"annotation_id\": \"GO:0006508\", \"name\": \"proteolysis\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0006508\", \"name\": \"proteolysis\"}, {\"id\": \"GO:0008150\", \"name\": \"biological_process\"}, {\"id\": \"GO:0008152\", \"name\": \"metabolic process\"}, {\"id\": \"GO:0009987\", \"name\": \"cellular process\"}, {\"id\": \"GO:0044238\", \"name\": \"primary metabolic process\"}, {\"id\": \"GO:0019538\", \"name\": \"protein metabolic process\"}, {\"id\": \"GO:0043170\", \"name\": \"macromolecule metabolic process\"}]}, {\"annotation_id\": \"GO:0005615\", \"name\": \"extracellular space\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}, {\"id\": \"GO:0005615\", \"name\": \"extracellular space\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MET\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1XUR\", \"rcsb_id\": \"1XUR_1\", \"uniprot_ids\": [\"P45452\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P45452\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.3630573248407643}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF00413\", \"name\": \"Matrixin (Peptidase_M10)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 9, \"end_seq_id\": 164}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.52, -0.48, -0.18, -1.08, -1.18, -1.39, -0.47, -0.47, -1.03, -1.1, -0.5, 0.06, 0.1, -0.26, 0.06, -0.54, -0.86, -0.5, -0.08, -0.93, -1.49, -1.49, -0.88, -1.19, -1.44, -0.86, -0.76, -1.11, -1.19, -0.9, -0.2, -1.1, -0.24, 0.09, -0.2, -0.9, 0.0, 0.36, -0.02, 0.09, 0.13, -0.02, 0.0, -0.41, 0.4, -0.42, -0.73, -0.6, -0.52, 0.07, -0.63, -0.06, 0.66, 0.73, 1.0, 1.7, 1.7, 1.7, 1.07, 1.07, 0.21, -0.04, -0.93, -0.53, -0.99, -1.12, -1.31, -1.27, -0.92, -0.74, -0.79, -0.44, -0.33, 0.23, 0.61, -0.06, 0.53, 0.89, 0.89, 0.8, 0.8, 0.2, -0.61, -0.96, -0.64, -0.89, -1.59, -1.21, -1.39, -1.03, -1.24, -1.24, -1.49, -1.83, -1.87, -1.58, -1.86, -1.59, -1.99, -1.69, -1.73, -1.39, -1.14, -1.46, -0.93, -0.54, -0.03, 0.52, 0.81, 1.44, 1.13, 0.89, 1.59, 1.12, 0.46, -0.06, -0.1, -0.34, -0.12, -0.16, -0.12, -0.52, -0.91, -0.94, -1.03, -1.5, -1.26, -1.26, -0.66, 0.01, -0.08, 0.86, 1.1, 1.2, 1.1, 0.82, 0.36, -0.29, -0.69, -0.87, -1.06, -0.7, -0.2, -0.23, -0.54, -0.89, -0.84, -0.29, -0.32, -0.68, -0.39, -1.2, -1.11, -0.3, -0.06, 0.29, -0.36, -0.01, -0.36, -1.24, -1.24, -1.33, -2.14]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.69, 0.66, 0.57, 0.54, 0.42, 0.38, 0.24, 0.2, 0.12, 0.06, 0.05, 0.05, 0.05, 0.07, 0.12, 0.09, 0.09, 0.08, 0.12, 0.12, 0.16, 0.16, 0.16, 0.18, 0.11, 0.16, 0.16, 0.21, 0.13, 0.18, 0.17, 0.11, 0.17, 0.17, 0.11, 0.11, 0.17, 0.11, 0.12, 0.07, 0.06, 0.09, 0.05, 0.05, 0.06, 0.11, 0.07, 0.05, 0.07, 0.08, 0.06, 0.05, 0.1, 0.05, 0.05, 0.05, 0.05, 0.05, 0.08, 0.08, 0.15, 0.1, 0.06, 0.13, 0.08, 0.08, 0.08, 0.16, 0.18, 0.18, 0.2, 0.18, 0.23, 0.22, 0.29, 0.21, 0.31, 0.35, 0.32, 0.36, 0.36, 0.27, 0.35, 0.44, 0.41, 0.47, 0.44, 0.36, 0.34, 0.35, 0.36, 0.45, 0.51, 0.44, 0.46, 0.48, 0.54, 0.51, 0.48, 0.48, 0.38, 0.38, 0.39, 0.32, 0.26, 0.2, 0.2, 0.19, 0.25, 0.26, 0.16, 0.15, 0.13, 0.12, 0.14, 0.14, 0.09, 0.1, 0.09, 0.09, 0.09, 0.14, 0.16, 0.21, 0.25, 0.23, 0.24, 0.17, 0.23, 0.18, 0.1, 0.16, 0.11, 0.12, 0.12, 0.17, 0.18, 0.24, 0.17, 0.16, 0.12, 0.14, 0.15, 0.14, 0.15, 0.14, 0.23, 0.28, 0.32, 0.31, 0.39, 0.41, 0.35, 0.43, 0.47, 0.47, 0.5, 0.51, 0.53, 0.64, 0.67, 0.76, 0.77, 0.8, 0.82, 0.84, 0.91, 0.91, 0.93, 0.98, 0.98]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.19, 0.19, 0.2, 0.2, 0.2, 0.2, 0.2, 0.21, 0.21, 0.21, 0.21, 0.21, 0.21, 0.2, 0.19, 0.18, 0.17, 0.17, 0.16, 0.15, 0.13, 0.12, 0.12, 0.11, 0.11, 0.11, 0.11, 0.12, 0.12, 0.12, 0.13, 0.14, 0.15, 0.15, 0.16, 0.16, 0.16, 0.17, 0.17, 0.17, 0.17, 0.18, 0.18, 0.18, 0.19, 0.2, 0.21, 0.23, 0.24, 0.25, 0.27, 0.29, 0.31, 0.33, 0.36, 0.39, 0.41, 0.43, 0.42, 0.41, 0.4, 0.39, 0.4, 0.4, 0.41, 0.42, 0.43, 0.42, 0.4, 0.38, 0.37, 0.36, 0.35, 0.35, 0.34, 0.34, 0.34, 0.34, 0.35, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.38, 0.38, 0.38, 0.38, 0.38, 0.37, 0.36, 0.35, 0.35, 0.35, 0.35, 0.35, 0.36, 0.37, 0.38, 0.41, 0.43, 0.42, 0.4, 0.39, 0.38, 0.38, 0.37, 0.37, 0.38, 0.39, 0.4, 0.41, 0.42, 0.42, 0.42, 0.41, 0.41, 0.41, 0.4, 0.39, 0.37, 0.37, 0.36, 0.37, 0.38, 0.39, 0.39, 0.4, 0.42, 0.43, 0.43, 0.42, 0.42, 0.42, 0.42, 0.43, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.38, 0.38, 0.38, 0.38, 0.38, 0.38, 0.39, 0.4, 0.41, 0.41, 0.42, 0.42, 0.43, 0.43, 0.44, 0.44]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.91228, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1416_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 105}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"673_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 69, \"ref_beg_seq_id\": 128}, {\"entity_beg_seq_id\": 70, \"length\": 2, \"ref_beg_seq_id\": 223}, {\"entity_beg_seq_id\": 72, \"length\": 37, \"ref_beg_seq_id\": 226}, {\"entity_beg_seq_id\": 109, \"length\": 35, \"ref_beg_seq_id\": 264}, {\"entity_beg_seq_id\": 144, \"length\": 26, \"ref_beg_seq_id\": 300}, {\"entity_beg_seq_id\": 170, \"length\": 2, \"ref_beg_seq_id\": 336}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1309_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 104}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1633_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 104}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P45452\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 171, \"ref_beg_seq_id\": 104}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1926_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 107, \"ref_beg_seq_id\": 106}, {\"entity_beg_seq_id\": 108, \"length\": 64, \"ref_beg_seq_id\": 214}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"435_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 5, \"ref_beg_seq_id\": 237}, {\"entity_beg_seq_id\": 6, \"length\": 19, \"ref_beg_seq_id\": 292}, {\"entity_beg_seq_id\": 25, \"length\": 1, \"ref_beg_seq_id\": 313}, {\"entity_beg_seq_id\": 26, \"length\": 29, \"ref_beg_seq_id\": 366}, {\"entity_beg_seq_id\": 55, \"length\": 15, \"ref_beg_seq_id\": 403}, {\"entity_beg_seq_id\": 70, \"length\": 22, \"ref_beg_seq_id\": 445}, {\"entity_beg_seq_id\": 92, \"length\": 18, \"ref_beg_seq_id\": 471}, {\"entity_beg_seq_id\": 110, \"length\": 1, \"ref_beg_seq_id\": 492}, {\"entity_beg_seq_id\": 111, \"length\": 34, \"ref_beg_seq_id\": 498}, {\"entity_beg_seq_id\": 145, \"length\": 24, \"ref_beg_seq_id\": 534}, {\"entity_beg_seq_id\": 169, \"length\": 3, \"ref_beg_seq_id\": 559}]}], \"rcsb_polymer_entity_name_com\": [{\"name\": \"Matrix metalloproteinase-13, MMP-13\"}], \"rcsb_related_target_references\": [{\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL2095216\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL2111422\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL280\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL4523970\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"ChEMBL\", \"related_resource_version\": \"36\", \"related_target_id\": \"CHEMBL5327\", \"target_taxonomy_id\": 9913, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 169, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"DrugBank\", \"related_resource_version\": \"5.1\", \"related_target_id\": \"P45452\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}, {\"related_resource_name\": \"Pharos\", \"related_resource_version\": \"6.13.4\", \"related_target_id\": \"11389\", \"target_taxonomy_id\": 9606, \"aligned_target\": [{\"entity_beg_seq_id\": 1, \"length\": 170, \"target_beg_seq_id\": 104}]}], \"rcsb_target_cofactors\": [{\"binding_assay_value\": 3.0, \"binding_assay_value_type\": \"pKi\", \"cofactor_in_ch_ikey\": \"RFJAQRMGTCPTHM-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=S(=O)(NO)C(F)(F)F\", \"cofactor_resource_id\": \"CHEMBL331308\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2095216\"}, {\"binding_assay_value\": 3.0, \"binding_assay_value_type\": \"pKi\", \"cofactor_in_ch_ikey\": \"ACUCWGGAKLORQX-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=S(=O)(NO)C(Cl)(Cl)Cl\", \"cofactor_resource_id\": \"CHEMBL124237\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2095216\"}, {\"binding_assay_value\": 2.38, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"MQQNFDZXWVTQEH-UHFFFAOYSA-N\", \"cofactor_smiles\": \"N=C(N)Nc1ccc(C(=O)Oc2ccc3cc(C(=N)N)ccc3c2)cc1\", \"cofactor_chem_comp_id\": \"7RF\", \"cofactor_name\": \"NAFAMOSTAT\", \"cofactor_resource_id\": \"CHEMBL273264\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL2095216\"}, {\"binding_assay_value\": 2.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"JHBQYMKKDZQMTH-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1ccc(Oc2ccc(C(=O)NCCc3ccncc3)cc2)cc1\", \"cofactor_resource_id\": \"CHEMBL1796283\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"XJLATCOVZSRIIF-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1ccc(Oc2ccc(C(=O)NCc3ccccc3)cc2)cc1\", \"cofactor_resource_id\": \"CHEMBL1796280\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"SPHCZZBTYLIKMU-UHFFFAOYSA-N\", \"cofactor_smiles\": \"N#Cc1ccccc1Oc1ccc(C(=O)NCc2ccncc2)cc1\", \"cofactor_resource_id\": \"CHEMBL1796293\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"NUZSDRZTHGSDTA-UHFFFAOYSA-N\", \"cofactor_smiles\": \"COc1cc(Oc2ccc(C(=O)NCc3ccncc3)cc2)ccc1[N+](=O)[O-]\", \"cofactor_resource_id\": \"CHEMBL1796292\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"IJNJIIUAAAJNQQ-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1ccc(Oc2ccc(C(=O)NCCCN(C)C)cc2)cc1\", \"cofactor_resource_id\": \"CHEMBL1796286\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.3, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"NSMIRZBXLNLXDX-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCCC(=O)c1cc2cc(C(N)=O)ccc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL1939863\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.3, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"YCALHTWCQXREQN-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCOC(=O)c1cc2cc(-c3ccccn3)ccc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL1939868\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.3, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"LGCJHSHDRDEELV-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCOC(=O)c1cc2cc(-c3ccccc3)ccc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL1939867\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.3, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"DUIOAVKMTLORSS-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCNC(=O)c1cc2cc(C(N)=O)ccc2[nH]1\", \"cofactor_resource_id\": \"CHEMBL1939864\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 2.0, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"PLTMSQOTVPPEEH-UHFFFAOYSA-N\", \"cofactor_smiles\": \"COc1ccc(C(=O)NCc2ccncc2)cc1\", \"cofactor_resource_id\": \"CHEMBL1796288\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL280\"}, {\"binding_assay_value\": 6.66, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"PXPWUAKZNLIXJV-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(O)CNS(=O)(=O)c1ccc(-c2ccc(NC(=O)c3cc4ccccc4o3)cc2)cc1\", \"cofactor_resource_id\": \"CHEMBL189955\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL5327\"}, {\"binding_assay_value\": 6.45, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"BUOFCYNMGVUTSM-DEOSSOPVSA-N\", \"cofactor_smiles\": \"CC(C)[C@H](NS(=O)(=O)c1ccc(-c2ccc(NC(=O)c3cc4ccccc4[nH]3)cc2)cc1)C(=O)O\", \"cofactor_resource_id\": \"CHEMBL189666\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL5327\"}, {\"binding_assay_value\": 4.49, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"KUJQEQAVMNFFAO-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(NCCCCN1CCOCC1)c1cc2ccccc2o1\", \"cofactor_resource_id\": \"CHEMBL116757\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL5327\"}, {\"binding_assay_value\": 4.0, \"binding_assay_value_type\": \"pIC50\", \"cofactor_in_ch_ikey\": \"FARMEEAGJWMFSZ-UHFFFAOYSA-N\", \"cofactor_smiles\": \"Cc1cc(C)c(N(Cc2ccccc2)S(=O)(=O)c2ccc(OCCNC(=O)c3cc4ccccc4o3)cc2)c(C(=O)NO)c1\", \"cofactor_resource_id\": \"CHEMBL327002\", \"neighbor_flag\": \"N\", \"resource_name\": \"ChEMBL\", \"resource_version\": \"36\", \"target_resource_id\": \"CHEMBL5327\"}, {\"cofactor_in_ch_ikey\": \"OCSMOTCMPXTDND-OUAUKWLOSA-N\", \"cofactor_smiles\": \"CNC(=O)[C@@H](NC(=O)[C@H](CC(C)C)[C@H](O)C(=O)NO)C(C)(C)C\", \"cofactor_chem_comp_id\": \"097\", \"cofactor_name\": \"Marimastat\", \"cofactor_resource_id\": \"DB00786\", \"mechanism_of_action\": \"Marimastat is a broad spectrum matrix metalloprotease inhibitor. It mimics the peptide structure of natural MMP substrates and binds to matrix metalloproteases, thereby preventing the degradation of the basement membrane by these proteases. This antiprotease action prevents the migration of endothelial cells needed to form new blood vessels. Inhibition of MMPs also prevents the entry and exit of tumor cells into existing blood cells, thereby preventing metastasis.\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [10852638, 10669951], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"ITQTTZVARXURQS-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC1=CC=CN=C1\", \"cofactor_chem_comp_id\": \"3MP\", \"cofactor_name\": \"3-Methylpyridine\", \"cofactor_resource_id\": \"DB01996\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"QOPFTBAEAJQKSY-UHFFFAOYSA-N\", \"cofactor_smiles\": \"ONC(=O)CC1(CCOCC1)S(=O)(=O)C1=CC=C(OC2=CC=C(Cl)C=C2)C=C1\", \"cofactor_chem_comp_id\": \"CBP\", \"cofactor_name\": \"2-{4-[4-(4-Chloro-Phenoxy)-Benzenesulfonyl]-Tetrahydro-Pyran-4-Yl}-N-Hydroxy-Acetamide\", \"cofactor_resource_id\": \"DB02049\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"AINJYWXKBKRQSX-UHFFFAOYSA-N\", \"cofactor_smiles\": \"COC1=CC=C(C=C1)S(=O)(=O)N(CC1=CC=CN=C1)C1=C(C=CC=C1C)C(=O)NO\", \"cofactor_chem_comp_id\": \"WAY\", \"cofactor_name\": \"WAY-151693\", \"cofactor_resource_id\": \"DB02071\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235, 37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"NITYDPDXAAFEIT-DYVFJYSZSA-N\", \"cofactor_smiles\": \"CNC(=O)[C@H](CC1=CNC2=CC=CC=C12)NC(=O)[C@H](CC(C)C)CC(=O)NO\", \"cofactor_chem_comp_id\": \"GM6\", \"cofactor_name\": \"Ilomastat\", \"cofactor_resource_id\": \"DB02255\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"USSBBYRBOWZYSB-SCSAIBSYSA-N\", \"cofactor_smiles\": \"CC(C)[C@@H](N)C(=O)NO\", \"cofactor_chem_comp_id\": \"HAV\", \"cofactor_name\": \"Hydroxyaminovaline\", \"cofactor_resource_id\": \"DB02697\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"YVZWQPOTHRMEQW-UHFFFAOYSA-M\", \"cofactor_smiles\": \"COC1=CC=C(C=C1)S([O-])=O\", \"cofactor_chem_comp_id\": \"MSB\", \"cofactor_name\": \"4-methoxybenzenesulfinate\", \"cofactor_resource_id\": \"DB03033\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"GTBUZLPQANSGGE-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC1=CC(CNC(=O)C2=CC(=NC=N2)C(=O)NCC2=CC=CC(C)=C2)=CC=C1\", \"cofactor_chem_comp_id\": \"PB3\", \"cofactor_name\": \"PYRIMIDINE-4,6-DICARBOXYLIC ACID BIS-(3-METHYL-BENZYLAMIDE)\", \"cofactor_resource_id\": \"DB04759\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"PYFRREJCFXFNRR-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC1=C(F)C=CC(CNC(=O)C2=CC(=NC=N2)C(=O)NCC2=CC(C)=C(F)C=C2)=C1\", \"cofactor_chem_comp_id\": \"PB4\", \"cofactor_name\": \"PYRIMIDINE-4,6-DICARBOXYLIC ACID BIS-(4-FLUORO-3-METHYL-BENZYLAMIDE)\", \"cofactor_resource_id\": \"DB04760\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"NHPBWKYFMTXWAA-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(NCC1=CC=CN=C1)C1=CC(=NC=N1)C(=O)NCC1=CN=CC=C1\", \"cofactor_chem_comp_id\": \"PB5\", \"cofactor_name\": \"PYRIMIDINE-4,6-DICARBOXYLIC ACID BIS-[(PYRIDIN-3-YLMETHYL)-AMIDE]\", \"cofactor_resource_id\": \"DB04761\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_name\": \"Endostatin\", \"cofactor_resource_id\": \"DB06423\", \"mechanism_of_action\": \"Endostatin is an endogenous antitumor protein. Endostatin is a 20-kDa C-terminal fragment derived from type XVIII collagen which inhibits cell proliferation and migration, and induces endothelial cell apoptosis and cell cycle arrest. It is proposed that endostatin's effects are due to inhibition of  vascular endothelial growth factor (VEGF) tyrosine phosphorylation of KDR/F1k-1 (VEGF receptor 2),  the cell surface receptor for VEGF. VEGF is an important mediator of angiogensis. Endostatin additionally blocks activation of extracellular signal related kinases, or ERK, protein 38 mitogen activated protein kinase, or p38 MAPK (signal transduction pathways involving kinases that couple growth factors to cell surface receptors), as well as focal adhesion kinase (p125FAK). Studies are being done to determine if endostatin has possible impact on other pathways, and may also target E-selectin and block activity of metalloproteinases 2, 9 and 13. There is further research into a possible mechanistic link involving endostatin's angiogenic and zinc binding ability. \", \"neighbor_flag\": \"N\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"RXFCFGLSOUOCEA-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CC#CCNC1=CC=C(C=C1)S(=O)(=O)CC1(CCN(CC1)C(=O)OC(C)(C)C)C(=O)NO\", \"cofactor_chem_comp_id\": \"347\", \"cofactor_name\": \"TERT-BUTYL 4-({[4-(BUT-2-YN-1-YLAMINO)PHENYL]SULFONYL}METHYL)-4-[(HYDROXYAMINO)CARBONYL]PIPERIDINE-1-CARBOXYLATE\", \"cofactor_resource_id\": \"DB07013\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"YDMIPBHQKFOFQW-NSYGIPOTSA-N\", \"cofactor_smiles\": \"[H][C@](C)(N1CC[C@](C)(C1=O)C1=CC=C(OCC2=CC(C)=NC3=CC=CC=C23)C=C1)C(=O)NO\", \"cofactor_chem_comp_id\": \"541\", \"cofactor_name\": \"(2R)-N-HYDROXY-2-[(3S)-3-METHYL-3-{4-[(2-METHYLQUINOLIN-4-YL)METHOXY]PHENYL}-2-OXOPYRROLIDIN-1-YL]PROPANAMIDE\", \"cofactor_resource_id\": \"DB07145\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"BSIZUMJRKYHEBR-QGZVFWFLSA-N\", \"cofactor_smiles\": \"COC1=CC=C(C=C1)S(=O)(=O)N(CC1=CC=CN=C1)[C@H](C(C)C)C(=O)NO\", \"cofactor_chem_comp_id\": \"CGS\", \"cofactor_name\": \"CGS-27023\", \"cofactor_resource_id\": \"DB07556\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"FLTYDFYSVZBKOB-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CN1C(=O)N(CC2=CC=C(C=C2)C(O)=O)C(=O)C2=C1C=CC(=C2)C#CCC1=CC=CC=C1\", \"cofactor_chem_comp_id\": \"GG1\", \"cofactor_name\": \"4-{[1-METHYL-2,4-DIOXO-6-(3-PHENYLPROP-1-YN-1-YL)-1,4-DIHYDROQUINAZOLIN-3(2H)-YL]METHYL}BENZOIC ACID\", \"cofactor_resource_id\": \"DB07827\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"XRSYNYGEEYTXJV-UHFFFAOYSA-N\", \"cofactor_smiles\": \"CCOCCC1(OC2=CC=C(OC3=CC=C(F)C=C3)C=C2)C(=O)NC(=O)NC1=O\", \"cofactor_chem_comp_id\": \"PFD\", \"cofactor_name\": \"5-(2-ETHOXYETHYL)-5-[4-(4-FLUOROPHENOXY)PHENOXY]PYRIMIDINE-2,4,6(1H,3H,5H)-TRIONE\", \"cofactor_resource_id\": \"DB08388\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235, 37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"ROSNVSQTEGHUKU-UHFFFAOYSA-N\", \"cofactor_smiles\": \"ONC(=O)C1(CS(=O)(=O)C2=CC=C(OC3=CC=C(Cl)C=C3)C=C2)CCOCC1\", \"cofactor_chem_comp_id\": \"RS1\", \"cofactor_name\": \"CTS-1027\", \"cofactor_resource_id\": \"DB08490\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235, 37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"PLBINCOCFGQAJM-UHFFFAOYSA-N\", \"cofactor_smiles\": \"O=C(OCC1=CC=CC=C1)C1=CN2C(S1)=CC(=O)N(CC1=CC=CC=C1)C2=O\", \"cofactor_chem_comp_id\": \"SP6\", \"cofactor_name\": \"BENZYL 6-BENZYL-5,7-DIOXO-6,7-DIHYDRO-5H-[1,3]THIAZOLO[3,2-C]PYRIMIDINE-2-CARBOXYLATE\", \"cofactor_resource_id\": \"DB08561\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [10592235], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"VFLDPWHFBUODDF-FCXRPNKRSA-N\", \"cofactor_smiles\": \"COC1=CC(\\\\C=C\\\\C(=O)CC(=O)\\\\C=C\\\\C2=CC(OC)=C(O)C=C2)=CC=C1O\", \"cofactor_chem_comp_id\": \"CC9\", \"cofactor_name\": \"Curcumin\", \"cofactor_resource_id\": \"DB11672\", \"mechanism_of_action\": \"Curcumin acts as a scavenger of oxygen species, such as hydroxyl radical, superoxide anion, and singlet oxygen and inhibit lipid peroxidation as well as peroxide-induced DNA damage [F114]. Curcumin mediates potent anti-inflammatory agent and anti-carcinogenic actions via modulating various signalling molecules. It suppresses a number of key elements in cellular signal transduction pathways pertinent to growth, differentiation, and malignant transformation; it was demonstrated _in vitro_ that curcumin inhibits protein kinases, c-Jun/AP-1 activation, prostaglandin biosynthesis, and the activity and expression of the enzyme cyclooxygenase (COX)-2 [F114].\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"cofactor_in_ch_ikey\": \"MAVDNGWEBZTACC-HNNXBMFYSA-N\", \"cofactor_smiles\": \"CC1(C)SCCN([C@H]1C(=O)NO)S(=O)(=O)C1=CC=C(OCC#CCO)C=C1\", \"cofactor_name\": \"Apratastat\", \"cofactor_resource_id\": \"DB13020\", \"neighbor_flag\": \"N\", \"pubmed_ids\": [37713619], \"resource_name\": \"DrugBank\", \"resource_version\": \"5.1\", \"target_resource_id\": \"P45452\"}, {\"binding_assay_value\": 9.72, \"binding_assay_value_type\": \"pKi\", \"cofactor_smiles\": \"CCOc1ccc(-c2ccc(S(=O)(=O)N[C@@H](C(=O)O)C3CCN(C(=O)OC(C)C)CC3)s2)cc1\", \"cofactor_chem_comp_id\": \"24F\", \"cofactor_resource_id\": \"CHEMBL466059\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [19422229], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 9.17, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Cc1cc(CNC(=O)c2cc(C(=O)NCc3ccc(F)c(C)c3)ncn2)ccc1F\", \"cofactor_chem_comp_id\": \"PB4\", \"cofactor_resource_id\": \"CHEMBL514794\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [26653735], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 9.0, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CCOC(=O)c1cc2cc(-c3cc(C(=O)NCc4ccc(C(=O)O)cc4)nn3C)ccc2[nH]1\", \"cofactor_chem_comp_id\": \"4UF\", \"cofactor_resource_id\": \"CHEMBL1939876\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [22017539], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 8.66, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CC(C)[C@H](NS(=O)(=O)c1ccc(-c2ccc(CSc3nc4c(c(=O)[nH]3)CCC4)cc2)cc1)C(=O)O\", \"cofactor_chem_comp_id\": \"8OM\", \"cofactor_resource_id\": \"CHEMBL4062836\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [28653849], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 8.03, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CNC(=O)[C@@H](NC(=O)c1ccc(-c2ccc(CSc3nc4c(c(=O)[nH]3)CCC4)cc2)o1)C(C)C\", \"cofactor_chem_comp_id\": \"8OJ\", \"cofactor_resource_id\": \"CHEMBL4069824\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [28653849], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.87, \"binding_assay_value_type\": \"pKi\", \"cofactor_smiles\": \"NCCNS(=O)(=O)c1ccc(-c2ccc(CSc3nc4c(c(=O)[nH]3)CCC4)cc2)cc1\", \"cofactor_chem_comp_id\": \"8O7\", \"cofactor_resource_id\": \"CHEMBL4081997\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [28653849], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.64, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"O=C(OCc1ccccc1)c1cn2c(=O)n(Cc3ccccc3)c(=O)cc2s1\", \"cofactor_chem_comp_id\": \"SP6\", \"cofactor_resource_id\": \"CHEMBL409536\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [18251495], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.62, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"COc1cccc(CNC(=O)c2nc3sccc3c(=O)[nH]2)c1\", \"cofactor_chem_comp_id\": \"WLL\", \"cofactor_resource_id\": \"CHEMBL3337881\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [25192810], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.24, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"COc1ccc(Cn2nnc(-c3cccc(C(=O)NCc4ccc(C(=O)O)cc4)c3)n2)cc1\", \"cofactor_chem_comp_id\": \"3KE\", \"cofactor_resource_id\": \"CHEMBL603623\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [20005097], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.14, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Cc1cccc(CNC(=O)c2cc(C(=O)NCc3cccc(C)c3)ncn2)c1\", \"cofactor_chem_comp_id\": \"PB3\", \"cofactor_resource_id\": \"CHEMBL511942\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [19042129], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 7.12, \"binding_assay_value_type\": \"pKi\", \"cofactor_smiles\": \"O=C(O)c1ccc(Cn2nnc(-c3ccnc(C(=O)NCc4cccc(F)c4)c3)n2)cc1\", \"cofactor_chem_comp_id\": \"3EJ\", \"cofactor_resource_id\": \"CHEMBL593034\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [20005097], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 6.45, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CNC(=O)[C@H](NC(=O)c1ccc(-c2ccc(CSc3nc4c(c(=O)[nH]3)CCC4)cc2)o1)C(C)C\", \"cofactor_chem_comp_id\": \"8OA\", \"cofactor_resource_id\": \"CHEMBL4090820\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [28653849], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 6.4, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"Cc1ccc(CSc2nc(O)c3c(n2)CCC3)cc1\", \"cofactor_chem_comp_id\": \"1UA\", \"cofactor_resource_id\": \"CHEMBL1371684\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [25330343], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 6.37, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CNC(=O)[C@@H](NC(=O)c1ccc(-c2ccc(Cl)cc2)o1)C1CCCCC1\", \"cofactor_chem_comp_id\": \"732\", \"cofactor_resource_id\": \"CHEMBL577910\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [19692239], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}, {\"binding_assay_value\": 6.21, \"binding_assay_value_type\": \"pIC50\", \"cofactor_smiles\": \"CNC(=O)[C@@H](NC(=O)c1ccc(-c2ccc(NC(=O)c3cc4ccccc4o3)cc2)o1)C1CCCCC1\", \"cofactor_chem_comp_id\": \"518\", \"cofactor_resource_id\": \"CHEMBL576431\", \"neighbor_flag\": \"Y\", \"pubmed_ids\": [19692239], \"resource_name\": \"Pharos\", \"resource_version\": \"6.13.4\", \"target_resource_id\": \"11389\"}], \"rcsb_id\": \"1XUR_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:47.548020\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.85,
+            "experimentalMethod": null,
+            "depositionDate": "2004-10-26T00:00:00+0000",
+            "releaseDate": "2005-10-26T00:00:00+0000",
+            "sourceOrganism": [
+              "Homo sapiens"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 5,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.85,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Homo sapiens",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN",
+        "description": "Amino acid sequence for chain A (length: 171)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 171
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "YNVFPRTLKWSKMNLTYRIVNYTPDMTHSEVEKAFKKAFKVWSDVTPLNFTRLHDGIADIMISFGIKEHGDFYPFDGPSGLLAHAFPPGPNYGGDAHFDDDETWTSSSKGYNLFLVAAHEFGHSLGLDHSKDPGALMFPIYTYTGKSHFMLPDDDVQGIQSLYGPGDEDPN",
+        "description": "Amino acid sequence for chain B (length: 171)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 171
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structural basis for the highly selective inhibition of MMP-13.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1016/j.chembiol.2004.11.014",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 171",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "1GXD_4",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 5,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "1GXD_4",
+          "3M7P_3",
+          "4JP4_1",
+          "6MAV_7"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1XUR_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": false,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 0,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1XUR",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 2367.91,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 68,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Gene",
+      "value": "MMP13",
+      "description": "Gene name associated with the protein"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "3.40.390.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Pfam",
+      "value": "PF00413",
+      "description": "Pfam domain classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 754.879999999999,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 1613.03,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.318795900182017,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.681204099817984,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "1GXD_4",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 5,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "1GXD_4",
+        "3M7P_3",
+        "4JP4_1",
+        "6MAV_7"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}

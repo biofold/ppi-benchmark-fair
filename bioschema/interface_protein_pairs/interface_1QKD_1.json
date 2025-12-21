@@ -1,0 +1,380 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalogItem",
+  "name": "Interface 1QKD_1",
+  "description": "Protein-protein interaction interface between chains nan and nan",
+  "identifier": "1QKD_1",
+  "mainEntity": {
+    "@context": "https://schema.org",
+    "@type": "Protein",
+    "@id": "#protein_1QKD",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "identifier": "1QKD",
+    "name": "Protein 1QKD",
+    "description": "Protein structure with PDB ID: 1QKD. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1QKD_1 as a homodimer.",
+    "url": "https://www.rcsb.org/structure/1QKD",
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Laticauda semifasciata",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "termCode": "8631",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=8631"
+    },
+    "alternateName": [
+      "PDB 1QKD",
+      "Protein ID 1QKD"
+    ],
+    "hasRepresentation": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/1qkd_1.pdb.gz",
+        "description": "Compressed PDB format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "mmCIF Structure",
+        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/1qkd.cif.gz",
+        "description": "Compressed mmCIF format structure file"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDB ID",
+        "value": "1QKD",
+        "description": "RCSB PDB identifier"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "PDB_ID",
+        "value": "1QKD",
+        "description": "Protein Data Bank identifier (4 letters)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "AssociatedInterface",
+        "value": "1QKD_1",
+        "description": "Interface this protein participates in"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceSource",
+        "value": "QSalign",
+        "description": "Source of interface ID: QSalign"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceChains",
+        "value": "nan-nan",
+        "description": "Chains involved in the interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "InterfaceClassification",
+        "value": "Physiological",
+        "description": "Classification of the associated interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "LabelInterfaceChains",
+        "value": "A-B",
+        "description": "Chains involved in the assembly interface"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Superfamily",
+        "value": "2.10.60.10",
+        "description": "Protein superfamily classification"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStructureMetadata",
+        "description": "Structural metadata from RCSB Protein Data Bank",
+        "value": "{\"pdb_id\": \"1QKD\", \"structure_metadata\": {\"pdb_id\": \"1QKD\", \"resolution\": 1.49, \"deposition_date\": \"1998-01-16T00:00:00+0000\", \"release_date\": \"1999-02-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Laticauda semifasciata\"], \"citation\": {\"title\": \"Structure of dimeric and monomeric erabutoxin a refined at 1.5 A resolution.\", \"doi\": \"10.1107/S0907444998005125\", \"authors\": [\"Nastopoulos, V.\", \"Kanellopoulos, P.N.\", \"Tsernoglou, D.\"]}, \"entity_count\": 2, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 55.32, \"b\": 53.54, \"c\": 40.76, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"sequences\": {\"A\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\", \"B\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Laticauda semifasciata\", \"sequence_length\": 62, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Laticauda semifasciata\", \"sequence_length\": 62, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\", \"organism\": \"Laticauda semifasciata\", \"taxonomy_id\": 8631, \"chain_ids\": [\"A\", \"B\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 62, \"gene_name\": null, \"uniprot_ids\": [\"P60775\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\", \"entities\": [\"1\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 2, \"chain_count\": 2, \"unique_sequences\": 1, \"avg_sequence_length\": 62.0, \"min_sequence_length\": 62, \"max_sequence_length\": 62}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"no\", \"pdbx_seq_one_letter_code\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\", \"pdbx_seq_one_letter_code_can\": \"RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN\", \"pdbx_strand_id\": \"A,B\", \"rcsb_artifact_monomer_count\": 0, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 0, \"rcsb_sample_sequence_length\": 62, \"type\": \"polypeptide(L)\"}, \"entity_src_nat\": [{\"common_name\": \"broad-banded blue sea krait\", \"details\": \"JAPANESE SEA SNAKE\", \"genus\": \"Laticauda\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_ncbi_taxonomy_id\": \"8631\", \"pdbx_organism_scientific\": \"Laticauda semifasciata\", \"pdbx_secretion\": \"VENOM\", \"pdbx_src_id\": 1}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.633, \"label\": \"Low\", \"link\": \"http://pdbflex.org/cluster.html#!/6ebxA/34445/1qkdA\", \"max_rmsd\": 0.988, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 14713, \"identity\": 100}, {\"cluster_id\": 7313, \"identity\": 95}, {\"cluster_id\": 8218, \"identity\": 90}, {\"cluster_id\": 870, \"identity\": 70}, {\"cluster_id\": 1037, \"identity\": 50}, {\"cluster_id\": 3523, \"identity\": 30}], \"rcsb_entity_source_organism\": [{\"ncbi_common_names\": [\"Erabu sea snake\", \"Platurus semifasciatus\", \"broad-banded blue sea krait\", \"broad-banded blue sea snake\"], \"ncbi_parent_scientific_name\": \"Eukaryota\", \"ncbi_scientific_name\": \"Laticauda semifasciata\", \"ncbi_taxonomy_id\": 8631, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Laticauda semifasciata\", \"source_type\": \"natural\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryota\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eucaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukarya\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"Eukaryotae\"}, {\"depth\": 2, \"id\": \"2759\", \"name\": \"eukaryotes\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Opisthokonta\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"Fungi/Metazoa group\"}, {\"depth\": 3, \"id\": \"33154\", \"name\": \"opisthokonts\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Metazoa\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"Animalia\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"animals\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"metazoans\"}, {\"depth\": 4, \"id\": \"33208\", \"name\": \"multicellular animals\"}, {\"depth\": 5, \"id\": \"6072\", \"name\": \"Eumetazoa\"}, {\"depth\": 6, \"id\": \"33213\", \"name\": \"Bilateria\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"Deuterostomia\"}, {\"depth\": 7, \"id\": \"33511\", \"name\": \"deuterostomes\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"Chordata\"}, {\"depth\": 8, \"id\": \"7711\", \"name\": \"chordates\"}, {\"depth\": 9, \"id\": \"89593\", \"name\": \"Craniata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"Vertebrata\"}, {\"depth\": 10, \"id\": \"7742\", \"name\": \"vertebrates\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"Gnathostomata\"}, {\"depth\": 11, \"id\": \"7776\", \"name\": \"jawed vertebrates\"}, {\"depth\": 12, \"id\": \"117570\", \"name\": \"Teleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"Euteleostomi\"}, {\"depth\": 13, \"id\": \"117571\", \"name\": \"bony vertebrates\"}, {\"depth\": 14, \"id\": \"8287\", \"name\": \"Sarcopterygii\"}, {\"depth\": 15, \"id\": \"1338369\", \"name\": \"Dipnotetrapodomorpha\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"Tetrapoda\"}, {\"depth\": 16, \"id\": \"32523\", \"name\": \"tetrapods\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"Amniota\"}, {\"depth\": 17, \"id\": \"32524\", \"name\": \"amniotes\"}, {\"depth\": 18, \"id\": \"8457\", \"name\": \"Sauropsida\"}, {\"depth\": 18, \"id\": \"8457\", \"name\": \"sauropsids\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"Sauria\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"Diapsida\"}, {\"depth\": 19, \"id\": \"32561\", \"name\": \"diapsids\"}, {\"depth\": 20, \"id\": \"8504\", \"name\": \"Lepidosauria\"}, {\"depth\": 20, \"id\": \"8504\", \"name\": \"lepidosaurs\"}, {\"depth\": 20, \"id\": \"8504\", \"name\": \"lizards & snakes\"}, {\"depth\": 21, \"id\": \"8509\", \"name\": \"Squamata\"}, {\"depth\": 21, \"id\": \"8509\", \"name\": \"squamates\"}, {\"depth\": 22, \"id\": \"1329961\", \"name\": \"Bifurcata\"}, {\"depth\": 22, \"id\": \"1329961\", \"name\": \"split-tongued squamates\"}, {\"depth\": 23, \"id\": \"1329950\", \"name\": \"Unidentata\"}, {\"depth\": 24, \"id\": \"1329912\", \"name\": \"Episquamata\"}, {\"depth\": 25, \"id\": \"1329911\", \"name\": \"Toxicofera\"}, {\"depth\": 26, \"id\": \"8570\", \"name\": \"Serpentes\"}, {\"depth\": 26, \"id\": \"8570\", \"name\": \"Ophidia\"}, {\"depth\": 26, \"id\": \"8570\", \"name\": \"snakes\"}, {\"depth\": 27, \"id\": \"34989\", \"name\": \"Colubroidea\"}, {\"depth\": 27, \"id\": \"34989\", \"name\": \"Xenophidia\"}, {\"depth\": 28, \"id\": \"8602\", \"name\": \"Elapidae\"}, {\"depth\": 29, \"id\": \"42169\", \"name\": \"Laticaudinae\"}, {\"depth\": 30, \"id\": \"8627\", \"name\": \"Laticauda\"}, {\"depth\": 31, \"id\": \"8631\", \"name\": \"Laticauda semifasciata\"}, {\"depth\": 31, \"id\": \"8631\", \"name\": \"Erabu sea snake\"}, {\"depth\": 31, \"id\": \"8631\", \"name\": \"Platurus semifasciatus\"}, {\"depth\": 31, \"id\": \"8631\", \"name\": \"broad-banded blue sea krait\"}, {\"depth\": 31, \"id\": \"8631\", \"name\": \"broad-banded blue sea snake\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 6.854, \"pdbx_description\": \"ERABUTOXIN A\", \"pdbx_number_of_molecules\": 2, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"nat\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"ERABUTOXIN A\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"Erabutoxin a\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"P60775\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 62, \"ref_beg_seq_id\": 22}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF21947\", \"assignment_version\": \"34.0\", \"name\": \"Snake toxin cobra-type (Toxin_cobra-type)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"GO:0099106\", \"name\": \"ion channel regulator activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0016247\", \"name\": \"channel regulator activity\"}, {\"id\": \"GO:0099106\", \"name\": \"ion channel regulator activity\"}, {\"id\": \"GO:0098772\", \"name\": \"molecular function regulator activity\"}, {\"id\": \"GO:0141108\", \"name\": \"transporter regulator activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR018354\", \"name\": \"Snake toxin, conserved site\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR018354\", \"name\": \"Snake toxin, conserved site\"}]}, {\"annotation_id\": \"IPR045860\", \"name\": \"Snake toxin-like superfamily\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR045860\", \"name\": \"Snake toxin-like superfamily\"}]}, {\"annotation_id\": \"GO:0030550\", \"name\": \"acetylcholine receptor inhibitor activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0099602\", \"name\": \"neurotransmitter receptor regulator activity\"}, {\"id\": \"GO:0030548\", \"name\": \"acetylcholine receptor regulator activity\"}, {\"id\": \"GO:0140678\", \"name\": \"molecular function inhibitor activity\"}, {\"id\": \"GO:0030550\", \"name\": \"acetylcholine receptor inhibitor activity\"}, {\"id\": \"GO:0098772\", \"name\": \"molecular function regulator activity\"}, {\"id\": \"GO:0030547\", \"name\": \"signaling receptor inhibitor activity\"}, {\"id\": \"GO:0030545\", \"name\": \"signaling receptor regulator activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"GO:0005576\", \"name\": \"extracellular region\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0110165\", \"name\": \"cellular anatomical structure\"}, {\"id\": \"GO:0005575\", \"name\": \"cellular_component\"}, {\"id\": \"GO:0005576\", \"name\": \"extracellular region\"}]}, {\"annotation_id\": \"IPR054131\", \"name\": \"Snake toxin cobra-type\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR054131\", \"name\": \"Snake toxin cobra-type\"}]}, {\"annotation_id\": \"GO:0090729\", \"name\": \"toxin activity\", \"provenance_source\": \"UNIPROT\", \"type\": \"GO\", \"annotation_lineage\": [{\"id\": \"GO:0090729\", \"name\": \"toxin activity\"}, {\"id\": \"GO:0003674\", \"name\": \"molecular_function\"}]}, {\"annotation_id\": \"IPR003571\", \"name\": \"Snake three-finger toxin\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"depth\": 1, \"id\": \"IPR003571\", \"name\": \"Snake three-finger toxin\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"B\"], \"auth_asym_ids\": [\"A\", \"B\"], \"chem_comp_monomers\": [\"ARG\", \"ASN\", \"ASP\", \"CYS\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"entity_id\": \"1\", \"entry_id\": \"1QKD\", \"rcsb_id\": \"1QKD_1\", \"uniprot_ids\": [\"P60775\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"P60775\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 1.0, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.7469879518072289}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF21947\", \"name\": \"Snake toxin cobra-type (Toxin_cobra-type)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 2, \"end_seq_id\": 61}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [-0.72, -0.61, -1.29, -1.96, -2.34, -2.03, -2.11, -1.8, -1.43, -1.43, -1.22, -1.09, -1.09, -1.1, -1.11, -0.4, -0.47, -1.13, -1.48, -1.69, -1.74, -1.44, -1.74, -1.34, -2.12, -2.02, -1.71, -0.78, 0.11, -0.18, -0.59, -0.24, -0.28, 0.18, 0.5, 0.4, -0.18, -0.21, -0.26, 0.07, 0.07, 0.29, -0.1, 0.04, 0.13, 0.49, 0.3, 0.34, 0.43, 0.09, 0.06, 0.77, -0.04, -0.34]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.87, 0.84, 0.8, 0.75, 0.71, 0.67, 0.49, 0.45, 0.43, 0.38, 0.35, 0.33, 0.35, 0.35, 0.33, 0.33, 0.34, 0.35, 0.3, 0.3, 0.31, 0.23, 0.23, 0.23, 0.23, 0.2, 0.18, 0.33, 0.33, 0.3, 0.12, 0.12, 0.04, 0.04, 0.1, 0.12, 0.11, 0.13, 0.12, 0.12, 0.11, 0.07, 0.1, 0.04, 0.01, 0.01, 0.02, 0.02, 0.01, 0.0, 0.0, 0.01, 0.01, 0.06, 0.07, 0.1, 0.16, 0.21, 0.23, 0.29, 0.38, 0.43]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.09, 0.08, 0.07, 0.07, 0.06, 0.06, 0.05, 0.03, 0.03, 0.02, 0.02, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.02, 0.05, 0.13, 0.25, 0.35, 0.42, 0.39, 0.41, 0.34, 0.27, 0.19, 0.11, 0.04, 0.02, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.96774, \"type\": \"Pfam\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"14713_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 62, \"ref_beg_seq_id\": 22}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"P60775\", \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 62, \"ref_beg_seq_id\": 22}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"7313_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 62, \"ref_beg_seq_id\": 22}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"1037_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 14, \"ref_beg_seq_id\": 23}, {\"entity_beg_seq_id\": 15, \"length\": 18, \"ref_beg_seq_id\": 39}, {\"entity_beg_seq_id\": 33, \"length\": 9, \"ref_beg_seq_id\": 61}, {\"entity_beg_seq_id\": 42, \"length\": 6, \"ref_beg_seq_id\": 72}, {\"entity_beg_seq_id\": 48, \"length\": 15, \"ref_beg_seq_id\": 79}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"870_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 18, \"ref_beg_seq_id\": 23}, {\"entity_beg_seq_id\": 19, \"length\": 44, \"ref_beg_seq_id\": 43}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"3523_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 30, \"ref_beg_seq_id\": 17}, {\"entity_beg_seq_id\": 31, \"length\": 26, \"ref_beg_seq_id\": 50}, {\"entity_beg_seq_id\": 57, \"length\": 6, \"ref_beg_seq_id\": 77}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"8218_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 62, \"ref_beg_seq_id\": 22}]}], \"rcsb_id\": \"1QKD_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T02:37:16.241743\"}",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ParsedPDBMetadata",
+          "value": {
+            "resolution": 1.49,
+            "experimentalMethod": null,
+            "depositionDate": "1998-01-16T00:00:00+0000",
+            "releaseDate": "1999-02-16T00:00:00+0000",
+            "sourceOrganism": [
+              "Laticauda semifasciata"
+            ],
+            "spaceGroup": null,
+            "rFactor": null,
+            "entityCount": 2,
+            "chainCount": 2,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer"
+          }
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.49,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Laticauda semifasciata",
+        "description": "Organism from which the protein was isolated"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 2,
+        "description": "Number of chains in the structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+        "description": "Amino acid sequence for chain A (length: 62)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 62
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "RICFNHQSSQPQTTKTCSPGESSCYNKQWSDFRGTIIERGCGCPTVKPGIKLSCCESEVCNN",
+        "description": "Amino acid sequence for chain B (length: 62)",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 62
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Structure of dimeric and monomeric erabutoxin a refined at 1.5 A resolution.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1107/S0907444998005125",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, Length: 62",
+        "description": "Entity 1 information"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "5XWE_1",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 6,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [
+          "5XWE_1",
+          "4LFT_1",
+          "2CTX_1",
+          "3HH7_1",
+          "1CDT_1"
+        ],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
+      }
+    ],
+    "hasMolecularFunction": {
+      "@type": "DefinedTerm",
+      "name": "protein binding",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/GO_0005515"
+    },
+    "bioChemInteraction": {
+      "@type": "Protein",
+      "name": "Homodimer partner for interface 1QKD_1",
+      "description": "Homodimer interaction partner in chain nan"
+    }
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "InterfaceSource",
+      "value": "QSalign",
+      "description": "Source of interface ID: QSalign"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "physio",
+      "value": true,
+      "description": "Physiological (TRUE) or non-physiological (FALSE)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "label",
+      "value": 1,
+      "description": "Numeric label (1=physio, 0=non-physio)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PDB_ID",
+      "value": "1QKD",
+      "description": "Protein Data Bank identifier"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain1",
+      "value": "nan",
+      "description": "First chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AuthChain2",
+      "value": "nan",
+      "description": "Second chain in interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp1",
+      "value": "nan",
+      "description": "Symmetry operation for chain 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SymmetryOp2",
+      "value": "nan",
+      "description": "Symmetry operation for chain 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain1",
+      "value": "A",
+      "description": "First chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "LabelChain2",
+      "value": "B",
+      "description": "Second chain in the assembly interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Buried Surface Area (BSA)",
+      "value": 589.929999999999,
+      "unitCode": "Å²",
+      "description": "Total buried surface area at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Atomic Contacts",
+      "value": 18,
+      "description": "Number of atomic contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Superfamily",
+      "value": "2.10.60.10",
+      "description": "Protein superfamily classification"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Polar",
+      "value": 294.57,
+      "unitCode": "Å²",
+      "description": "Polar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BSA Apolar",
+      "value": 295.35,
+      "unitCode": "Å²",
+      "description": "Apolar component of buried surface area"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Polar",
+      "value": 0.499330429033954,
+      "description": "Fraction of polar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Fraction Apolar",
+      "value": 0.50065261980235,
+      "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "5XWE_1",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 6,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [
+        "5XWE_1",
+        "4LFT_1",
+        "2CTX_1",
+        "3HH7_1",
+        "1CDT_1"
+      ],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
+    }
+  ]
+}
