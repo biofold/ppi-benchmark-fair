@@ -2283,16 +2283,16 @@ def parse_arguments():
         epilog="""
 Examples:
   # Use local directory with ClusterID-aware CV and feature evaluation
-  python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features
+  python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features
   
   # Use GitHub repository with 10-fold CV and save feature analysis
-  python 5_ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --folds 10 --evaluate-features --save-plots
+  python ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --folds 10 --evaluate-features --save-plots
   
   # Train/test split instead of CV
-  python 5_ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
+  python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
   
   # Full pipeline with feature evaluation and importance analysis
-  python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots --output-dir ./full_analysis
+  python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots --output-dir ./full_analysis
         """
     )
     
@@ -2639,22 +2639,22 @@ Example Usage with Feature Evaluation:
 ======================================
 
 1. Comprehensive feature evaluation only:
-   python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-report-only
+   python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-report-only
 
 2. Full pipeline with feature evaluation and model training (CV):
-   python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots
+   python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --feature-analysis --save-plots
 
 3. Feature evaluation from GitHub repository:
-   python 5_ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --evaluate-features
+   python ppi_ml_croissant.py --github https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces --evaluate-features
 
 4. Train/test split instead of CV:
-   python 5_ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
+   python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.3 --save-plots
 
 5. Quick evaluation with feature analysis:
-   python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --quick
+   python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --quick
 
 6. Advanced feature evaluation with custom output directory:
-   python 5_ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --save-plots --output-dir ./detailed_feature_analysis
+   python ppi_ml_croissant.py --local ./bioschemas_output --evaluate-features --save-plots --output-dir ./detailed_feature_analysis
     """)
 
 
