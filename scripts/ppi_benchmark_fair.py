@@ -388,9 +388,9 @@ class PPIBenchmarkProcessor:
                             # Extract sequence
                             if "entity_poly" in entity_data:
                                 poly = entity_data["entity_poly"]
-                                if "pdbx_seq_one_letter_code" in poly:
-                                    entity_info["sequence"] = poly["pdbx_seq_one_letter_code"]
-                                    entity_info["sequence_length"] = len(poly["pdbx_seq_one_letter_code"])
+                                if "pdbx_seq_one_letter_code_can" in poly:
+                                    entity_info["sequence"] = poly["pdbx_seq_one_letter_code_can"]
+                                    entity_info["sequence_length"] = len(poly["pdbx_seq_one_letter_code_can"])
                                 
                                 if "pdbx_strand_id" in poly:
                                     chain_ids = poly["pdbx_strand_id"].split(",")
@@ -873,7 +873,7 @@ class PPIBenchmarkProcessor:
             
             # Try with the specified separator first
             try:
-                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator).iloc[:, 2:]          #.head(5)
+                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator).iloc[:, 2:]     #.head(5)
                 logger.info(f"Successfully loaded {len(self.dataset)} records with separator '{self.csv_separator}'")
             except Exception as e:
                 logger.warning(f"Failed with separator '{self.csv_separator}': {e}")
@@ -2869,19 +2869,21 @@ Examples:
     
     parser.add_argument(
         "--csv-url",
-        default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/refs/heads/main/benchmark/benchmark_annotated_updated_30042023.csv",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
         help="URL of the CSV file (default: the benchmark dataset)"
     )
     
     parser.add_argument(
         "--mmcif-url",
-        default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/",
+        #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/",
         help="Base URL for mmCIF structure files"
     )
     
     parser.add_argument(
         "--pdb-url",
-        default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/",
+        #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/",
         help="Base URL for PDB structure files"
     )
     
