@@ -1,5 +1,5 @@
 {
-  "generated_date": "2025-12-21T11:08:31.609384",
+  "generated_date": "2025-12-23T18:20:36.593798",
   "dataset_file": "ppi_benchmark_3/dataset_with_interfaces.json",
   "interfaces_dir": "ppi_benchmark_3/interface_protein_pairs",
   "total_interfaces_generated": 1677,
@@ -19,7 +19,7 @@
   "fair_package_file": "ppi_benchmark_3/fair_metadata_package.json",
   "html_snippet_file": "ppi_benchmark_3/embedded_markup.html",
   "csv_settings": {
-    "url": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/refs/heads/main/benchmark/benchmark_annotated_updated_30042023.csv",
+    "url": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
     "separator_used": ",",
     "auto_detect": false
   },
@@ -86,13 +86,13 @@
   "assembly_checks": {
     "pdb_assembly_checked": true,
     "cif_assembly_checked": false,
-    "pdb_label_dir": "../ppi_benchmark_data/pdb/",
+    "pdb_label_dir": "data/benchmark_pdb_format/",
     "cif_label_dir": "default (mmcif_base_url)",
     "interfaces_with_assembly_chains": 1677,
     "interfaces_with_updated_chains": 1451
   },
   "cluster_information": {
-    "blastclust_file": "../ppi_benchmark_data/ppi_benchmark_seqs.clust_25_05",
+    "blastclust_file": "data/ppi_benchmark_seqs.clust_25_05",
     "blastclust_method": "BLASTClust sequence clustering",
     "blastclust_options": "-S 25 -L 0.5 -b F",
     "interfaces_with_cluster": 1670,

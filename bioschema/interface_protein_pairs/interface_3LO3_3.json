@@ -28,13 +28,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/3lo3_3.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/3lo3_3.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/3lo3.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/3lo3.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -103,7 +103,7 @@
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Structural metadata from RCSB Protein Data Bank",
-        "value": "{\"pdb_id\": \"3LO3\", \"structure_metadata\": {\"pdb_id\": \"3LO3\", \"resolution\": 2.383, \"deposition_date\": \"2010-02-03T00:00:00+0000\", \"release_date\": \"2010-02-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Colwellia psychrerythraea 34H\"], \"citation\": {\"title\": \"The crystal structure of a conserved functionally unknown protein from Colwellia psychrerythraea 34H.\", \"authors\": [\"Tan, K.\", \"Li, H.\", \"Bearden, J.\", \"Joachimiak, A.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 55.684, \"b\": 109.503, \"c\": 126.509, \"alpha\": 66.02, \"beta\": 80.8, \"gamma\": 79.42}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"B\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"C\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"D\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"E\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"F\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"G\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"H\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"I\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"J\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"K\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"L\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"M\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"N\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"O\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"P\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Q\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"R\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"S\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"T\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"U\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"V\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"W\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"X\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Y\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"Z\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"a\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"b\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"M\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"N\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"O\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"P\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Q\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"R\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"S\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"T\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"U\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"V\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"W\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"X\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Y\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Z\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"a\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"b\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 98, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"organism\": \"Colwellia psychrerythraea 34H\", \"taxonomy_id\": 167879, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"a\", \"b\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 98, \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"entities\": [\"1\"], \"chain_count\": 28}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 28, \"chain_count\": 28, \"unique_sequences\": 1, \"avg_sequence_length\": 98.0, \"min_sequence_length\": 98, \"max_sequence_length\": 98}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"pdbx_seq_one_letter_code_can\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"pdbx_strand_id\": \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b\", \"pdbx_target_identifier\": \"APC38223.1\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 94, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Vibrio psychroerythus\", \"gene_src_strain\": \"34H\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"CPS_1673\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"167879\", \"pdbx_gene_src_scientific_name\": \"Colwellia psychrerythraea\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"pPK1037\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pMCSG19\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.315, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/3lo3A/15073/3lo3A\", \"max_rmsd\": 0.429, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 887960, \"identity\": 100}, {\"cluster_id\": 744214, \"identity\": 95}, {\"cluster_id\": 685228, \"identity\": 90}, {\"cluster_id\": 426777, \"identity\": 70}, {\"cluster_id\": 217008, \"identity\": 50}, {\"cluster_id\": 80963, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"Vibrio psychroerythus\", \"ncbi_common_names\": [\"Colwellia psychrerythraea str. 34H\", \"Colwellia psychrerythraea strain 34H\", \"Colwellia sp. 34H\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Colwellia psychrerythraea 34H\", \"ncbi_taxonomy_id\": 167879, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Colwellia psychrerythraea\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadales\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadaceae group\"}, {\"depth\": 7, \"id\": \"267889\", \"name\": \"Colwelliaceae\"}, {\"depth\": 8, \"id\": \"28228\", \"name\": \"Colwellia\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychrerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythreus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythus\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea str. 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea strain 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia sp. 34H\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"CPS_1673\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 10.596, \"pdbx_description\": \"uncharacterized conserved protein\", \"pdbx_number_of_molecules\": 28, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"uncharacterized conserved protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"DUF1330 domain-containing protein\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q484V4\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 91, \"ref_beg_seq_id\": 2}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF07045\", \"assignment_version\": \"34.0\", \"name\": \"Domain of unknown function (DUF1330) (DUF1330)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR011008\", \"name\": \"Dimeric alpha-beta barrel\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR011008\", \"name\": \"Dimeric alpha-beta barrel\"}]}, {\"annotation_id\": \"IPR010753\", \"name\": \"Domain of unknown function DUF1330\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR010753\", \"name\": \"Domain of unknown function DUF1330\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"AA\", \"B\", \"BA\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"a\", \"b\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"3LO3\", \"rcsb_id\": \"3LO3_1\", \"uniprot_ids\": [\"Q484V4\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q484V4\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9680851063829787, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.9891304347826086}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF07045\", \"name\": \"Domain of unknown function (DUF1330) (DUF1330)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 4, \"end_seq_id\": 94}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 86}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 3}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [1.17, 1.21, 2.02, 1.74, 1.64, 1.01, 0.77, 0.47, -0.42, -1.32, -0.86, -1.67, -1.98, -1.94, -1.56, -0.97, -1.67, -0.81, -0.18, -0.69, -0.38, 0.43, 0.78, 0.39, 0.04, 0.46, -0.06, -0.64, -0.09, 0.41, 0.46, -0.18, 0.21, 0.27, 0.82, 0.48, 0.48, 0.43, -0.34, -0.86, -0.86, -0.5, -0.8, -1.62, -1.67, -1.08, -1.89, -1.07, -0.52, 0.33, -0.37, 0.33, 0.51, 0.86, 0.16, 0.16, -0.7, -1.0, -1.57, -1.57, -1.98, -1.94, -2.21, -1.8, -1.8, -1.8, -2.14, -2.39, -1.8, -1.28, -0.63, -0.37, -0.36, -0.47, -0.47, 0.1, 0.44, 0.46, -0.36, -0.94, -1.24, -0.86, -0.74, 0.07, 0.14, 0.14]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.66, 0.62, 0.61, 0.56, 0.53, 0.45, 0.41, 0.37, 0.25, 0.21, 0.18, 0.12, 0.12, 0.12, 0.13, 0.11, 0.13, 0.2, 0.27, 0.25, 0.23, 0.29, 0.22, 0.2, 0.2, 0.2, 0.18, 0.13, 0.09, 0.13, 0.13, 0.13, 0.14, 0.15, 0.18, 0.12, 0.17, 0.2, 0.19, 0.13, 0.19, 0.23, 0.22, 0.27, 0.27, 0.21, 0.15, 0.14, 0.2, 0.18, 0.21, 0.21, 0.2, 0.27, 0.28, 0.25, 0.25, 0.25, 0.16, 0.11, 0.17, 0.17, 0.18, 0.2, 0.15, 0.16, 0.18, 0.17, 0.17, 0.16, 0.23, 0.19, 0.21, 0.15, 0.15, 0.11, 0.13, 0.2, 0.2, 0.21, 0.29, 0.22, 0.16, 0.15, 0.17, 0.29, 0.32, 0.39, 0.51, 0.63, 0.67, 0.7, 0.75, 0.77]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.31, 0.31, 0.32, 0.32, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.32, 0.32, 0.31, 0.3, 0.3, 0.28, 0.27, 0.27, 0.26, 0.26, 0.27, 0.27, 0.28, 0.28, 0.29, 0.29, 0.3, 0.3, 0.31, 0.32, 0.32, 0.32, 0.32, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.29, 0.29, 0.3, 0.3, 0.31, 0.31, 0.32, 0.33, 0.33, 0.33, 0.34, 0.35, 0.36, 0.35, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.41, 0.41, 0.42, 0.41, 0.42, 0.42, 0.42, 0.4, 0.4, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.35, 0.35, 0.37, 0.37, 0.38, 0.38, 0.39, 0.38, 0.39, 0.39, 0.4, 0.41, 0.41, 0.4]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.01064, \"type\": \"modified_monomer\"}, {\"count\": 1, \"coverage\": 0.96809, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.03191, \"maximum_length\": 3, \"minimum_length\": 3, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"685228_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"426777_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"887960_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"80963_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 42, \"ref_beg_seq_id\": 2}, {\"entity_beg_seq_id\": 43, \"length\": 52, \"ref_beg_seq_id\": 45}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"744214_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"217008_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q484V4\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 91, \"ref_beg_seq_id\": 2}]}], \"rcsb_id\": \"3LO3_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"E\", \"assembly_chain2\": \"F\"}, \"enrichment_timestamp\": \"2025-12-21T10:53:26.910580\"}",
+        "value": "{\"pdb_id\": \"3LO3\", \"structure_metadata\": {\"pdb_id\": \"3LO3\", \"resolution\": 2.383, \"deposition_date\": \"2010-02-03T00:00:00+0000\", \"release_date\": \"2010-02-16T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [\"Colwellia psychrerythraea 34H\"], \"citation\": {\"title\": \"The crystal structure of a conserved functionally unknown protein from Colwellia psychrerythraea 34H.\", \"authors\": [\"Tan, K.\", \"Li, H.\", \"Bearden, J.\", \"Joachimiak, A.\"]}, \"entity_count\": 3, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 55.684, \"b\": 109.503, \"c\": 126.509, \"alpha\": 66.02, \"beta\": 80.8, \"gamma\": 79.42}, \"found_in_api\": true, \"sequences\": {\"A\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"B\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"C\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"D\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"E\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"F\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"G\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"H\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"I\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"J\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"K\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"L\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"M\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"N\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"O\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"P\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"Q\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"R\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"S\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"T\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"U\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"V\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"W\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"X\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"Y\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"Z\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"a\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"b\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"B\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"C\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"D\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"E\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"F\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"G\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"H\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"I\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"J\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"K\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"L\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"M\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"N\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"O\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"P\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Q\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"R\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"S\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"T\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"U\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"V\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"W\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"X\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Y\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"Z\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"a\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}, \"b\": {\"entity_id\": \"1\", \"organism\": \"Colwellia psychrerythraea 34H\", \"sequence_length\": 94, \"polymer_type\": \"polypeptide(L)\", \"gene_name\": null}}, \"entity_info\": {\"1\": {\"entity_id\": \"1\", \"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"organism\": \"Colwellia psychrerythraea 34H\", \"taxonomy_id\": 167879, \"chain_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"a\", \"b\"], \"polymer_type\": \"polypeptide(L)\", \"sequence_length\": 94, \"gene_name\": null, \"uniprot_ids\": [\"Q484V4\"]}}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"entities\": [\"1\"], \"chain_count\": 28}], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\"], \"polymer_composition\": \"homomeric protein\", \"homomer_type\": \"monomer\", \"homomer_chains\": 28, \"chain_count\": 28, \"unique_sequences\": 1, \"avg_sequence_length\": 94.0, \"min_sequence_length\": 94, \"max_sequence_length\": 94}, \"entity_metadata\": {\"1\": {\"entity_poly\": {\"nstd_linkage\": \"no\", \"nstd_monomer\": \"yes\", \"pdbx_seq_one_letter_code\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG\", \"pdbx_seq_one_letter_code_can\": \"SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG\", \"pdbx_strand_id\": \"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b\", \"pdbx_target_identifier\": \"APC38223.1\", \"rcsb_artifact_monomer_count\": 1, \"rcsb_conflict_count\": 0, \"rcsb_deletion_count\": 0, \"rcsb_entity_polymer_type\": \"Protein\", \"rcsb_insertion_count\": 0, \"rcsb_mutation_count\": 0, \"rcsb_non_std_monomer_count\": 1, \"rcsb_non_std_monomers\": [\"MSE\"], \"rcsb_sample_sequence_length\": 94, \"type\": \"polypeptide(L)\"}, \"entity_src_gen\": [{\"gene_src_common_name\": \"Vibrio psychroerythus\", \"gene_src_strain\": \"34H\", \"pdbx_alt_source_flag\": \"sample\", \"pdbx_gene_src_gene\": \"CPS_1673\", \"pdbx_gene_src_ncbi_taxonomy_id\": \"167879\", \"pdbx_gene_src_scientific_name\": \"Colwellia psychrerythraea\", \"pdbx_host_org_ncbi_taxonomy_id\": \"562\", \"pdbx_host_org_scientific_name\": \"Escherichia coli\", \"pdbx_host_org_strain\": \"pPK1037\", \"pdbx_host_org_vector_type\": \"plasmid\", \"pdbx_src_id\": 1, \"plasmid_name\": \"pMCSG19\"}], \"rcsb_cluster_flexibility\": {\"avg_rmsd\": 0.315, \"label\": \"No\", \"link\": \"http://pdbflex.org/cluster.html#!/3lo3A/15073/3lo3A\", \"max_rmsd\": 0.429, \"provenance_code\": \"PDBFlex\"}, \"rcsb_cluster_membership\": [{\"cluster_id\": 887960, \"identity\": 100}, {\"cluster_id\": 744214, \"identity\": 95}, {\"cluster_id\": 685228, \"identity\": 90}, {\"cluster_id\": 426777, \"identity\": 70}, {\"cluster_id\": 217008, \"identity\": 50}, {\"cluster_id\": 80963, \"identity\": 30}], \"rcsb_entity_host_organism\": [{\"ncbi_common_names\": [\"Bacillus coli\", \"Bacterium coli\", \"Bacterium coli commune\", \"E. coli\", \"Enterococcus coli\", \"Escherichia/Shigella coli\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Escherichia coli\", \"ncbi_taxonomy_id\": 562, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Escherichia coli\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacterales\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae and related endosymbionts\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriaceae group\"}, {\"depth\": 6, \"id\": \"91347\", \"name\": \"Enterobacteriales\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteriaceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"Enterobacteraceae\"}, {\"depth\": 7, \"id\": \"543\", \"name\": \"enterobacteria\"}, {\"depth\": 8, \"id\": \"561\", \"name\": \"Escherichia\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacillus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Bacterium coli commune\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"E. coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Enterococcus coli\"}, {\"depth\": 9, \"id\": \"562\", \"name\": \"Escherichia/Shigella coli\"}]}], \"rcsb_entity_source_organism\": [{\"common_name\": \"Vibrio psychroerythus\", \"ncbi_common_names\": [\"Colwellia psychrerythraea str. 34H\", \"Colwellia psychrerythraea strain 34H\", \"Colwellia sp. 34H\"], \"ncbi_parent_scientific_name\": \"Bacteria\", \"ncbi_scientific_name\": \"Colwellia psychrerythraea 34H\", \"ncbi_taxonomy_id\": 167879, \"pdbx_src_id\": 1, \"provenance_source\": \"Primary Data\", \"scientific_name\": \"Colwellia psychrerythraea\", \"source_type\": \"genetically engineered\", \"taxonomy_lineage\": [{\"depth\": 1, \"id\": \"131567\", \"name\": \"cellular organisms\"}, {\"depth\": 1, \"id\": \"131567\", \"name\": \"biota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria (ex Cavalier-Smith 1987)\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteria Woese et al. 2024\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"Bacteriobiota\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"bacteria\"}, {\"depth\": 2, \"id\": \"2\", \"name\": \"eubacteria\"}, {\"depth\": 3, \"id\": \"3379134\", \"name\": \"Pseudomonadati\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Pseudomonadota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"\\\"Alphaproteobacteriota\\\" Whitman et al. 2018\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Alphaproteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"Proteobacteriota\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"proteobacteria\"}, {\"depth\": 4, \"id\": \"1224\", \"name\": \"purple photosynthetic bacteria and relatives\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Gammaproteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Proteobacteria gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Pseudomonadia\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"Purple bacteria, gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"g-proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma proteobacteria\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subdivision\"}, {\"depth\": 5, \"id\": \"1236\", \"name\": \"gamma subgroup\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadales\"}, {\"depth\": 6, \"id\": \"135622\", \"name\": \"Alteromonadaceae group\"}, {\"depth\": 7, \"id\": \"267889\", \"name\": \"Colwelliaceae\"}, {\"depth\": 8, \"id\": \"28228\", \"name\": \"Colwellia\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychrerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythraea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrea\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Colwellia psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythreus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythrus\"}, {\"depth\": 9, \"id\": \"28229\", \"name\": \"Vibrio psychroerythus\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea str. 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia psychrerythraea strain 34H\"}, {\"depth\": 10, \"id\": \"167879\", \"name\": \"Colwellia sp. 34H\"}], \"rcsb_gene_name\": [{\"provenance_source\": \"Primary Data\", \"value\": \"CPS_1673\"}]}], \"rcsb_polymer_entity\": {\"formula_weight\": 10.596, \"pdbx_description\": \"uncharacterized conserved protein\", \"pdbx_number_of_molecules\": 28, \"rcsb_multiple_source_flag\": \"N\", \"rcsb_source_part_count\": 1, \"rcsb_source_taxonomy_count\": 1, \"src_method\": \"man\", \"rcsb_macromolecular_names_combined\": [{\"name\": \"uncharacterized conserved protein\", \"provenance_code\": \"ECO:0000304\", \"provenance_source\": \"PDB Preferred Name\"}], \"rcsb_polymer_name_combined\": {\"names\": [\"DUF1330 domain-containing protein\"], \"provenance_source\": \"UniProt Name\"}}, \"rcsb_polymer_entity_align\": [{\"provenance_source\": \"SIFTS\", \"reference_database_accession\": \"Q484V4\", \"reference_database_name\": \"UniProt\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 91, \"ref_beg_seq_id\": 2}]}], \"rcsb_polymer_entity_annotation\": [{\"annotation_id\": \"PF07045\", \"assignment_version\": \"34.0\", \"name\": \"Domain of unknown function (DUF1330) (DUF1330)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\"}, {\"annotation_id\": \"IPR011008\", \"name\": \"Dimeric alpha-beta barrel\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR011008\", \"name\": \"Dimeric alpha-beta barrel\"}]}, {\"annotation_id\": \"IPR010753\", \"name\": \"Domain of unknown function DUF1330\", \"provenance_source\": \"UNIPROT\", \"type\": \"InterPro\", \"annotation_lineage\": [{\"id\": \"IPR010753\", \"name\": \"Domain of unknown function DUF1330\"}]}], \"rcsb_polymer_entity_container_identifiers\": {\"asym_ids\": [\"A\", \"AA\", \"B\", \"BA\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\"], \"auth_asym_ids\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"a\", \"b\"], \"chem_comp_monomers\": [\"ALA\", \"ARG\", \"ASN\", \"ASP\", \"GLN\", \"GLU\", \"GLY\", \"HIS\", \"ILE\", \"LEU\", \"LYS\", \"MSE\", \"PHE\", \"PRO\", \"SER\", \"THR\", \"TRP\", \"TYR\", \"VAL\"], \"chem_comp_nstd_monomers\": [\"MSE\"], \"entity_id\": \"1\", \"entry_id\": \"3LO3\", \"rcsb_id\": \"3LO3_1\", \"uniprot_ids\": [\"Q484V4\"], \"reference_sequence_identifiers\": [{\"database_accession\": \"Q484V4\", \"database_name\": \"UniProt\", \"entity_sequence_coverage\": 0.9680851063829787, \"provenance_source\": \"SIFTS\", \"reference_sequence_coverage\": 0.9891304347826086}]}, \"rcsb_polymer_entity_feature\": [{\"assignment_version\": \"34.0\", \"feature_id\": \"PF07045\", \"name\": \"Domain of unknown function (DUF1330) (DUF1330)\", \"provenance_source\": \"Pfam\", \"type\": \"Pfam\", \"feature_positions\": [{\"beg_seq_id\": 4, \"end_seq_id\": 94}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"monomer_feature_1\", \"name\": \"Parent monomer MET\", \"provenance_source\": \"PDB\", \"type\": \"modified_monomer\", \"feature_positions\": [{\"beg_seq_id\": 86}], \"additional_properties\": [{\"name\": \"PARENT_COMP_ID\", \"values\": [\"MET\"]}]}, {\"assignment_version\": \"V1.0\", \"feature_id\": \"range_feature_1\", \"name\": \"expression tag\", \"provenance_source\": \"PDB\", \"type\": \"artifact\", \"feature_positions\": [{\"beg_seq_id\": 1, \"end_seq_id\": 3}]}, {\"name\": \"Hydropathy values\", \"provenance_source\": \"biojava-7.2.4\", \"type\": \"hydropathy\", \"feature_positions\": [{\"beg_seq_id\": 5, \"values\": [1.17, 1.21, 2.02, 1.74, 1.64, 1.01, 0.77, 0.47, -0.42, -1.32, -0.86, -1.67, -1.98, -1.94, -1.56, -0.97, -1.67, -0.81, -0.18, -0.69, -0.38, 0.43, 0.78, 0.39, 0.04, 0.46, -0.06, -0.64, -0.09, 0.41, 0.46, -0.18, 0.21, 0.27, 0.82, 0.48, 0.48, 0.43, -0.34, -0.86, -0.86, -0.5, -0.8, -1.62, -1.67, -1.08, -1.89, -1.07, -0.52, 0.33, -0.37, 0.33, 0.51, 0.86, 0.16, 0.16, -0.7, -1.0, -1.57, -1.57, -1.98, -1.94, -2.21, -1.8, -1.8, -1.8, -2.14, -2.39, -1.8, -1.28, -0.63, -0.37, -0.36, -0.47, -0.47, 0.1, 0.44, 0.46, -0.36, -0.94, -1.24, -0.86, -0.74, 0.07, 0.14, 0.14]}]}, {\"name\": \"Disordered regions\", \"provenance_source\": \"IUPred2(short)\", \"type\": \"disorder\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.66, 0.62, 0.61, 0.56, 0.53, 0.45, 0.41, 0.37, 0.25, 0.21, 0.18, 0.12, 0.12, 0.12, 0.13, 0.11, 0.13, 0.2, 0.27, 0.25, 0.23, 0.29, 0.22, 0.2, 0.2, 0.2, 0.18, 0.13, 0.09, 0.13, 0.13, 0.13, 0.14, 0.15, 0.18, 0.12, 0.17, 0.2, 0.19, 0.13, 0.19, 0.23, 0.22, 0.27, 0.27, 0.21, 0.15, 0.14, 0.2, 0.18, 0.21, 0.21, 0.2, 0.27, 0.28, 0.25, 0.25, 0.25, 0.16, 0.11, 0.17, 0.17, 0.18, 0.2, 0.15, 0.16, 0.18, 0.17, 0.17, 0.16, 0.23, 0.19, 0.21, 0.15, 0.15, 0.11, 0.13, 0.2, 0.2, 0.21, 0.29, 0.22, 0.16, 0.15, 0.17, 0.29, 0.32, 0.39, 0.51, 0.63, 0.67, 0.7, 0.75, 0.77]}]}, {\"name\": \"Disordered binding sites\", \"provenance_source\": \"Anchor2\", \"type\": \"disorder_binding\", \"feature_positions\": [{\"beg_seq_id\": 1, \"values\": [0.31, 0.31, 0.32, 0.32, 0.33, 0.33, 0.33, 0.33, 0.33, 0.33, 0.32, 0.32, 0.31, 0.3, 0.3, 0.28, 0.27, 0.27, 0.26, 0.26, 0.27, 0.27, 0.28, 0.28, 0.29, 0.29, 0.3, 0.3, 0.31, 0.32, 0.32, 0.32, 0.32, 0.31, 0.31, 0.31, 0.31, 0.31, 0.3, 0.29, 0.29, 0.3, 0.3, 0.31, 0.31, 0.32, 0.33, 0.33, 0.33, 0.34, 0.35, 0.36, 0.35, 0.35, 0.35, 0.36, 0.37, 0.37, 0.37, 0.38, 0.38, 0.39, 0.39, 0.4, 0.41, 0.41, 0.42, 0.41, 0.42, 0.42, 0.42, 0.4, 0.4, 0.39, 0.38, 0.38, 0.37, 0.37, 0.37, 0.36, 0.35, 0.35, 0.37, 0.37, 0.38, 0.38, 0.39, 0.38, 0.39, 0.39, 0.4, 0.41, 0.41, 0.4]}]}], \"rcsb_polymer_entity_feature_summary\": [{\"count\": 1, \"coverage\": 0.01064, \"type\": \"modified_monomer\"}, {\"count\": 1, \"coverage\": 0.96809, \"type\": \"Pfam\"}, {\"count\": 1, \"coverage\": 0.03191, \"maximum_length\": 3, \"minimum_length\": 3, \"type\": \"artifact\"}], \"rcsb_polymer_entity_group_membership\": [{\"aggregation_method\": \"sequence_identity\", \"group_id\": \"685228_90\", \"similarity_cutoff\": 90.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"426777_70\", \"similarity_cutoff\": 70.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"887960_100\", \"similarity_cutoff\": 100.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"80963_30\", \"similarity_cutoff\": 30.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 42, \"ref_beg_seq_id\": 2}, {\"entity_beg_seq_id\": 43, \"length\": 52, \"ref_beg_seq_id\": 45}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"744214_95\", \"similarity_cutoff\": 95.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"sequence_identity\", \"group_id\": \"217008_50\", \"similarity_cutoff\": 50.0, \"aligned_regions\": [{\"entity_beg_seq_id\": 1, \"length\": 94, \"ref_beg_seq_id\": 1}]}, {\"aggregation_method\": \"matching_uniprot_accession\", \"group_id\": \"Q484V4\", \"aligned_regions\": [{\"entity_beg_seq_id\": 4, \"length\": 91, \"ref_beg_seq_id\": 2}]}], \"rcsb_id\": \"3LO3_1\"}}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"E\", \"assembly_chain2\": \"F\"}, \"enrichment_timestamp\": \"2025-12-23T18:04:44.535658\"}",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
@@ -165,254 +165,254 @@
       {
         "@type": "PropertyValue",
         "name": "Chain_A_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain A (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain A (length: 94)",
         "chainId": "A",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_B_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain B (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain B (length: 94)",
         "chainId": "B",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_C_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain C (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain C (length: 94)",
         "chainId": "C",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_D_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain D (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain D (length: 94)",
         "chainId": "D",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_E_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain E (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain E (length: 94)",
         "chainId": "E",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_F_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain F (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain F (length: 94)",
         "chainId": "F",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_G_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain G (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain G (length: 94)",
         "chainId": "G",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_H_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain H (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain H (length: 94)",
         "chainId": "H",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_I_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain I (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain I (length: 94)",
         "chainId": "I",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_J_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain J (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain J (length: 94)",
         "chainId": "J",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_K_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain K (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain K (length: 94)",
         "chainId": "K",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_L_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain L (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain L (length: 94)",
         "chainId": "L",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_M_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain M (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain M (length: 94)",
         "chainId": "M",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_N_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain N (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain N (length: 94)",
         "chainId": "N",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_O_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain O (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain O (length: 94)",
         "chainId": "O",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_P_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain P (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain P (length: 94)",
         "chainId": "P",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_Q_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain Q (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain Q (length: 94)",
         "chainId": "Q",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_R_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain R (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain R (length: 94)",
         "chainId": "R",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_S_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain S (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain S (length: 94)",
         "chainId": "S",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_T_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain T (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain T (length: 94)",
         "chainId": "T",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_U_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain U (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain U (length: 94)",
         "chainId": "U",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_V_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain V (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain V (length: 94)",
         "chainId": "V",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_W_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain W (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain W (length: 94)",
         "chainId": "W",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_X_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain X (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain X (length: 94)",
         "chainId": "X",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_Y_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain Y (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain Y (length: 94)",
         "chainId": "Y",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_Z_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain Z (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain Z (length: 94)",
         "chainId": "Z",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_a_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain a (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain a (length: 94)",
         "chainId": "a",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
         "name": "Chain_b_Sequence",
-        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLG(MSE)DSQFQLIG",
-        "description": "Amino acid sequence for chain b (length: 98)",
+        "value": "SNATAYIIVGLTPKDAEKLQQYGARVASTLAKYSGEVLVKGSVEQLHGKFEHKAQVILEFPSREDAYNWYHSEEYQALISTRDLGMDSQFQLIG",
+        "description": "Amino acid sequence for chain b (length: 94)",
         "chainId": "b",
         "entityId": "1",
-        "sequenceLength": 98
+        "sequenceLength": 94
       },
       {
         "@type": "PropertyValue",
@@ -423,7 +423,7 @@
       {
         "@type": "PropertyValue",
         "name": "Entity_1",
-        "value": "Chains: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, a, b, Length: 98",
+        "value": "Chains: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, a, b, Length: 94",
         "description": "Entity 1 information"
       },
       {

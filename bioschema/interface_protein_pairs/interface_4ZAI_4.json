@@ -26,13 +26,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/4zai_4.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/4zai_4.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/4ZAI_4.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4ZAI_4.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -89,7 +89,7 @@
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Structural metadata from RCSB Protein Data Bank",
-        "value": "{\"pdb_id\": \"4ZAI\", \"structure_metadata\": {\"pdb_id\": \"4ZAI\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": false, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": []}, \"entity_metadata\": {}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-21T10:56:19.872221\"}",
+        "value": "{\"pdb_id\": \"4ZAI\", \"structure_metadata\": {\"pdb_id\": \"4ZAI\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": false, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": []}, \"entity_metadata\": {}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-23T18:07:46.671427\"}",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
