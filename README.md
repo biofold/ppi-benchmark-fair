@@ -79,12 +79,12 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 * ✅ Domain Vocabularies: EDAM, GO, Pfam, SCOP  
 * ⚠️ Needs Improvement: Data schema documentation, format information
 
-### **Reusable (50/100) ⚠️**
+### **Reusable (95/100) ✅**
 
 * ✅ Provenance: Full processing pipeline documented  
 * ✅ Contact Information: ELIXIR 3D-BioInfo Community  
 * ✅ Examples: Usage scripts provided  
-* ❌ Missing: Explicit LICENSE file, CITATION.cff, issue templates
+* ✅ Info: Explicit LICENSE file, CITATION.cff, issue templates
 
 ## **Metadata Architecture**
 
@@ -128,7 +128,7 @@ The metadata follows a hierarchical structure:
 ### **Interface ID Formats**
 
 * ProtCID: `{PDB_ID}_{integer}` (e.g., `1ABC_1`)  
-* QSalign: `{PDB_ID}_assembly{number}` (e.g., `1DEF_assembly1`)  
+* QSalign: `{PDB_ID}_{integer}` (e.g., `1DEF_assembly1`)  
 * Cleaned: Original InterfaceID with standardized formatting
 
 ## **Usage Examples**
@@ -283,13 +283,11 @@ When `--fetch-pdb-metadata` is enabled, the script fetches comprehensive metadat
 
 ## **FAIR Improvements Roadmap**
 
-Based on the FAIR assessment (71.25/100), here are planned improvements:
+Based on the FAIR assessment (82.5/100), here are planned improvements:
 
-### **High Priority (Potential \+25 points)**
+### **Low Priority (Potential \+5 points)**
 
-* Add explicit `LICENSE` file with CC-BY-4.0 terms  
 * Create `.github/ISSUE_TEMPLATE/` for structured issue reporting  
-* Add `CITATION.cff` file for proper academic citation
 
 ### **Medium Priority (Potential \+40 points)**
 
@@ -303,7 +301,7 @@ Based on the FAIR assessment (71.25/100), here are planned improvements:
 * Create GitHub releases with version tags  
 * Enable and populate documentation wiki
 
-Target FAIR Score: 100/100 (Currently: 71.25)
+Target FAIR Score: 100/100 (Currently: 82.5)
 
 ## **License and Attribution**
 
