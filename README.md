@@ -190,15 +190,12 @@ Metadata Generation Pipeline Stages:
 
 | File | Description | Size/Count |
 | :---- | :---- | :---- |
-| `dataset_with_interfaces.json` | Complete dataset metadata | \~15 MB |
+| `dataset_with_interfaces.json` | Complete dataset metadata | \~100 MB |
 | `interface_protein_pair/*.json` | Individual interface files | 1,677 files |
-| `embedded_markup.html` | Web-optimized JSON-LD embedding | \~5 MB |
-| `fair_metadata_package.json` | FAIR assessment package | \~20 MB |
+| `embedded_markup.html` | Web-optimized JSON-LD embedding | \~100 MB |
+| `fair_metadata_package.json` | FAIR assessment package | \~100 MB |
 | `manifest.json` | File inventory and checksums | \~50 KB |
-| `base_metadata.json` | Initial, reproducible metadata | \~8 MB |
-| `metadata_with_label_chains.json` | Chain-validated metadata | \~10 MB |
-| `metadata_full_enriched.json` | PDB-enriched metadata | \~15 MB |
-| `index.html` | Human-readable dataset portal | \~2 MB |
+| `pdb_metadata_cache.json` | basic info on pdb protein | \~8 MB |
 | Total dataset size | Including structural file references | \~500 MB |
 
 ## **User-Specific Features**
