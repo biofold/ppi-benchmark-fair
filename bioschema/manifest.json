@@ -1,5 +1,5 @@
 {
-  "generated_date": "2025-12-23T18:20:36.593798",
+  "generated_date": "2025-12-24T06:33:30.568207",
   "dataset_file": "ppi_benchmark_3/dataset_with_interfaces.json",
   "interfaces_dir": "ppi_benchmark_3/interface_protein_pairs",
   "total_interfaces_generated": 1677,
@@ -77,10 +77,10 @@
   },
   "pdb_metadata": {
     "enabled": true,
-    "api_base_url": "https://data.rcsb.org/rest/v1/core",
+    "api_base_url": "https://data.rcsb.org/rest/v1",
     "unique_structures_with_metadata": 1645,
-    "total_chains_with_sequences": 4161,
-    "homomeric_structures": 1493,
+    "total_chains_with_sequences": 4165,
+    "homomeric_structures": 1496,
     "metadata_cache_file": "pdb_metadata_cache.json"
   },
   "assembly_checks": {
@@ -95,13 +95,13 @@
     "blastclust_file": "data/ppi_benchmark_seqs.clust_25_05",
     "blastclust_method": "BLASTClust sequence clustering",
     "blastclust_options": "-S 25 -L 0.5 -b F",
-    "interfaces_with_cluster": 1670,
-    "coverage_percentage": 99.58258795468097,
-    "total_clusters": 1042,
-    "clusters_with_single_member": 758,
-    "clusters_with_multiple_members": 284,
+    "interfaces_with_cluster": 1677,
+    "coverage_percentage": 100.0,
+    "total_clusters": 1050,
+    "clusters_with_single_member": 763,
+    "clusters_with_multiple_members": 287,
     "largest_cluster_size": 27,
-    "total_interfaces_in_clusters": 1670,
+    "total_interfaces_in_clusters": 1677,
     "cluster_id_selection": "First InterfaceID in each BLASTClust line becomes the ClusterID",
     "cluster_properties_added": [
       "ClusterID: The cluster identifier",

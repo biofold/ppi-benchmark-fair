@@ -15,8 +15,12 @@
     "url": "https://www.rcsb.org/structure/4ZAI",
     "taxonomicRange": {
       "@type": "DefinedTerm",
-      "name": "Organism-specific protein",
-      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
+      "name": "HOMO SAPIENS",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "description": "Organism taxonomy information from PDB metadata",
+      "termCode": "9606",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606",
+      "identifier": "taxonomy:9606"
     },
     "alternateName": [
       "PDB 4ZAI",
@@ -32,7 +36,7 @@
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4ZAI_4.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4zai_4.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -87,27 +91,146 @@
       },
       {
         "@type": "PropertyValue",
+        "name": "ObsoleteEntry",
+        "value": true,
+        "description": "This PDB entry has been obsoleted and may have been replaced by a newer version"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBStatus",
+        "value": "OBSOLETE",
+        "description": "This entry is no longer current in the PDB"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ReplacedBy",
+        "value": "7JNY",
+        "description": "Newer PDB ID that replaces this obsolete entry",
+        "url": "https://www.rcsb.org/structure/7JNY"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "MetadataSource",
+        "value": "PDB header file parsing",
+        "description": "Metadata for this obsolete entry was extracted from the PDB header file"
+      },
+      {
+        "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
-        "description": "Structural metadata from RCSB Protein Data Bank",
-        "value": "{\"pdb_id\": \"4ZAI\", \"structure_metadata\": {\"pdb_id\": \"4ZAI\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": false, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": []}, \"entity_metadata\": {}, \"interface_chains\": {\"chain1\": \"A\", \"chain2\": \"A\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2025-12-23T18:07:46.671427\"}",
+        "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
+        "value": "{\"pdb_id\": \"4ZAI\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"7JNY\", \"sequences\": {\"A\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"sequence_length\": 88, \"residue_count\": 88, \"num_seqres_records\": 7}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"chains\": [\"A\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 1, \"unique_sequences\": 1, \"homomer_type\": \"monomer\", \"homomer_chains\": 1}",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
           "value": {
+            "pdb_id": "4ZAI",
+            "obsolete": true,
+            "replaced_by": "7JNY",
+            "obsolete_date": null,
+            "found_in_header": false,
+            "deposition_date": null,
+            "release_date": null,
+            "has_sequences": true,
+            "chains_from_header": [
+              "A"
+            ],
+            "source_organism": [
+              "HOMO SAPIENS"
+            ],
+            "taxonomy_ids": [
+              9606
+            ],
+            "primary_taxonomy_id": 9606,
             "resolution": null,
-            "experimentalMethod": null,
-            "depositionDate": null,
-            "releaseDate": null,
-            "sourceOrganism": [],
-            "spaceGroup": null,
-            "rFactor": null,
-            "entityCount": 0,
-            "chainCount": null,
-            "uniqueSequences": null,
-            "isHomomer": false,
-            "homomerType": null
+            "experimental_method": null
           }
         }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PDBMetadataStatus",
+        "value": "Obsolete entry - metadata extracted from PDB header file + sequences from header",
+        "description": "This PDB entry has been obsoleted. Structural details were extracted from the PDB header file. Sequences were extracted from the PDB header file."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "HOMO SAPIENS",
+        "description": "HOMO SAPIENS (taxonomy ID: 9606)",
+        "taxonomyId": 9606,
+        "taxonomyUrl": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 1,
+        "description": "Number of chains in the structure (from PDB header file (obsolete entry))"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences (from PDB header file (obsolete entry))"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP",
+        "description": "Amino acid sequence for chain A (length: 88) from PDB header file (obsolete entry)",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 88,
+        "sequenceSource": "PDB header file (obsolete entry)",
+        "sourceUrl": "https://files.rcsb.org/header/4ZAI.pdb"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "NCBI_Taxonomy_ID",
+        "value": "9606",
+        "description": "NCBI Taxonomy ID for HOMO SAPIENS",
+        "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterID",
+        "value": "4ZAI_4",
+        "description": "Sequence cluster ID from BLASTClust analysis"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterSize",
+        "value": 1,
+        "description": "Number of interfaces in this cluster"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMembers",
+        "value": [],
+        "description": "List of other interfaces in the same cluster (excluding current interface)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethod",
+        "value": "BLASTClust sequence clustering",
+        "description": "Method used for sequence-based clustering"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ClusterMethodOptions",
+        "value": "-S 25 -L 0.5 -b F",
+        "description": "BLASTClust parameters used for sequence clustering"
       }
     ],
     "hasMolecularFunction": {
@@ -238,6 +361,36 @@
       "name": "Fraction Apolar",
       "value": 0.598328652647441,
       "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterID",
+      "value": "4ZAI_4",
+      "description": "Sequence cluster ID from BLASTClust analysis"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterSize",
+      "value": 1,
+      "description": "Number of interfaces in this cluster"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMembers",
+      "value": [],
+      "description": "List of other interfaces in the same cluster (excluding current interface)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethod",
+      "value": "BLASTClust sequence clustering",
+      "description": "Method used for sequence-based clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ClusterMethodOptions",
+      "value": "-S 25 -L 0.5 -b F",
+      "description": "BLASTClust parameters used for sequence clustering"
     }
   ]
 }
