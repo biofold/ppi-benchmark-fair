@@ -316,16 +316,27 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 `bibtex`
 
-`@dataset{elixir_ppi_benchmark_2024,`  
-  `title = {ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces},`  
-  `author = {{ELIXIR 3D-BioInfo Community}},`  
-  `year = {2024},`  
-  `version = {1.0},`  
-  `publisher = {ELIXIR},`  
-  `doi = {10.5281/zenodo.XXXXXXX},`  
-  `url = {https://github.com/biofold/ppi-benchmark-fair}`
-
+`@article{schweke2023discriminating,`
+   `title={Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study},`
+   `author={Schweke, H. and Xu, Q. and Cazals, F. and Teyra, J. and Zimmermann, O. and Brenke, R. and Mihalek, I. and Res, I. and Ferré, A. and Lafita, A. and Guzzo, C. R. and Bordogna, A. and Bonvin, A. M. J. J. and Dey, S. and Gao, M. and Vangone, A. and Oliva, R. and Guarnera, E. and Roche, D. B. and Bhattacharya, S. and Brylinski, M. and Dijkstra, M. and Esquivel-Rodríguez, J. and Kihara, D. and Lensink, M. F. and Murakami, Y. and Nadzirin, N. and Nagarajan, R. and Oliveira, S. H. P. and Pires, D. E. V. and Roy, R. S. and Sanchez-Garcia, R. and Schueler-Furman, O. and Trellet, M. and Wodak, S. J.},`
+   `journal={Proteomics},`
+   `volume={23},`
+   `number={17},`
+   `pages={e2200323},`
+   `year={2023},`
+   `publisher={Wiley},`
+   `doi={10.1002/pmic.202200323}`
 `}`
+
+`@dataset{elixir2024fairmetadata,`
+   `title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces FAIR Metadata},`
+   `author={{ELIXIR 3D-BioInfo Community}},`
+   `year={2024},`
+   `version={1.0},`
+   `publisher={ELIXIR},`
+   `doi={10.5281/zenodo.XXXXXXX}`
+`}`
+
 
 ### **Dataset Reference Publication**
 
