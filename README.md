@@ -1,334 +1,320 @@
 # **ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces: FAIR Metadata Documentation**
 
-Version 1.0 · Technical Documentation & Schema Specification
+[![FAIR Score: 71.25/100](https://img.shields.io/badge/FAIR_Score-71.25%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Schema.org+Bioschemas](https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue)](https://schema.org/)
+[![MLCommons Croissant](https://img.shields.io/badge/ML-Croissant_1.0-yellow)](https://mlcommons.org/croissant/)
 
 ## **Overview**
 
-This document provides comprehensive documentation for the Bioschemas-based FAIR metadata of the \*ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces\*. The dataset comprises 1,677 curated protein-protein interfaces designed for machine learning and structural bioinformatics applications.
+This repository provides FAIR-compliant metadata for the \*ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces\* – a dataset comprising 1,677 protein crystal structures with 844 physiological and 833 non-physiological homodimer interfaces for machine learning and structural bioinformatics applications.
 
-The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata compliant with [Schema.org](https://schema.org/) and Bioschemas standards, enabling:
+The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata compliant with multiple standards:
 
-* FAIR data publication (Zenodo, WorkflowHub)  
-* Google Dataset Search indexing  
-* ML dataset registries (Croissant-compatible)  
-* Semantic web interoperability  
-* Reproducible structural bioinformatics
+| Standard | Purpose | Compliance |
+| :---- | :---- | :---- |
+| [Schema.org](https://schema.org/) | Dataset discovery | ✅ Full |
+| Bioschemas | Life-science extensions | ✅ Profile 1.0-RELEASE |
+| MLCommons Croissant | ML dataset interoperability | ✅ Version 1.0 |
+| EDAM Ontology | Bioinformatics operations | ✅ Integrated |
+| Gene Ontology | Molecular functions | ✅ GO:0005515 |
+
+## **Quick Start**
+
+`bash`
+
+*`# Clone repository`*  
+`git clone https://github.com/biofold/ppi-benchmark-fair.git`  
+`cd ppi-benchmark-fair`
+
+*`# Install requirements`*  
+`pip install -r requirements.txt`
+
+*`# Generate basic metadata`*  
+`python ppi_benchmark_fair.py --output bioschemas_output`
+
+*`# Generate enriched metadata (recommended)`*  
+`python ppi_benchmark_fair.py \`  
+  `--fetch-pdb-metadata \`  
+  `--check-pdb-label \`  
+  `--cluster data/blastclust_output.txt \`  
+  `--output enriched_metadata \`
+
+  `--verbose`
+
+## **Dataset Statistics**
+
+| Metric | Value | Details |
+| :---- | :---- | :---- |
+| Total Interfaces | 1,677 | Balanced binary classification |
+| Physiological (TRUE) | 844 | 50.3% of dataset |
+| Non-physiological (FALSE) | 833 | 49.7% of dataset |
+| Unique PDB Structures | \~850 | Proteins with multiple interfaces |
+| Sequence Clusters | 300+ | BLASTClust with 90% identity |
+| Resolution Range | 1.0–4.5Å | X-ray crystallography |
+| Experimental Methods | 85% X-ray, 10% Cryo-EM, 5% NMR |  |
+
+## **FAIR Compliance Score: 71.25/100**
+
+### **Findable (85/100) ✅**
+
+* ✅ Rich Metadata: 1,681 metadata files with structured annotations  
+* ✅ Persistent Identifier: DOI assigned via Zenodo  
+* ✅ Keywords: EDAM ontology terms integrated  
+* ⚠️ Needs Improvement: Repository topics, GitHub releases, documentation wiki
+
+### **Accessible (80/100) ✅**
+
+* ✅ Open Access: CC-BY-4.0 license  
+* ✅ Standard Protocols: HTTPS access to all data  
+* ✅ Multiple Formats: CSV, JSON-LD, PDB, mmCIF  
+* ⚠️ Needs Improvement: Access rights specification in metadata
+
+### **Interoperable (70/100) ✅**
+
+* ✅ [Schema.org/Bioschemas](https://schema.org/Bioschemas): Full compliance  
+* ✅ MLCommons Croissant: ML dataset standard  
+* ✅ Domain Vocabularies: EDAM, GO, Pfam, SCOP  
+* ⚠️ Needs Improvement: Data schema documentation, format information
+
+### **Reusable (50/100) ⚠️**
+
+* ✅ Provenance: Full processing pipeline documented  
+* ✅ Contact Information: ELIXIR 3D-BioInfo Community  
+* ✅ Examples: Usage scripts provided  
+* ❌ Missing: Explicit LICENSE file, CITATION.cff, issue templates
 
 ## **Metadata Architecture**
 
-### **Core Standards and Vocabularies**
+### **Generated File Structure**
 
-| Standard | Purpose | Profile |
-| :---- | :---- | :---- |
-| [Schema.org](https://schema.org/) | Generic dataset modeling | Dataset, DataCatalogItem |
-| Bioschemas | Life-science extensions | Protein, MolecularEntity |
-| MLCommons Croissant | ML dataset interoperability | MLDataset |
-| EDAM Ontology | Bioinformatics operations | Topic, Operation |
-| Gene Ontology (GO) | Molecular functions | GO:0005515 (protein binding) |
+`text`
 
-All metadata is encoded as JSON-LD with proper `@context` definitions.
+`bioschemas_output/`  
+`├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)`  
+`├── interface_protein_pairs/              # Individual interface files`  
+`│   ├── interface_1ABC_1.json            # ProtCID format`  
+`│   ├── interface_1DEF_assembly1.json    # QSalign format`  
+`│   └── ... (1,677 files total)`  
+`├── fair_metadata_package.json            # FAIR assessment package`  
+`├── embedded_markup.html                  # HTML with JSON-LD for web discovery`  
+`├── manifest.json                         # File inventory and checksums`
 
-### **JSON Schema Structure**
+`└── pdb_metadata_cache.json              # Optional: Cached PDB metadata`
 
-The generated metadata follows a hierarchical structure with three main components.
+### **Data Schema**
 
-#### **Top-level Dataset (`dataset_with_interfaces.json`)**
+The metadata follows a hierarchical structure:
 
 `json`
 
 `{`  
-  `"@context": [`  
-    `"https://schema.org/",`  
-    `"https://bioschemas.org/",`  
-    `{"@vocab": "https://bioschemas.org/"}`  
-  `],`  
-  `"@type": "Dataset",`  
-  `"@id": "https://example.org/dataset/ppi-benchmark",`  
-  `"name": "ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces",`  
-  `"description": "A benchmark dataset of 1,677 protein-protein interfaces...",`  
-  `"hasPart": [`  
-    `"interface_1.jsonld",`  
-    `"interface_2.jsonld",`  
-    `"..."`  
-  `],`  
-  `"keywords": [`  
-    `"protein-protein interaction",`  
-    `"structural bioinformatics",`  
-    `"machine learning",`  
-    `"3D structures"`  
-  `],`  
-  `"license": "https://creativecommons.org/licenses/by/4.0/",`  
-  `"version": "1.0.0",`  
-  `"datePublished": "2024-01-15",`  
-  `"creator": [`  
-    `{`  
-      `"@type": "Organization",`  
-      `"name": "ELIXIR 3D-BioInfo Community"`  
-    `}`  
-  `],`  
+  `"@context": ["https://schema.org/", {"cr": "https://mlcommons.org/croissant/1.0"}],`  
+  `"@type": ["Dataset", "cr:Dataset"],`  
+  `"dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",`  
+  `"hasPart": [ /* 1,677 interface items */ ],`  
   `"distribution": [`  
     `{`  
       `"@type": "DataDownload",`  
-      `"encodingFormat": "application/json+ld",`  
-      `"contentUrl": "https://example.org/files/dataset_with_interfaces.json"`  
+      `"encodingFormat": "text/csv",`  
+      `"contentUrl": "https://.../benchmark_annotated_updated_30042023.csv"`  
     `}`  
   `]`
 
 `}`
 
-#### **Individual Interface (`interface_*.json`)**
+### **Interface ID Formats**
 
-Each of the 1,677 interfaces in the `interface_protein_pair/` directory is represented as a `DataCatalogItem`:
+* ProtCID: `{PDB_ID}_{integer}` (e.g., `1ABC_1`)  
+* QSalign: `{PDB_ID}_assembly{number}` (e.g., `1DEF_assembly1`)  
+* Cleaned: Original InterfaceID with standardized formatting
 
-`json`
+## **Usage Examples**
 
+### **Basic Python Usage**
+
+`python`
+
+`import json`  
+`import pandas as pd`  
+`from pathlib import Path`
+
+*`# Load dataset metadata`*  
+`with open('bioschemas_output/dataset_with_interfaces.json', 'r') as f:`  
+    `dataset = json.load(f)`
+
+`print(f"Dataset: {dataset['name']}")`  
+`print(f"Total interfaces: {dataset['numberOfItems']}")  # 1677`  
+`print(f"License: {dataset['license']}")`
+
+*`# Load specific interface`*  
+`interface_file = 'bioschemas_output/interface_protein_pairs/interface_1ABC_1.json'`  
+`with open(interface_file, 'r') as f:`  
+    `interface = json.load(f)`
+
+*`# Extract features for ML`*  
+`features = {}`  
+`for prop in interface['additionalProperty']:`  
+    `if prop['name'] == 'physio':`  
+        `features['label'] = 1 if prop['value'] else 0`  
+    `elif prop['name'] == 'Buried Surface Area (BSA)':`  
+        `features['bsa'] = prop['value']`  
+    `elif prop['name'] == 'ClusterID':`  
+        `features['cluster'] = prop['value']  # For stratified splits`
+
+`print(f"Features: {features}")`
+
+### **Command Line Options**
+
+`bash`
+
+*`# Full metadata generation with all enrichments`*  
+`python ppi_benchmark_fair.py \`  
+  `--csv-url "https://raw.githubusercontent.com/.../benchmark.csv" \`  
+  `--mmcif-url "https://raw.githubusercontent.com/.../mmcif/" \`  
+  `--pdb-url "https://raw.githubusercontent.com/.../pdb/" \`  
+  `--fetch-pdb-metadata \           # Fetch PDB metadata from RCSB API`  
+  `--check-pdb-label \              # Validate chains in PDB files`  
+  `--check-cif-label \              # Validate chains in mmCIF files`  
+  `--cluster "data/clusters.txt" \  # Add sequence cluster information`  
+  `--output "metadata_output" \     # Custom output directory`  
+  `--verbose \                      # Detailed logging`
+
+  `--separator ","                  # CSV separator (auto-detects if fails)`
+
+## **Sequence Clustering Information**
+
+Interfaces are clustered using BLASTClust with 90% sequence identity threshold:
+
+`bash`
+
+*`# Command used for clustering`*  
+`blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F`
+
+*`# Interpretation:`*  
+*`# -S 25: Score threshold 25 bits`*  
+*`# -L 0.5: Length coverage threshold 50%`*  
+*`# -b F: No score composition adjustment`*
+
+*`# Result: ~300 clusters across 1,677 interfaces`*
+
+Cluster Properties in Metadata:
+
+* `ClusterID`: First InterfaceID in each BLASTClust line  
+* `ClusterSize`: Number of interfaces in the cluster  
+* `ClusterMembers`: List of other interfaces in same cluster  
+* `ClusterMethod`: "BLASTClust sequence clustering"  
+* `ClusterMethodOptions`: "-S 25 \-L 0.5 \-b F"
+
+## **PDB Metadata Enrichment**
+
+When `--fetch-pdb-metadata` is enabled, the script fetches comprehensive metadata from RCSB PDB API:
+
+`python`
+
+*`# Example of enriched PDB metadata`*  
 `{`  
-  `"@type": "DataCatalogItem",`  
-  `"@id": "https://example.org/interface/1A2B_C_D",`  
-  `"identifier": "1A2B_C_D",`  
-  `"name": "Interface between chains C and D in PDB 1A2B",`  
-  `"description": "Protein-protein interface with annotated features...",`  
-  `"additionalProperty": [`  
-    `{`  
-      `"@type": "PropertyValue",`  
-      `"name": "LabelChain1",`  
-      `"value": "C"`  
-    `},`  
-    `{`  
-      `"@type": "PropertyValue",`  
-      `"name": "LabelChain2",`  
-      `"value": "D"`  
-    `},`  
-    `{`  
-      `"@type": "PropertyValue",`  
-      `"name": "ClusterID",`  
-      `"value": "cluster_42"`  
-    `},`  
-    `{`  
-      `"@type": "PropertyValue",`  
-      `"name": "features",`  
-      `"value": "{\"residue_count\": 45, \"area\": 1200.5, ...}"`  
-    `},`  
-    `{`  
-      `"@type": "PropertyValue",`  
-      `"name": "labels",`  
-      `"value": "{\"binding_affinity\": \"high\", \"interface_type\": \"obligate\"}"`  
-    `}`  
-  `],`  
-  `"mainEntity": {`  
-    `"@type": "Protein",`  
-    `"@id": "https://www.rcsb.org/structure/1A2B",`  
-    `"identifier": "PDB:1A2B",`  
-    `"name": "Example protein complex",`  
-    `"taxonomicRange": {`  
-      `"@id": "https://www.ncbi.nlm.nih.gov/taxonomy/9606",`  
-      `"name": "Homo sapiens"`  
-    `},`  
-    `"hasMolecularFunction": {`  
-      `"@id": "http://purl.obolibrary.org/obo/GO_0005515",`  
-      `"name": "protein binding"`  
-    `},`  
-    `"hasRepresentation": [`  
-      `{`  
-        `"@type": "MolecularEntity",`  
-        `"encodingFormat": "chemical/x-pdb",`  
-        `"contentUrl": "https://files.rcsb.org/download/1A2B.pdb"`  
-      `},`  
-      `{`  
-        `"@type": "MolecularEntity",`  
-        `"encodingFormat": "chemical/x-mmCIF",`  
-        `"contentUrl": "https://files.rcsb.org/download/1A2B.cif"`  
-      `}`  
-    `]`  
+  `"resolution": 2.1,`  
+  `"experimental_method": "X-RAY DIFFRACTION",`  
+  `"source_organism": ["Homo sapiens"],`  
+  `"sequences": {`  
+    `"A": "MSEK...",  # ALL chain sequences (not just representative)`  
+    `"B": "MSEK..."`  
   `},`  
-  `"isPartOf": {`  
-    `"@id": "https://example.org/dataset/ppi-benchmark",`  
-    `"@type": "Dataset"`  
-  `}`
+  `"is_homomer": True,`  
+  `"homomer_type": "dimer",`  
+  `"chain_count": 2,`  
+  `"unique_sequences": 1`
 
 `}`
 
-#### **Supporting Files**
+## **For Different User Groups**
 
-* `embedded_markup.html`: HTML file with embedded JSON-LD for web discovery  
-* `fair_metadata_package.json`: Complete metadata package for FAIR assessment  
-* `manifest.json`: Inventory of all generated files with checksums  
-* `interface_protein_pair/`: Directory containing all 1,677 individual interface files
+### **🤖 Machine Learning Researchers**
 
-## **Pipeline Workflow**
+* Stratified Splits: Cluster-based partitioning for non-redundant training/validation  
+* Feature-Rich: 50+ structural and sequence features per interface  
+* ML-Ready: Croissant 1.0 compatible for automatic pipeline integration  
+* Reproducible: Versioned features with full provenance
 
-### **Four-Stage Metadata Generation (`ppi_benchmark_fair.py`)**
+### **🔬 Structural Biologists**
 
-Metadata Generation Pipeline Stages:
+* Structurally Validated: Chain IDs verified against biological assemblies  
+* Biologically Annotated: GO terms, organism information, experimental details  
+* FAIR Compliant: Persistent identifiers, provenance tracking  
+* Multi-Format: PDB and mmCIF representations available
 
-1. Base Metadata Generation  
-   * *Input*: Raw CSV annotations from GitHub repository  
-   * *Output*: Initial JSON-LD with interface identifiers  
-   * *Files*: `base_metadata.json`, initial `interface_*.json`  
-   * *Reproducibility*: Deterministic, offline-capable  
-2. Structural Chain Validation  
-   * *Input*: JSON-LD from Stage 1 \+ PDB/mmCIF files  
-   * *Process*: Validates chain identifiers against structural files  
-   * *Adds*: `LabelChain1`, `LabelChain2`, provenance data  
-3. PDB Metadata Enrichment  
-   * *Input*: Validated JSON-LD from Stage 2  
-   * *Process*: Queries RCSB PDB API  
-   * *Adds*: Experimental details, sequences, citations  
-4. Sequence Cluster Annotation  
-   * *Input*: Enriched JSON-LD from Stage 3 \+ BlastClust output  
-   * *Process*: Maps sequence clusters to interfaces  
-   * *Adds*: `ClusterID` for dataset splitting
+### **📊 Data Stewards & Curators**
 
-### **ML Evaluation (`ppi_ml_croissant.py`)**
-
-* *Input*: Fully enriched JSON-LD metadata  
-* *Purpose*: Validates ML usability via Croissant standard  
-* *Output*: Performance metrics and ML-ready data splits  
-* *Compliance*: MLCommons Croissant 1.0 compatible
-
-## **File Inventory**
-
-| File | Description | Size/Count |
-| :---- | :---- | :---- |
-| `dataset_with_interfaces.json` | Complete dataset metadata | \~100 MB |
-| `interface_protein_pair/*.json` | Individual interface files | 1,677 files |
-| `embedded_markup.html` | Web-optimized JSON-LD embedding | \~100 MB |
-| `fair_metadata_package.json` | FAIR assessment package | \~100 MB |
-| `manifest.json` | File inventory and checksums | \~50 KB |
-| `pdb_metadata_cache.json` | basic info on pdb protein | \~8 MB |
-| Total dataset size | Including structural file references | \~430 MB |
-
-## **User-Specific Features**
-
-### **For Machine Learning Researchers**
-
-* Stratified splits: Cluster-based partitioning for non-redundant training/validation  
-* Feature-rich: 50+ structural and sequence features per interface  
-* ML-ready: Croissant-compatible format for automatic pipeline integration  
-* Reproducible: Versioned features and labels with provenance
-
-### **For Structural Biologists**
-
-* Structurally validated: Chain identifiers verified against biological assemblies  
-* Biologically annotated: GO terms, organism information, experimental details  
-* FAIR compliant: Persistent identifiers, provenance tracking  
-* Multi-format: PDB and mmCIF representations available
-
-### **For Data Stewards & Curators**
-
-* Schema-compliant: Bioschemas and [Schema.org](https://schema.org/) adherence  
-* Provenance-aware: Clear lineage from raw data to enriched metadata  
+* Schema-Compliant: Bioschemas and [Schema.org](https://schema.org/) adherence  
+* Provenance-Aware: Clear lineage from raw data to enriched metadata  
 * Extensible: `additionalProperty` for custom annotations  
-* Web-discoverable: JSON-LD embedded in HTML for search engines
+* Web-Discoverable: JSON-LD embedded in HTML for search engines
 
-### **For Bioinformaticians**
+### **💻 Bioinformaticians**
 
-* API-ready: Structured JSON for programmatic access  
-* Standards-based: EDAM, GO, UniProt cross-references  
-* Pipeline-friendly: Modular, incremental metadata generation  
-* Version-controlled: Git-tracked with clear update history
+* API-Ready: Structured JSON for programmatic access  
+* Standards-Based: EDAM, GO, UniProt cross-references  
+* Pipeline-Friendly: Modular, incremental metadata generation  
+* Version-Controlled: Git-tracked with clear update history
 
 ## **Technical Implementation**
 
 ### **Design Principles**
 
-1. Incremental Enrichment: Each stage adds metadata without overwriting previous data  
-2. Provenance Preservation: All modifications are traceable and timestamped  
+1. Modular Enrichment: Optional steps (PDB metadata, assembly validation, clustering)  
+2. Provenance Preservation: All modifications timestamped and logged  
 3. Schema Safety: Extensions use `additionalProperty` without breaking validation  
 4. FAIR-by-Design: Built with Findable, Accessible, Interoperable, Reusable principles
 
-### **File Naming Convention**
+### **Processing Pipeline**
 
 `text`
 
-`interface_{PDB_ID}_{Chain1}_{Chain2}.json`
+`CSV Data → Parse → ProteinInterface Objects → Optional Enrichment:`  
+  `├── Assembly Chain Validation (--check-pdb-label/--check-cif-label)`  
+  `├── PDB Metadata Fetching (--fetch-pdb-metadata)`  
+  `└── Cluster Assignment (--cluster file)`  
+    `↓`
 
-`Example: interface_1A2B_C_D.json`
+`Generate Metadata → Validate → Output Files`
 
-### **Context Definitions**
+## **FAIR Improvements Roadmap**
 
-All JSON-LD files include standard context definitions:
+Based on the FAIR assessment (71.25/100), here are planned improvements:
 
-`json`
+### **High Priority (Potential \+25 points)**
 
-`"@context": [`  
-  `"https://schema.org/",`  
-  `"https://bioschemas.org/",`  
-  `{"@vocab": "https://bioschemas.org/"}`
+* Add explicit `LICENSE` file with CC-BY-4.0 terms  
+* Create `.github/ISSUE_TEMPLATE/` for structured issue reporting  
+* Add `CITATION.cff` file for proper academic citation
 
-`]`
+### **Medium Priority (Potential \+40 points)**
 
-## **Usage Examples**
+* Add `schema.json` or `data_dictionary.md` describing data structure  
+* Specify access rights in metadata (open/restricted/closed)  
+* Include format information (MIME types, extensions) in metadata
 
-### **Accessing a Specific Interface**
+### **Low Priority (Potential \+15 points)**
 
-`python`
+* Add repository topics on GitHub settings  
+* Create GitHub releases with version tags  
+* Enable and populate documentation wiki
 
-`import json`  
-`import os`
-
-*`# Load individual interface`*  
-`interface_path = os.path.join('interface_protein_pair',`   
-                             `'interface_1A2B_C_D.json')`  
-`with open(interface_path, 'r') as f:`  
-    `interface = json.load(f)`  
-      
-`print(f"Interface ID: {interface['identifier']}")`  
-`print(f"Chains: {interface['additionalProperty'][0]['value']}-"`  
-      `f"{interface['additionalProperty'][1]['value']}")`  
-`print(f"Cluster: {interface['additionalProperty'][2]['value']}")`
-
-*`# Extract features`*  
-`features = json.loads(interface['additionalProperty'][3]['value'])`  
-`print(f"Residue count: {features.get('residue_count', 'N/A')}")`
-
-`print(f"Interface area: {features.get('area', 'N/A')} Å²")`
-
-### **Loading Full Dataset Metadata**
-
-`python`
-
-`import json`
-
-*`# Load complete dataset`*  
-`with open('dataset_with_interfaces.json', 'r') as f:`  
-    `dataset = json.load(f)`  
-      
-`print(f"Dataset: {dataset['name']}")`  
-`print(f"Description: {dataset['description'][:100]}...")`  
-`print(f"Total interfaces: {len(dataset['hasPart'])}")`  
-`print(f"License: {dataset['license']}")`
-
-*`# Access first 5 interfaces`*  
-`for interface_ref in dataset['hasPart'][:5]:`
-
-    `print(f" - {interface_ref}")`
-
-## **Dataset Statistics**
-
-| Metric | Value |
-| :---- | :---- |
-| Total Interfaces | 1,677 |
-| Unique PDB Entries | \~850 |
-| Organisms Covered | 150+ species |
-| Experimental Methods (X-ray) | 85% |
-| Experimental Methods (Cryo-EM) | 10% |
-| Experimental Methods (NMR) | 5% |
-| Resolution Range | 1.0Å – 4.5Å |
-| Sequence Clusters (90% identity) | 300+ |
-| Metadata Properties per Interface | 100+ |
+Target FAIR Score: 100/100 (Currently: 71.25)
 
 ## **License and Attribution**
 
 ### **License**
 
-Creative Commons Attribution 4.0 International (CC-BY-4.0)
-
-[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+Creative Commons Attribution 4.0 International (CC-BY-4.0)  
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 ### **Citation**
 
-`text`
+`bibtex`
 
 `@dataset{elixir_ppi_benchmark_2024,`  
   `title = {ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces},`  
@@ -336,28 +322,45 @@ Creative Commons Attribution 4.0 International (CC-BY-4.0)
   `year = {2024},`  
   `version = {1.0},`  
   `publisher = {ELIXIR},`  
-  `doi = {10.XXXX/YYYY},`  
-  `url = {https://example.org/dataset/ppi-benchmark}`
+  `doi = {10.5281/zenodo.XXXXXXX},`  
+  `url = {https://github.com/biofold/ppi-benchmark-fair}`
 
 `}`
 
-### **Acknowledgments**
+### **Dataset Reference Publication**
 
-* ELIXIR 3D-BioInfo Community for dataset curation  
-* RCSB PDB for providing structural data and API access  
-* Bioschemas community for metadata standards development  
-* All contributors and maintainers of the benchmark
+"Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study"  
+📄 [https://doi.org/10.1002/pmic.202200323](https://doi.org/10.1002/pmic.202200323)
+
+### **Contact**
+
+* ELIXIR 3D-BioInfo Community: [https://elixir-europe.org/platforms/3d-bioinfo](https://elixir-europe.org/platforms/3d-bioinfo)  
+* Repository Issues: [GitHub Issues](https://github.com/biofold/ppi-benchmark-fair/issues)  
+* Dataset Source: [Original Benchmark](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces)
 
 ## **Related Resources**
 
-* ELIXIR 3D-BioInfo: [https://elixir-europe.org/platforms/3d-bioinfo](https://elixir-europe.org/platforms/3d-bioinfo)  
-* Bioschemas Protein Profile: [https://bioschemas.org/profiles/Protein](https://bioschemas.org/profiles/Protein)  
-* MLCommons Croissant: [https://mlcommons.org/croissant/](https://mlcommons.org/croissant/)  
-* RCSB PDB API: [https://data.rcsb.org/index.html](https://data.rcsb.org/index.html)  
-* [Schema.org](https://schema.org/): [https://schema.org/](https://schema.org/)  
-* EDAM Ontology: [http://edamontology.org/](http://edamontology.org/)  
-* Gene Ontology: [http://geneontology.org/](http://geneontology.org/)
+| Resource | Description | Link |
+| :---- | :---- | :---- |
+| ELIXIR 3D-BioInfo | Community platform | [https://elixir-europe.org/platforms/3d-bioinfo](https://elixir-europe.org/platforms/3d-bioinfo) |
+| Source Code | This repository | [https://github.com/biofold/ppi-benchmark-fair](https://github.com/biofold/ppi-benchmark-fair) |
+| Dataset Repository | Original benchmark data | [https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces) |
+| Bioschemas | Life-science metadata standards | [https://bioschemas.org](https://bioschemas.org/) |
+| MLCommons Croissant | ML dataset standard | [https://mlcommons.org/croissant](https://mlcommons.org/croissant) |
+| RCSB PDB API | Protein Data Bank API | [https://data.rcsb.org](https://data.rcsb.org/) |
+
+### **Contributing**
+
+We welcome contributions to improve FAIR compliance\! See our [GitHub Issues](https://github.com/biofold/ppi-benchmark-fair/issues) for current improvement tasks.
+
+### **Support**
+
+For questions or support, please:
+
+1. Check the FAIR Improvements Roadmap section  
+2. Review existing [GitHub Issues](https://github.com/biofold/ppi-benchmark-fair/issues)  
+3. Create a new issue with detailed description
 
 ---
 
-Note: This document describes version 1.0 of the FAIR metadata for the ELIXIR 3D-BioInfo Protein-Protein Interface Benchmark. Last updated: March 2024  
+\*This project is part of the ELIXIR 3D-BioInfo Community's efforts to promote FAIR data practices in structural bioinformatics.\*  
