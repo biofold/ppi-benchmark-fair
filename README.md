@@ -196,7 +196,7 @@ Metadata Generation Pipeline Stages:
 | `fair_metadata_package.json` | FAIR assessment package | \~100 MB |
 | `manifest.json` | File inventory and checksums | \~50 KB |
 | `pdb_metadata_cache.json` | basic info on pdb protein | \~8 MB |
-| Total dataset size | Including structural file references | \~500 MB |
+| Total dataset size | Including structural file references | \~430 MB |
 
 ## **User-Specific Features**
 
