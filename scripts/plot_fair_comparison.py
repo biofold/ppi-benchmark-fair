@@ -2497,6 +2497,512 @@ class FAIRVisualizer:
         if self.df_scores is None:
             return
         
+        # Extract statistics
+        stats = self.report_data.get('statistics', {}) if self.report_data else {}
+        highest_score = stats.get('highest_total', 0)
+        
+        html_content = f'''
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>FAIR Analysis Report</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+                :root {{
+                    --primary-color: #2c3e50;
+                    --secondary-color: #3498db;
+                    --accent-color: #e74c3c;
+                    --light-bg: #f8f9fa;
+                    --success-color: #27ae60;
+                    --warning-color: #f39c12;
+                }}
+                
+                * {{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }}
+                
+                body {{
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: var(--light-bg);
+                }}
+                
+                .container {{
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 0 20px;
+                }}
+                
+                /* Header - Matching fair_dashboard.html */
+                header {{
+                    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+                    color: white;
+                    padding: 60px 0;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 40px;
+                }}
+                
+                header::before {{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+                    background-size: cover;
+                }}
+                
+                .header-content {{
+                    position: relative;
+                    z-index: 1;
+                }}
+                
+                h1 {{
+                    font-size: 2.8rem;
+                    margin-bottom: 15px;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                }}
+                
+                .tagline {{
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    max-width: 800px;
+                    margin: 0 auto 30px;
+                }}
+                
+                .dashboard-link {{
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: rgba(255,255,255,0.15);
+                    color: white;
+                    padding: 12px 25px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    border: 2px solid rgba(255,255,255,0.3);
+                }}
+                
+                .dashboard-link:hover {{
+                    background-color: rgba(255,255,255,0.25);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }}
+                
+                /* Stats Grid - Updated Style */
+                .stats-grid {{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 20px;
+                    margin: 40px 0;
+                }}
+                
+                .stat-card {{
+                    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+                    color: white;
+                    padding: 25px;
+                    border-radius: 12px;
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    transition: transform 0.3s ease;
+                }}
+                
+                .stat-card:hover {{
+                    transform: translateY(-5px);
+                }}
+                
+                .stat-value {{
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }}
+                
+                .stat-label {{
+                    font-size: 1rem;
+                    opacity: 0.9;
+                }}
+                
+                /* Section Cards - Matching fair_dashboard.html */
+                .section {{
+                    background-color: white;
+                    margin: 40px 0;
+                    padding: 30px;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    border-left: 5px solid var(--secondary-color);
+                }}
+                
+                h2, h3 {{
+                    color: var(--primary-color);
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }}
+                
+                h2::before {{
+                    content: "📊";
+                    font-size: 1.5rem;
+                }}
+                
+                /* Table Styling */
+                .repo-list {{
+                    max-height: 400px;
+                    overflow-y: auto;
+                    margin: 20px 0;
+                }}
+                
+                table {{
+                    width: 100%;
+                    border-collapse: collapse;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                }}
+                
+                th, td {{
+                    padding: 15px;
+                    text-align: left;
+                    border-bottom: 1px solid #e0e0e0;
+                }}
+                
+                th {{
+                    background-color: #f8f9fa;
+                    color: var(--primary-color);
+                    font-weight: 600;
+                    position: sticky;
+                    top: 0;
+                }}
+                
+                tr:hover {{
+                    background-color: #f8f9fa;
+                }}
+                
+                /* Priority Styling */
+                .priority-high {{ color: var(--accent-color); font-weight: bold; }}
+                .priority-medium {{ color: var(--warning-color); }}
+                .priority-low {{ color: var(--success-color); }}
+                
+                /* Lists */
+                ul, ol {{
+                    margin: 15px 0;
+                    padding-left: 20px;
+                }}
+                
+                li {{
+                    margin-bottom: 8px;
+                    line-height: 1.6;
+                }}
+                
+                /* Footer - Matching fair_dashboard.html */
+                footer {{
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 50px 0;
+                    text-align: center;
+                    margin-top: 60px;
+                }}
+                
+                .footer-content {{
+                    max-width: 800px;
+                    margin: 0 auto;
+                }}
+                
+                .footer-links {{
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    margin: 30px 0;
+                    flex-wrap: wrap;
+                }}
+                
+                .footer-link {{
+                    color: rgba(255,255,255,0.8);
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }}
+                
+                .footer-link:hover {{
+                    color: white;
+                }}
+                
+                .copyright {{
+                    margin-top: 30px;
+                    color: rgba(255,255,255,0.6);
+                    font-size: 0.9rem;
+                    line-height: 1.6;
+                }}
+                
+                /* Badge */
+                .top-badge {{
+                    display: inline-block;
+                    background: linear-gradient(135deg, var(--success-color), #219653);
+                    color: white;
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                    margin: 15px 0;
+                    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+                }}
+                
+                /* Responsive */
+                @media (max-width: 768px) {{
+                    h1 {{
+                        font-size: 2.2rem;
+                    }}
+                    
+                    .tagline {{
+                        font-size: 1.1rem;
+                    }}
+                    
+                    .stats-grid {{
+                        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                        gap: 15px;
+                    }}
+                    
+                    .stat-value {{
+                        font-size: 2rem;
+                    }}
+                    
+                    table {{
+                        display: block;
+                        overflow-x: auto;
+                    }}
+                }}
+            </style>
+        </head>
+        <body>
+            <!-- Header - Matching fair_dashboard.html -->
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <h1>📊 FAIR Analysis Report</h1>
+                        <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
+                        <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
+                        <a href="fair_dashboard.html" class="dashboard-link">
+                            <i class="fas fa-chart-bar"></i> Open Interactive Dashboard
+                        </a>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="container">
+                <!-- Key Statistics -->
+                <div class="section">
+                    <h2>📈 Key Statistics</h2>
+                    <div class="stats-grid">
+        '''
+        
+        # Add statistics
+        stat_items = [
+            ('Repositories', f"{len(self.df_scores)}"),
+            ('Average Score', f"{stats.get('average_total', 0):.1f}/100"),
+            ('Median Score', f"{stats.get('median_total', 0):.1f}/100"),
+            ('Highest Score', f"{stats.get('highest_total', 0):.1f}/100"),
+            ('Lowest Score', f"{stats.get('lowest_total', 0):.1f}/100"),
+        ]
+        
+        if 'average_metadata_files' in stats:
+            stat_items.append(('Avg Metadata', f"{stats.get('average_metadata_files', 0):.1f}"))
+        
+        for label, value in stat_items:
+            html_content += f'''
+                        <div class="stat-card">
+                            <div class="stat-value">{value}</div>
+                            <div class="stat-label">{label}</div>
+                        </div>
+            '''
+        
+        html_content += f'''
+                    </div>
+                </div>
+                
+                <!-- Top Repositories -->
+                <div class="section">
+                    <h2>🏆 Top Repositories</h2>
+                    <div class="repo-list">
+                        <table>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Repository</th>
+                                <th>Total Score</th>
+                                <th>Findable</th>
+                                <th>Accessible</th>
+                                <th>Interoperable</th>
+                                <th>Reusable</th>
+                            </tr>
+        '''
+        
+        # Add top repositories
+        top_n = min(5, len(self.df_scores))
+        top_repos = self.df_scores.nlargest(top_n, 'total')
+        for idx, (_, row) in enumerate(top_repos.iterrows(), 1):
+            repo_name = row['repository'].split('/')[-1]
+            html_content += f'''
+                            <tr>
+                                <td>{idx}</td>
+                                <td><a href="{row['repository']}" target="_blank" style="color: var(--secondary-color); text-decoration: none;">{repo_name}</a></td>
+                                <td><strong>{row['total']:.1f}</strong></td>
+                                <td>{row['findable']:.1f}</td>
+                                <td>{row['accessible']:.1f}</td>
+                                <td>{row['interoperable']:.1f}</td>
+                                <td>{row['reusable']:.1f}</td>
+                            </tr>
+            '''
+        
+        html_content += '''
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Interactive Dashboard Section -->
+                <div class="section">
+                    <h2><i class="fas fa-chart-bar"></i> Interactive Dashboard</h2>
+                    <p>Explore all visualizations in the interactive dashboard:</p>
+                    <div style="text-align: center; margin: 30px 0;">
+                        <a href="fair_dashboard.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #2980b9); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">
+                            <i class="fas fa-chart-bar"></i> 🚀 Open Interactive Dashboard
+                        </a>
+                    </div>
+                    <p>The dashboard includes 9 detailed visualizations with explanations:</p>
+                    <ol>
+                        <li><strong>FAIR Score Ranking/Gauge</strong> - Overall compliance score</li>
+                        <li><strong>Score Distribution</strong> - Frequency histogram</li>
+                        <li><strong>FAIR Principles Radar Chart</strong> - Multi-dimensional view</li>
+                        <li><strong>Improvement Priority</strong> - Action items by urgency</li>
+                        <li><strong>Metadata Analysis</strong> - Metadata impact on scores</li>
+                        <li><strong>Principles Comparison</strong> - Breakdown by FAIR principle</li>
+                        <li><strong>Performance Breakdown</strong> - Detailed repository comparison</li>
+                        <li><strong>Missing Elements Heatmap</strong> - Improvement opportunities</li>
+                        <li><strong>Correlation Matrix</strong> - Relationships between metrics</li>
+                    </ol>
+                </div>
+        '''
+        
+        # Add improvement summary if available
+        if self.df_improvements is not None and not self.df_improvements.empty:
+            html_content += f'''
+                <div class="section">
+                    <h2><i class="fas fa-tools"></i> Improvement Summary</h2>
+                    <p>Total improvements identified: {len(self.df_improvements)}</p>
+                    <div class="repo-list">
+                        <table>
+                            <tr>
+                                <th>Priority</th>
+                                <th>Count</th>
+                                <th>Potential Points</th>
+                            </tr>
+            '''
+            
+            for priority in ['High', 'Medium', 'Low']:
+                priority_df = self.df_improvements[self.df_improvements['priority'] == priority]
+                count = len(priority_df)
+                points = priority_df['potential_points'].sum()
+                
+                priority_class = f'priority-{priority.lower()}'
+                
+                html_content += f'''
+                            <tr>
+                                <td class="{priority_class}">{priority}</td>
+                                <td>{count}</td>
+                                <td>{points}</td>
+                            </tr>
+                '''
+            
+            html_content += '''
+                        </table>
+                    </div>
+                </div>
+            '''
+        
+        # Add recommendations
+        html_content += '''
+                <div class="section">
+                    <h2><i class="fas fa-lightbulb"></i> Recommendations</h2>
+                    <h3>Immediate Actions (High Priority):</h3>
+                    <ul>
+                        <li>Add missing README files with clear documentation</li>
+                        <li>Include proper LICENSE files with open-source licenses</li>
+                        <li>Add structured metadata files (JSON/YAML) following standards</li>
+                        <li>Include DOI or persistent identifiers for datasets</li>
+                    </ul>
+                    
+                    <h3>Medium-term Improvements:</h3>
+                    <ul>
+                        <li>Use standard metadata schemas (Schema.org, DataCite, Bioschemas)</li>
+                        <li>Add usage examples and tutorials</li>
+                        <li>Include contact information in metadata</li>
+                        <li>Add data schemas and documentation</li>
+                    </ul>
+                    
+                    <h3>Best Practices:</h3>
+                    <ul>
+                        <li>Store metadata in dedicated directories (e.g., bioschema/, metadata/)</li>
+                        <li>Use controlled vocabularies and ontologies</li>
+                        <li>Include provenance information (creation date, version)</li>
+                        <li>Add citation files (CITATION.cff) for proper attribution</li>
+                    </ul>
+                </div>
+            </main>
+            
+            <!-- Footer - Matching fair_dashboard.html -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <h3>FAIR Analysis Report</h3>
+                        <p>Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
+                        
+                        <div class="footer-links">
+                            <a href="fair_dashboard.html" class="footer-link">
+                                <i class="fas fa-chart-bar"></i> Dashboard
+                            </a>
+                            <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Repository
+                            </a>
+                            <a href="https://www.go-fair.org/fair-principles/" class="footer-link" target="_blank">
+                                <i class="fas fa-book"></i> FAIR Principles
+                            </a>
+                        </div>
+                        
+                        <div class="copyright">
+                            <p>FAIR Analysis Report • Generated on: ''' + f"{self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}" + '''</p>
+                            <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                            <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        </html>
+        '''
+        
+        # Write HTML file
+        with open(f"{self.output_dir}/index.html", 'w') as f:
+            f.write(html_content)
+        
+        print(f"✓ HTML report saved to {self.output_dir}/index.html")
+
+
+
+    def create_combined_reporti2(self):
+        """Create a combined HTML report with all visualizations"""
+        if self.df_scores is None:
+            return
+        
         html_content = f"""
         <!DOCTYPE html>
         <html>
