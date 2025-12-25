@@ -267,6 +267,8 @@
             overflow-x: auto;
             margin: 15px 0;
             border-left: 4px solid var(--secondary-color);
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         
         /* Footer */
@@ -422,6 +424,79 @@
                 </table>
             </section>
 
+            <!-- Quick Start -->
+            <section class="section">
+                <h2>Quick Start</h2>
+                <pre><code># Clone repository
+git clone https://github.com/biofold/ppi-benchmark-fair.git
+cd ppi-benchmark-fair
+
+# Install requirements
+pip install -r requirements.txt
+
+# Generate basic metadata
+python ppi_benchmark_fair.py --output bioschemas_output
+
+# Generate enriched metadata (recommended)
+python ppi_benchmark_fair.py \
+  --fetch-pdb-metadata \
+  --check-pdb-label \
+  --cluster data/blastclust_output.txt \
+  --output enriched_metadata \
+  --verbose</code></pre>
+            </section>
+
+            <!-- Dataset Statistics -->
+            <section class="section">
+                <h2>Dataset Statistics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Interfaces</td>
+                            <td>1,677</td>
+                            <td>Balanced binary classification</td>
+                        </tr>
+                        <tr>
+                            <td>Physiological (TRUE)</td>
+                            <td>844</td>
+                            <td>50.3% of dataset</td>
+                        </tr>
+                        <tr>
+                            <td>Non-physiological (FALSE)</td>
+                            <td>833</td>
+                            <td>49.7% of dataset</td>
+                        </tr>
+                        <tr>
+                            <td>Unique PDB Structures</td>
+                            <td>~850</td>
+                            <td>Proteins with multiple interfaces</td>
+                        </tr>
+                        <tr>
+                            <td>Sequence Clusters</td>
+                            <td>300+</td>
+                            <td>BLASTClust with 90% identity</td>
+                        </tr>
+                        <tr>
+                            <td>Resolution Range</td>
+                            <td>1.0–4.5Å</td>
+                            <td>X-ray crystallography</td>
+                        </tr>
+                        <tr>
+                            <td>Experimental Methods</td>
+                            <td>85% X-ray, 10% Cryo-EM, 5% NMR</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
             <!-- FAIR Compliance Section -->
             <section class="section">
                 <h2>FAIR Compliance Evaluation</h2>
@@ -474,48 +549,303 @@
                 </div>
             </section>
 
-            <!-- Rest of your content continues here... -->
-            <!-- [All your existing sections - Quick Start, Dataset Statistics, Metadata Architecture, etc.] -->
-            <!-- I've shown the main structure - you would continue with your existing content -->
-            
-            <!-- Just showing one more section as example -->
+            <!-- Metadata Architecture -->
             <section class="section">
-                <h2>Dataset Statistics</h2>
+                <h2>Metadata Architecture</h2>
+                <h3>Generated File Structure</h3>
+                <pre><code>bioschemas_output/
+├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)
+├── interface_protein_pairs/              # Individual interface files
+│   ├── interface_1ABC_1.json            # ProtCID format
+│   ├── interface_1DEF_assembly1.json    # QSalign format
+│   └── ... (1,677 files total)
+├── fair_metadata_package.json            # FAIR assessment package
+├── embedded_markup.html                  # HTML with JSON-LD for web discovery
+├── manifest.json                         # File inventory and checksums
+└── pdb_metadata_cache.json              # Optional: Cached PDB metadata</code></pre>
+
+                <h3>Data Schema</h3>
+                <pre><code>{
+  "@context": ["https://schema.org/", {"cr": "https://mlcommons.org/croissant/1.0"}],
+  "@type": ["Dataset", "cr:Dataset"],
+  "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
+  "hasPart": [ /* 1,677 interface items */ ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://.../benchmark_annotated_updated_30042023.csv"
+    }
+  ]
+}</code></pre>
+
+                <h3>Interface ID Formats</h3>
+                <ul>
+                    <li>ProtCID: <code>{PDB_ID}_{integer}</code> (e.g., <code>1ABC_1</code>)</li>
+                    <li>QSalign: <code>{PDB_ID}_{integer}</code> (e.g., <code>1DEF_assembly1</code>)</li>
+                    <li>Cleaned: Original InterfaceID with standardized formatting</li>
+                </ul>
+            </section>
+
+            <!-- Usage Examples -->
+            <section class="section">
+                <h2>Usage Examples</h2>
+                
+                <h3>Basic Python Usage</h3>
+                <pre><code>import json
+import pandas as pd
+from pathlib import Path
+
+# Load dataset metadata
+with open('bioschemas_output/dataset_with_interfaces.json', 'r') as f:
+    dataset = json.load(f)
+
+print(f"Dataset: {dataset['name']}")
+print(f"Total interfaces: {dataset['numberOfItems']}")  # 1677
+print(f"License: {dataset['license']}")
+
+# Load specific interface
+interface_file = 'bioschemas_output/interface_protein_pairs/interface_1ABC_1.json'
+with open(interface_file, 'r') as f:
+    interface = json.load(f)
+
+# Extract features for ML
+features = {}
+for prop in interface['additionalProperty']:
+    if prop['name'] == 'physio':
+        features['label'] = 1 if prop['value'] else 0
+    elif prop['name'] == 'Buried Surface Area (BSA)':
+        features['bsa'] = prop['value']
+    elif prop['name'] == 'ClusterID':
+        features['cluster'] = prop['value']  # For stratified splits
+
+print(f"Features: {features}")</code></pre>
+
+                <h3>Command Line Options</h3>
+                <pre><code># Full metadata generation with all enrichments
+python ppi_benchmark_fair.py \
+  --csv-url "https://raw.githubusercontent.com/.../benchmark.csv" \
+  --mmcif-url "https://raw.githubusercontent.com/.../mmcif/" \
+  --pdb-url "https://raw.githubusercontent.com/.../pdb/" \
+  --fetch-pdb-metadata \           # Fetch PDB metadata from RCSB API
+  --check-pdb-label \              # Validate chains in PDB files
+  --check-cif-label \              # Validate chains in mmCIF files
+  --cluster "data/clusters.txt" \  # Add sequence cluster information
+  --output "metadata_output" \     # Custom output directory
+  --verbose \                      # Detailed logging
+  --separator ","                  # CSV separator (auto-detects if fails)</code></pre>
+            </section>
+
+            <!-- Sequence Clustering Information -->
+            <section class="section">
+                <h2>Sequence Clustering Information</h2>
+                <p>Interfaces are clustered using BLASTClust with 90% sequence identity threshold:</p>
+                <pre><code># Command used for clustering
+blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
+
+# Interpretation:
+# -S 25: Score threshold 25 bits
+# -L 0.5: Length coverage threshold 50%
+# -b F: No score composition adjustment
+
+# Result: ~300 clusters across 1,677 interfaces</code></pre>
+                
+                <p>Cluster Properties in Metadata:</p>
+                <ul>
+                    <li><code>ClusterID</code>: First InterfaceID in each BLASTClust line</li>
+                    <li><code>ClusterSize</code>: Number of interfaces in the cluster</li>
+                    <li><code>ClusterMembers</code>: List of other interfaces in same cluster</li>
+                    <li><code>ClusterMethod</code>: "BLASTClust sequence clustering"</li>
+                    <li><code>ClusterMethodOptions</code>: "-S 25 -L 0.5 -b F"</li>
+                </ul>
+            </section>
+
+            <!-- For Different User Groups -->
+            <section class="section">
+                <h2>For Different User Groups</h2>
+                
+                <h3>🤖 Machine Learning Researchers</h3>
+                <ul>
+                    <li>Stratified Splits: Cluster-based partitioning for non-redundant training/validation</li>
+                    <li>Feature-Rich: 50+ structural and sequence features per interface</li>
+                    <li>ML-Ready: Croissant 1.0 compatible for automatic pipeline integration</li>
+                    <li>Reproducible: Versioned features with full provenance</li>
+                </ul>
+                
+                <h3>🔬 Structural Biologists</h3>
+                <ul>
+                    <li>Structurally Validated: Chain IDs verified against biological assemblies</li>
+                    <li>Biologically Annotated: GO terms, organism information, experimental details</li>
+                    <li>FAIR Compliant: Persistent identifiers, provenance tracking</li>
+                    <li>Multi-Format: PDB and mmCIF representations available</li>
+                </ul>
+                
+                <h3>📊 Data Stewards & Curators</h3>
+                <ul>
+                    <li>Schema-Compliant: Bioschemas and Schema.org adherence</li>
+                    <li>Provenance-Aware: Clear lineage from raw data to enriched metadata</li>
+                    <li>Extensible: <code>additionalProperty</code> for custom annotations</li>
+                    <li>Web-Discoverable: JSON-LD embedded in HTML for search engines</li>
+                </ul>
+                
+                <h3>💻 Bioinformaticians</h3>
+                <ul>
+                    <li>API-Ready: Structured JSON for programmatic access</li>
+                    <li>Standards-Based: EDAM, GO, UniProt cross-references</li>
+                    <li>Pipeline-Friendly: Modular, incremental metadata generation</li>
+                    <li>Version-Controlled: Git-tracked with clear update history</li>
+                </ul>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="section">
+                <h2>Technical Implementation</h2>
+                
+                <h3>Design Principles</h3>
+                <ol>
+                    <li>Modular Enrichment: Optional steps (PDB metadata, assembly validation, clustering)</li>
+                    <li>Provenance Preservation: All modifications timestamped and logged</li>
+                    <li>Schema Safety: Extensions use <code>additionalProperty</code> without breaking validation</li>
+                    <li>FAIR-by-Design: Built with Findable, Accessible, Interoperable, Reusable principles</li>
+                </ol>
+                
+                <h3>Processing Pipeline</h3>
+                <pre><code>CSV Data → Parse → ProteinInterface Objects → Optional Enrichment:
+  ├── Assembly Chain Validation (--check-pdb-label/--check-cif-label)
+  ├── PDB Metadata Fetching (--fetch-pdb-metadata)
+  └── Cluster Assignment (--cluster file)
+    ↓
+Generate Metadata → Validate → Output Files</code></pre>
+            </section>
+
+            <!-- FAIR Improvements Roadmap -->
+            <section class="section">
+                <h2>FAIR Improvements Roadmap</h2>
+                <p>Based on the FAIR assessment (82.5/100), here are planned improvements:</p>
+                
+                <h3>Low Priority (Potential +5 points)</h3>
+                <ul>
+                    <li>Create <code>.github/ISSUE_TEMPLATE/</code> for structured issue reporting</li>
+                </ul>
+                
+                <h3>Medium Priority (Potential +40 points)</h3>
+                <ul>
+                    <li>Add <code>schema.json</code> or <code>data_dictionary.md</code> describing data structure</li>
+                    <li>Specify access rights in metadata (open/restricted/closed)</li>
+                    <li>Include format information (MIME types, extensions) in metadata</li>
+                </ul>
+                
+                <h3>Low Priority (Potential +15 points)</h3>
+                <ul>
+                    <li>Add repository topics on GitHub settings</li>
+                    <li>Create GitHub releases with version tags</li>
+                    <li>Enable and populate documentation wiki</li>
+                </ul>
+                
+                <p><strong>Target FAIR Score: 100/100 (Currently: 82.5)</strong></p>
+            </section>
+
+            <!-- License and Attribution -->
+            <section class="section">
+                <h2>License and Attribution</h2>
+                
+                <h3>License</h3>
+                <p>Creative Commons Attribution 4.0 International (CC-BY-4.0)<br>
+                This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+                
+                <h3>Citation</h3>
+                <pre><code>@article{schweke2023discriminating,
+   title={Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study},
+   author={Schweke, H. and Xu, Q. and Cazals, F. and Teyra, J. and Zimmermann, O. and Brenke, R. and Mihalek, I. and Res, I. and Ferré, A. and Lafita, A. and Guzzo, C. R. and Bordogna, A. and Bonvin, A. M. J. J. and Dey, S. and Gao, M. and Vangone, A. and Oliva, R. and Guarnera, E. and Roche, D. B. and Bhattacharya, S. and Brylinski, M. and Dijkstra, M. and Esquivel-Rodríguez, J. and Kihara, D. and Lensink, M. F. and Murakami, Y. and Nadzirin, N. and Nagarajan, R. and Oliveira, S. H. P. and Pires, D. E. V. and Roy, R. S. and Sanchez-Garcia, R. and Schueler-Furman, O. and Trellet, M. and Wodak, S. J.},
+   journal={Proteomics},
+   volume={23},
+   number={17},
+   pages={e2200323},
+   year={2023},
+   publisher={Wiley},
+   doi={10.1002/pmic.202200323}
+}
+
+@dataset{elixir2024fairmetadata,
+   title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces FAIR Metadata},
+   author={{ELIXIR 3D-BioInfo Community}},
+   year={2024},
+   version={1.0},
+   publisher={ELIXIR},
+   doi={10.5281/zenodo.XXXXXXX}
+}</code></pre>
+                
+                <h3>Dataset Reference Publication</h3>
+                <p>"Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study"<br>
+                📄 <a href="https://doi.org/10.1002/pmic.202200323" target="_blank">https://doi.org/10.1002/pmic.202200323</a></p>
+                
+                <h3>Contact</h3>
+                <ul>
+                    <li>ELIXIR 3D-BioInfo Community: <a href="https://elixir-europe.org/platforms/3d-bioinfo" target="_blank">https://elixir-europe.org/platforms/3d-bioinfo</a></li>
+                    <li>Repository Issues: <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a></li>
+                    <li>Dataset Source: <a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" target="_blank">Original Benchmark</a></li>
+                </ul>
+            </section>
+
+            <!-- Related Resources -->
+            <section class="section">
+                <h2>Related Resources</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Metric</th>
-                            <th>Value</th>
-                            <th>Details</th>
+                            <th>Resource</th>
+                            <th>Description</th>
+                            <th>Link</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Total Interfaces</td>
-                            <td>1,677</td>
-                            <td>Balanced binary classification</td>
+                            <td>ELIXIR 3D-BioInfo</td>
+                            <td>Community platform</td>
+                            <td><a href="https://elixir-europe.org/platforms/3d-bioinfo" target="_blank">https://elixir-europe.org/platforms/3d-bioinfo</a></td>
                         </tr>
                         <tr>
-                            <td>Physiological (TRUE)</td>
-                            <td>844</td>
-                            <td>50.3% of dataset</td>
+                            <td>Source Code</td>
+                            <td>This repository</td>
+                            <td><a href="https://github.com/biofold/ppi-benchmark-fair" target="_blank">https://github.com/biofold/ppi-benchmark-fair</a></td>
                         </tr>
                         <tr>
-                            <td>Non-physiological (FALSE)</td>
-                            <td>833</td>
-                            <td>49.7% of dataset</td>
+                            <td>Dataset Repository</td>
+                            <td>Original benchmark data</td>
+                            <td><a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" target="_blank">https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces</a></td>
                         </tr>
                         <tr>
-                            <td>Unique PDB Structures</td>
-                            <td>~850</td>
-                            <td>Proteins with multiple interfaces</td>
+                            <td>Bioschemas</td>
+                            <td>Life-science metadata standards</td>
+                            <td><a href="https://bioschemas.org/" target="_blank">https://bioschemas.org</a></td>
+                        </tr>
+                        <tr>
+                            <td>MLCommons Croissant</td>
+                            <td>ML dataset standard</td>
+                            <td><a href="https://mlcommons.org/croissant" target="_blank">https://mlcommons.org/croissant</a></td>
+                        </tr>
+                        <tr>
+                            <td>RCSB PDB API</td>
+                            <td>Protein Data Bank API</td>
+                            <td><a href="https://data.rcsb.org/" target="_blank">https://data.rcsb.org</a></td>
                         </tr>
                     </tbody>
                 </table>
+                
+                <h3>Contributing</h3>
+                <p>We welcome contributions to improve FAIR compliance! See our <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a> for current improvement tasks.</p>
+                
+                <h3>Support</h3>
+                <p>For questions or support, please:</p>
+                <ol>
+                    <li>Check the FAIR Improvements Roadmap section</li>
+                    <li>Review existing <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a></li>
+                    <li>Create a new issue with detailed description</li>
+                </ol>
+                
+                <hr>
+                <p><em>This project is part of the ELIXIR 3D-BioInfo Community's efforts to promote FAIR data practices in structural bioinformatics.</em></p>
             </section>
-
-            <!-- Continue with all your other sections... -->
-
         </main>
 
         <!-- Footer -->
