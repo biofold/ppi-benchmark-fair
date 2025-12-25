@@ -1212,12 +1212,12 @@ class FAIRVisualizer:
                 .nav-bar a {
                     text-decoration: none;
                     color: var(--secondary-color);
-                    padding: 10px 20px;
+                    padding: 8px 16px;
                     border-radius: 50px;
                     border: 2px solid var(--secondary-color);
                     transition: all 0.3s ease;
                     font-weight: 600;
-                    font-size: 0.95rem;
+                    font-size: 0.90rem;
                 }
                 
                 .nav-bar a:hover {
