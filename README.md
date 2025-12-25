@@ -33,15 +33,14 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 `pip install -r requirements.txt`
 
 *`# Generate basic metadata`*  
-`python ppi_benchmark_fair.py --output bioschemas_output`
+`python ppi_benchmark_fair.py --output bioschema
 
 *`# Generate enriched metadata (recommended)`*  
 `python ppi_benchmark_fair.py \`  
   `--fetch-pdb-metadata \`  
   `--check-pdb-label \`  
-  `--cluster data/blastclust_output.txt \`  
-  `--output enriched_metadata \`
-
+  `--cluster ppi_benchmark_seqs.clust_25_05 \`  
+  `--output bioschema \`
   `--verbose`
 
 ## **Dataset Statistics**
