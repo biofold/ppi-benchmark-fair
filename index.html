@@ -429,14 +429,14 @@ cd ppi-benchmark-fair
 pip install -r requirements.txt
 
 # Generate basic metadata
-python ppi_benchmark_fair.py --output bioschemas_output
+python ppi_benchmark_fair.py --output bioschema
 
 # Generate enriched metadata (recommended)
 python ppi_benchmark_fair.py \
   --fetch-pdb-metadata \
   --check-pdb-label \
   --cluster data/blastclust_output.txt \
-  --output enriched_metadata \
+  --output bioschema \
   --verbose</code></pre>
             </section>
 
@@ -469,12 +469,12 @@ python ppi_benchmark_fair.py \
                         </tr>
                         <tr>
                             <td>Unique PDB Structures</td>
-                            <td>~850</td>
+                            <td>1673</td>
                             <td>Proteins with multiple interfaces</td>
                         </tr>
                         <tr>
                             <td>Sequence Clusters</td>
-                            <td>300+</td>
+                            <td>1050</td>
                             <td>BLASTClust with 90% identity</td>
                         </tr>
                         <tr>
@@ -642,7 +642,7 @@ blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
 # -L 0.5: Length coverage threshold 50%
 # -b F: No score composition adjustment
 
-# Result: ~300 clusters across 1,677 interfaces</code></pre>
+# Result: ~1050 clusters across 1,677 interfaces</code></pre>
                 
                 <p>Cluster Properties in Metadata:</p>
                 <ul>

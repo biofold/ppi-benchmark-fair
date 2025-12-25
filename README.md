@@ -51,8 +51,8 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 | Total Interfaces | 1,677 | Balanced binary classification |
 | Physiological (TRUE) | 844 | 50.3% of dataset |
 | Non-physiological (FALSE) | 833 | 49.7% of dataset |
-| Unique PDB Structures | \~850 | Proteins with multiple interfaces |
-| Sequence Clusters | 300+ | BLASTClust with 90% identity |
+| Unique PDB Structures | 1673 | Proteins with multiple interfaces |
+| Sequence Clusters | 1050 | BLASTClust with 90% identity |
 | Resolution Range | 1.0–4.5Å | X-ray crystallography |
 | Experimental Methods | 85% X-ray, 10% Cryo-EM, 5% NMR |  |
 
@@ -92,11 +92,11 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 
 `text`
 
-`bioschemas_output/`  
+`bioschema/`  
 `├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)`  
 `├── interface_protein_pairs/              # Individual interface files`  
-`│   ├── interface_1ABC_1.json            # ProtCID format`  
-`│   ├── interface_1DEF_assembly1.json    # QSalign format`  
+`│   ├── interface_1A17_6.json             # ProtCID format`  
+`│   ├── interface_1A3A_1.json             # QSalign format`  
 `│   └── ... (1,677 files total)`  
 `├── fair_metadata_package.json            # FAIR assessment package`  
 `├── embedded_markup.html                  # HTML with JSON-LD for web discovery`  

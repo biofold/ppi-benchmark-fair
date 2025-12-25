@@ -2478,7 +2478,7 @@ class PPIBenchmarkProcessor:
 
         return fair_package
 
-    def save_bioschemas_markup(self, output_dir: str = "bioschemas_output") -> Dict[str, Any]:
+    def save_bioschemas_markup(self, output_dir: str = "bioschema") -> Dict[str, Any]:
         """
         Save all generated Bioschemas markup to files.
 
@@ -2945,8 +2945,8 @@ Examples:
 
     parser.add_argument(
         "--output", "-o",
-        default="bioschemas_output",
-        help="Output directory for generated files (default: 'bioschemas_output')"
+        default="bioschema",
+        help="Output directory for generated files (default: 'bioschema')"
     )
 
     parser.add_argument(
