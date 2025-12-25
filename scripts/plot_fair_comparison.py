@@ -2607,10 +2607,15 @@ class FAIRVisualizer:
                 }}
 
                 .stat-card {{
+                    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+                    color: white;
                     padding: 15px;
                     border-radius: 8px;
-                }}
-                
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    transition: transform 0.3s ease;
+                }}               
+ 
                 .stat-card:hover {{
                     transform: translateY(-5px);
                 }}
