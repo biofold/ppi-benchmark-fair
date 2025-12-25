@@ -182,12 +182,10 @@ class FAIRVisualizer:
                 title={
                     'text': "Figure 1: Repository FAIR Score Gauge<br><sup>Shows overall FAIR compliance with color-coded ranges</sup>",
                     'y': 0.9,
-                     'yanchor': 'top',
-                     'pad': dict(t=30, b=20)  # Add vertical padding around title
                 },
                 height=400,
                 width=600,
-                margin=dict(t=120, b=50, l=50, r=50)
+                margin=dict(t=100, b=50, l=50, r=50)
             )
         else:
             # Multiple repositories - Ranking bar chart
@@ -218,7 +216,7 @@ class FAIRVisualizer:
             
             fig1.update_layout(
                 title={
-                    'text': "Figure 1: Repository FAIR Score Ranking<br><sup>Repositories sorted by total FAIR score</sup>",
+                    'text': "Figure 1: Repository FAIR Score Ranking<br>", #"<sup>Repositories sorted by total FAIR score</sup>",
                     'y': 0.9
                 },
                 xaxis_title="FAIR Score (0-100)",
@@ -264,7 +262,7 @@ class FAIRVisualizer:
         
         fig2.update_layout(
             title={
-                'text': "Figure 2: FAIR Score Distribution<br><sup>Histogram showing frequency of scores across repositories</sup>",
+                'text': "Figure 2: FAIR Score Distribution<br>", #"<sup>Histogram showing frequency of scores across repositories</sup>",
                 'y': 0.9
             },
             xaxis_title="FAIR Score",
@@ -379,7 +377,7 @@ class FAIRVisualizer:
                 bgcolor='white'
             ),
             title={
-                'text': f"Figure 3: FAIR Principles Radar Chart<br><sup>Performance across all FAIR principles for all {len(self.df_scores)} repositories</sup>",
+                'text': f"Figure 3: FAIR Principles Radar Chart<br>", #"<sup>Performance across all FAIR principles for all {len(self.df_scores)} repositories</sup>",
                 'y': 0.95
             },
             showlegend=True,
@@ -427,7 +425,7 @@ class FAIRVisualizer:
             
             fig4.update_layout(
                 title={
-                    'text': "Figure 4: Improvement Priority Distribution<br><sup>Number of improvements needed by priority level</sup>",
+                    'text': "Figure 4: Improvement Priority Distribution<br>",  #"<sup>Number of improvements needed by priority level</sup>",
                     'y': 0.9
                 },
                 xaxis_title="Priority Level",
@@ -450,7 +448,7 @@ class FAIRVisualizer:
             
             fig4.update_layout(
                 title={
-                    'text': "Figure 4: Improvement Priority Distribution<br><sup>No improvement data available</sup>",
+                    'text': "Figure 4: Improvement Priority Distribution<br>",  #"<sup>No improvement data available</sup>",
                     'y': 0.9
                 },
                 height=300,
@@ -540,7 +538,7 @@ class FAIRVisualizer:
             
             fig5.update_layout(
                 title={
-                    'text': "Figure 5: Metadata Files vs FAIR Score<br><sup>Relationship between metadata quantity and overall FAIR compliance</sup>",
+                    'text': "Figure 5: Metadata Files vs FAIR Score<br>",  #"<sup>Relationship between metadata quantity and overall FAIR compliance</sup>",
                     'y': 0.9
                 },
                 xaxis_title="Number of Metadata Files",
@@ -569,7 +567,7 @@ class FAIRVisualizer:
             
             fig5.update_layout(
                 title={
-                    'text': "Figure 5: Metadata Analysis<br><sup>Metadata data not available</sup>",
+                    'text': "Figure 5: Metadata Analysis<br>",  #"<sup>Metadata data not available</sup>",
                     'y': 0.9
                 },
                 height=300,
@@ -651,7 +649,7 @@ class FAIRVisualizer:
         
         fig6.update_layout(
             title={
-                'text': f"Figure 6: FAIR Principles Comparison<br><sup>Performance breakdown by FAIR principle {title_suffix}</sup>",
+                'text': f"Figure 6: FAIR Principles Comparison<br>",  #"<sup>Performance breakdown by FAIR principle {title_suffix}</sup>",
                 'y': 0.9
             },
             xaxis_title="FAIR Principle",
@@ -700,7 +698,7 @@ class FAIRVisualizer:
             
             fig7.update_layout(
                 title={
-                    'text': "Figure 7: FAIR Principles Detailed Breakdown<br><sup>Individual scores for each FAIR principle</sup>",
+                    'text': "Figure 7: FAIR Principles Detailed Breakdown<br>",  #"<sup>Individual scores for each FAIR principle</sup>",
                     'y': 0.9
                 },
                 xaxis_title="Principle",
@@ -737,7 +735,7 @@ class FAIRVisualizer:
             
             fig7.update_layout(
                 title={
-                    'text': f"Figure 7: Repository Performance Breakdown<br><sup>Comparison of FAIR principles across repositories</sup>",
+                    'text': f"Figure 7: Repository Performance Breakdown<br>",  #"<sup>Comparison of FAIR principles across repositories</sup>",
                     'y': 0.9
                 },
                 xaxis_title="Repository",
@@ -814,7 +812,7 @@ class FAIRVisualizer:
                 
                 fig8.update_layout(
                     title={
-                        'text': "Figure 8: Missing Elements Heatmap<br><sup>Potential points gain by addressing missing FAIR elements</sup>",
+                        'text': "Figure 8: Missing Elements Heatmap<br>",  #"<sup>Potential points gain by addressing missing FAIR elements</sup>",
                         'y': 0.9
                     },
                     xaxis_title="Missing FAIR Element",
@@ -1036,7 +1034,7 @@ class FAIRVisualizer:
         
         fig9.update_layout(
             title={
-                'text': "Figure 9: FAIR Score Correlation Matrix<br><sup>Relationships between different FAIR metrics</sup>",
+                'text': "Figure 9: FAIR Score Correlation Matrix<br>",  #"<sup>Relationships between different FAIR metrics</sup>",
                 'y': 0.9
             },
             xaxis_title="Metric",
