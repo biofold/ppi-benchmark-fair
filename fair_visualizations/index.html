@@ -1,0 +1,204 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>FAIR Analysis Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+                .header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 10px; }
+                .section { background-color: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+                h1, h2, h3 { color: #2c3e50; }
+                .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+                .stat-card { background-color: #ecf0f1; padding: 15px; border-radius: 5px; text-align: center; }
+                .stat-value { font-size: 24px; font-weight: bold; color: #3498db; }
+                .stat-label { font-size: 14px; color: #7f8c8d; }
+                .visualization { margin: 20px 0; }
+                .repo-list { max-height: 300px; overflow-y: auto; }
+                table { width: 100%; border-collapse: collapse; }
+                th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+                .priority-high { color: red; font-weight: bold; }
+                .priority-medium { color: orange; }
+                .priority-low { color: green; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>📊 FAIR Analysis Report</h1>
+                <p>Generated on: 2025-12-24T19:53:24.841618</p>
+                <p>Repositories analyzed: 3</p>
+            </div>
+            
+            <div class="section">
+                <h2>📈 Key Statistics</h2>
+                <div class="stats-grid">
+        
+                    <div class="stat-card">
+                        <div class="stat-label">Average Score</div>
+                        <div class="stat-value">55.8/100</div>
+                    </div>
+            
+                    <div class="stat-card">
+                        <div class="stat-label">Median Score</div>
+                        <div class="stat-value">50.0/100</div>
+                    </div>
+            
+                    <div class="stat-card">
+                        <div class="stat-label">Highest Score</div>
+                        <div class="stat-value">82.5/100</div>
+                    </div>
+            
+                    <div class="stat-card">
+                        <div class="stat-label">Lowest Score</div>
+                        <div class="stat-value">35.0/100</div>
+                    </div>
+            
+                    <div class="stat-card">
+                        <div class="stat-label">Score Range</div>
+                        <div class="stat-value">35.0-82.5</div>
+                    </div>
+            
+                    <div class="stat-card">
+                        <div class="stat-label">Avg Metadata Files</div>
+                        <div class="stat-value">560.3</div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🏆 Top Repositories</h2>
+                <div class="repo-list">
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Repository</th>
+                            <th>Total Score</th>
+                            <th>Findable</th>
+                            <th>Accessible</th>
+                            <th>Interoperable</th>
+                            <th>Reusable</th>
+                        </tr>
+        
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://github.com/biofold/ppi-benchmark-fair" target="_blank">ppi-benchmark-fair</a></td>
+                            <td><strong>82.5</strong></td>
+                            <td>85.0</td>
+                            <td>80.0</td>
+                            <td>70.0</td>
+                            <td>95.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://github.com/google-deepmind/alphafold" target="_blank">alphafold</a></td>
+                            <td><strong>50.0</strong></td>
+                            <td>35.0</td>
+                            <td>80.0</td>
+                            <td>35.0</td>
+                            <td>50.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" target="_blank">Elixir-3DBioInfo-Benchmark-Protein-Interfaces</a></td>
+                            <td><strong>35.0</strong></td>
+                            <td>35.0</td>
+                            <td>80.0</td>
+                            <td>25.0</td>
+                            <td>0.0</td>
+                        </tr>
+            
+                    </table>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📊 Interactive Dashboard</h2>
+                <p>Explore all visualizations in the interactive dashboard:</p>
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="fair_dashboard.html" style="background-color: #3498db; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; display: inline-block;">
+                        🚀 Open Interactive Dashboard
+                    </a>
+                </div>
+                <p>The dashboard includes 9 detailed visualizations with explanations:</p>
+                <ol>
+                    <li><strong>FAIR Score Ranking/Gauge</strong> - Overall compliance score</li>
+                    <li><strong>Score Distribution</strong> - Frequency histogram</li>
+                    <li><strong>FAIR Principles Radar Chart</strong> - Multi-dimensional view</li>
+                    <li><strong>Improvement Priority</strong> - Action items by urgency</li>
+                    <li><strong>Metadata Analysis</strong> - Metadata impact on scores</li>
+                    <li><strong>Principles Comparison</strong> - Breakdown by FAIR principle</li>
+                    <li><strong>Performance Breakdown</strong> - Detailed repository comparison</li>
+                    <li><strong>Missing Elements Heatmap</strong> - Improvement opportunities</li>
+                    <li><strong>Correlation Matrix</strong> - Relationships between metrics</li>
+                </ol>
+            </div>
+        
+            <div class="section">
+                <h2>🔧 Improvement Summary</h2>
+                <p>Total improvements identified: 41</p>
+                <table>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Count</th>
+                        <th>Potential Points</th>
+                    </tr>
+            
+                    <tr>
+                        <td class="priority-high">High</td>
+                        <td>3</td>
+                        <td>65</td>
+                    </tr>
+                
+                    <tr>
+                        <td class="priority-medium">Medium</td>
+                        <td>9</td>
+                        <td>170</td>
+                    </tr>
+                
+                    <tr>
+                        <td class="priority-low">Low</td>
+                        <td>29</td>
+                        <td>295</td>
+                    </tr>
+                
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>📋 Recommendations</h2>
+                <h3>Immediate Actions (High Priority):</h3>
+                <ul>
+                    <li>Add missing README files with clear documentation</li>
+                    <li>Include proper LICENSE files with open-source licenses</li>
+                    <li>Add structured metadata files (JSON/YAML) following standards</li>
+                    <li>Include DOI or persistent identifiers for datasets</li>
+                </ul>
+                
+                <h3>Medium-term Improvements:</h3>
+                <ul>
+                    <li>Use standard metadata schemas (Schema.org, DataCite, Bioschemas)</li>
+                    <li>Add usage examples and tutorials</li>
+                    <li>Include contact information in metadata</li>
+                    <li>Add data schemas and documentation</li>
+                </ul>
+                
+                <h3>Best Practices:</h3>
+                <ul>
+                    <li>Store metadata in dedicated directories (e.g., bioschema/, metadata/)</li>
+                    <li>Use controlled vocabularies and ontologies</li>
+                    <li>Include provenance information (creation date, version)</li>
+                    <li>Add citation files (CITATION.cff) for proper attribution</li>
+                </ul>
+            </div>
+            
+            <div class="header">
+                <p>Report generated by FAIR Analysis Tool</p>
+                <p>For more information about FAIR principles, visit: 
+                <a href="https://www.go-fair.org/fair-principles/" style="color: white;">GO FAIR</a></p>
+            </div>
+        </body>
+        </html>
+        
