@@ -547,11 +547,11 @@ python ppi_benchmark_fair.py \
             <section class="section">
                 <h2>Metadata Architecture</h2>
                 <h3>Generated File Structure</h3>
-                <pre><code>bioschemas_output/
+                <pre><code>bioschema/
 ├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)
 ├── interface_protein_pairs/              # Individual interface files
-│   ├── interface_1ABC_1.json            # ProtCID format
-│   ├── interface_1DEF_assembly1.json    # QSalign format
+│   ├── interface_1A17_6.json            # ProtCID format
+│   ├── interface_1A3A_1.json    # QSalign format
 │   └── ... (1,677 files total)
 ├── fair_metadata_package.json            # FAIR assessment package
 ├── embedded_markup.html                  # HTML with JSON-LD for web discovery
@@ -591,7 +591,7 @@ import pandas as pd
 from pathlib import Path
 
 # Load dataset metadata
-with open('bioschemas_output/dataset_with_interfaces.json', 'r') as f:
+with open('bioschema/dataset_with_interfaces.json', 'r') as f:
     dataset = json.load(f)
 
 print(f"Dataset: {dataset['name']}")
@@ -599,7 +599,7 @@ print(f"Total interfaces: {dataset['numberOfItems']}")  # 1677
 print(f"License: {dataset['license']}")
 
 # Load specific interface
-interface_file = 'bioschemas_output/interface_protein_pairs/interface_1ABC_1.json'
+interface_file = 'bioschema/interface_protein_pairs/interface_1A17_5.json'
 with open(interface_file, 'r') as f:
     interface = json.load(f)
 
