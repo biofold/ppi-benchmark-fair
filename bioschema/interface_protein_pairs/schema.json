@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/protein-interface.json",
+  "title": "Protein-Protein Interface Schema",
+  "description": "Schema for protein-protein interaction interface data following schema.org and Bioschemas standards",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": "string",
+      "const": "https://schema.org"
+    },
+    "@type": {
+      "type": "string",
+      "const": "DataCatalogItem"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the interface"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the protein-protein interaction interface"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Unique identifier for the interface"
+    },
+    "mainEntity": {
+      "$ref": "#/$defs/Protein"
+    },
+    "additionalProperty": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/PropertyValue"
+      },
+      "description": "Additional interface-specific properties"
+    }
+  },
+  "required": ["@context", "@type", "name", "identifier", "mainEntity"],
+  "$defs": {
+    "Protein": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "string",
+          "const": "https://schema.org"
+        },
+        "@type": {
+          "type": "string",
+          "const": "Protein"
+        },
+        "@id": {
+          "type": "string",
+          "pattern": "^#protein_[A-Z0-9_]+$"
+        },
+        "dct:conformsTo": {
+          "type": "string",
+          "const": "https://bioschemas.org/profiles/Protein/0.11-RELEASE"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "taxonomicRange": {
+          "$ref": "#/$defs/TaxonomicRange"
+        },
+        "alternateName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hasRepresentation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PropertyValue"
+          }
+        },
+        "additionalProperty": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PropertyValue"
+          }
+        },
+        "hasMolecularFunction": {
+          "$ref": "#/$defs/DefinedTerm"
+        },
+        "bioChemInteraction": {
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "Protein"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": ["@type", "@id", "identifier", "name"]
+    },
+    "PropertyValue": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "const": "PropertyValue"
+        },
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "boolean" },
+            { "type": "array" },
+            { "type": "object" }
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "unitCode": {
+          "type": "string"
+        },
+        "valueReference": {
+          "type": "object"
+        }
+      },
+      "required": ["@type", "name", "value"]
+    },
+    "TaxonomicRange": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "const": "DefinedTerm"
+        },
+        "name": {
+          "type": "string"
+        },
+        "inDefinedTermSet": {
+          "type": "string",
+          "format": "uri"
+        },
+        "description": {
+          "type": "string"
+        },
+        "termCode": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "identifier": {
+          "type": "string"
+        }
+      }
+    },
+    "DefinedTerm": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "const": "DefinedTerm"
+        },
+        "name": {
+          "type": "string"
+        },
+        "inDefinedTermSet": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}
