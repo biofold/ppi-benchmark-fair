@@ -1,14 +1,13 @@
 """
 Script to import protein-protein interaction benchmark data and generate FAIR-compliant
 Bioschemas markup with Croissant compatibility for ML datasets.
-Optimized for minimal PDB API calls with batch requests and smart caching.
 """
 
 import pandas as pd
 import json
 import requests
 from io import BytesIO
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Set, Dict, List, Tuple, Any, Optional
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -20,8 +19,6 @@ import time
 import re
 from urllib.parse import quote
 from collections import Counter, defaultdict
-import threading
-import hashlib
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -198,265 +195,6 @@ class ClusterIDProcessor:
 
         return clean_id
 
-class PDBApiClient:
-    """Optimized client for PDB API calls with batching and caching."""
-    
-    def __init__(self, base_url: str = "https://data.rcsb.org/rest/v1"):
-        """
-        Initialize the PDB API client.
-        
-        Args:
-            base_url: Base URL for RCSB PDB REST API
-        """
-        self.base_url = base_url.rstrip('/')
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'PPI-Benchmark-FAIR-Metadata/1.0',
-            'Accept': 'application/json'
-        })
-        
-        # Enhanced caching with expiration
-        self.cache = {}
-        self.cache_timestamps = {}
-        self.cache_expiry = timedelta(hours=24)  # Cache for 24 hours
-        
-        # Batch processing settings
-        self.batch_size = 10  # Number of PDBs to fetch in one batch
-        self.request_delay = 0.5  # Delay between batch requests in seconds
-        
-        # Statistics
-        self.stats = {
-            'api_calls': 0,
-            'cache_hits': 0,
-            'cache_misses': 0,
-            'batches_processed': 0,
-            'total_pdbs_fetched': 0,
-            'obsolete_entries': 0
-        }
-    
-    def _get_cache_key(self, pdb_id: str, endpoint: str = "entry") -> str:
-        """Generate cache key for a PDB ID and endpoint."""
-        return f"{pdb_id.upper()}_{endpoint}"
-    
-    def _is_cache_valid(self, cache_key: str) -> bool:
-        """Check if cache entry is still valid."""
-        if cache_key not in self.cache_timestamps:
-            return False
-        cache_time = self.cache_timestamps[cache_key]
-        return (datetime.now() - cache_time) < self.cache_expiry
-    
-    def _get_from_cache(self, pdb_id: str, endpoint: str = "entry") -> Optional[Dict]:
-        """Get data from cache if valid."""
-        cache_key = self._get_cache_key(pdb_id, endpoint)
-        if cache_key in self.cache and self._is_cache_valid(cache_key):
-            self.stats['cache_hits'] += 1
-            return self.cache[cache_key]
-        self.stats['cache_misses'] += 1
-        return None
-    
-    def _save_to_cache(self, pdb_id: str, endpoint: str, data: Dict) -> None:
-        """Save data to cache with timestamp."""
-        cache_key = self._get_cache_key(pdb_id, endpoint)
-        self.cache[cache_key] = data
-        self.cache_timestamps[cache_key] = datetime.now()
-        
-        # Limit cache size to prevent memory issues
-        if len(self.cache) > 1000:
-            # Remove oldest entries
-            sorted_keys = sorted(self.cache_timestamps.items(), key=lambda x: x[1])
-            for key, _ in sorted_keys[:100]:
-                if key in self.cache:
-                    del self.cache[key]
-                if key in self.cache_timestamps:
-                    del self.cache_timestamps[key]
-    
-    def fetch_entry_batch(self, pdb_ids: List[str]) -> Dict[str, Dict]:
-        """
-        Fetch multiple PDB entries in a single API call using POST request.
-        
-        Args:
-            pdb_ids: List of PDB IDs to fetch
-            
-        Returns:
-            Dictionary mapping PDB IDs to their metadata
-        """
-        if not pdb_ids:
-            return {}
-        
-        # Check cache first
-        cached_results = {}
-        remaining_ids = []
-        
-        for pdb_id in pdb_ids:
-            cached = self._get_from_cache(pdb_id, "entry")
-            if cached:
-                cached_results[pdb_id.upper()] = cached
-            else:
-                remaining_ids.append(pdb_id)
-        
-        if not remaining_ids:
-            return cached_results
-        
-        # Prepare batch request
-        url = f"{self.base_url}/core/entry"
-        payload = {
-            "ids": [pdb_id.upper() for pdb_id in remaining_ids]
-        }
-        
-        try:
-            logger.debug(f"Fetching batch of {len(remaining_ids)} PDB entries")
-            response = self.session.post(url, json=payload, timeout=30)
-            self.stats['api_calls'] += 1
-            
-            if response.status_code == 200:
-                results = response.json()
-                
-                # Process results
-                batch_results = {}
-                for result in results:
-                    pdb_id = result.get('rcsb_id', '').upper()
-                    if pdb_id:
-                        self._save_to_cache(pdb_id, "entry", result)
-                        batch_results[pdb_id] = result
-                
-                self.stats['total_pdbs_fetched'] += len(batch_results)
-                self.stats['batches_processed'] += 1
-                
-                # Merge cached and new results
-                cached_results.update(batch_results)
-                
-                # Log progress
-                logger.debug(f"Batch fetch successful: {len(batch_results)}/{len(remaining_ids)} entries retrieved")
-                
-                # Respectful delay between requests
-                time.sleep(self.request_delay)
-                
-                return cached_results
-            else:
-                logger.warning(f"Batch API call failed with status {response.status_code}")
-                # Fallback to individual requests for remaining IDs
-                for pdb_id in remaining_ids:
-                    result = self.fetch_entry_single(pdb_id)
-                    if result:
-                        cached_results[pdb_id.upper()] = result
-                
-                return cached_results
-                
-        except Exception as e:
-            logger.warning(f"Batch API call failed: {e}")
-            # Fallback to individual requests
-            for pdb_id in remaining_ids:
-                result = self.fetch_entry_single(pdb_id)
-                if result:
-                    cached_results[pdb_id.upper()] = result
-            
-            return cached_results
-    
-    def fetch_entry_single(self, pdb_id: str) -> Optional[Dict]:
-        """
-        Fetch single PDB entry as fallback.
-        
-        Args:
-            pdb_id: PDB ID
-            
-        Returns:
-            Entry metadata or None
-        """
-        # Check cache first
-        cached = self._get_from_cache(pdb_id, "entry")
-        if cached:
-            return cached
-        
-        url = f"{self.base_url}/core/entry/{pdb_id.upper()}"
-        
-        try:
-            response = self.session.get(url, timeout=30)
-            self.stats['api_calls'] += 1
-            
-            if response.status_code == 200:
-                result = response.json()
-                self._save_to_cache(pdb_id, "entry", result)
-                self.stats['total_pdbs_fetched'] += 1
-                return result
-            elif response.status_code == 404:
-                # Entry not found - mark as obsolete
-                logger.debug(f"PDB entry {pdb_id} not found (404)")
-                result = {"obsolete": True, "found_in_api": False, "pdb_id": pdb_id.upper()}
-                self._save_to_cache(pdb_id, "entry", result)
-                self.stats['obsolete_entries'] += 1
-                return result
-            else:
-                logger.warning(f"API call failed for {pdb_id}: {response.status_code}")
-                return None
-                
-        except Exception as e:
-            logger.warning(f"API call failed for {pdb_id}: {e}")
-            return None
-    
-    def fetch_polymer_entities_batch(self, pdb_id: str, entity_ids: List[str]) -> Dict[str, Dict]:
-        """
-        Fetch multiple polymer entities for a PDB structure.
-        
-        Args:
-            pdb_id: PDB ID
-            entity_ids: List of entity IDs
-            
-        Returns:
-            Dictionary mapping entity IDs to their data
-        """
-        entity_results = {}
-        
-        # Process entities in batches
-        for i in range(0, len(entity_ids), self.batch_size):
-            batch = entity_ids[i:i + self.batch_size]
-            
-            # Try parallel fetching (commented out for safety)
-            # results = self._fetch_entities_parallel(pdb_id, batch)
-            
-            # Sequential fetching
-            results = {}
-            for entity_id in batch:
-                cache_key = f"{pdb_id}_{entity_id}_entity"
-                cached = self._get_from_cache(pdb_id, f"entity_{entity_id}")
-                if cached:
-                    results[entity_id] = cached
-                else:
-                    result = self._fetch_single_entity(pdb_id, entity_id)
-                    if result:
-                        results[entity_id] = result
-            
-            entity_results.update(results)
-            
-            # Delay between batches
-            if i + self.batch_size < len(entity_ids):
-                time.sleep(self.request_delay)
-        
-        return entity_results
-    
-    def _fetch_single_entity(self, pdb_id: str, entity_id: str) -> Optional[Dict]:
-        """Fetch single polymer entity."""
-        url = f"{self.base_url}/core/polymer_entity/{pdb_id.upper()}/{entity_id}"
-        
-        try:
-            response = self.session.get(url, timeout=15)
-            self.stats['api_calls'] += 1
-            
-            if response.status_code == 200:
-                result = response.json()
-                self._save_to_cache(pdb_id, f"entity_{entity_id}", result)
-                return result
-            else:
-                logger.debug(f"Failed to fetch entity {entity_id} for {pdb_id}: {response.status_code}")
-                return None
-                
-        except Exception as e:
-            logger.debug(f"Failed to fetch entity {entity_id} for {pdb_id}: {e}")
-            return None
-    
-    def get_statistics(self) -> Dict:
-        """Get API usage statistics."""
-        return self.stats.copy()
-
 class PPIBenchmarkProcessor:
     """Processor for protein-protein interaction benchmark data with Croissant support."""
 
@@ -500,75 +238,27 @@ class PPIBenchmarkProcessor:
         self.protein_interfaces = []
         self.column_mapping = {}  # Store actual column names
         self.pdb_metadata_cache = {}  # Cache for PDB metadata to avoid repeated API calls
-        
-        # Initialize optimized PDB API client
-        self.pdb_api_client = PDBApiClient(pdb_api_base_url) if fetch_pdb_metadata else None
 
         # Initialize cluster processor if cluster file is provided
         self.cluster_processor = None
         if cluster_file:
             self.cluster_processor = ClusterIDProcessor(cluster_file)
-    
-    def fetch_pdb_metadata_batch(self, pdb_ids: List[str]) -> Dict[str, Dict]:
+
+    def fetch_pdb_structure_metadata_robust(self, pdb_id: str) -> Dict[str, Any]:
         """
-        Fetch metadata for multiple PDB IDs in optimized batches.
-        
+        Robust method to fetch PDB metadata using multiple API approaches.
+        Extracts ALL sequences from ALL chains for comprehensive analysis.
+
         Args:
-            pdb_ids: List of PDB IDs to fetch
-            
+            pdb_id: PDB ID (4 letters, e.g., "1ABC")
+
         Returns:
-            Dictionary mapping PDB IDs to comprehensive metadata
+            Dictionary with comprehensive PDB metadata including ALL chain sequences
         """
-        if not self.pdb_api_client or not pdb_ids:
-            return {}
-        
-        # Remove duplicates and convert to uppercase
-        unique_pdb_ids = list(set(pdb_id.upper() for pdb_id in pdb_ids if pdb_id))
-        logger.info(f"Fetching metadata for {len(unique_pdb_ids)} unique PDB structures in batches...")
-        
-        # Fetch entry data in batches
-        all_metadata = {}
-        
-        # Process in batches using the API client
-        for i in range(0, len(unique_pdb_ids), self.pdb_api_client.batch_size):
-            batch = unique_pdb_ids[i:i + self.pdb_api_client.batch_size]
-            batch_metadata = self.pdb_api_client.fetch_entry_batch(batch)
-            all_metadata.update(batch_metadata)
-            
-            # Log progress
-            progress = min(i + len(batch), len(unique_pdb_ids))
-            logger.info(f"Progress: {progress}/{len(unique_pdb_ids)} structures fetched")
-        
-        # Enrich with entity information
-        enriched_metadata = {}
-        for pdb_id, entry_data in all_metadata.items():
-            metadata = self._enrich_entry_with_entities(pdb_id, entry_data)
-            enriched_metadata[pdb_id] = metadata
-        
-        # Update cache
-        self.pdb_metadata_cache.update(enriched_metadata)
-        
-        # Show statistics
-        stats = self.pdb_api_client.get_statistics()
-        logger.info(f"API Statistics: {stats['api_calls']} calls, "
-                   f"{stats['cache_hits']} cache hits, "
-                   f"{stats['cache_misses']} cache misses, "
-                   f"{stats['total_pdbs_fetched']} PDBs fetched")
-        
-        return enriched_metadata
-    
-    def _enrich_entry_with_entities(self, pdb_id: str, entry_data: Dict) -> Dict:
-        """
-        Enrich entry data with entity information.
-        
-        Args:
-            pdb_id: PDB ID
-            entry_data: Entry metadata from API
-            
-        Returns:
-            Enriched metadata with entity information
-        """
-        # Start with basic metadata structure
+        # Check cache first
+        if pdb_id.upper() in self.pdb_metadata_cache:
+            return self.pdb_metadata_cache[pdb_id.upper()]
+
         metadata = {
             "pdb_id": pdb_id.upper(),
             "resolution": None,
@@ -582,314 +272,297 @@ class PPIBenchmarkProcessor:
             "space_group": None,
             "unit_cell": None,
             "found_in_api": False,
-            "obsolete": False,
-            "replaced_by": None,
-            "sequences": {},
-            "chain_info": {},
-            "entity_info": {},
-            "is_homomer": False,
-            "sequence_clusters": [],
-            "chain_ids": [],
-            "entity_ids": []
+            "obsolete": False,  # NEW: Flag for obsolete entries
+            "replaced_by": None,  # NEW: New PDB ID if replaced
+            "sequences": {},  # Store ALL sequences: {"A": "MSEK...", "B": "MSEK..."}
+            "chain_info": {},  # Detailed chain information
+            "entity_info": {},  # Entity-level information
+            "is_homomer": False,  # Flag for homomeric structures
+            "sequence_clusters": [],  # Group identical sequences
+            "chain_ids": [],  # List of all chain IDs
+            "entity_ids": []  # List of all entity IDs
         }
-        
-        # Check if entry is obsolete
-        if entry_data.get("obsolete", False):
-            metadata["obsolete"] = True
-            metadata["found_in_api"] = True
-            metadata["replaced_by"] = entry_data.get("replaced_by")
-            return metadata
-        
-        # Extract basic information from entry data
-        if "rcsb_entry_info" in entry_data:
-            entry_info = entry_data["rcsb_entry_info"]
-            
-            # Resolution
-            if "resolution_combined" in entry_info:
-                res = entry_info["resolution_combined"]
-                if isinstance(res, list):
-                    valid_res = [float(r) for r in res if r is not None]
-                    if valid_res:
-                        metadata["resolution"] = min(valid_res)
-                elif res is not None:
-                    metadata["resolution"] = float(res)
-            
-            # Experimental method
-            if "exptl_method" in entry_info:
-                methods = entry_info["exptl_method"]
-                if isinstance(methods, list) and methods:
-                    metadata["experimental_method"] = methods[0]
-                elif methods:
-                    metadata["experimental_method"] = methods
-        
-        # Dates
-        if "rcsb_accession_info" in entry_data:
-            acc_info = entry_data["rcsb_accession_info"]
-            metadata["deposition_date"] = acc_info.get("deposit_date")
-            metadata["release_date"] = acc_info.get("initial_release_date")
-        
-        # Citation
-        if "citation" in entry_data and isinstance(entry_data["citation"], list) and len(entry_data["citation"]) > 0:
-            citation = entry_data["citation"][0]
-            citation_info = {
-                "title": citation.get("title"),
-                "doi": citation.get("pdbx_database_id_doi"),
-                "authors": citation.get("rcsb_authors")
-            }
-            metadata["citation"] = {k: v for k, v in citation_info.items() if v}
-        
-        # Entity count and IDs
-        if "rcsb_entry_container_identifiers" in entry_data:
-            container_ids = entry_data["rcsb_entry_container_identifiers"]
-            if "entity_ids" in container_ids:
-                metadata["entity_count"] = len(container_ids["entity_ids"])
-                metadata["entity_ids"] = container_ids["entity_ids"]
-            
-            # Get chain IDs
-            if "asym_ids" in container_ids:
-                metadata["chain_ids"] = container_ids["asym_ids"]
-        
-        # Crystallographic info
-        if "cell" in entry_data:
-            cell = entry_data["cell"]
-            if all(k in cell for k in ["length_a", "length_b", "length_c"]):
-                metadata["unit_cell"] = {
-                    "a": cell["length_a"],
-                    "b": cell["length_b"],
-                    "c": cell["length_c"],
-                    "alpha": cell.get("angle_alpha"),
-                    "beta": cell.get("angle_beta"),
-                    "gamma": cell.get("angle_gamma")
-                }
-        
-        if "symmetry" in entry_data:
-            symmetry = entry_data["symmetry"]
-            metadata["space_group"] = symmetry.get("space_group_name_H_M")
-        
-        metadata["found_in_api"] = True
-        
-        # Fetch entity information if we have entity IDs
-        if metadata["entity_ids"] and self.pdb_api_client:
-            entity_metadata = self.pdb_api_client.fetch_polymer_entities_batch(
-                pdb_id, metadata["entity_ids"]
-            )
-            
-            # Process entity information
-            organisms = set()
-            sequences_by_entity = {}
-            chains_by_entity = {}
-            
-            for entity_id, entity_data in entity_metadata.items():
-                entity_info = self._extract_entity_info(entity_id, entity_data)
-                metadata["entity_info"][entity_id] = entity_info
-                
-                # Collect sequences
-                if entity_info["sequence"] and entity_info["chain_ids"]:
-                    sequences_by_entity[entity_id] = entity_info["sequence"]
-                    chains_by_entity[entity_id] = entity_info["chain_ids"]
-                    
-                    # Add to sequences and chain_info
-                    for chain_id in entity_info["chain_ids"]:
-                        metadata["sequences"][chain_id] = entity_info["sequence"]
-                        metadata["chain_info"][chain_id] = {
-                            "entity_id": entity_id,
-                            "organism": entity_info["organism"],
-                            "sequence_length": entity_info["sequence_length"],
-                            "polymer_type": entity_info["polymer_type"],
-                            "gene_name": entity_info["gene_name"]
-                        }
-                
-                # Collect organisms
-                if entity_info["organism"]:
-                    organisms.add(entity_info["organism"])
-            
-            if organisms:
-                metadata["source_organism"] = list(organisms)
-            
-            # Analyze sequence relationships
-            if sequences_by_entity:
-                self._analyze_sequences(metadata, sequences_by_entity, chains_by_entity)
-        
-        # Calculate statistics
-        if metadata["sequences"]:
-            metadata["chain_count"] = len(metadata["sequences"])
-            metadata["unique_sequences"] = len(set(metadata["sequences"].values()))
-            
-            # Calculate sequence lengths
-            seq_lengths = [len(seq) for seq in metadata["sequences"].values()]
-            if seq_lengths:
-                metadata["avg_sequence_length"] = sum(seq_lengths) / len(seq_lengths)
-                metadata["min_sequence_length"] = min(seq_lengths)
-                metadata["max_sequence_length"] = max(seq_lengths)
-        
-        return metadata
-    
-    def _extract_entity_info(self, entity_id: str, entity_data: Dict) -> Dict:
-        """
-        Extract information from entity data.
-        
-        Args:
-            entity_id: Entity ID
-            entity_data: Entity metadata from API
-            
-        Returns:
-            Extracted entity information
-        """
-        entity_info = {
-            "entity_id": entity_id,
-            "sequence": None,
-            "organism": None,
-            "taxonomy_id": None,
-            "chain_ids": [],
-            "polymer_type": None,
-            "sequence_length": None,
-            "gene_name": None,
-            "uniprot_ids": []
-        }
-        
-        # Extract sequence
-        if "entity_poly" in entity_data:
-            poly = entity_data["entity_poly"]
-            if "pdbx_seq_one_letter_code_can" in poly:
-                entity_info["sequence"] = poly["pdbx_seq_one_letter_code_can"]
-                entity_info["sequence_length"] = len(poly["pdbx_seq_one_letter_code_can"])
-            
-            if "pdbx_strand_id" in poly:
-                chain_ids = poly["pdbx_strand_id"].split(",")
-                entity_info["chain_ids"] = [c.strip() for c in chain_ids]
-            
-            if "type" in poly:
-                entity_info["polymer_type"] = poly["type"]
-        
-        # Extract organism information
-        if "rcsb_entity_source_organism" in entity_data:
-            source_orgs = entity_data["rcsb_entity_source_organism"]
-            if isinstance(source_orgs, list) and source_orgs:
-                source_org = source_orgs[0]
-                
-                for field in ["ncbi_scientific_name", "scientific_name", "common_name"]:
-                    if field in source_org and source_org[field]:
-                        entity_info["organism"] = source_org[field]
-                        break
-                
-                if "ncbi_taxonomy_id" in source_org:
-                    entity_info["taxonomy_id"] = source_org["ncbi_taxonomy_id"]
-        
-        # Extract gene information
-        if "rcsb_entity_source_organism" in entity_data:
-            source_orgs = entity_data["rcsb_entity_source_organism"]
-            if isinstance(source_orgs, list):
-                for source_org in source_orgs:
-                    if "rcsb_gene_name" in source_org:
-                        if "value" in source_org["rcsb_gene_name"]:
-                            entity_info["gene_name"] = source_org["rcsb_gene_name"]["value"]
-                        break
-        
-        # Extract UniProt references
-        if "rcsb_polymer_entity_container_identifiers" in entity_data:
-            container_ids = entity_data["rcsb_polymer_entity_container_identifiers"]
-            if "uniprot_ids" in container_ids and container_ids["uniprot_ids"]:
-                entity_info["uniprot_ids"] = container_ids["uniprot_ids"]
-        
-        return entity_info
-    
-    def _analyze_sequences(self, metadata: Dict, sequences_by_entity: Dict, chains_by_entity: Dict) -> None:
-        """
-        Analyze sequence relationships for homomer detection.
-        
-        Args:
-            metadata: Metadata dictionary to update
-            sequences_by_entity: Dictionary mapping entity IDs to sequences
-            chains_by_entity: Dictionary mapping entity IDs to chain IDs
-        """
-        # Group identical sequences
-        seq_to_entities = {}
-        for entity_id, seq in sequences_by_entity.items():
-            if seq:
-                if seq not in seq_to_entities:
-                    seq_to_entities[seq] = []
-                seq_to_entities[seq].append(entity_id)
-        
-        metadata["sequence_clusters"] = [
-            {"sequence": seq, "entities": entities, 
-             "chain_count": sum(len(chains_by_entity.get(eid, [])) for eid in entities)}
-            for seq, entities in seq_to_entities.items()
-        ]
-        
-        # Check if it's a homomer (all sequences identical)
-        if len(seq_to_entities) == 1:
-            metadata["is_homomer"] = True
-            seq = list(seq_to_entities.keys())[0]
-            entity_count = len(list(seq_to_entities.values())[0])
-            chain_count = sum(len(chains_by_entity.get(eid, [])) for eid in list(seq_to_entities.values())[0])
-            metadata["homomer_type"] = f"{entity_count}-mer" if entity_count > 1 else "monomer"
-            metadata["homomer_chains"] = chain_count
 
-    def fetch_pdb_structure_metadata_robust(self, pdb_id: str) -> Dict[str, Any]:
-        """
-        Robust method to fetch PDB metadata using optimized batch approach.
-        
-        Args:
-            pdb_id: PDB ID (4 letters, e.g., "1ABC")
-            
-        Returns:
-            Dictionary with comprehensive PDB metadata
-        """
-        # Check cache first
-        if pdb_id.upper() in self.pdb_metadata_cache:
-            return self.pdb_metadata_cache[pdb_id.upper()]
-        
-        # If we have an API client, use it
-        if self.pdb_api_client:
-            metadata = self.pdb_api_client.fetch_entry_single(pdb_id)
-            if metadata:
-                enriched = self._enrich_entry_with_entities(pdb_id, metadata)
-                self.pdb_metadata_cache[pdb_id.upper()] = enriched
-                return enriched
-        
-        # Fallback to the original method
-        return self._fetch_pdb_metadata_fallback(pdb_id)
-    
-    def _fetch_pdb_metadata_fallback(self, pdb_id: str) -> Dict[str, Any]:
-        """
-        Fallback method for fetching PDB metadata (original implementation).
-        
-        Args:
-            pdb_id: PDB ID
-            
-        Returns:
-            Dictionary with PDB metadata
-        """
-        metadata = {
-            "pdb_id": pdb_id.upper(),
-            "found_in_api": False,
-            "obsolete": True,
-            "replaced_by": None,
-            "sequences": {},
-            "chain_info": {},
-            "source_organism": []
-        }
-        
-        # Try to get minimal info from header
         try:
-            minimal_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
-            if minimal_info.get("found_in_header"):
+            # APPROACH 0: First check if the entry is obsolete
+            try:
+                # Try the status endpoint first to check if entry exists/is obsolete
+                status_url = f"{self.pdb_api_base_url}/holdings/status/{pdb_id.upper()}"
+                status_response = requests.get(status_url, timeout=10)
+
+                if status_response.status_code == 200:
+                    status_data = status_response.json()
+                    if 'rcsb_repository_holdings_combined' in status_data:
+                        status_data =  status_data['rcsb_repository_holdings_combined']
+
+                    # Check if entry is obsolete
+                    if status_data.get("status_code") == "OBS" or "obsolete" in str(status_data).lower():
+                        metadata["obsolete"] = True
+                        metadata["found_in_api"] = True  # We found it, but it's obsolete
+
+                        # Try to get replacement information
+                        if "id_code_replaced_by_latest" in status_data:
+                            metadata["replaced_by"] = status_data["id_code_replaced_by_latest"]
+
+                        # Cache and return early - no need to fetch other metadata
+                        self.pdb_metadata_cache[pdb_id.upper()] = metadata
+                        return metadata
+
+            except Exception as e:
+                logger.debug(f"Could not fetch status for {pdb_id}: {e}")
+
+            # APPROACH 1: Try the main entry endpoint
+            entry_url = f"{self.pdb_api_base_url}/core/entry/{pdb_id.upper()}"
+            response = requests.get(entry_url, timeout=30)
+
+            if response.status_code == 200:
+                data = response.json()
                 metadata["found_in_api"] = True
-                metadata["sequences"] = minimal_info.get("sequences", {})
-                metadata["chain_info"] = minimal_info.get("chain_info", {})
-                metadata["source_organism"] = minimal_info.get("source_organism", [])
-                metadata["taxonomy_ids"] = minimal_info.get("taxonomy_ids", [])
-                
-                # Analyze sequences
-                if metadata["sequences"]:
-                    unique_seqs = set(metadata["sequences"].values())
-                    if len(unique_seqs) == 1:
+
+                # Extract basic information
+                if "rcsb_entry_info" in data:
+                    entry_info = data["rcsb_entry_info"]
+
+                    # Resolution
+                    if "resolution_combined" in entry_info:
+                        res = entry_info["resolution_combined"]
+                        if isinstance(res, list):
+                            valid_res = [float(r) for r in res if r is not None]
+                            if valid_res:
+                                metadata["resolution"] = min(valid_res)
+                        elif res is not None:
+                            metadata["resolution"] = float(res)
+
+                    # Experimental method
+                    if "exptl_method" in entry_info:
+                        methods = entry_info["exptl_method"]
+                        if isinstance(methods, list) and methods:
+                            metadata["experimental_method"] = methods[0]
+                        elif methods:
+                            metadata["experimental_method"] = methods
+
+                    # Polymer composition
+                    if "polymer_composition" in entry_info:
+                        metadata["polymer_composition"] = entry_info["polymer_composition"]
+
+                # Dates
+                if "rcsb_accession_info" in data:
+                    acc_info = data["rcsb_accession_info"]
+                    metadata["deposition_date"] = acc_info.get("deposit_date")
+                    metadata["release_date"] = acc_info.get("initial_release_date")
+
+                # Citation
+                if "citation" in data and isinstance(data["citation"], list) and len(data["citation"]) > 0:
+                    citation = data["citation"][0]
+                    citation_info = {
+                        "title": citation.get("title"),
+                        "doi": citation.get("pdbx_database_id_doi"),
+                        "authors": citation.get("rcsb_authors")
+                    }
+                    metadata["citation"] = {k: v for k, v in citation_info.items() if v}
+
+                # Entity count and IDs
+                if "rcsb_entry_container_identifiers" in data:
+                    container_ids = data["rcsb_entry_container_identifiers"]
+                    if "entity_ids" in container_ids:
+                        metadata["entity_count"] = len(container_ids["entity_ids"])
+                        metadata["entity_ids"] = container_ids["entity_ids"]
+
+                    # Get chain IDs
+                    if "asym_ids" in container_ids:
+                        metadata["chain_ids"] = container_ids["asym_ids"]
+
+                # Crystallographic info
+                if "cell" in data:
+                    cell = data["cell"]
+                    if all(k in cell for k in ["length_a", "length_b", "length_c"]):
+                        metadata["unit_cell"] = {
+                            "a": cell["length_a"],
+                            "b": cell["length_b"],
+                            "c": cell["length_c"],
+                            "alpha": cell.get("angle_alpha"),
+                            "beta": cell.get("angle_beta"),
+                            "gamma": cell.get("angle_gamma")
+                        }
+
+                if "symmetry" in data:
+                    symmetry = data["symmetry"]
+                    metadata["space_group"] = symmetry.get("space_group_name_H_M")
+
+            elif response.status_code == 404:
+                # Entry not found - might be obsolete or never existed
+                logger.warning(f"PDB entry {pdb_id} not found (404). May be obsolete or invalid.")
+                metadata["found_in_api"] = False
+                metadata["obsolete"] = True  # Assume obsolete if 404
+
+                self.pdb_metadata_cache[pdb_id.upper()] = metadata
+                return metadata
+
+            # APPROACH 2: Fetch ALL entity information to get ALL sequences
+            if metadata.get("entity_ids") and not metadata.get("obsolete", False):
+                organisms = set()
+                sequences_by_entity = {}
+                chains_by_entity = {}
+
+                for entity_id in metadata["entity_ids"]:
+                    try:
+                        entity_url = f"{self.pdb_api_base_url}/core/polymer_entity/{pdb_id.upper()}/{entity_id}"
+                        entity_response = requests.get(entity_url, timeout=15)
+
+                        if entity_response.status_code == 200:
+                            entity_data = entity_response.json()
+                            entity_info = {
+                                "entity_id": entity_id,
+                                "sequence": None,
+                                "organism": None,
+                                "taxonomy_id": None,
+                                "chain_ids": [],
+                                "polymer_type": None,
+                                "sequence_length": None,
+                                "gene_name": None,
+                                "uniprot_ids": []
+                            }
+
+                            # Extract sequence
+                            if "entity_poly" in entity_data:
+                                poly = entity_data["entity_poly"]
+                                if "pdbx_seq_one_letter_code_can" in poly:
+                                    entity_info["sequence"] = poly["pdbx_seq_one_letter_code_can"]
+                                    entity_info["sequence_length"] = len(poly["pdbx_seq_one_letter_code_can"])
+
+                                if "pdbx_strand_id" in poly:
+                                    chain_ids = poly["pdbx_strand_id"].split(",")
+                                    entity_info["chain_ids"] = [c.strip() for c in chain_ids]
+                                    chains_by_entity[entity_id] = chain_ids
+
+                                if "type" in poly:
+                                    entity_info["polymer_type"] = poly["type"]
+
+                            # Extract organism information
+                            if "rcsb_entity_source_organism" in entity_data:
+                                source_orgs = entity_data["rcsb_entity_source_organism"]
+                                if isinstance(source_orgs, list) and source_orgs:
+                                    source_org = source_orgs[0]
+
+                                    for field in ["ncbi_scientific_name", "scientific_name", "common_name"]:
+                                        if field in source_org and source_org[field]:
+                                            entity_info["organism"] = source_org[field]
+                                            organisms.add(source_org[field])
+                                            break
+
+                                    if "ncbi_taxonomy_id" in source_org:
+                                        entity_info["taxonomy_id"] = source_org["ncbi_taxonomy_id"]
+
+                            # Extract gene information
+                            if "rcsb_entity_source_organism" in entity_data:
+                                source_orgs = entity_data["rcsb_entity_source_organism"]
+                                if isinstance(source_orgs, list):
+                                    for source_org in source_orgs:
+                                        if "rcsb_gene_name" in source_org:
+                                            if "value" in source_org["rcsb_gene_name"]:
+                                                entity_info["gene_name"] = source_org["rcsb_gene_name"]["value"]
+                                            break
+
+                            # Extract UniProt references
+                            if "rcsb_polymer_entity_container_identifiers" in entity_data:
+                                container_ids = entity_data["rcsb_polymer_entity_container_identifiers"]
+                                if "uniprot_ids" in container_ids and container_ids["uniprot_ids"]:
+                                    entity_info["uniprot_ids"] = container_ids["uniprot_ids"]
+
+                            # Store entity info
+                            metadata["entity_info"][entity_id] = entity_info
+
+                            # Store sequence by chain
+                            if entity_info["sequence"] and entity_info["chain_ids"]:
+                                for chain_id in entity_info["chain_ids"]:
+                                    metadata["sequences"][chain_id] = entity_info["sequence"]
+                                    metadata["chain_info"][chain_id] = {
+                                        "entity_id": entity_id,
+                                        "organism": entity_info["organism"],
+                                        "sequence_length": entity_info["sequence_length"],
+                                        "polymer_type": entity_info["polymer_type"],
+                                        "gene_name": entity_info["gene_name"]
+                                    }
+
+                            sequences_by_entity[entity_id] = entity_info["sequence"]
+
+                    except Exception as e:
+                        logger.debug(f"Could not fetch entity {entity_id} for {pdb_id}: {e}")
+                        continue
+
+                if organisms:
+                    metadata["source_organism"] = list(organisms)
+
+                # Analyze sequence relationships for homomer detection
+                if sequences_by_entity:
+                    # Group identical sequences
+                    seq_to_entities = {}
+                    for entity_id, seq in sequences_by_entity.items():
+                        if seq:
+                            if seq not in seq_to_entities:
+                                seq_to_entities[seq] = []
+                            seq_to_entities[seq].append(entity_id)
+
+                    metadata["sequence_clusters"] = [
+                        {"sequence": seq, "entities": entities, "chain_count": sum(len(chains_by_entity.get(eid, [])) for eid in entities)}
+                        for seq, entities in seq_to_entities.items()
+                    ]
+
+                    # Check if it's a homomer (all sequences identical)
+                    if len(seq_to_entities) == 1:
                         metadata["is_homomer"] = True
-                        metadata["homomer_type"] = f"{len(metadata['sequences'])}-mer"
-                        metadata["homomer_chains"] = len(metadata["sequences"])
+                        seq = list(seq_to_entities.keys())[0]
+                        entity_count = len(list(seq_to_entities.values())[0])
+                        chain_count = sum(len(chains_by_entity.get(eid, [])) for eid in list(seq_to_entities.values())[0])
+                        metadata["homomer_type"] = f"{entity_count}-mer" if entity_count > 1 else "monomer"
+                        metadata["homomer_chains"] = chain_count
+
+            # APPROACH 3: If still no sequences and not obsolete, try alternative endpoints
+            if not metadata["sequences"] and not metadata.get("obsolete", False):
+                try:
+                    # Try the assembly endpoint
+                    assembly_url = f"https://data.rcsb.org/rest/v1/core/assembly/{pdb_id.upper()}/1"
+                    assembly_response = requests.get(assembly_url, timeout=10)
+
+                    if assembly_response.status_code == 200:
+                        assembly_data = assembly_response.json()
+
+                        # Extract chain mapping from assembly
+                        if "rcsb_assembly_info" in assembly_data:
+                            assembly_info = assembly_data["rcsb_assembly_info"]
+                            if "polymer_entity_instance_count" in assembly_info:
+                                metadata["assembly_polymer_count"] = assembly_info["polymer_entity_instance_count"]
+
+                except Exception as e:
+                    logger.debug(f"Could not fetch assembly info for {pdb_id}: {e}")
+
+            # Calculate statistics if not obsolete
+            if not metadata.get("obsolete", False):
+                if metadata["sequences"]:
+                    metadata["chain_count"] = len(metadata["sequences"])
+                    metadata["unique_sequences"] = len(set(metadata["sequences"].values()))
+
+                    # Calculate sequence lengths
+                    seq_lengths = [len(seq) for seq in metadata["sequences"].values()]
+                    if seq_lengths:
+                        metadata["avg_sequence_length"] = sum(seq_lengths) / len(seq_lengths)
+                        metadata["min_sequence_length"] = min(seq_lengths)
+                        metadata["max_sequence_length"] = max(seq_lengths)
+
+            logger.info(f"Fetched metadata for {pdb_id}: "
+                       f"chains={metadata.get('chain_count', 0)}, "
+                       f"unique_seqs={metadata.get('unique_sequences', 0)}, "
+                       f"homomer={metadata.get('is_homomer', False)}, "
+                       f"obsolete={metadata.get('obsolete', False)}, "
+                       f"resolution={metadata.get('resolution')}")
+
         except Exception as e:
-            logger.debug(f"Fallback failed for {pdb_id}: {e}")
-        
+            logger.warning(f"Error fetching robust metadata for {pdb_id}: {e}")
+            # Check if the error indicates an obsolete entry
+            if "404" in str(e) or "not found" in str(e).lower():
+                metadata["obsolete"] = True
+
+        # Cache the result
         self.pdb_metadata_cache[pdb_id.upper()] = metadata
         return metadata
 
@@ -919,8 +592,8 @@ class PPIBenchmarkProcessor:
 
     def enrich_protein_with_pdb_metadata(self, interface: ProteinInterface) -> Dict[str, Any]:
         """
-        Enrich a protein interface with PDB metadata.
-        Uses batch-optimized method to get ALL chain sequences.
+        Enrich a protein interface with PDB metadata from RCSB API.
+        Uses robust method to get ALL chain sequences.
 
         Args:
             interface: ProteinInterface object
@@ -930,53 +603,70 @@ class PPIBenchmarkProcessor:
         """
         pdb_id = interface.ID.upper()
 
-        # Check cache first
-        if pdb_id in self.pdb_metadata_cache:
-            structure_metadata = self.pdb_metadata_cache[pdb_id]
-        else:
-            # This should rarely happen if we prefetch metadata in batches
-            structure_metadata = self.fetch_pdb_structure_metadata_robust(pdb_id)
+        structure_metadata = self.fetch_pdb_structure_metadata_robust(pdb_id)
 
         # If obsolete and no sequences, try header parsing
-        if structure_metadata.get("obsolete", False) and not structure_metadata.get("sequences"):
-            logger.debug(f"Fetching sequences from header for obsolete entry {interface.ID}")
-            header_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
+        if structure_metadata.get("obsolete", False):
+            logger.warning(f"PDB entry {interface.ID} is OBSOLETE. Replaced by: {structure_metadata.get('replaced_by', 'Unknown')}")
 
-            # Merge header info into structure_metadata
-            if header_info.get("found_in_header"):
-                if header_info.get("sequences"):
-                    structure_metadata["sequences"] = header_info["sequences"]
-                if header_info.get("chain_info"):
-                    structure_metadata["chain_info"] = header_info["chain_info"]
-                if header_info.get("source_organism") and header_info["source_organism"]:
-                    structure_metadata["source_organism"] = header_info["source_organism"]
-                if header_info.get("taxonomy_ids"):
-                    structure_metadata["taxonomy_ids"] = header_info["taxonomy_ids"]
-                    if header_info.get("primary_taxonomy_id"):
-                        structure_metadata["primary_taxonomy_id"] = header_info["primary_taxonomy_id"]
+            # If obsolete and no sequences, try to get sequences from header
+            if not structure_metadata.get("sequences"):
+                logger.info(f"Fetching sequences from header for obsolete entry {interface.ID}")
+                header_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
 
-                # Update sequence clusters for homomer detection
-                if structure_metadata["sequences"]:
-                    seq_to_chains = {}
-                    for chain_id, sequence in structure_metadata["sequences"].items():
-                        if sequence not in seq_to_chains:
-                            seq_to_chains[sequence] = []
-                        seq_to_chains[sequence].append(chain_id)
+                # CRITICAL FIX: Merge header info into structure_metadata
+                if header_info.get("found_in_header"):
+                    # Merge sequences from header
+                    if header_info.get("sequences"):
+                        structure_metadata["sequences"] = header_info["sequences"]
 
-                    structure_metadata["sequence_clusters"] = [
-                        {"sequence": seq, "chains": chains, "chain_count": len(chains)}
-                        for seq, chains in seq_to_chains.items()
-                    ]
+                    # Merge chain info from header
+                    if header_info.get("chain_info"):
+                        structure_metadata["chain_info"] = header_info["chain_info"]
 
-                    # Check if it's a homomer
-                    if len(seq_to_chains) == 1:
-                        structure_metadata["is_homomer"] = True
-                        seq = list(seq_to_chains.keys())[0]
-                        chain_count = len(list(seq_to_chains.values())[0])
-                        structure_metadata["homomer_type"] = f"{chain_count}-mer" if chain_count > 1 else "monomer"
-                        structure_metadata["homomer_chains"] = chain_count
+                    # Merge organism info from header
+                    if header_info.get("source_organism") and header_info["source_organism"]:
+                        structure_metadata["source_organism"] = header_info["source_organism"]
 
-                logger.debug(f"Added {len(structure_metadata.get('sequences', {}))} chain sequences from header for obsolete PDB {pdb_id}")
+                    # MERGE TAXONOMY IDs FROM HEADER
+                    if header_info.get("taxonomy_ids"):
+                        structure_metadata["taxonomy_ids"] = header_info["taxonomy_ids"]
+                        if header_info.get("primary_taxonomy_id"):
+                            structure_metadata["primary_taxonomy_id"] = header_info["primary_taxonomy_id"]
+
+                    # Merge other important fields
+                    if header_info.get("chain_count"):
+                        structure_metadata["chain_count"] = header_info["chain_count"]
+
+                    if header_info.get("unique_sequences"):
+                        structure_metadata["unique_sequences"] = header_info["unique_sequences"]
+
+                    # Update sequence clusters for homomer detection
+                    if structure_metadata["sequences"]:
+                        # Group identical sequences
+                        seq_to_chains = {}
+                        for chain_id, sequence in structure_metadata["sequences"].items():
+                            if sequence not in seq_to_chains:
+                                seq_to_chains[sequence] = []
+                            seq_to_chains[sequence].append(chain_id)
+
+                        structure_metadata["sequence_clusters"] = [
+                            {"sequence": seq, "chains": chains, "chain_count": len(chains)}
+                            for seq, chains in seq_to_chains.items()
+                        ]
+
+                        # Check if it's a homomer
+                        if len(seq_to_chains) == 1:
+                            structure_metadata["is_homomer"] = True
+                            seq = list(seq_to_chains.keys())[0]
+                            chain_count = len(list(seq_to_chains.values())[0])
+                            structure_metadata["homomer_type"] = f"{chain_count}-mer" if chain_count > 1 else "monomer"
+                            structure_metadata["homomer_chains"] = chain_count
+
+                    logger.info(f"Added {len(structure_metadata.get('sequences', {}))} chain sequences from header for obsolete PDB {pdb_id}")
+                    logger.info(f"Organism from header: {structure_metadata.get('source_organism', [])}")
+                    if structure_metadata.get("taxonomy_ids"):
+                        logger.info(f"Taxonomy IDs from header: {structure_metadata['taxonomy_ids']}")
 
         # For interface analysis, also fetch specific entity metadata for the interface chains
         entity_metadata = {}
@@ -985,7 +675,7 @@ class PPIBenchmarkProcessor:
         if structure_metadata.get("chain_info"):
             for chain_id, chain_info in structure_metadata["chain_info"].items():
                 entity_id = chain_info.get("entity_id")
-                if entity_id and entity_id not in entity_metadata and self.pdb_api_client:
+                if entity_id and entity_id not in entity_metadata:
                     # Fetch detailed entity metadata
                     try:
                         entity_url = f"{self.pdb_api_base_url}/core/polymer_entity/{pdb_id.upper()}/{entity_id}"
@@ -1028,18 +718,559 @@ class PPIBenchmarkProcessor:
     def fetch_obsolete_pdb_minimal_info(self, interface_id: str, timeout: int = 10) -> Dict[str, Any]:
         """
         Extract minimal information from obsolete PDB entries by parsing the header file.
-        
+
         Args:
             interface_id: PDB ID (4 letters, e.g., "1ABC")
             timeout: Request timeout in seconds
-            
+
         Returns:
             Dictionary with minimal information including sequences for each chain
         """
-        # This method remains the same as in the original code
-        # Only showing the function signature to save space
-        # The full implementation should be copied from the original code
-        pass
+        pdb_id = interface_id.upper().strip()
+
+        # Initialize metadata structure with both old and new fields
+        minimal_info = {
+            "pdb_id": pdb_id,
+            "resolution": None,
+            "deposition_date": None,
+            "release_date": None,
+            "experimental_method": None,
+            "source_organism": [],
+            "taxonomy_ids": [],  # NEW: Store taxonomy IDs separately
+            "citation": None,
+            "entity_count": 0,
+            "r_factor": None,
+            "space_group": None,
+            "unit_cell": None,
+            "found_in_api": False,
+            "obsolete": True,
+            "replaced_by": None,
+            "obsolete_date": None,
+            "sequences": {},  # Store ALL sequences: {"A": "MSEK...", "B": "MSEK..."}
+            "chain_info": {},  # Detailed chain information
+            "entity_info": {},  # Entity-level information
+            "is_homomer": False,
+            "sequence_clusters": [],
+            "chain_ids": [],
+            "entity_ids": [],
+            "polymer_composition": None,
+            "homomer_type": None,
+            "homomer_chains": 0,
+            "chain_count": 0,
+            "unique_sequences": 0,
+            "avg_sequence_length": 0.0,
+            "min_sequence_length": 0,
+            "max_sequence_length": 0,
+            "found_in_header": False,
+            "header_info": {
+                "chains": {},  # Keep the original chains structure
+                "compnd": [],
+                "source": [],
+                "author": [],
+                "revdat": [],
+                "jrnl": [],
+                "obsolete": [],
+                "dbref": [],
+                "seqadv": []
+            },
+            "error": None,
+            "source": "PDB header file (obsolete entry)",
+            "raw_header_length": 0,
+            "lines_in_header": 0
+        }
+
+        try:
+            # URL for PDB header file (works for both current and obsolete entries)
+            header_url = f"https://files.rcsb.org/header/{pdb_id}.pdb"
+
+            logger.info(f"Fetching header for obsolete PDB entry: {pdb_id}")
+            logger.debug(f"Header URL: {header_url}")
+
+            response = requests.get(header_url, timeout=timeout)
+
+            if response.status_code == 200:
+                header_content = response.text
+                minimal_info["found_in_header"] = True
+                minimal_info["found_in_api"] = True
+                minimal_info["raw_header_length"] = len(header_content)
+
+                # Parse the header content line by line
+                lines = header_content.split('\n')
+                minimal_info["lines_in_header"] = len(lines)
+
+                # Variables for parsing
+                entity_mapping = {}  # Chain to entity mapping
+                current_entity = {}
+                author_list = []
+                current_source_line = None
+                source_organism_info = {}  # Store organism info by entity
+
+                for line in lines:
+                    line_stripped = line.strip()
+                    if not line_stripped:
+                        continue
+                    record_type = line[:6].strip()
+
+                    # === HEADER INFORMATION ===
+                    if line.startswith("HEADER "):
+                        header_info = line[10:70].strip()
+                        minimal_info["header_info"]["classification"] = header_info[:40].strip()
+                        minimal_info["header_info"]["deposition_date"] = line[50:59].strip() if len(line) >= 59 else None
+
+                    # === TITLE ===
+                    elif line.startswith("TITLE "):
+                        title = line[10:].strip()
+                        if "title" not in minimal_info["header_info"]:
+                            minimal_info["header_info"]["title"] = ""
+                        minimal_info["header_info"]["title"] += title + " "
+
+                    # === COMPND (Compound) - Entity information ===
+                    elif line.startswith("COMPND "):
+                        compnd_line = line[10:].strip()
+                        minimal_info["header_info"]["compnd"].append(compnd_line)
+
+                        # Try to extract MOL_ID and CHAIN information
+                        if "MOL_ID:" in compnd_line:
+                            parts = [p.strip() for p in compnd_line.split(";")]
+                            current_entity = {}
+                            current_entity_id = None
+                            for part in parts:
+                                if "MOL_ID:" in part:
+                                    current_entity_id = part.split(":")[1].strip()
+                                    current_entity["entity_id"] = current_entity_id
+                                elif "MOLECULE:" in part:
+                                    current_entity["molecule"] = part.split(":")[1].strip()
+                                elif "CHAIN:" in part:
+                                    chains = part.split(":")[1].strip()
+                                    if chains and chains != ";":
+                                        chain_list = [c.strip() for c in chains.split(",")]
+                                        current_entity["chains"] = chain_list
+                                        # Map chains to entity
+                                        for chain in chain_list:
+                                            entity_mapping[chain] = current_entity_id
+                                elif "FRAGMENT:" in part:
+                                    current_entity["fragment"] = part.split(":")[1].strip()
+
+                            if current_entity_id and current_entity:
+                                minimal_info["entity_info"][current_entity_id] = current_entity
+
+                    # === SOURCE - Organism information ===
+                    elif line.startswith("SOURCE "):
+                        source_line = line[10:].strip()
+                        minimal_info["header_info"]["source"].append(source_line)
+                        current_source_line = source_line
+
+                        # Parse SOURCE line for organism information
+                        # SOURCE lines can have: ORGANISM_SCIENTIFIC, ORGANISM_COMMON, ORGANISM_TAXID
+                        if "ORGANISM_SCIENTIFIC:" in source_line or "ORGANISM_COMMON:" in source_line or "ORGANISM_TAXID:" in source_line:
+                            parts = [p.strip() for p in source_line.split(";")]
+
+                            organism_scientific = None
+                            organism_common = None
+                            organism_taxid = None
+
+                            for part in parts:
+                                if "ORGANISM_SCIENTIFIC:" in part:
+                                    organism_scientific = part.split(":")[1].strip()
+                                    if organism_scientific and organism_scientific != ";":
+                                        # Remove trailing semicolons
+                                        organism_scientific = organism_scientific.rstrip(';')
+                                        if organism_scientific:
+                                            minimal_info["source_organism"].append(organism_scientific)
+                                            logger.debug(f"Found scientific organism: {organism_scientific}")
+                                elif "ORGANISM_COMMON:" in part:
+                                    organism_common = part.split(":")[1].strip()
+                                    if organism_common and organism_common != ";":
+                                        organism_common = organism_common.rstrip(';')
+                                        if organism_common:
+                                            minimal_info["header_info"]["organism_common"] = organism_common
+                                            logger.debug(f"Found common organism: {organism_common}")
+                                elif "ORGANISM_TAXID:" in part:
+                                    # Parse taxonomy ID - could be like "ORGANISM_TAXID: 9606;"
+                                    taxid_part = part.split(":")[1].strip()
+                                    if taxid_part and taxid_part != ";":
+                                        # Remove any trailing semicolons and spaces
+                                        taxid_part = taxid_part.rstrip(';').strip()
+                                        if taxid_part.isdigit():
+                                            organism_taxid = int(taxid_part)
+                                            minimal_info["taxonomy_ids"].append(organism_taxid)
+                                            logger.debug(f"Found taxonomy ID: {organism_taxid}")
+                                        else:
+                                            # Try to extract digits if there are non-digit characters
+                                            import re
+                                            taxid_match = re.search(r'(\d+)', taxid_part)
+                                            if taxid_match:
+                                                organism_taxid = int(taxid_match.group(1))
+                                                minimal_info["taxonomy_ids"].append(organism_taxid)
+                                                logger.debug(f"Extracted taxonomy ID from '{taxid_part}': {organism_taxid}")
+
+                    # === EXPDTA - Experimental method ===
+                    elif line.startswith("EXPDTA "):
+                        expdta_line = line[10:].strip()
+                        minimal_info["experimental_method"] = expdta_line
+                        minimal_info["header_info"]["expdta"] = expdta_line
+
+                    # === AUTHOR ===
+                    elif line.startswith("AUTHOR "):
+                        author_line = line[10:].strip()
+                        minimal_info["header_info"]["author"].append(author_line)
+                        author_list.extend([a.strip() for a in author_line.split(",")])
+
+                    # === REVDAT - Revision date ===
+                    elif line.startswith("REVDAT "):
+                        revdat_line = line[10:].strip()
+                        minimal_info["header_info"]["revdat"].append(revdat_line)
+
+                    # === JRNL - Journal/citation ===
+                    elif line.startswith("JRNL "):
+                        try:
+                            # Safely extract jrnl_line
+                            jrnl_line = line[10:].strip() if len(line) >= 10 else line[5:].strip()
+                            if jrnl_line:
+                                minimal_info["header_info"]["jrnl"].append(jrnl_line)
+
+                                if "citation" not in minimal_info:
+                                    minimal_info["citation"] = {
+                                        "title": "",
+                                        "authors": [],
+                                        "journal": "",
+                                        "volume": "",
+                                        "page": "",
+                                        "year": ""
+                                    }
+
+                                if jrnl_line.startswith("AUTH"):
+                                    authors = jrnl_line[5:].strip() if len(jrnl_line) >= 5 else jrnl_line
+                                    if authors:
+                                        # Safe split - handle empty results
+                                        author_list = [a.strip() for a in authors.split(",") if a.strip()]
+                                        if author_list:
+                                            minimal_info["citation"]["authors"] = author_list
+
+                                elif jrnl_line.startswith("TITL"):
+                                    title = jrnl_line[5:].strip() if len(jrnl_line) >= 5 else jrnl_line
+                                    if title:
+                                        minimal_info["citation"]["title"] += title + " "
+
+                                elif jrnl_line.startswith("REF"):
+                                    # Journal reference - safely handle
+                                    ref_text = jrnl_line[4:].strip() if len(jrnl_line) >= 4 else jrnl_line
+                                    if ref_text:
+                                        ref_parts = ref_text.split()
+                                        # Safely access with bounds checking
+                                        if len(ref_parts) > 0:
+                                            minimal_info["citation"]["journal"] = ref_parts[0]
+                                        if len(ref_parts) > 1:
+                                            minimal_info["citation"]["volume"] = ref_parts[1]
+                                        if len(ref_parts) > 2:
+                                            minimal_info["citation"]["page"] = ref_parts[2]
+                                        if len(ref_parts) > 3:
+                                            minimal_info["citation"]["year"] = ref_parts[3]
+
+                        except Exception as e:
+                            logger.warning(f"Error parsing JRNL line for {pdb_id}: {e}")
+                            continue
+
+                    # === REMARK - Various remarks ===
+                    elif line.startswith("REMARK "):
+                        remark_num = line[7:10].strip()
+                        remark_text = line[11:].strip()
+
+                        # REMARK 2: Resolution
+                        if remark_num == "2" and "RESOLUTION." in remark_text.upper():
+                            # Try to extract resolution value
+                            import re
+                            resolution_match = re.search(r'(\d+\.\d+)\s*ANGSTROM', remark_text.upper())
+                            if resolution_match:
+                                minimal_info["resolution"] = float(resolution_match.group(1))
+
+                        # REMARK 3: Refinement
+                        elif remark_num == "3" and "R VALUE" in remark_text.upper():
+                            # Try to extract R-factor
+                            import re
+                            rfactor_match = re.search(r'R VALUE\s*(\d+\.\d+)', remark_text.upper())
+                            if rfactor_match:
+                                minimal_info["r_factor"] = float(rfactor_match.group(1))
+
+                        # REMARK 290: Symmetry/space group
+                        elif remark_num == "290" and "SYMMETRY" in remark_text.upper():
+                            # Extract space group
+                            if "SPACE GROUP" in remark_text.upper():
+                                space_group_match = re.search(r'SPACE GROUP:\s*([A-Z0-9/\s]+)', remark_text.upper())
+                                if space_group_match:
+                                    minimal_info["space_group"] = space_group_match.group(1).strip()
+
+                        # REMARK 350: OBSLTE records
+                        elif remark_num == "350":
+                            if "obsolete" not in minimal_info["header_info"]:
+                                minimal_info["header_info"]["obsolete"] = []
+                            minimal_info["header_info"]["obsolete"].append(remark_text)
+
+                            # Parse OBSLTE records to get replacement info
+                            if "OBSLTE" in remark_text:
+                                parts = remark_text.split()
+                                if len(parts) >= 4:
+                                    minimal_info["obsolete_date"] = parts[1]
+                                    # Get all replacement PDB IDs
+                                    replacements = []
+                                    for i in range(3, len(parts)):
+                                        if len(parts[i]) == 4 and parts[i].isalnum():
+                                            replacements.append(parts[i].upper())
+                                    if replacements:
+                                        minimal_info["replaced_by"] = replacements
+                                        logger.info(f"Found OBSLTE record for {pdb_id}: replaced by {replacements}")
+
+                        # REMARK 350 continuation
+                        elif remark_num == "   " and "OBSLTE" in remark_text:
+                            # Continuation of OBSLTE record
+                            if "obsolete" in minimal_info["header_info"] and minimal_info["header_info"]["obsolete"]:
+                                minimal_info["header_info"]["obsolete"][-1] += " " + remark_text
+
+                        elif "REPLACED BY" in remark_text.upper() or "SUPERSEDED BY" in remark_text.upper():
+                            # Alternative format for replacement info
+                            minimal_info["header_info"]["replaced_by_remark"] = remark_text
+                            # Extract PDB IDs from "REPLACED BY" remark
+                            import re
+                            pdb_pattern = r'\b([1-9][0-9A-Za-z]{3})\b'
+                            matches = re.findall(pdb_pattern, remark_text)
+                            if matches:
+                                if minimal_info["replaced_by"] is None:
+                                    minimal_info["replaced_by"] = []
+                                for match in matches:
+                                    match_upper = match.upper()
+                                    if match_upper != pdb_id and match_upper not in minimal_info["replaced_by"]:
+                                        minimal_info["replaced_by"].append(match_upper)
+
+                    # === CRYST1 - Unit cell parameters ===
+                    elif line.startswith("CRYST1"):
+                        if len(line) >= 54:
+                            try:
+                                a = float(line[6:15].strip())
+                                b = float(line[15:24].strip())
+                                c = float(line[24:33].strip())
+                                alpha = float(line[33:40].strip())
+                                beta = float(line[40:47].strip())
+                                gamma = float(line[47:54].strip())
+                                space_group = line[55:66].strip()
+
+                                minimal_info["unit_cell"] = {
+                                    "a": a, "b": b, "c": c,
+                                    "alpha": alpha, "beta": beta, "gamma": gamma
+                                }
+                                if space_group and not minimal_info["space_group"]:
+                                    minimal_info["space_group"] = space_group
+                            except (ValueError, IndexError):
+                                pass
+
+                    # === SEQRES - Sequences ===
+                    elif line.startswith("SEQRES"):
+                        # SEQRES format: SEQRES   1 A  322  SER ALA ASP...
+                        parts = line.split()
+                        if len(parts) >= 4:
+                            chain_id = parts[2]
+                            seqres_num = int(parts[1])
+                            num_res = int(parts[3])
+                            residues = parts[4:]
+
+                            # Initialize chain in the old format (for compatibility)
+                            if chain_id not in minimal_info["header_info"]["chains"]:
+                                minimal_info["header_info"]["chains"][chain_id] = {
+                                    "sequence": "",  # One-letter codes
+                                    "sequence_3letter": "",  # Three-letter codes
+                                    "num_residues": num_res,
+                                    "seqres_records": {}
+                                }
+
+                            # Store this SEQRES record in old format
+                            minimal_info["header_info"]["chains"][chain_id]["seqres_records"][seqres_num] = residues
+
+                            # Convert 3-letter codes to 1-letter codes
+                            one_letter_residues = []
+                            for res in residues:
+                                one_letter = three_to_one_letter_aa(res)
+                                if one_letter:
+                                    one_letter_residues.append(one_letter)
+
+                            # Add to sequence in old format
+                            sequence_fragment = "".join(one_letter_residues)
+                            minimal_info["header_info"]["chains"][chain_id]["sequence"] += sequence_fragment
+                            minimal_info["header_info"]["chains"][chain_id]["sequence_3letter"] += " ".join(residues) + " "
+
+                            # ALSO store in the new format (sequences dict)
+                            if chain_id not in minimal_info["sequences"]:
+                                minimal_info["sequences"][chain_id] = ""
+                                minimal_info["chain_info"][chain_id] = {
+                                    "entity_id": entity_mapping.get(chain_id, "1"),
+                                    "sequence": "",
+                                    "sequence_length": 0,
+                                    "residue_count": num_res,
+                                    "num_seqres_records": 0
+                                }
+
+                            # Add to new format sequences
+                            minimal_info["sequences"][chain_id] += sequence_fragment
+                            minimal_info["chain_info"][chain_id]["sequence"] += sequence_fragment
+                            minimal_info["chain_info"][chain_id]["num_seqres_records"] += 1
+
+                    # === DBREF - Database references (UniProt) ===
+                    elif line.startswith("DBREF "):
+                        minimal_info["header_info"]["dbref"].append(line.strip())
+
+                        # Also parse for UniProt references
+                        if len(line) >= 68:
+                            chain_id = line[12].strip()
+                            db_name = line[26:32].strip()
+                            db_accession = line[33:41].strip()
+
+                            if db_name == "UNP" and chain_id in minimal_info["chain_info"]:
+                                # UniProt reference
+                                if "uniprot_ids" not in minimal_info["chain_info"][chain_id]:
+                                    minimal_info["chain_info"][chain_id]["uniprot_ids"] = []
+                                if db_accession:
+                                    minimal_info["chain_info"][chain_id]["uniprot_ids"].append(db_accession)
+
+                    # === SEQADV - Sequence discrepancies ===
+                    elif line.startswith("SEQADV "):
+                        minimal_info["header_info"]["seqadv"].append(line.strip())
+
+                    # Stop at ATOM records to avoid downloading entire structure
+                    elif line.startswith("ATOM  ") or line.startswith("HETATM"):
+                        break
+
+                # === POST-PROCESSING ===
+
+                # Clean up title
+                if "title" in minimal_info["header_info"]:
+                    minimal_info["header_info"]["title"] = minimal_info["header_info"]["title"].strip()
+                    if minimal_info["citation"] and not minimal_info["citation"]["title"]:
+                        minimal_info["citation"]["title"] = minimal_info["header_info"]["title"]
+
+                # Update chain_info with sequence lengths from OLD format
+                for chain_id, chain_data in minimal_info["header_info"]["chains"].items():
+                    if "sequence" in chain_data:
+                        seq = chain_data.get("sequence", "")
+                        chain_data["sequence_length"] = len(seq)
+
+                        # Clean up 3-letter sequence
+                        if "sequence_3letter" in chain_data:
+                            chain_data["sequence_3letter"] = chain_data["sequence_3letter"].strip()
+
+                        logger.debug(f"Chain {chain_id}: {chain_data['sequence_length']} residues from {len(chain_data.get('seqres_records', {}))} SEQRES records")
+
+                # Update chain_info with sequence lengths from NEW format
+                for chain_id, chain_data in minimal_info["chain_info"].items():
+                    if "sequence" in chain_data:
+                        seq_length = len(chain_data["sequence"])
+                        chain_data["sequence_length"] = seq_length
+
+                # Calculate statistics
+                minimal_info["chain_ids"] = list(minimal_info["sequences"].keys())
+                minimal_info["chain_count"] = len(minimal_info["sequences"])
+
+                if minimal_info["sequences"]:
+                    seq_lengths = [len(seq) for seq in minimal_info["sequences"].values()]
+                    minimal_info["unique_sequences"] = len(set(minimal_info["sequences"].values()))
+                    minimal_info["avg_sequence_length"] = sum(seq_lengths) / len(seq_lengths) if seq_lengths else 0
+                    minimal_info["min_sequence_length"] = min(seq_lengths) if seq_lengths else 0
+                    minimal_info["max_sequence_length"] = max(seq_lengths) if seq_lengths else 0
+
+                # Determine if homomer
+                if minimal_info["sequences"]:
+                    unique_seqs = set(minimal_info["sequences"].values())
+                    if len(unique_seqs) == 1:
+                        minimal_info["is_homomer"] = True
+                        seq = list(unique_seqs)[0]
+                        seq_length = len(seq)
+                        chain_count = len(minimal_info["sequences"])
+                        minimal_info["homomer_chains"] = chain_count
+                        minimal_info["homomer_type"] = f"{chain_count}-mer" if chain_count > 1 else "monomer"
+                        minimal_info["polymer_composition"] = "homomeric protein"
+
+                        # Create sequence clusters
+                        minimal_info["sequence_clusters"] = [{
+                            "sequence": seq,
+                            "entities": ["1"],
+                            "chain_count": chain_count
+                        }]
+
+                # Entity count and IDs
+                minimal_info["entity_count"] = len(minimal_info["entity_info"])
+                minimal_info["entity_ids"] = list(minimal_info["entity_info"].keys())
+
+                # Get chain IDs from old format for compatibility
+                minimal_info["header_info"]["chain_ids"] = list(minimal_info["header_info"]["chains"].keys())
+                minimal_info["header_info"]["num_chains"] = len(minimal_info["header_info"]["chains"])
+
+                # Store authors list
+                if author_list:
+                    minimal_info["header_info"]["authors"] = author_list
+                    # Remove duplicates while preserving order
+                    seen = set()
+                    minimal_info["header_info"]["authors"] = [author for author in author_list if author and not (author in seen or seen.add(author))]
+
+                # Clean organism list
+                if minimal_info["source_organism"]:
+                    # Remove duplicates while preserving order
+                    seen = set()
+                    cleaned_organisms = []
+                    for org in minimal_info["source_organism"]:
+                        if org and org not in seen:
+                            cleaned_organisms.append(org)
+                            seen.add(org)
+                    minimal_info["source_organism"] = cleaned_organisms
+
+                # Clean taxonomy IDs list
+                if minimal_info["taxonomy_ids"]:
+                    # Remove duplicates while preserving order
+                    seen = set()
+                    cleaned_taxids = []
+                    for tid in minimal_info["taxonomy_ids"]:
+                        if tid and tid not in seen:
+                            cleaned_taxids.append(tid)
+                            seen.add(tid)
+                    minimal_info["taxonomy_ids"] = cleaned_taxids
+                    # Store the first taxonomy ID as primary
+                    if minimal_info["taxonomy_ids"]:
+                        minimal_info["primary_taxonomy_id"] = minimal_info["taxonomy_ids"][0]
+                        minimal_info["header_info"]["taxonomy_id"] = minimal_info["taxonomy_ids"][0]
+
+                # Summary
+                total_residues = sum(chain.get("sequence_length", 0) for chain in minimal_info["header_info"]["chains"].values())
+                logger.info(f"Extracted metadata from obsolete PDB {pdb_id}: "
+                           f"{minimal_info['chain_count']} chains, "
+                           f"{minimal_info['entity_count']} entities, "
+                           f"total residues: {total_residues}, "
+                           f"resolution={minimal_info['resolution']}")
+
+                if minimal_info.get("replaced_by"):
+                    logger.info(f"Replaced by: {minimal_info['replaced_by']}")
+
+                if minimal_info.get("source_organism"):
+                    logger.info(f"Organism(s): {', '.join(minimal_info['source_organism'])}")
+
+                if minimal_info.get("taxonomy_ids"):
+                    logger.info(f"Taxonomy ID(s): {', '.join(map(str, minimal_info['taxonomy_ids']))}")
+
+            elif response.status_code == 404:
+                logger.warning(f"Header not found for {pdb_id} (404)")
+                minimal_info["error"] = "Header not found (404)"
+            else:
+                logger.warning(f"Unexpected status code {response.status_code} for {pdb_id}")
+                minimal_info["error"] = f"HTTP {response.status_code}"
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"Timeout fetching header for {pdb_id}")
+            minimal_info["error"] = "Timeout"
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"Request error fetching header for {pdb_id}: {e}")
+            minimal_info["error"] = str(e)
+        except Exception as e:
+            logger.error(f"Unexpected error processing header for {pdb_id}: {e}")
+            minimal_info["error"] = str(e)
+            import traceback
+            logger.debug(traceback.format_exc())
+
+        return minimal_info
 
     def enrich_with_obsolete_info(self, interface: ProteinInterface) -> Dict[str, Any]:
         """
@@ -1059,7 +1290,7 @@ class PPIBenchmarkProcessor:
             return self.pdb_metadata_cache[cache_key]
 
         # Fetch minimal info from header
-        minimal_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
+        minimal_info = fetch_obsolete_pdb_minimal_info(pdb_id)
 
         # Create enriched metadata structure
         enriched_metadata = {
@@ -1111,15 +1342,33 @@ class PPIBenchmarkProcessor:
         """
         Robust method to fetch PDB metadata, with fallback to obsolete entry parsing.
         """
-        # First try the optimized API client
-        if self.pdb_api_client:
-            metadata = self.pdb_api_client.fetch_entry_single(pdb_id)
-            if metadata:
-                enriched = self._enrich_entry_with_entities(pdb_id, metadata)
-                return enriched
-        
-        # Fallback to original method
-        return self._fetch_pdb_metadata_fallback(pdb_id)
+        # First try the normal API
+        metadata = self.fetch_pdb_structure_metadata_robust(pdb_id)
+
+        # If entry is obsolete and we don't have sequences, try header parsing
+        if metadata.get("obsolete", False) and not metadata.get("sequences"):
+            logger.info(f"Fetching minimal info from header for obsolete entry: {pdb_id}")
+            obsolete_info = fetch_obsolete_pdb_minimal_info(pdb_id)
+
+            if obsolete_info.get("found_in_header") and obsolete_info.get("chains"):
+                # Add sequences from header
+                for chain_id, chain_info in obsolete_info["chains"].items():
+                    sequence = chain_info.get("sequence", "")
+                    if sequence:
+                        metadata["sequences"][chain_id] = sequence
+
+                # Update counts
+                if metadata["sequences"]:
+                    metadata["chain_count"] = len(metadata["sequences"])
+                    metadata["unique_sequences"] = len(set(metadata["sequences"].values()))
+
+                # Add header info to metadata
+                metadata["header_info"] = obsolete_info.get("header_info", {})
+                metadata["source"] = "PDB header (obsolete entry)"
+
+                logger.info(f"Added {len(metadata['sequences'])} chain sequences from header for obsolete PDB {pdb_id}")
+
+        return metadata
 
     def _add_pdb_metadata_to_protein_markup(self, protein_markup: Dict[str, Any],
                                           pdb_metadata: Dict[str, Any]) -> Dict[str, Any]:
@@ -1134,9 +1383,396 @@ class PPIBenchmarkProcessor:
         Returns:
             Updated protein markup with PDB metadata
         """
-        # This method remains the same as in the original code
-        # Only showing the function signature to save space
-        pass
+        if not pdb_metadata:
+            return protein_markup
+
+        # Ensure additionalProperty exists
+        if "additionalProperty" not in protein_markup:
+            protein_markup["additionalProperty"] = []
+
+        # Extract structure metadata
+        structure_meta = pdb_metadata.get("structure_metadata", {})
+
+        # Check if entry is obsolete
+        if structure_meta.get("obsolete", False):
+            # Log warning when adding to markup
+            logger.warning(f"Adding obsolete PDB metadata for {structure_meta.get('pdb_id', 'Unknown')} to markup. Replaced by: {structure_meta.get('replaced_by', 'Unknown')}")
+
+            # Add obsolete information first
+            obsolete_properties = [
+                {
+                    "@type": "PropertyValue",
+                    "name": "ObsoleteEntry",
+                    "value": True,
+                    "description": "This PDB entry has been obsoleted and may have been replaced by a newer version"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "PDBStatus",
+                    "value": "OBSOLETE",
+                    "description": "This entry is no longer current in the PDB"
+                }
+            ]
+
+            # Add replacement information if available
+            if structure_meta.get("replaced_by"):
+                if isinstance(structure_meta["replaced_by"], list):
+                    for i, replacement in enumerate(structure_meta["replaced_by"]):
+                        obsolete_properties.append({
+                            "@type": "PropertyValue",
+                            "name": f"ReplacedBy_{i+1}",
+                            "value": replacement,
+                            "description": f"Newer PDB ID that replaces this obsolete entry",
+                            "url": f"https://www.rcsb.org/structure/{replacement}"
+                        })
+                else:
+                    obsolete_properties.append({
+                        "@type": "PropertyValue",
+                        "name": "ReplacedBy",
+                        "value": structure_meta["replaced_by"],
+                        "description": "Newer PDB ID that replaces this obsolete entry",
+                        "url": f"https://www.rcsb.org/structure/{structure_meta['replaced_by']}"
+                    })
+
+            if structure_meta.get("obsolete_date"):
+                obsolete_properties.append({
+                    "@type": "PropertyValue",
+                    "name": "ObsoleteDate",
+                    "value": structure_meta["obsolete_date"],
+                    "description": "Date when this entry was obsoleted"
+                })
+
+            # Add all obsolete properties to markup
+            protein_markup["additionalProperty"].extend(obsolete_properties)
+
+            # Add note about data source
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "MetadataSource",
+                "value": "PDB header file parsing",
+                "description": "Metadata for this obsolete entry was extracted from the PDB header file"
+            })
+
+            # For obsolete entries, add minimal metadata if available
+            if structure_meta.get("found_in_api") or structure_meta.get("found_in_header"):
+                # Prepare metadata summary with taxonomy info
+                metadata_summary = {
+                    "pdb_id": structure_meta.get("pdb_id"),
+                    "obsolete": True,
+                    "replaced_by": structure_meta.get("replaced_by"),
+                    "obsolete_date": structure_meta.get("obsolete_date"),
+                    "found_in_header": structure_meta.get("found_in_header", False),
+                    "deposition_date": structure_meta.get("deposition_date"),
+                    "release_date": structure_meta.get("release_date"),
+                    "has_sequences": bool(structure_meta.get("sequences")),
+                    "chains_from_header": list(structure_meta.get("sequences", {}).keys()) if structure_meta.get("sequences") else [],
+                    "source_organism": structure_meta.get("source_organism", []),
+                    "taxonomy_ids": structure_meta.get("taxonomy_ids", []),
+                    "primary_taxonomy_id": structure_meta.get("primary_taxonomy_id"),
+                    "resolution": structure_meta.get("resolution"),
+                    "experimental_method": structure_meta.get("experimental_method")
+                }
+
+                minimal_metadata = {
+                    "@type": "PropertyValue",
+                    "name": "PDBStructureMetadata",
+                    "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
+                    "value": json.dumps(structure_meta, default=str),
+                    "valueReference": {
+                        "@type": "PropertyValue",
+                        "name": "ParsedPDBMetadata",
+                        "value": metadata_summary
+                    }
+                }
+                protein_markup["additionalProperty"].append(minimal_metadata)
+
+            # Add a note about limited metadata
+            metadata_status = "Obsolete entry - metadata extracted from PDB header file"
+            metadata_description = "This PDB entry has been obsoleted. Structural details were extracted from the PDB header file."
+
+            if structure_meta.get("sequences"):
+                metadata_status += " + sequences from header"
+                metadata_description += " Sequences were extracted from the PDB header file."
+
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PDBMetadataStatus",
+                "value": metadata_status,
+                "description": metadata_description
+            })
+
+        else:
+            # For non-obsolete entries, create a new additionalProperty entry for PDB metadata
+            # Prepare parsed metadata with taxonomy info
+            parsed_metadata = {
+                "resolution": structure_meta.get("resolution"),
+                "experimentalMethod": structure_meta.get("experimental_method"),
+                "depositionDate": structure_meta.get("deposition_date"),
+                "releaseDate": structure_meta.get("release_date"),
+                "sourceOrganism": structure_meta.get("source_organism"),
+                "spaceGroup": structure_meta.get("space_group"),
+                "rFactor": structure_meta.get("r_factor"),
+                "entityCount": structure_meta.get("entity_count"),
+                "chainCount": structure_meta.get("chain_count"),
+                "uniqueSequences": structure_meta.get("unique_sequences"),
+                "isHomomer": structure_meta.get("is_homomer"),
+                "homomerType": structure_meta.get("homomer_type")
+            }
+
+            # Add taxonomy IDs if available from entity_info
+            if structure_meta.get("entity_info"):
+                taxonomy_ids = []
+                for entity_id, entity_info in structure_meta["entity_info"].items():
+                    if entity_info.get("taxonomy_id"):
+                        tid = entity_info["taxonomy_id"]
+                        if tid not in taxonomy_ids:
+                            taxonomy_ids.append(tid)
+                if taxonomy_ids:
+                    parsed_metadata["taxonomyIds"] = taxonomy_ids
+                    parsed_metadata["primaryTaxonomyId"] = taxonomy_ids[0]
+
+            pdb_metadata_property = {
+                "@type": "PropertyValue",
+                "name": "PDBStructureMetadata",
+                "description": "Structural metadata from RCSB Protein Data Bank",
+                "value": json.dumps(pdb_metadata, default=str),
+                "valueReference": {
+                    "@type": "PropertyValue",
+                    "name": "ParsedPDBMetadata",
+                    "value": parsed_metadata
+                }
+            }
+
+            # Add to protein markup
+            protein_markup["additionalProperty"].append(pdb_metadata_property)
+
+            # Add note about data completeness
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PDBMetadataStatus",
+                "value": "Complete metadata available",
+                "description": "This PDB entry is current and all metadata has been fetched successfully"
+            })
+
+        # COMMON PROPERTIES FOR BOTH OBSOLETE AND NON-OBSOLETE ENTRIES
+
+        # Add individual properties if they exist
+        if structure_meta.get("resolution"):
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "Resolution",
+                "value": float(structure_meta["resolution"]),
+                "unitCode": "Å",
+                "description": "X-ray crystallography resolution"
+            })
+
+        if structure_meta.get("experimental_method"):
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "ExperimentalMethod",
+                "value": structure_meta["experimental_method"],
+                "description": "Experimental method used for structure determination"
+            })
+
+        # Add organism information with taxonomy IDs (works for both API and header-derived data)
+        if structure_meta.get("source_organism"):
+            organisms = structure_meta["source_organism"]
+            taxonomy_ids = structure_meta.get("taxonomy_ids", [])
+
+            for i, org in enumerate(organisms):
+                # Get corresponding taxonomy ID if available
+                taxonomy_id = None
+                if i < len(taxonomy_ids):
+                    taxonomy_id = taxonomy_ids[i]
+                elif structure_meta.get("primary_taxonomy_id") and i == 0:
+                    # Use primary taxonomy ID for first organism
+                    taxonomy_id = structure_meta["primary_taxonomy_id"]
+                elif structure_meta.get("entity_info"):
+                    # Try to find taxonomy ID from entity_info
+                    for entity_id, entity_info in structure_meta["entity_info"].items():
+                        if entity_info.get("organism") == org and entity_info.get("taxonomy_id"):
+                            taxonomy_id = entity_info["taxonomy_id"]
+                            break
+
+                organism_property = {
+                    "@type": "PropertyValue",
+                    "name": "SourceOrganism",
+                    "value": org,
+                    "description": "Organism from which the protein was isolated"
+                }
+
+                if taxonomy_id:
+                    organism_property["taxonomyId"] = taxonomy_id
+                    organism_property["taxonomyUrl"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={taxonomy_id}"
+                    organism_property["description"] = f"{org} (taxonomy ID: {taxonomy_id})"
+
+                protein_markup["additionalProperty"].append(organism_property)
+
+        # Add homomer information
+        if structure_meta.get("is_homomer"):
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "HomomericStructure",
+                "value": True,
+                "description": f"This is a homomeric {structure_meta.get('homomer_type', 'multimer')}"
+            })
+
+            if structure_meta.get("homomer_type"):
+                protein_markup["additionalProperty"].append({
+                    "@type": "PropertyValue",
+                    "name": "HomomerType",
+                    "value": structure_meta["homomer_type"],
+                    "description": "Type of homomeric assembly"
+                })
+
+        # Add ALL chain sequences (works for both API and header-derived data)
+        if structure_meta.get("sequences"):
+            # Determine source for description
+            sequence_source = "RCSB API"
+            header_url = None
+            if structure_meta.get("obsolete", False):
+                sequence_source = "PDB header file (obsolete entry)"
+                header_url = f"https://files.rcsb.org/header/{structure_meta.get('pdb_id', '')}.pdb"
+
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "ChainCount",
+                "value": len(structure_meta["sequences"]),
+                "description": f"Number of chains in the structure (from {sequence_source})"
+            })
+
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "UniqueSequenceCount",
+                "value": len(set(structure_meta["sequences"].values())),
+                "description": f"Number of unique amino acid sequences (from {sequence_source})"
+            })
+
+            # Add sequence information for each chain
+            for chain_id, sequence in structure_meta["sequences"].items():
+                chain_info = structure_meta.get("chain_info", {}).get(chain_id, {})
+
+                sequence_property = {
+                    "@type": "PropertyValue",
+                    "name": f"Chain_{chain_id}_Sequence",
+                    "value": sequence,
+                    "description": f"Amino acid sequence for chain {chain_id} (length: {len(sequence)}) from {sequence_source}",
+                    "chainId": chain_id,
+                    "entityId": chain_info.get("entity_id"),
+                    "sequenceLength": len(sequence),
+                    "sequenceSource": sequence_source
+                }
+
+                # Add source URL
+                if header_url:
+                    sequence_property["sourceUrl"] = header_url
+                else:
+                    sequence_property["sourceUrl"] = f"https://www.rcsb.org/structure/{structure_meta.get('pdb_id', '')}"
+
+                protein_markup["additionalProperty"].append(sequence_property)
+
+        if structure_meta.get("citation"):
+            citation = structure_meta["citation"]
+            protein_markup["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PrimaryCitation",
+                "value": citation.get("title", "Unknown"),
+                "description": "Primary publication for this structure"
+            })
+
+            if "doi" in citation:
+                protein_markup["additionalProperty"].append({
+                    "@type": "PropertyValue",
+                    "name": "PublicationDOI",
+                    "value": citation["doi"],
+                    "description": "DOI of the primary publication"
+                })
+
+        # Add entity information
+        if structure_meta.get("entity_info"):
+            for entity_id, entity_info in structure_meta["entity_info"].items():
+                if entity_info.get("sequence"):
+                    entity_property = {
+                        "@type": "PropertyValue",
+                        "name": f"Entity_{entity_id}",
+                        "value": f"Chains: {', '.join(entity_info.get('chain_ids', []))}, Length: {len(entity_info['sequence'])}",
+                        "description": f"Entity {entity_id} information"
+                    }
+
+                    # Add organism and taxonomy ID if available
+                    if entity_info.get("organism"):
+                        entity_property["organism"] = entity_info["organism"]
+                    if entity_info.get("taxonomy_id"):
+                        entity_property["taxonomyId"] = entity_info["taxonomy_id"]
+                        entity_property["taxonomyUrl"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={entity_info['taxonomy_id']}"
+
+                    protein_markup["additionalProperty"].append(entity_property)
+
+        # CRITICAL: Add taxonomic information to protein markup if organism is available
+        # This updates/replaces the placeholder taxonomicRange with actual NCBI taxonomy data
+        if structure_meta.get("source_organism") and structure_meta["source_organism"]:
+            # ALWAYS update/replace the taxonomicRange with actual organism data
+            primary_organism = structure_meta["source_organism"][0]
+
+            # Determine the taxonomy ID for this organism
+            taxonomy_id = None
+
+            # Priority 1: Use taxonomy IDs from header parsing (for obsolete entries)
+            if structure_meta.get("taxonomy_ids") and structure_meta["taxonomy_ids"]:
+                taxonomy_id = structure_meta["taxonomy_ids"][0]
+                logger.info(f"Using taxonomy ID from header parsing for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
+
+            # Priority 2: Use primary_taxonomy_id from header
+            elif structure_meta.get("primary_taxonomy_id"):
+                taxonomy_id = structure_meta["primary_taxonomy_id"]
+                logger.info(f"Using primary taxonomy ID from header for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
+
+            # Priority 3: Check header_info for taxonomy_id
+            elif structure_meta.get("header_info", {}).get("taxonomy_id"):
+                taxonomy_id = structure_meta["header_info"]["taxonomy_id"]
+                logger.info(f"Using taxonomy ID from header_info for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
+
+            # Priority 4: Check entity_info for taxonomy IDs (for non-obsolete entries)
+            elif structure_meta.get("entity_info"):
+                for entity_id, entity_info in structure_meta["entity_info"].items():
+                    if entity_info.get("organism") == primary_organism and entity_info.get("taxonomy_id"):
+                        taxonomy_id = entity_info["taxonomy_id"]
+                        logger.info(f"Using taxonomy ID from entity_info for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
+                        break
+
+            # Update the taxonomicRange field (overwrites the placeholder)
+            taxonomic_range = {
+                "@type": "DefinedTerm",
+                "name": primary_organism,
+                "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+                "description": "Organism taxonomy information from PDB metadata"
+            }
+
+            # Add taxonomy ID if available - CRITICAL for proper taxonomic linking
+            if taxonomy_id:
+                taxonomic_range["termCode"] = str(taxonomy_id)
+                taxonomic_range["url"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={taxonomy_id}"
+                taxonomic_range["identifier"] = f"taxonomy:{taxonomy_id}"
+                logger.info(f"✅ Setting taxonomicRange for {structure_meta.get('pdb_id', '')}: {primary_organism} (taxonomy ID: {taxonomy_id})")
+
+                # Also add a separate taxonomy ID property for easy reference
+                protein_markup["additionalProperty"].append({
+                    "@type": "PropertyValue",
+                    "name": "NCBI_Taxonomy_ID",
+                    "value": str(taxonomy_id),
+                    "description": f"NCBI Taxonomy ID for {primary_organism}",
+                    "url": f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={taxonomy_id}"
+                })
+            else:
+                logger.warning(f"⚠️ No taxonomy ID found for {structure_meta.get('pdb_id', '')}. Using organism name only: {primary_organism}")
+                # Still update taxonomicRange but without termCode
+                taxonomic_range["description"] = f"Organism: {primary_organism} (taxonomy ID not found in PDB metadata)"
+
+            protein_markup["taxonomicRange"] = taxonomic_range
+        else:
+            logger.warning(f"No organism information found for {structure_meta.get('pdb_id', '')}. TaxonomicRange will use placeholder.")
+
+        return protein_markup
 
     def _add_cluster_properties_to_markup(self, markup: Dict[str, Any], interface: ProteinInterface) -> Dict[str, Any]:
         """
@@ -1351,20 +1987,6 @@ class PPIBenchmarkProcessor:
             else:
                 logger.info(f"Successfully parsed BLASTClust file. Found {len(self.cluster_processor.cluster_mapping)} interface-cluster mappings")
 
-        # OPTIMIZATION: Pre-fetch PDB metadata for all unique PDB IDs in batch mode
-        if self.fetch_pdb_metadata and self.pdb_api_client:
-            # Extract all unique PDB IDs from the dataset
-            unique_pdb_ids = []
-            for idx, row in self.dataset.iterrows():
-                pdb_id = self._get_column_value(row, 'id')
-                if pdb_id and not pd.isna(pdb_id):
-                    pdb_id_clean = str(pdb_id).strip().upper()
-                    if pdb_id_clean not in unique_pdb_ids:
-                        unique_pdb_ids.append(pdb_id_clean)
-            
-            logger.info(f"Pre-fetching PDB metadata for {len(unique_pdb_ids)} unique structures...")
-            self.fetch_pdb_metadata_batch(unique_pdb_ids)
-
         self.protein_interfaces = []
         skipped_count = 0
         processed_count = 0
@@ -1538,6 +2160,7 @@ class PPIBenchmarkProcessor:
                     except Exception as e:
                         logger.warning(f"Could not validate chains for {interface.InterfaceID}: {e}")
 
+
                 # Continue with annotated chains
 
                 # Add optional fields if present in the CSV
@@ -1660,6 +2283,8 @@ class PPIBenchmarkProcessor:
 
                     if obsolete_examples:
                         logger.warning(f"Sample obsolete entries: {', '.join(obsolete_examples)}")
+
+
 
             # Avoid division by zero
             if self.protein_interfaces:
@@ -1934,6 +2559,7 @@ class PPIBenchmarkProcessor:
                 "description": "Second chain in the interface (may be updated from assembly)"
             }
         ])
+
 
         # Add symmetry operations
         if interface.SymmetryOp1:
@@ -2399,18 +3025,6 @@ class PPIBenchmarkProcessor:
                 "heteromeric_structures": sum(1 for meta in self.pdb_metadata_cache.values() if meta.get("is_homomer", False) is False and meta.get("found_in_api", False))
             }
 
-            # Add API usage statistics
-            if self.pdb_api_client:
-                api_stats = self.pdb_api_client.get_statistics()
-                pdb_stats["api_optimization"] = {
-                    "total_api_calls": api_stats["api_calls"],
-                    "cache_hits": api_stats["cache_hits"],
-                    "cache_misses": api_stats["cache_misses"],
-                    "cache_hit_rate": f"{api_stats['cache_hits']/(api_stats['cache_hits']+api_stats['cache_misses'])*100:.1f}%" if (api_stats['cache_hits']+api_stats['cache_misses']) > 0 else "0%",
-                    "batches_processed": api_stats["batches_processed"],
-                    "obsolete_entries": api_stats["obsolete_entries"]
-                }
-
             # Add resolution statistics
             resolutions = [meta.get("resolution") for meta in self.pdb_metadata_cache.values()
                           if meta.get("resolution") is not None]
@@ -2478,7 +3092,7 @@ class PPIBenchmarkProcessor:
 
         return fair_package
 
-    def save_bioschemas_markup(self, output_dir: str = "bioschema") -> Dict[str, Any]:
+    def save_bioschemas_markup(self, output_dir: str = "bioschemas_output") -> Dict[str, Any]:
         """
         Save all generated Bioschemas markup to files.
 
@@ -2612,10 +3226,6 @@ class PPIBenchmarkProcessor:
         logger.info(f"  Each file includes all interface features in additionalProperty")
         if self.fetch_pdb_metadata:
             logger.info(f"  PDB metadata fetched for {len(self.pdb_metadata_cache)} unique structures")
-            if self.pdb_api_client:
-                api_stats = self.pdb_api_client.get_statistics()
-                logger.info(f"  API Optimization: {api_stats['api_calls']} calls, "
-                           f"{api_stats['cache_hits']} cache hits ({api_stats['cache_hits']/(api_stats['cache_hits']+api_stats['cache_misses'])*100:.1f}% hit rate)")
         if self.check_pdb_label or self.check_cif_label:
             updated_count = sum(1 for pi in self.protein_interfaces
                                if pi.LabelChain1 and pi.LabelChain2 and
@@ -2692,20 +3302,6 @@ class PPIBenchmarkProcessor:
                 "metadata_cache_file": "pdb_metadata_cache.json" if self.pdb_metadata_cache else None
             }
 
-            # Add API optimization statistics
-            if self.pdb_api_client:
-                api_stats = self.pdb_api_client.get_statistics()
-                manifest["pdb_metadata"]["api_optimization"] = {
-                    "total_api_calls": api_stats["api_calls"],
-                    "cache_hits": api_stats["cache_hits"],
-                    "cache_misses": api_stats["cache_misses"],
-                    "cache_hit_rate": f"{api_stats['cache_hits']/(api_stats['cache_hits']+api_stats['cache_misses'])*100:.1f}%" if (api_stats['cache_hits']+api_stats['cache_misses']) > 0 else "0%",
-                    "batches_processed": api_stats["batches_processed"],
-                    "batch_size": self.pdb_api_client.batch_size,
-                    "request_delay": self.pdb_api_client.request_delay,
-                    "cache_expiry_hours": self.pdb_api_client.cache_expiry.total_seconds() / 3600
-                }
-
         # Add assembly checking info to manifest
         if self.check_pdb_label or self.check_cif_label:
             manifest["assembly_checks"] = {
@@ -2773,9 +3369,6 @@ class PPIBenchmarkProcessor:
         return cleaned
 
 
-# The rest of the helper functions (three_to_one_letter_aa, extract_chain_ids_from_pdb_gz, etc.)
-# remain exactly the same as in the original code
-
 def three_to_one_letter_aa(residue_3letter: str) -> str:
     """
     Convert 3-letter amino acid code to 1-letter code.
@@ -2823,8 +3416,71 @@ def extract_chain_ids_from_pdb_gz(pdb_gz_path: str) -> Set[str]:
     Returns:
         Set of chain IDs found in the PDB file
     """
-    # This function remains the same as in the original code
-    pass
+    chain_ids = set()
+
+    # Check if it's a URL (starts with http:// or https://)
+    is_url = pdb_gz_path.startswith(('http://', 'https://'))
+
+    if not is_url and not os.path.exists(pdb_gz_path):
+        logger.warning(f"PDB file not found: {pdb_gz_path}")
+        return chain_ids
+
+    try:
+        if is_url:
+            # Handle HTTP/HTTPS URL
+            logger.debug(f"Downloading PDB file from URL: {pdb_gz_path}")
+            response = requests.get(pdb_gz_path, stream=True)
+            response.raise_for_status()  # Raise exception for bad status codes
+
+            # Create a file-like object from the response content
+            # Use streaming for large files to avoid memory issues
+            file_obj = BytesIO(response.content)
+            file_source = pdb_gz_path
+
+        else:
+            # Handle local file
+            file_obj = pdb_gz_path  # gzip.open can handle file paths directly
+            file_source = pdb_gz_path
+
+        # Open and process the gzipped file
+        # 'rt' mode for reading as text
+        with gzip.open(file_obj, 'rt') as f:
+            for line in f:
+                # Only look at ATOM records (6 characters "ATOM  " with space)
+                if line.startswith('ATOM  '):
+                    # Chain ID is at position 21 (0-indexed, character 21)
+                    # According to PDB format: columns 21-22 contain chain identifier
+                    if len(line) >= 22:
+                        chain_id = line[21].strip()
+                        if chain_id:  # Only add non-empty chain IDs
+                            chain_ids.add(chain_id)
+                # Also check HETATM records if needed (uncomment line below)
+                # elif line.startswith('HETATM'):
+                #     if len(line) >= 22:
+                #         chain_id = line[21].strip()
+                #         if chain_id:
+                #             chain_ids.add(chain_id)
+
+                # Stop early if we reach END or ENDMDL to save time
+                elif line.startswith('END') or line.startswith('ENDMDL'):
+                    break
+
+        logger.debug(f"Found {len(chain_ids)} chain(s) in {file_source}: {sorted(chain_ids)}")
+        return chain_ids
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Failed to download from URL {pdb_gz_path}: {e}")
+        return chain_ids
+    except gzip.BadGzipFile as e:
+        logger.error(f"File is not a valid gzip file: {pdb_gz_path} - {e}")
+        return chain_ids
+    except UnicodeDecodeError as e:
+        logger.error(f"File encoding error: {pdb_gz_path} - {e}")
+        return chain_ids
+    except Exception as e:
+        logger.error(f"Unexpected error processing {pdb_gz_path}: {e}")
+        return chain_ids
+
 
 def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
     """
@@ -2837,8 +3493,222 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
     Returns:
         Set of chain IDs found in the mmCIF file
     """
-    # This function remains the same as in the original code
-    pass
+    chain_ids = set()
+
+    # Check if it's a URL
+    is_url = mmcif_gz_path.startswith(('http://', 'https://'))
+
+    if not is_url and not os.path.exists(mmcif_gz_path):
+        logger.warning(f"mmCIF file not found: {mmcif_gz_path}")
+        return chain_ids
+
+    try:
+        # Handle URL or local file
+        if is_url:
+            logger.debug(f"Downloading mmCIF file from URL: {mmcif_gz_path}")
+            response = requests.get(mmcif_gz_path, timeout=30)
+            response.raise_for_status()
+            file_obj = BytesIO(response.content)
+        else:
+            file_obj = mmcif_gz_path
+
+        with gzip.open(file_obj, 'rt') as f:
+            content = f.read()
+
+        logger.debug(f"Processing mmCIF file: {mmcif_gz_path}")
+
+        # APPROACH 1: Parse atom_site loop properly
+        # mmCIF files use a loop structure with column headers
+        lines = content.split('\n')
+
+        # Find atom_site loop
+        atom_site_start = -1
+        atom_site_end = -1
+        in_atom_site_loop = False
+        atom_site_headers = []
+
+        for i, line in enumerate(lines):
+            line = line.strip()
+
+            if line.startswith('loop_'):
+                in_atom_site_loop = False
+                atom_site_headers = []
+
+            elif line.startswith('_atom_site.'):
+                if not in_atom_site_loop:
+                    in_atom_site_loop = True
+                    atom_site_start = i
+                atom_site_headers.append(line)
+
+            elif in_atom_site_loop and line and not line.startswith('_'):
+                # This is data line
+                if atom_site_end == -1:
+                    atom_site_end = i
+                # Process data lines
+                if len(atom_site_headers) > 0:
+                    # Find auth_asym_id or label_asym_id column index
+                    auth_asym_idx = -1
+                    label_asym_idx = -1
+
+                    for j, header in enumerate(atom_site_headers):
+                        if '.auth_asym_id' in header:
+                            auth_asym_idx = j
+                        elif '.label_asym_id' in header:
+                            label_asym_idx = j
+
+                    # Use label_asym_id if available, otherwise auth_asym_idx
+                    chain_idx = label_asym_idx if label_asym_idx != -1 else auth_asym_idx
+
+                    if chain_idx != -1:
+                        # Split the data line (mmCIF uses whitespace)
+                        parts = line.split()
+                        if len(parts) > chain_idx:
+                            chain_id = parts[chain_idx]
+                            # Clean chain ID (remove quotes and whitespace)
+                            chain_id = chain_id.strip("'\" \t")
+                            if chain_id and chain_id not in ['.', '?']:
+                                chain_ids.add(chain_id)
+                                # Stop after collecting some chains (we don't need all atoms)
+                                if len(chain_ids) >= 10:  # 10 different chains is more than enough
+                                    break
+            elif in_atom_site_loop and (line.startswith('_') or line.startswith('#')):
+                # New section starting, end of atom_site loop
+                break
+
+        logger.debug(f"Approach 1 (atom_site): Found {len(chain_ids)} chains: {sorted(chain_ids)}")
+
+        # APPROACH 2: Parse struct_asym category (asymmetric units)
+        if not chain_ids:
+            # Look for _struct_asym.id in a loop
+            in_struct_asym_loop = False
+            struct_asym_id_idx = -1
+
+            for i, line in enumerate(lines):
+                line = line.strip()
+
+                if line.startswith('loop_'):
+                    in_struct_asym_loop = False
+                    struct_asym_id_idx = -1
+
+                elif line.startswith('_struct_asym.id'):
+                    in_struct_asym_loop = True
+                    struct_asym_id_idx = 0
+                    # Count position in header
+                    header_count = 0
+                    j = i
+                    while j < len(lines) and lines[j].strip().startswith('_struct_asym.'):
+                        if lines[j].strip() == '_struct_asym.id':
+                            struct_asym_id_idx = header_count
+                        header_count += 1
+                        j += 1
+
+                elif in_struct_asym_loop and line and not line.startswith('_'):
+                    # Data line in struct_asym loop
+                    parts = line.split()
+                    if len(parts) > struct_asym_id_idx:
+                        chain_id = parts[struct_asym_id_idx].strip("'\"")
+                        if chain_id and chain_id not in ['.', '?']:
+                            chain_ids.add(chain_id)
+
+                elif in_struct_asym_loop and (line.startswith('_') or line.startswith('#')):
+                    # End of struct_asym loop
+                    break
+
+        logger.debug(f"Approach 2 (struct_asym): Found {len(chain_ids)} chains: {sorted(chain_ids)}")
+
+        # APPROACH 3: Look for entity_poly.pdbx_strand_id
+        if not chain_ids:
+            # Find entity_poly section
+            in_entity_poly = False
+            strand_id_idx = -1
+            data_lines_processed = 0
+
+            for i, line in enumerate(lines):
+                line = line.strip()
+
+                if line.startswith('_entity_poly.pdbx_strand_id'):
+                    # Found strand_id field, now look for its value
+                    # Values in mmCIF can be on the same line or next line
+                    if '#' in line:
+                        # Comment, skip
+                        continue
+
+                    # Look for value
+                    parts = line.split()
+                    if len(parts) > 1:
+                        # Value might be on same line
+                        for part in parts[1:]:
+                            if part.startswith('#'):
+                                break
+                            value = part.strip("'\"")
+                            if value and value not in ['.', '?']:
+                                # Could be comma-separated list
+                                if ',' in value:
+                                    for chain in value.split(','):
+                                        chain = chain.strip()
+                                        if chain:
+                                            chain_ids.add(chain)
+                                else:
+                                    chain_ids.add(value)
+
+                    # Also check next line if current line ends with value continuation
+                    if i + 1 < len(lines):
+                        next_line = lines[i + 1].strip()
+                        if next_line and not next_line.startswith('_'):
+                            value = next_line.strip("'\"")
+                            if value and value not in ['.', '?']:
+                                if ',' in value:
+                                    for chain in value.split(','):
+                                        chain = chain.strip()
+                                        if chain:
+                                            chain_ids.add(chain)
+                                else:
+                                    chain_ids.add(value)
+
+        logger.debug(f"Approach 3 (entity_poly): Found {len(chain_ids)} chains: {sorted(chain_ids)}")
+
+        # APPROACH 4: Simple regex fallback for common patterns
+        if not chain_ids:
+            import re
+
+            # Look for single-letter chain IDs in data sections
+            # Pattern for single character chain IDs (A-Z, a-z, 0-9) in data context
+            chain_pattern = r"['\"]?([A-Za-z0-9])['\"]?(?:\s|$)"
+
+            # Search in the first 5000 characters (should include headers and some data)
+            search_content = content[:5000]
+            matches = re.findall(chain_pattern, search_content)
+
+            # Count occurrences to filter out random letters
+            chain_counts = {}
+            for match in matches:
+                if match.isalnum():
+                    chain_counts[match] = chain_counts.get(match, 0) + 1
+
+            # Only keep chains that appear multiple times (likely real chains)
+            for chain, count in chain_counts.items():
+                if count >= 3:  # Appears at least 3 times
+                    chain_ids.add(chain)
+
+        logger.debug(f"Approach 4 (regex fallback): Found {len(chain_ids)} chains: {sorted(chain_ids)}")
+
+        # Clean up: remove any obviously wrong chains
+        valid_chains = set()
+        for chain in chain_ids:
+            # Chain IDs are typically 1-2 alphanumeric characters
+            if chain and len(chain) <= 2 and chain.isalnum():
+                valid_chains.add(chain)
+
+        logger.debug(f"After cleanup: {len(valid_chains)} chains: {sorted(valid_chains)}")
+
+        return valid_chains
+
+    except Exception as e:
+        logger.error(f"Error extracting chain IDs from mmCIF file {mmcif_gz_path}: {e}")
+        import traceback
+        traceback.print_exc()
+        return set()
+
 
 def update_protein_interface_with_actual_chains(interface: ProteinInterface,
                                                pdb_file_path: Optional[str] = None,
@@ -2854,8 +3724,24 @@ def update_protein_interface_with_actual_chains(interface: ProteinInterface,
     Returns:
         Updated ProteinInterface object with actual chain IDs
     """
-    # This function remains the same as in the original code
-    pass
+    # Get actual chains from structure file
+    actual_chain1, actual_chain2, validation = get_actual_interface_chains(
+        interface.InterfaceID,
+        interface.AuthChain1,
+        interface.AuthChain2,
+        pdb_file_path,
+        mmcif_file_path
+    )
+
+    # Update the interface object
+    interface.LabelChain1 = actual_chain1
+    interface.LabelChain2 = actual_chain2
+
+    # Store validation info as an attribute (optional)
+    interface.chain_validation = validation
+
+    return interface
+
 
 def get_actual_interface_chains(pdb_id: str,
                                auth_chain1: str,
@@ -2875,8 +3761,32 @@ def get_actual_interface_chains(pdb_id: str,
     Returns:
         Tuple of (actual_chain1, actual_chain2, validation_info)
     """
-    # This function remains the same as in the original code
-    pass
+    # Create interface chains string for validation
+    interface_chains = f"{auth_chain1}-{auth_chain2}" if auth_chain1 and auth_chain2 else f"{auth_chain1}{auth_chain2}"
+
+    # Validate against actual structure file
+    validation = validate_interface_chains(pdb_id, interface_chains, pdb_file_path, mmcif_file_path)
+    # Use actual chains from file if validation failed or chains are the same
+    if not validation["all_chains_exist"] or (auth_chain1 and auth_chain2 and auth_chain1 == auth_chain2):
+        actual_chains = validation["actual_chains_found"]
+        if actual_chains and len(actual_chains) >= 1:
+            # Try to find reasonable chain IDs
+            if len(actual_chains) >= 2:
+                # Use first two chains from the structure
+                actual_chain1, actual_chain2 = actual_chains[0], actual_chains[1]
+                logger.info(f"Using actual chains from structure {pdb_id}: {actual_chain1}-{actual_chain2} "
+                          f"(instead of annotated: {auth_chain1}-{auth_chain2})")
+                return actual_chain1, actual_chain2, validation
+            elif len(actual_chains) == 1:
+                # Only one chain found - might be homodimer
+                actual_chain1, actual_chain2 = actual_chains[0], actual_chains[0]
+                logger.info(f"Using single chain from structure {pdb_id}: {actual_chain1} for both chains "
+                          f"(instead of annotated: {auth_chain1}-{auth_chain2})")
+                return actual_chain1, actual_chain2, validation
+
+    # If validation passed or no actual chains found, use annotated values
+    return auth_chain1, auth_chain2, validation
+
 
 def validate_interface_chains(pdb_id: str,
                              interface_chains: str,
@@ -2894,8 +3804,78 @@ def validate_interface_chains(pdb_id: str,
     Returns:
         Dictionary with validation results
     """
-    # This function remains the same as in the original code
-    pass
+    # Parse interface chains
+    if '-' in interface_chains:
+        chain1, chain2 = interface_chains.split('-')
+    else:
+        # Assume single character chains if no separator
+        if len(interface_chains) >= 2:
+            chain1, chain2 = interface_chains[0], interface_chains[1]
+        else:
+            chain1, chain2 = interface_chains, ""
+
+    file_checked = None
+    actual_file_path = None
+    actual_chains = []
+
+    # Try PDB file if path is provided
+    if pdb_file_path:
+        logger.debug(f"Checking PDB file: {pdb_file_path}")
+        actual_chains = extract_chain_ids_from_pdb_gz(pdb_file_path)
+        actual_chains = list(actual_chains)
+        actual_chains.sort()
+
+        if actual_chains:
+            file_checked = "PDB"
+            actual_file_path = pdb_file_path
+            logger.debug(f"Found {len(actual_chains)} chains in PDB: {actual_chains}")
+
+    # If PDB file doesn't exist or has no chains, and mmCIF file path is provided, try mmCIF
+    if not actual_chains and mmcif_file_path:
+        logger.debug(f"Checking mmCIF file: {mmcif_file_path}")
+        actual_chains = extract_chain_ids_from_mmcif_gz(mmcif_file_path)
+        actual_chains = list(actual_chains)
+        actual_chains.sort()
+
+        if actual_chains:
+            file_checked = "mmCIF"
+            actual_file_path = mmcif_file_path
+            logger.debug(f"Found {len(actual_chains)} chains in mmCIF: {actual_chains}")
+
+    # If no files were checked or no chains found
+    if not file_checked:
+        file_checked = "None"
+        actual_file_path = "No structure file provided"
+
+    # Check if expected chains exist
+    chain1_exists = chain1 in actual_chains if chain1 and actual_chains else False
+    chain2_exists = chain2 in actual_chains if chain2 and actual_chains else False
+
+    # Determine validation status
+    validation_result = {
+        "pdb_id": pdb_id,
+        "expected_chains": interface_chains,
+        "expected_chain1": chain1,
+        "expected_chain2": chain2,
+        "actual_chains_found": sorted(actual_chains) if actual_chains else [],
+        "chain1_exists": chain1_exists,
+        "chain2_exists": chain2_exists,
+        "all_chains_exist": chain1_exists and chain2_exists,
+        "file_checked": file_checked,
+        "file_path": actual_file_path,
+        "pdb_file_provided": pdb_file_path is not None,
+        "mmcif_file_provided": mmcif_file_path is not None
+    }
+
+    # Log warnings if chains don't match
+    if actual_chains:
+        if not chain1_exists and chain1:
+            logger.warning(f"Chain '{chain1}' not found in {pdb_id}. Actual chains: {sorted(actual_chains)}")
+        if not chain2_exists and chain2:
+            logger.warning(f"Chain '{chain2}' not found in {pdb_id}. Actual chains: {sorted(actual_chains)}")
+
+    return validation_result
+
 
 def parse_arguments():
     """Parse command line arguments."""
@@ -2922,12 +3902,14 @@ Examples:
     parser.add_argument(
         "--mmcif-url",
         default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/",
+        #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/",
         help="Base URL for mmCIF structure files"
     )
 
     parser.add_argument(
         "--pdb-url",
         default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/",
+        #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/",
         help="Base URL for PDB structure files"
     )
 
@@ -2945,8 +3927,8 @@ Examples:
 
     parser.add_argument(
         "--output", "-o",
-        default="bioschema",
-        help="Output directory for generated files (default: 'bioschema')"
+        default="bioschemas_output",
+        help="Output directory for generated files (default: 'bioschemas_output')"
     )
 
     parser.add_argument(
@@ -3004,6 +3986,7 @@ Examples:
 
     return parser.parse_args()
 
+
 def debug_csv_parsing(csv_url: str, separator: str = ","):
     """Debug function to inspect CSV parsing issues."""
     print(f"\n=== DEBUGGING CSV PARSING ===")
@@ -3020,7 +4003,6 @@ def debug_csv_parsing(csv_url: str, separator: str = ","):
 
             print(f"\n=== CSV STRUCTURE ===")
             print(f"Total lines: {len(lines)}")
-            print(f"First 100 characters: {repr(content[:100])}")
 
             print(f"\nFirst 5 lines:")
             for i, line in enumerate(lines[:5]):
@@ -3028,88 +4010,64 @@ def debug_csv_parsing(csv_url: str, separator: str = ","):
 
             print(f"\n=== TRYING TO PARSE WITH PANDAS ===")
             import pandas as pd
-            import io
 
-            # Try different approaches
-            success = False
-            
-            # Approach 1: Try with the specified separator
+            # Try with the specified separator
             try:
-                df = pd.read_csv(io.StringIO(content), sep=separator)
+                df = pd.read_csv(csv_url, sep=separator)
                 print(f"✅ Successfully parsed with separator '{separator}'")
                 print(f"   Shape: {df.shape}")
                 print(f"   Columns: {list(df.columns)}")
-                success = True
+
+                print(f"\nFirst 3 rows:")
+                for i in range(min(3, len(df))):
+                    print(f"Row {i}:")
+                    for col in df.columns[:5]:  # Show first 5 columns
+                        print(f"  {col}: {repr(df.iloc[i][col])}")
+
+                # Check for our expected columns
+                expected_columns = ['ID', 'InterfaceID', 'physio']
+                available_columns = [str(col).strip() for col in df.columns]
+
+                print(f"\n=== COLUMN ANALYSIS ===")
+                print(f"Looking for: {expected_columns}")
+                print(f"Available: {available_columns}")
+
+                for expected in expected_columns:
+                    found = False
+                    for available in available_columns:
+                        if expected.lower() in available.lower():
+                            print(f"  ✅ Found '{expected}' as '{available}'")
+                            found = True
+                            break
+                    if not found:
+                        print(f"  ❌ Missing '{expected}'")
+
+                return df
+
             except Exception as e:
                 print(f"❌ Failed with separator '{separator}': {e}")
 
-            # Approach 2: Try auto-detection if Approach 1 failed
-            if not success:
-                print(f"\n=== TRYING AUTO-DETECTION ===")
-                separators_to_try = ['\t', ';', ',', ' ', '|']
+                # Try other separators
+                separators_to_try = ['\t', ';', ' ', '|']
                 for sep in separators_to_try:
-                    if sep == separator:  # Skip already tried
-                        continue
                     try:
-                        df = pd.read_csv(io.StringIO(content), sep=sep)
-                        print(f"✅ Successfully parsed with separator '{repr(sep)}'")
+                        df = pd.read_csv(csv_url, sep=sep)
+                        print(f"\n✅ Successfully parsed with separator '{repr(sep)}'")
                         print(f"   Shape: {df.shape}")
                         print(f"   Columns: {list(df.columns)}")
-                        success = True
-                        
-                        # Show first few rows
-                        print(f"\nFirst 3 rows:")
-                        for i in range(min(3, len(df))):
-                            print(f"Row {i}:")
-                            for col in df.columns[:5]:  # Show first 5 columns
-                                print(f"  {col}: {repr(df.iloc[i][col])}")
-                        
-                        break
-                    except Exception as e:
-                        print(f"❌ Failed with separator '{repr(sep)}': {e}")
+                        return df
+                    except:
                         continue
 
-            # Approach 3: Try reading with no header if needed
-            if not success:
-                print(f"\n=== TRYING WITHOUT HEADER ===")
-                try:
-                    df = pd.read_csv(io.StringIO(content), header=None)
-                    print(f"✅ Successfully parsed with no header")
-                    print(f"   Shape: {df.shape}")
-                    print(f"   Columns: {list(df.columns)}")
-                    success = True
-                except Exception as e:
-                    print(f"❌ Failed without header: {e}")
-
-            # Approach 4: Try different encodings
-            if not success:
-                print(f"\n=== TRYING DIFFERENT ENCODINGS ===")
-                encodings_to_try = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252']
-                for encoding in encodings_to_try:
-                    try:
-                        df = pd.read_csv(io.StringIO(content.encode('utf-8').decode(encoding)), sep=separator)
-                        print(f"✅ Successfully parsed with encoding '{encoding}'")
-                        print(f"   Shape: {df.shape}")
-                        success = True
-                        break
-                    except Exception as e:
-                        print(f"❌ Failed with encoding '{encoding}': {e}")
-
-            if success:
-                return df
-            else:
-                print(f"\n❌ Could not parse with any approach")
+                print(f"\n❌ Could not parse with any separator")
                 return None
 
         else:
             print(f"❌ Failed to download CSV: HTTP {response.status_code}")
-            print(f"   Response text: {response.text[:200]}...")
             return None
 
     except Exception as e:
         print(f"❌ Error in debug function: {e}")
-        import traceback
-        traceback.print_exc()
         return None
 
 def main():
@@ -3126,7 +4084,6 @@ def main():
 ║  PPI Benchmark FAIR Metadata Generator                        ║
 ║  with Bioschemas & Croissant Compliance                       ║
 ║  (Alternative Schema: Dataset → Interfaces → Proteins)        ║
-║  OPTIMIZED for minimal PDB API calls with batch requests      ║
 ╚═══════════════════════════════════════════════════════════════╝
 
 Settings:
@@ -3138,7 +4095,6 @@ Settings:
   PDB Metadata:    {args.fetch_pdb_metadata} (API: {args.pdb_api_url if args.fetch_pdb_metadata else 'N/A'})
   Assembly Checks: PDB={args.check_pdb_label}, mmCIF={args.check_cif_label}
   Cluster Info:    {args.cluster if args.cluster else 'Not provided'}
-  API Optimization: Batch requests, caching, rate limiting
     """)
 
     # DEBUG: First inspect the CSV
@@ -3181,26 +4137,151 @@ Settings:
             for std_name, actual_name in processor.column_mapping.items():
                 print(f"   {std_name}: {actual_name}")
 
+            # DEBUG: Show what columns we actually have
+            print(f"\n=== ACTUAL COLUMNS ===")
+            for i, col in enumerate(data.columns):
+                print(f"   {i}: {col} (type: {data[col].dtype})")
+
+                # Show sample value
+                if len(data) > 0:
+                    sample = data.iloc[0][col]
+                    print(f"     Sample: {repr(sample)}")
+
+            # Check for critical columns
+            critical_cols = ['id', 'interfaceid', 'physio']
+            missing = [col for col in critical_cols if col not in processor.column_mapping]
+            if missing:
+                print(f"\n⚠️  WARNING: Missing critical columns: {missing}")
+                print(f"   Looking for lowercase versions of: ID, InterfaceID, physio")
+                print(f"   Available columns: {list(data.columns)}")
+
+                # Try to find similar columns
+                print(f"\n=== SEARCHING FOR SIMILAR COLUMNS ===")
+                for col in data.columns:
+                    col_lower = str(col).lower()
+                    if 'id' in col_lower and 'interface' not in col_lower:
+                        print(f"   Possible ID column: '{col}'")
+                    elif 'interface' in col_lower:
+                        print(f"   Possible InterfaceID column: '{col}'")
+                    elif 'physio' in col_lower or 'label' in col_lower:
+                        print(f"   Possible physio column: '{col}'")
+
             # Parse into structured objects
             print(f"\n=== PARSING PROTEIN INTERFACES ===")
-            print("Note: PDB metadata will be fetched in optimized batches if enabled")
             interfaces = processor.parse_data()
 
             if interfaces and len(interfaces) > 0:
                 print(f"✅ Successfully parsed {len(interfaces)} protein interfaces!")
 
-                # Show API optimization statistics if enabled
-                if args.fetch_pdb_metadata and processor.pdb_api_client:
-                    api_stats = processor.pdb_api_client.get_statistics()
-                    print(f"\n=== API OPTIMIZATION STATISTICS ===")
-                    print(f"   Total API calls: {api_stats['api_calls']}")
-                    print(f"   Cache hits: {api_stats['cache_hits']}")
-                    print(f"   Cache misses: {api_stats['cache_misses']}")
-                    print(f"   Cache hit rate: {api_stats['cache_hits']/(api_stats['cache_hits']+api_stats['cache_misses'])*100:.1f}%" if (api_stats['cache_hits']+api_stats['cache_misses']) > 0 else "0%")
-                    print(f"   Batches processed: {api_stats['batches_processed']}")
-                    print(f"   PDBs fetched: {api_stats['total_pdbs_fetched']}")
-                    print(f"   Obsolete entries: {api_stats['obsolete_entries']}")
-                    print(f"\n   API Reduction: ~{100 * (1 - api_stats['api_calls']/len(interfaces)):.0f}% fewer calls than individual requests")
+                # Show interface source statistics
+                qsalign_count = sum(1 for pi in interfaces if pi.interface_source == "QSalign")
+                protcid_count = sum(1 for pi in interfaces if pi.interface_source == "ProtCID")
+                other_count = len(interfaces) - qsalign_count - protcid_count
+
+                print(f"   Interface sources: QSalign={qsalign_count}, ProtCID={protcid_count}, Other={other_count}")
+
+                # Show assembly checking status
+                if args.check_pdb_label or args.check_cif_label:
+                    print(f"\n=== ASSEMBLY CHAIN CHECKING ===")
+                    if args.check_pdb_label and args.check_cif_label:
+                        print(f"   Checking both PDB and mmCIF assembly files")
+                    elif args.check_pdb_label:
+                        print(f"   Checking PDB assembly files only")
+                    elif args.check_cif_label:
+                        print(f"   Checking mmCIF assembly files only")
+
+                    # Show sample of assembly chain updates
+                    updated_interfaces = [pi for pi in interfaces if pi.LabelChain1 and pi.LabelChain2 and
+                                         (pi.LabelChain1 != pi.AuthChain1 or pi.LabelChain2 != pi.AuthChain2)]
+
+                    if updated_interfaces:
+                        print(f"   Found {len(updated_interfaces)} interfaces with updated chains")
+                        for i, pi in enumerate(updated_interfaces[:3]):
+                            print(f"   Sample {i+1}: {pi.InterfaceID} - "
+                                  f"Auth: {pi.AuthChain1}-{pi.AuthChain2} -> "
+                                  f"Assembly: {pi.LabelChain1}-{pi.LabelChain2}")
+                    else:
+                        print(f"   All interface chains match the assembly files")
+
+                # Fetch PDB metadata if enabled
+                if args.fetch_pdb_metadata:
+                    print(f"\n=== FETCHING PDB METADATA ===")
+                    unique_pdbs = len(set(pi.ID for pi in interfaces))
+                    print(f"   Fetching metadata for {unique_pdbs} unique PDB structures...")
+                    print(f"   This includes ALL sequences from ALL chains for comprehensive analysis.")
+
+                    # Fetch metadata for a sample first
+                    sample_interfaces = interfaces[:min(3, len(interfaces))]
+                    for i, interface in enumerate(sample_interfaces):
+                        metadata = processor.enrich_protein_with_pdb_metadata(interface)
+                        structure_meta = metadata.get("structure_metadata", {})
+                        if structure_meta.get("found_in_api"):
+                            print(f"   Sample {i+1}: {interface.ID}")
+                            print(f"     Resolution: {structure_meta.get('resolution')} Å")
+                            print(f"     Method: {structure_meta.get('experimental_method')}")
+                            print(f"     Chains: {structure_meta.get('chain_count', 0)} total")
+                            print(f"     Unique sequences: {structure_meta.get('unique_sequences', 0)}")
+                            print(f"     Homomer: {structure_meta.get('is_homomer', False)}")
+                            if structure_meta.get("source_organism"):
+                                print(f"     Organism(s): {', '.join(structure_meta['source_organism'][:2])}")
+                        else:
+                            print(f"   Sample {i+1}: {interface.ID} - Metadata not available")
+
+                    print(f"   Metadata will be cached and added to all protein objects")
+
+                # Show cluster information if provided
+                if args.cluster:
+                    print(f"\n=== CLUSTER INFORMATION ===")
+                    print(f"   BLASTClust file: {args.cluster}")
+                    print(f"   BLASTClust options: -S 25 -L 0.5 -b F")
+                    print(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
+                    print(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
+
+                    # Parse cluster file
+                    if processor.cluster_processor:
+                        if processor.cluster_processor.cluster_mapping:
+                            cluster_stats = processor.cluster_processor.stats
+                            print(f"   Clusters parsed: {cluster_stats.get('clusters_processed', 0)}")
+                            print(f"   Total interfaces in clusters: {cluster_stats.get('total_interfaces_in_clusters', 0)}")
+                            print(f"   Clusters with single member: {cluster_stats.get('clusters_with_single_member', 0)}")
+                            print(f"   Clusters with multiple members: {cluster_stats.get('clusters_with_multiple_members', 0)}")
+                            print(f"   Largest cluster size: {cluster_stats.get('largest_cluster_size', 0)}")
+
+                            # Show cluster information for sample interfaces
+                            interfaces_with_cluster = sum(1 for pi in interfaces if pi.cluster_id is not None)
+                            print(f"   Interfaces with cluster information: {interfaces_with_cluster}/{len(interfaces)} ({interfaces_with_cluster/len(interfaces)*100:.1f}%)")
+
+                            # Show sample clusters
+                            sample_with_cluster = [pi for pi in interfaces[:5] if pi.cluster_id]
+                            if sample_with_cluster:
+                                print(f"   Sample cluster assignments:")
+                                for i, pi in enumerate(sample_with_cluster):
+                                    print(f"     {pi.InterfaceID} → Cluster: {pi.cluster_id}, Size: {pi.cluster_size}, Members: {len(pi.cluster_members) if pi.cluster_members else 0}")
+                        else:
+                            print(f"   ⚠️  No cluster mapping found. Make sure the BLASTClust file was parsed successfully.")
+                    else:
+                        print(f"   ⚠️  Cluster processor not initialized")
+
+                # Show sample of the new structure
+                print(f"\n=== SAMPLE DATA STRUCTURE ===")
+                print(f"Schema: Dataset → Interface items → Protein objects")
+                for i, interface in enumerate(interfaces[:3]):
+                    print(f"   Interface {i+1}: {interface.InterfaceID}")
+                    print(f"     Source: {interface.interface_source}")
+                    print(f"     Protein: {interface.ID}")
+                    print(f"     Chains: {interface.AuthChain1}-{interface.AuthChain2}")
+                    if interface.LabelChain1 and interface.LabelChain2:
+                        print(f"     Assembly Chains: {interface.LabelChain1}-{interface.LabelChain2}")
+                    print(f"     Classification: {'Physiological' if interface.label == 1 else 'Non-physiological'}")
+                    print(f"     Features: physio={interface.physio}, bsa={interface.bsa}, contacts={interface.contacts}")
+                    if args.fetch_pdb_metadata:
+                        metadata = processor.pdb_metadata_cache.get(interface.ID.upper(), {})
+                        if metadata.get("found_in_api"):
+                            print(f"     PDB Metadata: {metadata.get('chain_count', 0)} chains, "
+                                  f"{metadata.get('unique_sequences', 0)} unique seqs, "
+                                  f"Homomer={metadata.get('is_homomer', False)}")
+                    if interface.cluster_id:
+                        print(f"     Cluster: ID={interface.cluster_id}, Size={interface.cluster_size}, Members={len(interface.cluster_members) if interface.cluster_members else 0}")
 
                 # Generate and save Bioschemas markup
                 print(f"\n=== GENERATING METADATA ===")
@@ -3216,6 +4297,50 @@ Settings:
                 print(f"   Balance ratio: {stats['balance_ratio']:.2%} physiological")
                 print(f"   Proteins with multiple interfaces: {stats['proteins_with_multiple_interfaces']}")
                 print(f"   Average interfaces per protein: {stats.get('avg_interfaces_per_protein', 0):.2f}")
+                print(f"\n   Interface ID Sources:")
+                print(f"     QSalign format (PDBID_X): {stats.get('qsalign_count', 0)}")
+                print(f"     ProtCID integer: {stats.get('protcid_count', 0)}")
+                print(f"     Other formats: {stats.get('other_source_count', 0)}")
+
+                if args.check_pdb_label or args.check_cif_label:
+                    print(f"\n=== ASSEMBLY CHAIN STATISTICS ===")
+                    print(f"   Interfaces with assembly chains: {stats.get('assembly_chains_updated', 0)} updated")
+
+                if args.fetch_pdb_metadata and processor.pdb_metadata_cache:
+                    print(f"\n=== PDB METADATA STATISTICS ===")
+                    successful_fetches = sum(1 for meta in processor.pdb_metadata_cache.values()
+                                           if meta.get("found_in_api", False))
+                    print(f"   Structures with metadata: {successful_fetches}/{len(processor.pdb_metadata_cache)}")
+
+                    total_chains = sum(meta.get("chain_count", 0) for meta in processor.pdb_metadata_cache.values())
+                    total_sequences = sum(len(meta.get("sequences", {})) for meta in processor.pdb_metadata_cache.values())
+                    unique_sequences = sum(meta.get("unique_sequences", 0) for meta in processor.pdb_metadata_cache.values())
+                    homomeric_count = sum(1 for meta in processor.pdb_metadata_cache.values() if meta.get("is_homomer", False))
+
+                    print(f"   Total chains: {total_chains}")
+                    print(f"   Total sequences: {total_sequences}")
+                    print(f"   Unique sequences: {unique_sequences}")
+                    print(f"   Homomeric structures: {homomeric_count} ({homomeric_count/len(processor.pdb_metadata_cache)*100:.1f}%)")
+
+                    resolutions = [meta.get("resolution") for meta in processor.pdb_metadata_cache.values()
+                                  if meta.get("resolution") is not None]
+                    if resolutions:
+                        print(f"   Average resolution: {sum(resolutions)/len(resolutions):.2f} Å")
+                        print(f"   Resolution range: {min(resolutions):.2f}-{max(resolutions):.2f} Å")
+
+                if args.cluster and processor.cluster_processor and processor.cluster_processor.cluster_mapping:
+                    print(f"\n=== CLUSTER STATISTICS ===")
+                    cluster_info = stats.get("cluster_info", {})
+                    print(f"   Interfaces with cluster information: {cluster_info.get('interfaces_with_cluster', 0)}/{len(interfaces)} ({cluster_info.get('coverage_percentage', 0):.1f}%)")
+                    print(f"   Total clusters: {cluster_info.get('total_clusters', 0)}")
+                    print(f"   Clusters with single member: {cluster_info.get('clusters_with_single_member', 0)}")
+                    print(f"   Clusters with multiple members: {cluster_info.get('clusters_with_multiple_members', 0)}")
+                    print(f"   Largest cluster size: {cluster_info.get('largest_cluster_size', 0)}")
+                    print(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
+                    print(f"   ClusterMethod: BLASTClust sequence clustering")
+                    print(f"   ClusterMethodOptions: -S 25 -L 0.5 -b F")
+                    print(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
+                    print(f"   Assignment method: Direct assignment from BLASTClust output during parsing")
 
                 print(f"\n=== GENERATED FILES ===")
                 print(f"   Dataset with Interfaces: {args.output}/dataset_with_interfaces.json")
@@ -3226,16 +4351,54 @@ Settings:
                     print(f"   PDB Metadata Cache: {args.output}/pdb_metadata_cache.json")
                 print(f"   Manifest: {args.output}/manifest.json")
 
-                print(f"\n=== OPTIMIZATION SUMMARY ===")
-                print(f"   Batch processing: {processor.pdb_api_client.batch_size if processor.pdb_api_client else 'N/A'} PDBs per API call")
-                print(f"   Smart caching: 24-hour expiry with LRU eviction")
-                print(f"   Rate limiting: {processor.pdb_api_client.request_delay if processor.pdb_api_client else 'N/A'}s delay between batches")
-                print(f"   Fallback strategy: Header parsing for obsolete entries")
+                print(f"\n=== SCHEMA STRUCTURE ===")
+                print(f"   Dataset → hasPart → Interface items (ALL {len(interfaces)} interfaces)")
+                print(f"   Each Interface item → mainEntity → Protein object")
+                print(f"   Each Protein object represents a PDB structure (4 letters)")
+                print(f"   Each interface includes ALL features in additionalProperty")
+                if args.fetch_pdb_metadata:
+                    print(f"   Each protein includes comprehensive PDB metadata:")
+                    print(f"     - ALL chain sequences (not just representative)")
+                    print(f"     - Homomer detection and analysis")
+                    print(f"     - Sequence clusters and identity analysis")
+                    print(f"     - Resolution, organism, experimental method")
+                    print(f"     - Complete structural metadata")
+                if args.check_pdb_label or args.check_cif_label:
+                    print(f"   Assembly chain validation: Enabled")
+                    print(f"     - Checks actual chains in structure files")
+                    print(f"     - Updates LabelChain1 and LabelChain2 fields")
+                    print(f"     - Logs chain mismatches")
+                if args.cluster:
+                    print(f"   Cluster information: Included")
+                    print(f"     - ClusterID: Direct assignment from BLASTClust output")
+                    print(f"     - ClusterSize: Number of interfaces in the cluster")
+                    print(f"     - ClusterMembers: List of other interfaces (for multi-member clusters)")
+                    print(f"     - ClusterMethod: BLASTClust sequence clustering")
+                    print(f"     - ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)")
+
+                # Warning for very large datasets
+                if len(interfaces) > 1000:
+                    print(f"\n⚠️  NOTE: The dataset markup contains {len(interfaces)} interface items.")
+                    print(f"   This may result in a large JSON file ({len(interfaces)} * ~2KB ≈ {len(interfaces)*2/1024:.1f}MB).")
+                    print(f"   Consider using the aggregated protein schema for very large datasets.")
+
+            else:
+                print(f"\n❌ ERROR: No interfaces were parsed!")
+                print(f"   Parsed {len(interfaces)} interfaces")
+                print(f"\n   Possible issues:")
+                print(f"   1. Column names don't match expected patterns")
+                print(f"   2. CSV separator is incorrect")
+                print(f"   3. Data format is unexpected")
+                print(f"\n   Try running with:")
+                print(f"      python {__file__} --test (to inspect CSV)")
+                print(f"      python {__file__} --auto-detect (to auto-detect separator)")
+                print(f"      python {__file__} --separator \"\\t\" (try tab separator)")
 
     except Exception as e:
         print(f"\n❌ ERROR in main execution: {e}")
         import traceback
         traceback.print_exc()
+
 
 if __name__ == "__main__":
     main()
