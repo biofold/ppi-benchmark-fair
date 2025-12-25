@@ -925,6 +925,7 @@ class FAIRVisualizer:
         # REMOVED: The annotation box about correlation interpretation
         
         # Add correlation interpretation as separate annotations
+        '''
         fig9.add_annotation(
             text="Correlation Guide:",
             xref="paper",
@@ -1029,6 +1030,7 @@ class FAIRVisualizer:
             bgcolor="rgba(255,255,255,0)",
             bordercolor="rgba(0,0,0,0)"
         )
+        '''
         
         fig9.update_layout(
             title={
