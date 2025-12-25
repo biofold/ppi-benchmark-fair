@@ -1155,8 +1155,8 @@ class FAIRVisualizer:
                 /* Key Metrics - Matching index.html style */
                 .key-metrics {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 20px;
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                    gap: 15px;
                     margin: 40px 0;
                 }
                 
@@ -2790,7 +2790,7 @@ class FAIRVisualizer:
             <header>
                 <div class="container">
                     <div class="header-content">
-                        <h1>📊 FAIR Analysis Report</h1>
+                        <h1>FAIR Analysis Report</h1>
                         <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
                         <a href="fair_dashboard.html" class="dashboard-link">
@@ -2996,212 +2996,6 @@ class FAIRVisualizer:
         
         print(f"✓ HTML report saved to {self.output_dir}/index.html")
 
-
-
-    def create_combined_reporti2(self):
-        """Create a combined HTML report with all visualizations"""
-        if self.df_scores is None:
-            return
-        
-        html_content = f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>FAIR Analysis Report</title>
-            <style>
-                body {{ font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }}
-                .header {{ background-color: #2c3e50; color: white; padding: 20px; border-radius: 10px; }}
-                .section {{ background-color: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
-                h1, h2, h3 {{ color: #2c3e50; }}
-                .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }}
-                .stat-card {{ background-color: #ecf0f1; padding: 15px; border-radius: 5px; text-align: center; }}
-                .stat-value {{ font-size: 24px; font-weight: bold; color: #3498db; }}
-                .stat-label {{ font-size: 14px; color: #7f8c8d; }}
-                .visualization {{ margin: 20px 0; }}
-                .repo-list {{ max-height: 300px; overflow-y: auto; }}
-                table {{ width: 100%; border-collapse: collapse; }}
-                th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }}
-                th {{ background-color: #f2f2f2; }}
-                .priority-high {{ color: red; font-weight: bold; }}
-                .priority-medium {{ color: orange; }}
-                .priority-low {{ color: green; }}
-            </style>
-        </head>
-        <body>
-            <div class="header">
-                <h1>📊 FAIR Analysis Report</h1>
-                <p>Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
-                <p>Repositories analyzed: {len(self.df_scores)}</p>
-            </div>
-            
-            <div class="section">
-                <h2>📈 Key Statistics</h2>
-                <div class="stats-grid">
-        """
-        
-        # Add statistics
-        stats = self.report_data.get('statistics', {}) if self.report_data else {}
-        
-        stat_items = [
-            ('Average Score', f"{stats.get('average_total', 0):.1f}/100"),
-            ('Median Score', f"{stats.get('median_total', 0):.1f}/100"),
-            ('Highest Score', f"{stats.get('highest_total', 0):.1f}/100"),
-            ('Lowest Score', f"{stats.get('lowest_total', 0):.1f}/100"),
-            ('Score Range', f"{stats.get('lowest_total', 0):.1f}-{stats.get('highest_total', 0):.1f}"),
-        ]
-        
-        if 'average_metadata_files' in stats:
-            stat_items.append(('Avg Metadata Files', f"{stats.get('average_metadata_files', 0):.1f}"))
-        
-        for label, value in stat_items:
-            html_content += f"""
-                    <div class="stat-card">
-                        <div class="stat-label">{label}</div>
-                        <div class="stat-value">{value}</div>
-                    </div>
-            """
-        
-        html_content += """
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>🏆 Top Repositories</h2>
-                <div class="repo-list">
-                    <table>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Repository</th>
-                            <th>Total Score</th>
-                            <th>Findable</th>
-                            <th>Accessible</th>
-                            <th>Interoperable</th>
-                            <th>Reusable</th>
-                        </tr>
-        """
-        
-        # Add top repositories
-        top_n = min(5, len(self.df_scores))
-        top_repos = self.df_scores.nlargest(top_n, 'total')
-        for idx, (_, row) in enumerate(top_repos.iterrows(), 1):
-            repo_name = row['repository'].split('/')[-1]
-            html_content += f"""
-                        <tr>
-                            <td>{idx}</td>
-                            <td><a href="{row['repository']}" target="_blank">{repo_name}</a></td>
-                            <td><strong>{row['total']:.1f}</strong></td>
-                            <td>{row['findable']:.1f}</td>
-                            <td>{row['accessible']:.1f}</td>
-                            <td>{row['interoperable']:.1f}</td>
-                            <td>{row['reusable']:.1f}</td>
-                        </tr>
-            """
-        
-        html_content += """
-                    </table>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>📊 Interactive Dashboard</h2>
-                <p>Explore all visualizations in the interactive dashboard:</p>
-                <div style="text-align: center; margin: 30px 0;">
-                    <a href="fair_dashboard.html" style="background-color: #3498db; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; display: inline-block;">
-                        🚀 Open Interactive Dashboard
-                    </a>
-                </div>
-                <p>The dashboard includes 9 detailed visualizations with explanations:</p>
-                <ol>
-                    <li><strong>FAIR Score Ranking/Gauge</strong> - Overall compliance score</li>
-                    <li><strong>Score Distribution</strong> - Frequency histogram</li>
-                    <li><strong>FAIR Principles Radar Chart</strong> - Multi-dimensional view</li>
-                    <li><strong>Improvement Priority</strong> - Action items by urgency</li>
-                    <li><strong>Metadata Analysis</strong> - Metadata impact on scores</li>
-                    <li><strong>Principles Comparison</strong> - Breakdown by FAIR principle</li>
-                    <li><strong>Performance Breakdown</strong> - Detailed repository comparison</li>
-                    <li><strong>Missing Elements Heatmap</strong> - Improvement opportunities</li>
-                    <li><strong>Correlation Matrix</strong> - Relationships between metrics</li>
-                </ol>
-            </div>
-        """
-        
-        # Add improvement summary if available
-        if self.df_improvements is not None and not self.df_improvements.empty:
-            html_content += """
-            <div class="section">
-                <h2>🔧 Improvement Summary</h2>
-                <p>Total improvements identified: """ + str(len(self.df_improvements)) + """</p>
-                <table>
-                    <tr>
-                        <th>Priority</th>
-                        <th>Count</th>
-                        <th>Potential Points</th>
-                    </tr>
-            """
-            
-            for priority in ['High', 'Medium', 'Low']:
-                priority_df = self.df_improvements[self.df_improvements['priority'] == priority]
-                count = len(priority_df)
-                points = priority_df['potential_points'].sum()
-                
-                priority_class = f'priority-{priority.lower()}'
-                
-                html_content += f"""
-                    <tr>
-                        <td class="{priority_class}">{priority}</td>
-                        <td>{count}</td>
-                        <td>{points}</td>
-                    </tr>
-                """
-            
-            html_content += """
-                </table>
-            </div>
-            """
-        
-        # Add recommendations
-        html_content += """
-            <div class="section">
-                <h2>📋 Recommendations</h2>
-                <h3>Immediate Actions (High Priority):</h3>
-                <ul>
-                    <li>Add missing README files with clear documentation</li>
-                    <li>Include proper LICENSE files with open-source licenses</li>
-                    <li>Add structured metadata files (JSON/YAML) following standards</li>
-                    <li>Include DOI or persistent identifiers for datasets</li>
-                </ul>
-                
-                <h3>Medium-term Improvements:</h3>
-                <ul>
-                    <li>Use standard metadata schemas (Schema.org, DataCite, Bioschemas)</li>
-                    <li>Add usage examples and tutorials</li>
-                    <li>Include contact information in metadata</li>
-                    <li>Add data schemas and documentation</li>
-                </ul>
-                
-                <h3>Best Practices:</h3>
-                <ul>
-                    <li>Store metadata in dedicated directories (e.g., bioschema/, metadata/)</li>
-                    <li>Use controlled vocabularies and ontologies</li>
-                    <li>Include provenance information (creation date, version)</li>
-                    <li>Add citation files (CITATION.cff) for proper attribution</li>
-                </ul>
-            </div>
-            
-            <div class="header">
-                <p>Report generated by FAIR Analysis Tool</p>
-                <p>For more information about FAIR principles, visit: 
-                <a href="https://www.go-fair.org/fair-principles/" style="color: white;">GO FAIR</a></p>
-            </div>
-        </body>
-        </html>
-        """
-        
-        # Write HTML file
-        with open(f"{self.output_dir}/index.html", 'w') as f:
-            f.write(html_content)
-        
-        print(f"✓ HTML report saved to {self.output_dir}/index.html")
 
 def main():
     """Main function to run visualizations"""
