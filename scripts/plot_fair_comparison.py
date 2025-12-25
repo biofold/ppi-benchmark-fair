@@ -285,30 +285,54 @@ class FAIRVisualizer:
         fig3 = go.Figure()
 
         if len(self.df_scores) > 0:
-            colors = px.colors.qualitative.Set3[:len(self.df_scores)]
+            # Use a color palette that works well for multiple repositories
+            if len(self.df_scores) <= 10:
+                # Use qualitative colors for up to 10 repositories
+                colors = px.colors.qualitative.Plotly[:len(self.df_scores)]
+            else:
+                # Use sequential colors for many repositories
+                colors = px.colors.sequential.Viridis[:len(self.df_scores)]
             
             for idx, (_, row) in enumerate(self.df_scores.iterrows()):
                 repo_name = row['repository'].split('/')[-1][:20]
                 scores = [row[p] for p in principles]
                 
-                # Get a valid color for this trace
-                color_value = colors[idx % len(colors)]
+                # Get the color for this repository
+                color = colors[idx % len(colors)]
                 
-                # Ensure we have a valid color
-                if isinstance(color_value, str) and color_value.startswith('#'):
-                    # Valid hex color
-                    line_color = color_value
-                    # Create a slightly transparent version for fill
+                # Convert color to rgba for fill with transparency
+                if color.startswith('#'):
+                    # Convert hex to rgb
                     try:
-                        rgb_vals = px.colors.hex_to_rgb(color_value)
-                        fill_color = f'rgba({rgb_vals[0]}, {rgb_vals[1]}, {rgb_vals[2]}, 0.3)'
+                        # Remove # if present
+                        hex_color = color.lstrip('#')
+                        # Convert hex to rgb
+                        r = int(hex_color[0:2], 16)
+                        g = int(hex_color[2:4], 16)
+                        b = int(hex_color[4:6], 16)
+                        rgba_fill = f'rgba({r}, {g}, {b}, 0.3)'
+                        rgba_line = f'rgba({r}, {g}, {b}, 0.8)'
                     except:
-                        # Fallback if hex conversion fails
-                        fill_color = 'rgba(100, 100, 100, 0.3)'
+                        # Fallback if conversion fails
+                        rgba_fill = 'rgba(100, 149, 237, 0.3)'  # Cornflower blue
+                        rgba_line = 'rgba(100, 149, 237, 0.8)'
+                elif color.startswith('rgb('):
+                    # Already in rgb format, convert to rgba
+                    try:
+                        # Extract rgb values
+                        rgb_values = color[4:-1].split(',')
+                        r = int(rgb_values[0].strip())
+                        g = int(rgb_values[1].strip())
+                        b = int(rgb_values[2].strip())
+                        rgba_fill = f'rgba({r}, {g}, {b}, 0.3)'
+                        rgba_line = f'rgba({r}, {g}, {b}, 0.8)'
+                    except:
+                        rgba_fill = 'rgba(100, 149, 237, 0.3)'
+                        rgba_line = 'rgba(100, 149, 237, 0.8)'
                 else:
-                    # Fallback colors
-                    line_color = px.colors.qualitative.Plotly[idx % len(px.colors.qualitative.Plotly)]
-                    fill_color = 'rgba(100, 100, 100, 0.3)'
+                    # Handle other color formats or use fallback
+                    rgba_fill = f'rgba({(idx * 50) % 255}, {(idx * 100) % 255}, {(idx * 150) % 255}, 0.3)'
+                    rgba_line = f'rgba({(idx * 50) % 255}, {(idx * 100) % 255}, {(idx * 150) % 255}, 0.8)'
                 
                 fig3.add_trace(
                     go.Scatterpolar(
@@ -316,8 +340,8 @@ class FAIRVisualizer:
                         theta=[p.capitalize() for p in principles] + [principles[0].capitalize()],
                         fill='toself',
                         name=f"{repo_name} ({row['total']:.1f})",
-                        line_color=line_color,
-                        fillcolor=fill_color,
+                        line=dict(color=rgba_line, width=2),
+                        fillcolor=rgba_fill,
                         opacity=0.7
                     )
                 )
