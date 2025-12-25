@@ -1416,7 +1416,7 @@ class FAIRVisualizer:
             <header>
                 <div class="container">
                     <div class="header-content">
-                        <h1>📊 FAIR Analysis Dashboard</h1>
+                        <h1>FAIR Analysis Dashboard</h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
                         <a href="index.html" class="back-link">
