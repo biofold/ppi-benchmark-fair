@@ -202,9 +202,10 @@ class FAIRVisualizer:
                         showscale=True,
                         colorbar=dict(
                             title="Score",
-                            x=0.95,
+                            x=1.15,  # MOVED FARTHER RIGHT
                             len=0.8,
-                            thickness=15
+                            thickness=15,
+                            xpad=20  # Added padding
                         )
                     ),
                     text=[f"{score:.1f}" for score in df_sorted['total']],
@@ -221,8 +222,8 @@ class FAIRVisualizer:
                 xaxis_title="FAIR Score (0-100)",
                 yaxis_title="Repository",
                 height=max(400, len(df_sorted) * 30),
-                width=800,
-                margin=dict(t=100, b=50, l=150, r=100)
+                width=900,  # Increased width for better layout
+                margin=dict(t=100, b=50, l=150, r=200)  # Increased right margin
             )
         
         # Save Figure 1
@@ -279,40 +280,44 @@ class FAIRVisualizer:
             fig2.write_image(f"{self.output_dir}/figure2_score_distribution.png", width=900, height=500)
         
         # ============================================
-        # Figure 3: Radar Chart for Top Repository
+        # Figure 3: Radar Chart for ALL Repositories
         # ============================================
         fig3 = go.Figure()
         
         if len(self.df_scores) > 0:
-            if len(self.df_scores) == 1:
-                top_repo = self.df_scores.iloc[0]
-            else:
-                top_repo = self.df_scores.loc[self.df_scores['total'].idxmax()]
+            colors = px.colors.qualitative.Set3[:len(self.df_scores)]
             
-            repo_name = top_repo['repository'].split('/')[-1][:20]
-            scores = [top_repo[p] for p in principles]
-            
-            fig3.add_trace(
-                go.Scatterpolar(
-                    r=scores + [scores[0]],  # Close the loop
-                    theta=[p.capitalize() for p in principles] + [principles[0].capitalize()],
-                    fill='toself',
-                    name=f"{repo_name}",
-                    line_color='green',
-                    fillcolor='rgba(0, 128, 0, 0.3)'
+            for idx, (_, row) in enumerate(self.df_scores.iterrows()):
+                repo_name = row['repository'].split('/')[-1][:20]
+                scores = [row[p] for p in principles]
+                
+                fig3.add_trace(
+                    go.Scatterpolar(
+                        r=scores + [scores[0]],  # Close the loop
+                        theta=[p.capitalize() for p in principles] + [principles[0].capitalize()],
+                        fill='toself',
+                        name=f"{repo_name} ({row['total']:.1f})",
+                        line_color=colors[idx % len(colors)],
+                        fillcolor=f'rgba(100, 100, 100, 0.3)',  # Simple gray fill
+                        #fillcolor=f'rgba{tuple(list(px.colors.hex_to_rgb(colors[idx % len(colors)])) + [0.3])}',
+                        opacity=0.7
+                    )
                 )
-            )
             
-            # Add annotations for each score
-            for i, (principle, score) in enumerate(zip(principles, scores)):
-                angle = i * (360 / len(principles))
-                fig3.add_annotation(
-                    text=f"{score:.1f}",
-                    x=angle,
-                    y=score + 5,
-                    showarrow=False,
-                    font=dict(size=10, color="black")
-                )
+            # Add annotations for scores if there are only a few repositories
+            if len(self.df_scores) <= 5:
+                for idx, (_, row) in enumerate(self.df_scores.iterrows()):
+                    scores = [row[p] for p in principles]
+                    for i, (principle, score) in enumerate(zip(principles, scores)):
+                        angle = i * (360 / len(principles))
+                        fig3.add_annotation(
+                            text=f"{score:.1f}",
+                            x=angle,
+                            y=score + 8,
+                            showarrow=False,
+                            font=dict(size=10, color="black"),
+                            opacity=0.7
+                        )
         
         fig3.update_layout(
             polar=dict(
@@ -330,7 +335,7 @@ class FAIRVisualizer:
                 bgcolor='white'
             ),
             title={
-                'text': f"Figure 3: FAIR Principles Radar Chart<br><sup>Shows performance across all FAIR principles for {repo_name if len(self.df_scores) > 0 else 'repository'}</sup>",
+                'text': f"Figure 3: FAIR Principles Radar Chart<br><sup>Performance across all FAIR principles for all {len(self.df_scores)} repositories</sup>",
                 'y': 0.95
             },
             showlegend=True,
@@ -340,8 +345,8 @@ class FAIRVisualizer:
                 xanchor="left",
                 x=0.01
             ),
-            height=500,
-            width=600,
+            height=600,  # Increased height for better legend display
+            width=800,
             margin=dict(t=100, b=50, l=50, r=50)
         )
         
@@ -349,7 +354,7 @@ class FAIRVisualizer:
         if output_format == 'html':
             fig3.write_html(f"{self.output_dir}/figure3_radar_chart.html")
         else:
-            fig3.write_image(f"{self.output_dir}/figure3_radar_chart.png", width=800, height=600)
+            fig3.write_image(f"{self.output_dir}/figure3_radar_chart.png", width=900, height=700)
         
         # ============================================
         # Figure 4: Improvement Priority
@@ -875,19 +880,112 @@ class FAIRVisualizer:
             )
         )
         
-        # Add annotation about correlation interpretation
+        # REMOVED: The annotation box about correlation interpretation
+        
+        # Add correlation interpretation as separate annotations
         fig9.add_annotation(
-            text="Values near +1: Strong positive correlation<br>Values near -1: Strong negative correlation<br>Values near 0: Weak or no correlation",
+            text="Correlation Guide:",
             xref="paper",
             yref="paper",
-            x=1.05,
-            y=0.5,
+            x=1.12,  # Positioned to the right
+            y=0.95,
+            showarrow=False,
+            align="left",
+            font=dict(size=11, color="#2c3e50", family="Arial"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)",
+            borderwidth=0
+        )
+        
+        fig9.add_annotation(
+            text="• +1.0: Perfect positive",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.90,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="darkblue"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• +0.7 to +1.0: Strong positive",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.85,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="blue"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• +0.3 to +0.7: Moderate positive",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.80,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="lightblue"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• -0.3 to +0.3: Weak/None",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.75,
             showarrow=False,
             align="left",
             font=dict(size=10, color="gray"),
-            bgcolor="white",
-            bordercolor="gray",
-            borderwidth=1
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• -0.7 to -0.3: Moderate negative",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.70,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="pink"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• -1.0 to -0.7: Strong negative",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.65,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="red"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
+        )
+        
+        fig9.add_annotation(
+            text="• -1.0: Perfect negative",
+            xref="paper",
+            yref="paper",
+            x=1.12,
+            y=0.60,
+            showarrow=False,
+            align="left",
+            font=dict(size=10, color="darkred"),
+            bgcolor="rgba(255,255,255,0)",
+            bordercolor="rgba(0,0,0,0)"
         )
         
         fig9.update_layout(
@@ -898,209 +996,397 @@ class FAIRVisualizer:
             xaxis_title="Metric",
             yaxis_title="Metric",
             height=500,
-            width=700,
-            margin=dict(t=100, b=50, l=150, r=200)
+            width=850,  # Increased width to accommodate annotations
+            margin=dict(t=100, b=50, l=150, r=250)  # Increased right margin
         )
         
         # Save Figure 9
         if output_format == 'html':
             fig9.write_html(f"{self.output_dir}/figure9_correlation_matrix.html")
         else:
-            fig9.write_image(f"{self.output_dir}/figure9_correlation_matrix.png", width=900, height=600)
+            fig9.write_image(f"{self.output_dir}/figure9_correlation_matrix.png", width=1000, height=600)
         
         print(f"✓ Created 9 individual figures with explanations in {self.output_dir}/")
     
     def create_overview_dashboard(self, output_format: str = 'html'):
-        """Create an overview dashboard with all figures (simpler version)"""
-        # Create an HTML file that references all individual figures
+        """Create an overview dashboard with all figures (updated to match index.html style)"""
+        # Create an HTML file that references all individual figures with matching style
         html_content = """
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>FAIR Analysis Dashboard</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
+                :root {
+                    --primary-color: #2c3e50;
+                    --secondary-color: #3498db;
+                    --accent-color: #e74c3c;
+                    --light-bg: #f8f9fa;
+                    --success-color: #27ae60;
+                    --warning-color: #f39c12;
+                }
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
                 body {
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    margin: 0;
-                    padding: 20px;
-                    background-color: #f8f9fa;
+                    line-height: 1.6;
                     color: #333;
+                    background-color: var(--light-bg);
                 }
+                
                 .container {
                     max-width: 1400px;
                     margin: 0 auto;
-                    background-color: white;
-                    padding: 30px;
-                    border-radius: 10px;
-                    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                    padding: 0 20px;
                 }
-                .header {
+                
+                /* Header - Matching index.html */
+                header {
+                    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+                    color: white;
+                    padding: 60px 0;
                     text-align: center;
+                    position: relative;
+                    overflow: hidden;
                     margin-bottom: 40px;
-                    padding-bottom: 20px;
-                    border-bottom: 2px solid #007bff;
                 }
-                .header h1 {
-                    color: #007bff;
+                
+                header::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+                    background-size: cover;
+                }
+                
+                .header-content {
+                    position: relative;
+                    z-index: 1;
+                }
+                
+                h1 {
+                    font-size: 2.8rem;
+                    margin-bottom: 15px;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                }
+                
+                .tagline {
+                    font-size: 1.3rem;
+                    opacity: 0.9;
+                    max-width: 800px;
+                    margin: 0 auto 30px;
+                }
+                
+                .back-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: rgba(255,255,255,0.15);
+                    color: white;
+                    padding: 12px 25px;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.3s ease;
+                    border: 2px solid rgba(255,255,255,0.3);
+                }
+                
+                .back-link:hover {
+                    background-color: rgba(255,255,255,0.25);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+                
+                /* Key Metrics - Matching index.html style */
+                .key-metrics {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 20px;
+                    margin: 40px 0;
+                }
+                
+                .metric-card {
+                    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+                    color: white;
+                    padding: 25px;
+                    border-radius: 12px;
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    transition: transform 0.3s ease;
+                }
+                
+                .metric-card:hover {
+                    transform: translateY(-5px);
+                }
+                
+                .metric-value {
+                    font-size: 2.5rem;
+                    font-weight: bold;
                     margin-bottom: 10px;
                 }
-                .header p {
-                    color: #666;
-                    font-size: 16px;
-                    max-width: 800px;
-                    margin: 0 auto;
-                    line-height: 1.6;
+                
+                .metric-label {
+                    font-size: 1rem;
+                    opacity: 0.9;
                 }
-                .figure-container {
-                    margin: 40px 0;
-                    padding: 20px;
-                    background-color: #f8f9fa;
-                    border-radius: 8px;
-                    border-left: 4px solid #007bff;
-                }
-                .figure-title {
-                    color: #495057;
-                    margin-bottom: 15px;
-                    font-size: 20px;
-                }
-                .figure-description {
-                    color: #6c757d;
-                    margin-bottom: 20px;
-                    font-size: 14px;
-                    line-height: 1.5;
-                }
-                .figure-embed {
-                    width: 100%;
-                    height: 500px;
-                    border: none;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                }
+                
+                /* Navigation Bar - Updated Style */
                 .nav-bar {
-                    position: sticky;
-                    top: 0;
                     background-color: white;
-                    padding: 15px;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    margin-bottom: 30px;
-                    z-index: 1000;
+                    padding: 20px;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    margin-bottom: 40px;
+                    position: sticky;
+                    top: 20px;
+                    z-index: 100;
                 }
+                
                 .nav-bar ul {
                     list-style-type: none;
                     padding: 0;
                     margin: 0;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 10px;
+                    gap: 15px;
                     justify-content: center;
                 }
+                
                 .nav-bar li {
                     display: inline;
                 }
+                
                 .nav-bar a {
                     text-decoration: none;
-                    color: #007bff;
-                    padding: 8px 15px;
-                    border-radius: 20px;
-                    border: 1px solid #007bff;
-                    transition: all 0.3s;
-                    font-size: 14px;
+                    color: var(--secondary-color);
+                    padding: 10px 20px;
+                    border-radius: 50px;
+                    border: 2px solid var(--secondary-color);
+                    transition: all 0.3s ease;
+                    font-weight: 600;
+                    font-size: 0.95rem;
                 }
+                
                 .nav-bar a:hover {
-                    background-color: #007bff;
+                    background-color: var(--secondary-color);
                     color: white;
                 }
-                .footer {
-                    text-align: center;
-                    margin-top: 40px;
-                    padding-top: 20px;
-                    border-top: 1px solid #dee2e6;
-                    color: #6c757d;
-                    font-size: 14px;
+                
+                /* Figure Containers - Matching index.html cards */
+                .figure-container {
+                    background-color: white;
+                    margin: 40px 0;
+                    padding: 30px;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    border-left: 5px solid var(--secondary-color);
+                    transition: transform 0.3s ease;
                 }
-                .key-metrics {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 20px;
-                    margin: 30px 0;
+                
+                .figure-container:hover {
+                    transform: translateY(-3px);
                 }
-                .metric-card {
-                    background: linear-gradient(135deg, #007bff, #0056b3);
-                    color: white;
-                    padding: 20px;
+                
+                .figure-title {
+                    color: var(--primary-color);
+                    margin-bottom: 15px;
+                    font-size: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                
+                .figure-title::before {
+                    content: "📊";
+                    font-size: 1.2rem;
+                }
+                
+                .figure-description {
+                    color: #7f8c8d;
+                    margin-bottom: 25px;
+                    font-size: 1rem;
+                    line-height: 1.7;
+                }
+                
+                .figure-embed {
+                    width: 100%;
+                    height: 500px;
+                    border: none;
                     border-radius: 8px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                }
+                
+                /* Control Buttons - Updated Style */
+                .controls {
                     text-align: center;
+                    margin: 30px 0;
+                    padding: 25px;
+                    background-color: white;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
                 }
-                .metric-value {
-                    font-size: 32px;
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                }
-                .metric-label {
-                    font-size: 14px;
-                    opacity: 0.9;
-                }
+                
                 .toggle-button {
-                    background-color: #28a745;
+                    background-color: var(--secondary-color);
                     color: white;
                     border: none;
-                    padding: 10px 20px;
-                    border-radius: 5px;
+                    padding: 12px 25px;
+                    border-radius: 50px;
                     cursor: pointer;
-                    font-size: 14px;
-                    margin: 10px 5px;
-                    transition: background-color 0.3s;
+                    font-size: 1rem;
+                    margin: 5px 10px;
+                    transition: all 0.3s ease;
+                    font-weight: 600;
                 }
+                
                 .toggle-button:hover {
-                    background-color: #218838;
+                    background-color: #2980b9;
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
                 }
+                
                 .toggle-button.hidden {
-                    background-color: #dc3545;
+                    background-color: var(--accent-color);
                 }
+                
+                /* Footer - Matching index.html */
+                footer {
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 50px 0;
+                    text-align: center;
+                    margin-top: 60px;
+                }
+                
+                .footer-content {
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                
+                .footer-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    margin: 30px 0;
+                    flex-wrap: wrap;
+                }
+                
+                .footer-link {
+                    color: rgba(255,255,255,0.8);
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                
+                .footer-link:hover {
+                    color: white;
+                }
+                
+                .copyright {
+                    margin-top: 30px;
+                    color: rgba(255,255,255,0.6);
+                    font-size: 0.9rem;
+                    line-height: 1.6;
+                }
+                
+                /* Badge for top performer */
+                .top-badge {
+                    display: inline-block;
+                    background: linear-gradient(135deg, var(--success-color), #219653);
+                    color: white;
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                    margin: 15px 0;
+                    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+                }
+                
+                /* Responsive Design */
                 @media (max-width: 768px) {
-                    .figure-embed {
-                        height: 400px;
+                    h1 {
+                        font-size: 2.2rem;
                     }
+                    
+                    .tagline {
+                        font-size: 1.1rem;
+                    }
+                    
                     .nav-bar ul {
                         flex-direction: column;
                         align-items: center;
                     }
+                    
                     .nav-bar li {
                         width: 100%;
                         text-align: center;
                     }
+                    
                     .nav-bar a {
                         display: block;
                         width: 90%;
                         margin: 5px auto;
                     }
+                    
+                    .figure-embed {
+                        height: 400px;
+                    }
+                    
+                    .key-metrics {
+                        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                        gap: 15px;
+                    }
+                    
+                    .metric-value {
+                        font-size: 2rem;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .figure-embed {
+                        height: 300px;
+                    }
+                    
+                    .toggle-button {
+                        display: block;
+                        width: 90%;
+                        margin: 10px auto;
+                    }
                 }
             </style>
         </head>
         <body>
-            <div class="container">
-                <div class="header">
-                    <h1>📊 FAIR Analysis Dashboard</h1>
-                    <p>Comprehensive visualization of FAIR (Findable, Accessible, Interoperable, Reusable) principles compliance across GitHub repositories</p>
+            <!-- Header - Matching index.html -->
+            <header>
+                <div class="container">
+                    <div class="header-content">
+                        <h1>📊 FAIR Analysis Dashboard</h1>
+                        <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
+                        <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
+                        <a href="index.html" class="back-link">
+                            <i class="fas fa-arrow-left"></i> Back to Main Report
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="nav-bar">
-                    <ul>
-                        <li><a href="#figure1">Score Ranking</a></li>
-                        <li><a href="#figure2">Distribution</a></li>
-                        <li><a href="#figure3">Radar Chart</a></li>
-                        <li><a href="#figure4">Improvements</a></li>
-                        <li><a href="#figure5">Metadata</a></li>
-                        <li><a href="#figure6">Principles</a></li>
-                        <li><a href="#figure7">Performance</a></li>
-                        <li><a href="#figure8">Missing Elements</a></li>
-                        <li><a href="#figure9">Correlations</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Key Metrics Section -->
-                <div class="key-metrics" id="metrics">
+            </header>
+            
+            <main class="container">
+                <!-- Key Metrics - Matching index.html style -->
+                <div class="key-metrics">
         """
         
         # Add key metrics if report data exists
@@ -1127,12 +1413,36 @@ class FAIRVisualizer:
         html_content += """
                 </div>
                 
+                <!-- Navigation Bar -->
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="#figure1">Score Ranking</a></li>
+                        <li><a href="#figure2">Distribution</a></li>
+                        <li><a href="#figure3">Radar Chart</a></li>
+                        <li><a href="#figure4">Improvements</a></li>
+                        <li><a href="#figure5">Metadata</a></li>
+                        <li><a href="#figure6">Principles</a></li>
+                        <li><a href="#figure7">Performance</a></li>
+                        <li><a href="#figure8">Missing Elements</a></li>
+                        <li><a href="#figure9">Correlations</a></li>
+                    </ul>
+                </div>
+                
                 <!-- Control Buttons -->
-                <div style="text-align: center; margin: 20px 0;">
-                    <button class="toggle-button" onclick="toggleAllFigures('show')">Show All Figures</button>
-                    <button class="toggle-button hidden" onclick="toggleAllFigures('hide')">Hide All Figures</button>
-                    <button class="toggle-button" onclick="expandAllFigures()">Expand All</button>
-                    <button class="toggle-button" onclick="collapseAllFigures()">Collapse All</button>
+                <div class="controls">
+                    <p style="margin-bottom: 15px; color: var(--primary-color); font-weight: 600;">Dashboard Controls:</p>
+                    <button class="toggle-button" onclick="toggleAllFigures('show')">
+                        <i class="fas fa-eye"></i> Show All Figures
+                    </button>
+                    <button class="toggle-button hidden" onclick="toggleAllFigures('hide')">
+                        <i class="fas fa-eye-slash"></i> Hide All Figures
+                    </button>
+                    <button class="toggle-button" onclick="expandAllFigures()">
+                        <i class="fas fa-expand"></i> Expand All
+                    </button>
+                    <button class="toggle-button" onclick="collapseAllFigures()">
+                        <i class="fas fa-compress"></i> Collapse All
+                    </button>
                 </div>
         """
         
@@ -1153,7 +1463,7 @@ class FAIRVisualizer:
             {
                 'id': 'figure3',
                 'title': 'Figure 3: FAIR Principles Radar Chart',
-                'description': 'Visualizes performance across all four FAIR principles (Findable, Accessible, Interoperable, Reusable) for the top-performing or single repository. Each axis represents a FAIR principle.',
+                'description': 'Visualizes performance across all four FAIR principles (Findable, Accessible, Interoperable, Reusable) for all repositories. Each axis represents a FAIR principle.',
                 'file': 'figure3_radar_chart.html'
             },
             {
@@ -1205,12 +1515,35 @@ class FAIRVisualizer:
             """
 
         html_content += f"""
-                <div class="footer">
-                    <p>FAIR Analysis Dashboard • Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
-                    <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
-                    <p><a href="index.html">View Complete Report</a> | <a href="#metrics">Back to Top</a></p>
+            </main>
+            
+            <!-- Footer - Matching index.html -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <h3>FAIR Analysis Dashboard</h3>
+                        <p>Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
+                        
+                        <div class="footer-links">
+                            <a href="index.html" class="footer-link">
+                                <i class="fas fa-home"></i> Main Report
+                            </a>
+                            <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Repository
+                            </a>
+                            <a href="https://www.go-fair.org/fair-principles/" class="footer-link" target="_blank">
+                                <i class="fas fa-book"></i> FAIR Principles
+                            </a>
+                        </div>
+                        
+                        <div class="copyright">
+                            <p>FAIR Analysis Dashboard • Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
+                            <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                            <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </footer>
             
             <script>
                 // JavaScript for interactive controls
@@ -1221,7 +1554,7 @@ class FAIRVisualizer:
                     if (action === 'show') {{
                         figures.forEach(fig => {{
                             fig.style.display = 'block';
-                            fig.parentElement.parentElement.style.display = 'block';
+                            fig.parentElement.style.display = 'block';
                         }});
                         buttons[0].classList.add('hidden');
                         buttons[1].classList.remove('hidden');
@@ -1239,6 +1572,8 @@ class FAIRVisualizer:
                     figures.forEach(fig => {{
                         fig.style.height = '600px';
                     }});
+                    // Visual feedback
+                    showNotification('All figures expanded to full view');
                 }}
                 
                 function collapseAllFigures() {{
@@ -1246,7 +1581,59 @@ class FAIRVisualizer:
                     figures.forEach(fig => {{
                         fig.style.height = '400px';
                     }});
+                    // Visual feedback
+                    showNotification('All figures collapsed to compact view');
                 }}
+                
+                // Show a temporary notification
+                function showNotification(message) {{
+                    // Remove existing notification if any
+                    const existingNotification = document.querySelector('.notification');
+                    if (existingNotification) {{
+                        existingNotification.remove();
+                    }}
+                    
+                    // Create new notification
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.textContent = message;
+                    notification.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: var(--secondary-color);
+                        color: white;
+                        padding: 15px 25px;
+                        border-radius: 50px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                        z-index: 1000;
+                        font-weight: 600;
+                        animation: slideIn 0.3s ease;
+                    `;
+                    
+                    // Add to body
+                    document.body.appendChild(notification);
+                    
+                    // Remove after 3 seconds
+                    setTimeout(() => {{
+                        notification.style.animation = 'slideOut 0.3s ease';
+                        setTimeout(() => notification.remove(), 300);
+                    }}, 3000);
+                }}
+                
+                // Add CSS for animations
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes slideIn {{
+                        from {{ transform: translateX(100%); opacity: 0; }}
+                        to {{ transform: translateX(0); opacity: 1; }}
+                    }}
+                    @keyframes slideOut {{
+                        from {{ transform: translateX(0); opacity: 1; }}
+                        to {{ transform: translateX(100%); opacity: 0; }}
+                    }}
+                `;
+                document.head.appendChild(style);
                 
                 // Smooth scrolling for navigation
                 document.querySelectorAll('.nav-bar a').forEach(anchor => {{
@@ -1257,7 +1644,7 @@ class FAIRVisualizer:
                             const targetElement = document.querySelector(targetId);
                             if (targetElement) {{
                                 window.scrollTo({{
-                                    top: targetElement.offsetTop - 80,
+                                    top: targetElement.offsetTop - 120,
                                     behavior: 'smooth'
                                 }});
                             }}
@@ -1279,9 +1666,12 @@ class FAIRVisualizer:
                                 }}
                             }}
                         }});
-                    }});
+                    }}, {{ rootMargin: '100px' }});
                     
                     iframes.forEach(iframe => observer.observe(iframe));
+                    
+                    // Set initial state
+                    document.querySelectorAll('.toggle-button')[1].classList.add('hidden');
                 }});
             </script>
         </body>
@@ -1293,6 +1683,9 @@ class FAIRVisualizer:
             f.write(html_content)
         
         print(f"✓ Dashboard saved to {self.output_dir}/fair_dashboard.html")
+    
+    # ... [Rest of the class methods remain the same - create_radar_chart, create_parallel_categories, etc.]
+    # The rest of the class methods are unchanged from the original
     
     def create_radar_chart(self, output_format: str = 'html'):
         """Create radar chart showing FAIR principles for each repository"""
