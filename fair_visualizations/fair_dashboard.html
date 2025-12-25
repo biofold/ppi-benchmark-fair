@@ -1,0 +1,360 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>FAIR Analysis Dashboard</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f8f9fa;
+                    color: #333;
+                }
+                .container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    background-color: white;
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                }
+                .header {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    padding-bottom: 20px;
+                    border-bottom: 2px solid #007bff;
+                }
+                .header h1 {
+                    color: #007bff;
+                    margin-bottom: 10px;
+                }
+                .header p {
+                    color: #666;
+                    font-size: 16px;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    line-height: 1.6;
+                }
+                .figure-container {
+                    margin: 40px 0;
+                    padding: 20px;
+                    background-color: #f8f9fa;
+                    border-radius: 8px;
+                    border-left: 4px solid #007bff;
+                }
+                .figure-title {
+                    color: #495057;
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                }
+                .figure-description {
+                    color: #6c757d;
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                }
+                .figure-embed {
+                    width: 100%;
+                    height: 500px;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                .nav-bar {
+                    position: sticky;
+                    top: 0;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    margin-bottom: 30px;
+                    z-index: 1000;
+                }
+                .nav-bar ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    justify-content: center;
+                }
+                .nav-bar li {
+                    display: inline;
+                }
+                .nav-bar a {
+                    text-decoration: none;
+                    color: #007bff;
+                    padding: 8px 15px;
+                    border-radius: 20px;
+                    border: 1px solid #007bff;
+                    transition: all 0.3s;
+                    font-size: 14px;
+                }
+                .nav-bar a:hover {
+                    background-color: #007bff;
+                    color: white;
+                }
+                .footer {
+                    text-align: center;
+                    margin-top: 40px;
+                    padding-top: 20px;
+                    border-top: 1px solid #dee2e6;
+                    color: #6c757d;
+                    font-size: 14px;
+                }
+                .key-metrics {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 20px;
+                    margin: 30px 0;
+                }
+                .metric-card {
+                    background: linear-gradient(135deg, #007bff, #0056b3);
+                    color: white;
+                    padding: 20px;
+                    border-radius: 8px;
+                    text-align: center;
+                }
+                .metric-value {
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .metric-label {
+                    font-size: 14px;
+                    opacity: 0.9;
+                }
+                .toggle-button {
+                    background-color: #28a745;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    margin: 10px 5px;
+                    transition: background-color 0.3s;
+                }
+                .toggle-button:hover {
+                    background-color: #218838;
+                }
+                .toggle-button.hidden {
+                    background-color: #dc3545;
+                }
+                @media (max-width: 768px) {
+                    .figure-embed {
+                        height: 400px;
+                    }
+                    .nav-bar ul {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .nav-bar li {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .nav-bar a {
+                        display: block;
+                        width: 90%;
+                        margin: 5px auto;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>📊 FAIR Analysis Dashboard</h1>
+                    <p>Comprehensive visualization of FAIR (Findable, Accessible, Interoperable, Reusable) principles compliance across GitHub repositories</p>
+                </div>
+                
+                <div class="nav-bar">
+                    <ul>
+                        <li><a href="#figure1">Score Ranking</a></li>
+                        <li><a href="#figure2">Distribution</a></li>
+                        <li><a href="#figure3">Radar Chart</a></li>
+                        <li><a href="#figure4">Improvements</a></li>
+                        <li><a href="#figure5">Metadata</a></li>
+                        <li><a href="#figure6">Principles</a></li>
+                        <li><a href="#figure7">Performance</a></li>
+                        <li><a href="#figure8">Missing Elements</a></li>
+                        <li><a href="#figure9">Correlations</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Key Metrics Section -->
+                <div class="key-metrics" id="metrics">
+        
+                    <div class="metric-card">
+                        <div class="metric-value">3</div>
+                        <div class="metric-label">Repositories</div>
+                    </div>
+                
+                    <div class="metric-card">
+                        <div class="metric-value">55.8</div>
+                        <div class="metric-label">Average Score</div>
+                    </div>
+                
+                    <div class="metric-card">
+                        <div class="metric-value">82.5</div>
+                        <div class="metric-label">Highest Score</div>
+                    </div>
+                
+                    <div class="metric-card">
+                        <div class="metric-value">35.0</div>
+                        <div class="metric-label">Lowest Score</div>
+                    </div>
+                
+                    <div class="metric-card">
+                        <div class="metric-value">560.3</div>
+                        <div class="metric-label">Avg Metadata</div>
+                    </div>
+                
+                </div>
+                
+                <!-- Control Buttons -->
+                <div style="text-align: center; margin: 20px 0;">
+                    <button class="toggle-button" onclick="toggleAllFigures('show')">Show All Figures</button>
+                    <button class="toggle-button hidden" onclick="toggleAllFigures('hide')">Hide All Figures</button>
+                    <button class="toggle-button" onclick="expandAllFigures()">Expand All</button>
+                    <button class="toggle-button" onclick="collapseAllFigures()">Collapse All</button>
+                </div>
+        
+                <div class="figure-container" id="figure1">
+                    <h2 class="figure-title">Figure 1: FAIR Score Ranking / Gauge</h2>
+                    <p class="figure-description">Shows overall FAIR compliance score for each repository. For single repositories, a gauge chart indicates the score level with color-coded ranges (red: 0-30, orange: 30-60, yellow: 60-80, green: 80-100).</p>
+                    <iframe class="figure-embed" src="figure1_score_ranking.html" title="Figure 1: FAIR Score Ranking / Gauge"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure2">
+                    <h2 class="figure-title">Figure 2: Score Distribution</h2>
+                    <p class="figure-description">Histogram displaying the frequency distribution of FAIR scores across all analyzed repositories. Dashed lines show mean (red) and median (green) scores.</p>
+                    <iframe class="figure-embed" src="figure2_score_distribution.html" title="Figure 2: Score Distribution"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure3">
+                    <h2 class="figure-title">Figure 3: FAIR Principles Radar Chart</h2>
+                    <p class="figure-description">Visualizes performance across all four FAIR principles (Findable, Accessible, Interoperable, Reusable) for the top-performing or single repository. Each axis represents a FAIR principle.</p>
+                    <iframe class="figure-embed" src="figure3_radar_chart.html" title="Figure 3: FAIR Principles Radar Chart"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure4">
+                    <h2 class="figure-title">Figure 4: Improvement Priority Distribution</h2>
+                    <p class="figure-description">Bar chart showing the number of improvements needed categorized by priority level (High, Medium, Low). Helps identify urgent action items.</p>
+                    <iframe class="figure-embed" src="figure4_improvement_priority.html" title="Figure 4: Improvement Priority Distribution"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure5">
+                    <h2 class="figure-title">Figure 5: Metadata Files vs FAIR Score</h2>
+                    <p class="figure-description">Scatter plot examining the relationship between the number of metadata files and overall FAIR score. Includes trendline and correlation coefficient.</p>
+                    <iframe class="figure-embed" src="figure5_metadata_analysis.html" title="Figure 5: Metadata Files vs FAIR Score"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure6">
+                    <h2 class="figure-title">Figure 6: FAIR Principles Comparison</h2>
+                    <p class="figure-description">Bar chart comparing average scores across the four FAIR principles. For multiple repositories, includes error bars showing standard deviation.</p>
+                    <iframe class="figure-embed" src="figure6_principle_comparison.html" title="Figure 6: FAIR Principles Comparison"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure7">
+                    <h2 class="figure-title">Figure 7: Repository Performance Breakdown</h2>
+                    <p class="figure-description">Detailed comparison of FAIR principle scores across repositories. For single repositories, shows individual scores; for multiple repositories, grouped bars display all principles.</p>
+                    <iframe class="figure-embed" src="figure7_performance_breakdown.html" title="Figure 7: Repository Performance Breakdown"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure8">
+                    <h2 class="figure-title">Figure 8: Missing Elements Heatmap</h2>
+                    <p class="figure-description">Heatmap showing which FAIR elements are missing across repositories and their potential point value. Redder cells indicate more valuable improvements.</p>
+                    <iframe class="figure-embed" src="figure8_missing_elements.html" title="Figure 8: Missing Elements Heatmap"></iframe>
+                </div>
+            
+                <div class="figure-container" id="figure9">
+                    <h2 class="figure-title">Figure 9: FAIR Score Correlation Matrix</h2>
+                    <p class="figure-description">Heatmap showing correlations between different FAIR metrics. Helps identify relationships between principles (e.g., if repositories scoring high on Findable also score high on Reusable).</p>
+                    <iframe class="figure-embed" src="figure9_correlation_matrix.html" title="Figure 9: FAIR Score Correlation Matrix"></iframe>
+                </div>
+            
+                <div class="footer">
+                    <p>FAIR Analysis Dashboard • Generated on: 2025-12-24T19:53:24.841618</p>
+                    <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                    <p><a href="index.html">View Complete Report</a> | <a href="#metrics">Back to Top</a></p>
+                </div>
+            </div>
+            
+            <script>
+                // JavaScript for interactive controls
+                function toggleAllFigures(action) {
+                    const figures = document.querySelectorAll('.figure-container iframe');
+                    const buttons = document.querySelectorAll('.toggle-button');
+                    
+                    if (action === 'show') {
+                        figures.forEach(fig => {
+                            fig.style.display = 'block';
+                            fig.parentElement.parentElement.style.display = 'block';
+                        });
+                        buttons[0].classList.add('hidden');
+                        buttons[1].classList.remove('hidden');
+                    } else {
+                        figures.forEach(fig => {
+                            fig.style.display = 'none';
+                        });
+                        buttons[0].classList.remove('hidden');
+                        buttons[1].classList.add('hidden');
+                    }
+                }
+                
+                function expandAllFigures() {
+                    const figures = document.querySelectorAll('.figure-embed');
+                    figures.forEach(fig => {
+                        fig.style.height = '600px';
+                    });
+                }
+                
+                function collapseAllFigures() {
+                    const figures = document.querySelectorAll('.figure-embed');
+                    figures.forEach(fig => {
+                        fig.style.height = '400px';
+                    });
+                }
+                
+                // Smooth scrolling for navigation
+                document.querySelectorAll('.nav-bar a').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        if (targetId !== '#') {
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop - 80,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
+                
+                // Lazy loading for iframes
+                document.addEventListener("DOMContentLoaded", function() {
+                    const iframes = document.querySelectorAll('.figure-embed');
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const iframe = entry.target;
+                                if (!iframe.dataset.loaded) {
+                                    iframe.dataset.loaded = true;
+                                    // Iframes load on src attribute, so no additional action needed
+                                }
+                            }
+                        });
+                    });
+                    
+                    iframes.forEach(iframe => observer.observe(iframe));
+                });
+            </script>
+        </body>
+        </html>
+        
