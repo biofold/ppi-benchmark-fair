@@ -127,8 +127,8 @@ The metadata follows a hierarchical structure:
 
 ### **Interface ID Formats**
 
-* ProtCID: `{PDB_ID}_{integer}` (e.g., `1ABC_1`)  
-* QSalign: `{PDB_ID}_{integer}` (e.g., `1DEF_assembly1`)  
+* ProtCID: `{PDB_ID}_{integer}` (e.g., `1A17_6`)  
+* QSalign: `{PDB_ID}_{integer}` (e.g., `1A3A_1`)  
 * Cleaned: Original InterfaceID with standardized formatting
 
 ## **Usage Examples**
@@ -142,7 +142,7 @@ The metadata follows a hierarchical structure:
 `from pathlib import Path`
 
 *`# Load dataset metadata`*  
-`with open('bioschemas_output/dataset_with_interfaces.json', 'r') as f:`  
+`with open('bioschema/dataset_with_interfaces.json', 'r') as f:`  
     `dataset = json.load(f)`
 
 `print(f"Dataset: {dataset['name']}")`  
@@ -150,7 +150,7 @@ The metadata follows a hierarchical structure:
 `print(f"License: {dataset['license']}")`
 
 *`# Load specific interface`*  
-`interface_file = 'bioschemas_output/interface_protein_pairs/interface_1ABC_1.json'`  
+`interface_file = 'bioschema/interface_protein_pairs/interface_1A17_6.json'`  
 `with open(interface_file, 'r') as f:`  
     `interface = json.load(f)`
 
