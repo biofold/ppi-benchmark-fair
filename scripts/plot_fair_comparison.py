@@ -283,7 +283,7 @@ class FAIRVisualizer:
         # Figure 3: Radar Chart for ALL Repositories
         # ============================================
         fig3 = go.Figure()
-        
+
         if len(self.df_scores) > 0:
             colors = px.colors.qualitative.Set3[:len(self.df_scores)]
             
@@ -291,15 +291,33 @@ class FAIRVisualizer:
                 repo_name = row['repository'].split('/')[-1][:20]
                 scores = [row[p] for p in principles]
                 
+                # Get a valid color for this trace
+                color_value = colors[idx % len(colors)]
+                
+                # Ensure we have a valid color
+                if isinstance(color_value, str) and color_value.startswith('#'):
+                    # Valid hex color
+                    line_color = color_value
+                    # Create a slightly transparent version for fill
+                    try:
+                        rgb_vals = px.colors.hex_to_rgb(color_value)
+                        fill_color = f'rgba({rgb_vals[0]}, {rgb_vals[1]}, {rgb_vals[2]}, 0.3)'
+                    except:
+                        # Fallback if hex conversion fails
+                        fill_color = 'rgba(100, 100, 100, 0.3)'
+                else:
+                    # Fallback colors
+                    line_color = px.colors.qualitative.Plotly[idx % len(px.colors.qualitative.Plotly)]
+                    fill_color = 'rgba(100, 100, 100, 0.3)'
+                
                 fig3.add_trace(
                     go.Scatterpolar(
                         r=scores + [scores[0]],  # Close the loop
                         theta=[p.capitalize() for p in principles] + [principles[0].capitalize()],
                         fill='toself',
                         name=f"{repo_name} ({row['total']:.1f})",
-                        line_color=colors[idx % len(colors)],
-                        fillcolor=f'rgba(100, 100, 100, 0.3)',  # Simple gray fill
-                        #fillcolor=f'rgba{tuple(list(px.colors.hex_to_rgb(colors[idx % len(colors)])) + [0.3])}',
+                        line_color=line_color,
+                        fillcolor=fill_color,
                         opacity=0.7
                     )
                 )
@@ -318,7 +336,7 @@ class FAIRVisualizer:
                             font=dict(size=10, color="black"),
                             opacity=0.7
                         )
-        
+
         fig3.update_layout(
             polar=dict(
                 radialaxis=dict(
