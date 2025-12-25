@@ -181,11 +181,13 @@ class FAIRVisualizer:
             fig1.update_layout(
                 title={
                     'text': "Figure 1: Repository FAIR Score Gauge<br><sup>Shows overall FAIR compliance with color-coded ranges</sup>",
-                    'y': 0.9
+                    'y': 0.9,
+                     'yanchor': 'top',
+                     'pad': dict(t=30, b=20)  # Add vertical padding around title
                 },
                 height=400,
                 width=600,
-                margin=dict(t=100, b=50, l=50, r=50)
+                margin=dict(t=120, b=50, l=50, r=50)
             )
         else:
             # Multiple repositories - Ranking bar chart
