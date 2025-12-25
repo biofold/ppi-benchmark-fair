@@ -26,7 +26,7 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 `bash`
 
 *`# Clone repository`*  
-`git clone https://github.com/biofold/ppi-benchmark-fair.git`  
+`git lfs clone https://github.com/biofold/ppi-benchmark-fair.git`  
 `cd ppi-benchmark-fair`
 
 *`# Install requirements`*  
@@ -36,10 +36,10 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 `python ppi_benchmark_fair.py --output bioschema
 
 *`# Generate enriched metadata (recommended)`*  
-`python ppi_benchmark_fair.py \`  
+`python scripts/ppi_benchmark_fair.py \`  
   `--fetch-pdb-metadata \`  
   `--check-pdb-label \`  
-  `--cluster ppi_benchmark_seqs.clust_25_05 \`  
+  `--cluster data/ppi_benchmark_seqs.clust_25_05 \`  
   `--output bioschema \`
   `--verbose`
 
