@@ -195,7 +195,7 @@ Interfaces are clustered using BLASTClust with 90% sequence identity threshold:
 *`# Interpretation:`*  
 *`# -S 25: Score threshold 25 bits`*  
 *`# -L 0.5: Length coverage threshold 50%`*  
-*`# -b F: No score composition adjustment`*
+*`# -b F: Coverage on both neighbours False`*
 
 *`# Result: ~300 clusters across 1,677 interfaces`*
 
