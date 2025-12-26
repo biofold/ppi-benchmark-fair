@@ -1,6 +1,6 @@
 # **ELIXIR - Protein-Protein Interaction Benchmark - FAIR Metadata**
 
-[![FAIR Score: 82.5/100](https://img.shields.io/badge/FAIR_Score-82.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
+[![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -282,7 +282,7 @@ When `--fetch-pdb-metadata` is enabled, the script fetches comprehensive metadat
 
 ## **FAIR Improvements Roadmap**
 
-Based on the FAIR assessment (82.5/100), here are planned improvements:
+Based on the FAIR assessment (87.5/100), here are planned improvements:
 
 ### **Low Priority (Potential \+5 points)**
 
@@ -300,7 +300,7 @@ Based on the FAIR assessment (82.5/100), here are planned improvements:
 * Create GitHub releases with version tags  
 * Enable and populate documentation wiki
 
-Target FAIR Score: 100/100 (Currently: 82.5)
+Target FAIR Score: 100/100 (Currently: 87.5)
 
 ## **License and Attribution**
 
