@@ -1,7 +1,7 @@
 {
-  "generated_date": "2025-12-24T06:33:30.568207",
-  "dataset_file": "ppi_benchmark_3/dataset_with_interfaces.json",
-  "interfaces_dir": "ppi_benchmark_3/interface_protein_pairs",
+  "generated_date": "2025-12-26T03:52:25.342623",
+  "dataset_file": "ppi_benchmark_6/dataset_with_interfaces.json",
+  "interfaces_dir": "ppi_benchmark_6/interface_protein_pairs",
   "total_interfaces_generated": 1677,
   "total_interfaces_available": 1677,
   "interface_files_sample": [
@@ -16,8 +16,8 @@
     "interface_1AOH_1.json",
     "interface_1AZT_1.json"
   ],
-  "fair_package_file": "ppi_benchmark_3/fair_metadata_package.json",
-  "html_snippet_file": "ppi_benchmark_3/embedded_markup.html",
+  "fair_package_file": "ppi_benchmark_6/fair_metadata_package.json",
+  "html_snippet_file": "ppi_benchmark_6/embedded_markup.html",
   "csv_settings": {
     "url": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
     "separator_used": ",",

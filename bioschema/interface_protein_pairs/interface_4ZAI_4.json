@@ -118,7 +118,7 @@
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
-        "value": "{\"pdb_id\": \"4ZAI\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"7JNY\", \"sequences\": {\"A\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"sequence_length\": 88, \"residue_count\": 88, \"num_seqres_records\": 7}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"chains\": [\"A\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 1, \"unique_sequences\": 1, \"homomer_type\": \"monomer\", \"homomer_chains\": 1}",
+        "value": "{\"pdb_id\": \"4ZAI\", \"resolution\": 1.95, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": \"X-RAY DIFFRACTION\", \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": {\"title\": \"CRYSTAL STRUCTURE OF CXCL13 \", \"authors\": [\"E.M.ROSENBERG JR.\", \"D.RAJASEKARAN\", \"J.W.MURPHY\", \"G.PANTOURIS\", \"E.J.LOLIS\"], \"journal\": \"\", \"volume\": \"\", \"page\": \"\", \"year\": \"\"}, \"entity_count\": 0, \"r_factor\": null, \"space_group\": \"P 31 2 1\", \"unit_cell\": {\"a\": 48.968, \"b\": 48.968, \"c\": 80.276, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"7JNY\", \"sequences\": {\"A\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"sequence_length\": 88, \"residue_count\": 88, \"num_seqres_records\": 7}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"chains\": [\"A\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 1, \"unique_sequences\": 1, \"homomer_type\": \"monomer\", \"homomer_chains\": 1}",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
@@ -141,8 +141,8 @@
               9606
             ],
             "primary_taxonomy_id": 9606,
-            "resolution": null,
-            "experimental_method": null
+            "resolution": 1.95,
+            "experimental_method": "X-RAY DIFFRACTION"
           }
         }
       },
@@ -151,6 +151,19 @@
         "name": "PDBMetadataStatus",
         "value": "Obsolete entry - metadata extracted from PDB header file + sequences from header",
         "description": "This PDB entry has been obsoleted. Structural details were extracted from the PDB header file. Sequences were extracted from the PDB header file."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 1.95,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ExperimentalMethod",
+        "value": "X-RAY DIFFRACTION",
+        "description": "Experimental method used for structure determination"
       },
       {
         "@type": "PropertyValue",
@@ -194,6 +207,12 @@
         "sequenceLength": 88,
         "sequenceSource": "PDB header file (obsolete entry)",
         "sourceUrl": "https://files.rcsb.org/header/4ZAI.pdb"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "CRYSTAL STRUCTURE OF CXCL13 ",
+        "description": "Primary publication for this structure"
       },
       {
         "@type": "PropertyValue",

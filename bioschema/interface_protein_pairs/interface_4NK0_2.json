@@ -118,7 +118,7 @@
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
         "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
-        "value": "{\"pdb_id\": \"4NK0\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"6YQD\", \"sequences\": {\"A\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"B\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}, \"B\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"chains\": [\"A\", \"B\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 2, \"unique_sequences\": 1, \"homomer_type\": \"2-mer\", \"homomer_chains\": 2}",
+        "value": "{\"pdb_id\": \"4NK0\", \"resolution\": 2.02, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": \"X-RAY DIFFRACTION\", \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": {\"title\": \"HUMAN HISTIDINE TRIAD NUCLEOTIDE-BINDING PROTEIN 2 (HHINT2) IN P212121 SPACE GROUP AT 2.02 A \", \"authors\": [\"R.M.DOLOT\", \"A.WLODARCZYK\", \"G.D.BUJACZ\", \"B.NAWROT\"], \"journal\": \"\", \"volume\": \"\", \"page\": \"\", \"year\": \"\"}, \"entity_count\": 0, \"r_factor\": null, \"space_group\": \"P 21 21 21\", \"unit_cell\": {\"a\": 38.012, \"b\": 73.88, \"c\": 77.042, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"6YQD\", \"sequences\": {\"A\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"B\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}, \"B\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"chains\": [\"A\", \"B\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 2, \"unique_sequences\": 1, \"homomer_type\": \"2-mer\", \"homomer_chains\": 2}",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
@@ -142,8 +142,8 @@
               9606
             ],
             "primary_taxonomy_id": 9606,
-            "resolution": null,
-            "experimental_method": null
+            "resolution": 2.02,
+            "experimental_method": "X-RAY DIFFRACTION"
           }
         }
       },
@@ -152,6 +152,19 @@
         "name": "PDBMetadataStatus",
         "value": "Obsolete entry - metadata extracted from PDB header file + sequences from header",
         "description": "This PDB entry has been obsoleted. Structural details were extracted from the PDB header file. Sequences were extracted from the PDB header file."
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.02,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ExperimentalMethod",
+        "value": "X-RAY DIFFRACTION",
+        "description": "Experimental method used for structure determination"
       },
       {
         "@type": "PropertyValue",
@@ -206,6 +219,12 @@
         "sequenceLength": 163,
         "sequenceSource": "PDB header file (obsolete entry)",
         "sourceUrl": "https://files.rcsb.org/header/4NK0.pdb"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "HUMAN HISTIDINE TRIAD NUCLEOTIDE-BINDING PROTEIN 2 (HHINT2) IN P212121 SPACE GROUP AT 2.02 A ",
+        "description": "Primary publication for this structure"
       },
       {
         "@type": "PropertyValue",
