@@ -175,31 +175,38 @@
             font-size: 1.1rem;
         }
         
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        th {
-            background-color: #f8f9fa;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
-        tr:hover {
-            background-color: #f8f9fa;
-        }
+	/* Tables */
+	table {
+	    width: 100%;
+	    border-collapse: collapse;
+	    margin: 15px 0;
+	    border-radius: 8px;
+	    overflow: hidden;
+	    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+	    table-layout: auto; /* Changed from default to auto */
+	    word-wrap: break-word; /* Allow breaking long words */
+	}
+
+	th, td {
+	    padding: 15px;
+	    text-align: left;
+	    border-bottom: 1px solid #e0e0e0;
+	    word-wrap: break-word; /* Allow text wrapping */
+	    overflow-wrap: break-word; /* Modern alternative */
+	    white-space: normal; /* Changed from nowrap to normal */
+	    max-width: 300px; /* Optional: limit cell width */
+	}
+
+	th {
+	    background-color: #f8f9fa;
+	    color: var(--primary-color);
+	    font-weight: 600;
+	    white-space: normal; /* Allow header text to wrap */
+	}
+
+	tr:hover {
+	    background-color: #f8f9fa;
+}
         
         /* Lists */
         ul, ol {
@@ -331,8 +338,14 @@
             table {
                 display: block;
                 overflow-x: auto;
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
             }
-            
+
+            th, td {
+                max-width: none;
+                min-width: 120px; /* Ensure minimum width on mobile */
+            }           
+ 
             .badges {
                 flex-direction: column;
                 align-items: center;
@@ -347,7 +360,7 @@
                 flex-direction: column;
                 gap: 15px;
             }
-            
+             
             .validation-rules {
                 grid-template-columns: 1fr;
             }
@@ -374,8 +387,6 @@
                 <a href="https://mlcommons.org/croissant/">
                 <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
                 </div>
-                <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
-                </div> 
                 <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">Comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema</p>
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-arrow-left"></i> Back to Main Documentation
