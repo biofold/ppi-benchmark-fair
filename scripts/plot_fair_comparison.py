@@ -2535,7 +2535,6 @@ class FAIRVisualizer:
                 .container {{
                     max-width: 1400px;
                     margin: 0 auto;
-                    padding: 0 20px;
                 }}
                 
                 /* Header - Matching fair_dashboard.html */
