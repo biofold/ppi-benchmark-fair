@@ -1084,6 +1084,7 @@ class FAIRVisualizer:
                     line-height: 1.6;
                     color: #333;
                     background-color: var(--light-bg);
+                    padding: 20px;
                 }
                 
                 .container {
@@ -2530,6 +2531,7 @@ class FAIRVisualizer:
                     line-height: 1.6;
                     color: #333;
                     background-color: var(--light-bg);
+                    padding: 20px;
                 }}
                 
                 .container {{
