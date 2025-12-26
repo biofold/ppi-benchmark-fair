@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIXIR - PPI Benchmark Data Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header - Matching index.html */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1a252f);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 12px;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+        
+        .badge.schema {
+            background: linear-gradient(135deg, #6f42c1, #5a32a3);
+            color: white;
+            box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
+        }
+        
+        .badge.dictionary {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .badge.croissant {
+            background-color: #ff9800;
+            color: white;
+        }
+        
+        .badge.bioschemas {
+            background-color: #4285f4;
+            color: white;
+        }
+        
+        .badge.fair {
+            background: linear-gradient(135deg, var(--success-color), #219653);
+            color: white;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+        }
+        
+        .dashboard-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255,255,255,0.15);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-top: 20px;
+        }
+        
+        .dashboard-link:hover {
+            background-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Section Cards - Matching index.html */
+        .section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: "📚";
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.3rem;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 15px 0 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        /* Code blocks */
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-left: 4px solid var(--secondary-color);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        /* Property categories */
+        .property-category {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .property-category.core { border-left-color: #3498db; }
+        .property-category.metrics { border-left-color: #27ae60; }
+        .property-category.bio { border-left-color: #9b59b6; }
+        .property-category.clustering { border-left-color: #e74c3c; }
+        .property-category.pdb { border-left-color: #f39c12; }
+        
+        .property-table th:nth-child(1) { width: 25%; }
+        .property-table th:nth-child(2) { width: 10%; }
+        .property-table th:nth-child(3) { width: 10%; }
+        .property-table th:nth-child(4) { width: 25%; }
+        .property-table th:nth-child(5) { width: 30%; }
+        
+        /* Validation rules */
+        .validation-rules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .validation-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .validation-card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 12px;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .badge {
+                width: 90%;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .validation-rules {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><strong>ELIXIR PPI Benchmark<br>Data Dictionary</strong></h1>
+                <div class="badges">
+                    <a href="#" class="badge schema">Schema.org + Bioschemas</a>
+                    <a href="#" class="badge croissant">MLCommons Croissant 1.0</a>
+                    <a href="#" class="badge dictionary">Complete Data Dictionary</a>
+                    <a href="#" class="badge fair">FAIR Compliant</a>
+                </div>
+                <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">Comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema</p>
+                <a href="index.html" class="dashboard-link">
+                    <i class="fas fa-arrow-left"></i> Back to Main Documentation
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Overview -->
+            <section class="section">
+                <h2>Overview</h2>
+                <p>A benchmark dataset containing <strong>7 protein crystal structures</strong> with <strong>4 physiological</strong> and <strong>3 non-physiological</strong> homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.</p>
+                
+                <div class="property-category core">
+                    <h3>Dataset Metadata</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>Protein-Protein Interaction Interface Benchmark Dataset</td>
+                            </tr>
+                            <tr>
+                                <td>Identifier</td>
+                                <td>https://doi.org/10.5281/zenodo.XXXXXXX</td>
+                            </tr>
+                            <tr>
+                                <td>URL</td>
+                                <td>https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces</td>
+                            </tr>
+                            <tr>
+                                <td>License</td>
+                                <td>CC BY 4.0</td>
+                            </tr>
+                            <tr>
+                                <td>Version</td>
+                                <td>1.0</td>
+                            </tr>
+                            <tr>
+                                <td>Date Published</td>
+                                <td>2023-04-30</td>
+                            </tr>
+                            <tr>
+                                <td>Date Modified</td>
+                                <td>2025-12-26</td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>7 entries</td>
+                            </tr>
+                            <tr>
+                                <td>Schema Conformance</td>
+                                <td>ML Commons Croissant 1.0 & BioSchemas Dataset Profile 1.0-RELEASE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Root Dataset Properties -->
+            <section class="section">
+                <h2>Root Dataset Properties</h2>
+                <p>Top-level properties describing the complete dataset</p>
+                
+                <table class="property-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Example/Format</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@context</td>
+                            <td>Array</td>
+                            <td>Yes</td>
+                            <td>JSON-LD context URLs</td>
+                            <td>["https://schema.org/", {"cr": "https://mlcommons.org/croissant/1.0"}]</td>
+                        </tr>
+                        <tr>
+                            <td>@type</td>
+                            <td>Array</td>
+                            <td>Yes</td>
+                            <td>Dataset types</td>
+                            <td>["Dataset", "cr:Dataset"]</td>
+                        </tr>
+                        <tr>
+                            <td>@id</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>Dataset identifier URL</td>
+                            <td>"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"</td>
+                        </tr>
+                        <tr>
+                            <td>cr:conformsTo</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>ML Commons Croissant spec</td>
+                            <td>"https://mlcommons.org/croissant/1.0"</td>
+                        </tr>
+                        <tr>
+                            <td>dct:conformsTo</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>BioSchemas profile</td>
+                            <td>"https://bioschemas.org/profiles/Dataset/1.0-RELEASE"</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Dataset name</td>
+                            <td>"Protein-Protein Interaction Interface Benchmark Dataset"</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Comprehensive description</td>
+                            <td>Text description</td>
+                        </tr>
+                        <tr>
+                            <td>identifier</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>DOI identifier</td>
+                            <td>"https://doi.org/10.5281/zenodo.XXXXXXX"</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>GitHub repository URL</td>
+                            <td>"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"</td>
+                        </tr>
+                        <tr>
+                            <td>license</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>License URL</td>
+                            <td>"https://creativecommons.org/licenses/by/4.0/"</td>
+                        </tr>
+                        <tr>
+                            <td>keywords</td>
+                            <td>Array[DefinedTerm]</td>
+                            <td>Yes</td>
+                            <td>EDAM ontology keywords</td>
+                            <td>Array of DefinedTerm objects</td>
+                        </tr>
+                        <tr>
+                            <td>creator</td>
+                            <td>Array[Organization]</td>
+                            <td>Yes</td>
+                            <td>Creator organizations</td>
+                            <td>Array of Organization objects</td>
+                        </tr>
+                        <tr>
+                            <td>datePublished</td>
+                            <td>String (Date)</td>
+                            <td>Yes</td>
+                            <td>Publication date</td>
+                            <td>"2023-04-30" (YYYY-MM-DD)</td>
+                        </tr>
+                        <tr>
+                            <td>publisher</td>
+                            <td>Organization</td>
+                            <td>Yes</td>
+                            <td>Publisher organization</td>
+                            <td>Organization object</td>
+                        </tr>
+                        <tr>
+                            <td>version</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Dataset version</td>
+                            <td>"1.0" (Major.Minor)</td>
+                        </tr>
+                        <tr>
+                            <td>citation</td>
+                            <td>ScholarlyArticle</td>
+                            <td>Yes</td>
+                            <td>Citation reference</td>
+                            <td>ScholarlyArticle object</td>
+                        </tr>
+                        <tr>
+                            <td>variableMeasured</td>
+                            <td>Array[PropertyValue]</td>
+                            <td>Yes</td>
+                            <td>Measured variables</td>
+                            <td>Array of PropertyValue objects</td>
+                        </tr>
+                        <tr>
+                            <td>measurementTechnique</td>
+                            <td>Array[String]</td>
+                            <td>Yes</td>
+                            <td>Experimental techniques</td>
+                            <td>["X-ray crystallography", "..."]</td>
+                        </tr>
+                        <tr>
+                            <td>dateCreated</td>
+                            <td>String (Date)</td>
+                            <td>Yes</td>
+                            <td>Creation date</td>
+                            <td>"2023-04-30"</td>
+                        </tr>
+                        <tr>
+                            <td>dateModified</td>
+                            <td>String (Date)</td>
+                            <td>Yes</td>
+                            <td>Last modification date</td>
+                            <td>"2025-12-26"</td>
+                        </tr>
+                        <tr>
+                            <td>maintainer</td>
+                            <td>Organization</td>
+                            <td>Yes</td>
+                            <td>Maintaining organization</td>
+                            <td>Organization object</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Dataset size description</td>
+                            <td>"7 entries"</td>
+                        </tr>
+                        <tr>
+                            <td>hasPart</td>
+                            <td>Array[Interface]</td>
+                            <td>Yes</td>
+                            <td>Interface entries</td>
+                            <td>Array of Interface objects</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Interface Entry Structure -->
+            <section class="section">
+                <h2>Interface Entry Structure (hasPart items)</h2>
+                <p>Individual interface entries within the dataset</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Pattern/Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@type</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Data catalog item type</td>
+                            <td>"DataCatalogItem"</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Interface name</td>
+                            <td>^Interface [A-Z0-9]{4}_\d+$</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Interface description</td>
+                            <td>Text description</td>
+                        </tr>
+                        <tr>
+                            <td>identifier</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Interface identifier</td>
+                            <td>^[A-Z0-9]{4}_\d+$</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>RCSB PDB URL</td>
+                            <td>^https://www\.rcsb\.org/structure/[A-Z0-9]{4}$</td>
+                        </tr>
+                        <tr>
+                            <td>additionalProperty</td>
+                            <td>Array[PropertyValue]</td>
+                            <td>Yes</td>
+                            <td>Interface properties</td>
+                            <td>Array (min 20 items)</td>
+                        </tr>
+                        <tr>
+                            <td>mainEntity</td>
+                            <td>Protein</td>
+                            <td>Yes</td>
+                            <td>Protein entity</td>
+                            <td>Protein object</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Interface Additional Properties -->
+            <section class="section">
+                <h2>Interface Additional Properties</h2>
+                
+                <div class="property-category core">
+                    <h3>Core Interface Properties</h3>
+                    <table class="property-table">
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>InterfaceID</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Unique interface identifier</td>
+                                <td>"1A17_6"</td>
+                            </tr>
+                            <tr>
+                                <td>InterfaceSource</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Source of interface ID</td>
+                                <td>"ProtCID"</td>
+                            </tr>
+                            <tr>
+                                <td>physio</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>Physiological classification</td>
+                                <td>false</td>
+                            </tr>
+                            <tr>
+                                <td>label</td>
+                                <td>Integer</td>
+                                <td>Yes</td>
+                                <td>Numeric label</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>AuthChain1</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>First chain in interface</td>
+                                <td>"A"</td>
+                            </tr>
+                            <tr>
+                                <td>AuthChain2</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Second chain in interface</td>
+                                <td>"A"</td>
+                            </tr>
+                            <tr>
+                                <td>SymmetryOp1</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Symmetry operation chain 1</td>
+                                <td>"1_555"</td>
+                            </tr>
+                            <tr>
+                                <td>SymmetryOp2</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Symmetry operation chain 2</td>
+                                <td>"15_545"</td>
+                            </tr>
+                            <tr>
+                                <td>LabelChain1</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>First chain in assembly</td>
+                                <td>"A"</td>
+                            </tr>
+                            <tr>
+                                <td>LabelChain2</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Second chain in assembly</td>
+                                <td>"B"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="property-category metrics">
+                    <h3>Interface Metrics</h3>
+                    <table class="property-table">
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Unit</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Buried Surface Area (BSA)</td>
+                                <td>Number</td>
+                                <td>Å²</td>
+                                <td>Total buried surface area</td>
+                                <td>4153.16</td>
+                            </tr>
+                            <tr>
+                                <td>Atomic Contacts</td>
+                                <td>Integer</td>
+                                <td>count</td>
+                                <td>Number of atomic contacts</td>
+                                <td>138</td>
+                            </tr>
+                            <tr>
+                                <td>BSA Polar</td>
+                                <td>Number</td>
+                                <td>Å²</td>
+                                <td>Polar component of BSA</td>
+                                <td>1651.43</td>
+                            </tr>
+                            <tr>
+                                <td>BSA Apolar</td>
+                                <td>Number</td>
+                                <td>Å²</td>
+                                <td>Apolar component of BSA</td>
+                                <td>2501.74</td>
+                            </tr>
+                            <tr>
+                                <td>Fraction Polar</td>
+                                <td>Number</td>
+                                <td>ratio</td>
+                                <td>Fraction of polar contacts</td>
+                                <td>0.3976</td>
+                            </tr>
+                            <tr>
+                                <td>Fraction Apolar</td>
+                                <td>Number</td>
+                                <td>ratio</td>
+                                <td>Fraction of apolar contacts</td>
+                                <td>0.6024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="property-category bio">
+                    <h3>Biological Information</h3>
+                    <table class="property-table">
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gene</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Gene name</td>
+                                <td>"PPP5C"</td>
+                            </tr>
+                            <tr>
+                                <td>Superfamily</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Protein superfamily</td>
+                                <td>"1.25.40.10"</td>
+                            </tr>
+                            <tr>
+                                <td>Pfam</td>
+                                <td>String</td>
+                                <td>No</td>
+                                <td>Pfam domain</td>
+                                <td>"PF00359"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="property-category clustering">
+                    <h3>Sequence Clustering</h3>
+                    <table class="property-table">
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ClusterID</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Sequence cluster ID</td>
+                                <td>"1A17_6"</td>
+                            </tr>
+                            <tr>
+                                <td>ClusterSize</td>
+                                <td>Integer</td>
+                                <td>Yes</td>
+                                <td>Number in cluster</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>ClusterMembers</td>
+                                <td>Array[String]</td>
+                                <td>Yes</td>
+                                <td>Other interfaces in cluster</td>
+                                <td>["3O77_2", ...]</td>
+                            </tr>
+                            <tr>
+                                <td>ClusterMethod</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Clustering method</td>
+                                <td>"BLASTClust sequence clustering"</td>
+                            </tr>
+                            <tr>
+                                <td>ClusterMethodOptions</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Clustering parameters</td>
+                                <td>"-S 25 -L 0.5 -b F"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="property-category pdb">
+                    <h3>PDB Metadata Properties</h3>
+                    <table class="property-table">
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PDBStructureMetadata</td>
+                                <td>String/Object</td>
+                                <td>Yes</td>
+                                <td>Complete RCSB metadata</td>
+                                <td>JSON string/object</td>
+                            </tr>
+                            <tr>
+                                <td>PDBMetadataStatus</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Metadata status</td>
+                                <td>"Complete metadata available"</td>
+                            </tr>
+                            <tr>
+                                <td>Resolution</td>
+                                <td>Number</td>
+                                <td>Yes</td>
+                                <td>X-ray resolution</td>
+                                <td>2.45</td>
+                            </tr>
+                            <tr>
+                                <td>SourceOrganism</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Source organism</td>
+                                <td>"Homo sapiens"</td>
+                            </tr>
+                            <tr>
+                                <td>HomomericStructure</td>
+                                <td>Boolean</td>
+                                <td>Yes</td>
+                                <td>Is homomeric</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>HomomerType</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Type of homomer</td>
+                                <td>"monomer"</td>
+                            </tr>
+                            <tr>
+                                <td>ChainCount</td>
+                                <td>Integer</td>
+                                <td>Yes</td>
+                                <td>Number of chains</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>UniqueSequenceCount</td>
+                                <td>Integer</td>
+                                <td>Yes</td>
+                                <td>Unique sequences</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Chain_*_Sequence</td>
+                                <td>String</td>
+                                <td>Yes*</td>
+                                <td>Amino acid sequence</td>
+                                <td>"RDEPPADGALK..."</td>
+                            </tr>
+                            <tr>
+                                <td>PrimaryCitation</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Publication title</td>
+                                <td>Title text</td>
+                            </tr>
+                            <tr>
+                                <td>PublicationDOI</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Publication DOI</td>
+                                <td>"10.1093/emboj/17.5.1192"</td>
+                            </tr>
+                            <tr>
+                                <td>Entity_*</td>
+                                <td>String</td>
+                                <td>Yes*</td>
+                                <td>Entity information</td>
+                                <td>"Chains: A, Length: 166"</td>
+                            </tr>
+                            <tr>
+                                <td>NCBI_Taxonomy_ID</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Taxonomy ID</td>
+                                <td>"9606"</td>
+                            </tr>
+                            <tr>
+                                <td>AssociatedInterface</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Interface ID</td>
+                                <td>"1A17_6"</td>
+                            </tr>
+                            <tr>
+                                <td>InterfaceChains</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Chains in interface</td>
+                                <td>"A-A", "nan-nan"</td>
+                            </tr>
+                            <tr>
+                                <td>InterfaceClassification</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Interface class</td>
+                                <td>"Non-physiological"</td>
+                            </tr>
+                            <tr>
+                                <td>LabelInterfaceChains</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>Assembly chains</td>
+                                <td>"A-B"</td>
+                            </tr>
+                            <tr>
+                                <td>PDB_ID</td>
+                                <td>String</td>
+                                <td>Yes</td>
+                                <td>PDB identifier</td>
+                                <td>"1A17"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;"><em>*Note: Chain_Sequence and Entity* are required for each chain/entity present in the structure.</em></p>
+                </div>
+            </section>
+
+            <!-- Protein Entity Structure -->
+            <section class="section">
+                <h2>Protein Entity Structure (mainEntity)</h2>
+                <p>Protein objects representing the main molecular entities in each interface</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Pattern/Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@context</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Schema.org context</td>
+                            <td>"https://schema.org"</td>
+                        </tr>
+                        <tr>
+                            <td>@type</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Protein type</td>
+                            <td>"Protein"</td>
+                        </tr>
+                        <tr>
+                            <td>@id</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Protein identifier</td>
+                            <td>^#protein_[A-Z0-9]{4}$</td>
+                        </tr>
+                        <tr>
+                            <td>dct:conformsTo</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>BioSchemas profile</td>
+                            <td>"https://bioschemas.org/profiles/Protein/0.11-RELEASE"</td>
+                        </tr>
+                        <tr>
+                            <td>identifier</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>PDB ID</td>
+                            <td>^[A-Z0-9]{4}$</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Protein name</td>
+                            <td>^Protein [A-Z0-9]{4}$</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Protein description</td>
+                            <td>Text description</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>RCSB PDB URL</td>
+                            <td>^https://www\.rcsb\.org/structure/[A-Z0-9]{4}$</td>
+                        </tr>
+                        <tr>
+                            <td>taxonomicRange</td>
+                            <td>TaxonomicRange</td>
+                            <td>Yes</td>
+                            <td>Organism taxonomy</td>
+                            <td>TaxonomicRange object</td>
+                        </tr>
+                        <tr>
+                            <td>alternateName</td>
+                            <td>Array[String]</td>
+                            <td>Yes</td>
+                            <td>Alternative names</td>
+                            <td>Min 2 items, includes PDB {ID}</td>
+                        </tr>
+                        <tr>
+                            <td>hasRepresentation</td>
+                            <td>Array[ProteinRep]</td>
+                            <td>Yes</td>
+                            <td>Structure files</td>
+                            <td>Min 3 items</td>
+                        </tr>
+                        <tr>
+                            <td>additionalProperty</td>
+                            <td>Array[PropertyValue]</td>
+                            <td>Yes</td>
+                            <td>Protein properties</td>
+                            <td>Similar to interface properties</td>
+                        </tr>
+                        <tr>
+                            <td>hasMolecularFunction</td>
+                            <td>DefinedTerm</td>
+                            <td>Yes</td>
+                            <td>Molecular function</td>
+                            <td>DefinedTerm object</td>
+                        </tr>
+                        <tr>
+                            <td>bioChemInteraction</td>
+                            <td>Protein</td>
+                            <td>Yes</td>
+                            <td>Interaction info</td>
+                            <td>Protein object</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 30px;">TaxonomicRange Object Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@type</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>DefinedTerm type</td>
+                            <td>"DefinedTerm"</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Organism name</td>
+                            <td>"Homo sapiens"</td>
+                        </tr>
+                        <tr>
+                            <td>inDefinedTermSet</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Taxonomy set</td>
+                            <td>"https://www.ncbi.nlm.nih.gov/taxonomy"</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Description</td>
+                            <td>"Organism taxonomy information from PDB metadata"</td>
+                        </tr>
+                        <tr>
+                            <td>termCode</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Taxonomy ID</td>
+                            <td>"9606"</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>Taxonomy browser</td>
+                            <td>"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"</td>
+                        </tr>
+                        <tr>
+                            <td>identifier</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Identifier</td>
+                            <td>"taxonomy:9606"</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 30px;">ProteinRepresentation Object Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Allowed Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@type</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>PropertyValue type</td>
+                            <td>"PropertyValue"</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Representation type</td>
+                            <td>"PDB Structure", "mmCIF Structure", "PDB ID"</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>String (URI)</td>
+                            <td>Yes</td>
+                            <td>URL or identifier</td>
+                            <td>URI for files, ID for PDB ID</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>String</td>
+                            <td>Yes</td>
+                            <td>Description</td>
+                            <td>Text description</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Data File Structure -->
+            <section class="section">
+                <h2>Data File Structure</h2>
+                
+                <h3>Available File Formats</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Location Pattern</th>
+                            <th>Example</th>
+                            <th>Compression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PDB Format</td>
+                            <td>https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/{pdb_id}_{interface}.pdb.gz</td>
+                            <td>1a17_6.pdb.gz</td>
+                            <td>gzip</td>
+                        </tr>
+                        <tr>
+                            <td>mmCIF Format</td>
+                            <td>https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/{pdb_id}_{interface}.cif.gz</td>
+                            <td>1a17_6.cif.gz</td>
+                            <td>gzip</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>File Naming Convention</h3>
+                <ul>
+                    <li><strong>PDB ID</strong>: Lowercase (e.g., 1a17 not 1A17)</li>
+                    <li><strong>Interface</strong>: Appended with underscore (e.g., _6)</li>
+                    <li><strong>Compression</strong>: All files are gzipped (.gz extension)</li>
+                </ul>
+            </section>
+
+            <!-- Data Validation Rules -->
+            <section class="section">
+                <h2>Data Validation Rules</h2>
+                
+                <h3>Required Fields Validation</h3>
+                <p>Interface entries must have:</p>
+                <ul>
+                    <li>Unique InterfaceID</li>
+                    <li>Valid PDB ID pattern ([A-Z0-9]{4}_\d+)</li>
+                    <li>physio boolean value</li>
+                    <li>label integer (0 or 1)</li>
+                    <li>BSA and atomic contacts values</li>
+                    <li>Valid taxonomicRange with NCBI taxonomy ID</li>
+                </ul>
+                
+                <p>Protein entities must have:</p>
+                <ul>
+                    <li>Valid PDB ID pattern ([A-Z0-9]{4})</li>
+                    <li>At least 3 structure representations</li>
+                    <li>Valid taxonomicRange object</li>
+                    <li>Sequence information for all chains</li>
+                    <li>Correct alternate name pattern</li>
+                </ul>
+
+                <div class="validation-rules">
+                    <div class="validation-card">
+                        <h4>Data Type Validation</h4>
+                        <table>
+                            <tr><td>physio</td><td>Boolean</td><td>Must be true or false</td></tr>
+                            <tr><td>label</td><td>Integer</td><td>Must be 0 or 1</td></tr>
+                            <tr><td>BSA, BSA Polar, BSA Apolar</td><td>Number</td><td>Must be positive</td></tr>
+                            <tr><td>Atomic Contacts</td><td>Integer</td><td>Must be non-negative</td></tr>
+                            <tr><td>Resolution</td><td>Number</td><td>Must be positive</td></tr>
+                        </table>
+                    </div>
+                    
+                    <div class="validation-card">
+                        <h4>Pattern Validation</h4>
+                        <table>
+                            <tr><td>ChainCount, UniqueSequenceCount, ClusterSize</td><td>Integer</td><td>Must be positive</td></tr>
+                            <tr><td>Fraction Polar, Fraction Apolar</td><td>Number</td><td>Must be 0-1</td></tr>
+                            <tr><td>NCBI_Taxonomy_ID</td><td>String</td><td>Must be numeric digits</td></tr>
+                            <tr><td>Chain sequences</td><td>String</td><td>Must match ^[A-Z]+$ pattern</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>Consistency Rules</h3>
+                <ul>
+                    <li><strong>Interface Classification</strong>: physio: true must match label: 1, and physio: false must match label: 0</li>
+                    <li><strong>Chain Sequences</strong>: Must match sequence length reported in metadata</li>
+                    <li><strong>Taxonomy IDs</strong>: Must be valid NCBI taxonomy IDs and consistent across references</li>
+                    <li><strong>URLs</strong>: Must be accessible and follow expected patterns</li>
+                    <li><strong>Cross-References</strong>: Interface IDs must match between InterfaceID and name patterns</li>
+                    <li><strong>PDB IDs</strong>: Must be consistent across all references to the same structure</li>
+                    <li><strong>File Naming</strong>: Must follow lowercase PDB ID convention</li>
+                </ul>
+            </section>
+
+            <!-- Usage Examples -->
+            <section class="section">
+                <h2>Usage Examples</h2>
+                
+                <h3>Accessing Interface Data</h3>
+                <pre><code># Example patterns
+interface_id = entry["identifier"]  # e.g., "1A17_6"
+classification = entry["physio"]    # Boolean: true/false
+bsa_value = entry["Buried Surface Area (BSA)"]  # Number: 4153.16
+contacts = entry["Atomic Contacts"]  # Integer: 138</code></pre>
+
+                <h3>Accessing Protein Data</h3>
+                <pre><code># Example patterns
+protein_name = protein["name"]  # e.g., "Protein 1A17"
+organism = protein["SourceOrganism"]  # e.g., "Homo sapiens"
+taxonomy_id = protein["NCBI_Taxonomy_ID"]  # e.g., "9606"
+chain_a_seq = protein["Chain_A_Sequence"]  # Amino acid sequence</code></pre>
+
+                <h3>Downloading Structure Files</h3>
+                <pre><code># URL construction patterns
+pdb_id = "1A17"
+interface_num = "6"
+
+# PDB file URL
+pdb_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/{pdb_id.lower()}_{interface_num}.pdb.gz"
+
+# mmCIF file URL
+mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/{pdb_id.lower()}_{interface_num}.cif.gz"</code></pre>
+            </section>
+
+            <!-- License and Attribution -->
+            <section class="section">
+                <h2>License and Attribution</h2>
+                
+                <h3>License</h3>
+                <p><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong><br>
+                This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+                
+                <h3>Citation</h3>
+                <p>When using this dataset, please cite:</p>
+                <ul>
+                    <li><strong>Dataset DOI</strong>: https://doi.org/10.5281/zenodo.XXXXXXX</li>
+                    <li><strong>Original Publication</strong>: "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study" (DOI: 10.1002/pmic.202200323)</li>
+                    <li><strong>ELIXIR 3D-BioInfo Community</strong></li>
+                </ul>
+            </section>
+
+            <!-- Contact and Support -->
+            <section class="section">
+                <h2>Contact and Support</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Contact Point</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maintainer</td>
+                            <td>ELIXIR 3D-BioInfo Community</td>
+                        </tr>
+                        <tr>
+                            <td>URL</td>
+                            <td>https://elixir-europe.org/platforms/3d-bioinfo</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub Repository</td>
+                            <td>https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin-top: 30px;">Version History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.0</td>
+                            <td>2023-04-30</td>
+                            <td>Initial release with 7 protein interfaces</td>
+                        </tr>
+                        <tr>
+                            <td>Latest</td>
+                            <td>2025-12-26</td>
+                            <td>Updated metadata enrichment</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+                    <p><strong>Note:</strong> This data dictionary provides comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema. All properties follow JSON Schema validation rules and are compatible with both BioSchemas and ML Commons Croissant standards.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>ELIXIR 3D-BioInfo Community</h3>
+                <p>Comprehensive Data Dictionary for PPI Benchmark</p>
+                
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">
+                        <i class="fas fa-home"></i> Main Documentation
+                    </a>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
+                    <a href="https://bioschemas.org/" class="footer-link" target="_blank">
+                        <i class="fas fa-code"></i> Bioschemas
+                    </a>
+                    <a href="https://mlcommons.org/croissant" class="footer-link" target="_blank">
+                        <i class="fas fa-database"></i> Croissant
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>ELIXIR PPI Benchmark Data Dictionary • Generated on: 2025-12-26</p>
+                    <p>Schema.org • Bioschemas • ML Commons Croissant 1.0</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
