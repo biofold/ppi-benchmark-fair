@@ -36,7 +36,7 @@
                 }
                 
                 /* Header - Matching fair_dashboard.html */
-                /*header {
+                header {
                     background: linear-gradient(135deg, var(--primary-color), #1a252f);
                     color: white;
                     padding: 60px 0;
@@ -60,23 +60,7 @@
                 .header-content {
                     position: relative;
                     z-index: 1;
-                }*/
-            header::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-                background-size: cover;
-            }
-
-            .header-content {
-                position: relative;
-                z-index: 1;
-                padding: 0 20px;
-            }
+                }
                 
                 h1 {
                     font-size: 2.8rem;
@@ -297,9 +281,9 @@
             </style>
         </head>
         <body>
+            <div class="container">
             <!-- Header - Matching fair_dashboard.html -->
             <header>
-                <div class="container">
                     <div class="header-content">
                         <h1>FAIR Analysis Report</h1>
                         <div class="top-badge">TOP SCORE: 87.5/100</div>
@@ -308,7 +292,6 @@
                             <i class="fas fa-chart-bar"></i> Open Interactive Dashboard
                         </a>
                     </div>
-                </div>
             </header>
             
             <main class="container">
