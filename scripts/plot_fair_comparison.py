@@ -1089,36 +1089,37 @@ class FAIRVisualizer:
                 .container {
                     max-width: 1400px;
                     margin: 0 auto;
-                    padding: 0 20px;
                 }
                 
                 /* Header - Matching index.html */
-                header {
-                    background: linear-gradient(135deg, var(--primary-color), #1a252f);
-                    color: white;
-                    padding: 60px 0;
-                    text-align: center;
-                    position: relative;
-                    overflow: hidden;
-                    margin-bottom: 40px;
-                }
-                
-                header::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-                    background-size: cover;
-                }
-                
-                .header-content {
-                    position: relative;
-                    z-index: 1;
-                }
-                
+		header {
+		    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+		    color: white;
+		    padding: 50px 0;
+		    text-align: center;
+		    position: relative;
+		    overflow: hidden;
+		    margin-bottom: 40px;
+		    border-radius: 12px;
+		}
+
+		header::before {
+		    content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+		    background-size: cover;
+		}
+
+		.header-content {
+		    position: relative;
+		    z-index: 1;
+		    padding: 0 20px;
+		 }
+
                 h1 {
                     font-size: 2.8rem;
                     margin-bottom: 15px;
@@ -1414,18 +1415,17 @@ class FAIRVisualizer:
             </style>
         </head>
         <body>
+            <div class="container">
             <!-- Header - Matching index.html -->
             <header>
-                <div class="container">
                     <div class="header-content">
-                        <h1>FAIR Analysis Dashboard</h1>
+                        <h1>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Dashboard</h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
                         <a href="index.html" class="back-link">
                             <i class="fas fa-arrow-left"></i> Back to Main Report
                         </a>
                     </div>
-                </div>
             </header>
             
             <main class="container">
@@ -2632,7 +2632,7 @@ class FAIRVisualizer:
                 /* Section Cards - Matching fair_dashboard.html */
                 .section {{
                     background-color: white;
-                    margin: 40px 0;
+                    margin: 30px 0;
                     padding: 30px;
                     border-radius: 12px;
                     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -2784,18 +2784,17 @@ class FAIRVisualizer:
             </style>
         </head>
         <body>
+            <div class="container">
             <!-- Header - Matching fair_dashboard.html -->
             <header>
-                <div class="container">
                     <div class="header-content">
-                        <h1>FAIR Analysis Report</h1>
+                        <h1>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Report</h1>
                         <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
                         <a href="fair_dashboard.html" class="dashboard-link">
                             <i class="fas fa-chart-bar"></i> Open Interactive Dashboard
                         </a>
                     </div>
-                </div>
             </header>
             
             <main class="container">
