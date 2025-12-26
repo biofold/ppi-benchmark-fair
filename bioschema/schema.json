@@ -1,0 +1,717 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/schema.json",
+  "title": "FAIR Metadata Package Schema",
+  "description": "Schema for FAIR metadata package for protein-protein interaction interface benchmark dataset",
+  "type": "object",
+  "required": ["fair_metadata", "bioschemas_markup"],
+  "properties": {
+    "fair_metadata": {
+      "type": "object",
+      "required": ["findability", "accessibility", "interoperability", "reusability"],
+      "properties": {
+        "findability": {
+          "type": "object",
+          "required": ["persistent_identifier", "rich_metadata", "searchable_registry", "versioning"],
+          "properties": {
+            "persistent_identifier": {
+              "type": "string",
+              "format": "uri"
+            },
+            "rich_metadata": {
+              "type": "boolean"
+            },
+            "searchable_registry": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "versioning": {
+              "type": "object",
+              "required": ["current_version", "versioning_system", "repository"],
+              "properties": {
+                "current_version": {
+                  "type": "string"
+                },
+                "versioning_system": {
+                  "type": "string"
+                },
+                "repository": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        },
+        "accessibility": {
+          "type": "object",
+          "required": ["protocol", "authentication", "long_term_availability"],
+          "properties": {
+            "protocol": {
+              "type": "string"
+            },
+            "authentication": {
+              "type": "string"
+            },
+            "long_term_availability": {
+              "type": "string"
+            }
+          }
+        },
+        "interoperability": {
+          "type": "object",
+          "required": ["data_formats", "vocabularies", "standards_compliance"],
+          "properties": {
+            "data_formats": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "vocabularies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "standards_compliance": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "reusability": {
+          "type": "object",
+          "required": ["license", "provenance", "documentation"],
+          "properties": {
+            "license": {
+              "type": "string"
+            },
+            "provenance": {
+              "type": "object",
+              "required": ["creation_date", "creators", "methods", "reference_publication", "data_sources"],
+              "properties": {
+                "creation_date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "creators": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "methods": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reference_publication": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "data_sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "documentation": {
+              "type": "object",
+              "required": ["readme", "methods_paper", "ml_ready", "task_type", "input_modality", "target_column", "features"],
+              "properties": {
+                "readme": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "methods_paper": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "ml_ready": {
+                  "type": "boolean"
+                },
+                "task_type": {
+                  "type": "string"
+                },
+                "input_modality": {
+                  "type": "string"
+                },
+                "target_column": {
+                  "type": "string"
+                },
+                "features": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "bioschemas_markup": {
+      "type": "object",
+      "required": ["dataset"],
+      "properties": {
+        "dataset": {
+          "type": "object",
+          "required": ["@context", "@type", "@id", "name", "description", "identifier", "url", "license", "keywords", "creator", "datePublished", "publisher", "version", "citation", "variableMeasured", "measurementTechnique", "dateCreated", "dateModified", "maintainer", "size", "hasPart"],
+          "properties": {
+            "@context": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "object"
+                  }
+                ]
+              }
+            },
+            "@type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "cr:conformsTo": {
+              "type": "string",
+              "format": "uri"
+            },
+            "dct:conformsTo": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "identifier": {
+              "type": "string",
+              "format": "uri"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "license": {
+              "type": "string",
+              "format": "uri"
+            },
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["@type", "name", "inDefinedTermSet"],
+                "properties": {
+                  "@type": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "inDefinedTermSet": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              }
+            },
+            "creator": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["@type", "name", "url"],
+                "properties": {
+                  "@type": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                }
+              }
+            },
+            "datePublished": {
+              "type": "string",
+              "format": "date"
+            },
+            "publisher": {
+              "type": "object",
+              "required": ["@type", "name", "url"],
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "version": {
+              "type": "string"
+            },
+            "citation": {
+              "type": "object",
+              "required": ["@type", "name", "url", "sameAs"],
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "sameAs": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "variableMeasured": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["@type", "name", "description"],
+                "properties": {
+                  "@type": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "unitCode": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "measurementTechnique": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "dateCreated": {
+              "type": "string",
+              "format": "date"
+            },
+            "dateModified": {
+              "type": "string",
+              "format": "date"
+            },
+            "maintainer": {
+              "type": "object",
+              "required": ["@type", "name", "url"],
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "size": {
+              "type": "string"
+            },
+            "hasPart": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["@type", "name", "description", "identifier", "url", "additionalProperty", "mainEntity"],
+                "properties": {
+                  "@type": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "additionalProperty": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["@type", "name", "value"],
+                      "properties": {
+                        "@type": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            },
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "unitCode": {
+                          "type": "string"
+                        },
+                        "valueReference": {
+                          "type": "object"
+                        },
+                        "chainId": {
+                          "type": "string"
+                        },
+                        "entityId": {
+                          "type": "string"
+                        },
+                        "sequenceLength": {
+                          "type": "integer"
+                        },
+                        "sequenceSource": {
+                          "type": "string"
+                        },
+                        "sourceUrl": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "taxonomyId": {
+                          "type": "integer"
+                        },
+                        "taxonomyUrl": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    }
+                  },
+                  "mainEntity": {
+                    "type": "object",
+                    "required": ["@context", "@type", "@id", "dct:conformsTo", "identifier", "name", "description", "url", "taxonomicRange", "alternateName", "hasRepresentation", "additionalProperty"],
+                    "properties": {
+                      "@context": {
+                        "type": "string"
+                      },
+                      "@type": {
+                        "type": "string"
+                      },
+                      "@id": {
+                        "type": "string"
+                      },
+                      "dct:conformsTo": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "taxonomicRange": {
+                        "type": "object",
+                        "required": ["@type", "name", "inDefinedTermSet", "description", "termCode", "url", "identifier"],
+                        "properties": {
+                          "@type": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "inDefinedTermSet": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "termCode": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "identifier": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "alternateName": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "hasRepresentation": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["@type", "name", "value", "description"],
+                          "properties": {
+                            "@type": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "additionalProperty": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": ["@type", "name", "value"],
+                          "properties": {
+                            "@type": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "oneOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "boolean"
+                                },
+                                {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "unitCode": {
+                              "type": "string"
+                            },
+                            "valueReference": {
+                              "type": "object"
+                            },
+                            "chainId": {
+                              "type": "string"
+                            },
+                            "entityId": {
+                              "type": "string"
+                            },
+                            "sequenceLength": {
+                              "type": "integer"
+                            },
+                            "sequenceSource": {
+                              "type": "string"
+                            },
+                            "sourceUrl": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "taxonomyId": {
+                              "type": "integer"
+                            },
+                            "taxonomyUrl": {
+                              "type": "string",
+                              "format": "uri"
+                            },
+                            "organism": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "hasMolecularFunction": {
+                        "type": "object",
+                        "required": ["@type", "name", "inDefinedTermSet"],
+                        "properties": {
+                          "@type": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "inDefinedTermSet": {
+                            "type": "string",
+                            "format": "uri"
+                          }
+                        }
+                      },
+                      "bioChemInteraction": {
+                        "type": "object",
+                        "required": ["@type", "name", "description"],
+                        "properties": {
+                          "@type": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cluster_statistics": {
+      "type": "object",
+      "properties": {
+        "total_clusters": {
+          "type": "integer"
+        },
+        "singleton_clusters": {
+          "type": "integer"
+        },
+        "multi_interface_clusters": {
+          "type": "integer"
+        },
+        "max_cluster_size": {
+          "type": "integer"
+        }
+      }
+    },
+    "dataset_statistics": {
+      "type": "object",
+      "properties": {
+        "total_interfaces": {
+          "type": "integer"
+        },
+        "physiological_interfaces": {
+          "type": "integer"
+        },
+        "non_physiological_interfaces": {
+          "type": "integer"
+        },
+        "average_bsa": {
+          "type": "number"
+        },
+        "average_contacts": {
+          "type": "number"
+        }
+      }
+    },
+    "interface_id_handling": {
+      "type": "object",
+      "properties": {
+        "source_databases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "id_format": {
+          "type": "string"
+        },
+        "chain_mapping": {
+          "type": "string"
+        }
+      }
+    },
+    "pdb_metadata_statistics": {
+      "type": "object",
+      "properties": {
+        "structures_with_metadata": {
+          "type": "integer"
+        },
+        "average_resolution": {
+          "type": "number"
+        },
+        "organism_distribution": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
