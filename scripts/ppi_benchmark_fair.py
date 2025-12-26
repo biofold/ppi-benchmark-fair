@@ -602,44 +602,79 @@ class PPIBenchmarkProcessor:
             Dictionary with enriched PDB metadata including ALL sequences
         """
         pdb_id = interface.ID.upper()
-
+        
         structure_metadata = self.fetch_pdb_structure_metadata_robust(pdb_id)
-
+        
         # If obsolete and no sequences, try header parsing
         if structure_metadata.get("obsolete", False):
             logger.warning(f"PDB entry {interface.ID} is OBSOLETE. Replaced by: {structure_metadata.get('replaced_by', 'Unknown')}")
-
+            
             # If obsolete and no sequences, try to get sequences from header
             if not structure_metadata.get("sequences"):
                 logger.info(f"Fetching sequences from header for obsolete entry {interface.ID}")
                 header_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
-
+                
                 # CRITICAL FIX: Merge header info into structure_metadata
                 if header_info.get("found_in_header"):
                     # Merge sequences from header
                     if header_info.get("sequences"):
                         structure_metadata["sequences"] = header_info["sequences"]
-
+                        
                     # Merge chain info from header
                     if header_info.get("chain_info"):
                         structure_metadata["chain_info"] = header_info["chain_info"]
-
+                        
                     # Merge organism info from header
                     if header_info.get("source_organism") and header_info["source_organism"]:
                         structure_metadata["source_organism"] = header_info["source_organism"]
-
+                        
                     # MERGE TAXONOMY IDs FROM HEADER
                     if header_info.get("taxonomy_ids"):
                         structure_metadata["taxonomy_ids"] = header_info["taxonomy_ids"]
                         if header_info.get("primary_taxonomy_id"):
                             structure_metadata["primary_taxonomy_id"] = header_info["primary_taxonomy_id"]
-
+                        
                     # Merge other important fields
                     if header_info.get("chain_count"):
                         structure_metadata["chain_count"] = header_info["chain_count"]
-
+                        
                     if header_info.get("unique_sequences"):
-                        structure_metadata["unique_sequences"] = header_info["unique_sequences"]
+                        structure_metadata["unique_sequences"] = header_info["unique_sequences"]                 
+                    # FIX: ADD MISSING FIELDS FROM HEADER
+                    # Merge resolution
+                    if header_info.get("resolution") is not None:
+                        structure_metadata["resolution"] = header_info["resolution"]
+                        logger.info(f"Added resolution from header for {pdb_id}: {header_info['resolution']} Å")
+                    
+                    # Merge citation
+                    if header_info.get("citation"):
+                        structure_metadata["citation"] = header_info["citation"]
+                    
+                    # Merge experimental method
+                    if header_info.get("experimental_method"):
+                        structure_metadata["experimental_method"] = header_info["experimental_method"]
+                    
+                    # Merge deposition and release dates
+                    if header_info.get("deposition_date"):
+                        structure_metadata["deposition_date"] = header_info["deposition_date"]
+                    if header_info.get("release_date"):
+                        structure_metadata["release_date"] = header_info["release_date"]
+                    
+                    # Merge space group
+                    if header_info.get("space_group"):
+                        structure_metadata["space_group"] = header_info["space_group"]
+                    
+                    # Merge unit cell
+                    if header_info.get("unit_cell"):
+                        structure_metadata["unit_cell"] = header_info["unit_cell"]
+                    
+                    # Merge R-factor
+                    if header_info.get("r_factor"):
+                        structure_metadata["r_factor"] = header_info["r_factor"]
+                    
+                    logger.info(f"Successfully merged header info for obsolete PDB {pdb_id}: "
+                               f"resolution={structure_metadata.get('resolution')}, "
+                               f"method={structure_metadata.get('experimental_method')}")
 
                     # Update sequence clusters for homomer detection
                     if structure_metadata["sequences"]:
@@ -649,12 +684,12 @@ class PPIBenchmarkProcessor:
                             if sequence not in seq_to_chains:
                                 seq_to_chains[sequence] = []
                             seq_to_chains[sequence].append(chain_id)
-
+                        
                         structure_metadata["sequence_clusters"] = [
                             {"sequence": seq, "chains": chains, "chain_count": len(chains)}
                             for seq, chains in seq_to_chains.items()
                         ]
-
+                        
                         # Check if it's a homomer
                         if len(seq_to_chains) == 1:
                             structure_metadata["is_homomer"] = True
@@ -662,7 +697,7 @@ class PPIBenchmarkProcessor:
                             chain_count = len(list(seq_to_chains.values())[0])
                             structure_metadata["homomer_type"] = f"{chain_count}-mer" if chain_count > 1 else "monomer"
                             structure_metadata["homomer_chains"] = chain_count
-
+                    
                     logger.info(f"Added {len(structure_metadata.get('sequences', {}))} chain sequences from header for obsolete PDB {pdb_id}")
                     logger.info(f"Organism from header: {structure_metadata.get('source_organism', [])}")
                     if structure_metadata.get("taxonomy_ids"):
@@ -670,7 +705,7 @@ class PPIBenchmarkProcessor:
 
         # For interface analysis, also fetch specific entity metadata for the interface chains
         entity_metadata = {}
-
+        
         # Try to identify which entity corresponds to the interface chains
         if structure_metadata.get("chain_info"):
             for chain_id, chain_info in structure_metadata["chain_info"].items():
@@ -704,7 +739,7 @@ class PPIBenchmarkProcessor:
         if structure_metadata.get("sequences"):
             chain1_seq = structure_metadata["sequences"].get(interface.AuthChain1)
             chain2_seq = structure_metadata["sequences"].get(interface.AuthChain2)
-
+            
             if chain1_seq and chain2_seq:
                 enriched_metadata["interface_sequence_analysis"] = {
                     "chain1_sequence_length": len(chain1_seq),
@@ -864,11 +899,11 @@ class PPIBenchmarkProcessor:
                         # SOURCE lines can have: ORGANISM_SCIENTIFIC, ORGANISM_COMMON, ORGANISM_TAXID
                         if "ORGANISM_SCIENTIFIC:" in source_line or "ORGANISM_COMMON:" in source_line or "ORGANISM_TAXID:" in source_line:
                             parts = [p.strip() for p in source_line.split(";")]
-
+                            
                             organism_scientific = None
                             organism_common = None
                             organism_taxid = None
-
+                            
                             for part in parts:
                                 if "ORGANISM_SCIENTIFIC:" in part:
                                     organism_scientific = part.split(":")[1].strip()
@@ -929,7 +964,7 @@ class PPIBenchmarkProcessor:
                             if jrnl_line:
                                 minimal_info["header_info"]["jrnl"].append(jrnl_line)
 
-                                if "citation" not in minimal_info:
+                                if "citation" not in minimal_info or minimal_info["citation"] is None:
                                     minimal_info["citation"] = {
                                         "title": "",
                                         "authors": [],
@@ -940,22 +975,21 @@ class PPIBenchmarkProcessor:
                                     }
 
                                 if jrnl_line.startswith("AUTH"):
-                                    authors = jrnl_line[5:].strip() if len(jrnl_line) >= 5 else jrnl_line
+                                    authors = jrnl_line[7:].strip() if len(jrnl_line) >= 5 else jrnl_line
                                     if authors:
                                         # Safe split - handle empty results
                                         author_list = [a.strip() for a in authors.split(",") if a.strip()]
                                         if author_list:
-                                            minimal_info["citation"]["authors"] = author_list
-
+                                            minimal_info["citation"]["authors"].extend(author_list)
                                 elif jrnl_line.startswith("TITL"):
-                                    title = jrnl_line[5:].strip() if len(jrnl_line) >= 5 else jrnl_line
+                                    title = jrnl_line[7:].strip() if len(jrnl_line) >= 5 else jrnl_line
                                     if title:
                                         minimal_info["citation"]["title"] += title + " "
 
                                 elif jrnl_line.startswith("REF"):
                                     # Journal reference - safely handle
-                                    ref_text = jrnl_line[4:].strip() if len(jrnl_line) >= 4 else jrnl_line
-                                    if ref_text:
+                                    ref_text = jrnl_line[7:].strip() if len(jrnl_line) >= 4 else jrnl_line
+                                    if ref_text and ref_text.find('TO BE PUBLISHED')==-1:
                                         ref_parts = ref_text.split()
                                         # Safely access with bounds checking
                                         if len(ref_parts) > 0:
@@ -966,11 +1000,13 @@ class PPIBenchmarkProcessor:
                                             minimal_info["citation"]["page"] = ref_parts[2]
                                         if len(ref_parts) > 3:
                                             minimal_info["citation"]["year"] = ref_parts[3]
-
                         except Exception as e:
                             logger.warning(f"Error parsing JRNL line for {pdb_id}: {e}")
                             continue
 
+
+
+                        print ('QQ',minimal_info["citation"])
                     # === REMARK - Various remarks ===
                     elif line.startswith("REMARK "):
                         remark_num = line[7:10].strip()
@@ -1247,7 +1283,7 @@ class PPIBenchmarkProcessor:
 
                 if minimal_info.get("source_organism"):
                     logger.info(f"Organism(s): {', '.join(minimal_info['source_organism'])}")
-
+                    
                 if minimal_info.get("taxonomy_ids"):
                     logger.info(f"Taxonomy ID(s): {', '.join(map(str, minimal_info['taxonomy_ids']))}")
 
@@ -1392,7 +1428,7 @@ class PPIBenchmarkProcessor:
 
         # Extract structure metadata
         structure_meta = pdb_metadata.get("structure_metadata", {})
-
+        
         # Check if entry is obsolete
         if structure_meta.get("obsolete", False):
             # Log warning when adding to markup
@@ -1472,7 +1508,7 @@ class PPIBenchmarkProcessor:
                     "resolution": structure_meta.get("resolution"),
                     "experimental_method": structure_meta.get("experimental_method")
                 }
-
+                
                 minimal_metadata = {
                     "@type": "PropertyValue",
                     "name": "PDBStructureMetadata",
@@ -1518,7 +1554,7 @@ class PPIBenchmarkProcessor:
                 "isHomomer": structure_meta.get("is_homomer"),
                 "homomerType": structure_meta.get("homomer_type")
             }
-
+            
             # Add taxonomy IDs if available from entity_info
             if structure_meta.get("entity_info"):
                 taxonomy_ids = []
@@ -1578,7 +1614,7 @@ class PPIBenchmarkProcessor:
         if structure_meta.get("source_organism"):
             organisms = structure_meta["source_organism"]
             taxonomy_ids = structure_meta.get("taxonomy_ids", [])
-
+            
             for i, org in enumerate(organisms):
                 # Get corresponding taxonomy ID if available
                 taxonomy_id = None
@@ -1593,19 +1629,19 @@ class PPIBenchmarkProcessor:
                         if entity_info.get("organism") == org and entity_info.get("taxonomy_id"):
                             taxonomy_id = entity_info["taxonomy_id"]
                             break
-
+                
                 organism_property = {
                     "@type": "PropertyValue",
                     "name": "SourceOrganism",
                     "value": org,
                     "description": "Organism from which the protein was isolated"
                 }
-
+                
                 if taxonomy_id:
                     organism_property["taxonomyId"] = taxonomy_id
                     organism_property["taxonomyUrl"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={taxonomy_id}"
                     organism_property["description"] = f"{org} (taxonomy ID: {taxonomy_id})"
-
+                
                 protein_markup["additionalProperty"].append(organism_property)
 
         # Add homomer information
@@ -1633,7 +1669,7 @@ class PPIBenchmarkProcessor:
             if structure_meta.get("obsolete", False):
                 sequence_source = "PDB header file (obsolete entry)"
                 header_url = f"https://files.rcsb.org/header/{structure_meta.get('pdb_id', '')}.pdb"
-
+            
             protein_markup["additionalProperty"].append({
                 "@type": "PropertyValue",
                 "name": "ChainCount",
@@ -1651,7 +1687,7 @@ class PPIBenchmarkProcessor:
             # Add sequence information for each chain
             for chain_id, sequence in structure_meta["sequences"].items():
                 chain_info = structure_meta.get("chain_info", {}).get(chain_id, {})
-
+                
                 sequence_property = {
                     "@type": "PropertyValue",
                     "name": f"Chain_{chain_id}_Sequence",
@@ -1662,13 +1698,13 @@ class PPIBenchmarkProcessor:
                     "sequenceLength": len(sequence),
                     "sequenceSource": sequence_source
                 }
-
+                
                 # Add source URL
                 if header_url:
                     sequence_property["sourceUrl"] = header_url
                 else:
                     sequence_property["sourceUrl"] = f"https://www.rcsb.org/structure/{structure_meta.get('pdb_id', '')}"
-
+                
                 protein_markup["additionalProperty"].append(sequence_property)
 
         if structure_meta.get("citation"):
@@ -1698,14 +1734,14 @@ class PPIBenchmarkProcessor:
                         "value": f"Chains: {', '.join(entity_info.get('chain_ids', []))}, Length: {len(entity_info['sequence'])}",
                         "description": f"Entity {entity_id} information"
                     }
-
+                    
                     # Add organism and taxonomy ID if available
                     if entity_info.get("organism"):
                         entity_property["organism"] = entity_info["organism"]
                     if entity_info.get("taxonomy_id"):
                         entity_property["taxonomyId"] = entity_info["taxonomy_id"]
                         entity_property["taxonomyUrl"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={entity_info['taxonomy_id']}"
-
+                    
                     protein_markup["additionalProperty"].append(entity_property)
 
         # CRITICAL: Add taxonomic information to protein markup if organism is available
@@ -1713,25 +1749,25 @@ class PPIBenchmarkProcessor:
         if structure_meta.get("source_organism") and structure_meta["source_organism"]:
             # ALWAYS update/replace the taxonomicRange with actual organism data
             primary_organism = structure_meta["source_organism"][0]
-
+            
             # Determine the taxonomy ID for this organism
             taxonomy_id = None
-
+            
             # Priority 1: Use taxonomy IDs from header parsing (for obsolete entries)
             if structure_meta.get("taxonomy_ids") and structure_meta["taxonomy_ids"]:
                 taxonomy_id = structure_meta["taxonomy_ids"][0]
                 logger.info(f"Using taxonomy ID from header parsing for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
-
+            
             # Priority 2: Use primary_taxonomy_id from header
             elif structure_meta.get("primary_taxonomy_id"):
                 taxonomy_id = structure_meta["primary_taxonomy_id"]
                 logger.info(f"Using primary taxonomy ID from header for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
-
+            
             # Priority 3: Check header_info for taxonomy_id
             elif structure_meta.get("header_info", {}).get("taxonomy_id"):
                 taxonomy_id = structure_meta["header_info"]["taxonomy_id"]
                 logger.info(f"Using taxonomy ID from header_info for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
-
+            
             # Priority 4: Check entity_info for taxonomy IDs (for non-obsolete entries)
             elif structure_meta.get("entity_info"):
                 for entity_id, entity_info in structure_meta["entity_info"].items():
@@ -1739,7 +1775,7 @@ class PPIBenchmarkProcessor:
                         taxonomy_id = entity_info["taxonomy_id"]
                         logger.info(f"Using taxonomy ID from entity_info for {structure_meta.get('pdb_id', '')}: {taxonomy_id}")
                         break
-
+            
             # Update the taxonomicRange field (overwrites the placeholder)
             taxonomic_range = {
                 "@type": "DefinedTerm",
@@ -1747,14 +1783,14 @@ class PPIBenchmarkProcessor:
                 "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
                 "description": "Organism taxonomy information from PDB metadata"
             }
-
+            
             # Add taxonomy ID if available - CRITICAL for proper taxonomic linking
             if taxonomy_id:
                 taxonomic_range["termCode"] = str(taxonomy_id)
                 taxonomic_range["url"] = f"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={taxonomy_id}"
                 taxonomic_range["identifier"] = f"taxonomy:{taxonomy_id}"
                 logger.info(f"✅ Setting taxonomicRange for {structure_meta.get('pdb_id', '')}: {primary_organism} (taxonomy ID: {taxonomy_id})")
-
+                
                 # Also add a separate taxonomy ID property for easy reference
                 protein_markup["additionalProperty"].append({
                     "@type": "PropertyValue",
@@ -1767,7 +1803,7 @@ class PPIBenchmarkProcessor:
                 logger.warning(f"⚠️ No taxonomy ID found for {structure_meta.get('pdb_id', '')}. Using organism name only: {primary_organism}")
                 # Still update taxonomicRange but without termCode
                 taxonomic_range["description"] = f"Organism: {primary_organism} (taxonomy ID not found in PDB metadata)"
-
+            
             protein_markup["taxonomicRange"] = taxonomic_range
         else:
             logger.warning(f"No organism information found for {structure_meta.get('pdb_id', '')}. TaxonomicRange will use placeholder.")
