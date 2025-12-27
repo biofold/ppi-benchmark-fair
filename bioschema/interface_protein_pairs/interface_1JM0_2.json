@@ -14,9 +14,6 @@
     "description": "Protein structure with PDB ID: 1JM0. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1JM0_2 as a homodimer.",
     "url": "https://www.rcsb.org/structure/1JM0",
     "taxonomicRange": {
-      "@type": "DefinedTerm",
-      "name": "Organism-specific protein",
-      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
     },
     "alternateName": [
       "PDB 1JM0",

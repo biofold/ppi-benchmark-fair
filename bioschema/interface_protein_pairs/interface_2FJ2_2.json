@@ -14,9 +14,6 @@
     "description": "Protein structure with PDB ID: 2FJ2. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 2FJ2_2 as a homodimer.",
     "url": "https://www.rcsb.org/structure/2FJ2",
     "taxonomicRange": {
-      "@type": "DefinedTerm",
-      "name": "Organism-specific protein",
-      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
     },
     "alternateName": [
       "PDB 2FJ2",

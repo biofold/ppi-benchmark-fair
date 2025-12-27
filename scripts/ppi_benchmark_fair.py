@@ -2746,9 +2746,9 @@ class PPIBenchmarkProcessor:
 
             # Taxonomic information (will be updated if PDB metadata is fetched)
             "taxonomicRange": {
-                "@type": "DefinedTerm",
-                "name": "Organism-specific protein",
-                "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
+                #"@type": "DefinedTerm",
+                #"name": "Organism-specific protein",
+                #"inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
             },
 
             # === OPTIONAL PROPERTIES ===
@@ -4030,77 +4030,60 @@ def debug_csv_parsing(csv_url: str, separator: str = ","):
     print(f"Separator: '{separator}'")
 
     try:
-        # Download and inspect the CSV
-        import requests
-        response = requests.get(csv_url)
-        if response.status_code == 200:
-            content = response.text
-            lines = content.split('\n')
+        print(f"\n=== TRYING TO PARSE WITH PANDAS ===")
+        import pandas as pd
 
-            print(f"\n=== CSV STRUCTURE ===")
-            print(f"Total lines: {len(lines)}")
+        # Try with the specified separator
+        try:
+            df = pd.read_csv(csv_url, sep=separator)
+            print(f"✅ Successfully parsed with separator '{separator}'")
+            print(f"   Shape: {df.shape}")
+            print(f"   Columns: {list(df.columns)}")
 
-            print(f"\nFirst 5 lines:")
-            for i, line in enumerate(lines[:5]):
-                print(f"Line {i}: {repr(line)}")
+            print(f"\nFirst 3 rows:")
+            for i in range(min(3, len(df))):
+                print(f"Row {i}:")
+                for col in df.columns[:5]:  # Show first 5 columns
+                    print(f"  {col}: {repr(df.iloc[i][col])}")
 
-            print(f"\n=== TRYING TO PARSE WITH PANDAS ===")
-            import pandas as pd
+            # Check for our expected columns
+            expected_columns = ['ID', 'InterfaceID', 'physio']
+            available_columns = [str(col).strip() for col in df.columns]
 
-            # Try with the specified separator
-            try:
-                df = pd.read_csv(csv_url, sep=separator)
-                print(f"✅ Successfully parsed with separator '{separator}'")
-                print(f"   Shape: {df.shape}")
-                print(f"   Columns: {list(df.columns)}")
+            print(f"\n=== COLUMN ANALYSIS ===")
+            print(f"Looking for: {expected_columns}")
+            print(f"Available: {available_columns}")
 
-                print(f"\nFirst 3 rows:")
-                for i in range(min(3, len(df))):
-                    print(f"Row {i}:")
-                    for col in df.columns[:5]:  # Show first 5 columns
-                        print(f"  {col}: {repr(df.iloc[i][col])}")
+            for expected in expected_columns:
+                found = False
+                for available in available_columns:
+                    if expected.lower() in available.lower():
+                        print(f"  ✅ Found '{expected}' as '{available}'")
+                        found = True
+                        break
+                if not found:
+                    print(f"  ❌ Missing '{expected}'")
 
-                # Check for our expected columns
-                expected_columns = ['ID', 'InterfaceID', 'physio']
-                available_columns = [str(col).strip() for col in df.columns]
+            return df
 
-                print(f"\n=== COLUMN ANALYSIS ===")
-                print(f"Looking for: {expected_columns}")
-                print(f"Available: {available_columns}")
+        except Exception as e:
+            print(f"❌ Failed with separator '{separator}': {e}")
 
-                for expected in expected_columns:
-                    found = False
-                    for available in available_columns:
-                        if expected.lower() in available.lower():
-                            print(f"  ✅ Found '{expected}' as '{available}'")
-                            found = True
-                            break
-                    if not found:
-                        print(f"  ❌ Missing '{expected}'")
+            # Try other separators
+            separators_to_try = ['\t', ';', ' ', '|']
+            for sep in separators_to_try:
+                try:
+                    df = pd.read_csv(csv_url, sep=sep)
+                    print(f"\n✅ Successfully parsed with separator '{repr(sep)}'")
+                    print(f"   Shape: {df.shape}")
+                    print(f"   Columns: {list(df.columns)}")
+                    return df
+                except:
+                    continue
 
-                return df
-
-            except Exception as e:
-                print(f"❌ Failed with separator '{separator}': {e}")
-
-                # Try other separators
-                separators_to_try = ['\t', ';', ' ', '|']
-                for sep in separators_to_try:
-                    try:
-                        df = pd.read_csv(csv_url, sep=sep)
-                        print(f"\n✅ Successfully parsed with separator '{repr(sep)}'")
-                        print(f"   Shape: {df.shape}")
-                        print(f"   Columns: {list(df.columns)}")
-                        return df
-                    except:
-                        continue
-
-                print(f"\n❌ Could not parse with any separator")
-                return None
-
-        else:
-            print(f"❌ Failed to download CSV: HTTP {response.status_code}")
+            print(f"\n❌ Could not parse with any separator")
             return None
+
 
     except Exception as e:
         print(f"❌ Error in debug function: {e}")

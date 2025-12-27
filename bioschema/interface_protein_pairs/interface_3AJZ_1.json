@@ -14,9 +14,6 @@
     "description": "Protein structure with PDB ID: 3AJZ. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 3AJZ_1 as a homodimer.",
     "url": "https://www.rcsb.org/structure/3AJZ",
     "taxonomicRange": {
-      "@type": "DefinedTerm",
-      "name": "Organism-specific protein",
-      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
     },
     "alternateName": [
       "PDB 3AJZ",

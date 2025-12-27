@@ -478,7 +478,6 @@
                       },
                       "taxonomicRange": {
                         "type": "object",
-                        "required": ["@type", "name", "inDefinedTermSet", "description", "termCode", "url", "identifier"],
                         "properties": {
                           "@type": {
                             "type": "string"

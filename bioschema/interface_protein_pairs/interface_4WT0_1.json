@@ -14,9 +14,6 @@
     "description": "Protein structure with PDB ID: 4WT0. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4WT0_1 as a homodimer.",
     "url": "https://www.rcsb.org/structure/4WT0",
     "taxonomicRange": {
-      "@type": "DefinedTerm",
-      "name": "Organism-specific protein",
-      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy"
     },
     "alternateName": [
       "PDB 4WT0",
