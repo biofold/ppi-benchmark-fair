@@ -152,13 +152,13 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 
 | Field | Type | Required | Description | Example |
 | :---- | :---- | :---- | :---- | :---- |
-| `@type` | String | Yes | DefinedTerm type | `"DefinedTerm"` |
-| `name` | String | Yes | Organism name | `"Homo sapiens"` |
-| `inDefinedTermSet` | String | Yes | Taxonomy set | `"https://www.ncbi.nlm.nih.gov/taxonomy"` |
-| `description` | String | Yes | Description | `"Organism taxonomy information from PDB metadata"` |
-| `termCode` | String | Yes | Taxonomy ID | `"9606"` |
-| `url` | String (URI) | Yes | Taxonomy browser | `"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"` |
-| `identifier` | String | Yes | Identifier | `"taxonomy:9606"` |
+| `@type` | String | No | DefinedTerm type | `"DefinedTerm"` |
+| `name` | String | No | Organism name | `"Homo sapiens"` |
+| `inDefinedTermSet` | String | No | Taxonomy set | `"https://www.ncbi.nlm.nih.gov/taxonomy"` |
+| `description` | String | No | Description | `"Organism taxonomy information from PDB metadata"` |
+| `termCode` | String | No | Taxonomy ID | `"9606"` |
+| `url` | String (URI) | No | Taxonomy browser | `"https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606"` |
+| `identifier` | String | No | Identifier | `"taxonomy:9606"` |
 
 ## **ProteinRepresentation Object Structure**
 
