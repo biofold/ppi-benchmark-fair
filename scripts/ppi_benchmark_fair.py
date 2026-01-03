@@ -1,8 +1,15 @@
 """
 Script to import protein-protein interaction benchmark data and generate FAIR-compliant
 Bioschemas markup with Croissant compatibility for ML datasets.
-"""
 
+Revised: fixes and robustness improvements:
+ - Removed unintended DataFrame column slicing when reading CSV.
+ - Replaced free function calls to obsolete-header parser with self.fetch_obsolete_pdb_minimal_info.
+ - Improved requests handling (session reuse inside class).
+ - Completed three-letter -> one-letter amino-acid mapping including common extras.
+ - Defensive handling for gzip/http reads and header parsing.
+ - Kept overall structure and behaviour but fixed bugs that prevented full execution.
+"""
 import pandas as pd
 import json
 import requests
@@ -244,6 +251,10 @@ class PPIBenchmarkProcessor:
         if cluster_file:
             self.cluster_processor = ClusterIDProcessor(cluster_file)
 
+        # requests session reuse
+        self.session = requests.Session()
+        self.session.headers.update({'User-Agent': 'ppi_benchmark_fair/1.0'})
+
     def fetch_pdb_structure_metadata_robust(self, pdb_id: str) -> Dict[str, Any]:
         """
         Robust method to fetch PDB metadata using multiple API approaches.
@@ -288,7 +299,7 @@ class PPIBenchmarkProcessor:
             try:
                 # Try the status endpoint first to check if entry exists/is obsolete
                 status_url = f"{self.pdb_api_base_url}/holdings/status/{pdb_id.upper()}"
-                status_response = requests.get(status_url, timeout=10)
+                status_response = self.session.get(status_url, timeout=10)
 
                 if status_response.status_code == 200:
                     status_data = status_response.json()
@@ -313,7 +324,7 @@ class PPIBenchmarkProcessor:
 
             # APPROACH 1: Try the main entry endpoint
             entry_url = f"{self.pdb_api_base_url}/core/entry/{pdb_id.upper()}"
-            response = requests.get(entry_url, timeout=30)
+            response = self.session.get(entry_url, timeout=30)
 
             if response.status_code == 200:
                 data = response.json()
@@ -407,7 +418,7 @@ class PPIBenchmarkProcessor:
                 for entity_id in metadata["entity_ids"]:
                     try:
                         entity_url = f"{self.pdb_api_base_url}/core/polymer_entity/{pdb_id.upper()}/{entity_id}"
-                        entity_response = requests.get(entity_url, timeout=15)
+                        entity_response = self.session.get(entity_url, timeout=15)
 
                         if entity_response.status_code == 200:
                             entity_data = entity_response.json()
@@ -522,7 +533,7 @@ class PPIBenchmarkProcessor:
                 try:
                     # Try the assembly endpoint
                     assembly_url = f"https://data.rcsb.org/rest/v1/core/assembly/{pdb_id.upper()}/1"
-                    assembly_response = requests.get(assembly_url, timeout=10)
+                    assembly_response = self.session.get(assembly_url, timeout=10)
 
                     if assembly_response.status_code == 200:
                         assembly_data = assembly_response.json()
@@ -714,7 +725,7 @@ class PPIBenchmarkProcessor:
                     # Fetch detailed entity metadata
                     try:
                         entity_url = f"{self.pdb_api_base_url}/core/polymer_entity/{pdb_id.upper()}/{entity_id}"
-                        response = requests.get(entity_url, timeout=15)
+                        response = self.session.get(entity_url, timeout=15)
                         if response.status_code == 200:
                             entity_data = response.json()
                             entity_metadata[entity_id] = entity_data
@@ -821,7 +832,7 @@ class PPIBenchmarkProcessor:
             logger.info(f"Fetching header for obsolete PDB entry: {pdb_id}")
             logger.debug(f"Header URL: {header_url}")
 
-            response = requests.get(header_url, timeout=timeout)
+            response = self.session.get(header_url, timeout=timeout)
 
             if response.status_code == 200:
                 header_content = response.text
@@ -1006,7 +1017,6 @@ class PPIBenchmarkProcessor:
 
 
 
-                        print ('QQ',minimal_info["citation"])
                     # === REMARK - Various remarks ===
                     elif line.startswith("REMARK "):
                         remark_num = line[7:10].strip()
@@ -1102,7 +1112,8 @@ class PPIBenchmarkProcessor:
                     elif line.startswith("SEQRES"):
                         # SEQRES format: SEQRES   1 A  322  SER ALA ASP...
                         parts = line.split()
-                        if len(parts) >= 4:
+                        # Exclude DNA and RNA sequences
+                        if len(parts) >= 4 and all([len(i.strip())==3 for i in parts[4:]]):
                             chain_id = parts[2]
                             seqres_num = int(parts[1])
                             num_res = int(parts[3])
@@ -1326,7 +1337,7 @@ class PPIBenchmarkProcessor:
             return self.pdb_metadata_cache[cache_key]
 
         # Fetch minimal info from header
-        minimal_info = fetch_obsolete_pdb_minimal_info(pdb_id)
+        minimal_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
 
         # Create enriched metadata structure
         enriched_metadata = {
@@ -1384,7 +1395,7 @@ class PPIBenchmarkProcessor:
         # If entry is obsolete and we don't have sequences, try header parsing
         if metadata.get("obsolete", False) and not metadata.get("sequences"):
             logger.info(f"Fetching minimal info from header for obsolete entry: {pdb_id}")
-            obsolete_info = fetch_obsolete_pdb_minimal_info(pdb_id)
+            obsolete_info = self.fetch_obsolete_pdb_minimal_info(pdb_id)
 
             if obsolete_info.get("found_in_header") and obsolete_info.get("chains"):
                 # Add sequences from header
@@ -1884,7 +1895,7 @@ class PPIBenchmarkProcessor:
 
             # Try with the specified separator first
             try:
-                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator).iloc[:, 2:]     #.head(5)
+                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator)
                 logger.info(f"Successfully loaded {len(self.dataset)} records with separator '{self.csv_separator}'")
             except Exception as e:
                 logger.warning(f"Failed with separator '{self.csv_separator}': {e}")
@@ -2362,6 +2373,453 @@ class PPIBenchmarkProcessor:
         return self.protein_interfaces
 
     def generate_dataset_with_interfaces(self) -> Dict[str, Any]:
+        """
+        Generate Dataset markup where the dataset contains interface items,
+        and each interface includes a Protein object.
+
+        ALTERNATIVE SCHEMA: Dataset -> Interface items -> Protein objects
+        """
+        # Parse cluster file if not already parsed
+        if self.cluster_processor and not self.cluster_processor.cluster_mapping:
+            logger.info("Parsing BLASTClust file for cluster information...")
+            if not self.cluster_processor.parse_blastclust_file():
+                logger.warning("Failed to parse BLASTClust file. Skipping cluster information.")
+
+        # Get basic statistics
+        stats = self._generate_statistics()
+
+        dataset_markup = {
+            "@context": [
+                "https://schema.org/",
+                {"cr": "https://mlcommons.org/croissant/1.0"}
+            ],
+            "@type": ["Dataset", "cr:Dataset"],
+            "@id": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
+
+            # === CROISSANT CONFORMANCE ===
+            "cr:conformsTo": "https://mlcommons.org/croissant/1.0",
+
+            # === BIOSCHEMAS DATASET PROPERTIES ===
+            "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
+            "name": "Protein-Protein Interaction Interface Benchmark Dataset",
+            "description": f"A benchmark dataset of {stats['total_entries']} protein crystal structures with {stats.get('physiological_count', 0)} physiological and {stats.get('non_physiological_count', 0)} non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics.",
+            "identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
+            "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+
+            # Keywords as DefinedTerm list
+            "keywords": [
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Protein interaction",
+                    "inDefinedTermSet": "http://edamontology.org/topic_0128"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Protein structure",
+                    "inDefinedTermSet": "http://edamontology.org/topic_2814"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Benchmarking",
+                    "inDefinedTermSet": "http://edamontology.org/operation_2816"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Machine Learning Dataset",
+                    "inDefinedTermSet": "http://edamontology.org/topic_3474"
+                }
+            ],
+
+            # Creator/Publisher information
+            "creator": [
+                {
+                    "@type": "Organization",
+                    "name": "ELIXIR 3D-BioInfo Community",
+                    "url": "https://elixir-europe.org/platforms/3d-bioinfo"
+                }
+            ],
+            "datePublished": "2023-04-30",
+            "publisher": {
+                "@type": "Organization",
+                "name": "ELIXIR Europe",
+                "url": "https://elixir-europe.org"
+            },
+            "version": "1.0",
+
+            # === CROISSANT DISTRIBUTION SECTION ===
+            "distribution": [
+                {
+                    "@type": "cr:FileObject",
+                    "@id": "file_benchmark_csv",
+                    "name": "Benchmark annotations (CSV)",
+                    "description": "CSV file containing all interface annotations and labels",
+                    "contentUrl": self.csv_url,
+                    "encodingFormat": "text/csv",
+                    "sha256": self._generate_file_hash(self.csv_url) if hasattr(self, '_generate_file_hash') else None
+                },
+                {
+                    "@type": "cr:FileObject",
+                    "@id": "file_mmcif_archive",
+                    "name": "mmCIF structure files archive",
+                    "description": "ZIP archive containing all mmCIF format structure files",
+                    "contentUrl": self.mmcif_base_url,
+                    "encodingFormat": "application/zip",
+                    "contains": [
+                        {
+                            "@type": "cr:FileSet",
+                            "pattern": "benchmark_mmcif_format/*.cif.gz",
+                            "description": "Compressed mmCIF files for all interfaces"
+                        }
+                    ]
+                },
+                {
+                    "@type": "cr:FileObject",
+                    "@id": "file_pdb_archive",
+                    "name": "PDB structure files archive",
+                    "description": "ZIP archive containing all PDB format structure files",
+                    "contentUrl": self.pdb_base_url,
+                    "encodingFormat": "application/zip",
+                    "contains": [
+                        {
+                            "@type": "cr:FileSet",
+                            "pattern": "benchmark_pdb_format/*.pdb.gz",
+                            "description": "Compressed PDB files for all interfaces"
+                        }
+                    ]
+                },
+                {
+                    "@type": "cr:FileObject",
+                    "@id": "file_dataset_json",
+                    "name": "Dataset metadata JSON",
+                    "description": "Complete dataset metadata in JSON-LD format",
+                    "contentUrl": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/blob/main/dataset.json",
+                    "encodingFormat": "application/json"
+                }
+            ],
+
+            # === CROISSANT RECORD SET SECTION ===
+            "recordSet": [
+                {
+                    "@type": "cr:RecordSet",
+                    "@id": "recordset_protein_interfaces",
+                    "name": "protein_interfaces",
+                    "description": "Protein-protein interaction interface records",
+                    "field": [
+                        {
+                            "@type": "cr:Field",
+                            "name": "InterfaceID",
+                            "description": "Unique interface identifier (e.g., 1A17_6)",
+                            "dataType": "https://schema.org/Text",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "InterfaceID"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "PDB_ID",
+                            "description": "Protein Data Bank identifier (4-letter code)",
+                            "dataType": "https://schema.org.Text",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "PDB_ID"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "physio",
+                            "description": "Physiological classification (True=physiological, False=non-physiological)",
+                            "dataType": "https://schema.org/Boolean",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "physio"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "label",
+                            "description": "Numeric label (1=physiological, 0=non-physiological)",
+                            "dataType": "https://schema.org/Integer",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "label"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "bsa",
+                            "description": "Buried surface area at the interface in square angstroms",
+                            "dataType": "https://schema.org/Float",
+                            "unitCode": "Å²",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Buried Surface Area (BSA)"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Atomic_Contacts",
+                            "description": "Number of atomic contacts at the interface",
+                            "dataType": "https://schema.org/Integer",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Atomic Contacts"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Gene",
+                            "description": "Gene name associated with the protein",
+                            "dataType": "https://schema.org/Text",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Gene"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Superfamily",
+                            "description": "Protein superfamily classification",
+                            "dataType": "https://schema.org/Text",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Superfamily"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "BSA_Polar",
+                            "description": "Polar component of buried surface area",
+                            "dataType": "https://schema.org/Float",
+                            "unitCode": "Å²",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "BSA Polar"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "BSA_Apolar",
+                            "description": "Apolar component of buried surface area",
+                            "dataType": "https://schema.org/Float",
+                            "unitCode": "Å²",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "BSA Apolar"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Fraction_Polar",
+                            "description": "Fraction of polar contacts at the interface",
+                            "dataType": "https://schema.org/Float",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Fraction Polar"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Fraction_Apolar",
+                            "description": "Fraction of apolar contacts at the interface",
+                            "dataType": "https://schema.org/Float",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Fraction Apolar"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Resolution",
+                            "description": "X-ray crystallography resolution in angstroms",
+                            "dataType": "https://schema.org/Float",
+                            "unitCode": "Å",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Resolution"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "cr:Field",
+                            "name": "Organism",
+                            "description": "Source organism of the protein",
+                            "dataType": "https://schema.org/Text",
+                            "source": {
+                                "fileObject": "file_benchmark_csv",
+                                "extract": {
+                                    "column": "Organism"
+                                }
+                            }
+                        }
+                    ],
+                    "key": ["InterfaceID"]
+                }
+            ],
+            
+            # === CROISSANT ADDITIONAL CONFIGURATION ===
+            "cr:defaultRecordSet": "recordset_protein_interfaces",
+            "cr:dataStandard": {
+                "@type": "CreativeWork",
+                "name": "Croissant 1.0",
+                "url": "https://mlcommons.org/croissant/1.0"
+            },
+
+            # Citation to the provided publication
+            "citation": {
+                "@type": "ScholarlyArticle",
+                "name": "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/37365936/",
+                "sameAs": "https://doi.org/10.1002/pmic.202200323"
+            },
+
+            # Dataset measurements
+            "variableMeasured": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "physio",
+                    "description": "Binary label indicating physiological (TRUE) or non-physiological (FALSE) homodimer",
+                    "value": "Boolean classification"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "bsa",
+                    "description": "Buried surface area of the protein-protein interface",
+                    "unitCode": "Å²",
+                    "value": "Surface area"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "contacts",
+                    "description": "Number of atomic contacts at the interface",
+                    "value": "Integer count"
+                }
+            ],
+
+            "measurementTechnique": [
+                "X-ray crystallography",
+                "Conservation of interaction geometry analysis",
+                "Cross-crystal form comparison (ProtCID)",
+                "Homolog comparison (QSalign)"
+            ],
+
+            # Additional metadata
+            "dateCreated": "2023-04-30",
+            "dateModified": datetime.now().strftime("%Y-%m-%d"),
+            "maintainer": {
+                "@type": "Organization",
+                "name": "ELIXIR 3D-BioInfo Community",
+                "url": "https://elixir-europe.org/platforms/3d-bioinfo"
+            },
+
+            # Size information
+            "size": f"{stats['total_entries']} entries"
+        }
+
+        # Add interface items to the dataset if we have data
+        if self.protein_interfaces:
+            # Create a list of interface items (each containing a Protein)
+            interface_items = []
+            for interface in self.protein_interfaces:
+                # Generate Protein markup for this interface
+                protein_markup = self._generate_protein_for_interface(interface)
+
+                # Create interface item as a DataCatalogItem (not a RecordSet)
+                interface_item = {
+                    "@type": "DataCatalogItem",
+                    "name": f"Interface {interface.InterfaceID}",
+                    "description": f"Protein-protein interaction interface between chains {interface.AuthChain1} and {interface.AuthChain2}",
+                    "identifier": interface.InterfaceID,
+                    "url": f"https://www.rcsb.org/structure/{interface.ID}",
+                    
+                    # Reference to the CSV file containing this record's data
+                    "subjectOf": {
+                        "@type": "Dataset",
+                        "name": "Protein Interface Data",
+                        "distribution": {
+                            "@id": "file_benchmark_csv"
+                        }
+                    },
+                    
+                    "additionalProperty": [
+                        {
+                            "@type": "PropertyValue",
+                            "name": "InterfaceID",
+                            "value": interface.InterfaceID,
+                            "description": "Unique interface identifier"
+                        },
+                        {
+                            "@type": "PropertyValue",
+                            "name": "InterfaceSource",
+                            "value": interface.interface_source,
+                            "description": f"Source of interface ID: {interface.interface_source}"
+                        },
+                        {
+                            "@type": "PropertyValue",
+                            "name": "physio",
+                            "value": interface.physio,
+                            "description": "Physiological (TRUE) or non-physiological (FALSE)"
+                        },
+                        {
+                            "@type": "PropertyValue",
+                            "name": "label",
+                            "value": interface.label,
+                            "description": "Numeric label (1=physio, 0=non-physio)"
+                        },
+                        {
+                            "@type": "PropertyValue",
+                            "name": "RecordSetReference",
+                            "value": "recordset_protein_interfaces",
+                            "description": "Reference to the main record set containing structured data for this interface"
+                        }
+                    ]
+                }
+
+                # Add all interface features as additional properties
+                self._add_interface_features_to_item(interface_item, interface)
+
+                # Add cluster properties to interface item
+                if interface.cluster_id:
+                    interface_item = self._add_cluster_properties_to_markup(interface_item, interface)
+
+                # Add the Protein object to the interface item
+                interface_item["mainEntity"] = protein_markup
+
+                interface_items.append(interface_item)
+
+            dataset_markup["hasPart"] = interface_items
+            dataset_markup["numberOfItems"] = len(interface_items)
+
+        return dataset_markup
+
+
+    def generate_dataset_with_interfaces2(self) -> Dict[str, Any]:
         """
         Generate Dataset markup where the dataset contains interface items,
         and each interface includes a Protein object.
@@ -3371,7 +3829,7 @@ class PPIBenchmarkProcessor:
                 "cluster_properties_added": [
                     "ClusterID: The cluster identifier",
                     "ClusterSize: Number of interfaces in the cluster",
-                    "ClusterMembers: List of other interfaces (for multi-member clusters)",
+                    "ClusterMembers: List of other interfaces in the same cluster (excluding current interface)",
                     "ClusterMethod: BLASTClust sequence clustering",
                     "ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)"
                 ],
@@ -3415,17 +3873,25 @@ def three_to_one_letter_aa(residue_3letter: str) -> str:
     Returns:
         One-letter code or 'X' if unknown
     """
-    # Copy the entire implementation from the static method
+    # Full common mapping including extras
     aa_map = {
         'ALA': 'A', 'ARG': 'R', 'ASN': 'N', 'ASP': 'D',
         'CYS': 'C', 'GLN': 'Q', 'GLU': 'E', 'GLY': 'G',
         'HIS': 'H', 'ILE': 'I', 'LEU': 'L', 'LYS': 'K',
         'MET': 'M', 'PHE': 'F', 'PRO': 'P', 'SER': 'S',
         'THR': 'T', 'TRP': 'W', 'TYR': 'Y', 'VAL': 'V',
-        # ... rest of the mapping ...
+        'SEC': 'U',  # selenocysteine
+        'PYL': 'O',  # pyrrolysine
+        'ASX': 'B',  # Aspartic acid or Asparagine
+        'GLX': 'Z',  # Glutamic acid or Glutamine
+        'XLE': 'J',  # Leu or Ile (rare)
+        'UNK': 'X'
     }
 
-    residue_upper = residue_3letter.strip().upper()
+    if residue_3letter is None:
+        return ''
+
+    residue_upper = str(residue_3letter).strip().upper()
 
     if residue_upper in aa_map:
         return aa_map[residue_upper]
@@ -3455,7 +3921,7 @@ def extract_chain_ids_from_pdb_gz(pdb_gz_path: str) -> Set[str]:
     chain_ids = set()
 
     # Check if it's a URL (starts with http:// or https://)
-    is_url = pdb_gz_path.startswith(('http://', 'https://'))
+    is_url = isinstance(pdb_gz_path, str) and pdb_gz_path.startswith(('http://', 'https://'))
 
     if not is_url and not os.path.exists(pdb_gz_path):
         logger.warning(f"PDB file not found: {pdb_gz_path}")
@@ -3465,7 +3931,7 @@ def extract_chain_ids_from_pdb_gz(pdb_gz_path: str) -> Set[str]:
         if is_url:
             # Handle HTTP/HTTPS URL
             logger.debug(f"Downloading PDB file from URL: {pdb_gz_path}")
-            response = requests.get(pdb_gz_path, stream=True)
+            response = requests.get(pdb_gz_path, stream=True, timeout=30)
             response.raise_for_status()  # Raise exception for bad status codes
 
             # Create a file-like object from the response content
@@ -3480,13 +3946,14 @@ def extract_chain_ids_from_pdb_gz(pdb_gz_path: str) -> Set[str]:
 
         # Open and process the gzipped file
         # 'rt' mode for reading as text
-        with gzip.open(file_obj, 'rt') as f:
+        with gzip.open(file_obj, 'rt', errors='replace') as f:
             for line in f:
                 # Only look at ATOM records (6 characters "ATOM  " with space)
                 if line.startswith('ATOM  '):
                     # Chain ID is at position 21 (0-indexed, character 21)
                     # According to PDB format: columns 21-22 contain chain identifier
-                    if len(line) >= 22:
+                    # column 17-20 contains residue name (3 letters). If len == 2 DNA or RNA
+                    if len(line) >= 22 and len(line[17:20].strip())==3:
                         chain_id = line[21].strip()
                         if chain_id:  # Only add non-empty chain IDs
                             chain_ids.add(chain_id)
@@ -3532,7 +3999,7 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
     chain_ids = set()
 
     # Check if it's a URL
-    is_url = mmcif_gz_path.startswith(('http://', 'https://'))
+    is_url = isinstance(mmcif_gz_path, str) and mmcif_gz_path.startswith(('http://', 'https://'))
 
     if not is_url and not os.path.exists(mmcif_gz_path):
         logger.warning(f"mmCIF file not found: {mmcif_gz_path}")
@@ -3548,7 +4015,7 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
         else:
             file_obj = mmcif_gz_path
 
-        with gzip.open(file_obj, 'rt') as f:
+        with gzip.open(file_obj, 'rt', errors='replace') as f:
             content = f.read()
 
         logger.debug(f"Processing mmCIF file: {mmcif_gz_path}")
@@ -3598,7 +4065,8 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
                     if chain_idx != -1:
                         # Split the data line (mmCIF uses whitespace)
                         parts = line.split()
-                        if len(parts) > chain_idx:
+                        # Remove DNA and RNA with condition. Residue in position chain_idx-1
+                        if len(parts) > chain_idx and len(parts[chain_idx-1].strip())==3:
                             chain_id = parts[chain_idx]
                             # Clean chain ID (remove quotes and whitespace)
                             chain_id = chain_id.strip("'\" \t")
@@ -3665,11 +4133,6 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
                 if line.startswith('_entity_poly.pdbx_strand_id'):
                     # Found strand_id field, now look for its value
                     # Values in mmCIF can be on the same line or next line
-                    if '#' in line:
-                        # Comment, skip
-                        continue
-
-                    # Look for value
                     parts = line.split()
                     if len(parts) > 1:
                         # Value might be on same line
@@ -3686,7 +4149,6 @@ def extract_chain_ids_from_mmcif_gz(mmcif_gz_path: str) -> Set[str]:
                                             chain_ids.add(chain)
                                 else:
                                     chain_ids.add(value)
-
                     # Also check next line if current line ends with value continuation
                     if i + 1 < len(lines):
                         next_line = lines[i + 1].strip()

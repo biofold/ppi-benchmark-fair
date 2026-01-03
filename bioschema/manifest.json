@@ -1,7 +1,7 @@
 {
-  "generated_date": "2025-12-26T03:52:25.342623",
-  "dataset_file": "ppi_benchmark_6/dataset_with_interfaces.json",
-  "interfaces_dir": "ppi_benchmark_6/interface_protein_pairs",
+  "generated_date": "2026-01-03T13:56:00.638869",
+  "dataset_file": "ppi_benchmark_2/dataset_with_interfaces.json",
+  "interfaces_dir": "ppi_benchmark_2/interface_protein_pairs",
   "total_interfaces_generated": 1677,
   "total_interfaces_available": 1677,
   "interface_files_sample": [
@@ -16,14 +16,16 @@
     "interface_1AOH_1.json",
     "interface_1AZT_1.json"
   ],
-  "fair_package_file": "ppi_benchmark_6/fair_metadata_package.json",
-  "html_snippet_file": "ppi_benchmark_6/embedded_markup.html",
+  "fair_package_file": "ppi_benchmark_2/fair_metadata_package.json",
+  "html_snippet_file": "ppi_benchmark_2/embedded_markup.html",
   "csv_settings": {
     "url": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
     "separator_used": ",",
     "auto_detect": false
   },
   "data_columns_found": [
+    "Unnamed: 0",
+    "X",
     "ID",
     "InterfaceID",
     "AuthChain1",
@@ -79,8 +81,8 @@
     "enabled": true,
     "api_base_url": "https://data.rcsb.org/rest/v1",
     "unique_structures_with_metadata": 1645,
-    "total_chains_with_sequences": 4165,
-    "homomeric_structures": 1496,
+    "total_chains_with_sequences": 4157,
+    "homomeric_structures": 1493,
     "metadata_cache_file": "pdb_metadata_cache.json"
   },
   "assembly_checks": {
@@ -106,7 +108,7 @@
     "cluster_properties_added": [
       "ClusterID: The cluster identifier",
       "ClusterSize: Number of interfaces in the cluster",
-      "ClusterMembers: List of other interfaces (for multi-member clusters)",
+      "ClusterMembers: List of other interfaces in the same cluster (excluding current interface)",
       "ClusterMethod: BLASTClust sequence clustering",
       "ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)"
     ],
