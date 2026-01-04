@@ -1094,7 +1094,7 @@ class FAIRVisualizer:
                 
                 /* Header - Matching index.html */
 		header {
-		    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+                    background: linear-gradient(135deg, var(--primary-color),#4689a3); /* #1a252f); */
 		    color: white;
 		    padding: 50px 0;
 		    text-align: center;
@@ -2514,7 +2514,7 @@ class FAIRVisualizer:
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
                 :root {{
-                    --primary-color: #2c3e50;
+                    --primary-color: #4689a3; /* #2c3e50; */
                     --secondary-color: #3498db;
                     --accent-color: #e74c3c;
                     --light-bg: #f8f9fa;
