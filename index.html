@@ -369,9 +369,18 @@
                 <a href="https://mlcommons.org/croissant/">
                 <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
                 </div>
-                <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link">
-                    <i class="fas fa-chart-bar"></i> View ELIXIR PPI Benchmark FAIR Data
-                </a>
+                    <a href="#data-stats" class="dashboard-link">
+                        <i class="fas fa-chart-bar"></i> Statistics
+                    </a>
+                    <a href="#quick-start" class="dashboard-link">
+                        <i class="fas fa-rocket"></i> Quick Start
+                    </a>
+                    <a href="#fair-eval" class="dashboard-link">
+                        <i class="fas fa-chart-line"></i> FAIR Evaluation
+                    </a>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
             </div>
         </header>
 
@@ -421,7 +430,7 @@
             </section>
 
             <!-- Quick Start -->
-            <section class="section">
+            <section class="section" id="quick-start">
                 <h2>Quick Start</h2>
                 <pre><code># Clone repository
 git lfs clone https://github.com/biofold/ppi-benchmark-fair.git
@@ -443,7 +452,7 @@ python scripts/ppi_benchmark_fair.py \
             </section>
 
             <!-- Dataset Statistics -->
-            <section class="section">
+            <section class="section" id="data-stats">
                 <h2>Dataset Statistics</h2>
                 <table>
                     <thead>
@@ -494,7 +503,7 @@ python scripts/ppi_benchmark_fair.py \
             </section>
 
             <!-- FAIR Compliance Section -->
-            <section class="section">
+            <section class="section" id="fair-eval">
                 <h2>FAIR Compliance Evaluation</h2>
                 <p>This repository has been evaluated using comprehensive FAIR principles analysis. <strong>Overall Score: 87.5/100</strong></p>
                 
