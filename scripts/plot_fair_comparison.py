@@ -2624,7 +2624,7 @@ class FAIRVisualizer:
                 }}
 
                 .stat-card {{
-                    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+                    background: linear-gradient(135deg, var(--primary-color), #4689a3);
                     color: white;
                     padding: 15px;
                     border-radius: 8px;
@@ -2807,8 +2807,9 @@ class FAIRVisualizer:
                         <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
                         Benchmark</strong></h3>
                         <h1><strong>FAIR Analysis Report</strong></h1>
-                        <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
-                        <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
+                        <!--
+                         <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
+                        -->
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
@@ -2828,6 +2829,8 @@ class FAIRVisualizer:
                 <!-- Key Statistics -->
                 <div class="section">
                     <h2>📈 Key Statistics</h2>
+                    <p>Comprehensive evaluation of FAIR principles 
+                    compliance for scientific data repositories</p>
                     <div class="stats-grid">
         '''
         
@@ -2856,7 +2859,7 @@ class FAIRVisualizer:
                 </div>
                 
                 <!-- Top Repositories -->
-                <div class="section">
+                <div class="section" id="ranking">
                     <h2>🏆 Top Repositories</h2>
                     <div class="repo-list">
                         <table>
