@@ -1598,7 +1598,9 @@ class FAIRVisualizer:
                         <div class="copyright">
                             <p>FAIR Analysis Dashboard • Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
                             <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                            <!--
                             <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -2662,11 +2664,13 @@ class FAIRVisualizer:
                     gap: 10px;
                 }}
                 
+                <!--
                 h2::before {{
                     content: "📊";
                     font-size: 1.5rem;
                 }}
-                
+                -->
+                 
                 /* Table Styling */
                 .repo-list {{
                     max-height: 400px;
@@ -2814,10 +2818,10 @@ class FAIRVisualizer:
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
                     <a href="#ranking" class="dashboard-link">
-                        <i class="fas fa-rocket"></i> Ranking
+                        <i class="fas fa-chart-bar"></i> Ranking
                     </a>
                     <a href="./fair_dashboard.html" class="dashboard-link">
-                        <i class="fas fa-eye"></i> Analysis Dashboard
+                        <i class="fas fa-chart-line"></i> Analysis Dashboard
                     </a>
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                         <i class="fab fa-github"></i> Repository
