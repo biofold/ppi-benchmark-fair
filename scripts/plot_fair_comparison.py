@@ -1217,7 +1217,7 @@ class FAIRVisualizer:
                     text-decoration: none;
                     color: var(--secondary-color);
                     padding: 8px 16px;
-                    border-radius: 50px;
+                    border-radius: 10px;
                     border: 2px solid var(--secondary-color);
                     transition: all 0.3s ease;
                     font-weight: 600;
@@ -1313,6 +1313,7 @@ class FAIRVisualizer:
                     padding: 20px 0;
                     text-align: center;
                     margin-top: 60px;
+                    border-radius: 12px;
                 }
                 
                 .footer-content {
@@ -2545,7 +2546,7 @@ class FAIRVisualizer:
                 
                 /* Header - Matching fair_dashboard.html */
 		header {{
-		    background: linear-gradient(135deg, var(--primary-color), #1a252f);
+		    background: linear-gradient(135deg, var(--primary-color), #4689a3);
 		    color: white;
 		    padding: 50px 0;
 		    text-align: center;
@@ -2880,7 +2881,7 @@ class FAIRVisualizer:
                     <h2><i class="fas fa-chart-bar"></i> Interactive Dashboard</h2>
                     <p>Explore all visualizations in the interactive dashboard:</p>
                     <div style="text-align: center; margin: 30px 0;">
-                        <a href="fair_dashboard.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #2980b9); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">
+                        <a href="fair_dashboard.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #2980b9); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">
                             <i class="fas fa-chart-bar"></i> 🚀 Open Interactive Dashboard
                         </a>
                     </div>
