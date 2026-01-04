@@ -38,10 +38,11 @@ matplotlib.use('Agg')  # Use the Agg backend for non-interactive plotting
 
 # Import BioPython for PDB parsing
 try:
-    from Bio.PDB import PDBParser, MMCIFParser, Select
+    from Bio.PDB import PDBParser, MMCIFParser, Select, StructureBuilder
     from Bio.PDB.Polypeptide import is_aa
     from Bio import SeqIO
     from Bio.SeqUtils import IUPACData
+    from Bio.PDB.MMCIF2Dict import MMCIF2Dict
     BIOPYTHON_AVAILABLE = True
 except ImportError:
     BIOPYTHON_AVAILABLE = False
@@ -211,18 +212,29 @@ class PDBFeatureExtractor:
             print(f"  Error looking for local interface file: {e}")
             return None
 
-    def _download_interface_file(self, representation: Dict) -> Optional[str]:
+    def get_pdb_file_from_representation(self, representation: Dict) -> Optional[str]:
         """
-        Download interface structure file from the URL in the representation.
-        Handles case sensitivity by saving with lowercase filename.
+        Get structure file path from JSON representation information.
+        Prioritizes local interface files, downloads from representation URL if not found.
         
         Args:
-            representation: Dictionary containing file information with URL
-        
+            representation: Dictionary containing file information from JSON
+
         Returns:
-            Path to downloaded file or None if failed
+            Path to local structure file or None if failed
         """
         try:
+            print(f"  Processing representation for structure feature extraction")
+            
+            # FIRST: Try to get local interface file
+            local_file = self._get_local_interface_file(representation)
+            if local_file:
+                print(f"  ✅ Using local interface file: {Path(local_file).name}")
+                return local_file
+            
+            # SECOND: If no loader available, download directly
+            print(f"  No local interface file found, attempting direct download...")
+            
             # Extract URL from representation
             content_url = None
             value = representation.get('value', '')
@@ -252,9 +264,8 @@ class PDBFeatureExtractor:
                 interface_id = representation.get('identifier') or representation.get('name') or 'interface'
             
             print(f"  Downloading interface file from: {content_url}")
-            print(f"  Interface ID: {interface_id}")
             
-            # Download the file
+            # Download using simple requests (without the retry logic from the other method)
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
             }
@@ -262,140 +273,48 @@ class PDBFeatureExtractor:
             response = requests.get(content_url, headers=headers, timeout=60)
             
             if response.status_code == 200:
-                # Determine file extension from URL or format
+                # Determine file extension
                 if content_url.lower().endswith('.pdb') or content_url.lower().endswith('.pdb.gz'):
                     file_ext = '.pdb'
                 elif content_url.lower().endswith('.cif') or content_url.lower().endswith('.cif.gz'):
                     file_ext = '.cif'
+                elif content_url.lower().endswith('.mmcif') or content_url.lower().endswith('.mmcif.gz'):
+                    file_ext = '.mmcif'
                 else:
-                    # Default based on use_pdb_format
                     file_ext = '.pdb' if self.use_pdb_format else '.cif'
                 
-                # Save to local directory if specified
-                if self.pdb_local_dir:
-                    # Use lowercase filename to avoid case sensitivity issues
-                    lowercase_id = interface_id.lower()
-                    
-                    # Save uncompressed version first
-                    uncompressed_path = Path(self.pdb_local_dir) / f"{lowercase_id}{file_ext}"
-                    with open(uncompressed_path, 'wb') as f:
-                        f.write(response.content)
-                    
-                    # Compress it (BioPython can handle gzipped files)
-                    compressed_path = Path(self.pdb_local_dir) / f"{lowercase_id}{file_ext}.gz"
-                    with open(uncompressed_path, 'rb') as f_in:
-                        with gzip.open(compressed_path, 'wb') as f_out:
-                            shutil.copyfileobj(f_in, f_out)
-                    
-                    # Remove uncompressed version
-                    uncompressed_path.unlink()
-                    
-                    print(f"  Downloaded and saved to: {compressed_path}")
-                    print(f"  Note: Saved with lowercase filename to avoid case sensitivity issues")
-                    
-                    return str(compressed_path)
-                else:
-                    # Save to temporary file (compressed)
-                    temp_file = tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix=f"{file_ext}.gz")
-                    
-                    # Compress the downloaded content
-                    with gzip.GzipFile(fileobj=temp_file, mode='wb') as gz_file:
-                        gz_file.write(response.content)
-                    
-                    temp_file.close()
-                    print(f"  Downloaded to temporary gzipped file: {temp_file.name}")
-                    return temp_file.name
+                # Save to temporary file
+                temp_file = tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix=f"{file_ext}.gz")
+                
+                # Compress the downloaded content
+                with gzip.GzipFile(fileobj=temp_file, mode='wb') as gz_file:
+                    gz_file.write(response.content)
+                
+                temp_file.close()
+                print(f"  Downloaded to temporary gzipped file: {temp_file.name}")
+                return temp_file.name
             else:
                 print(f"  Failed to download: HTTP {response.status_code}")
                 return None
                 
         except Exception as e:
-            print(f"  Error downloading interface file: {e}")
-            return None
-
-    def get_pdb_file_from_representation(self, representation: Dict) -> Optional[str]:
-        """
-        Get structure file path from JSON representation information.
-        Prioritizes local interface files, downloads from representation URL if not found.
-        
-        Args:
-            representation: Dictionary containing file information from JSON
-
-        Returns:
-            Path to local structure file or None if failed
-        """
-        try:
-            print(f"  Processing representation for structure feature extraction")
-            
-            # FIRST: Try to get local interface file
-            local_file = self._get_local_interface_file(representation)
-            if local_file:
-                print(f"  ✅ Using local interface file: {Path(local_file).name}")
-                return local_file
-            
-            # SECOND: Download from representation URL
-            print(f"  No local interface file found, downloading from representation URL...")
-            downloaded_file = self._download_interface_file(representation)
-            
-            if downloaded_file:
-                print(f"  ✅ Successfully downloaded interface file")
-                return downloaded_file
-            
-            # THIRD: Fallback to PDB database (only as last resort)
-            print(f"  Could not download from representation URL, attempting PDB database as last resort...")
-            pdb_id = None
-            
-            # Try to extract PDB ID from representation
-            for field in ['name', 'identifier', 'description']:
-                if field in representation:
-                    value = str(representation[field])
-                    if len(value) >= 4 and value[:4].isalnum():
-                        pdb_candidate = value[:4].upper()
-                        if pdb_candidate[0].isdigit() and all(c.isalnum() for c in pdb_candidate[1:]):
-                            pdb_id = pdb_candidate
-                            break
-
-            if not pdb_id:
-                print(f"  Could not extract PDB ID from representation")
-                return None
-
-            print(f"  Attempting to download from PDB database: {pdb_id}")
-            
-            # Determine file type
-            file_type = 'pdb' if self.use_pdb_format else 'cif'
-            url = f"https://files.rcsb.org/download/{pdb_id.lower()}.{file_type}.gz"
-            
-            try:
-                response = requests.get(url, timeout=30)
-                if response.status_code == 200:
-                    # Save to temporary file (already gzipped from RCSB)
-                    temp_file = tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix=f".{file_type}.gz")
-                    temp_file.write(response.content)
-                    temp_file.close()
-                    
-                    print(f"  Downloaded PDB file from RCSB as fallback")
-                    return temp_file.name
-                else:
-                    print(f"  Failed to download from PDB database: HTTP {response.status_code}")
-                    return None
-            except Exception as e:
-                print(f"  Error downloading from PDB database: {e}")
-                return None
-
-        except Exception as e:
             print(f"  Error getting structure file: {e}")
             return None
 
-    def extract_interface_features(self, pdb_file: str, chain_ids: List[str], radius: float = 5.0) -> Dict[str, Any]:
+    def extract_interface_features(self, interface_id: str, pdb_file: str, chain_ids: List[str], radius: float = 10.0) -> Dict[str, Any]:
         """
         Extract interface features from a PDB file.
         Supports both compressed (.gz) and uncompressed files.
-        Focus on unique residues per chain within 5Å of the other chain.
+        Focus on unique residues per chain within 10Å of the other chain.
         Uses only C-alpha atoms for distance calculations.
+        If only one chain is found in a monomer mmCIF file, attempts to generate
+        biological assembly from the monomer.
         """
         features = {
             'success': False,
-            'error': None
+            'error': None,
+            'assembly_generated': False,
+            'original_chain_count': 0
         }
 
         if not BIOPYTHON_AVAILABLE:
@@ -423,18 +342,109 @@ class PDBFeatureExtractor:
 
             # Get the chains
             chains = {}
+            original_chains_found = []
             for chain_id in chain_ids:
                 try:
                     chains[chain_id] = model[chain_id]
+                    original_chains_found.append(chain_id)
                 except KeyError:
                     print(f"  Chain {chain_id} not found in structure")
 
+            print(f"  Found {len(chains)} requested chain(s): {list(chains.keys())}")
+            
+            # ============================================
+            # FIXED: Handle monomer mmCIF files by generating assembly
+            # ============================================
+            if len(chains) < 2 and is_cif:
+                print(f"  Only {len(chains)} chain(s) found in monomer mmCIF file")
+                print(f"  Attempting to generate biological assembly from monomer...")
+                
+                # Try to generate biological assembly (default: assembly from interface_id)
+                assembly_structure = self.generate_biological_assembly_from_monomer(interface_id, pdb_file)
+                
+                if assembly_structure:
+                    print(f"  ✅ Successfully generated biological assembly")
+                    assembly_model = assembly_structure[0]
+                    
+                    # Get all chains from the generated assembly
+                    available_chain_ids = list(assembly_model.child_dict.keys())
+                    print(f"  Assembly has {len(available_chain_ids)} chains: {available_chain_ids}")
+                    
+                    # For interface analysis, we need at least 2 chains
+                    if len(available_chain_ids) >= 2:
+                        # Reset chains dictionary
+                        chains = {}
+                        
+                        # Strategy 1: Try to use the original requested chains if they exist in assembly
+                        used_chains = []
+                        for requested_chain in chain_ids:
+                            # Look for exact match or partial match
+                            for available_id in available_chain_ids:
+                                # Check for exact match
+                                if requested_chain == available_id:
+                                    chains[available_id] = assembly_model[available_id]
+                                    used_chains.append(available_id)
+                                    break
+                                # Check if requested chain is a prefix (e.g., "A" matches "A_1")
+                                elif available_id.startswith(requested_chain + "_") or requested_chain in available_id:
+                                    chains[available_id] = assembly_model[available_id]
+                                    used_chains.append(available_id)
+                                    break
+                        
+                        # Strategy 2: If we still don't have 2 chains, add more from assembly
+                        if len(chains) < 2:
+                            for available_id in available_chain_ids:
+                                if available_id not in used_chains:
+                                    chains[available_id] = assembly_model[available_id]
+                                    used_chains.append(available_id)
+                                    if len(chains) >= 2:
+                                        break
+                        
+                        # Strategy 3: If still not enough, just use first 2 chains
+                        if len(chains) < 2:
+                            chains = {}
+                            for i in range(min(2, len(available_chain_ids))):
+                                chain_id = available_chain_ids[i]
+                                chains[chain_id] = assembly_model[chain_id]
+                        
+                        print(f"  Using {len(chains)} chain(s) for interface analysis: {list(chains.keys())}")
+                        
+                        # Update the model to use assembly structure
+                        model = assembly_model
+                        features['assembly_generated'] = True
+                        features['original_chain_count'] = len(original_chains_found)
+                        print(f"  Original chains found: {original_chains_found}")
+                    else:
+                        print(f"  ⚠️  Generated assembly has only {len(available_chain_ids)} chain(s), need at least 2")
+                        features['error'] = f"Generated assembly has only {len(available_chain_ids)} chain(s)"
+                        return features
+                else:
+                    print(f"  ⚠️  Could not generate biological assembly")
+                    features['error'] = f"Need at least 2 chains, found {len(chains)} (and failed to generate assembly)"
+                    return features
+            
+            # If still not enough chains, try alternative approaches
             if len(chains) < 2:
-                features['error'] = f"Need at least 2 chains, found {len(chains)}"
-                return features
-
+                print(f"  ⚠️  Only {len(chains)} chain(s) available, trying to find alternative chains...")
+                
+                # Try to get all available chains from the model
+                all_chains_in_model = list(model.child_dict.keys())
+                print(f"  All chains in structure: {all_chains_in_model}")
+                
+                if len(all_chains_in_model) >= 2:
+                    # Use first 2 available chains
+                    chains = {}
+                    for i in range(2):
+                        chain_id = all_chains_in_model[i]
+                        chains[chain_id] = model[chain_id]
+                    print(f"  Using first 2 available chains: {list(chains.keys())}")
+                else:
+                    features['error'] = f"Need at least 2 chains, found {len(chains)} in structure (total: {len(all_chains_in_model)})"
+                    return features
+            
             # Extract chain names for pairwise analysis
             chain_list = list(chains.keys())
+            print(f"  Final chains selected for interface analysis: {chain_list}")
 
             # Initialize interface features
             interface_features = {}
@@ -457,10 +467,6 @@ class PDBFeatureExtractor:
                                 # Get only C-alpha atom if it exists
                                 if 'CA' in residue:
                                     chain1_ca_atoms.append(residue['CA'])
-                                # Alternatively, you could use:
-                                # ca_atom = residue.get('CA')
-                                # if ca_atom:
-                                #     chain1_ca_atoms.append(ca_atom)
 
                         for residue in chain2:
                             if is_aa(residue, standard=True):
@@ -472,7 +478,9 @@ class PDBFeatureExtractor:
                             print(f"  Warning: No C-alpha atoms found for chain pair {pair_key}")
                             continue
 
-                        # Find residues in chain1 that are within 5Å of chain2 (using C-alpha)
+                        print(f"  Analyzing chain pair {pair_key}: {len(chain1_ca_atoms)} vs {len(chain2_ca_atoms)} C-alpha atoms")
+
+                        # Find residues in chain1 that are within 10Å of chain2 (using C-alpha)
                         chain1_interface_residues = set()
                         chain2_interface_residues = set()
 
@@ -489,7 +497,7 @@ class PDBFeatureExtractor:
                             
                             # Check distance to all C-alphas in chain2
                             for ca2 in chain2_ca_atoms:
-                                if (ca1 - ca2) <= radius:  # 5Å distance threshold
+                                if (ca1 - ca2) <= radius:  # 10Å distance threshold
                                     chain1_interface_residues.add(residue1.id[1])  # Use residue number
                                     break
 
@@ -505,9 +513,8 @@ class PDBFeatureExtractor:
                             ca2 = residue2['CA']
                             
                             # Check distance to all C-alphas in chain1
-                            # QQ
                             for ca1 in chain1_ca_atoms:
-                                if (ca2 - ca1) <= radius  # 5Å distance threshold
+                                if (ca2 - ca1) <= radius:  # 10Å distance threshold
                                     chain2_interface_residues.add(residue2.id[1])  # Use residue number
                                     break
 
@@ -538,11 +545,17 @@ class PDBFeatureExtractor:
                             'avg_interface_fraction': (chain1_interface_count/chain1_residue_count + 
                                                        chain2_interface_count/chain2_residue_count)/2 
                                 if chain1_residue_count > 0 and chain2_residue_count > 0 else 0,
-                            'method': 'C-alpha_only'  # Track which method was used
+                            'method': 'C-alpha_only',  # Track which method was used
+                            'chain_pair': pair_key,
+                            'distance_threshold': radius
                         }
+                        
+                        print(f"    Interface {pair_key}: {chain1_interface_count} + {chain2_interface_count} = {total_interface_count} interface residues")
 
                     except Exception as e:
                         print(f"  Error analyzing chain pair {pair_key}: {e}")
+                        import traceback
+                        traceback.print_exc()
                         continue
 
             if not interface_features:
@@ -562,34 +575,34 @@ class PDBFeatureExtractor:
             all_avg_fractions = [v['avg_interface_fraction'] for v in interface_features.values()]
 
             if all_chain1_residues:
-                features['avg_chain1_interface_residues'] = np.mean(all_chain1_residues)
-                features['std_chain1_interface_residues'] = np.std(all_chain1_residues)
-                features['max_chain1_interface_residues'] = np.max(all_chain1_residues)
-                features['min_chain1_interface_residues'] = np.min(all_chain1_residues)
+                features['avg_chain1_interface_residues'] = float(np.mean(all_chain1_residues))
+                features['std_chain1_interface_residues'] = float(np.std(all_chain1_residues))
+                features['max_chain1_interface_residues'] = float(np.max(all_chain1_residues))
+                features['min_chain1_interface_residues'] = float(np.min(all_chain1_residues))
 
             if all_chain2_residues:
-                features['avg_chain2_interface_residues'] = np.mean(all_chain2_residues)
-                features['std_chain2_interface_residues'] = np.std(all_chain2_residues)
-                features['max_chain2_interface_residues'] = np.max(all_chain2_residues)
-                features['min_chain2_interface_residues'] = np.min(all_chain2_residues)
+                features['avg_chain2_interface_residues'] = float(np.mean(all_chain2_residues))
+                features['std_chain2_interface_residues'] = float(np.std(all_chain2_residues))
+                features['max_chain2_interface_residues'] = float(np.max(all_chain2_residues))
+                features['min_chain2_interface_residues'] = float(np.min(all_chain2_residues))
 
             if all_total_residues:
-                features['avg_total_interface_residues'] = np.mean(all_total_residues)
-                features['std_total_interface_residues'] = np.std(all_total_residues)
-                features['max_total_interface_residues'] = np.max(all_total_residues)
-                features['min_total_interface_residues'] = np.min(all_total_residues)
+                features['avg_total_interface_residues'] = float(np.mean(all_total_residues))
+                features['std_total_interface_residues'] = float(np.std(all_total_residues))
+                features['max_total_interface_residues'] = float(np.max(all_total_residues))
+                features['min_total_interface_residues'] = float(np.min(all_total_residues))
 
             if all_chain1_fractions:
-                features['avg_chain1_interface_fraction'] = np.mean(all_chain1_fractions)
-                features['std_chain1_interface_fraction'] = np.std(all_chain1_fractions)
+                features['avg_chain1_interface_fraction'] = float(np.mean(all_chain1_fractions))
+                features['std_chain1_interface_fraction'] = float(np.std(all_chain1_fractions))
 
             if all_chain2_fractions:
-                features['avg_chain2_interface_fraction'] = np.mean(all_chain2_fractions)
-                features['std_chain2_interface_fraction'] = np.std(all_chain2_fractions)
+                features['avg_chain2_interface_fraction'] = float(np.mean(all_chain2_fractions))
+                features['std_chain2_interface_fraction'] = float(np.std(all_chain2_fractions))
 
             if all_avg_fractions:
-                features['avg_interface_fraction'] = np.mean(all_avg_fractions)
-                features['std_interface_fraction'] = np.std(all_avg_fractions)
+                features['avg_interface_fraction'] = float(np.mean(all_avg_fractions))
+                features['std_interface_fraction'] = float(np.std(all_avg_fractions))
 
             # Add features from the first chain pair (most representative)
             if interface_features:
@@ -597,13 +610,789 @@ class PDBFeatureExtractor:
                 for key, value in first_pair.items():
                     features[f'first_pair_{key}'] = value
 
+            print(f"  ✅ Successfully extracted interface features with {len(interface_features)} chain pairs")
             return features
 
         except Exception as e:
             features['error'] = f"Error extracting interface features: {str(e)}"
+            import traceback
+            traceback.print_exc()
             return features
 
-    def extract_interface_features_all_atom(self, pdb_file: str, chain_ids: List[str], radius: float = 5.0) -> Dict[str, Any]:
+    def generate_biological_assembly_from_monomer(self, interface_id: str, pdb_file: str) -> Optional['Structure']:
+        """
+        Generate biological assembly from monomer mmCIF file.
+        Automatically detects assembly ID from interface_id or mmCIF metadata.
+        
+        Args:
+            pdb_file: Path to mmCIF file (can be .gz)
+            interface_id: Interface ID (may contain assembly info, e.g., "7CEI_1")
+            
+        Returns:
+            BioPython Structure object with generated assembly, or None if failed
+        """
+        if not BIOPYTHON_AVAILABLE:
+            print("⚠️  BioPython not available")
+            return None
+        
+        try:
+            from Bio.PDB import StructureBuilder
+            import numpy as np
+            
+            # Check if file is mmCIF
+            is_gzipped = pdb_file.endswith('.gz')
+            is_cif = pdb_file.endswith('.cif') or pdb_file.endswith('.cif.gz') or pdb_file.endswith('.mmcif') or pdb_file.endswith('.mmcif.gz')
+            
+            if not is_cif:
+                print(f"  Not an mmCIF file: {pdb_file}")
+                return None
+            
+            print(f"  Generating biological assembly for interface: {interface_id}")
+            
+            # Parse mmCIF dictionary for assembly information
+            open_func = gzip.open if is_gzipped else open
+            open_mode = 'rt' if is_gzipped else 'r'
+            
+            with open_func(pdb_file, open_mode) as handle:
+                mmcif_dict = MMCIF2Dict(handle)
+            
+            # ============================================
+            # 1. DETERMINE WHICH ASSEMBLY TO USE
+            # ============================================
+            assembly_id = "1"  # Default
+            
+            if '_pdbx_struct_assembly.id' in mmcif_dict:
+                available_assemblies = mmcif_dict['_pdbx_struct_assembly.id']
+                print(f"  Available assemblies in mmCIF: {available_assemblies}")
+                
+                # Strategy 1: Extract from interface_id (e.g., "7CEI_1" -> "1")
+                if interface_id:
+                    import re
+                    # Pattern for PDBID_ASSEMBLY or PDBID_CHAIN_ASSEMBLY
+                    assembly_match = re.search(r'_(\d+)$', interface_id)
+                    if assembly_match:
+                        extracted_id = assembly_match.group(1)
+                        if extracted_id in available_assemblies:
+                            assembly_id = extracted_id
+                            print(f"  Using assembly {assembly_id} extracted from interface_id: {interface_id}")
+                        else:
+                            print(f"  Assembly {extracted_id} from interface_id not found in mmCIF")
+                    else:
+                        print(f"  No assembly number in interface_id: {interface_id}")
+                
+                # Strategy 2: If assembly not determined yet, check for biological assembly
+                if assembly_id == "1" and len(available_assemblies) > 1:
+                    # Look for biological or recommended assembly
+                    if '_pdbx_struct_assembly.details' in mmcif_dict:
+                        details = mmcif_dict['_pdbx_struct_assembly.details']
+                        for i, detail in enumerate(details):
+                            if i < len(available_assemblies):
+                                current_id = available_assemblies[i]
+                                detail_lower = detail.lower() if detail else ""
+                                # Check if this is the biological assembly
+                                if 'biological' in detail_lower or 'native' in detail_lower or 'author' in detail_lower:
+                                    if current_id in available_assemblies:
+                                        assembly_id = current_id
+                                        print(f"  Using biological assembly {assembly_id}: {detail}")
+                                        break
+                    
+                    # Strategy 3: If still default, check oligomeric count
+                    if assembly_id == "1" and '_pdbx_struct_assembly.oligomeric_count' in mmcif_dict:
+                        oligo_counts = mmcif_dict['_pdbx_struct_assembly.oligomeric_count']
+                        for i, count in enumerate(oligo_counts):
+                            if i < len(available_assemblies):
+                                current_id = available_assemblies[i]
+                                # Prefer assemblies with oligomeric count > 1 (multimers)
+                                if count != "1" and current_id in available_assemblies:
+                                    assembly_id = current_id
+                                    print(f"  Using assembly {assembly_id} (oligomeric count: {count})")
+                                    break
+                
+                # Strategy 4: If assembly still not found, use first available
+                if assembly_id not in available_assemblies and available_assemblies:
+                    assembly_id = available_assemblies[0]
+                    print(f"  Assembly not found, using first available: {assembly_id}")
+            else:
+                print(f"  No biological assemblies defined in mmCIF")
+                return None
+            
+            print(f"  Selected assembly ID: {assembly_id}")
+            
+            # ============================================
+            # 2. PARSE THE ORIGINAL STRUCTURE FIRST
+            # ============================================
+            parser = MMCIFParser(QUIET=True)
+            with open_func(pdb_file, open_mode) as handle:
+                original_structure = parser.get_structure('original', handle)
+            
+            original_model = original_structure[0]
+            
+            # Get available chain IDs from the actual structure (auth_asym_id)
+            available_chain_ids = list(original_model.child_dict.keys())
+            print(f"  Original structure has chains (auth_asym_id): {available_chain_ids}")
+            
+            # ============================================
+            # 3. CREATE MAPPING BETWEEN LABEL_ASYM_ID AND AUTH_ASYM_ID
+            # ============================================
+            # This is CRITICAL: mmCIF files use label_asym_id in assembly definitions
+            # but auth_asym_id in the actual coordinates
+            label_to_auth_map = {}
+            auth_to_label_map = {}
+            
+            if '_atom_site.label_asym_id' in mmcif_dict and '_atom_site.auth_asym_id' in mmcif_dict:
+                label_asym_ids = mmcif_dict['_atom_site.label_asym_id']
+                auth_asym_ids = mmcif_dict['_atom_site.auth_asym_id']
+                
+                # Create bidirectional mapping
+                for label_id, auth_id in zip(label_asym_ids, auth_asym_ids):
+                    if label_id not in label_to_auth_map:
+                        label_to_auth_map[label_id] = auth_id
+                    if auth_id not in auth_to_label_map:
+                        auth_to_label_map[auth_id] = label_id
+            
+            print(f"  label_asym_id -> auth_asym_id mapping: {label_to_auth_map}")
+            print(f"  auth_asym_id -> label_asym_id mapping: {auth_to_label_map}")
+            
+            # If no mapping found, assume they're the same
+            if not label_to_auth_map:
+                for chain_id in available_chain_ids:
+                    label_to_auth_map[chain_id] = chain_id
+                    auth_to_label_map[chain_id] = chain_id
+            
+            # ============================================
+            # 4. GET OLIGOMERIC COUNT FOR SELECTED ASSEMBLY
+            # ============================================
+            oligo_count = 1
+            if '_pdbx_struct_assembly.oligomeric_count' in mmcif_dict:
+                oligo_counts = mmcif_dict['_pdbx_struct_assembly.oligomeric_count']
+                if assembly_id in available_assemblies:
+                    idx = list(available_assemblies).index(assembly_id)
+                    if idx < len(oligo_counts):
+                        try:
+                            oligo_count = int(oligo_counts[idx])
+                        except:
+                            oligo_count = 1
+            
+            print(f"  Assembly {assembly_id}: {oligo_count}-mer")
+            
+            # ============================================
+            # 5. FIND GENERATORS FOR THIS ASSEMBLY
+            # ============================================
+            if '_pdbx_struct_assembly_gen.assembly_id' not in mmcif_dict:
+                print(f"  No assembly generators found")
+                return None
+            
+            gen_assembly_ids = mmcif_dict['_pdbx_struct_assembly_gen.assembly_id']
+            gen_oper_expr = mmcif_dict.get('_pdbx_struct_assembly_gen.oper_expression', ['1'] * len(gen_assembly_ids))
+            gen_asym_ids = mmcif_dict.get('_pdbx_struct_assembly_gen.asym_id_list', [''] * len(gen_assembly_ids))
+            
+            # Find generators for our assembly
+            assembly_generators = []
+            for i, gen_assem_id in enumerate(gen_assembly_ids):
+                if gen_assem_id == assembly_id:
+                    operation_expr = gen_oper_expr[i] if i < len(gen_oper_expr) else '1'
+                    chain_list = gen_asym_ids[i] if i < len(gen_asym_ids) else ''
+                    
+                    # Parse operations (e.g., "1,2" -> ['1', '2'])
+                    operations = []
+                    for op in operation_expr.split(','):
+                        op = op.strip()
+                        if op:
+                            operations.append(op)
+                    
+                    # Parse chains (these are LABEL_ASYM_IDs!)
+                    chains = [c.strip() for c in chain_list.split(',')] if chain_list else []
+                    
+                    # Convert label_asym_id to auth_asym_id if possible
+                    auth_chains = []
+                    for label_chain in chains:
+                        auth_chain = label_to_auth_map.get(label_chain, label_chain)
+                        auth_chains.append(auth_chain)
+                    
+                    assembly_generators.append({
+                        'operations': operations,
+                        'label_chains': chains,  # Original label_asym_id
+                        'auth_chains': auth_chains,  # Converted auth_asym_id
+                        'operation_expression': operation_expr
+                    })
+            
+            if not assembly_generators:
+                print(f"  No generators found for assembly {assembly_id}")
+                return None
+            
+            print(f"  Found {len(assembly_generators)} generator(s) for assembly {assembly_id}")
+            for gen in assembly_generators:
+                print(f"    Label chains: {gen['label_chains']} -> Auth chains: {gen['auth_chains']}, Operations: {gen['operations']}")
+            
+            # ============================================
+            # 6. GET TRANSFORMATION OPERATIONS
+            # ============================================
+            if '_pdbx_struct_oper_list.id' not in mmcif_dict:
+                print(f"  No transformation operations defined")
+                return None
+            
+            oper_ids = mmcif_dict['_pdbx_struct_oper_list.id']
+            transformation_ops = {}
+            
+            for i, op_id in enumerate(oper_ids):
+                # Parse 3x3 rotation matrix
+                matrix = []
+                for row in range(1, 4):
+                    row_vals = []
+                    for col in range(1, 4):
+                        key = f'_pdbx_struct_oper_list.matrix[{row}][{col}]'
+                        if key in mmcif_dict and i < len(mmcif_dict[key]):
+                            try:
+                                row_vals.append(float(mmcif_dict[key][i]))
+                            except:
+                                row_vals.append(0.0)
+                        else:
+                            row_vals.append(0.0)
+                    matrix.append(row_vals)
+                
+                # Parse translation vector
+                vector = []
+                for comp in range(1, 4):
+                    key = f'_pdbx_struct_oper_list.vector[{comp}]'
+                    if key in mmcif_dict and i < len(mmcif_dict[key]):
+                        try:
+                            vector.append(float(mmcif_dict[key][i]))
+                        except:
+                            vector.append(0.0)
+                    else:
+                        vector.append(0.0)
+                
+                transformation_ops[op_id] = {
+                    'matrix': np.array(matrix),
+                    'vector': np.array(vector)
+                }
+            
+            # ============================================
+            # 7. GENERATE THE ASSEMBLY
+            # ============================================
+            builder = StructureBuilder.StructureBuilder()
+            builder.init_structure(f"assembly_{assembly_id}")
+            builder.init_model(0)
+            
+            chain_counter = {}  # Track chain copies
+            chains_processed = 0
+            
+            # Process each generator
+            for generator in assembly_generators:
+                auth_chains = generator['auth_chains']
+                label_chains = generator['label_chains']
+                operations = generator['operations']
+                
+                print(f"  Processing generator: auth_chains={auth_chains}, operations={operations}")
+                
+                # If no specific chains are listed, use all available chains
+                if not auth_chains:
+                    auth_chains = available_chain_ids
+                    print(f"  No chains specified, using all available: {auth_chains}")
+                
+                for auth_chain_id, label_chain_id in zip(auth_chains, label_chains):
+                    if auth_chain_id not in original_model:
+                        print(f"  Warning: Chain '{auth_chain_id}' (from label '{label_chain_id}') not in structure, skipping")
+                        continue
+                    
+                    original_chain = original_model[auth_chain_id]
+                    
+                    for op_id in operations:
+                        if op_id not in transformation_ops:
+                            print(f"  Warning: Operation {op_id} not defined, skipping")
+                            continue
+                        
+                        # Determine new chain ID
+                        if op_id == '1':  # Identity operation
+                            # Keep original chain ID for identity operation
+                            new_chain_id = auth_chain_id
+                        else:
+                            # Count how many times we've used this chain with this operation
+                            key = f"{auth_chain_id}_{op_id}"
+                            if key not in chain_counter:
+                                chain_counter[key] = 0
+                            chain_counter[key] += 1
+                            
+                            # Create unique chain ID
+                            if chain_counter[key] == 1:
+                                # For first copy, use original chain ID with operation suffix
+                                new_chain_id = f"{auth_chain_id}_{op_id}"
+                            else:
+                                # For additional copies, add number
+                                new_chain_id = f"{auth_chain_id}_{op_id}_{chain_counter[key]}"
+                        
+                        # Apply transformation
+                        transformed_chain = self._apply_transformation_to_chain(
+                            original_chain, 
+                            transformation_ops[op_id],
+                            new_chain_id
+                        )
+                        
+                        # Add chain to structure
+                        if new_chain_id not in builder.structure[0]:
+                            builder.structure[0].add(transformed_chain)
+                            chains_processed += 1
+                            print(f"    Generated chain {new_chain_id} from {auth_chain_id} (label: {label_chain_id}) + op{op_id}")
+            
+            # Get the final structure
+            assembly_structure = builder.get_structure()
+            final_chain_count = len(list(assembly_structure[0].get_chains()))
+            
+            if final_chain_count == 0:
+                print(f"  ⚠️  Generated assembly has 0 chains, trying fallback method...")
+                
+                # Fallback: Create symmetric copies based on oligo_count
+                return self._generate_assembly_fallback(original_structure, assembly_id, oligo_count)
+            
+            print(f"  ✅ Successfully generated assembly {assembly_id} with {final_chain_count} chains")
+            
+            return assembly_structure
+            
+        except Exception as e:
+            print(f"  Error generating biological assembly: {e}")
+            import traceback
+            traceback.print_exc()
+            return None
+
+    def generate_biological_assembly_from_monomer2(self, pdb_file: str, assembly_id: str = "1") -> Optional['Structure']:
+        """
+        Generate biological assembly from monomer mmCIF file.
+        
+        Args:
+            pdb_file: Path to mmCIF file (can be .gz)
+            assembly_id: Which biological assembly to generate (default: "1")
+            
+        Returns:
+            BioPython Structure object with generated assembly, or None if failed
+        """
+        if not BIOPYTHON_AVAILABLE:
+            print("⚠️  BioPython not available")
+            return None
+        
+        try:
+            from Bio.PDB import StructureBuilder
+            import numpy as np
+            
+            # Check if file is mmCIF
+            is_gzipped = pdb_file.endswith('.gz')
+            is_cif = pdb_file.endswith('.cif') or pdb_file.endswith('.cif.gz') or pdb_file.endswith('.mmcif') or pdb_file.endswith('.mmcif.gz')
+            
+            if not is_cif:
+                print(f"  Not an mmCIF file: {pdb_file}")
+                return None
+            
+            print(f"  Generating biological assembly {assembly_id} from monomer...")
+            
+            # Parse mmCIF dictionary for assembly information
+            open_func = gzip.open if is_gzipped else open
+            open_mode = 'rt' if is_gzipped else 'r'
+            
+            with open_func(pdb_file, open_mode) as handle:
+                mmcif_dict = MMCIF2Dict(handle)
+            
+            # ============================================
+            # 1. PARSE THE ORIGINAL STRUCTURE FIRST
+            # ============================================
+            parser = MMCIFParser(QUIET=True)
+            with open_func(pdb_file, open_mode) as handle:
+                original_structure = parser.get_structure('original', handle)
+            
+            original_model = original_structure[0]
+            
+            # Get available chain IDs from the actual structure (auth_asym_id)
+            available_chain_ids = list(original_model.child_dict.keys())
+            print(f"  Original structure has chains (auth_asym_id): {available_chain_ids}")
+            
+            # ============================================
+            # 2. CREATE MAPPING BETWEEN LABEL_ASYM_ID AND AUTH_ASYM_ID
+            # ============================================
+            # This is CRITICAL: mmCIF files use label_asym_id in assembly definitions
+            # but auth_asym_id in the actual coordinates
+            label_to_auth_map = {}
+            auth_to_label_map = {}
+            
+            if '_atom_site.label_asym_id' in mmcif_dict and '_atom_site.auth_asym_id' in mmcif_dict:
+                label_asym_ids = mmcif_dict['_atom_site.label_asym_id']
+                auth_asym_ids = mmcif_dict['_atom_site.auth_asym_id']
+                
+                # Create bidirectional mapping
+                for label_id, auth_id in zip(label_asym_ids, auth_asym_ids):
+                    if label_id not in label_to_auth_map:
+                        label_to_auth_map[label_id] = auth_id
+                    if auth_id not in auth_to_label_map:
+                        auth_to_label_map[auth_id] = label_id
+            
+            print(f"  label_asym_id -> auth_asym_id mapping: {label_to_auth_map}")
+            print(f"  auth_asym_id -> label_asym_id mapping: {auth_to_label_map}")
+            
+            # If no mapping found, assume they're the same
+            if not label_to_auth_map:
+                for chain_id in available_chain_ids:
+                    label_to_auth_map[chain_id] = chain_id
+                    auth_to_label_map[chain_id] = chain_id
+            
+            # ============================================
+            # 3. FIND THE REQUESTED ASSEMBLY
+            # ============================================
+            if '_pdbx_struct_assembly.id' not in mmcif_dict:
+                print(f"  No biological assemblies defined in mmCIF")
+                return None
+            
+            # Get assembly information
+            assembly_ids = mmcif_dict['_pdbx_struct_assembly.id']
+            
+            if assembly_id not in assembly_ids:
+                print(f"  Assembly {assembly_id} not found. Available: {assembly_ids}")
+                return None
+            
+            # Get assembly index
+            assembly_idx = assembly_ids.index(assembly_id)
+            
+            # Get oligomeric count
+            oligo_counts = mmcif_dict.get('_pdbx_struct_assembly.oligomeric_count', ['1'] * len(assembly_ids))
+            oligo_count = int(oligo_counts[assembly_idx]) if assembly_idx < len(oligo_counts) else 1
+            
+            print(f"  Assembly {assembly_id}: {oligo_count}-mer")
+            
+            # ============================================
+            # 4. FIND GENERATORS FOR THIS ASSEMBLY
+            # ============================================
+            if '_pdbx_struct_assembly_gen.assembly_id' not in mmcif_dict:
+                print(f"  No assembly generators found")
+                return None
+            
+            gen_assembly_ids = mmcif_dict['_pdbx_struct_assembly_gen.assembly_id']
+            gen_oper_expr = mmcif_dict.get('_pdbx_struct_assembly_gen.oper_expression', ['1'] * len(gen_assembly_ids))
+            gen_asym_ids = mmcif_dict.get('_pdbx_struct_assembly_gen.asym_id_list', [''] * len(gen_assembly_ids))
+            
+            # Find generators for our assembly
+            assembly_generators = []
+            for i, gen_assem_id in enumerate(gen_assembly_ids):
+                if gen_assem_id == assembly_id:
+                    operation_expr = gen_oper_expr[i] if i < len(gen_oper_expr) else '1'
+                    chain_list = gen_asym_ids[i] if i < len(gen_asym_ids) else ''
+                    
+                    # Parse operations (e.g., "1,2" -> ['1', '2'])
+                    operations = []
+                    for op in operation_expr.split(','):
+                        op = op.strip()
+                        if op:
+                            operations.append(op)
+                    
+                    # Parse chains (these are LABEL_ASYM_IDs!)
+                    chains = [c.strip() for c in chain_list.split(',')] if chain_list else []
+                    
+                    # Convert label_asym_id to auth_asym_id if possible
+                    auth_chains = []
+                    for label_chain in chains:
+                        auth_chain = label_to_auth_map.get(label_chain, label_chain)
+                        auth_chains.append(auth_chain)
+                    
+                    assembly_generators.append({
+                        'operations': operations,
+                        'label_chains': chains,  # Original label_asym_id
+                        'auth_chains': auth_chains,  # Converted auth_asym_id
+                        'operation_expression': operation_expr
+                    })
+            
+            if not assembly_generators:
+                print(f"  No generators found for assembly {assembly_id}")
+                return None
+            
+            print(f"  Found {len(assembly_generators)} generator(s) for assembly {assembly_id}")
+            for gen in assembly_generators:
+                print(f"    Label chains: {gen['label_chains']} -> Auth chains: {gen['auth_chains']}, Operations: {gen['operations']}")
+            
+            # ============================================
+            # 5. GET TRANSFORMATION OPERATIONS
+            # ============================================
+            if '_pdbx_struct_oper_list.id' not in mmcif_dict:
+                print(f"  No transformation operations defined")
+                return None
+            
+            oper_ids = mmcif_dict['_pdbx_struct_oper_list.id']
+            transformation_ops = {}
+            
+            for i, op_id in enumerate(oper_ids):
+                # Parse 3x3 rotation matrix
+                matrix = []
+                for row in range(1, 4):
+                    row_vals = []
+                    for col in range(1, 4):
+                        key = f'_pdbx_struct_oper_list.matrix[{row}][{col}]'
+                        if key in mmcif_dict and i < len(mmcif_dict[key]):
+                            try:
+                                row_vals.append(float(mmcif_dict[key][i]))
+                            except:
+                                row_vals.append(0.0)
+                        else:
+                            row_vals.append(0.0)
+                    matrix.append(row_vals)
+                
+                # Parse translation vector
+                vector = []
+                for comp in range(1, 4):
+                    key = f'_pdbx_struct_oper_list.vector[{comp}]'
+                    if key in mmcif_dict and i < len(mmcif_dict[key]):
+                        try:
+                            vector.append(float(mmcif_dict[key][i]))
+                        except:
+                            vector.append(0.0)
+                    else:
+                        vector.append(0.0)
+                
+                transformation_ops[op_id] = {
+                    'matrix': np.array(matrix),
+                    'vector': np.array(vector)
+                }
+            
+            # ============================================
+            # 6. GENERATE THE ASSEMBLY
+            # ============================================
+            builder = StructureBuilder.StructureBuilder()
+            builder.init_structure(f"assembly_{assembly_id}")
+            builder.init_model(0)
+            
+            chain_counter = {}  # Track chain copies
+            chains_processed = 0
+            
+            # Process each generator
+            for generator in assembly_generators:
+                auth_chains = generator['auth_chains']
+                label_chains = generator['label_chains']
+                operations = generator['operations']
+                
+                print(f"  Processing generator: auth_chains={auth_chains}, operations={operations}")
+                
+                # If no specific chains are listed, use all available chains
+                if not auth_chains:
+                    auth_chains = available_chain_ids
+                    print(f"  No chains specified, using all available: {auth_chains}")
+                
+                for auth_chain_id, label_chain_id in zip(auth_chains, label_chains):
+                    if auth_chain_id not in original_model:
+                        print(f"  Warning: Chain '{auth_chain_id}' (from label '{label_chain_id}') not in structure, skipping")
+                        continue
+                    
+                    original_chain = original_model[auth_chain_id]
+                    
+                    for op_id in operations:
+                        if op_id not in transformation_ops:
+                            print(f"  Warning: Operation {op_id} not defined, skipping")
+                            continue
+                        
+                        # Determine new chain ID
+                        if op_id == '1':  # Identity operation
+                            # Keep original chain ID for identity operation
+                            new_chain_id = auth_chain_id
+                        else:
+                            # Count how many times we've used this chain with this operation
+                            key = f"{auth_chain_id}_{op_id}"
+                            if key not in chain_counter:
+                                chain_counter[key] = 0
+                            chain_counter[key] += 1
+                            
+                            # Create unique chain ID
+                            if chain_counter[key] == 1:
+                                # For first copy, use original chain ID with operation suffix
+                                new_chain_id = f"{auth_chain_id}_{op_id}"
+                            else:
+                                # For additional copies, add number
+                                new_chain_id = f"{auth_chain_id}_{op_id}_{chain_counter[key]}"
+                        
+                        # Apply transformation
+                        transformed_chain = self._apply_transformation_to_chain(
+                            original_chain, 
+                            transformation_ops[op_id],
+                            new_chain_id
+                        )
+                        
+                        # Add chain to structure
+                        if new_chain_id not in builder.structure[0]:
+                            builder.structure[0].add(transformed_chain)
+                            chains_processed += 1
+                            print(f"    Generated chain {new_chain_id} from {auth_chain_id} (label: {label_chain_id}) + op{op_id}")
+            
+            # Get the final structure
+            assembly_structure = builder.get_structure()
+            final_chain_count = len(list(assembly_structure[0].get_chains()))
+            
+            if final_chain_count == 0:
+                print(f"  ⚠️  Generated assembly has 0 chains, trying fallback method...")
+                
+                # Fallback: Create symmetric copies based on oligo_count
+                return self._generate_assembly_fallback(original_structure, assembly_id, oligo_count)
+            
+            print(f"  ✅ Successfully generated assembly with {final_chain_count} chains")
+            
+            return assembly_structure
+            
+        except Exception as e:
+            print(f"  Error generating biological assembly: {e}")
+            import traceback
+            traceback.print_exc()
+            return None
+
+
+    def _generate_assembly_fallback(self, original_structure, assembly_id: str, oligo_count: int):
+        """
+        Fallback method to generate assembly when standard method fails.
+        Creates symmetric copies of the structure.
+        """
+        try:
+            from Bio.PDB import StructureBuilder
+            import numpy as np
+            
+            print(f"  Using fallback method to generate {oligo_count}-mer assembly")
+            
+            builder = StructureBuilder.StructureBuilder()
+            builder.init_structure(f"assembly_{assembly_id}_fallback")
+            builder.init_model(0)
+            
+            original_model = original_structure[0]
+            original_chains = list(original_model.get_chains())
+            
+            if not original_chains:
+                print(f"  ⚠️  No chains in original structure")
+                return None
+            
+            print(f"  Original chains: {[c.id for c in original_chains]}")
+            
+            # For simplicity, create symmetric copies around origin
+            chains_added = 0
+            
+            for i in range(oligo_count):
+                for original_chain in original_chains:
+                    chain_id = original_chain.id
+                    
+                    # Create new chain ID for each copy
+                    if i == 0:
+                        new_chain_id = chain_id  # First copy keeps original ID
+                    else:
+                        # Use different chain IDs for additional copies
+                        # Try letters A-Z, then fallback to numbered IDs
+                        if len(chain_id) == 1 and chain_id.isalpha():
+                            # Shift to next letter (wrap around Z)
+                            base_ord = ord(chain_id.upper())
+                            if base_ord >= ord('A') and base_ord <= ord('Z'):
+                                offset = (base_ord - ord('A') + i) % 26
+                                new_chain_id = chr(offset + ord('A'))
+                            else:
+                                new_chain_id = f"{chain_id}_{i}"
+                        else:
+                            new_chain_id = f"{chain_id}_{i}"
+                    
+                    # Create transformation for this copy
+                    if i == 0:
+                        # First copy is identity
+                        matrix = np.identity(3)
+                        vector = np.zeros(3)
+                    else:
+                        # Create rotation around axis
+                        angle = 2 * np.pi * i / oligo_count
+                        # Simple rotation around z-axis
+                        matrix = np.array([
+                            [np.cos(angle), -np.sin(angle), 0],
+                            [np.sin(angle), np.cos(angle), 0],
+                            [0, 0, 1]
+                        ])
+                        # Simple translation based on oligo_count
+                        if oligo_count == 2:
+                            vector = np.array([30.0 * i, 0, 0])  # 30Å spacing for dimer
+                        elif oligo_count == 3:
+                            # Equilateral triangle
+                            vector = np.array([
+                                30.0 * np.cos(angle),
+                                30.0 * np.sin(angle),
+                                0
+                            ])
+                        elif oligo_count == 4:
+                            # Square
+                            if i == 1:
+                                vector = np.array([30.0, 0, 0])
+                            elif i == 2:
+                                vector = np.array([0, 30.0, 0])
+                            else:  # i == 3
+                                vector = np.array([30.0, 30.0, 0])
+                        else:
+                            # Generic spacing
+                            vector = np.array([i * 30.0, 0, 0])
+                    
+                    # Apply transformation
+                    transformed_chain = self._apply_transformation_to_chain(
+                        original_chain,
+                        {'matrix': matrix, 'vector': vector},
+                        new_chain_id
+                    )
+                    
+                    # Add chain to structure
+                    builder.structure[0].add(transformed_chain)
+                    chains_added += 1
+                    print(f"    Generated chain {new_chain_id} (copy {i} of {chain_id})")
+            
+            assembly_structure = builder.get_structure()
+            final_chain_count = len(list(assembly_structure[0].get_chains()))
+            
+            print(f"  ✅ Fallback generated assembly with {final_chain_count} chains")
+            return assembly_structure
+            
+        except Exception as e:
+            print(f"  Error in fallback assembly generation: {e}")
+            import traceback
+            traceback.print_exc()
+            return None
+
+    def _apply_transformation_to_chain(self, original_chain, transformation: Dict, new_chain_id: str):
+        """
+        Apply transformation matrix to a chain and return new chain.
+        """
+        try:
+            from Bio.PDB import Chain, Residue, Atom
+            import numpy as np
+            
+            matrix = transformation['matrix']
+            vector = transformation['vector']
+            
+            # Create new chain
+            new_chain = Chain.Chain(new_chain_id)
+            
+            # Copy and transform each residue
+            for residue in original_chain:
+                new_residue = Residue.Residue(
+                    residue.id,
+                    residue.resname,
+                    residue.segid
+                )
+                
+                # Transform each atom
+                for atom in residue:
+                    original_coord = atom.get_coord()
+                    # Apply: new_coord = matrix × original_coord + vector
+                    transformed_coord = np.dot(matrix, original_coord) + vector
+                    
+                    new_atom = Atom.Atom(
+                        atom.name,
+                        transformed_coord,
+                        atom.bfactor,
+                        atom.occupancy,
+                        atom.altloc,
+                        atom.fullname,
+                        atom.serial_number,
+                        element=atom.element
+                    )
+                    new_residue.add(new_atom)
+                
+                new_chain.add(new_residue)
+            
+            return new_chain
+            
+        except Exception as e:
+            print(f"  Error applying transformation: {e}")
+            # Return a simple copy if transformation fails
+            return original_chain.copy()
+
+    # Slow calculation not used
+    def extract_interface_features_all_atom(self, interface_id: str, pdb_file: str, chain_ids: List[str], radius: float = 5.0) -> Dict[str, Any]:
         """
         Extract interface features from a PDB file.
         Supports both compressed (.gz) and uncompressed files.
@@ -646,7 +1435,6 @@ class PDBFeatureExtractor:
 
             # Get the chains
             chains = {}
-            print ('QQ',pdb_file,chain_ids)
             for chain_id in chain_ids:
                 try:
                     chains[chain_id] = model[chain_id]
@@ -1090,8 +1878,10 @@ class CroissantDatasetLoader:
                 if isinstance(value, str):
                     # Split by "/" and take the last element
                     filename = value.split('/')[-1]
-                    # Remove file extension
-                    interface_id = filename.split('.')[0]
+                    # Remove file extension. file_id is defined because 
+                    # mmcif file name exception.
+                    file_id = filename.split('.')[0]
+                    interface_id = catalog_item.get('identifier','').lower()
                     print(f"      Extracted Interface ID: {interface_id}")
                 
                 if not interface_id:
@@ -1124,16 +1914,16 @@ class CroissantDatasetLoader:
                 # Check if file already exists locally BEFORE downloading
                 if pdb_local_dir:
                     file_ext = '.pdb' if use_pdb_format else '.cif'
-                    alt_ext = '.cif' if use_pdb_format else '.pdb'
                     
                     # Handle case sensitivity: try both uppercase and lowercase
-                    interface_variants = [interface_id]
+                    interface_variants = [file_id]
                     if interface_id.isupper():
                         interface_variants.append(interface_id.lower())
                     elif interface_id.islower():
                         interface_variants.append(interface_id.upper())
                     
                     # Check for various possible file locations
+
                     file_found = False
                     local_path = None
                     
@@ -1152,18 +1942,6 @@ class CroissantDatasetLoader:
                             local_path = str(uncompressed_file)
                             break
                         
-                        # Check alternative formats
-                        alt_compressed = Path(pdb_local_dir) / f"{variant}{alt_ext}.gz"
-                        if alt_compressed.exists():
-                            file_found = True
-                            local_path = str(alt_compressed)
-                            break
-                        
-                        alt_uncompressed = Path(pdb_local_dir) / f"{variant}{alt_ext}"
-                        if alt_uncompressed.exists():
-                            file_found = True
-                            local_path = str(alt_uncompressed)
-                            break
                     
                     if file_found:
                         print(f"      File already exists locally: {Path(local_path).name}")
@@ -1173,7 +1951,8 @@ class CroissantDatasetLoader:
                     else:
                         # File doesn't exist, try to download from the repository URL
                         print(f"      File not found locally, downloading from repository URL...")
-                        self._download_interface_file(interface_id, content_url, pdb_local_dir, use_pdb_format)
+                        # Download using file_id
+                        self._download_interface_file(file_id, content_url, pdb_local_dir, use_pdb_format)
                         
                         # Check if download was successful (using lowercase variant)
                         lowercase_id = interface_id.lower()
@@ -1207,6 +1986,54 @@ class CroissantDatasetLoader:
                                pdb_local_dir: str, use_pdb_format: bool = False):
         """
         Download interface file from the provided URL.
+        Always saves as compressed .gz format (BioPython compatible).
+        
+        Args:
+            interface_id: Interface ID extracted from value field
+            content_url: URL to download from
+            pdb_local_dir: Local directory for files
+            use_pdb_format: True for PDB format, False for mmCIF format
+        """
+        # Determine file extension
+        file_ext = '.pdb' if use_pdb_format else '.cif'
+        
+        # Create local directory
+        Path(pdb_local_dir).mkdir(parents=True, exist_ok=True)
+        
+        # Use lowercase filename
+        lowercase_id = interface_id.lower()
+        final_filename = f"{lowercase_id}{file_ext}.gz"
+        compressed_file = Path(pdb_local_dir) / final_filename
+        
+        # Check if file already exists
+        if compressed_file.exists():
+            return
+        
+        # Download file
+        try:
+            response = requests.get(content_url, timeout=60)
+            
+            if response.status_code == 200:
+                # Check if URL is already compressed
+                if content_url.lower().endswith('.gz'):
+                    # Save compressed file directly
+                    with open(compressed_file, 'wb') as f:
+                        f.write(response.content)
+                else:
+                    # Compress and save
+                    with gzip.open(compressed_file, 'wb') as f:
+                        f.write(response.content)
+                        
+            else:
+                print(f"      HTTP Error {response.status_code} for {interface_id}")
+                
+        except Exception as e:
+            print(f"      Error downloading {interface_id}: {e}")
+
+    def _download_interface_file3(self, interface_id: str, content_url: str,
+                               pdb_local_dir: str, use_pdb_format: bool = False):
+        """
+        Download interface file from the provided URL.
         Handles case sensitivity by saving with lowercase filename.
         
         Args:
@@ -1228,18 +2055,13 @@ class CroissantDatasetLoader:
         uncompressed_file = Path(pdb_local_dir) / f"{lowercase_id}{file_ext}"
         compressed_file = Path(pdb_local_dir) / f"{lowercase_id}{file_ext}.gz"
         
-        # Also check for alternative format
-        alt_ext = '.cif' if use_pdb_format else '.pdb'
-        alt_uncompressed = Path(pdb_local_dir) / f"{lowercase_id}{alt_ext}"
-        alt_compressed = Path(pdb_local_dir) / f"{lowercase_id}{alt_ext}.gz"
-        
         # Also check with original case
         uncompressed_orig = Path(pdb_local_dir) / f"{interface_id}{file_ext}"
         compressed_orig = Path(pdb_local_dir) / f"{interface_id}{file_ext}.gz"
         
         # Check if any version exists
         existing_files = []
-        for file_path in [compressed_file, uncompressed_file, alt_compressed, alt_uncompressed,
+        for file_path in [compressed_file, uncompressed_file,
                          compressed_orig, uncompressed_orig]:
             if file_path.exists():
                 existing_files.append(file_path)
@@ -1284,6 +2106,7 @@ class CroissantDatasetLoader:
                     response = requests.get(content_url, headers=headers, timeout=60)
                     
                     if response.status_code == 200:
+                      
                         # Save to local directory (uncompressed first)
                         with open(uncompressed_file, 'wb') as f:
                             f.write(response.content)
@@ -1345,7 +2168,58 @@ class CroissantDatasetLoader:
         except Exception as e:
             print(f"      Error compressing file: {e}")
 
-    def check_interface_file_availability(self, interface_id: str, pdb_local_dir: str, 
+    def _is_pdb_representation(self, rep: Dict) -> bool:
+        """
+        Check if a representation is a PDB/mmCIF file.
+
+        Args:
+            rep: Representation dictionary
+
+        Returns:
+            True if it's a PDB representation, False otherwise
+        """
+        if not isinstance(rep, dict):
+            return False
+
+        # Check encodingFormat
+        encoding_format = rep.get('encodingFormat', '').lower()
+        if any(pdb_term in encoding_format for pdb_term in ['chemical/x-pdb', 'text/pdb', 'pdb', 'cif', 'mmcif']):
+            return True
+
+        # Check name
+        name = rep.get('name', '').lower()
+        if any(pdb_term in name for pdb_term in ['pdb', 'mmcif', 'cif', 'structure']):
+            return True
+
+        # Check identifier for PDB pattern
+        identifier = rep.get('identifier', '')
+        if isinstance(identifier, str):
+            import re
+            match = re.search(r'([0-9][A-Z0-9]{3})', identifier.upper())
+            if match:
+                return True
+
+        # Check description
+        description = rep.get('description', '').lower()
+        if any(pdb_term in description for pdb_term in ['pdb', 'mmcif', 'cif', 'protein data bank']):
+            return True
+
+        # Check contentUrl for PDB patterns
+        for url_field in ['contentUrl', 'url']:
+            if url_field in rep:
+                content_url = rep[url_field]
+                if isinstance(content_url, str):
+                    if '.pdb' in content_url.lower() or '.cif' in content_url.lower():
+                        return True
+                    # Check for PDB ID pattern in URL
+                    import re
+                    match = re.search(r'/([0-9][a-z0-9]{3})\.(pdb|cif|mmcif)', content_url.lower())
+                    if match:
+                        return True
+
+        return False
+
+    def check_interface_file_availability2(self, interface_id: str, pdb_local_dir: str, 
                                         use_pdb_format: bool = False) -> Tuple[bool, Optional[Path]]:
         """
         Check if a specific interface's structure file is available locally.
@@ -1398,30 +2272,41 @@ class CroissantDatasetLoader:
         
         return False, None
 
-    def get_chain_ids_for_interface(self, interface: Dict) -> List[str]:
+    def get_chain_ids_for_interface(self, interface: Dict, pdb_format: bool = False) -> List[str]:
         """
         Extract chain IDs from interface properties.
         
         Args:
             interface: Interface dictionary
+            pdb_format: True/False
         
         Returns:
             List of chain IDs
         """
-        chain_ids = []
+        chain_labels = []
+        chain_auths = []
         additional_props = interface.get('additionalProperty', [])
-        
+        chain_prop = 'labelchain' if pdb_format else 'authchain'        
+
         for prop in additional_props:
             prop_name = prop.get('name', '').lower()
             prop_value = str(prop.get('value', ''))
             
             # Look for chain identifiers
+              
             if 'labelchain' in prop_name and prop_value and len(prop_value) <= 2:
                 chain_id = prop_value.strip().upper()
                 if chain_id and chain_id.isalnum():
-                    chain_ids.append(chain_id)
-        
-        return chain_ids
+                    chain_labels.append(chain_id)
+
+            if 'authchain' in prop_name and prop_value and len(prop_value) <= 2:
+                chain_id = prop_value.strip().upper()
+                if chain_id and chain_id.isalnum():
+                    chain_auths.append(chain_id)
+
+        # Check labels 
+        if len(chain_auths) == 0 and not pdb_format : chain_labels=[]  
+        return chain_labels
 
     def get_pdb_representation_for_interface(self, interface: Dict) -> Optional[Dict]:
         """
@@ -1438,7 +2323,6 @@ class CroissantDatasetLoader:
         
         # Method 1: Direct lookup by interface identifier
         interface_id = interface.get('identifier', '').strip().lower()
-        print ('QQ',interface_id,(interface_id in self.pdb_sources))
         if interface_id in self.pdb_sources:
             return self.pdb_sources[interface_id]
         
@@ -1770,7 +2654,7 @@ class CroissantDatasetLoader:
         
         return self.dataframe, labels_numeric, self.cluster_ids
 
-    def extract_pdb_contacts(self, pdb_feature_extractor=None):
+    def extract_pdb_contacts(self, pdb_feature_extractor=None, pdb_format=False):
         """
         Extract structural features for interfaces in the dataset.
         Focus on interface residues within 5Å.
@@ -1823,7 +2707,6 @@ class CroissantDatasetLoader:
             
             # Get structure representation for this interface
             pdb_representation = self.get_pdb_representation_for_interface(interface)
-            print ('QQ',interface.get('name',0),pdb_representation)
             
             if not pdb_representation:
                 # No structure representation found for this interface
@@ -1858,21 +2741,11 @@ class CroissantDatasetLoader:
                     continue
             
             # Get chain IDs for this interface
-            chain_ids = self.get_chain_ids_for_interface(interface)
-            
-            if len(chain_ids) < 2:
-                # Need at least 2 chains for interface analysis
-                pdb_features_list.append({
-                    'interface_id': interface_id,
-                    'extraction_success': False,
-                    'error': f'Need at least 2 chains, found {len(chain_ids)}'
-                })
-                failed += 1
-                continue
+            chain_ids = self.get_chain_ids_for_interface(interface, pdb_format)
             
             # Extract interface features (BioPython can handle gzipped files directly)
             print(f"    Processing {interface_id}: chains {chain_ids}, file: {Path(pdb_file).name}")
-            interface_features = pdb_feature_extractor.extract_interface_features(pdb_file, chain_ids)
+            interface_features = pdb_feature_extractor.extract_interface_features(interface_id, pdb_file, chain_ids)
             
             # Clean up temporary downloaded file (only if it's temporary)
             if pdb_file and os.path.exists(pdb_file) and 'tmp' in pdb_file:
@@ -3991,7 +4864,8 @@ def main():
 
                 # Extract structural features (interface residues within 5Å)
                 pdb_features_df = loader.extract_pdb_contacts(
-                    pdb_feature_extractor=pdb_extractor
+                    pdb_feature_extractor=pdb_extractor, 
+                    pdb_format=args.pdb_format
                 )
 
                 # Integrate structural features with existing features
