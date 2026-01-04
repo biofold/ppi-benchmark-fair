@@ -1308,7 +1308,7 @@ class FAIRVisualizer:
                 
                 /* Footer - Matching index.html */
                 footer {
-                    background-color: var(--primary-color);
+                    background-color: var(--secondary-color);
                     color: white;
                     padding: 50px 0;
                     text-align: center;
