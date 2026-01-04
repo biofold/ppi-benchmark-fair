@@ -1066,7 +1066,7 @@ class FAIRVisualizer:
             <style>
                 :root {
                     --primary-color: #2c3e50;
-                    --secondary-color: #3498db;
+                    --secondary-color: #4689a3; /* #3498db; */
                     --accent-color: #e74c3c;
                     --light-bg: #f8f9fa;
                     --success-color: #27ae60;
