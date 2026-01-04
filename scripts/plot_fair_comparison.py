@@ -1061,7 +1061,7 @@ class FAIRVisualizer:
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>FAIR Analysis Dashboard</title>
+            <title>FAIR Interactive Dashboard</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
                 :root {
@@ -1423,7 +1423,7 @@ class FAIRVisualizer:
                     <div class="header-content">
                         <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
                           Benchmark</strong></h3>
-                        <h1><strong>FAIR Analysis Dashboard</strong></h1>
+                        <h1><strong>FAIR Interactive Dashboard</strong></h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
                     <a href="../index.html" class="dashboard-link">
@@ -1596,7 +1596,7 @@ class FAIRVisualizer:
                 </div>
                         
                         <div class="copyright">
-                            <p>FAIR Analysis Dashboard • Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
+                            <p>FAIR Interactive Dashboard • Generated on: {self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}</p>
                             <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
                             <!--
                             <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
@@ -2524,7 +2524,7 @@ class FAIRVisualizer:
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>FAIR Analysis Report</title>
+            <title>FAIR Assessment Report</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
                 :root {{
@@ -2664,12 +2664,12 @@ class FAIRVisualizer:
                     gap: 10px;
                 }}
                 
-                <!--
+                /*
                 h2::before {{
                     content: "📊";
                     font-size: 1.5rem;
                 }}
-                -->
+                */
                  
                 /* Table Styling */
                 .repo-list {{
@@ -2810,7 +2810,7 @@ class FAIRVisualizer:
                     <div class="header-content">
                         <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
                         Benchmark</strong></h3>
-                        <h1><strong>FAIR Analysis Report</strong></h1>
+                        <h1><strong>FAIR Assessment Report</strong></h1>
                         <!--
                          <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         -->
@@ -2821,7 +2821,7 @@ class FAIRVisualizer:
                         <i class="fas fa-chart-bar"></i> Ranking
                     </a>
                     <a href="./fair_dashboard.html" class="dashboard-link">
-                        <i class="fas fa-chart-line"></i> Analysis Dashboard
+                        <i class="fas fa-chart-line"></i> Interactive Dashboard
                     </a>
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                         <i class="fab fa-github"></i> Repository
@@ -2902,7 +2902,7 @@ class FAIRVisualizer:
                 
                 <!-- Interactive Dashboard Section -->
                 <div class="section">
-                    <h2><i class="fas fa-chart-bar"></i> Interactive Dashboard</h2>
+                    <h2><i class="fas fa-chart-line"></i> Interactive Dashboard</h2>
                     <p>Explore all visualizations in the interactive dashboard:</p>
                     <div style="text-align: center; margin: 30px 0;">
                         <a href="fair_dashboard.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #2980b9); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">
@@ -3011,7 +3011,7 @@ class FAIRVisualizer:
                 </div>
                         
                         <div class="copyright">
-                            <p>FAIR Analysis Report • Generated on: ''' + f"{self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}" + '''</p>
+                            <p>FAIR Assessment Report • Generated on: ''' + f"{self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}" + '''</p>
                             <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
                             <!--
                             <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
