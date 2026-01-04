@@ -34,6 +34,8 @@ from collections import defaultdict, Counter
 from typing import Dict, List, Tuple, Any, Optional
 import scipy.stats as stats
 import matplotlib
+import logging
+
 matplotlib.use('Agg')  # Use the Agg backend for non-interactive plotting
 
 # Import BioPython for PDB parsing
@@ -46,7 +48,7 @@ try:
     BIOPYTHON_AVAILABLE = True
 except ImportError:
     BIOPYTHON_AVAILABLE = False
-    print("Warning: BioPython not available. PDB feature extraction will be limited.")
+    logging.warning("BioPython not available. PDB feature extraction will be limited.")
 
 warnings.filterwarnings('ignore')
 
@@ -106,10 +108,11 @@ class PDBFeatureExtractor:
         """
         self.pdb_local_dir = pdb_local_dir
         self.use_pdb_format = use_pdb_format
+        self.logger = logging.getLogger(__name__)
 
         if not BIOPYTHON_AVAILABLE:
-            print("⚠️  BioPython is not available. PDB feature extraction will be limited.")
-            print("   Install with: pip install biopython")
+            self.logger.warning("BioPython is not available. PDB feature extraction will be limited.")
+            self.logger.info("Install with: pip install biopython")
             return
 
         # Initialize parsers
@@ -119,7 +122,7 @@ class PDBFeatureExtractor:
         # Create local directory if specified
         if pdb_local_dir:
             Path(pdb_local_dir).mkdir(parents=True, exist_ok=True)
-            print(f"Interface structure directory: {pdb_local_dir}")
+            self.logger.info(f"Interface structure directory: {pdb_local_dir}")
 
     def _get_local_interface_file(self, representation: Dict) -> Optional[str]:
         """
@@ -151,10 +154,10 @@ class PDBFeatureExtractor:
                 interface_id = representation.get('identifier') or representation.get('name')
             
             if not interface_id:
-                print(f"  Could not extract interface ID from representation")
+                self.logger.debug(f"Could not extract interface ID from representation")
                 return None
             
-            print(f"  Looking for local interface file: {interface_id}")
+            self.logger.debug(f"Looking for local interface file: {interface_id}")
             
             # Handle case sensitivity: try both uppercase and lowercase versions
             interface_variants = [interface_id]
@@ -197,19 +200,19 @@ class PDBFeatureExtractor:
                 # Prefer compressed files (BioPython can handle gzipped files directly)
                 for file_path in possible_files:
                     if file_path.endswith('.gz'):
-                        print(f"  Found local gzipped file: {file_path}")
+                        self.logger.debug(f"Found local gzipped file: {file_path}")
                         # BioPython can parse gzipped files directly
                         return file_path
                 
                 # If no compressed files, use the first uncompressed file
-                print(f"  Found local file: {possible_files[0]}")
+                self.logger.debug(f"Found local file: {possible_files[0]}")
                 return possible_files[0]
             
-            print(f"  No local interface file found for {interface_id} (tried variants: {interface_variants})")
+            self.logger.debug(f"No local interface file found for {interface_id} (tried variants: {interface_variants})")
             return None
             
         except Exception as e:
-            print(f"  Error looking for local interface file: {e}")
+            self.logger.error(f"Error looking for local interface file: {e}")
             return None
 
     def get_pdb_file_from_representation(self, representation: Dict) -> Optional[str]:
@@ -224,16 +227,16 @@ class PDBFeatureExtractor:
             Path to local structure file or None if failed
         """
         try:
-            print(f"  Processing representation for structure feature extraction")
+            self.logger.debug(f"Processing representation for structure feature extraction")
             
             # FIRST: Try to get local interface file
             local_file = self._get_local_interface_file(representation)
             if local_file:
-                print(f"  ✅ Using local interface file: {Path(local_file).name}")
+                self.logger.info(f"Using local interface file: {Path(local_file).name}")
                 return local_file
             
             # SECOND: If no loader available, download directly
-            print(f"  No local interface file found, attempting direct download...")
+            self.logger.debug(f"No local interface file found, attempting direct download...")
             
             # Extract URL from representation
             content_url = None
@@ -251,7 +254,7 @@ class PDBFeatureExtractor:
                             break
             
             if not content_url:
-                print(f"  No valid URL found in representation for download")
+                self.logger.warning(f"No valid URL found in representation for download")
                 return None
             
             # Extract interface ID for filename
@@ -263,7 +266,7 @@ class PDBFeatureExtractor:
             if not interface_id:
                 interface_id = representation.get('identifier') or representation.get('name') or 'interface'
             
-            print(f"  Downloading interface file from: {content_url}")
+            self.logger.info(f"Downloading interface file from: {content_url}")
             
             # Download using simple requests (without the retry logic from the other method)
             headers = {
@@ -291,14 +294,14 @@ class PDBFeatureExtractor:
                     gz_file.write(response.content)
                 
                 temp_file.close()
-                print(f"  Downloaded to temporary gzipped file: {temp_file.name}")
+                self.logger.debug(f"Downloaded to temporary gzipped file: {temp_file.name}")
                 return temp_file.name
             else:
-                print(f"  Failed to download: HTTP {response.status_code}")
+                self.logger.warning(f"Failed to download: HTTP {response.status_code}")
                 return None
                 
         except Exception as e:
-            print(f"  Error getting structure file: {e}")
+            self.logger.error(f"Error getting structure file: {e}")
             return None
 
     def extract_interface_features(self, interface_id: str, pdb_file: str, chain_ids: List[str], radius: float = 10.0) -> Dict[str, Any]:
@@ -348,27 +351,27 @@ class PDBFeatureExtractor:
                     chains[chain_id] = model[chain_id]
                     original_chains_found.append(chain_id)
                 except KeyError:
-                    print(f"  Chain {chain_id} not found in structure")
+                    self.logger.debug(f"Chain {chain_id} not found in structure")
 
-            print(f"  Found {len(chains)} requested chain(s): {list(chains.keys())}")
+            self.logger.debug(f"Found {len(chains)} requested chain(s): {list(chains.keys())}")
             
             # ============================================
             # FIXED: Handle monomer mmCIF files by generating assembly
             # ============================================
             if len(chains) < 2 and is_cif:
-                print(f"  Only {len(chains)} chain(s) found in monomer mmCIF file")
-                print(f"  Attempting to generate biological assembly from monomer...")
+                self.logger.info(f"Only {len(chains)} chain(s) found in monomer mmCIF file")
+                self.logger.info(f"Attempting to generate biological assembly from monomer...")
                 
                 # Try to generate biological assembly (default: assembly from interface_id)
                 assembly_structure = self.generate_biological_assembly_from_monomer(interface_id, pdb_file)
                 
                 if assembly_structure:
-                    print(f"  ✅ Successfully generated biological assembly")
+                    self.logger.info(f"Successfully generated biological assembly")
                     assembly_model = assembly_structure[0]
                     
                     # Get all chains from the generated assembly
                     available_chain_ids = list(assembly_model.child_dict.keys())
-                    print(f"  Assembly has {len(available_chain_ids)} chains: {available_chain_ids}")
+                    self.logger.debug(f"Assembly has {len(available_chain_ids)} chains: {available_chain_ids}")
                     
                     # For interface analysis, we need at least 2 chains
                     if len(available_chain_ids) >= 2:
@@ -407,29 +410,29 @@ class PDBFeatureExtractor:
                                 chain_id = available_chain_ids[i]
                                 chains[chain_id] = assembly_model[chain_id]
                         
-                        print(f"  Using {len(chains)} chain(s) for interface analysis: {list(chains.keys())}")
+                        self.logger.debug(f"Using {len(chains)} chain(s) for interface analysis: {list(chains.keys())}")
                         
                         # Update the model to use assembly structure
                         model = assembly_model
                         features['assembly_generated'] = True
                         features['original_chain_count'] = len(original_chains_found)
-                        print(f"  Original chains found: {original_chains_found}")
+                        self.logger.debug(f"Original chains found: {original_chains_found}")
                     else:
-                        print(f"  ⚠️  Generated assembly has only {len(available_chain_ids)} chain(s), need at least 2")
+                        self.logger.warning(f"Generated assembly has only {len(available_chain_ids)} chain(s), need at least 2")
                         features['error'] = f"Generated assembly has only {len(available_chain_ids)} chain(s)"
                         return features
                 else:
-                    print(f"  ⚠️  Could not generate biological assembly")
+                    self.logger.warning(f"Could not generate biological assembly")
                     features['error'] = f"Need at least 2 chains, found {len(chains)} (and failed to generate assembly)"
                     return features
             
             # If still not enough chains, try alternative approaches
             if len(chains) < 2:
-                print(f"  ⚠️  Only {len(chains)} chain(s) available, trying to find alternative chains...")
+                self.logger.warning(f"Only {len(chains)} chain(s) available, trying to find alternative chains...")
                 
                 # Try to get all available chains from the model
                 all_chains_in_model = list(model.child_dict.keys())
-                print(f"  All chains in structure: {all_chains_in_model}")
+                self.logger.debug(f"All chains in structure: {all_chains_in_model}")
                 
                 if len(all_chains_in_model) >= 2:
                     # Use first 2 available chains
@@ -437,14 +440,14 @@ class PDBFeatureExtractor:
                     for i in range(2):
                         chain_id = all_chains_in_model[i]
                         chains[chain_id] = model[chain_id]
-                    print(f"  Using first 2 available chains: {list(chains.keys())}")
+                    self.logger.debug(f"Using first 2 available chains: {list(chains.keys())}")
                 else:
                     features['error'] = f"Need at least 2 chains, found {len(chains)} in structure (total: {len(all_chains_in_model)})"
                     return features
             
             # Extract chain names for pairwise analysis
             chain_list = list(chains.keys())
-            print(f"  Final chains selected for interface analysis: {chain_list}")
+            self.logger.debug(f"Final chains selected for interface analysis: {chain_list}")
 
             # Initialize interface features
             interface_features = {}
@@ -475,10 +478,10 @@ class PDBFeatureExtractor:
                                     chain2_ca_atoms.append(residue['CA'])
 
                         if not chain1_ca_atoms or not chain2_ca_atoms:
-                            print(f"  Warning: No C-alpha atoms found for chain pair {pair_key}")
+                            self.logger.warning(f"No C-alpha atoms found for chain pair {pair_key}")
                             continue
 
-                        print(f"  Analyzing chain pair {pair_key}: {len(chain1_ca_atoms)} vs {len(chain2_ca_atoms)} C-alpha atoms")
+                        self.logger.debug(f"Analyzing chain pair {pair_key}: {len(chain1_ca_atoms)} vs {len(chain2_ca_atoms)} C-alpha atoms")
 
                         # Find residues in chain1 that are within 10Å of chain2 (using C-alpha)
                         chain1_interface_residues = set()
@@ -550,10 +553,10 @@ class PDBFeatureExtractor:
                             'distance_threshold': radius
                         }
                         
-                        print(f"    Interface {pair_key}: {chain1_interface_count} + {chain2_interface_count} = {total_interface_count} interface residues")
+                        self.logger.debug(f"Interface {pair_key}: {chain1_interface_count} + {chain2_interface_count} = {total_interface_count} interface residues")
 
                     except Exception as e:
-                        print(f"  Error analyzing chain pair {pair_key}: {e}")
+                        self.logger.error(f"Error analyzing chain pair {pair_key}: {e}")
                         import traceback
                         traceback.print_exc()
                         continue
@@ -610,7 +613,7 @@ class PDBFeatureExtractor:
                 for key, value in first_pair.items():
                     features[f'first_pair_{key}'] = value
 
-            print(f"  ✅ Successfully extracted interface features with {len(interface_features)} chain pairs")
+            self.logger.info(f"Successfully extracted interface features with {len(interface_features)} chain pairs")
             return features
 
         except Exception as e:
@@ -632,7 +635,7 @@ class PDBFeatureExtractor:
             BioPython Structure object with generated assembly, or None if failed
         """
         if not BIOPYTHON_AVAILABLE:
-            print("⚠️  BioPython not available")
+            self.logger.warning("BioPython not available")
             return None
         
         try:
@@ -644,10 +647,10 @@ class PDBFeatureExtractor:
             is_cif = pdb_file.endswith('.cif') or pdb_file.endswith('.cif.gz') or pdb_file.endswith('.mmcif') or pdb_file.endswith('.mmcif.gz')
             
             if not is_cif:
-                print(f"  Not an mmCIF file: {pdb_file}")
+                self.logger.debug(f"Not an mmCIF file: {pdb_file}")
                 return None
             
-            print(f"  Generating biological assembly for interface: {interface_id}")
+            self.logger.info(f"Generating biological assembly for interface: {interface_id}")
             
             # Parse mmCIF dictionary for assembly information
             open_func = gzip.open if is_gzipped else open
@@ -663,7 +666,7 @@ class PDBFeatureExtractor:
             
             if '_pdbx_struct_assembly.id' in mmcif_dict:
                 available_assemblies = mmcif_dict['_pdbx_struct_assembly.id']
-                print(f"  Available assemblies in mmCIF: {available_assemblies}")
+                self.logger.debug(f"Available assemblies in mmCIF: {available_assemblies}")
                 
                 # Strategy 1: Extract from interface_id (e.g., "7CEI_1" -> "1")
                 if interface_id:
@@ -674,11 +677,11 @@ class PDBFeatureExtractor:
                         extracted_id = assembly_match.group(1)
                         if extracted_id in available_assemblies:
                             assembly_id = extracted_id
-                            print(f"  Using assembly {assembly_id} extracted from interface_id: {interface_id}")
+                            self.logger.info(f"Using assembly {assembly_id} extracted from interface_id: {interface_id}")
                         else:
-                            print(f"  Assembly {extracted_id} from interface_id not found in mmCIF")
+                            self.logger.debug(f"Assembly {extracted_id} from interface_id not found in mmCIF")
                     else:
-                        print(f"  No assembly number in interface_id: {interface_id}")
+                        self.logger.debug(f"No assembly number in interface_id: {interface_id}")
                 
                 # Strategy 2: If assembly not determined yet, check for biological assembly
                 if assembly_id == "1" and len(available_assemblies) > 1:
@@ -693,7 +696,7 @@ class PDBFeatureExtractor:
                                 if 'biological' in detail_lower or 'native' in detail_lower or 'author' in detail_lower:
                                     if current_id in available_assemblies:
                                         assembly_id = current_id
-                                        print(f"  Using biological assembly {assembly_id}: {detail}")
+                                        self.logger.info(f"Using biological assembly {assembly_id}: {detail}")
                                         break
                     
                     # Strategy 3: If still default, check oligomeric count
@@ -705,18 +708,18 @@ class PDBFeatureExtractor:
                                 # Prefer assemblies with oligomeric count > 1 (multimers)
                                 if count != "1" and current_id in available_assemblies:
                                     assembly_id = current_id
-                                    print(f"  Using assembly {assembly_id} (oligomeric count: {count})")
+                                    self.logger.info(f"Using assembly {assembly_id} (oligomeric count: {count})")
                                     break
                 
                 # Strategy 4: If assembly still not found, use first available
                 if assembly_id not in available_assemblies and available_assemblies:
                     assembly_id = available_assemblies[0]
-                    print(f"  Assembly not found, using first available: {assembly_id}")
+                    self.logger.info(f"Assembly not found, using first available: {assembly_id}")
             else:
-                print(f"  No biological assemblies defined in mmCIF")
+                self.logger.debug(f"No biological assemblies defined in mmCIF")
                 return None
             
-            print(f"  Selected assembly ID: {assembly_id}")
+            self.logger.debug(f"Selected assembly ID: {assembly_id}")
             
             # ============================================
             # 2. PARSE THE ORIGINAL STRUCTURE FIRST
@@ -729,7 +732,7 @@ class PDBFeatureExtractor:
             
             # Get available chain IDs from the actual structure (auth_asym_id)
             available_chain_ids = list(original_model.child_dict.keys())
-            print(f"  Original structure has chains (auth_asym_id): {available_chain_ids}")
+            self.logger.debug(f"Original structure has chains (auth_asym_id): {available_chain_ids}")
             
             # ============================================
             # 3. CREATE MAPPING BETWEEN LABEL_ASYM_ID AND AUTH_ASYM_ID
@@ -750,8 +753,8 @@ class PDBFeatureExtractor:
                     if auth_id not in auth_to_label_map:
                         auth_to_label_map[auth_id] = label_id
             
-            print(f"  label_asym_id -> auth_asym_id mapping: {label_to_auth_map}")
-            print(f"  auth_asym_id -> label_asym_id mapping: {auth_to_label_map}")
+            self.logger.debug(f"label_asym_id -> auth_asym_id mapping: {label_to_auth_map}")
+            self.logger.debug(f"auth_asym_id -> label_asym_id mapping: {auth_to_label_map}")
             
             # If no mapping found, assume they're the same
             if not label_to_auth_map:
@@ -773,13 +776,13 @@ class PDBFeatureExtractor:
                         except:
                             oligo_count = 1
             
-            print(f"  Assembly {assembly_id}: {oligo_count}-mer")
+            self.logger.debug(f"Assembly {assembly_id}: {oligo_count}-mer")
             
             # ============================================
             # 5. FIND GENERATORS FOR THIS ASSEMBLY
             # ============================================
             if '_pdbx_struct_assembly_gen.assembly_id' not in mmcif_dict:
-                print(f"  No assembly generators found")
+                self.logger.debug(f"No assembly generators found")
                 return None
             
             gen_assembly_ids = mmcif_dict['_pdbx_struct_assembly_gen.assembly_id']
@@ -817,18 +820,18 @@ class PDBFeatureExtractor:
                     })
             
             if not assembly_generators:
-                print(f"  No generators found for assembly {assembly_id}")
+                self.logger.debug(f"No generators found for assembly {assembly_id}")
                 return None
             
-            print(f"  Found {len(assembly_generators)} generator(s) for assembly {assembly_id}")
+            self.logger.debug(f"Found {len(assembly_generators)} generator(s) for assembly {assembly_id}")
             for gen in assembly_generators:
-                print(f"    Label chains: {gen['label_chains']} -> Auth chains: {gen['auth_chains']}, Operations: {gen['operations']}")
+                self.logger.debug(f"Label chains: {gen['label_chains']} -> Auth chains: {gen['auth_chains']}, Operations: {gen['operations']}")
             
             # ============================================
             # 6. GET TRANSFORMATION OPERATIONS
             # ============================================
             if '_pdbx_struct_oper_list.id' not in mmcif_dict:
-                print(f"  No transformation operations defined")
+                self.logger.debug(f"No transformation operations defined")
                 return None
             
             oper_ids = mmcif_dict['_pdbx_struct_oper_list.id']
@@ -883,23 +886,23 @@ class PDBFeatureExtractor:
                 label_chains = generator['label_chains']
                 operations = generator['operations']
                 
-                print(f"  Processing generator: auth_chains={auth_chains}, operations={operations}")
+                self.logger.debug(f"Processing generator: auth_chains={auth_chains}, operations={operations}")
                 
                 # If no specific chains are listed, use all available chains
                 if not auth_chains:
                     auth_chains = available_chain_ids
-                    print(f"  No chains specified, using all available: {auth_chains}")
+                    self.logger.debug(f"No chains specified, using all available: {auth_chains}")
                 
                 for auth_chain_id, label_chain_id in zip(auth_chains, label_chains):
                     if auth_chain_id not in original_model:
-                        print(f"  Warning: Chain '{auth_chain_id}' (from label '{label_chain_id}') not in structure, skipping")
+                        self.logger.warning(f"Chain '{auth_chain_id}' (from label '{label_chain_id}') not in structure, skipping")
                         continue
                     
                     original_chain = original_model[auth_chain_id]
                     
                     for op_id in operations:
                         if op_id not in transformation_ops:
-                            print(f"  Warning: Operation {op_id} not defined, skipping")
+                            self.logger.warning(f"Operation {op_id} not defined, skipping")
                             continue
                         
                         # Determine new chain ID
@@ -932,307 +935,27 @@ class PDBFeatureExtractor:
                         if new_chain_id not in builder.structure[0]:
                             builder.structure[0].add(transformed_chain)
                             chains_processed += 1
-                            print(f"    Generated chain {new_chain_id} from {auth_chain_id} (label: {label_chain_id}) + op{op_id}")
+                            self.logger.debug(f"Generated chain {new_chain_id} from {auth_chain_id} (label: {label_chain_id}) + op{op_id}")
             
             # Get the final structure
             assembly_structure = builder.get_structure()
             final_chain_count = len(list(assembly_structure[0].get_chains()))
             
             if final_chain_count == 0:
-                print(f"  ⚠️  Generated assembly has 0 chains, trying fallback method...")
+                self.logger.warning(f"Generated assembly has 0 chains, trying fallback method...")
                 
                 # Fallback: Create symmetric copies based on oligo_count
                 return self._generate_assembly_fallback(original_structure, assembly_id, oligo_count)
             
-            print(f"  ✅ Successfully generated assembly {assembly_id} with {final_chain_count} chains")
+            self.logger.info(f"Successfully generated assembly {assembly_id} with {final_chain_count} chains")
             
             return assembly_structure
             
         except Exception as e:
-            print(f"  Error generating biological assembly: {e}")
+            self.logger.error(f"Error generating biological assembly: {e}")
             import traceback
             traceback.print_exc()
             return None
-
-    def generate_biological_assembly_from_monomer2(self, pdb_file: str, assembly_id: str = "1") -> Optional['Structure']:
-        """
-        Generate biological assembly from monomer mmCIF file.
-        
-        Args:
-            pdb_file: Path to mmCIF file (can be .gz)
-            assembly_id: Which biological assembly to generate (default: "1")
-            
-        Returns:
-            BioPython Structure object with generated assembly, or None if failed
-        """
-        if not BIOPYTHON_AVAILABLE:
-            print("⚠️  BioPython not available")
-            return None
-        
-        try:
-            from Bio.PDB import StructureBuilder
-            import numpy as np
-            
-            # Check if file is mmCIF
-            is_gzipped = pdb_file.endswith('.gz')
-            is_cif = pdb_file.endswith('.cif') or pdb_file.endswith('.cif.gz') or pdb_file.endswith('.mmcif') or pdb_file.endswith('.mmcif.gz')
-            
-            if not is_cif:
-                print(f"  Not an mmCIF file: {pdb_file}")
-                return None
-            
-            print(f"  Generating biological assembly {assembly_id} from monomer...")
-            
-            # Parse mmCIF dictionary for assembly information
-            open_func = gzip.open if is_gzipped else open
-            open_mode = 'rt' if is_gzipped else 'r'
-            
-            with open_func(pdb_file, open_mode) as handle:
-                mmcif_dict = MMCIF2Dict(handle)
-            
-            # ============================================
-            # 1. PARSE THE ORIGINAL STRUCTURE FIRST
-            # ============================================
-            parser = MMCIFParser(QUIET=True)
-            with open_func(pdb_file, open_mode) as handle:
-                original_structure = parser.get_structure('original', handle)
-            
-            original_model = original_structure[0]
-            
-            # Get available chain IDs from the actual structure (auth_asym_id)
-            available_chain_ids = list(original_model.child_dict.keys())
-            print(f"  Original structure has chains (auth_asym_id): {available_chain_ids}")
-            
-            # ============================================
-            # 2. CREATE MAPPING BETWEEN LABEL_ASYM_ID AND AUTH_ASYM_ID
-            # ============================================
-            # This is CRITICAL: mmCIF files use label_asym_id in assembly definitions
-            # but auth_asym_id in the actual coordinates
-            label_to_auth_map = {}
-            auth_to_label_map = {}
-            
-            if '_atom_site.label_asym_id' in mmcif_dict and '_atom_site.auth_asym_id' in mmcif_dict:
-                label_asym_ids = mmcif_dict['_atom_site.label_asym_id']
-                auth_asym_ids = mmcif_dict['_atom_site.auth_asym_id']
-                
-                # Create bidirectional mapping
-                for label_id, auth_id in zip(label_asym_ids, auth_asym_ids):
-                    if label_id not in label_to_auth_map:
-                        label_to_auth_map[label_id] = auth_id
-                    if auth_id not in auth_to_label_map:
-                        auth_to_label_map[auth_id] = label_id
-            
-            print(f"  label_asym_id -> auth_asym_id mapping: {label_to_auth_map}")
-            print(f"  auth_asym_id -> label_asym_id mapping: {auth_to_label_map}")
-            
-            # If no mapping found, assume they're the same
-            if not label_to_auth_map:
-                for chain_id in available_chain_ids:
-                    label_to_auth_map[chain_id] = chain_id
-                    auth_to_label_map[chain_id] = chain_id
-            
-            # ============================================
-            # 3. FIND THE REQUESTED ASSEMBLY
-            # ============================================
-            if '_pdbx_struct_assembly.id' not in mmcif_dict:
-                print(f"  No biological assemblies defined in mmCIF")
-                return None
-            
-            # Get assembly information
-            assembly_ids = mmcif_dict['_pdbx_struct_assembly.id']
-            
-            if assembly_id not in assembly_ids:
-                print(f"  Assembly {assembly_id} not found. Available: {assembly_ids}")
-                return None
-            
-            # Get assembly index
-            assembly_idx = assembly_ids.index(assembly_id)
-            
-            # Get oligomeric count
-            oligo_counts = mmcif_dict.get('_pdbx_struct_assembly.oligomeric_count', ['1'] * len(assembly_ids))
-            oligo_count = int(oligo_counts[assembly_idx]) if assembly_idx < len(oligo_counts) else 1
-            
-            print(f"  Assembly {assembly_id}: {oligo_count}-mer")
-            
-            # ============================================
-            # 4. FIND GENERATORS FOR THIS ASSEMBLY
-            # ============================================
-            if '_pdbx_struct_assembly_gen.assembly_id' not in mmcif_dict:
-                print(f"  No assembly generators found")
-                return None
-            
-            gen_assembly_ids = mmcif_dict['_pdbx_struct_assembly_gen.assembly_id']
-            gen_oper_expr = mmcif_dict.get('_pdbx_struct_assembly_gen.oper_expression', ['1'] * len(gen_assembly_ids))
-            gen_asym_ids = mmcif_dict.get('_pdbx_struct_assembly_gen.asym_id_list', [''] * len(gen_assembly_ids))
-            
-            # Find generators for our assembly
-            assembly_generators = []
-            for i, gen_assem_id in enumerate(gen_assembly_ids):
-                if gen_assem_id == assembly_id:
-                    operation_expr = gen_oper_expr[i] if i < len(gen_oper_expr) else '1'
-                    chain_list = gen_asym_ids[i] if i < len(gen_asym_ids) else ''
-                    
-                    # Parse operations (e.g., "1,2" -> ['1', '2'])
-                    operations = []
-                    for op in operation_expr.split(','):
-                        op = op.strip()
-                        if op:
-                            operations.append(op)
-                    
-                    # Parse chains (these are LABEL_ASYM_IDs!)
-                    chains = [c.strip() for c in chain_list.split(',')] if chain_list else []
-                    
-                    # Convert label_asym_id to auth_asym_id if possible
-                    auth_chains = []
-                    for label_chain in chains:
-                        auth_chain = label_to_auth_map.get(label_chain, label_chain)
-                        auth_chains.append(auth_chain)
-                    
-                    assembly_generators.append({
-                        'operations': operations,
-                        'label_chains': chains,  # Original label_asym_id
-                        'auth_chains': auth_chains,  # Converted auth_asym_id
-                        'operation_expression': operation_expr
-                    })
-            
-            if not assembly_generators:
-                print(f"  No generators found for assembly {assembly_id}")
-                return None
-            
-            print(f"  Found {len(assembly_generators)} generator(s) for assembly {assembly_id}")
-            for gen in assembly_generators:
-                print(f"    Label chains: {gen['label_chains']} -> Auth chains: {gen['auth_chains']}, Operations: {gen['operations']}")
-            
-            # ============================================
-            # 5. GET TRANSFORMATION OPERATIONS
-            # ============================================
-            if '_pdbx_struct_oper_list.id' not in mmcif_dict:
-                print(f"  No transformation operations defined")
-                return None
-            
-            oper_ids = mmcif_dict['_pdbx_struct_oper_list.id']
-            transformation_ops = {}
-            
-            for i, op_id in enumerate(oper_ids):
-                # Parse 3x3 rotation matrix
-                matrix = []
-                for row in range(1, 4):
-                    row_vals = []
-                    for col in range(1, 4):
-                        key = f'_pdbx_struct_oper_list.matrix[{row}][{col}]'
-                        if key in mmcif_dict and i < len(mmcif_dict[key]):
-                            try:
-                                row_vals.append(float(mmcif_dict[key][i]))
-                            except:
-                                row_vals.append(0.0)
-                        else:
-                            row_vals.append(0.0)
-                    matrix.append(row_vals)
-                
-                # Parse translation vector
-                vector = []
-                for comp in range(1, 4):
-                    key = f'_pdbx_struct_oper_list.vector[{comp}]'
-                    if key in mmcif_dict and i < len(mmcif_dict[key]):
-                        try:
-                            vector.append(float(mmcif_dict[key][i]))
-                        except:
-                            vector.append(0.0)
-                    else:
-                        vector.append(0.0)
-                
-                transformation_ops[op_id] = {
-                    'matrix': np.array(matrix),
-                    'vector': np.array(vector)
-                }
-            
-            # ============================================
-            # 6. GENERATE THE ASSEMBLY
-            # ============================================
-            builder = StructureBuilder.StructureBuilder()
-            builder.init_structure(f"assembly_{assembly_id}")
-            builder.init_model(0)
-            
-            chain_counter = {}  # Track chain copies
-            chains_processed = 0
-            
-            # Process each generator
-            for generator in assembly_generators:
-                auth_chains = generator['auth_chains']
-                label_chains = generator['label_chains']
-                operations = generator['operations']
-                
-                print(f"  Processing generator: auth_chains={auth_chains}, operations={operations}")
-                
-                # If no specific chains are listed, use all available chains
-                if not auth_chains:
-                    auth_chains = available_chain_ids
-                    print(f"  No chains specified, using all available: {auth_chains}")
-                
-                for auth_chain_id, label_chain_id in zip(auth_chains, label_chains):
-                    if auth_chain_id not in original_model:
-                        print(f"  Warning: Chain '{auth_chain_id}' (from label '{label_chain_id}') not in structure, skipping")
-                        continue
-                    
-                    original_chain = original_model[auth_chain_id]
-                    
-                    for op_id in operations:
-                        if op_id not in transformation_ops:
-                            print(f"  Warning: Operation {op_id} not defined, skipping")
-                            continue
-                        
-                        # Determine new chain ID
-                        if op_id == '1':  # Identity operation
-                            # Keep original chain ID for identity operation
-                            new_chain_id = auth_chain_id
-                        else:
-                            # Count how many times we've used this chain with this operation
-                            key = f"{auth_chain_id}_{op_id}"
-                            if key not in chain_counter:
-                                chain_counter[key] = 0
-                            chain_counter[key] += 1
-                            
-                            # Create unique chain ID
-                            if chain_counter[key] == 1:
-                                # For first copy, use original chain ID with operation suffix
-                                new_chain_id = f"{auth_chain_id}_{op_id}"
-                            else:
-                                # For additional copies, add number
-                                new_chain_id = f"{auth_chain_id}_{op_id}_{chain_counter[key]}"
-                        
-                        # Apply transformation
-                        transformed_chain = self._apply_transformation_to_chain(
-                            original_chain, 
-                            transformation_ops[op_id],
-                            new_chain_id
-                        )
-                        
-                        # Add chain to structure
-                        if new_chain_id not in builder.structure[0]:
-                            builder.structure[0].add(transformed_chain)
-                            chains_processed += 1
-                            print(f"    Generated chain {new_chain_id} from {auth_chain_id} (label: {label_chain_id}) + op{op_id}")
-            
-            # Get the final structure
-            assembly_structure = builder.get_structure()
-            final_chain_count = len(list(assembly_structure[0].get_chains()))
-            
-            if final_chain_count == 0:
-                print(f"  ⚠️  Generated assembly has 0 chains, trying fallback method...")
-                
-                # Fallback: Create symmetric copies based on oligo_count
-                return self._generate_assembly_fallback(original_structure, assembly_id, oligo_count)
-            
-            print(f"  ✅ Successfully generated assembly with {final_chain_count} chains")
-            
-            return assembly_structure
-            
-        except Exception as e:
-            print(f"  Error generating biological assembly: {e}")
-            import traceback
-            traceback.print_exc()
-            return None
-
 
     def _generate_assembly_fallback(self, original_structure, assembly_id: str, oligo_count: int):
         """
@@ -1243,7 +966,7 @@ class PDBFeatureExtractor:
             from Bio.PDB import StructureBuilder
             import numpy as np
             
-            print(f"  Using fallback method to generate {oligo_count}-mer assembly")
+            self.logger.info(f"Using fallback method to generate {oligo_count}-mer assembly")
             
             builder = StructureBuilder.StructureBuilder()
             builder.init_structure(f"assembly_{assembly_id}_fallback")
@@ -1253,10 +976,10 @@ class PDBFeatureExtractor:
             original_chains = list(original_model.get_chains())
             
             if not original_chains:
-                print(f"  ⚠️  No chains in original structure")
+                self.logger.warning(f"No chains in original structure")
                 return None
             
-            print(f"  Original chains: {[c.id for c in original_chains]}")
+            self.logger.debug(f"Original chains: {[c.id for c in original_chains]}")
             
             # For simplicity, create symmetric copies around origin
             chains_added = 0
@@ -1328,16 +1051,16 @@ class PDBFeatureExtractor:
                     # Add chain to structure
                     builder.structure[0].add(transformed_chain)
                     chains_added += 1
-                    print(f"    Generated chain {new_chain_id} (copy {i} of {chain_id})")
+                    self.logger.debug(f"Generated chain {new_chain_id} (copy {i} of {chain_id})")
             
             assembly_structure = builder.get_structure()
             final_chain_count = len(list(assembly_structure[0].get_chains()))
             
-            print(f"  ✅ Fallback generated assembly with {final_chain_count} chains")
+            self.logger.info(f"Fallback generated assembly with {final_chain_count} chains")
             return assembly_structure
             
         except Exception as e:
-            print(f"  Error in fallback assembly generation: {e}")
+            self.logger.error(f"Error in fallback assembly generation: {e}")
             import traceback
             traceback.print_exc()
             return None
@@ -1387,7 +1110,7 @@ class PDBFeatureExtractor:
             return new_chain
             
         except Exception as e:
-            print(f"  Error applying transformation: {e}")
+            self.logger.error(f"Error applying transformation: {e}")
             # Return a simple copy if transformation fails
             return original_chain.copy()
 
@@ -1439,7 +1162,7 @@ class PDBFeatureExtractor:
                 try:
                     chains[chain_id] = model[chain_id]
                 except KeyError:
-                    print(f"  Chain {chain_id} not found in structure")
+                    self.logger.debug(f"Chain {chain_id} not found in structure")
 
             if len(chains) < 2:
                 features['error'] = f"Need at least 2 chains, found {len(chains)}"
@@ -1532,7 +1255,7 @@ class PDBFeatureExtractor:
                         }
 
                     except Exception as e:
-                        print(f"  Error analyzing chain pair {pair_key}: {e}")
+                        self.logger.error(f"Error analyzing chain pair {pair_key}: {e}")
                         continue
 
             if not interface_features:
@@ -1616,6 +1339,7 @@ class CroissantDatasetLoader:
         self.cluster_ids = None
         self.pdb_sources = {}  # Store PDB source information
         self.temp_dir = None  # Initialize temp_dir
+        self.logger = logging.getLogger(__name__)
 
     def _download_from_github(self, repo_url: str):
         """
@@ -1627,11 +1351,11 @@ class CroissantDatasetLoader:
         Returns:
             Path to local directory containing downloaded files
         """
-        print(f"Downloading from GitHub: {repo_url}")
+        self.logger.info(f"Downloading from GitHub: {repo_url}")
 
         # Create temporary directory
         self.temp_dir = tempfile.mkdtemp(prefix="croissant_ml_")
-        print(f"Created temp directory: {self.temp_dir}")
+        self.logger.debug(f"Created temp directory: {self.temp_dir}")
 
         try:
             # Parse GitHub URL
@@ -1648,7 +1372,7 @@ class CroissantDatasetLoader:
             # Try to download the dataset_with_interfaces.json file directly
             raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/bioschemas_output/dataset_with_interfaces.json"
 
-            print(f"Attempting to download: {raw_url}")
+            self.logger.debug(f"Attempting to download: {raw_url}")
             response = requests.get(raw_url, timeout=30)
 
             if response.status_code == 200:
@@ -1656,11 +1380,11 @@ class CroissantDatasetLoader:
                 local_path = Path(self.temp_dir) / "dataset_with_interfaces.json"
                 with open(local_path, 'w', encoding='utf-8') as f:
                     f.write(response.text)
-                print(f"✅ Successfully downloaded dataset file")
+                self.logger.info(f"Successfully downloaded dataset file")
                 return str(local_path)
             else:
                 # Try alternative paths
-                print(f"Primary URL failed (HTTP {response.status_code}), trying alternatives...")
+                self.logger.debug(f"Primary URL failed (HTTP {response.status_code}), trying alternatives...")
 
                 # Try with /master instead of /main
                 raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/master/bioschemas_output/dataset_with_interfaces.json"
@@ -1670,15 +1394,15 @@ class CroissantDatasetLoader:
                     local_path = Path(self.temp_dir) / "dataset_with_interfaces.json"
                     with open(local_path, 'w', encoding='utf-8') as f:
                         f.write(response.text)
-                    print(f"✅ Successfully downloaded dataset file (master branch)")
+                    self.logger.info(f"Successfully downloaded dataset file (master branch)")
                     return str(local_path)
 
                 # Last attempt: try the original repo URL structure
-                print("Trying original repository structure...")
+                self.logger.debug("Trying original repository structure...")
                 return self._download_full_repo(owner, repo)
 
         except Exception as e:
-            print(f"❌ Error downloading from GitHub: {e}")
+            self.logger.error(f"Error downloading from GitHub: {e}")
             if self.temp_dir and Path(self.temp_dir).exists():
                 try:
                     shutil.rmtree(self.temp_dir)
@@ -1727,23 +1451,23 @@ class CroissantDatasetLoader:
                                     local_path = Path(self.temp_dir) / "dataset_with_interfaces.json"
                                     with open(local_path, 'w', encoding='utf-8') as f:
                                         f.write(file_response.text)
-                                    print(f"✅ Successfully downloaded dataset file via API")
+                                    self.logger.info(f"Successfully downloaded dataset file via API")
                                     return str(local_path)
 
             raise FileNotFoundError("Could not find dataset_with_interfaces.json in repository")
 
         except Exception as e:
-            print(f"❌ Error in fallback download: {e}")
+            self.logger.error(f"Error in fallback download: {e}")
             raise
 
     def load_dataset(self):
         """Load the Croissant dataset from local file or GitHub."""
         try:
             if self.is_github:
-                print(f"Loading from GitHub repository: {self.dataset_source}")
+                self.logger.info(f"Loading from GitHub repository: {self.dataset_source}")
                 dataset_path = self._download_from_github(self.dataset_source)
             else:
-                print(f"Loading from local directory: {self.dataset_source}")
+                self.logger.info(f"Loading from local directory: {self.dataset_source}")
                 dataset_path = Path(self.dataset_source) / "dataset_with_interfaces.json"
 
                 if not dataset_path.exists():
@@ -1757,33 +1481,33 @@ class CroissantDatasetLoader:
                     for alt_path in alt_paths:
                         if alt_path.exists():
                             dataset_path = alt_path
-                            print(f"Found dataset at alternative location: {dataset_path}")
+                            self.logger.info(f"Found dataset at alternative location: {dataset_path}")
                             break
 
                     if not dataset_path.exists():
                         raise FileNotFoundError(f"Could not find dataset file in {self.dataset_source}")
 
-            print(f"Loading dataset from: {dataset_path}")
+            self.logger.debug(f"Loading dataset from: {dataset_path}")
 
             with open(dataset_path, 'r', encoding='utf-8') as f:
                 self.dataset = json.load(f)
 
-            print(f"✅ Dataset loaded successfully!")
-            print(f"   Dataset name: {self.dataset.get('name', 'Unknown')}")
-            print(f"   Description: {self.dataset.get('description', 'No description')[:100]}...")
+            self.logger.info(f"Dataset loaded successfully!")
+            self.logger.debug(f"Dataset name: {self.dataset.get('name', 'Unknown')}")
+            self.logger.debug(f"Description: {self.dataset.get('description', 'No description')[:100]}...")
 
             # Extract interface items
             if 'hasPart' in self.dataset:
                 self.interfaces = self.dataset['hasPart']
-                print(f"   Number of interfaces: {len(self.interfaces)}")
+                self.logger.info(f"Number of interfaces: {len(self.interfaces)}")
             else:
-                print("⚠️  Warning: No 'hasPart' field found in dataset")
+                self.logger.warning("No 'hasPart' field found in dataset")
                 self.interfaces = []
 
             return True
 
         except Exception as e:
-            print(f"❌ Error loading dataset: {e}")
+            self.logger.error(f"Error loading dataset: {e}")
             return False
 
     def extract_pdb_sources_from_representations(self, pdb_local_dir: str = None, use_pdb_format: bool = False):
@@ -1794,15 +1518,15 @@ class CroissantDatasetLoader:
             pdb_local_dir: Local directory for structure files
             use_pdb_format: True to extract 'PDB Structure', False for 'mmCIF Structure'
         """
-        print("Extracting structure source information from dataset representations...")
+        self.logger.info("Extracting structure source information from dataset representations...")
         
         if not self.dataset or 'hasPart' not in self.dataset:
-            print("  No 'hasPart' found in dataset")
+            self.logger.warning("No 'hasPart' found in dataset")
             return
         
         has_part_items = self.dataset['hasPart']
         if not isinstance(has_part_items, list):
-            print("  'hasPart' is not a list")
+            self.logger.warning("'hasPart' is not a list")
             return
         
         # Look for DataCatalog items in hasPart
@@ -1815,14 +1539,14 @@ class CroissantDatasetLoader:
                     data_catalog_items.append(item)
         
         if not data_catalog_items:
-            print("  No DataCatalog items found in hasPart")
+            self.logger.warning("No DataCatalog items found in hasPart")
             return
         
-        print(f"  Found {len(data_catalog_items)} DataCatalog item(s)")
+        self.logger.debug(f"Found {len(data_catalog_items)} DataCatalog item(s)")
         
         # Determine which representation type to extract based on use_pdb_format
         target_representation = 'PDB Structure' if use_pdb_format else 'mmCIF Structure'
-        print(f"  Looking for '{target_representation}' representations")
+        self.logger.debug(f"Looking for '{target_representation}' representations")
         
         # Track downloads
         downloaded_count = 0
@@ -1830,29 +1554,29 @@ class CroissantDatasetLoader:
         
         # Process each DataCatalog item
         for catalog_idx, catalog_item in enumerate(data_catalog_items):
-            #print(f"  Processing DataCatalog item {catalog_idx + 1}...")
+            #self.logger.debug(f"Processing DataCatalog item {catalog_idx + 1}...")
             
             # Check for mainEntity within DataCatalog
             if 'mainEntity' not in catalog_item:
-                print(f"    No mainEntity found in DataCatalog item {catalog_idx + 1}")
+                self.logger.debug(f"No mainEntity found in DataCatalog item {catalog_idx + 1}")
                 continue
             
             main_entity = catalog_item['mainEntity']
             if not isinstance(main_entity, dict):
-                print(f"    mainEntity is not a dictionary in DataCatalog item {catalog_idx + 1}")
+                self.logger.debug(f"mainEntity is not a dictionary in DataCatalog item {catalog_idx + 1}")
                 continue
             
             # Check for hasRepresentation within mainEntity
             if 'hasRepresentation' not in main_entity:
-                print(f"    No hasRepresentation found in mainEntity of DataCatalog item {catalog_idx + 1}")
+                self.logger.debug(f"No hasRepresentation found in mainEntity of DataCatalog item {catalog_idx + 1}")
                 continue
             
             representations = main_entity['hasRepresentation']
             if not isinstance(representations, list):
-                print(f"    hasRepresentation is not a list in DataCatalog item {catalog_idx + 1}")
+                self.logger.debug(f"hasRepresentation is not a list in DataCatalog item {catalog_idx + 1}")
                 continue
             
-            #print(f"    Found {len(representations)} representation(s)")
+            #self.logger.debug(f"Found {len(representations)} representation(s)")
             
             # Process each representation
             for rep_idx, representation in enumerate(representations):
@@ -1860,17 +1584,17 @@ class CroissantDatasetLoader:
                     continue
                 
                 rep_name = representation.get('name', '').strip()
-                #print(f"    Representation {rep_idx + 1}: {rep_name}")
+                #self.logger.debug(f"Representation {rep_idx + 1}: {rep_name}")
                 
                 # Only process the target representation type based on use_pdb_format
                 if rep_name != target_representation:
-                    #print(f"      Skipping - not '{target_representation}'")
+                    #self.logger.debug(f"Skipping - not '{target_representation}'")
                     continue
                 
                 # Get the value field which contains the URL/path
                 value = representation.get('value')
                 if not value:
-                    print(f"      No 'value' field found for {rep_name}")
+                    self.logger.debug(f"No 'value' field found for {rep_name}")
                     continue
                 
                 # Extract Interface ID from value field
@@ -1882,17 +1606,17 @@ class CroissantDatasetLoader:
                     # mmcif file name exception.
                     file_id = filename.split('.')[0]
                     interface_id = catalog_item.get('identifier','').lower()
-                    print(f"      Extracted Interface ID: {interface_id}")
+                    self.logger.debug(f"Extracted Interface ID: {interface_id}")
                 
                 if not interface_id:
-                    print(f"      Could not extract Interface ID from value: {value}")
+                    self.logger.debug(f"Could not extract Interface ID from value: {value}")
                     continue
                 
                 # Use the value as the URL
                 content_url = value if isinstance(value, str) and value.startswith('http') else None
                 
                 if not content_url:
-                    print(f"      Value is not a valid URL: {value}")
+                    self.logger.debug(f"Value is not a valid URL: {value}")
                     continue
                 
                 # Store the representation with interface ID
@@ -1909,7 +1633,7 @@ class CroissantDatasetLoader:
                     'local_path': None
                 }
                 
-                print(f"      Added structure source: {interface_id} ({'PDB' if use_pdb_format else 'mmCIF'})")
+                self.logger.debug(f"Added structure source: {interface_id} ({'PDB' if use_pdb_format else 'mmCIF'})")
                 
                 # Check if file already exists locally BEFORE downloading
                 if pdb_local_dir:
@@ -1944,13 +1668,13 @@ class CroissantDatasetLoader:
                         
                     
                     if file_found:
-                        print(f"      File already exists locally: {Path(local_path).name}")
+                        self.logger.debug(f"File already exists locally: {Path(local_path).name}")
                         self.pdb_sources[source_id]['local_path'] = local_path
                         self.pdb_sources[source_id]['downloaded'] = True
                         skipped_count += 1
                     else:
                         # File doesn't exist, try to download from the repository URL
-                        print(f"      File not found locally, downloading from repository URL...")
+                        self.logger.debug(f"File not found locally, downloading from repository URL...")
                         # Download using file_id
                         self._download_interface_file(file_id, content_url, pdb_local_dir, use_pdb_format)
                         
@@ -1962,25 +1686,25 @@ class CroissantDatasetLoader:
                             self.pdb_sources[source_id]['downloaded'] = True
                             downloaded_count += 1
                         else:
-                            print(f"      ⚠️  Download failed for {interface_id}")
+                            self.logger.warning(f"Download failed for {interface_id}")
         
-        print(f"  Total structure representations found: {len(self.pdb_sources)}")
-        print(f"  Files already available locally: {skipped_count}")
-        print(f"  Files downloaded from repository: {downloaded_count}")
-        print(f"  Files missing: {len(self.pdb_sources) - skipped_count - downloaded_count}")
+        self.logger.info(f"Total structure representations found: {len(self.pdb_sources)}")
+        self.logger.info(f"Files already available locally: {skipped_count}")
+        self.logger.info(f"Files downloaded from repository: {downloaded_count}")
+        self.logger.info(f"Files missing: {len(self.pdb_sources) - skipped_count - downloaded_count}")
         
         # Print summary
         if self.pdb_sources:
-            print(f"\n  Interface files status:")
+            self.logger.debug(f"Interface files status:")
             for source_id, source in list(self.pdb_sources.items())[:10]:
                 interface_id = source.get('interface_id', 'unknown')
                 format_type = source.get('format', 'unknown')
                 has_file = source.get('downloaded', False)
                 status = "✓ Available" if has_file else "✗ Missing"
-                print(f"    - {interface_id} (Format: {format_type}): {status}")
+                self.logger.debug(f"- {interface_id} (Format: {format_type}): {status}")
             
             if len(self.pdb_sources) > 10:
-                print(f"    ... and {len(self.pdb_sources) - 10} more interfaces")
+                self.logger.debug(f"... and {len(self.pdb_sources) - 10} more interfaces")
 
     def _download_interface_file(self, interface_id: str, content_url: str,
                                pdb_local_dir: str, use_pdb_format: bool = False):
@@ -2024,133 +1748,12 @@ class CroissantDatasetLoader:
                     with gzip.open(compressed_file, 'wb') as f:
                         f.write(response.content)
                         
+                self.logger.debug(f"Downloaded {interface_id}")
             else:
-                print(f"      HTTP Error {response.status_code} for {interface_id}")
+                self.logger.warning(f"HTTP Error {response.status_code} for {interface_id}")
                 
         except Exception as e:
-            print(f"      Error downloading {interface_id}: {e}")
-
-    def _download_interface_file3(self, interface_id: str, content_url: str,
-                               pdb_local_dir: str, use_pdb_format: bool = False):
-        """
-        Download interface file from the provided URL.
-        Handles case sensitivity by saving with lowercase filename.
-        
-        Args:
-            interface_id: Interface ID extracted from value field
-            content_url: URL to download from (from representation value)
-            pdb_local_dir: Local directory for files
-            use_pdb_format: True for PDB format, False for mmCIF format
-        """
-        # Determine file extension based on format
-        file_ext = '.pdb' if use_pdb_format else '.cif'
-        
-        # Create local directory if it doesn't exist
-        Path(pdb_local_dir).mkdir(parents=True, exist_ok=True)
-        
-        # Handle case sensitivity: use lowercase filename
-        lowercase_id = interface_id.lower()
-        
-        # Check for existing files (both compressed and uncompressed)
-        uncompressed_file = Path(pdb_local_dir) / f"{lowercase_id}{file_ext}"
-        compressed_file = Path(pdb_local_dir) / f"{lowercase_id}{file_ext}.gz"
-        
-        # Also check with original case
-        uncompressed_orig = Path(pdb_local_dir) / f"{interface_id}{file_ext}"
-        compressed_orig = Path(pdb_local_dir) / f"{interface_id}{file_ext}.gz"
-        
-        # Check if any version exists
-        existing_files = []
-        for file_path in [compressed_file, uncompressed_file,
-                         compressed_orig, uncompressed_orig]:
-            if file_path.exists():
-                existing_files.append(file_path)
-        
-        if existing_files:
-            print(f"      File already exists: {existing_files[0].name}")
-            
-            # BioPython can handle gzipped files directly, so prefer compressed
-            for file_path in existing_files:
-                if file_path.endswith('.gz'):
-                    print(f"      Using gzipped file (BioPython compatible)")
-                    return
-            
-            # If no compressed files but we have uncompressed, compress it
-            for file_path in existing_files:
-                if not file_path.endswith('.gz'):
-                    # Create compressed version
-                    compressed_version = Path(str(file_path) + '.gz')
-                    self._compress_file(file_path, compressed_version)
-                    print(f"      Created compressed version: {compressed_version.name}")
-                    return
-            
-            return
-        
-        # File doesn't exist, download from the provided URL
-        print(f"      Downloading {interface_id} from repository URL...")
-        print(f"      Source URL: {content_url}")
-        print(f"      Will save as: {lowercase_id}{file_ext}.gz (lowercase to avoid case issues)")
-        
-        try:
-            import time
-            
-            # Set headers to mimic browser
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            }
-            
-            # Try to download with retries
-            max_retries = 3
-            for attempt in range(max_retries):
-                try:
-                    response = requests.get(content_url, headers=headers, timeout=60)
-                    
-                    if response.status_code == 200:
-                      
-                        # Save to local directory (uncompressed first)
-                        with open(uncompressed_file, 'wb') as f:
-                            f.write(response.content)
-                        
-                        # Check file size
-                        file_size = os.path.getsize(uncompressed_file)
-                        if file_size > 1000:  # Reasonable minimum
-                            print(f"      ✅ Downloaded {file_size:,} bytes")
-                            
-                            # Compress the file (BioPython can handle gzipped files)
-                            self._compress_file(uncompressed_file, compressed_file)
-                            print(f"      ✅ Compressed to: {compressed_file.name}")
-                            
-                            # Remove uncompressed version
-                            uncompressed_file.unlink()
-                            
-                            return
-                        else:
-                            print(f"      ⚠️  File too small ({file_size} bytes), might be invalid")
-                            uncompressed_file.unlink()
-                            
-                    elif response.status_code == 404:
-                        print(f"      ❌ File not found (404) at URL")
-                        break
-                    else:
-                        print(f"      ❌ HTTP Error {response.status_code}")
-                        
-                except requests.exceptions.Timeout:
-                    print(f"      ⏱️  Timeout on attempt {attempt + 1}/{max_retries}")
-                except requests.exceptions.ConnectionError:
-                    print(f"      🔌 Connection error on attempt {attempt + 1}/{max_retries}")
-                except Exception as e:
-                    print(f"      ❌ Error on attempt {attempt + 1}/{max_retries}: {e}")
-                
-                # Wait before retry
-                if attempt < max_retries - 1:
-                    time.sleep(2 ** attempt)  # Exponential backoff
-            
-            print(f"      ❌ Failed to download after {max_retries} attempts")
-            
-        except ImportError:
-            print(f"      ❌ 'requests' library not installed. Cannot download file.")
-        except Exception as e:
-            print(f"      ❌ Unexpected error: {e}")
+            self.logger.error(f"Error downloading {interface_id}: {e}")
 
     def _compress_file(self, input_path: Path, output_path: Path):
         """
@@ -2164,9 +1767,9 @@ class CroissantDatasetLoader:
             with open(input_path, 'rb') as f_in:
                 with gzip.open(output_path, 'wb') as f_out:
                     shutil.copyfileobj(f_in, f_out)
-            print(f"      Compressed {input_path.name} to {output_path.name}")
+            self.logger.debug(f"Compressed {input_path.name} to {output_path.name}")
         except Exception as e:
-            print(f"      Error compressing file: {e}")
+            self.logger.error(f"Error compressing file: {e}")
 
     def _is_pdb_representation(self, rep: Dict) -> bool:
         """
@@ -2358,9 +1961,9 @@ class CroissantDatasetLoader:
         if self.temp_dir and os.path.exists(self.temp_dir):
             try:
                 shutil.rmtree(self.temp_dir)
-                print(f"Cleaned up temp directory: {self.temp_dir}")
+                self.logger.debug(f"Cleaned up temp directory: {self.temp_dir}")
             except Exception as e:
-                print(f"Warning: Could not clean up temp directory: {e}")
+                self.logger.warning(f"Could not clean up temp directory: {e}")
 
     def _is_numeric(self, value):
         """Check if a value is numeric (int or float) with robust handling."""
@@ -2413,17 +2016,17 @@ class CroissantDatasetLoader:
             Tuple of (features_df, labels_series, cluster_ids_series) or (None, None, None) if extraction fails
         """
         if not self.interfaces:
-            print("❌ No interfaces available. Load dataset first.")
+            self.logger.error("No interfaces available. Load dataset first.")
             return None, None, None
         
-        print("\n=== EXTRACTING FEATURES AND LABELS ===")
+        self.logger.info("\n=== EXTRACTING FEATURES AND LABELS ===")
         
         features_list = []
         labels_list = []
         cluster_ids_list = []
         
         # First pass: collect all features and sample values
-        print("   Scanning interfaces to identify feature types...")
+        self.logger.debug("Scanning interfaces to identify feature types...")
         
         for i, interface in enumerate(self.interfaces[:100]):  # Sample first 100 interfaces
             try:
@@ -2447,7 +2050,7 @@ class CroissantDatasetLoader:
                 continue
         
         # Analyze feature types based on sample values
-        print("   Analyzing feature types...")
+        self.logger.debug("Analyzing feature types...")
         for feature_name, samples in self.all_features_info.items():
             if not samples:
                 continue
@@ -2491,7 +2094,7 @@ class CroissantDatasetLoader:
             }
         
         # Second pass: extract all data
-        print("   Extracting data from all interfaces...")
+        self.logger.debug("Extracting data from all interfaces...")
         
         for i, interface in enumerate(self.interfaces):
             try:
@@ -2560,13 +2163,13 @@ class CroissantDatasetLoader:
                 cluster_ids_list.append(cluster_id)
                 
                 if len(features_list) % 100 == 0 and len(features_list) > 0:
-                    print(f"   Processed {len(features_list)} interfaces...")
+                    self.logger.debug(f"Processed {len(features_list)} interfaces...")
                     
             except Exception as e:
                 continue
         
         if not features_list:
-            print("❌ No valid features extracted")
+            self.logger.error("No valid features extracted")
             return None, None, None
         
         # Create DataFrame
@@ -2574,7 +2177,7 @@ class CroissantDatasetLoader:
         self.cluster_ids = pd.Series(cluster_ids_list)
         
         # Determine numerical and categorical features from actual data
-        print("   Determining feature types from extracted data...")
+        self.logger.debug("Determining feature types from extracted data...")
         self.numerical_features = []
         self.categorical_features = []
         
@@ -2627,37 +2230,37 @@ class CroissantDatasetLoader:
         else:
             labels_numeric = labels_series.astype(int)
         
-        print(f"✅ Successfully extracted {len(self.dataframe)} samples")
-        print(f"   Total features found: {len(self.dataframe.columns) - 1} (excluding interface_id)")
-        print(f"   Numerical features ({len(self.numerical_features)}): {sorted(self.numerical_features)}")
-        print(f"   Categorical features ({len(self.categorical_features)}): {sorted(self.categorical_features)}")
+        self.logger.info(f"Successfully extracted {len(self.dataframe)} samples")
+        self.logger.debug(f"Total features found: {len(self.dataframe.columns) - 1} (excluding interface_id)")
+        self.logger.debug(f"Numerical features ({len(self.numerical_features)}): {sorted(self.numerical_features)}")
+        self.logger.debug(f"Categorical features ({len(self.categorical_features)}): {sorted(self.categorical_features)}")
         
         # Show ClusterID statistics
         cluster_id_counts = self.cluster_ids.value_counts()
-        print(f"\n   ClusterID Statistics:")
-        print(f"      Unique ClusterIDs: {len(cluster_id_counts)}")
-        print(f"      Interfaces without ClusterID: {(self.cluster_ids.isna() | (self.cluster_ids == '')).sum()}")
-        print(f"      Cluster size distribution:")
+        self.logger.info(f"ClusterID Statistics:")
+        self.logger.info(f"  Unique ClusterIDs: {len(cluster_id_counts)}")
+        self.logger.info(f"  Interfaces without ClusterID: {(self.cluster_ids.isna() | (self.cluster_ids == '')).sum()}")
+        self.logger.debug(f"  Cluster size distribution:")
         size_counts = cluster_id_counts.value_counts().sort_index()
         for size, count in size_counts.head(10).items():
-            print(f"        Size {size}: {count} clusters")
+            self.logger.debug(f"    Size {size}: {count} clusters")
         if len(size_counts) > 10:
-            print(f"        ... and {len(size_counts) - 10} more sizes")
+            self.logger.debug(f"    ... and {len(size_counts) - 10} more sizes")
         
         # Show class distribution
         if len(labels_numeric) > 0:
-            print(f"\n   Class distribution:")
-            print(f"      Physiological (1): {sum(labels_numeric == 1)} samples")
-            print(f"      Non-physiological (0): {sum(labels_numeric == 0)} samples")
+            self.logger.info(f"Class distribution:")
+            self.logger.info(f"  Physiological (1): {sum(labels_numeric == 1)} samples")
+            self.logger.info(f"  Non-physiological (0): {sum(labels_numeric == 0)} samples")
             if len(labels_numeric) > 0:
-                print(f"      Balance ratio: {sum(labels_numeric == 1)/len(labels_numeric):.2%} positive")
+                self.logger.info(f"  Balance ratio: {sum(labels_numeric == 1)/len(labels_numeric):.2%} positive")
         
         return self.dataframe, labels_numeric, self.cluster_ids
 
-    def extract_pdb_contacts(self, pdb_feature_extractor=None, pdb_format=False):
+    def extract_pdb_contacts(self, pdb_feature_extractor=None, pdb_format=False, radius=10.0):
         """
         Extract structural features for interfaces in the dataset.
-        Focus on interface residues within 5Å.
+        Focus on interface residues within 10Å.
         
         Args:
             pdb_feature_extractor: Instance of PDBFeatureExtractor
@@ -2665,17 +2268,17 @@ class CroissantDatasetLoader:
         Returns:
             DataFrame with structural features
         """
-        print("\n=== EXTRACTING STRUCTURAL FEATURES ===")
+        self.logger.info("\n=== EXTRACTING STRUCTURAL FEATURES ===")
         
         if not BIOPYTHON_AVAILABLE:
-            print("⚠️  BioPython not available. Skipping structural feature extraction.")
-            print("   Install with: pip install biopython")
+            self.logger.warning("BioPython not available. Skipping structural feature extraction.")
+            self.logger.info("Install with: pip install biopython")
             return None
         
         # Check if we have structure sources
         if not self.pdb_sources:
-            print("⚠️  No structure sources found. Run extract_pdb_sources_from_representations() first.")
-            print("   Or check if dataset contains PDB/mmCIF structure representations.")
+            self.logger.warning("No structure sources found. Run extract_pdb_sources_from_representations() first.")
+            self.logger.info("Or check if dataset contains PDB/mmCIF structure representations.")
             return None
         
         if pdb_feature_extractor is None:
@@ -2684,8 +2287,8 @@ class CroissantDatasetLoader:
         
         pdb_features_list = []
         
-        print(f"  Processing {len(self.interfaces)} interfaces for structural features...")
-        print(f"  Available structure sources: {len(self.pdb_sources)}")
+        self.logger.info(f"Processing {len(self.interfaces)} interfaces for structural features...")
+        self.logger.debug(f"Available structure sources: {len(self.pdb_sources)}")
         
         # Track statistics
         processed_count = 0
@@ -2699,8 +2302,8 @@ class CroissantDatasetLoader:
         
         for i, interface in enumerate(self.interfaces):
             if i % 100 == 0 and i > 0:
-                print(f"    Processed {i} interfaces...")
-                print(f"      Status: {successful} successful, {failed} failed")
+                self.logger.debug(f"Processed {i} interfaces...")
+                self.logger.debug(f"Status: {successful} successful, {failed} failed")
             
             interface_id = interface.get('identifier', f'interface_{i}')
             processed_count += 1
@@ -2744,8 +2347,8 @@ class CroissantDatasetLoader:
             chain_ids = self.get_chain_ids_for_interface(interface, pdb_format)
             
             # Extract interface features (BioPython can handle gzipped files directly)
-            print(f"    Processing {interface_id}: chains {chain_ids}, file: {Path(pdb_file).name}")
-            interface_features = pdb_feature_extractor.extract_interface_features(interface_id, pdb_file, chain_ids)
+            self.logger.debug(f"Processing {interface_id}: chains {chain_ids}, file: {Path(pdb_file).name}")
+            interface_features = pdb_feature_extractor.extract_interface_features(interface_id, pdb_file, chain_ids, radius)
             
             # Clean up temporary downloaded file (only if it's temporary)
             if pdb_file and os.path.exists(pdb_file) and 'tmp' in pdb_file:
@@ -2772,7 +2375,7 @@ class CroissantDatasetLoader:
                 successful += 1
             else:
                 error_msg = interface_features.get('error', 'Unknown error')
-                print(f"    Failed to extract features for interface {interface_id}: {error_msg}")
+                self.logger.warning(f"Failed to extract features for interface {interface_id}: {error_msg}")
                 pdb_features_list.append({
                     'interface_id': interface_id,
                     'extraction_success': False,
@@ -2783,29 +2386,29 @@ class CroissantDatasetLoader:
                 failed += 1
         
         # Print final statistics
-        print(f"\n  Structural Feature Extraction Summary:")
-        print(f"    Total interfaces processed: {processed_count}")
-        print(f"    Successful extractions: {successful}")
-        print(f"    Failed extractions: {failed}")
-        print(f"    Skipped (no structure representation): {skipped_no_rep}")
+        self.logger.info(f"Structural Feature Extraction Summary:")
+        self.logger.info(f"  Total interfaces processed: {processed_count}")
+        self.logger.info(f"  Successful extractions: {successful}")
+        self.logger.info(f"  Failed extractions: {failed}")
+        self.logger.info(f"  Skipped (no structure representation): {skipped_no_rep}")
         
         if successful > 0:
             success_rate = (successful / processed_count) * 100
-            print(f"    Success rate: {success_rate:.1f}%")
-            print(f"    Unique structure files used: {len(structure_cache)}")
+            self.logger.info(f"  Success rate: {success_rate:.1f}%")
+            self.logger.debug(f"  Unique structure files used: {len(structure_cache)}")
         
         if pdb_features_list:
             pdb_features_df = pd.DataFrame(pdb_features_list)
             successful_extractions = pdb_features_df[pdb_features_df['extraction_success']]
             
             if len(successful_extractions) > 0:
-                print(f"\n✅ Successfully extracted structural features for {len(successful_extractions)} interfaces")
+                self.logger.info(f"Successfully extracted structural features for {len(successful_extractions)} interfaces")
                 
                 # Show feature statistics
                 pdb_feature_cols = [col for col in successful_extractions.columns
                                   if col.startswith('pdb_') and not col.endswith('_success')]
                 
-                print(f"  Extracted {len(pdb_feature_cols)} structural feature types:")
+                self.logger.debug(f"Extracted {len(pdb_feature_cols)} structural feature types:")
                 
                 # Group features by type for better reporting
                 residue_features = [c for c in pdb_feature_cols if 'residue' in c.lower()]
@@ -2813,25 +2416,25 @@ class CroissantDatasetLoader:
                 other_features = [c for c in pdb_feature_cols if c not in residue_features + fraction_features]
                 
                 if residue_features:
-                    print(f"    Residue counts: {len(residue_features)} features")
+                    self.logger.debug(f"  Residue counts: {len(residue_features)} features")
                 if fraction_features:
-                    print(f"    Interface fractions: {len(fraction_features)} features")
+                    self.logger.debug(f"  Interface fractions: {len(fraction_features)} features")
                 if other_features:
-                    print(f"    Other features: {len(other_features)}")
+                    self.logger.debug(f"  Other features: {len(other_features)}")
                 
                 # Show sample values for first successful interface
                 first_success = successful_extractions.iloc[0]
-                print(f"\n  Sample features for interface {first_success['interface_id']}:")
+                self.logger.debug(f"Sample features for interface {first_success['interface_id']}:")
                 for col in pdb_feature_cols[:5]:  # Show first 5 features
                     if col in first_success and not pd.isna(first_success[col]):
-                        print(f"    {col}: {first_success[col]}")
+                        self.logger.debug(f"  {col}: {first_success[col]}")
                 
                 return pdb_features_df
             else:
-                print("❌ No successful structural feature extractions")
+                self.logger.error("No successful structural feature extractions")
                 return pdb_features_df
         else:
-            print("❌ No structural features extracted")
+            self.logger.error("No structural features extracted")
             return None
 
     def integrate_pdb_features(self, features_df, pdb_features_df):
@@ -2845,10 +2448,10 @@ class CroissantDatasetLoader:
         Returns:
             Integrated DataFrame
         """
-        print("\n=== INTEGRATING STRUCTURAL FEATURES ===")
+        self.logger.info("\n=== INTEGRATING STRUCTURAL FEATURES ===")
         
         if pdb_features_df is None or features_df is None:
-            print("  No structural features to integrate")
+            self.logger.info("No structural features to integrate")
             return features_df
         
         # Create a copy of features
@@ -2864,10 +2467,10 @@ class CroissantDatasetLoader:
         if pdb_feature_cols:
             # Count interfaces with at least one structural feature
             integrated_count = merged_df[pdb_feature_cols[0]].notna().sum()
-            print(f"✅ Successfully integrated structural features for {integrated_count} interfaces")
-            print(f"   Added {len(pdb_feature_cols)} new structural features")
+            self.logger.info(f"Successfully integrated structural features for {integrated_count} interfaces")
+            self.logger.debug(f"Added {len(pdb_feature_cols)} new structural features")
         else:
-            print("⚠️  No structural features to add")
+            self.logger.warning("No structural features to add")
         
         return merged_df
 
@@ -2882,7 +2485,7 @@ class CroissantDatasetLoader:
         Returns:
             Preprocessed features DataFrame
         """
-        print("\n=== PREPROCESSING FEATURES ===")
+        self.logger.info("\n=== PREPROCESSING FEATURES ===")
         
         # Create a copy to avoid modifying original
         df = features_df.copy()
@@ -2892,44 +2495,44 @@ class CroissantDatasetLoader:
         
         # Handle chains column if present
         if 'chains' in df.columns:
-            print(f"   Chains column: {df['chains'].nunique()} unique values")
+            self.logger.debug(f"Chains column: {df['chains'].nunique()} unique values")
             df = df.drop('chains', axis=1)
         
         # First, ensure numerical features are actually numeric
-        print(f"   Ensuring numerical features are numeric...")
+        self.logger.debug(f"Ensuring numerical features are numeric...")
         for col in self.numerical_features:
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce')
                 missing_count = df[col].isna().sum()
                 if missing_count > 0:
-                    print(f"      {col}: {missing_count} missing values after conversion, filling with median")
+                    self.logger.debug(f"  {col}: {missing_count} missing values after conversion, filling with median")
                     df[col] = df[col].fillna(df[col].median())
                 else:
-                    print(f"      {col}: All values numeric")
+                    self.logger.debug(f"  {col}: All values numeric")
         
         # Handle categorical features
-        print(f"   Processing categorical features...")
+        self.logger.debug(f"Processing categorical features...")
         categorical_cols_in_data = [col for col in self.categorical_features if col in df.columns]
         
         for col in categorical_cols_in_data:
             unique_count = df[col].nunique()
-            print(f"      {col}: {unique_count} unique values")
+            self.logger.debug(f"  {col}: {unique_count} unique values")
             
             # If reasonable number of categories, one-hot encode
             if unique_count <= 20 and unique_count > 1:
                 dummies = pd.get_dummies(df[col], prefix=col, drop_first=True)
                 df = pd.concat([df.drop(col, axis=1), dummies], axis=1)
-                print(f"         One-hot encoded {col} → {dummies.shape[1]} features")
+                self.logger.debug(f"    One-hot encoded {col} → {dummies.shape[1]} features")
             elif unique_count == 1:
                 df = df.drop(col, axis=1)
-                print(f"         Dropped {col} (only one unique value)")
+                self.logger.debug(f"    Dropped {col} (only one unique value)")
             else:
                 df = df.drop(col, axis=1)
-                print(f"         Dropped {col} (too many unique values: {unique_count})")
+                self.logger.debug(f"    Dropped {col} (too many unique values: {unique_count})")
         
         # Handle structural features (treat most as numeric)
         pdb_feature_cols = [col for col in df.columns if col.startswith('pdb_')]
-        print(f"   Processing {len(pdb_feature_cols)} structural features...")
+        self.logger.debug(f"Processing {len(pdb_feature_cols)} structural features...")
         
         for col in pdb_feature_cols:
             if col in ['pdb_error']:
@@ -2959,43 +2562,43 @@ class CroissantDatasetLoader:
         # Handle any remaining object columns
         remaining_object_cols = df.select_dtypes(include=['object']).columns.tolist()
         if remaining_object_cols:
-            print(f"   Dropping remaining object columns: {remaining_object_cols}")
+            self.logger.debug(f"Dropping remaining object columns: {remaining_object_cols}")
             df = df.drop(columns=remaining_object_cols)
         
-        print(f"✅ Preprocessing complete")
-        print(f"   Final feature shape: {df.shape}")
-        print(f"   Total features: {len(df.columns)}")
+        self.logger.info(f"Preprocessing complete")
+        self.logger.info(f"Final feature shape: {df.shape}")
+        self.logger.debug(f"Total features: {len(df.columns)}")
         
         return df
 
     def analyze_dataset(self):
         """Analyze the dataset and show basic statistics."""
         if self.dataframe is None:
-            print("❌ No data available. Load and extract features first.")
+            self.logger.error("No data available. Load and extract features first.")
             return
         
-        print("\n=== DATASET ANALYSIS ===")
+        self.logger.info("\n=== DATASET ANALYSIS ===")
         
         # Basic statistics
-        print(f"Total samples: {len(self.dataframe)}")
-        print(f"Total features extracted: {len(self.dataframe.columns) - 1} (excluding interface_id)")
+        self.logger.info(f"Total samples: {len(self.dataframe)}")
+        self.logger.info(f"Total features extracted: {len(self.dataframe.columns) - 1} (excluding interface_id)")
         
         # Show structure sources found
-        print(f"Structure representations found: {len(self.pdb_sources)}")
+        self.logger.info(f"Structure representations found: {len(self.pdb_sources)}")
         
         # Show ClusterID analysis
         if self.cluster_ids is not None:
-            print(f"\nClusterID Analysis:")
+            self.logger.info(f"ClusterID Analysis:")
             unique_clusters = self.cluster_ids.nunique()
-            print(f"  Unique ClusterIDs: {unique_clusters}")
+            self.logger.info(f"  Unique ClusterIDs: {unique_clusters}")
             
             # Calculate cluster statistics
             cluster_sizes = self.cluster_ids.value_counts()
-            print(f"  Cluster size distribution:")
-            print(f"    Min size: {cluster_sizes.min()}")
-            print(f"    Max size: {cluster_sizes.max()}")
-            print(f"    Average size: {cluster_sizes.mean():.2f}")
-            print(f"    Median size: {cluster_sizes.median()}")
+            self.logger.debug(f"  Cluster size distribution:")
+            self.logger.debug(f"    Min size: {cluster_sizes.min()}")
+            self.logger.debug(f"    Max size: {cluster_sizes.max()}")
+            self.logger.debug(f"    Average size: {cluster_sizes.mean():.2f}")
+            self.logger.debug(f"    Median size: {cluster_sizes.median()}")
 
 
 # ============================================
@@ -3013,6 +2616,7 @@ class FeatureEvaluator:
         self.mutual_info_results = {}
         self.pca_results = {}
         self.feature_importance = {}
+        self.logger = logging.getLogger(__name__)
 
     def compute_basic_statistics(self, X, feature_names=None):
         """
@@ -3267,7 +2871,7 @@ class FeatureEvaluator:
         Returns:
             Dictionary with all feature evaluation results
         """
-        print("\n=== COMPREHENSIVE FEATURE EVALUATION ===")
+        self.logger.info("\n=== COMPREHENSIVE FEATURE EVALUATION ===")
 
         if feature_names is None:
             if isinstance(X, pd.DataFrame):
@@ -3276,19 +2880,19 @@ class FeatureEvaluator:
                 feature_names = [f'Feature_{i}' for i in range(X.shape[1])]
 
         # Run all evaluations
-        print("1. Computing basic statistics...")
+        self.logger.debug("1. Computing basic statistics...")
         stats = self.compute_basic_statistics(X, feature_names)
 
-        print("2. Analyzing feature correlations...")
+        self.logger.debug("2. Analyzing feature correlations...")
         corr_matrix, high_corr = self.compute_correlations(X, feature_names)
 
-        print("3. Analyzing feature-target relationships...")
+        self.logger.debug("3. Analyzing feature-target relationships...")
         feature_target = self.analyze_feature_target_relationship(X, y, feature_names)
 
-        print("4. Performing PCA analysis...")
+        self.logger.debug("4. Performing PCA analysis...")
         pca_results = self.perform_pca_analysis(X, feature_names)
 
-        print("5. Evaluating feature importance across models...")
+        self.logger.debug("5. Evaluating feature importance across models...")
         importance_results = self.evaluate_feature_importance_models(X, y, feature_names)
 
         # Helper function to convert numpy types to Python native types
@@ -3364,46 +2968,46 @@ class FeatureEvaluator:
             report_path = Path(save_path) / "feature_evaluation_report.json"
             with open(report_path, 'w') as f:
                 json.dump(report, f, indent=2, default=str)  # Added default=str as safety
-            print(f"\n✅ Feature evaluation report saved to: {report_path}")
+            self.logger.info(f"Feature evaluation report saved to: {report_path}")
 
         return report
 
     def print_feature_summary(self, report):
         """Print summary of feature evaluation results."""
-        print("\n" + "="*60)
-        print("FEATURE EVALUATION SUMMARY")
-        print("="*60)
+        self.logger.info("\n" + "="*60)
+        self.logger.info("FEATURE EVALUATION SUMMARY")
+        self.logger.info("="*60)
 
-        print(f"\nDataset Information:")
-        print(f"  Samples: {report['dataset_info']['n_samples']}")
-        print(f"  Features: {report['dataset_info']['n_features']}")
-        print(f"  Class distribution: {dict(report['dataset_info']['class_distribution'])}")
+        self.logger.info(f"Dataset Information:")
+        self.logger.info(f"  Samples: {report['dataset_info']['n_samples']}")
+        self.logger.info(f"  Features: {report['dataset_info']['n_features']}")
+        self.logger.info(f"  Class distribution: {dict(report['dataset_info']['class_distribution'])}")
 
-        print(f"\nCorrelation Analysis:")
-        print(f"  Highly correlated feature pairs (>0.8): {report['correlation_analysis']['n_highly_correlated']}")
+        self.logger.info(f"Correlation Analysis:")
+        self.logger.info(f"  Highly correlated feature pairs (>0.8): {report['correlation_analysis']['n_highly_correlated']}")
         if report['correlation_analysis']['highly_correlated_pairs']:
-            print("  Top correlated pairs:")
+            self.logger.debug("  Top correlated pairs:")
             for pair in report['correlation_analysis']['highly_correlated_pairs'][:5]:
-                print(f"    {pair['feature1']} <-> {pair['feature2']}: {pair['correlation']:.3f}")
+                self.logger.debug(f"    {pair['feature1']} <-> {pair['feature2']}: {pair['correlation']:.3f}")
 
-        print(f"\nFeature-Target Relationship:")
-        print(f"  Significant features (ANOVA p<0.05): {len(report['feature_target_analysis']['anova_significant_features'])}")
+        self.logger.info(f"Feature-Target Relationship:")
+        self.logger.info(f"  Significant features (ANOVA p<0.05): {len(report['feature_target_analysis']['anova_significant_features'])}")
         if report['feature_target_analysis']['mutual_info_top_features']:
-            print(f"  Top 5 features by mutual information:")
+            self.logger.info(f"  Top 5 features by mutual information:")
             for i, feature in enumerate(report['feature_target_analysis']['mutual_info_top_features'][:5], 1):
-                print(f"    {i}. {feature}")
+                self.logger.info(f"    {i}. {feature}")
 
-        print(f"\nPCA Analysis:")
-        print(f"  Components needed for 95% variance: {report['pca_analysis']['components_needed_95']}")
-        print(f"  Explained variance by top 5 components:")
+        self.logger.info(f"PCA Analysis:")
+        self.logger.info(f"  Components needed for 95% variance: {report['pca_analysis']['components_needed_95']}")
+        self.logger.info(f"  Explained variance by top 5 components:")
         for i, var in enumerate(report['pca_analysis']['explained_variance'][:5], 1):
-            print(f"    PC{i}: {var:.3f}")
+            self.logger.info(f"    PC{i}: {var:.3f}")
 
-        print(f"\nFeature Importance (Random Forest):")
+        self.logger.info(f"Feature Importance (Random Forest):")
         if 'random_forest' in report['feature_importance']:
             top_features = report['feature_importance']['random_forest']['top_features']
             for i, (feature, importance) in enumerate(top_features[:5], 1):
-                print(f"    {i}. {feature}: {importance:.4f}")
+                self.logger.info(f"    {i}. {feature}: {importance:.4f}")
 
     def generate_feature_visualizations(self, X, y, feature_names, save_path):
         """
@@ -3415,7 +3019,7 @@ class FeatureEvaluator:
             feature_names: List of feature names
             save_path: Path to save plots
         """
-        print("\nGenerating feature visualizations...")
+        self.logger.info("Generating feature visualizations...")
 
         save_path = Path(save_path)
         save_path.mkdir(parents=True, exist_ok=True)
@@ -3615,7 +3219,7 @@ class FeatureEvaluator:
         # Save the figure
         plot_path = save_path / "feature_evaluation_plots.png"
         plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Feature evaluation plots saved to: {plot_path}")
+        self.logger.info(f"Feature evaluation plots saved to: {plot_path}")
         plt.close()
 
         # Additional: Create detailed feature ranking plot
@@ -3730,7 +3334,7 @@ class FeatureEvaluator:
 
         ranking_path = save_path / "feature_ranking_analysis.png"
         plt.savefig(ranking_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Feature ranking analysis saved to: {ranking_path}")
+        self.logger.info(f"Feature ranking analysis saved to: {ranking_path}")
         plt.close()
 
 
@@ -3759,6 +3363,7 @@ class ProteinInteractionClassifier:
         self.cv_splits = None
         self.feature_evaluation_report = None
         self.feature_names = None
+        self.logger = logging.getLogger(__name__)
 
     def evaluate_features(self, X, y, feature_names=None, save_path=None):
         """
@@ -3773,9 +3378,9 @@ class ProteinInteractionClassifier:
         Returns:
             Feature evaluation report
         """
-        print("\n" + "="*60)
-        print("COMPREHENSIVE FEATURE EVALUATION")
-        print("="*60)
+        self.logger.info("\n" + "="*60)
+        self.logger.info("COMPREHENSIVE FEATURE EVALUATION")
+        self.logger.info("="*60)
 
         if feature_names is None:
             if isinstance(X, pd.DataFrame):
@@ -3805,9 +3410,9 @@ class ProteinInteractionClassifier:
         Returns:
             List of (train_indices, test_indices) for each fold
         """
-        print(f"\n=== CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===")
-        print(f"   Number of folds: {self.n_splits}")
-        print(f"   Using ClusterID as groups to ensure same-cluster samples stay together")
+        self.logger.info(f"\n=== CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===")
+        self.logger.info(f"   Number of folds: {self.n_splits}")
+        self.logger.info(f"   Using ClusterID as groups to ensure same-cluster samples stay together")
 
         # Initialize GroupKFold
         gkf = GroupKFold(n_splits=self.n_splits)
@@ -3816,7 +3421,7 @@ class ProteinInteractionClassifier:
         self.cv_splits = list(gkf.split(X, y, groups=cluster_ids))
 
         # Analyze the splits
-        print(f"   Split analysis:")
+        self.logger.info(f"   Split analysis:")
         for fold_idx, (train_idx, test_idx) in enumerate(self.cv_splits):
             # Calculate class distribution in this fold
             train_labels = y.iloc[train_idx] if hasattr(y, 'iloc') else [y[i] for i in train_idx]
@@ -3825,10 +3430,10 @@ class ProteinInteractionClassifier:
             train_clusters = cluster_ids.iloc[train_idx] if hasattr(cluster_ids, 'iloc') else [cluster_ids[i] for i in train_idx]
             test_clusters = cluster_ids.iloc[test_idx] if hasattr(cluster_ids, 'iloc') else [cluster_ids[i] for i in test_idx]
 
-            print(f"   Fold {fold_idx + 1}:")
-            print(f"     Training: {len(train_idx)} samples, {len(set(train_clusters))} unique clusters, "
+            self.logger.info(f"   Fold {fold_idx + 1}:")
+            self.logger.info(f"     Training: {len(train_idx)} samples, {len(set(train_clusters))} unique clusters, "
                   f"{sum(train_labels == 1)} physio ({sum(train_labels == 1)/len(train_labels):.1%})")
-            print(f"     Testing:  {len(test_idx)} samples, {len(set(test_clusters))} unique clusters, "
+            self.logger.info(f"     Testing:  {len(test_idx)} samples, {len(set(test_clusters))} unique clusters, "
                   f"{sum(test_labels == 1)} physio ({sum(test_labels == 1)/len(test_labels):.1%})")
 
             # Check for cluster overlap between train and test
@@ -3836,18 +3441,18 @@ class ProteinInteractionClassifier:
             test_cluster_set = set(test_clusters)
             overlap = train_cluster_set.intersection(test_cluster_set)
             if overlap:
-                print(f"     ⚠️  Warning: {len(overlap)} clusters appear in both train and test sets")
+                self.logger.warning(f"     Warning: {len(overlap)} clusters appear in both train and test sets")
 
         return self.cv_splits
 
     def scale_features(self, X_train, X_test):
         """Scale features using StandardScaler."""
-        print("\n=== SCALING FEATURES ===")
+        self.logger.info("\n=== SCALING FEATURES ===")
 
         X_train_scaled = self.scaler.fit_transform(X_train)
         X_test_scaled = self.scaler.transform(X_test)
 
-        print("✅ Features scaled")
+        self.logger.info("Features scaled")
         return X_train_scaled, X_test_scaled
 
     def train_with_cross_validation(self, X, y, cluster_ids, feature_names=None):
@@ -3863,7 +3468,7 @@ class ProteinInteractionClassifier:
         Returns:
             Dictionary with cross-validation results
         """
-        print(f"\n=== TRAINING WITH {self.n_splits}-FOLD GROUPKFOLD CROSS-VALIDATION ===")
+        self.logger.info(f"\n=== TRAINING WITH {self.n_splits}-FOLD GROUPKFOLD CROSS-VALIDATION ===")
 
         # Store feature names if provided
         if feature_names is not None:
@@ -3882,7 +3487,7 @@ class ProteinInteractionClassifier:
 
         # Train and evaluate each model
         for name, model in self.models.items():
-            print(f"\n--- Training {name} with GroupKFold CV ---")
+            self.logger.info(f"\n--- Training {name} with GroupKFold CV ---")
 
             # Store per-fold results
             fold_accuracies = []
@@ -3898,7 +3503,7 @@ class ProteinInteractionClassifier:
 
             # Perform cross-validation
             for fold_idx, (train_idx, test_idx) in enumerate(cv_splits):
-                print(f"  Fold {fold_idx + 1}/{self.n_splits}...")
+                self.logger.debug(f"  Fold {fold_idx + 1}/{self.n_splits}...")
 
                 # Split data
                 X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
@@ -3912,7 +3517,7 @@ class ProteinInteractionClassifier:
                 try:
                     model.fit(X_train_scaled, y_train)
                 except Exception as e:
-                    print(f"    Error training model: {e}")
+                    self.logger.error(f"    Error training model: {e}")
                     continue
 
                 # Make predictions
@@ -4008,21 +3613,21 @@ class ProteinInteractionClassifier:
             }
 
             # Print results
-            print(f"  CV Results for {name}:")
-            print(f"    Average Accuracy:  {avg_accuracy:.4f} (±{np.std(fold_accuracies) if fold_accuracies else 0:.4f})")
-            print(f"    Average Precision: {avg_precision:.4f} (±{np.std(fold_precisions) if fold_precisions else 0:.4f})")
-            print(f"    Average Recall:    {avg_recall:.4f} (±{np.std(fold_recalls) if fold_recalls else 0:.4f})")
-            print(f"    Average F1-Score:  {avg_f1:.4f} (±{np.std(fold_f1s) if fold_f1s else 0:.4f})")
+            self.logger.info(f"  CV Results for {name}:")
+            self.logger.info(f"    Average Accuracy:  {avg_accuracy:.4f} (±{np.std(fold_accuracies) if fold_accuracies else 0:.4f})")
+            self.logger.info(f"    Average Precision: {avg_precision:.4f} (±{np.std(fold_precisions) if fold_precisions else 0:.4f})")
+            self.logger.info(f"    Average Recall:    {avg_recall:.4f} (±{np.std(fold_recalls) if fold_recalls else 0:.4f})")
+            self.logger.info(f"    Average F1-Score:  {avg_f1:.4f} (±{np.std(fold_f1s) if fold_f1s else 0:.4f})")
             if avg_roc_auc is not None:
-                print(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(fold_roc_aucs) if fold_roc_aucs else 0:.4f})")
+                self.logger.info(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(fold_roc_aucs) if fold_roc_aucs else 0:.4f})")
 
-            print(f"  Overall Results (all folds combined):")
-            print(f"    Accuracy:  {overall_accuracy:.4f}")
-            print(f"    Precision: {overall_precision:.4f}")
-            print(f"    Recall:    {overall_recall:.4f}")
-            print(f"    F1-Score:  {overall_f1:.4f}")
+            self.logger.info(f"  Overall Results (all folds combined):")
+            self.logger.info(f"    Accuracy:  {overall_accuracy:.4f}")
+            self.logger.info(f"    Precision: {overall_precision:.4f}")
+            self.logger.info(f"    Recall:    {overall_recall:.4f}")
+            self.logger.info(f"    F1-Score:  {overall_f1:.4f}")
             if overall_roc_auc is not None:
-                print(f"    ROC-AUC:   {overall_roc_auc:.4f}")
+                self.logger.info(f"    ROC-AUC:   {overall_roc_auc:.4f}")
 
         # Determine best model based on average F1-score
         best_f1 = -1
@@ -4033,7 +3638,7 @@ class ProteinInteractionClassifier:
                 self.best_model = self.models[name]
 
         if self.best_model_name:
-            print(f"\n✅ Best model: {self.best_model_name} (Average F1-Score: {best_f1:.4f})")
+            self.logger.info(f"\n✅ Best model: {self.best_model_name} (Average F1-Score: {best_f1:.4f})")
 
         return self.results
 
@@ -4051,7 +3656,7 @@ class ProteinInteractionClassifier:
         Returns:
             X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test
         """
-        print(f"\n=== CREATING TRAIN/TEST SPLIT (Test size: {test_size}) ===")
+        self.logger.info(f"\n=== CREATING TRAIN/TEST SPLIT (Test size: {test_size}) ===")
 
         # Get unique clusters
         unique_clusters = cluster_ids.unique()
@@ -4074,8 +3679,8 @@ class ProteinInteractionClassifier:
         cluster_ids_train = cluster_ids[train_mask]
         cluster_ids_test = cluster_ids[test_mask]
 
-        print(f"  Training set: {len(X_train)} samples, {len(cluster_ids_train.unique())} clusters")
-        print(f"  Test set: {len(X_test)} samples, {len(cluster_ids_test.unique())} clusters")
+        self.logger.info(f"  Training set: {len(X_train)} samples, {len(cluster_ids_train.unique())} clusters")
+        self.logger.info(f"  Test set: {len(X_test)} samples, {len(cluster_ids_test.unique())} clusters")
 
         return X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test
 
@@ -4093,7 +3698,7 @@ class ProteinInteractionClassifier:
         Returns:
             Dictionary with evaluation results
         """
-        print(f"\n=== TRAINING AND EVALUATING MODELS (Test size: {test_size}) ===")
+        self.logger.info(f"\n=== TRAINING AND EVALUATING MODELS (Test size: {test_size}) ===")
 
         # Store feature names
         if feature_names is not None:
@@ -4113,7 +3718,7 @@ class ProteinInteractionClassifier:
         # Train and evaluate each model
         self.results = {}
         for name, model in self.models.items():
-            print(f"\n--- Training {name} ---")
+            self.logger.info(f"\n--- Training {name} ---")
 
             try:
                 # Train model
@@ -4159,22 +3764,22 @@ class ProteinInteractionClassifier:
                 }
 
                 # Print results
-                print(f"  Test Results for {name}:")
-                print(f"    Accuracy:  {accuracy:.4f}")
-                print(f"    Precision: {precision:.4f}")
-                print(f"    Recall:    {recall:.4f}")
-                print(f"    F1-Score:  {f1:.4f}")
+                self.logger.info(f"  Test Results for {name}:")
+                self.logger.info(f"    Accuracy:  {accuracy:.4f}")
+                self.logger.info(f"    Precision: {precision:.4f}")
+                self.logger.info(f"    Recall:    {recall:.4f}")
+                self.logger.info(f"    F1-Score:  {f1:.4f}")
                 if roc_auc is not None:
-                    print(f"    ROC-AUC:   {roc_auc:.4f}")
+                    self.logger.info(f"    ROC-AUC:   {roc_auc:.4f}")
 
                 # Print classification report
-                print(f"    Classification Report:")
+                self.logger.info(f"    Classification Report:")
                 report = classification_report(y_test, y_pred, target_names=['Non-physio', 'Physio'])
                 for line in report.split('\n'):
-                    print(f"      {line}")
+                    self.logger.info(f"      {line}")
 
             except Exception as e:
-                print(f"  Error training {name}: {e}")
+                self.logger.error(f"  Error training {name}: {e}")
                 self.results[name] = {
                     'accuracy': 0,
                     'precision': 0,
@@ -4196,17 +3801,17 @@ class ProteinInteractionClassifier:
                 self.best_model = self.models[name]
 
         if self.best_model_name:
-            print(f"\n✅ Best model: {self.best_model_name} (F1-Score: {best_f1:.4f})")
+            self.logger.info(f"\n✅ Best model: {self.best_model_name} (F1-Score: {best_f1:.4f})")
 
         return self.results
 
     def plot_cv_results(self, save_plots=False, output_dir="."):
         """Plot cross-validation results."""
         if not self.results:
-            print("❌ No results to plot. Train models first.")
+            self.logger.error("No results to plot. Train models first.")
             return
 
-        print("\n=== PLOTTING CROSS-VALIDATION RESULTS ===")
+        self.logger.info("\n=== PLOTTING CROSS-VALIDATION RESULTS ===")
 
         # Create figure with subplots
         fig, axes = plt.subplots(2, 3, figsize=(15, 10))
@@ -4320,18 +3925,18 @@ class ProteinInteractionClassifier:
             output_path.mkdir(parents=True, exist_ok=True)
             plot_path = output_path / "group_kfold_cv_results.png"
             plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-            print(f"Saved CV results plot to: {plot_path}")
+            self.logger.info(f"Saved CV results plot to: {plot_path}")
 
         plt.show()
-        print("✅ Cross-validation visualizations generated")
+        self.logger.info("Cross-validation visualizations generated")
 
     def plot_test_results(self, save_plots=False, output_dir="."):
         """Plot test results."""
         if not self.results:
-            print("❌ No results to plot. Train models first.")
+            self.logger.error("No results to plot. Train models first.")
             return
 
-        print("\n=== PLOTTING TEST RESULTS ===")
+        self.logger.info("\n=== PLOTTING TEST RESULTS ===")
 
         # Create figure with subplots
         fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -4421,10 +4026,10 @@ class ProteinInteractionClassifier:
             output_path.mkdir(parents=True, exist_ok=True)
             plot_path = output_path / "test_results.png"
             plt.savefig(plot_path, dpi=300, bbox_inches='tight')
-            print(f"Saved test results plot to: {plot_path}")
+            self.logger.info(f"Saved test results plot to: {plot_path}")
 
         plt.show()
-        print("✅ Test results visualizations generated")
+        self.logger.info("Test results visualizations generated")
 
     def feature_importance_analysis(self, X_train, y_train, save_plots=False, output_dir="."):
         """
@@ -4434,7 +4039,7 @@ class ProteinInteractionClassifier:
             X_train: Training features
             y_train: Training labels
         """
-        print("\n=== FEATURE IMPORTANCE ANALYSIS ===")
+        self.logger.info("\n=== FEATURE IMPORTANCE ANALYSIS ===")
 
         # Only for Random Forest
         if 'Random Forest' in self.models:
@@ -4462,9 +4067,9 @@ class ProteinInteractionClassifier:
                     'importance': importances
                 }).sort_values('importance', ascending=False)
 
-                print(f"\nMost Important Features ({model_type}):")
+                self.logger.info(f"Most Important Features ({model_type}):")
                 for idx, row in importance_df.head(10).iterrows():
-                    print(f"   {row['feature']}: {row['importance']:.4f}")
+                    self.logger.info(f"   {row['feature']}: {row['importance']:.4f}")
 
                 # Plot feature importance
                 plt.figure(figsize=(10, 6))
@@ -4479,16 +4084,16 @@ class ProteinInteractionClassifier:
                     output_path.mkdir(parents=True, exist_ok=True)
                     fi_path = output_path / "feature_importance.png"
                     plt.savefig(fi_path, dpi=300, bbox_inches='tight')
-                    print(f"Saved feature importance plot to: {fi_path}")
+                    self.logger.info(f"Saved feature importance plot to: {fi_path}")
 
                 plt.show()
 
-        print("✅ Feature importance analysis complete")
+        self.logger.info("Feature importance analysis complete")
 
     def save_results(self, output_dir="."):
         """Save model results to files."""
         if not self.results:
-            print("❌ No results to save.")
+            self.logger.error("No results to save.")
             return
 
         output_path = Path(output_dir)
@@ -4531,7 +4136,7 @@ class ProteinInteractionClassifier:
         with open(results_file, 'w') as f:
             json.dump(results_dict, f, indent=2)
 
-        print(f"✅ Results saved to: {results_file}")
+        self.logger.info(f"Results saved to: {results_file}")
 
 
 # ============================================
@@ -4639,7 +4244,7 @@ Note: Files are stored in gzipped format (.pdb.gz or .cif.gz)
     parser.add_argument(
         '--extract-pdb-features',
         action='store_true',
-        help='Extract structural features (interface residues within 5Å)'
+        help='Extract structural features (interface residues within 10Å)'
     )
 
     parser.add_argument(
@@ -4661,82 +4266,149 @@ Note: Files are stored in gzipped format (.pdb.gz or .cif.gz)
         help='Only extract structural features (skip model training)'
     )
 
+    parser.add_argument(
+        '--log-level',
+        type=str,
+        default='INFO',
+        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'],
+        help='Set the logging level (default: INFO)'
+    )
+
+    parser.add_argument(
+        '--log-file',
+        type=str,
+        help='Optional log file to write logs to'
+    )
+
     return parser.parse_args()
+
+
+def setup_logging(log_level='INFO', log_file=None):
+    """Setup logging configuration."""
+    # Convert string to logging level
+    numeric_level = getattr(logging, log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError(f'Invalid log level: {log_level}')
+    
+    # Configure logging
+    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    date_format = '%Y-%m-%d %H:%M:%S'
+    
+    # Basic configuration
+    logging.basicConfig(
+        level=numeric_level,
+        format=log_format,
+        datefmt=date_format
+    )
+    
+    # Get root logger
+    root_logger = logging.getLogger()
+    
+    # Remove existing handlers to avoid duplicates
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Console handler with simpler format for INFO and above
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(numeric_level)
+    
+    # Simpler format for console
+    if numeric_level <= logging.INFO:
+        console_format = '%(levelname)s: %(message)s'
+    else:
+        console_format = '%(asctime)s - %(levelname)s: %(message)s'
+    
+    console_formatter = logging.Formatter(console_format, datefmt=date_format)
+    console_handler.setFormatter(console_formatter)
+    root_logger.addHandler(console_handler)
+    
+    # File handler if log file specified
+    if log_file:
+        file_handler = logging.FileHandler(log_file)
+        file_handler.setLevel(numeric_level)
+        file_formatter = logging.Formatter(log_format, datefmt=date_format)
+        file_handler.setFormatter(file_formatter)
+        root_logger.addHandler(file_handler)
+    
+    return logging.getLogger(__name__)
 
 
 def main():
     """Main execution function."""
     args = parse_arguments()
-
-    print("""
-╔═══════════════════════════════════════════════════════════╗
-║  Protein Interaction ML Classifier                        ║
-║  with GroupKFold Cross-Validation                         ║
-║  and Interface Structural Feature Extraction (5Å distance)║
-║  Using local interface structure files                    ║
-║  BioPython gzipped file support + Case sensitivity fix    ║
-╚═══════════════════════════════════════════════════════════╝
+    
+    # Setup logging
+    logger = setup_logging(args.log_level, args.log_file)
+    
+    logger.info("""
+╔════════════════════════════════════════════════════════════╗
+║  Protein Interaction ML Classifier                         ║
+║  with GroupKFold Cross-Validation                          ║
+║  and Interface Structural Feature Extraction (10Å distance)║
+║  Using local interface structure files                     ║
+║  BioPython gzipped file support + Case sensitivity fix     ║
+╚════════════════════════════════════════════════════════════╝
     """)
-
+    
     # Validate arguments
     if not args.local and not args.github:
-        print("❌ Error: Must specify either --local or --github")
+        logger.error("Must specify either --local or --github")
         print("   Use --help for usage information")
         return
-
+    
     if args.local and args.github:
-        print("⚠️  Warning: Both --local and --github specified. Using --local.")
-
+        logger.warning("Both --local and --github specified. Using --local.")
+    
     # Determine dataset source
     if args.local:
         dataset_source = args.local
         is_github = False
-        print(f"Using local directory: {dataset_source}")
+        logger.info(f"Using local directory: {dataset_source}")
     else:
         dataset_source = args.github
         is_github = True
-        print(f"Using GitHub repository: {dataset_source}")
-
+        logger.info(f"Using GitHub repository: {dataset_source}")
+    
     # Create output directory upfront
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    print(f"Output directory: {output_dir}")
-
+    logger.info(f"Output directory: {output_dir}")
+    
     try:
         # Step 1: Load Croissant dataset
-        print("\n" + "="*60)
-        print("Step 1: Loading Croissant dataset")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 1: Loading Croissant dataset")
+        logger.info("="*60)
+        
         loader = CroissantDatasetLoader(dataset_source, is_github)
-
+        
         if not loader.load_dataset():
-            print("❌ Failed to load dataset. Exiting.")
+            logger.error("Failed to load dataset. Exiting.")
             return
-
+        
         # Step 2: Extract features, labels, and ClusterIDs
-        print("\n" + "="*60)
-        print("Step 2: Extracting features, labels, and ClusterIDs")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 2: Extracting features, labels, and ClusterIDs")
+        logger.info("="*60)
+        
         features_df, labels, cluster_ids = loader.extract_features_labels()
-
+        
         if features_df is None or labels is None or cluster_ids is None:
-            print("❌ Failed to extract features/labels/ClusterIDs. Exiting.")
+            logger.error("Failed to extract features/labels/ClusterIDs. Exiting.")
             loader.cleanup()
             return
-
+        
         # Store labels in loader for analysis
         loader.labels = labels
-
+        
         # Step 3: Process structure files if requested
         if args.extract_pdb_features:
-            print("\n" + "="*60)
-            print("Step 3: Processing Interface Structure Files")
-            print("="*60)
+            logger.info("\n" + "="*60)
+            logger.info("Step 3: Processing Interface Structure Files")
+            logger.info("="*60)
             
             # First, extract structure sources from representations
-            print("  Extracting structure source information from dataset representations...")
+            logger.debug("Extracting structure source information from dataset representations...")
             
             # This extracts URLs and interface IDs from the dataset
             loader.extract_pdb_sources_from_representations(
@@ -4744,10 +4416,10 @@ def main():
                 use_pdb_format=args.pdb_format
             )
       
-            print(f"\n  Found {len(loader.pdb_sources)} structure sources in dataset")
+            logger.info(f"Found {len(loader.pdb_sources)} structure sources in dataset")
             
             # Check which interface files we actually have locally
-            print(f"  Checking local directory: {args.pdb_local_dir}")
+            logger.info(f"Checking local directory: {args.pdb_local_dir}")
             
             # Ensure the local directory exists
             pdb_local_path = Path(args.pdb_local_dir)
@@ -4788,207 +4460,208 @@ def main():
                 if not file_found:
                     missing_files.append(interface_id)
             
-            print(f"  Files available locally: {len(available_files)}")
-            print(f"  Files missing locally: {len(missing_files)}")
+            logger.info(f"Files available locally: {len(available_files)}")
+            logger.info(f"Files missing locally: {len(missing_files)}")
             
             if available_files:
-                print(f"  Available files (first 10):")
+                logger.debug(f"Available files (first 10):")
                 for file_info in available_files[:10]:
-                    print(f"    - {file_info}")
+                    logger.debug(f"  - {file_info}")
                 if len(available_files) > 10:
-                    print(f"    ... and {len(available_files) - 10} more")
+                    logger.debug(f"  ... and {len(available_files) - 10} more")
             
             if missing_files:
-                print(f"  Missing files (first 10): {', '.join(missing_files[:10])}")
+                logger.info(f"Missing files (first 10): {', '.join(missing_files[:10])}")
                 if len(missing_files) > 10:
-                    print(f"    ... and {len(missing_files) - 10} more")
+                    logger.info(f"  ... and {len(missing_files) - 10} more")
                 
                 # Ask user if they want to download missing files
                 if not args.pdb_features_only:
-                    print(f"\n  ⚠️  Warning: {len(missing_files)} interface structure files are missing locally.")
-                    print(f"     These files are needed for structural feature extraction.")
-                    print(f"     You can:")
-                    print(f"     1. Run with --pdb-features-only to download all missing files first")
-                    print(f"     2. Download them manually to {args.pdb_local_dir}")
-                    print(f"     3. Skip structural feature extraction")
+                    logger.warning(f"{len(missing_files)} interface structure files are missing locally.")
+                    logger.info(f"These files are needed for structural feature extraction.")
+                    logger.info(f"You can:")
+                    logger.info(f"1. Run with --pdb-features-only to download all missing files first")
+                    logger.info(f"2. Download them manually to {args.pdb_local_dir}")
+                    logger.info(f"3. Skip structural feature extraction")
                     
                     if len(missing_files) > 0 and len(missing_files) <= 20:
-                        print(f"\n     Missing files: {', '.join(missing_files)}")
+                        logger.debug(f"Missing files: {', '.join(missing_files)}")
             
             # If pdb-features-only flag is set, we can exit after reporting
             if args.pdb_features_only:
-                print("\n✅ Interface structure file inventory completed!")
-                print(f"   Total structure sources in dataset: {len(loader.pdb_sources)}")
-                print(f"   Available locally: {len(available_files)}")
-                print(f"   Missing: {len(missing_files)}")
-                print(f"   Local directory: {args.pdb_local_dir}")
-                print(f"   File format: {'PDB' if args.pdb_format else 'mmCIF'}")
-                print(f"   Note: BioPython can parse gzipped files directly")
+                logger.info("Interface structure file inventory completed!")
+                logger.info(f"Total structure sources in dataset: {len(loader.pdb_sources)}")
+                logger.info(f"Available locally: {len(available_files)}")
+                logger.info(f"Missing: {len(missing_files)}")
+                logger.info(f"Local directory: {args.pdb_local_dir}")
+                logger.info(f"File format: {'PDB' if args.pdb_format else 'mmCIF'}")
+                logger.info(f"Note: BioPython can parse gzipped files directly")
                 loader.cleanup()
                 return
                 
             # If we have no files locally and user wants to proceed, warn them
             if len(available_files) == 0 and args.extract_pdb_features:
-                print(f"\n  ⚠️  Warning: No interface structure files found locally!")
-                print(f"     Structural feature extraction will fail without structure files.")
-                print(f"     Consider running with --pdb-features-only first to download files.")
-                response = input("     Continue anyway? (y/n): ")
+                logger.warning("No interface structure files found locally!")
+                logger.warning("Structural feature extraction will fail without structure files.")
+                logger.info("Consider running with --pdb-features-only first to download files.")
+                response = input("Continue anyway? (y/n): ")
                 if response.lower() != 'y':
-                    print("Exiting...")
+                    logger.info("Exiting...")
                     loader.cleanup()
                     return
-
+        
         # Step 4: Extract structural features (if requested AND we have files)
         if args.extract_pdb_features:
-            print("\n" + "="*60)
-            print("Step 4: Extracting Structural Features")
-            print("="*60)
-
+            logger.info("\n" + "="*60)
+            logger.info("Step 4: Extracting Structural Features")
+            logger.info("="*60)
+            
             if not BIOPYTHON_AVAILABLE:
-                print("⚠️  BioPython not available. Skipping structural feature extraction.")
-                print("   Install with: pip install biopython")
+                logger.warning("BioPython not available. Skipping structural feature extraction.")
+                logger.info("Install with: pip install biopython")
             elif len(available_files) == 0:
-                print("⚠️  No interface structure files available locally. Skipping structural feature extraction.")
-                print(f"   Run with --pdb-features-only to download files first.")
+                logger.warning("No interface structure files available locally. Skipping structural feature extraction.")
+                logger.info(f"Run with --pdb-features-only to download files first.")
             else:
                 # Create PDB feature extractor
-                print(f"  Using {len(available_files)} available interface structure files")
-                print(f"  File format: {'PDB' if args.pdb_format else 'mmCIF (default)'}")
-                print(f"  Local directory: {args.pdb_local_dir}")
-                print(f"  Note: BioPython can parse gzipped files directly")
-
+                logger.info(f"Using {len(available_files)} available interface structure files")
+                logger.info(f"File format: {'PDB' if args.pdb_format else 'mmCIF (default)'}")
+                logger.info(f"Local directory: {args.pdb_local_dir}")
+                logger.debug(f"Note: BioPython can parse gzipped files directly")
+                
                 pdb_extractor = PDBFeatureExtractor(
                     pdb_local_dir=args.pdb_local_dir,
                     use_pdb_format=args.pdb_format
                 )
-
-                # Extract structural features (interface residues within 5Å)
+                
+                # Extract structural features (interface residues within 10Å)
                 pdb_features_df = loader.extract_pdb_contacts(
                     pdb_feature_extractor=pdb_extractor, 
-                    pdb_format=args.pdb_format
+                    pdb_format=args.pdb_format,
+                    radius = 10.0
                 )
-
+                
                 # Integrate structural features with existing features
                 if pdb_features_df is not None:
                     features_df = loader.integrate_pdb_features(features_df, pdb_features_df)
-
+                    
                     # Ensure output directory exists before saving
                     output_dir.mkdir(parents=True, exist_ok=True)
-
+                    
                     # Save structural features to file
                     pdb_output_file = output_dir / "structural_features.csv"
                     pdb_features_df.to_csv(pdb_output_file, index=False)
-                    print(f"  Structural features saved to: {pdb_output_file}")
+                    logger.info(f"Structural features saved to: {pdb_output_file}")
                     
                     # Also save a summary
                     successful_extractions = pdb_features_df[pdb_features_df['extraction_success']]
-                    print(f"  Successfully extracted structural features for {len(successful_extractions)} interfaces")
+                    logger.info(f"Successfully extracted structural features for {len(successful_extractions)} interfaces")
                     
                     # Show some extracted features
                     if len(successful_extractions) > 0:
                         pdb_feature_cols = [col for col in successful_extractions.columns 
                                           if col.startswith('pdb_') and col not in ['pdb_success', 'pdb_error']]
-                        print(f"  Extracted {len(pdb_feature_cols)} structural feature types")
+                        logger.debug(f"Extracted {len(pdb_feature_cols)} structural feature types")
                         for col in pdb_feature_cols[:5]:
                             non_null = successful_extractions[col].notna().sum()
                             if non_null > 0:
-                                print(f"    {col}: {non_null} non-null values")
-
+                                logger.debug(f"  {col}: {non_null} non-null values")
+        
         # Step 5: Preprocess features
-        print("\n" + "="*60)
-        print("Step 5: Preprocessing features")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 5: Preprocessing features")
+        logger.info("="*60)
+        
         X_processed = loader.preprocess_features(features_df, labels)
-
+        
         # Step 6: Feature Evaluation (if requested)
         if args.evaluate_features or args.feature_report_only:
-            print("\n" + "="*60)
-            print("Step 6: Performing Comprehensive Feature Evaluation")
-            print("="*60)
-
+            logger.info("\n" + "="*60)
+            logger.info("Step 6: Performing Comprehensive Feature Evaluation")
+            logger.info("="*60)
+            
             # Initialize classifier with feature evaluator
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 n_splits=args.folds
             )
-
+            
             # Ensure output directory exists
             output_dir.mkdir(parents=True, exist_ok=True)
-
+            
             # Perform feature evaluation
             feature_report = classifier.evaluate_features(
                 X_processed, labels,
                 feature_names=list(X_processed.columns),
                 save_path=args.output_dir if args.save_plots else None
             )
-
+            
             # If only feature report is requested, exit here
             if args.feature_report_only:
-                print("\n✅ Feature evaluation completed successfully!")
-                print(f"   Feature report generated with {X_processed.shape[1]} features")
-                print(f"   Feature statistics saved to: {args.output_dir}")
+                logger.info("Feature evaluation completed successfully!")
+                logger.info(f"Feature report generated with {X_processed.shape[1]} features")
+                logger.info(f"Feature statistics saved to: {args.output_dir}")
                 loader.cleanup()
                 return
-
+        
         # Quick mode: minimal processing
         if args.quick:
-            print("\n=== QUICK MODE ===")
-
+            logger.info("\n=== QUICK MODE ===")
+            
             # Initialize classifier
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
-
+            
             # Train with cross-validation
             results = classifier.train_with_cross_validation(
                 X_processed, labels, cluster_ids,
                 feature_names=list(X_processed.columns)
             )
-
-            print(f"\nQuick Results Summary:")
-            print(f"  Dataset: {loader.dataset.get('name', 'Unknown')}")
-            print(f"  Samples: {len(features_df)}")
-            print(f"  Features: {X_processed.shape[1]}")
+            
+            logger.info(f"Quick Results Summary:")
+            logger.info(f"  Dataset: {loader.dataset.get('name', 'Unknown')}")
+            logger.info(f"  Samples: {len(features_df)}")
+            logger.info(f"  Features: {X_processed.shape[1]}")
             if args.extract_pdb_features:
                 pdb_feature_count = sum(1 for col in X_processed.columns if col.startswith('pdb_'))
-                print(f"  Structural features: {pdb_feature_count}")
-                print(f"  File format: {'PDB' if args.pdb_format else 'mmCIF'}")
-            print(f"  Unique ClusterIDs: {cluster_ids.nunique()}")
-            print(f"  Cross-validation folds: {classifier.n_splits}")
-
+                logger.info(f"  Structural features: {pdb_feature_count}")
+                logger.info(f"  File format: {'PDB' if args.pdb_format else 'mmCIF'}")
+            logger.info(f"  Unique ClusterIDs: {cluster_ids.nunique()}")
+            logger.info(f"  Cross-validation folds: {classifier.n_splits}")
+            
             if classifier.best_model_name and results:
                 best_result = results[classifier.best_model_name]
-                print(f"\n  Best model: {classifier.best_model_name}")
-                print(f"    Average CV F1-Score: {best_result['cv_metrics']['f1']:.4f}")
-                print(f"    Overall Accuracy:    {best_result['overall_metrics']['accuracy']:.4f}")
-
+                logger.info(f"  Best model: {classifier.best_model_name}")
+                logger.info(f"    Average CV F1-Score: {best_result['cv_metrics']['f1']:.4f}")
+                logger.info(f"    Overall Accuracy:    {best_result['overall_metrics']['accuracy']:.4f}")
+            
             loader.cleanup()
             return
-
+        
         # Step 7: Analyze dataset
-        print("\n" + "="*60)
-        print("Step 7: Analyzing dataset")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 7: Analyzing dataset")
+        logger.info("="*60)
+        
         loader.analyze_dataset()
-
+        
         # Step 8: Initialize classifier with GroupKFold CV
-        print("\n" + "="*60)
-        print("Step 8: Initializing classifier with GroupKFold CV")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 8: Initializing classifier with GroupKFold CV")
+        logger.info("="*60)
+        
         classifier = ProteinInteractionClassifier(
             random_state=args.random_state,
             n_splits=args.folds
         )
-
+        
         # Step 9: Train and evaluate models
-        print("\n" + "="*60)
-        print("Step 9: Training and evaluating models")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 9: Training and evaluating models")
+        logger.info("="*60)
+        
         if args.test_split > 0:
             # Use train/test split
             results = classifier.train_and_evaluate(
@@ -5002,114 +4675,114 @@ def main():
                 X_processed, labels, cluster_ids,
                 feature_names=list(X_processed.columns)
             )
-
+        
         # Step 10: Save results
-        print("\n" + "="*60)
-        print("Step 10: Saving results")
-        print("="*60)
-
+        logger.info("\n" + "="*60)
+        logger.info("Step 10: Saving results")
+        logger.info("="*60)
+        
         classifier.save_results(output_dir=args.output_dir)
-
+        
         if args.save_plots:
             # Step 11: Generate visualizations
-            print("\n" + "="*60)
-            print("Step 11: Generating visualizations")
-            print("="*60)
-
+            logger.info("\n" + "="*60)
+            logger.info("Step 11: Generating visualizations")
+            logger.info("="*60)
+            
             if args.test_split > 0:
                 classifier.plot_test_results(save_plots=args.save_plots, output_dir=args.output_dir)
             else:
                 classifier.plot_cv_results(save_plots=args.save_plots, output_dir=args.output_dir)
-
+            
             # Step 12: Feature importance analysis
             if args.feature_analysis:
-                print("\n" + "="*60)
-                print("Step 12: Analyzing feature importance")
-                print("="*60)
-
+                logger.info("\n" + "="*60)
+                logger.info("Step 12: Analyzing feature importance")
+                logger.info("="*60)
+                
                 classifier.feature_importance_analysis(
                     X_processed, labels,
                     save_plots=args.save_plots,
                     output_dir=args.output_dir
                 )
-
+        
         # Step 13: Summary
-        print("\n" + "="*60)
-        print("SUMMARY")
-        print("="*60)
-        print(f"Dataset: {loader.dataset.get('name', 'Unknown')}")
-        print(f"Source: {'GitHub: ' + dataset_source if is_github else 'Local: ' + dataset_source}")
-        print(f"Total samples: {len(features_df)}")
-        print(f"Unique ClusterIDs: {cluster_ids.nunique()}")
-        print(f"Features used: {X_processed.shape[1]}")
-
+        logger.info("\n" + "="*60)
+        logger.info("SUMMARY")
+        logger.info("="*60)
+        logger.info(f"Dataset: {loader.dataset.get('name', 'Unknown')}")
+        logger.info(f"Source: {'GitHub: ' + dataset_source if is_github else 'Local: ' + dataset_source}")
+        logger.info(f"Total samples: {len(features_df)}")
+        logger.info(f"Unique ClusterIDs: {cluster_ids.nunique()}")
+        logger.info(f"Features used: {X_processed.shape[1]}")
+        
         if args.extract_pdb_features:
             pdb_features_count = sum(1 for col in X_processed.columns if col.startswith('pdb_'))
-            print(f"Structural interface features extracted: {pdb_features_count}")
-            print(f"  Focus: Unique residues per chain within 5Å of other chain")
-            print(f"  File format: {'PDB' if args.pdb_format else 'mmCIF (default)'}")
-            print(f"  Local directory: {args.pdb_local_dir}")
-            print(f"  Files: Gzipped format (.pdb.gz or .cif.gz)")
-            print(f"  BioPython: Can parse gzipped files directly")
-            print(f"  Case sensitivity: Handled (uppercase/lowercase interface IDs)")
-
+            logger.info(f"Structural interface features extracted: {pdb_features_count}")
+            logger.info(f"  Focus: Unique residues per chain within 5Å of other chain")
+            logger.info(f"  File format: {'PDB' if args.pdb_format else 'mmCIF (default)'}")
+            logger.info(f"  Local directory: {args.pdb_local_dir}")
+            logger.info(f"  Files: Gzipped format (.pdb.gz or .cif.gz)")
+            logger.info(f"  BioPython: Can parse gzipped files directly")
+            logger.info(f"  Case sensitivity: Handled (uppercase/lowercase interface IDs)")
+        
         if args.test_split > 0:
-            print(f"Evaluation method: Train/test split (Test size: {args.test_split})")
+            logger.info(f"Evaluation method: Train/test split (Test size: {args.test_split})")
         else:
-            print(f"Cross-validation folds: {args.folds}")
-
-        print(f"Random state: {args.random_state}")
-
+            logger.info(f"Cross-validation folds: {args.folds}")
+        
+        logger.info(f"Random state: {args.random_state}")
+        
         if args.evaluate_features:
-            print(f"\nFeature Evaluation Performed:")
+            logger.info(f"Feature Evaluation Performed:")
             if classifier.feature_evaluation_report:
                 report = classifier.feature_evaluation_report
-                print(f"  - Highly correlated feature pairs: {report['correlation_analysis']['n_highly_correlated']}")
-                print(f"  - Significant features (ANOVA p<0.05): {len(report['feature_target_analysis']['anova_significant_features'])}")
-                print(f"  - PCA components for 95% variance: {report['pca_analysis']['components_needed_95']}")
-
+                logger.info(f"  - Highly correlated feature pairs: {report['correlation_analysis']['n_highly_correlated']}")
+                logger.info(f"  - Significant features (ANOVA p<0.05): {len(report['feature_target_analysis']['anova_significant_features'])}")
+                logger.info(f"  - PCA components for 95% variance: {report['pca_analysis']['components_needed_95']}")
+        
         if args.test_split <= 0:
-            print(f"\nCross-validation method: GroupKFold CV")
-            print(f"  - Ensures all interfaces from same cluster stay together")
-            print(f"  - Uses ClusterID as grouping variable")
-            print(f"  - Prevents data leakage between training and testing")
-
+            logger.info(f"Cross-validation method: GroupKFold CV")
+            logger.info(f"  - Ensures all interfaces from same cluster stay together")
+            logger.info(f"  - Uses ClusterID as grouping variable")
+            logger.info(f"  - Prevents data leakage between training and testing")
+        
         if classifier.best_model_name and results:
             if args.test_split > 0:
                 best_result = results[classifier.best_model_name]
-                print(f"\nBest model: {classifier.best_model_name}")
-                print(f"  Test Set Metrics:")
-                print(f"    F1-Score:  {best_result['f1']:.4f}")
-                print(f"    Accuracy:  {best_result['accuracy']:.4f}")
-                print(f"    Precision: {best_result['precision']:.4f}")
-                print(f"    Recall:    {best_result['recall']:.4f}")
+                logger.info(f"Best model: {classifier.best_model_name}")
+                logger.info(f"  Test Set Metrics:")
+                logger.info(f"    F1-Score:  {best_result['f1']:.4f}")
+                logger.info(f"    Accuracy:  {best_result['accuracy']:.4f}")
+                logger.info(f"    Precision: {best_result['precision']:.4f}")
+                logger.info(f"    Recall:    {best_result['recall']:.4f}")
                 if best_result['roc_auc'] is not None:
-                    print(f"    ROC-AUC:   {best_result['roc_auc']:.4f}")
+                    logger.info(f"    ROC-AUC:   {best_result['roc_auc']:.4f}")
             else:
                 best_result = results[classifier.best_model_name]
-                print(f"\nBest model: {classifier.best_model_name}")
-                print(f"  Average CV Metrics:")
-                print(f"    F1-Score:  {best_result['cv_metrics']['f1']:.4f}")
-                print(f"    Accuracy:  {best_result['cv_metrics']['accuracy']:.4f}")
-                print(f"    Precision: {best_result['cv_metrics']['precision']:.4f}")
-                print(f"    Recall:    {best_result['cv_metrics']['recall']:.4f}")
+                logger.info(f"Best model: {classifier.best_model_name}")
+                logger.info(f"  Average CV Metrics:")
+                logger.info(f"    F1-Score:  {best_result['cv_metrics']['f1']:.4f}")
+                logger.info(f"    Accuracy:  {best_result['cv_metrics']['accuracy']:.4f}")
+                logger.info(f"    Precision: {best_result['cv_metrics']['precision']:.4f}")
+                logger.info(f"    Recall:    {best_result['cv_metrics']['recall']:.4f}")
                 if best_result['cv_metrics']['roc_auc'] is not None:
-                    print(f"    ROC-AUC:   {best_result['cv_metrics']['roc_auc']:.4f}")
-
-                print(f"\n  Overall Metrics (all folds combined):")
-                print(f"    F1-Score:  {best_result['overall_metrics']['f1']:.4f}")
-                print(f"    Accuracy:  {best_result['overall_metrics']['accuracy']:.4f}")
-
+                    logger.info(f"    ROC-AUC:   {best_result['cv_metrics']['roc_auc']:.4f}")
+                
+                logger.info(f"  Overall Metrics (all folds combined):")
+                logger.info(f"    F1-Score:  {best_result['overall_metrics']['f1']:.4f}")
+                logger.info(f"    Accuracy:  {best_result['overall_metrics']['accuracy']:.4f}")
+        
         if args.save_plots:
-            print(f"\nResults saved to: {args.output_dir}")
-
-        print("\n✅ ML pipeline with GroupKFold cross-validation and structural feature extraction completed successfully!")
-
+            logger.info(f"Results saved to: {args.output_dir}")
+        
+        logger.info("ML pipeline with GroupKFold cross-validation and structural feature extraction completed successfully!")
+        
     except Exception as e:
-        print(f"\n❌ Error in ML pipeline: {e}")
+        logger.error(f"Error in ML pipeline: {e}")
         import traceback
         traceback.print_exc()
-
+        
     finally:
         # Cleanup temporary files
         if 'loader' in locals():
@@ -5150,6 +4823,6 @@ if __name__ == "__main__":
         print("No arguments provided. Showing usage examples:")
         example_usage()
         sys.exit(1)
-
+    
     # Run main pipeline
     main()

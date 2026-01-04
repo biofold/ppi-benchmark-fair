@@ -9,6 +9,7 @@ Revised: fixes and robustness improvements:
  - Completed three-letter -> one-letter amino-acid mapping including common extras.
  - Defensive handling for gzip/http reads and header parsing.
  - Kept overall structure and behaviour but fixed bugs that prevented full execution.
+ - Updated print statements to use logging in main() function
 """
 import pandas as pd
 import json
@@ -2819,216 +2820,6 @@ class PPIBenchmarkProcessor:
         return dataset_markup
 
 
-    def generate_dataset_with_interfaces2(self) -> Dict[str, Any]:
-        """
-        Generate Dataset markup where the dataset contains interface items,
-        and each interface includes a Protein object.
-
-        ALTERNATIVE SCHEMA: Dataset -> Interface items -> Protein objects
-        """
-        # Parse cluster file if not already parsed
-        if self.cluster_processor and not self.cluster_processor.cluster_mapping:
-            logger.info("Parsing BLASTClust file for cluster information...")
-            if not self.cluster_processor.parse_blastclust_file():
-                logger.warning("Failed to parse BLASTClust file. Skipping cluster information.")
-
-        # Get basic statistics
-        stats = self._generate_statistics()
-
-        dataset_markup = {
-            "@context": [
-                "https://schema.org/",
-                {"cr": "https://mlcommons.org/croissant/1.0"}
-            ],
-            "@type": ["Dataset", "cr:Dataset"],
-            "@id": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
-
-            # === CROISSANT CONFORMANCE ===
-            "cr:conformsTo": "https://mlcommons.org/croissant/1.0",
-
-            # === BIOSCHEMAS DATASET PROPERTIES ===
-            "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
-            "name": "Protein-Protein Interaction Interface Benchmark Dataset",
-            "description": f"A benchmark dataset of {stats['total_entries']} protein crystal structures with {stats.get('physiological_count', 0)} physiological and {stats.get('non_physiological_count', 0)} non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics.",
-            "identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
-            "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
-            "license": "https://creativecommons.org/licenses/by/4.0/",
-
-            # Keywords as DefinedTerm list
-            "keywords": [
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Protein interaction",
-                    "inDefinedTermSet": "http://edamontology.org/topic_0128"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Protein structure",
-                    "inDefinedTermSet": "http://edamontology.org/topic_2814"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Benchmarking",
-                    "inDefinedTermSet": "http://edamontology.org/operation_2816"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Machine Learning Dataset",
-                    "inDefinedTermSet": "http://edamontology.org/topic_3474"
-                }
-            ],
-
-            # Creator/Publisher information
-            "creator": [
-                {
-                    "@type": "Organization",
-                    "name": "ELIXIR 3D-BioInfo Community",
-                    "url": "https://elixir-europe.org/platforms/3d-bioinfo"
-                }
-            ],
-            "datePublished": "2023-04-30",
-            "publisher": {
-                "@type": "Organization",
-                "name": "ELIXIR Europe",
-                "url": "https://elixir-europe.org"
-            },
-            "version": "1.0",
-
-            # Citation to the provided publication
-            "citation": {
-                "@type": "ScholarlyArticle",
-                "name": "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study",
-                "url": "https://pubmed.ncbi.nlm.nih.gov/37365936/",
-                "sameAs": "https://doi.org/10.1002/pmic.202200323"
-            },
-
-            # Dataset measurements
-            "variableMeasured": [
-                {
-                    "@type": "PropertyValue",
-                    "name": "physio",
-                    "description": "Binary label indicating physiological (TRUE) or non-physiological (FALSE) homodimer",
-                    "value": "Boolean classification"
-                },
-                {
-                    "@type": "PropertyValue",
-                    "name": "bsa",
-                    "description": "Buried surface area of the protein-protein interface",
-                    "unitCode": "Å²",
-                    "value": "Surface area"
-                },
-                {
-                    "@type": "PropertyValue",
-                    "name": "contacts",
-                    "description": "Number of atomic contacts at the interface",
-                    "value": "Integer count"
-                }
-            ],
-
-            "measurementTechnique": [
-                "X-ray crystallography",
-                "Conservation of interaction geometry analysis",
-                "Cross-crystal form comparison (ProtCID)",
-                "Homolog comparison (QSalign)"
-            ],
-
-            # Additional metadata
-            "dateCreated": "2023-04-30",
-            "dateModified": datetime.now().strftime("%Y-%m-%d"),
-            "maintainer": {
-                "@type": "Organization",
-                "name": "ELIXIR 3D-BioInfo Community",
-                "url": "https://elixir-europe.org/platforms/3d-bioinfo"
-            },
-
-            # Size information
-            "size": f"{stats['total_entries']} entries"
-        }
-
-        # Add interface items to the dataset if we have data
-        if self.protein_interfaces:
-            # Create a list of interface items (each containing a Protein)
-            interface_items = []
-            for interface in self.protein_interfaces:
-                # Generate Protein markup for this interface
-                protein_markup = self._generate_protein_for_interface(interface)
-
-                # Create interface item that includes the Protein
-                interface_item = {
-                    "@type": "DataCatalogItem",
-                    "name": f"Interface {interface.InterfaceID}",
-                    "description": f"Protein-protein interaction interface between chains {interface.AuthChain1} and {interface.AuthChain2}",
-                    "identifier": interface.InterfaceID,
-                    "url": f"https://www.rcsb.org/structure/{interface.ID}",
-                    "additionalProperty": [
-                        {
-                            "@type": "PropertyValue",
-                            "name": "InterfaceID",
-                            "value": interface.InterfaceID,
-                            "description": "Unique interface identifier"
-                        },
-                        {
-                            "@type": "PropertyValue",
-                            "name": "InterfaceSource",
-                            "value": interface.interface_source,
-                            "description": f"Source of interface ID: {interface.interface_source}"
-                        },
-                        {
-                            "@type": "PropertyValue",
-                            "name": "physio",
-                            "value": interface.physio,
-                            "description": "Physiological (TRUE) or non-physiological (FALSE)"
-                        },
-                        {
-                            "@type": "PropertyValue",
-                            "name": "label",
-                            "value": interface.label,
-                            "description": "Numeric label (1=physio, 0=non-physio)"
-                        }
-                    ]
-                }
-
-                # Add all interface features as additional properties
-                self._add_interface_features_to_item(interface_item, interface)
-
-                # Add cluster properties to interface item
-                if interface.cluster_id:
-                    interface_item = self._add_cluster_properties_to_markup(interface_item, interface)
-
-                # Add the Protein object to the interface item
-                interface_item["mainEntity"] = protein_markup
-
-                interface_items.append(interface_item)
-
-            dataset_markup["hasPart"] = interface_items
-            dataset_markup["numberOfItems"] = len(interface_items)
-
-        # Add Croissant-specific structure
-        dataset_markup.update({
-            "distribution": [
-                {
-                    "@type": "DataDownload",
-                    "encodingFormat": "text/csv",
-                    "contentUrl": self.csv_url,
-                    "name": "Benchmark annotations (CSV)"
-                },
-                {
-                    "@type": "DataDownload",
-                    "encodingFormat": "chemical/x-mmCIF",
-                    "contentUrl": self.mmcif_base_url,
-                    "name": "mmCIF structure files"
-                },
-                {
-                    "@type": "DataDownload",
-                    "encodingFormat": "chemical/x-pdb",
-                    "contentUrl": self.pdb_base_url,
-                    "name": "PDB structure files"
-                }
-            ]
-        })
-
-        return dataset_markup
-
     def _add_interface_features_to_item(self, interface_item: Dict[str, Any], interface: ProteinInterface) -> None:
         """
         Add all interface features as additionalProperty to an interface item.
@@ -4471,9 +4262,10 @@ Examples:
     )
 
     parser.add_argument(
-        "--verbose", "-v",
-        action="store_true",
-        help="Enable verbose logging"
+        "--log-level",
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        help="Set the logging level (default: INFO)"
     )
 
     parser.add_argument(
@@ -4487,68 +4279,68 @@ Examples:
 
 def debug_csv_parsing(csv_url: str, separator: str = ","):
     """Debug function to inspect CSV parsing issues."""
-    print(f"\n=== DEBUGGING CSV PARSING ===")
-    print(f"CSV URL: {csv_url}")
-    print(f"Separator: '{separator}'")
+    logger.info(f"\n=== DEBUGGING CSV PARSING ===")
+    logger.info(f"CSV URL: {csv_url}")
+    logger.info(f"Separator: '{separator}'")
 
     try:
-        print(f"\n=== TRYING TO PARSE WITH PANDAS ===")
+        logger.info(f"\n=== TRYING TO PARSE WITH PANDAS ===")
         import pandas as pd
 
         # Try with the specified separator
         try:
             df = pd.read_csv(csv_url, sep=separator)
-            print(f"✅ Successfully parsed with separator '{separator}'")
-            print(f"   Shape: {df.shape}")
-            print(f"   Columns: {list(df.columns)}")
+            logger.info(f"✅ Successfully parsed with separator '{separator}'")
+            logger.info(f"   Shape: {df.shape}")
+            logger.info(f"   Columns: {list(df.columns)}")
 
-            print(f"\nFirst 3 rows:")
+            logger.info(f"\nFirst 3 rows:")
             for i in range(min(3, len(df))):
-                print(f"Row {i}:")
+                logger.info(f"Row {i}:")
                 for col in df.columns[:5]:  # Show first 5 columns
-                    print(f"  {col}: {repr(df.iloc[i][col])}")
+                    logger.info(f"  {col}: {repr(df.iloc[i][col])}")
 
             # Check for our expected columns
             expected_columns = ['ID', 'InterfaceID', 'physio']
             available_columns = [str(col).strip() for col in df.columns]
 
-            print(f"\n=== COLUMN ANALYSIS ===")
-            print(f"Looking for: {expected_columns}")
-            print(f"Available: {available_columns}")
+            logger.info(f"\n=== COLUMN ANALYSIS ===")
+            logger.info(f"Looking for: {expected_columns}")
+            logger.info(f"Available: {available_columns}")
 
             for expected in expected_columns:
                 found = False
                 for available in available_columns:
                     if expected.lower() in available.lower():
-                        print(f"  ✅ Found '{expected}' as '{available}'")
+                        logger.info(f"  ✅ Found '{expected}' as '{available}'")
                         found = True
                         break
                 if not found:
-                    print(f"  ❌ Missing '{expected}'")
+                    logger.info(f"  ❌ Missing '{expected}'")
 
             return df
 
         except Exception as e:
-            print(f"❌ Failed with separator '{separator}': {e}")
+            logger.info(f"❌ Failed with separator '{separator}': {e}")
 
             # Try other separators
             separators_to_try = ['\t', ';', ' ', '|']
             for sep in separators_to_try:
                 try:
                     df = pd.read_csv(csv_url, sep=sep)
-                    print(f"\n✅ Successfully parsed with separator '{repr(sep)}'")
-                    print(f"   Shape: {df.shape}")
-                    print(f"   Columns: {list(df.columns)}")
+                    logger.info(f"\n✅ Successfully parsed with separator '{repr(sep)}'")
+                    logger.info(f"   Shape: {df.shape}")
+                    logger.info(f"   Columns: {list(df.columns)}")
                     return df
                 except:
                     continue
 
-            print(f"\n❌ Could not parse with any separator")
+            logger.info(f"\n❌ Could not parse with any separator")
             return None
 
 
     except Exception as e:
-        print(f"❌ Error in debug function: {e}")
+        logger.info(f"❌ Error in debug function: {e}")
         return None
 
 def main():
@@ -4556,11 +4348,16 @@ def main():
     # Parse command line arguments
     args = parse_arguments()
 
-    # Set logging level
-    if args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
+    # Set logging level from command line argument
+    numeric_level = getattr(logging, args.log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError(f"Invalid log level: {args.log_level}")
+    
+    # Update the logging configuration
+    logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
+    logger = logging.getLogger(__name__)
 
-    print(f"""
+    logger.info(f"""
 ╔═══════════════════════════════════════════════════════════════╗
 ║  PPI Benchmark FAIR Metadata Generator                        ║
 ║  with Bioschemas & Croissant Compliance                       ║
@@ -4576,14 +4373,14 @@ Settings:
   PDB Metadata:    {args.fetch_pdb_metadata} (API: {args.pdb_api_url if args.fetch_pdb_metadata else 'N/A'})
   Assembly Checks: PDB={args.check_pdb_label}, mmCIF={args.check_cif_label}
   Cluster Info:    {args.cluster if args.cluster else 'Not provided'}
+  Log Level:       {args.log_level}
     """)
-
     # DEBUG: First inspect the CSV
-    print("\n=== DEBUG: INSPECTING CSV ===")
+    logger.info("\n=== DEBUG: INSPECTING CSV ===")
     df = debug_csv_parsing(args.csv_url, args.separator)
 
     if df is None:
-        print("\n❌ Cannot proceed - CSV parsing failed")
+        logger.info("\n❌ Cannot proceed - CSV parsing failed")
         return
 
     # Create processor with command line arguments
@@ -4604,92 +4401,92 @@ Settings:
 
     try:
         # Load and parse data
-        print(f"\n=== LOADING AND PARSING DATA ===")
+        logger.info(f"\n=== LOADING AND PARSING DATA ===")
         data = processor.load_data()
 
         if data is not None:
-            print(f"✅ Dataset loaded successfully!")
-            print(f"   Records: {len(data)}")
-            print(f"   Columns: {len(data.columns)}")
-            print(f"   Separator used: '{processor.csv_separator}'")
+            logger.info(f"✅ Dataset loaded successfully!")
+            logger.info(f"   Records: {len(data)}")
+            logger.info(f"   Columns: {len(data.columns)}")
+            logger.info(f"   Separator used: '{processor.csv_separator}'")
 
             # Show column mapping
-            print(f"\n=== COLUMN MAPPING ===")
+            logger.info(f"\n=== COLUMN MAPPING ===")
             for std_name, actual_name in processor.column_mapping.items():
-                print(f"   {std_name}: {actual_name}")
+                logger.info(f"   {std_name}: {actual_name}")
 
             # DEBUG: Show what columns we actually have
-            print(f"\n=== ACTUAL COLUMNS ===")
+            logger.info(f"\n=== ACTUAL COLUMNS ===")
             for i, col in enumerate(data.columns):
-                print(f"   {i}: {col} (type: {data[col].dtype})")
+                logger.info(f"   {i}: {col} (type: {data[col].dtype})")
 
                 # Show sample value
                 if len(data) > 0:
                     sample = data.iloc[0][col]
-                    print(f"     Sample: {repr(sample)}")
+                    logger.info(f"     Sample: {repr(sample)}")
 
             # Check for critical columns
             critical_cols = ['id', 'interfaceid', 'physio']
             missing = [col for col in critical_cols if col not in processor.column_mapping]
             if missing:
-                print(f"\n⚠️  WARNING: Missing critical columns: {missing}")
-                print(f"   Looking for lowercase versions of: ID, InterfaceID, physio")
-                print(f"   Available columns: {list(data.columns)}")
+                logger.info(f"\n⚠️  WARNING: Missing critical columns: {missing}")
+                logger.info(f"   Looking for lowercase versions of: ID, InterfaceID, physio")
+                logger.info(f"   Available columns: {list(data.columns)}")
 
                 # Try to find similar columns
-                print(f"\n=== SEARCHING FOR SIMILAR COLUMNS ===")
+                logger.info(f"\n=== SEARCHING FOR SIMILAR COLUMNS ===")
                 for col in data.columns:
                     col_lower = str(col).lower()
                     if 'id' in col_lower and 'interface' not in col_lower:
-                        print(f"   Possible ID column: '{col}'")
+                        logger.info(f"   Possible ID column: '{col}'")
                     elif 'interface' in col_lower:
-                        print(f"   Possible InterfaceID column: '{col}'")
+                        logger.info(f"   Possible InterfaceID column: '{col}'")
                     elif 'physio' in col_lower or 'label' in col_lower:
-                        print(f"   Possible physio column: '{col}'")
+                        logger.info(f"   Possible physio column: '{col}'")
 
             # Parse into structured objects
-            print(f"\n=== PARSING PROTEIN INTERFACES ===")
+            logger.info(f"\n=== PARSING PROTEIN INTERFACES ===")
             interfaces = processor.parse_data()
 
             if interfaces and len(interfaces) > 0:
-                print(f"✅ Successfully parsed {len(interfaces)} protein interfaces!")
+                logger.info(f"✅ Successfully parsed {len(interfaces)} protein interfaces!")
 
                 # Show interface source statistics
                 qsalign_count = sum(1 for pi in interfaces if pi.interface_source == "QSalign")
                 protcid_count = sum(1 for pi in interfaces if pi.interface_source == "ProtCID")
                 other_count = len(interfaces) - qsalign_count - protcid_count
 
-                print(f"   Interface sources: QSalign={qsalign_count}, ProtCID={protcid_count}, Other={other_count}")
+                logger.info(f"   Interface sources: QSalign={qsalign_count}, ProtCID={protcid_count}, Other={other_count}")
 
                 # Show assembly checking status
                 if args.check_pdb_label or args.check_cif_label:
-                    print(f"\n=== ASSEMBLY CHAIN CHECKING ===")
+                    logger.info(f"\n=== ASSEMBLY CHAIN CHECKING ===")
                     if args.check_pdb_label and args.check_cif_label:
-                        print(f"   Checking both PDB and mmCIF assembly files")
+                        logger.info(f"   Checking both PDB and mmCIF assembly files")
                     elif args.check_pdb_label:
-                        print(f"   Checking PDB assembly files only")
+                        logger.info(f"   Checking PDB assembly files only")
                     elif args.check_cif_label:
-                        print(f"   Checking mmCIF assembly files only")
+                        logger.info(f"   Checking mmCIF assembly files only")
 
                     # Show sample of assembly chain updates
                     updated_interfaces = [pi for pi in interfaces if pi.LabelChain1 and pi.LabelChain2 and
                                          (pi.LabelChain1 != pi.AuthChain1 or pi.LabelChain2 != pi.AuthChain2)]
 
                     if updated_interfaces:
-                        print(f"   Found {len(updated_interfaces)} interfaces with updated chains")
+                        logger.info(f"   Found {len(updated_interfaces)} interfaces with updated chains")
                         for i, pi in enumerate(updated_interfaces[:3]):
-                            print(f"   Sample {i+1}: {pi.InterfaceID} - "
+                            logger.info(f"   Sample {i+1}: {pi.InterfaceID} - "
                                   f"Auth: {pi.AuthChain1}-{pi.AuthChain2} -> "
                                   f"Assembly: {pi.LabelChain1}-{pi.LabelChain2}")
                     else:
-                        print(f"   All interface chains match the assembly files")
+                        logger.info(f"   All interface chains match the assembly files")
 
                 # Fetch PDB metadata if enabled
                 if args.fetch_pdb_metadata:
-                    print(f"\n=== FETCHING PDB METADATA ===")
+                    logger.info(f"\n=== FETCHING PDB METADATA ===")
                     unique_pdbs = len(set(pi.ID for pi in interfaces))
-                    print(f"   Fetching metadata for {unique_pdbs} unique PDB structures...")
-                    print(f"   This includes ALL sequences from ALL chains for comprehensive analysis.")
+                    logger.info(f"   Fetching metadata for {unique_pdbs} unique PDB structures...")
+                    logger.info(f"   This includes ALL sequences from ALL chains for comprehensive analysis.")
 
                     # Fetch metadata for a sample first
                     sample_interfaces = interfaces[:min(3, len(interfaces))]
@@ -4697,186 +4494,186 @@ Settings:
                         metadata = processor.enrich_protein_with_pdb_metadata(interface)
                         structure_meta = metadata.get("structure_metadata", {})
                         if structure_meta.get("found_in_api"):
-                            print(f"   Sample {i+1}: {interface.ID}")
-                            print(f"     Resolution: {structure_meta.get('resolution')} Å")
-                            print(f"     Method: {structure_meta.get('experimental_method')}")
-                            print(f"     Chains: {structure_meta.get('chain_count', 0)} total")
-                            print(f"     Unique sequences: {structure_meta.get('unique_sequences', 0)}")
-                            print(f"     Homomer: {structure_meta.get('is_homomer', False)}")
+                            logger.info(f"   Sample {i+1}: {interface.ID}")
+                            logger.info(f"     Resolution: {structure_meta.get('resolution')} Å")
+                            logger.info(f"     Method: {structure_meta.get('experimental_method')}")
+                            logger.info(f"     Chains: {structure_meta.get('chain_count', 0)} total")
+                            logger.info(f"     Unique sequences: {structure_meta.get('unique_sequences', 0)}")
+                            logger.info(f"     Homomer: {structure_meta.get('is_homomer', False)}")
                             if structure_meta.get("source_organism"):
-                                print(f"     Organism(s): {', '.join(structure_meta['source_organism'][:2])}")
+                                logger.info(f"     Organism(s): {', '.join(structure_meta['source_organism'][:2])}")
                         else:
-                            print(f"   Sample {i+1}: {interface.ID} - Metadata not available")
+                            logger.info(f"   Sample {i+1}: {interface.ID} - Metadata not available")
 
-                    print(f"   Metadata will be cached and added to all protein objects")
+                    logger.info(f"   Metadata will be cached and added to all protein objects")
 
                 # Show cluster information if provided
                 if args.cluster:
-                    print(f"\n=== CLUSTER INFORMATION ===")
-                    print(f"   BLASTClust file: {args.cluster}")
-                    print(f"   BLASTClust options: -S 25 -L 0.5 -b F")
-                    print(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
-                    print(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
+                    logger.info(f"\n=== CLUSTER INFORMATION ===")
+                    logger.info(f"   BLASTClust file: {args.cluster}")
+                    logger.info(f"   BLASTClust options: -S 25 -L 0.5 -b F")
+                    logger.info(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
+                    logger.info(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
 
                     # Parse cluster file
                     if processor.cluster_processor:
                         if processor.cluster_processor.cluster_mapping:
                             cluster_stats = processor.cluster_processor.stats
-                            print(f"   Clusters parsed: {cluster_stats.get('clusters_processed', 0)}")
-                            print(f"   Total interfaces in clusters: {cluster_stats.get('total_interfaces_in_clusters', 0)}")
-                            print(f"   Clusters with single member: {cluster_stats.get('clusters_with_single_member', 0)}")
-                            print(f"   Clusters with multiple members: {cluster_stats.get('clusters_with_multiple_members', 0)}")
-                            print(f"   Largest cluster size: {cluster_stats.get('largest_cluster_size', 0)}")
+                            logger.info(f"   Clusters parsed: {cluster_stats.get('clusters_processed', 0)}")
+                            logger.info(f"   Total interfaces in clusters: {cluster_stats.get('total_interfaces_in_clusters', 0)}")
+                            logger.info(f"   Clusters with single member: {cluster_stats.get('clusters_with_single_member', 0)}")
+                            logger.info(f"   Clusters with multiple members: {cluster_stats.get('clusters_with_multiple_members', 0)}")
+                            logger.info(f"   Largest cluster size: {cluster_stats.get('largest_cluster_size', 0)}")
 
                             # Show cluster information for sample interfaces
                             interfaces_with_cluster = sum(1 for pi in interfaces if pi.cluster_id is not None)
-                            print(f"   Interfaces with cluster information: {interfaces_with_cluster}/{len(interfaces)} ({interfaces_with_cluster/len(interfaces)*100:.1f}%)")
+                            logger.info(f"   Interfaces with cluster information: {interfaces_with_cluster}/{len(interfaces)} ({interfaces_with_cluster/len(interfaces)*100:.1f}%)")
 
                             # Show sample clusters
                             sample_with_cluster = [pi for pi in interfaces[:5] if pi.cluster_id]
                             if sample_with_cluster:
-                                print(f"   Sample cluster assignments:")
+                                logger.info(f"   Sample cluster assignments:")
                                 for i, pi in enumerate(sample_with_cluster):
-                                    print(f"     {pi.InterfaceID} → Cluster: {pi.cluster_id}, Size: {pi.cluster_size}, Members: {len(pi.cluster_members) if pi.cluster_members else 0}")
+                                    logger.info(f"     {pi.InterfaceID} → Cluster: {pi.cluster_id}, Size: {pi.cluster_size}, Members: {len(pi.cluster_members) if pi.cluster_members else 0}")
                         else:
-                            print(f"   ⚠️  No cluster mapping found. Make sure the BLASTClust file was parsed successfully.")
+                            logger.info(f"   ⚠️  No cluster mapping found. Make sure the BLASTClust file was parsed successfully.")
                     else:
-                        print(f"   ⚠️  Cluster processor not initialized")
+                        logger.info(f"   ⚠️  Cluster processor not initialized")
 
                 # Show sample of the new structure
-                print(f"\n=== SAMPLE DATA STRUCTURE ===")
-                print(f"Schema: Dataset → Interface items → Protein objects")
+                logger.info(f"\n=== SAMPLE DATA STRUCTURE ===")
+                logger.info(f"Schema: Dataset → Interface items → Protein objects")
                 for i, interface in enumerate(interfaces[:3]):
-                    print(f"   Interface {i+1}: {interface.InterfaceID}")
-                    print(f"     Source: {interface.interface_source}")
-                    print(f"     Protein: {interface.ID}")
-                    print(f"     Chains: {interface.AuthChain1}-{interface.AuthChain2}")
+                    logger.info(f"   Interface {i+1}: {interface.InterfaceID}")
+                    logger.info(f"     Source: {interface.interface_source}")
+                    logger.info(f"     Protein: {interface.ID}")
+                    logger.info(f"     Chains: {interface.AuthChain1}-{interface.AuthChain2}")
                     if interface.LabelChain1 and interface.LabelChain2:
-                        print(f"     Assembly Chains: {interface.LabelChain1}-{interface.LabelChain2}")
-                    print(f"     Classification: {'Physiological' if interface.label == 1 else 'Non-physiological'}")
-                    print(f"     Features: physio={interface.physio}, bsa={interface.bsa}, contacts={interface.contacts}")
+                        logger.info(f"     Assembly Chains: {interface.LabelChain1}-{interface.LabelChain2}")
+                    logger.info(f"     Classification: {'Physiological' if interface.label == 1 else 'Non-physiological'}")
+                    logger.info(f"     Features: physio={interface.physio}, bsa={interface.bsa}, contacts={interface.contacts}")
                     if args.fetch_pdb_metadata:
                         metadata = processor.pdb_metadata_cache.get(interface.ID.upper(), {})
                         if metadata.get("found_in_api"):
-                            print(f"     PDB Metadata: {metadata.get('chain_count', 0)} chains, "
+                            logger.info(f"     PDB Metadata: {metadata.get('chain_count', 0)} chains, "
                                   f"{metadata.get('unique_sequences', 0)} unique seqs, "
                                   f"Homomer={metadata.get('is_homomer', False)}")
                     if interface.cluster_id:
-                        print(f"     Cluster: ID={interface.cluster_id}, Size={interface.cluster_size}, Members={len(interface.cluster_members) if interface.cluster_members else 0}")
+                        logger.info(f"     Cluster: ID={interface.cluster_id}, Size={interface.cluster_size}, Members={len(interface.cluster_members) if interface.cluster_members else 0}")
 
                 # Generate and save Bioschemas markup
-                print(f"\n=== GENERATING METADATA ===")
+                logger.info(f"\n=== GENERATING METADATA ===")
                 output_manifest = processor.save_bioschemas_markup(output_dir=args.output)
 
                 # Print summary statistics
                 stats = processor._generate_statistics()
-                print(f"\n=== DATASET STATISTICS ===")
-                print(f"   Total interfaces: {stats['total_entries']}")
-                print(f"   Unique proteins: {stats['unique_pdb_ids']}")
-                print(f"   Physiological interfaces (TRUE): {stats['physiological_count']}")
-                print(f"   Non-physiological interfaces (FALSE): {stats['non_physiological_count']}")
-                print(f"   Balance ratio: {stats['balance_ratio']:.2%} physiological")
-                print(f"   Proteins with multiple interfaces: {stats['proteins_with_multiple_interfaces']}")
-                print(f"   Average interfaces per protein: {stats.get('avg_interfaces_per_protein', 0):.2f}")
-                print(f"\n   Interface ID Sources:")
-                print(f"     QSalign format (PDBID_X): {stats.get('qsalign_count', 0)}")
-                print(f"     ProtCID integer: {stats.get('protcid_count', 0)}")
-                print(f"     Other formats: {stats.get('other_source_count', 0)}")
+                logger.info(f"\n=== DATASET STATISTICS ===")
+                logger.info(f"   Total interfaces: {stats['total_entries']}")
+                logger.info(f"   Unique proteins: {stats['unique_pdb_ids']}")
+                logger.info(f"   Physiological interfaces (TRUE): {stats['physiological_count']}")
+                logger.info(f"   Non-physiological interfaces (FALSE): {stats['non_physiological_count']}")
+                logger.info(f"   Balance ratio: {stats['balance_ratio']:.2%} physiological")
+                logger.info(f"   Proteins with multiple interfaces: {stats['proteins_with_multiple_interfaces']}")
+                logger.info(f"   Average interfaces per protein: {stats.get('avg_interfaces_per_protein', 0):.2f}")
+                logger.info(f"\n   Interface ID Sources:")
+                logger.info(f"     QSalign format (PDBID_X): {stats.get('qsalign_count', 0)}")
+                logger.info(f"     ProtCID integer: {stats.get('protcid_count', 0)}")
+                logger.info(f"     Other formats: {stats.get('other_source_count', 0)}")
 
                 if args.check_pdb_label or args.check_cif_label:
-                    print(f"\n=== ASSEMBLY CHAIN STATISTICS ===")
-                    print(f"   Interfaces with assembly chains: {stats.get('assembly_chains_updated', 0)} updated")
+                    logger.info(f"\n=== ASSEMBLY CHAIN STATISTICS ===")
+                    logger.info(f"   Interfaces with assembly chains: {stats.get('assembly_chains_updated', 0)} updated")
 
                 if args.fetch_pdb_metadata and processor.pdb_metadata_cache:
-                    print(f"\n=== PDB METADATA STATISTICS ===")
+                    logger.info(f"\n=== PDB METADATA STATISTICS ===")
                     successful_fetches = sum(1 for meta in processor.pdb_metadata_cache.values()
                                            if meta.get("found_in_api", False))
-                    print(f"   Structures with metadata: {successful_fetches}/{len(processor.pdb_metadata_cache)}")
+                    logger.info(f"   Structures with metadata: {successful_fetches}/{len(processor.pdb_metadata_cache)}")
 
                     total_chains = sum(meta.get("chain_count", 0) for meta in processor.pdb_metadata_cache.values())
                     total_sequences = sum(len(meta.get("sequences", {})) for meta in processor.pdb_metadata_cache.values())
                     unique_sequences = sum(meta.get("unique_sequences", 0) for meta in processor.pdb_metadata_cache.values())
                     homomeric_count = sum(1 for meta in processor.pdb_metadata_cache.values() if meta.get("is_homomer", False))
 
-                    print(f"   Total chains: {total_chains}")
-                    print(f"   Total sequences: {total_sequences}")
-                    print(f"   Unique sequences: {unique_sequences}")
-                    print(f"   Homomeric structures: {homomeric_count} ({homomeric_count/len(processor.pdb_metadata_cache)*100:.1f}%)")
+                    logger.info(f"   Total chains: {total_chains}")
+                    logger.info(f"   Total sequences: {total_sequences}")
+                    logger.info(f"   Unique sequences: {unique_sequences}")
+                    logger.info(f"   Homomeric structures: {homomeric_count} ({homomeric_count/len(processor.pdb_metadata_cache)*100:.1f}%)")
 
                     resolutions = [meta.get("resolution") for meta in processor.pdb_metadata_cache.values()
                                   if meta.get("resolution") is not None]
                     if resolutions:
-                        print(f"   Average resolution: {sum(resolutions)/len(resolutions):.2f} Å")
-                        print(f"   Resolution range: {min(resolutions):.2f}-{max(resolutions):.2f} Å")
+                        logger.info(f"   Average resolution: {sum(resolutions)/len(resolutions):.2f} Å")
+                        logger.info(f"   Resolution range: {min(resolutions):.2f}-{max(resolutions):.2f} Å")
 
                 if args.cluster and processor.cluster_processor and processor.cluster_processor.cluster_mapping:
-                    print(f"\n=== CLUSTER STATISTICS ===")
+                    logger.info(f"\n=== CLUSTER STATISTICS ===")
                     cluster_info = stats.get("cluster_info", {})
-                    print(f"   Interfaces with cluster information: {cluster_info.get('interfaces_with_cluster', 0)}/{len(interfaces)} ({cluster_info.get('coverage_percentage', 0):.1f}%)")
-                    print(f"   Total clusters: {cluster_info.get('total_clusters', 0)}")
-                    print(f"   Clusters with single member: {cluster_info.get('clusters_with_single_member', 0)}")
-                    print(f"   Clusters with multiple members: {cluster_info.get('clusters_with_multiple_members', 0)}")
-                    print(f"   Largest cluster size: {cluster_info.get('largest_cluster_size', 0)}")
-                    print(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
-                    print(f"   ClusterMethod: BLASTClust sequence clustering")
-                    print(f"   ClusterMethodOptions: -S 25 -L 0.5 -b F")
-                    print(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
-                    print(f"   Assignment method: Direct assignment from BLASTClust output during parsing")
+                    logger.info(f"   Interfaces with cluster information: {cluster_info.get('interfaces_with_cluster', 0)}/{len(interfaces)} ({cluster_info.get('coverage_percentage', 0):.1f}%)")
+                    logger.info(f"   Total clusters: {cluster_info.get('total_clusters', 0)}")
+                    logger.info(f"   Clusters with single member: {cluster_info.get('clusters_with_single_member', 0)}")
+                    logger.info(f"   Clusters with multiple members: {cluster_info.get('clusters_with_multiple_members', 0)}")
+                    logger.info(f"   Largest cluster size: {cluster_info.get('largest_cluster_size', 0)}")
+                    logger.info(f"   Cluster properties added: ClusterID, ClusterSize, ClusterMembers, ClusterMethod, ClusterMethodOptions")
+                    logger.info(f"   ClusterMethod: BLASTClust sequence clustering")
+                    logger.info(f"   ClusterMethodOptions: -S 25 -L 0.5 -b F")
+                    logger.info(f"   Cluster ID selection: First InterfaceID in each line becomes the ClusterID")
+                    logger.info(f"   Assignment method: Direct assignment from BLASTClust output during parsing")
 
-                print(f"\n=== GENERATED FILES ===")
-                print(f"   Dataset with Interfaces: {args.output}/dataset_with_interfaces.json")
-                print(f"   Interface-Protein Pairs: {args.output}/interface_protein_pairs/ (ALL {len(interfaces)} files)")
-                print(f"   FAIR Metadata Package: {args.output}/fair_metadata_package.json")
-                print(f"   HTML Snippet: {args.output}/embedded_markup.html")
+                logger.info(f"\n=== GENERATED FILES ===")
+                logger.info(f"   Dataset with Interfaces: {args.output}/dataset_with_interfaces.json")
+                logger.info(f"   Interface-Protein Pairs: {args.output}/interface_protein_pairs/ (ALL {len(interfaces)} files)")
+                logger.info(f"   FAIR Metadata Package: {args.output}/fair_metadata_package.json")
+                logger.info(f"   HTML Snippet: {args.output}/embedded_markup.html")
                 if args.fetch_pdb_metadata:
-                    print(f"   PDB Metadata Cache: {args.output}/pdb_metadata_cache.json")
-                print(f"   Manifest: {args.output}/manifest.json")
+                    logger.info(f"   PDB Metadata Cache: {args.output}/pdb_metadata_cache.json")
+                logger.info(f"   Manifest: {args.output}/manifest.json")
 
-                print(f"\n=== SCHEMA STRUCTURE ===")
-                print(f"   Dataset → hasPart → Interface items (ALL {len(interfaces)} interfaces)")
-                print(f"   Each Interface item → mainEntity → Protein object")
-                print(f"   Each Protein object represents a PDB structure (4 letters)")
-                print(f"   Each interface includes ALL features in additionalProperty")
+                logger.info(f"\n=== SCHEMA STRUCTURE ===")
+                logger.info(f"   Dataset → hasPart → Interface items (ALL {len(interfaces)} interfaces)")
+                logger.info(f"   Each Interface item → mainEntity → Protein object")
+                logger.info(f"   Each Protein object represents a PDB structure (4 letters)")
+                logger.info(f"   Each interface includes ALL features in additionalProperty")
                 if args.fetch_pdb_metadata:
-                    print(f"   Each protein includes comprehensive PDB metadata:")
-                    print(f"     - ALL chain sequences (not just representative)")
-                    print(f"     - Homomer detection and analysis")
-                    print(f"     - Sequence clusters and identity analysis")
-                    print(f"     - Resolution, organism, experimental method")
-                    print(f"     - Complete structural metadata")
+                    logger.info(f"   Each protein includes comprehensive PDB metadata:")
+                    logger.info(f"     - ALL chain sequences (not just representative)")
+                    logger.info(f"     - Homomer detection and analysis")
+                    logger.info(f"     - Sequence clusters and identity analysis")
+                    logger.info(f"     - Resolution, organism, experimental method")
+                    logger.info(f"     - Complete structural metadata")
                 if args.check_pdb_label or args.check_cif_label:
-                    print(f"   Assembly chain validation: Enabled")
-                    print(f"     - Checks actual chains in structure files")
-                    print(f"     - Updates LabelChain1 and LabelChain2 fields")
-                    print(f"     - Logs chain mismatches")
+                    logger.info(f"   Assembly chain validation: Enabled")
+                    logger.info(f"     - Checks actual chains in structure files")
+                    logger.info(f"     - Updates LabelChain1 and LabelChain2 fields")
+                    logger.info(f"     - Logs chain mismatches")
                 if args.cluster:
-                    print(f"   Cluster information: Included")
-                    print(f"     - ClusterID: Direct assignment from BLASTClust output")
-                    print(f"     - ClusterSize: Number of interfaces in the cluster")
-                    print(f"     - ClusterMembers: List of other interfaces (for multi-member clusters)")
-                    print(f"     - ClusterMethod: BLASTClust sequence clustering")
-                    print(f"     - ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)")
+                    logger.info(f"   Cluster information: Included")
+                    logger.info(f"     - ClusterID: Direct assignment from BLASTClust output")
+                    logger.info(f"     - ClusterSize: Number of interfaces in the cluster")
+                    logger.info(f"     - ClusterMembers: List of other interfaces (for multi-member clusters)")
+                    logger.info(f"     - ClusterMethod: BLASTClust sequence clustering")
+                    logger.info(f"     - ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)")
 
                 # Warning for very large datasets
                 if len(interfaces) > 1000:
-                    print(f"\n⚠️  NOTE: The dataset markup contains {len(interfaces)} interface items.")
-                    print(f"   This may result in a large JSON file ({len(interfaces)} * ~2KB ≈ {len(interfaces)*2/1024:.1f}MB).")
-                    print(f"   Consider using the aggregated protein schema for very large datasets.")
+                    logger.info(f"\n⚠️  NOTE: The dataset markup contains {len(interfaces)} interface items.")
+                    logger.info(f"   This may result in a large JSON file ({len(interfaces)} * ~2KB ≈ {len(interfaces)*2/1024:.1f}MB).")
+                    logger.info(f"   Consider using the aggregated protein schema for very large datasets.")
 
             else:
-                print(f"\n❌ ERROR: No interfaces were parsed!")
-                print(f"   Parsed {len(interfaces)} interfaces")
-                print(f"\n   Possible issues:")
-                print(f"   1. Column names don't match expected patterns")
-                print(f"   2. CSV separator is incorrect")
-                print(f"   3. Data format is unexpected")
-                print(f"\n   Try running with:")
-                print(f"      python {__file__} --test (to inspect CSV)")
-                print(f"      python {__file__} --auto-detect (to auto-detect separator)")
-                print(f"      python {__file__} --separator \"\\t\" (try tab separator)")
+                logger.info(f"\n❌ ERROR: No interfaces were parsed!")
+                logger.info(f"   Parsed {len(interfaces)} interfaces")
+                logger.info(f"\n   Possible issues:")
+                logger.info(f"   1. Column names don't match expected patterns")
+                logger.info(f"   2. CSV separator is incorrect")
+                logger.info(f"   3. Data format is unexpected")
+                logger.info(f"\n   Try running with:")
+                logger.info(f"      python {__file__} --test (to inspect CSV)")
+                logger.info(f"      python {__file__} --auto-detect (to auto-detect separator)")
+                logger.info(f"      python {__file__} --separator \"\\t\" (try tab separator)")
 
     except Exception as e:
-        print(f"\n❌ ERROR in main execution: {e}")
+        logger.info(f"\n❌ ERROR in main execution: {e}")
         import traceback
         traceback.print_exc()
 
