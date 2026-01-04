@@ -1420,7 +1420,9 @@ class FAIRVisualizer:
             <!-- Header - Matching index.html -->
             <header>
                     <div class="header-content">
-                        <h1>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Dashboard</h1>
+                        <h3 style="color:white"><strong>ELIXIR Protein-Protein Interaction 
+                          Benchmark</strong></h3>
+                        <h1><strong>FAIR Analysis Dashboard</strong></h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
                         <a href="index.html" class="back-link">
