@@ -13,8 +13,6 @@
             --light-bg: #f8f9fa;
             --success-color: #27ae60;
             --warning-color: #f39c12;
-            --ml-color: #9b59b6;
-            --pdb-color: #e67e22;
         }
         
         * {
@@ -32,13 +30,13 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
-        /* Header */
+        /* Header - Matching index.html */
         header {
-            background: linear-gradient(135deg, var(--ml-color), #8e44ad);
+            background: linear-gradient(135deg, var(--primary-color), #1a252f);
             color: white;
             padding: 50px 0;
             text-align: center;
@@ -94,28 +92,28 @@
         }
         
         .badge.ml {
-            background: linear-gradient(135deg, var(--ml-color), #8e44ad);
+            background: linear-gradient(135deg, var(--secondary-color), #2980b9);
             color: white;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
         }
         
         .badge.cv {
-            background-color: #3498db;
+            background: linear-gradient(135deg, var(--success-color), #219653);
             color: white;
         }
         
         .badge.pdb {
-            background: linear-gradient(135deg, var(--pdb-color), #d35400);
+            background: linear-gradient(135deg, var(--warning-color), #d68910);
             color: white;
         }
         
         .badge.biopython {
-            background-color: #27ae60;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
         }
         
         .badge.sklearn {
-            background-color: #f39c12;
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
             color: white;
         }
         
@@ -124,7 +122,7 @@
             color: white;
         }
         
-        .quick-link {
+        .dashboard-link {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -136,16 +134,16 @@
             font-weight: 600;
             transition: all 0.3s ease;
             border: 2px solid rgba(255,255,255,0.3);
-            margin: 10px 5px;
+            margin-top: 20px;
         }
         
-        .quick-link:hover {
+        .dashboard-link:hover {
             background-color: rgba(255,255,255,0.25);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        /* Section Cards */
+        /* Section Cards - Matching index.html */
         .section {
             background-color: white;
             margin: 30px 0;
@@ -153,18 +151,6 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-left: 5px solid var(--secondary-color);
-        }
-        
-        .section.ml {
-            border-left-color: var(--ml-color);
-        }
-        
-        .section.pdb {
-            border-left-color: var(--pdb-color);
-        }
-        
-        .section.cv {
-            border-left-color: #3498db;
         }
         
         h2 {
@@ -177,11 +163,8 @@
         }
         
         h2::before {
-            font-size: 1.5rem;
-        }
-        
-        h2.ml::before {
             content: "🤖";
+            font-size: 1.5rem;
         }
         
         h2.pdb::before {
@@ -196,17 +179,14 @@
             content: "🚀";
         }
         
+        h2.output::before {
+            content: "📁";
+        }
+        
         h3 {
             color: var(--primary-color);
             margin: 20px 0 10px;
             font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        h3::before {
-            font-size: 1.1rem;
         }
         
         /* Tables */
@@ -251,15 +231,7 @@
             padding: 20px;
             background-color: #f8f9fa;
             border-radius: 8px;
-            border-left: 4px solid var(--ml-color);
-        }
-        
-        .feature-box.pdb {
-            border-left-color: var(--pdb-color);
-        }
-        
-        .feature-box.cv {
-            border-left-color: #3498db;
+            border-left: 4px solid var(--secondary-color);
         }
         
         .feature-list li {
@@ -292,14 +264,6 @@
             border-left: 4px solid var(--secondary-color);
             white-space: pre-wrap;
             word-wrap: break-word;
-        }
-        
-        pre.ml-code {
-            border-left-color: var(--ml-color);
-        }
-        
-        pre.pdb-code {
-            border-left-color: var(--pdb-color);
         }
         
         /* Workflow visualization */
@@ -344,6 +308,39 @@
             align-items: center;
             color: var(--secondary-color);
             font-size: 1.5rem;
+        }
+        
+        /* Output preview */
+        .output-preview {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .output-line {
+            margin: 2px 0;
+        }
+        
+        .output-info {
+            color: #3498db;
+        }
+        
+        .output-success {
+            color: #27ae60;
+        }
+        
+        .output-warning {
+            color: #f39c12;
+        }
+        
+        .output-error {
+            color: #e74c3c;
         }
         
         /* Footer */
@@ -414,15 +411,15 @@
         }
         
         .model-card.rf {
-            border-top-color: #27ae60;
+            border-top-color: var(--secondary-color);
         }
         
         .model-card.svm {
-            border-top-color: #3498db;
+            border-top-color: var(--success-color);
         }
         
         .model-card.lr {
-            border-top-color: #9b59b6;
+            border-top-color: var(--warning-color);
         }
         
         /* Responsive */
@@ -483,7 +480,9 @@
                     <span class="badge pdb">Structural Feature Extraction</span>
                     <span class="badge biopython">BioPython Integration</span>
                     <span class="badge sklearn">Scikit-learn</span>
-                    <span class="badge github">Open Source</span>
+                    <a href="index.html" class="badge github">
+                        <i class="fas fa-home"></i> Main FAIR Page
+                    </a>
                 </div>
                 
                 <p style="margin: 25px 0; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -491,14 +490,17 @@
                 </p>
                 
                 <div>
-                    <a href="#quick-start" class="quick-link">
+                    <a href="#quick-start" class="dashboard-link">
                         <i class="fas fa-rocket"></i> Quick Start
                     </a>
-                    <a href="#workflow" class="quick-link">
-                        <i class="fas fa-project-diagram"></i> Workflow
+                    <a href="#output-example" class="dashboard-link">
+                        <i class="fas fa-eye"></i> Example Output
                     </a>
-                    <a href="#examples" class="quick-link">
+                    <a href="#examples" class="dashboard-link">
                         <i class="fas fa-code"></i> Examples
+                    </a>
+                    <a href="index.html" class="dashboard-link" style="background-color: rgba(255,255,255,0.25);">
+                        <i class="fas fa-arrow-left"></i> Back to FAIR Metadata
                     </a>
                 </div>
             </div>
@@ -506,8 +508,8 @@
 
         <main>
             <!-- Overview -->
-            <section class="section ml">
-                <h2 class="ml">Script Overview</h2>
+            <section class="section">
+                <h2>Script Overview</h2>
                 <p>The <code>ppi_ml_croissant.py</code> script provides an end-to-end machine learning pipeline for protein-protein interaction (PPI) classification. It combines:</p>
                 
                 <div class="model-cards">
@@ -575,6 +577,132 @@ python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --
 
 # Train/test split instead of CV
 python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></pre>
+            </section>
+
+            <!-- Output Example -->
+            <section class="section" id="output-example">
+                <h2 class="output">Example Output</h2>
+                
+                <h3>Typical Console Output</h3>
+                <div class="output-preview">
+                    <div class="output-line">╔════════════════════════════════════════════════════════════╗</div>
+                    <div class="output-line">║  Protein Interaction ML Classifier                         ║</div>
+                    <div class="output-line">║  with GroupKFold Cross-Validation                          ║</div>
+                    <div class="output-line">║  and Interface Structural Feature Extraction (10Å distance)║</div>
+                    <div class="output-line">╚════════════════════════════════════════════════════════════╝</div>
+                    <div class="output-line"></div>
+                    <div class="output-line output-info">INFO: Using local directory: ./bioschemas_output</div>
+                    <div class="output-line output-info">INFO: Output directory: ./ml_results</div>
+                    <div class="output-line"></div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line">Step 1: Loading Croissant dataset</div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line output-success">INFO: Dataset loaded successfully!</div>
+                    <div class="output-line output-info">INFO: Number of interfaces: 1677</div>
+                    <div class="output-line"></div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line">Step 2: Extracting features, labels, and ClusterIDs</div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line output-success">INFO: Successfully extracted 1677 samples</div>
+                    <div class="output-line output-info">INFO: Class distribution:</div>
+                    <div class="output-line output-info">INFO:   Physiological (1): 844 samples</div>
+                    <div class="output-line output-info">INFO:   Non-physiological (0): 833 samples</div>
+                    <div class="output-line"></div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line">Step 4: Extracting Structural Features</div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line output-info">INFO: Using 1200 available interface structure files</div>
+                    <div class="output-line output-info">INFO: File format: mmCIF (default)</div>
+                    <div class="output-line output-info">INFO: Local directory: ./structure_files</div>
+                    <div class="output-line output-success">INFO: Successfully extracted structural features for 1150 interfaces</div>
+                    <div class="output-line"></div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line">Step 8: Training and evaluating models</div>
+                    <div class="output-line">============================================================</div>
+                    <div class="output-line output-info">INFO: --- Training Random Forest with GroupKFold CV ---</div>
+                    <div class="output-line output-info">INFO:   CV Results for Random Forest:</div>
+                    <div class="output-line output-success">INFO:     Average Accuracy:  0.827 (±0.012)</div>
+                    <div class="output-line output-success">INFO:     Average Precision: 0.831 (±0.015)</div>
+                    <div class="output-line output-success">INFO:     Average Recall:    0.824 (±0.018)</div>
+                    <div class="output-line output-success">INFO:     Average F1-Score:  0.827 (±0.013)</div>
+                    <div class="output-line output-success">INFO:     Average ROC-AUC:   0.898 (±0.008)</div>
+                    <div class="output-line"></div>
+                    <div class="output-line output-success">INFO: ✅ Best model: Random Forest (Average F1-Score: 0.827)</div>
+                </div>
+                
+                <h3>Generated Files Structure</h3>
+                <pre><code>ml_results/
+├── group_kfold_cv_results.json          # Complete ML results with all metrics
+├── structural_features.csv              # Extracted PDB/mmCIF interface features
+├── feature_evaluation_report.json       # Comprehensive feature analysis
+├── group_kfold_cv_results.png           # CV performance visualization
+├── feature_evaluation_plots.png         # Feature analysis visualizations
+├── feature_importance.png               # Feature importance ranking
+└── feature_ranking_analysis.png         # Comparison of feature ranking methods</code></pre>
+                
+                <h3>Example JSON Output (group_kfold_cv_results.json)</h3>
+                <pre><code>{
+  "Random Forest": {
+    "cv_metrics": {
+      "accuracy": 0.827,
+      "precision": 0.831,
+      "recall": 0.824,
+      "f1": 0.827,
+      "roc_auc": 0.898
+    },
+    "overall_metrics": {
+      "accuracy": 0.829,
+      "precision": 0.833,
+      "recall": 0.826,
+      "f1": 0.829,
+      "roc_auc": 0.901
+    },
+    "fold_metrics": {
+      "accuracies": [0.819, 0.831, 0.825, 0.834, 0.826],
+      "precisions": [0.822, 0.836, 0.828, 0.839, 0.830],
+      "recalls": [0.816, 0.830, 0.822, 0.833, 0.825],
+      "f1_scores": [0.819, 0.833, 0.825, 0.836, 0.827],
+      "roc_aucs": [0.895, 0.901, 0.897, 0.903, 0.894]
+    }
+  },
+  "cross_validation_settings": {
+    "n_splits": 5,
+    "method": "GroupKFold cross-validation (ClusterID as groups)",
+    "random_state": 42,
+    "best_model": "Random Forest"
+  }
+}</code></pre>
+                
+                <h3>Visual Output Example</h3>
+                <div style="text-align: center; margin: 25px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+                    <p style="margin-bottom: 15px; font-style: italic;">The script generates comprehensive visualizations:</p>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 15px;">
+                        <div style="text-align: center;">
+                            <div style="width: 120px; height: 90px; background: linear-gradient(135deg, #3498db, #2980b9); border-radius: 8px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                📈
+                            </div>
+                            <p><strong>ROC Curves</strong><br>Model discrimination</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 120px; height: 90px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 8px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                📊
+                            </div>
+                            <p><strong>Confusion Matrices</strong><br>Error analysis</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 120px; height: 90px; background: linear-gradient(135deg, #27ae60, #219653); border-radius: 8px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                🔍
+                            </div>
+                            <p><strong>Feature Importance</strong><br>Key predictors</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 120px; height: 90px; background: linear-gradient(135deg, #9b59b6, #8e44ad); border-radius: 8px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                                🎯
+                            </div>
+                            <p><strong>PCA Analysis</strong><br>Dimensionality reduction</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Workflow -->
@@ -718,10 +846,10 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
             </section>
 
             <!-- Structural Feature Extraction -->
-            <section class="section pdb">
+            <section class="section">
                 <h2 class="pdb">Structural Feature Extraction</h2>
                 
-                <div class="feature-box pdb">
+                <div class="feature-box">
                     <h4>What it extracts:</h4>
                     <ul class="feature-list">
                         <li><strong>Interface Residues</strong>: Unique residues per chain within 10Å of the other chain</li>
@@ -733,7 +861,7 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
                 </div>
                 
                 <h3>File Handling Features</h3>
-                <pre class="pdb-code"><code># BioPython can parse gzipped files directly - no decompression needed!
+                <pre><code># BioPython can parse gzipped files directly - no decompression needed!
 - 1abc.pdb.gz    → Direct parsing
 - 1abc.cif.gz    → Direct parsing
 - 1abc.pdb       → Regular parsing
@@ -744,19 +872,17 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
 - 1abc.pdb.gz    → Lowercase PDB ID
 - MixedCase.pdb.gz → Automatic detection</code></pre>
                 
-                <h3>Biological Assembly Generation</h3>
-                <p>For monomer mmCIF files, the script automatically:</p>
-                <ol>
-                    <li>Parses mmCIF metadata to find assembly information</li>
-                    <li>Generates biological assemblies using transformation matrices</li>
-                    <li>Handles label_asym_id ↔ auth_asym_id mappings</li>
-                    <li>Creates unique chain IDs for assembly copies</li>
-                </ol>
+                <h3>Example Structural Features Output</h3>
+                <pre><code>interface_id,extraction_success,pdb_file,chain_ids,pdb_avg_total_interface_residues,...
+1ABC_1,True,1abc.cif.gz,A-B,24.5,...
+1DEF_1,True,1def.pdb.gz,C-D,18.2,...
+2GHI_1,False,2ghi.cif.gz,E-F,NaN,...  # Extraction failed
+3JKL_1,True,3jkl.cif.gz,G-H,32.1,...</code></pre>
             </section>
 
             <!-- Machine Learning Models -->
-            <section class="section ml">
-                <h2 class="ml">Machine Learning Models</h2>
+            <section class="section">
+                <h2>Machine Learning Models</h2>
                 
                 <div class="model-cards">
                     <div class="model-card rf">
@@ -790,50 +916,52 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
                     </div>
                 </div>
                 
-                <h3>Evaluation Metrics</h3>
+                <h3>Typical Performance Metrics (Example Output)</h3>
                 <table>
                     <thead>
                         <tr>
-                            <th>Metric</th>
-                            <th>Description</th>
-                            <th>Importance</th>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                            <th>ROC-AUC</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Accuracy</strong></td>
-                            <td>Overall correctness</td>
-                            <td>General performance</td>
+                            <td><strong>Random Forest</strong></td>
+                            <td>0.827</td>
+                            <td>0.831</td>
+                            <td>0.824</td>
+                            <td>0.827</td>
+                            <td>0.898</td>
                         </tr>
                         <tr>
-                            <td><strong>Precision</strong></td>
-                            <td>True positives / (True + False positives)</td>
-                            <td>Avoid false positives</td>
+                            <td>Support Vector Machine</td>
+                            <td>0.812</td>
+                            <td>0.818</td>
+                            <td>0.807</td>
+                            <td>0.812</td>
+                            <td>0.885</td>
                         </tr>
                         <tr>
-                            <td><strong>Recall</strong></td>
-                            <td>True positives / (True positives + False negatives)</td>
-                            <td>Find all positives</td>
-                        </tr>
-                        <tr>
-                            <td><strong>F1-Score</strong></td>
-                            <td>Harmonic mean of precision and recall</td>
-                            <td>Balanced metric</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ROC-AUC</strong></td>
-                            <td>Area under ROC curve</td>
-                            <td>Overall discriminative ability</td>
+                            <td>Logistic Regression</td>
+                            <td>0.798</td>
+                            <td>0.804</td>
+                            <td>0.793</td>
+                            <td>0.798</td>
+                            <td>0.872</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <!-- GroupKFold Cross-Validation -->
-            <section class="section cv">
+            <section class="section">
                 <h2 class="cv">GroupKFold Cross-Validation</h2>
                 
-                <div class="feature-box cv">
+                <div class="feature-box">
                     <h4>Why GroupKFold for PPI data?</h4>
                     <ul class="feature-list">
                         <li><strong>Prevents Data Leakage</strong>: Interfaces from the same sequence cluster are highly similar</li>
@@ -843,123 +971,29 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
                     </ul>
                 </div>
                 
-                <h3>Example: 5-Fold GroupKFold</h3>
-                <pre class="ml-code"><code># Original data (simplified)
-ClusterID: A, A, A, B, B, C, C, C, C, D
-Interface: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-
-# GroupKFold ensures:
-- Fold 1: Cluster A (interfaces 1,2,3) in test, others in train
-- Fold 2: Cluster B (interfaces 4,5) in test, others in train
-- Fold 3: Cluster C (interfaces 6,7,8,9) in test, others in train
-- Fold 4: Cluster D (interface 10) in test, others in train
-
-# No cluster appears in both train and test sets!</code></pre>
-            </section>
-
-            <!-- Feature Evaluation -->
-            <section class="section">
-                <h2>Comprehensive Feature Evaluation</h2>
-                
-                <h3>What's analyzed:</h3>
-                <div class="model-cards">
-                    <div class="model-card">
-                        <h4><i class="fas fa-search"></i> Statistical Analysis</h4>
-                        <ul>
-                            <li>Basic statistics (mean, std, min, max)</li>
-                            <li>Skewness and kurtosis</li>
-                            <li>Missing value patterns</li>
-                            <li>Unique value counts</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="model-card">
-                        <h4><i class="fas fa-link"></i> Correlation Analysis</h4>
-                        <ul>
-                            <li>Feature correlation matrix</li>
-                            <li>Highly correlated pairs (>0.8)</li>
-                            <li>Multicollinearity detection</li>
-                            <li>Heatmap visualization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="model-card">
-                        <h4><i class="fas fa-chart-bar"></i> Feature Importance</h4>
-                        <ul>
-                            <li>ANOVA F-values</li>
-                            <li>Mutual information scores</li>
-                            <li>Random Forest importance</li>
-                            <li>Logistic Regression coefficients</li>
-                        </ul>
-                    </div>
+                <h3>Example Console Output for GroupKFold</h3>
+                <div class="output-preview">
+                    <div class="output-line output-info">INFO: === CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===</div>
+                    <div class="output-line output-info">INFO:    Number of folds: 5</div>
+                    <div class="output-line output-info">INFO:    Using ClusterID as groups to ensure same-cluster samples stay together</div>
+                    <div class="output-line"></div>
+                    <div class="output-line output-info">INFO:    Split analysis:</div>
+                    <div class="output-line output-info">INFO:    Fold 1:</div>
+                    <div class="output-line output-info">INFO:      Training: 1342 samples, 242 unique clusters, 678 physio (50.5%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  335 samples, 61 unique clusters, 166 physio (49.6%)</div>
+                    <div class="output-line output-info">INFO:    Fold 2:</div>
+                    <div class="output-line output-info">INFO:      Training: 1341 samples, 241 unique clusters, 675 physio (50.3%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  336 samples, 62 unique clusters, 169 physio (50.3%)</div>
+                    <div class="output-line output-success">INFO:    No clusters appear in both train and test sets</div>
                 </div>
-                
-                <h3>Principal Component Analysis (PCA)</h3>
-                <pre><code># PCA helps understand:
-- How many components explain 95% variance
-- Which features contribute most to each component
-- Dimensionality reduction potential
-- Data structure visualization</code></pre>
-            </section>
-
-            <!-- Output Files -->
-            <section class="section">
-                <h2>Output Files Generated</h2>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>File</th>
-                            <th>Description</th>
-                            <th>Format</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>group_kfold_cv_results.json</code></td>
-                            <td>Complete ML results with all metrics</td>
-                            <td>JSON</td>
-                        </tr>
-                        <tr>
-                            <td><code>structural_features.csv</code></td>
-                            <td>Extracted PDB/mmCIF interface features</td>
-                            <td>CSV</td>
-                        </tr>
-                        <tr>
-                            <td><code>feature_evaluation_report.json</code></td>
-                            <td>Comprehensive feature analysis</td>
-                            <td>JSON</td>
-                        </tr>
-                        <tr>
-                            <td><code>group_kfold_cv_results.png</code></td>
-                            <td>CV performance visualization</td>
-                            <td>PNG</td>
-                        </tr>
-                        <tr>
-                            <td><code>feature_evaluation_plots.png</code></td>
-                            <td>Feature analysis visualizations</td>
-                            <td>PNG</td>
-                        </tr>
-                        <tr>
-                            <td><code>feature_importance.png</code></td>
-                            <td>Feature importance ranking</td>
-                            <td>PNG</td>
-                        </tr>
-                        <tr>
-                            <td><code>feature_ranking_analysis.png</code></td>
-                            <td>Comparison of feature ranking methods</td>
-                            <td>PNG</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
 
             <!-- Examples Section -->
             <section class="section" id="examples">
                 <h2 class="usage">Complete Examples</h2>
                 
-                <h3>Example 1: Full ML Pipeline</h3>
-                <pre class="ml-code"><code># Run complete ML pipeline with structural features
+                <h3>Example 1: Full ML Pipeline with Structural Features</h3>
+                <pre><code># Run complete ML pipeline with structural features
 python ppi_ml_croissant.py \
   --local ./bioschemas_output \
   --extract-pdb-features \
@@ -973,194 +1007,84 @@ python ppi_ml_croissant.py \
   --random-state 123 \
   --log-level INFO
 
-# This will:
-# 1. Load dataset from local bioschemas_output
-# 2. Extract PDB features from ./structures/*.pdb.gz
-# 3. Evaluate all features (correlation, importance, PCA)
-# 4. Train with 5-fold GroupKFold CV
-# 5. Save all results to ./full_ml_run/
-# 6. Generate visualizations and reports</code></pre>
+# Expected output in ./full_ml_run:
+# - group_kfold_cv_results.json      # JSON results
+# - structural_features.csv          # PDB features
+# - feature_evaluation_report.json   # Feature analysis
+# - group_kfold_cv_results.png       # Main visualization
+# - 3-4 additional plot files        # Detailed analyses</code></pre>
                 
-                <h3>Example 2: Quick Analysis</h3>
-                <pre><code># Quick analysis for testing
+                <h3>Example 2: Quick Test Run</h3>
+                <pre><code># Quick analysis for testing (minimal output)
 python ppi_ml_croissant.py \
   --local ./bioschemas_output \
   --quick \
   --output-dir ./quick_test
 
-# Minimal output, fast execution
-# Good for testing dataset loading and basic functionality</code></pre>
+# Console output shows:
+# - Dataset statistics
+# - Best model performance
+# - Quick summary metrics
+# Generated files are minimal</code></pre>
                 
-                <h3>Example 3: Feature Evaluation Only</h3>
-                <pre><code># Just evaluate features without ML training
+                <h3>Example 3: Download Structure Files Only</h3>
+                <pre><code># Just download structure files without ML
 python ppi_ml_croissant.py \
   --local ./bioschemas_output \
-  --evaluate-features \
-  --feature-report-only \
-  --output-dir ./feature_analysis
+  --extract-pdb-features \
+  --pdb-features-only \
+  --pdb-local-dir ./structure_files
 
-# Generates feature_evaluation_report.json
-# and feature_evaluation_plots.png
-# No model training performed</code></pre>
+# Output shows:
+# - Files available locally
+# - Files downloaded
+# - Files missing
+# No ML training performed</code></pre>
             </section>
 
-            <!-- Requirements -->
+            <!-- Integration with Main FAIR Page -->
             <section class="section">
-                <h2>Requirements & Installation</h2>
+                <h2>Integration with ELIXIR FAIR Metadata</h2>
                 
-                <h3>Core Dependencies</h3>
-                <pre><code># Requirements file
-numpy>=1.21.0
-pandas>=1.3.0
-scikit-learn>=1.0.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-scipy>=1.7.0
-requests>=2.26.0
-biopython>=1.79  # For structural feature extraction</code></pre>
-                
-                <h3>Installation</h3>
-                <pre><code># Clone repository
-git clone https://github.com/biofold/ppi-benchmark-fair.git
-cd ppi-benchmark-fair
-
-# Install requirements
-pip install -r requirements.txt
-
-# For structural features, ensure BioPython is installed
-pip install biopython
-
-# Test the script
-python ppi_ml_croissant.py --help</code></pre>
-                
-                <h3>Data Preparation</h3>
-                <ol>
-                    <li>Ensure you have the Croissant-formatted dataset (<code>dataset_with_interfaces.json</code>)</li>
-                    <li>For structural features: download PDB/mmCIF files to a local directory</li>
-                    <li>Structure files can be gzipped (.pdb.gz, .cif.gz) for space efficiency</li>
-                    <li>BioPython parses gzipped files directly - no need to decompress</li>
-                </ol>
-            </section>
-
-            <!-- Troubleshooting -->
-            <section class="section">
-                <h2>Troubleshooting & Tips</h2>
-                
-                <h3>Common Issues</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Issue</th>
-                            <th>Solution</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>BioPython not available</td>
-                            <td><code>pip install biopython</code></td>
-                        </tr>
-                        <tr>
-                            <td>PDB files not found</td>
-                            <td>Check case sensitivity (try uppercase/lowercase)</td>
-                        </tr>
-                        <tr>
-                            <td>Memory issues with large datasets</td>
-                            <td>Use <code>--quick</code> mode or reduce feature count</td>
-                        </tr>
-                        <tr>
-                            <td>Slow structural feature extraction</td>
-                            <td>Files are automatically cached after first extraction</td>
-                        </tr>
-                        <tr>
-                            <td>ClusterID missing in some interfaces</td>
-                            <td>Script handles missing ClusterIDs gracefully</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>Performance Tips</h3>
-                <ul>
-                    <li><strong>Use gzipped files</strong>: Saves disk space and BioPython reads them directly</li>
-                    <li><strong>Case sensitivity</strong>: The script tries both uppercase and lowercase variants</li>
-                    <li><strong>Caching</strong>: Structural features are cached to avoid re-extraction</li>
-                    <li><strong>Parallel processing</strong>: Consider implementing multiprocessing for large datasets</li>
-                    <li><strong>Feature selection</strong>: Use <code>--evaluate-features</code> to identify important features</li>
-                </ul>
-            </section>
-
-            <!-- Use Cases -->
-            <section class="section">
-                <h2>Use Cases & Applications</h2>
-                
-                <div class="model-cards">
-                    <div class="model-card">
-                        <h4><i class="fas fa-flask"></i> Research</h4>
-                        <ul>
-                            <li>Benchmark new ML algorithms for PPI prediction</li>
-                            <li>Compare structural vs. sequence features</li>
-                            <li>Study interface residue patterns</li>
-                            <li>Validate new feature extraction methods</li>
-                        </ul>
+                <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #2c3e50; margin-top: 0;">
+                        <i class="fas fa-link"></i> Connection to Main FAIR Metadata
+                    </h3>
+                    <p>This ML pipeline directly uses the <strong>FAIR-compliant metadata</strong> generated by the main ELIXIR PPI benchmark repository:</p>
+                    
+                    <div class="model-cards">
+                        <div class="model-card" style="border-top-color: #3498db;">
+                            <h4><i class="fas fa-database"></i> Data Source</h4>
+                            <p>Reads <code>dataset_with_interfaces.json</code> from the FAIR metadata output</p>
+                            <a href="index.html#metadata-architecture" style="display: inline-block; margin-top: 10px; color: #3498db; text-decoration: none;">
+                                <i class="fas fa-external-link-alt"></i> View metadata structure
+                            </a>
+                        </div>
+                        
+                        <div class="model-card" style="border-top-color: #27ae60;">
+                            <h4><i class="fas fa-tags"></i> Cluster Information</h4>
+                            <p>Uses BLASTClust <code>ClusterID</code> for GroupKFold validation</p>
+                            <a href="index.html#sequence-clustering-information" style="display: inline-block; margin-top: 10px; color: #27ae60; text-decoration: none;">
+                                <i class="fas fa-external-link-alt"></i> View clustering details
+                            </a>
+                        </div>
+                        
+                        <div class="model-card" style="border-top-color: #9b59b6;">
+                            <h4><i class="fas fa-code"></i> Croissant Format</h4>
+                            <p>Leverages MLCommons Croissant 1.0 standard for ML readiness</p>
+                            <a href="index.html#overview" style="display: inline-block; margin-top: 10px; color: #9b59b6; text-decoration: none;">
+                                <i class="fas fa-external-link-alt"></i> View Croissant compliance
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="model-card">
-                        <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-                        <ul>
-                            <li>Teaching machine learning for bioinformatics</li>
-                            <li>Examples of proper cross-validation</li>
-                            <li>Structural bioinformatics workflows</li>
-                            <li>FAIR data practices in practice</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="model-card">
-                        <h4><i class="fas fa-industry"></i> Industry</h4>
-                        <ul>
-                            <li>Drug target identification</li>
-                            <li>Protein engineering</li>
-                            <li>Biotherapeutic development</li>
-                            <li>Quality control for structural predictions</li>
-                        </ul>
+                    <div style="text-align: center; margin-top: 25px; padding: 15px; background-color: white; border-radius: 8px;">
+                        <p style="margin-bottom: 15px;"><strong>Complete FAIR ML Workflow:</strong></p>
+                        <div style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-arrow-right"></i> FAIR Metadata → ML Pipeline → Research Insights
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Integration -->
-            <section class="section">
-                <h2>Integration with Other Tools</h2>
-                
-                <h3>Python API</h3>
-                <pre><code>import json
-from ppi_ml_croissant import ProteinInteractionClassifier, CroissantDatasetLoader
-
-# Load dataset programmatically
-loader = CroissantDatasetLoader("./bioschemas_output")
-loader.load_dataset()
-features_df, labels, cluster_ids = loader.extract_features_labels()
-
-# Initialize classifier
-classifier = ProteinInteractionClassifier(random_state=42, n_splits=5)
-
-# Train with cross-validation
-results = classifier.train_with_cross_validation(
-    features_df, labels, cluster_ids
-)
-
-# Access results
-print(f"Best model: {classifier.best_model_name}")
-print(f"CV F1-score: {results[classifier.best_model_name]['cv_metrics']['f1']:.4f}")</code></pre>
-                
-                <h3>Jupyter Notebook Integration</h3>
-                <pre><code># In Jupyter notebook
-%matplotlib inline
-from IPython.display import display, HTML
-
-# Run pipeline
-!python ppi_ml_croissant.py --local ./data --quick
-
-# Display results
-display(HTML("&lt;h3&gt;ML Pipeline Results&lt;/h3&gt;"))
-display(HTML("&lt;img src='./quick_test/group_kfold_cv_results.png' width='800'&gt;"))</code></pre>
             </section>
         </main>
 
@@ -1171,17 +1095,17 @@ display(HTML("&lt;img src='./quick_test/group_kfold_cv_results.png' width='800'&
                 <p>Advanced ML for protein-protein interaction prediction with FAIR data practices</p>
                 
                 <div class="footer-links">
-                    <a href="../index.html" class="footer-link">
+                    <a href="index.html" class="footer-link">
                         <i class="fas fa-home"></i> Main FAIR Metadata Page
                     </a>
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
                         <i class="fab fa-github"></i> Repository
                     </a>
-                    <a href="https://scikit-learn.org/" class="footer-link" target="_blank">
-                        <i class="fas fa-cogs"></i> Scikit-learn
+                    <a href="#output-example" class="footer-link">
+                        <i class="fas fa-eye"></i> Example Output
                     </a>
-                    <a href="https://biopython.org/" class="footer-link" target="_blank">
-                        <i class="fas fa-dna"></i> BioPython
+                    <a href="#quick-start" class="footer-link">
+                        <i class="fas fa-rocket"></i> Quick Start
                     </a>
                 </div>
                 
