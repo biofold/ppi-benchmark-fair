@@ -1421,7 +1421,7 @@ class FAIRVisualizer:
             <!-- Header - Matching index.html -->
             <header>
                     <div class="header-content">
-                        <h3 style="color:white"><strong>ELIXIR Protein-Protein Interaction 
+                        <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
                           Benchmark</strong></h3>
                         <h1><strong>FAIR Analysis Dashboard</strong></h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
@@ -2711,11 +2711,12 @@ class FAIRVisualizer:
                 
                 /* Footer - Matching fair_dashboard.html */
                 footer {{
-                    background-color: var(--primary-color);
+                    background-color: #386277;
                     color: white;
-                    padding: 50px 0;
+                    padding: 20px 0;
                     text-align: center;
                     margin-top: 60px;
+                    border-radius: 12px;
                 }}
                 
                 .footer-content {{
