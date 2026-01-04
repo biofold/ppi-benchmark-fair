@@ -8,8 +8,8 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
                 :root {
-                    --primary-color: #4689a3; /* #2c3e50; */
-                    --secondary-color: #3498db;
+                    --primary-color: #2c3e50; 
+                    --secondary-color: #4689a3; /* #3498db; */
                     --accent-color: #e74c3c;
                     --light-bg: #f8f9fa;
                     --success-color: #27ae60;
@@ -210,7 +210,7 @@
                 }
                 
                 .footer-content {
-                    max-width: 800px;
+                    margin-top: 20px;
                     margin: 0 auto;
                 }
                 
@@ -236,7 +236,7 @@
                 }
                 
                 .copyright {
-                    margin-top: 30px;
+                    margin-top: 20px;
                     color: rgba(255,255,255,0.6);
                     font-size: 0.9rem;
                     line-height: 1.6;
@@ -287,7 +287,9 @@
             <!-- Header - Matching fair_dashboard.html -->
             <header>
                     <div class="header-content">
-                        <h1>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Report</h1>
+                        <h3 style="color:white"><strong>ELIXIR Protein-Protein Interaction 
+                        Benchmark</strong></h3>
+                        <h1><strong>FAIR Analysis Report</strong></h1>
                         <div class="top-badge">TOP SCORE: 87.5/100</div>
                         <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
                         <a href="fair_dashboard.html" class="dashboard-link">
@@ -472,20 +474,21 @@
             <footer>
                 <div class="container">
                     <div class="footer-content">
-                        <h3>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Report</h3>
-                        <p>Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
-                        
-                        <div class="footer-links">
-                            <a href="fair_dashboard.html" class="footer-link">
-                                <i class="fas fa-chart-bar"></i> Dashboard
-                            </a>
-                            <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Repository
-                            </a>
-                            <a href="https://www.go-fair.org/fair-principles/" class="footer-link" target="_blank">
-                                <i class="fas fa-book"></i> FAIR Principles
-                            </a>
-                        </div>
+                        Comprehensive evaluation of FAIR principles compliance for scientific data repositories</div>
+                        <div class="footer-content">
+                <a href="https://github.com/biofold/ppi-benchmark-fair">
+                <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <a href="https://www.python.org/">
+                <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
+                <a href="https://schema.org/">
+                <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
+                <a href="https://mlcommons.org/croissant/">
+                <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+                </div>
                         
                         <div class="copyright">
                             <p>FAIR Analysis Report • Generated on: 2025-12-26T04:34:51.005271</p>
