@@ -1310,7 +1310,7 @@ class FAIRVisualizer:
                 footer {
                     background-color: #386277;
                     color: white;
-                    padding: 50px 0;
+                    padding: 20px 0;
                     text-align: center;
                     margin-top: 60px;
                 }
