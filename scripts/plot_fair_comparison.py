@@ -2514,8 +2514,8 @@ class FAIRVisualizer:
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <style>
                 :root {{
-                    --primary-color: #4689a3; /* #2c3e50; */
-                    --secondary-color: #3498db;
+                    --primary-color: #2c3e50; 
+                    --secondary-color: #4689a3; /* #3498db; */
                     --accent-color: #e74c3c;
                     --light-bg: #f8f9fa;
                     --success-color: #27ae60;
@@ -2793,7 +2793,9 @@ class FAIRVisualizer:
             <!-- Header - Matching fair_dashboard.html -->
             <header>
                     <div class="header-content">
-                        <h1>ELIXIR Protein-Protein Interaction Benchmark<br>FAIR Analysis Report</h1>
+                        <h3 style="color:white"><strong>ELIXIR Protein-Protein Interaction 
+                        Benchmark</strong></h3>
+                        <h1><strong>FAIR Analysis Report</strong></h1>
                         <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
                         <a href="fair_dashboard.html" class="dashboard-link">
