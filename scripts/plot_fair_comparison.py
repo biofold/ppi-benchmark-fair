@@ -1426,7 +1426,6 @@ class FAIRVisualizer:
                         <h1><strong>FAIR Analysis Dashboard</strong></h1>
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
-                <div>
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
@@ -1440,7 +1439,6 @@ class FAIRVisualizer:
                         <i class="fab fa-github"></i> Repository
                     </a>
                 </div>
-                    </div>
             </header>
             
             <main class="container">
@@ -2603,10 +2601,10 @@ class FAIRVisualizer:
                     gap: 10px;
                     background-color: rgba(255,255,255,0.15);
                     color: white;
-                    padding: 12px 25px;
-                    border-radius: 50px;
+                    padding: 6px 6px;
+                    border-radius: 12px;
                     text-decoration: none;
-                    font-weight: 600;
+                    font-weight: 400;
                     transition: all 0.3s ease;
                     border: 2px solid rgba(255,255,255,0.3);
                 }}
@@ -2813,8 +2811,6 @@ class FAIRVisualizer:
                         <h1><strong>FAIR Analysis Report</strong></h1>
                         <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         <p class="tagline">Comprehensive evaluation of FAIR principles compliance for scientific data repositories</p>
-                    </div>
-                <div>
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
