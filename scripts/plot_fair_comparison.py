@@ -2659,8 +2659,6 @@ class FAIRVisualizer:
                 h2, h3 {{
                     color: var(--primary-color);
                     margin-bottom: 20px;
-                    display: flex;
-                    align-items: center;
                     gap: 10px;
                 }}
                 
