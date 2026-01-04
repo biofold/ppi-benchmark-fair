@@ -3013,7 +3013,9 @@ class FAIRVisualizer:
                         <div class="copyright">
                             <p>FAIR Analysis Report • Generated on: ''' + f"{self.report_data.get('timestamp', 'N/A') if self.report_data else 'N/A'}" + '''</p>
                             <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                            <!--
                             <p style="margin-top: 15px;"><a href="#top" style="color: rgba(255,255,255,0.8); text-decoration: none;"><i class="fas fa-arrow-up"></i> Back to Top</a></p>
+                            -->
                         </div>
                     </div>
                 </div>
