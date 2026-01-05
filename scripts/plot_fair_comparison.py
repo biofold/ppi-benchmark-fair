@@ -1122,7 +1122,7 @@ class FAIRVisualizer:
 		 }
 
                 h1 {
-                    font-size: 2.8rem;
+                    font-size: 2.5rem;
                     margin-bottom: 5px;
                     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
                 }
