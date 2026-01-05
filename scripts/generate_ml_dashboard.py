@@ -1369,7 +1369,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         /* Model performance highlights */
         .performance-highlights {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }}
