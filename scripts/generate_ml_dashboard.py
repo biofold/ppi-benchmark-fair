@@ -1096,7 +1096,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
             gap: 10px;
             background-color: rgba(255,255,255,0.15);
             color: white;
-            padding: 12px 20px;
+            padding: 6px 6px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 400;
