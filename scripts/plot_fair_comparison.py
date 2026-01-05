@@ -1192,7 +1192,7 @@ class FAIRVisualizer:
                 }
                 
                 .metric-card {
-                    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+                    background: linear-gradient(135deg, var(--primary-color), #4689a3;);
                     color: white;
                     padding: 25px;
                     border-radius: 12px;
@@ -1339,7 +1339,7 @@ class FAIRVisualizer:
                 footer {
                     background-color: #386277;
                     color: white;
-                    padding: 20px 0;
+                    padding: 10px 0;
                     text-align: center;
                     margin-top: 60px;
                     border-radius: 12px;
@@ -1347,7 +1347,7 @@ class FAIRVisualizer:
                 
                 .footer-content {
                     margin-top: 20px;
-                    margin: 0 auto;
+                    padding: 0 10px;
                 }
                 
                 .footer-links {
