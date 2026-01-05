@@ -1798,10 +1798,9 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                                     </button>
                                 </div>
                                 -->
-                                <div class="figure-container" id="plot{plot_counter}">
+                                <div class="figure-container" >
                                 <h2 class="figure-title">Figure 1: FAIR Score Ranking / Gauge</h2>
                                 <p class="figure-description"> Test</p>
-                                {performance_plots_html['metrics_comparison']}
                                 </div>
     
                                 <div class="plot-title">Metrics Comparison Across Models</div>
