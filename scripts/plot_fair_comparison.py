@@ -1462,7 +1462,7 @@ class FAIRVisualizer:
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
                     <a href="./index.html" class="dashboard-link">
-                        <i class="fas fa-rocket"></i> Assessmenti Report Summary
+                        <i class="fas fa-rocket"></i> Assessmenti Report
                     </a>
                     <a href="#figure7" class="dashboard-link">
                         <i class="fas fa-eye"></i> Analysis Breakdown
