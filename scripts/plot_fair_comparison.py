@@ -1120,6 +1120,15 @@ class FAIRVisualizer:
 		    z-index: 1;
 		    padding: 0 20px;
 		 }
+                 
+                .section {
+                    background-color: white;
+                    margin: 30px 0;
+                    padding: 30px;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    border-left: 5px solid var(--secondary-color);
+                }
 
                 h1 {
                     font-size: 2.5rem;
@@ -1453,7 +1462,7 @@ class FAIRVisualizer:
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
                     <a href="./index.html" class="dashboard-link">
-                        <i class="fas fa-rocket"></i> Report Summary
+                        <i class="fas fa-rocket"></i> Assessmenti Report Summary
                     </a>
                     <a href="#figure7" class="dashboard-link">
                         <i class="fas fa-eye"></i> Analysis Breakdown
@@ -1466,6 +1475,10 @@ class FAIRVisualizer:
             </header>
             
             <main class="container">
+                <div class="section">
+                    <h2><i class="fas fa-chart-bar"></i> Key Statistics</h2>
+                    <p>Interactive visualization of FAIR principles compliance 
+                    across GitHub repositories.</p>
                 <!-- Key Metrics - Matching index.html style -->
                 <div class="key-metrics">
         """
@@ -1493,8 +1506,9 @@ class FAIRVisualizer:
         
         html_content += """
                 </div>
-                
+             </div>   
                 <!-- Navigation Bar -->
+                <!--
                 <div class="nav-bar">
                     <ul>
                         <li><a href="#figure1">Score Ranking</a></li>
@@ -1508,8 +1522,9 @@ class FAIRVisualizer:
                         <li><a href="#figure9">Correlations</a></li>
                     </ul>
                 </div>
-                
+                -->
                 <!-- Control Buttons -->
+                <!--
                 <div class="controls">
                     <p style="margin-bottom: 15px; color: var(--primary-color); font-weight: 600;">Dashboard Controls:</p>
                     <button class="toggle-button" onclick="toggleAllFigures('show')">
@@ -1525,6 +1540,7 @@ class FAIRVisualizer:
                         <i class="fas fa-compress"></i> Collapse All
                     </button>
                 </div>
+                -->
         """
         
         # List of figures with descriptions
