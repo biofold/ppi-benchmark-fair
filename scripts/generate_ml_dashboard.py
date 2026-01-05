@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 """
 Script to generate an interactive HTML dashboard for displaying results from
-ppi_ml_croissant.py with the same style as index.html.
+ppi_ml_croissant.py with interactive Plotly.js visualizations.
 """
 
 import json
 import argparse
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
-import base64
-from io import BytesIO
-import seaborn as sns
 import sys
 from datetime import datetime
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.io as pio
+
+# Set Plotly template
+pio.templates.default = "plotly_white"
 
 def load_results_json(results_path):
     """Load results JSON file."""
@@ -22,417 +25,609 @@ def load_results_json(results_path):
         results = json.load(f)
     return results
 
-def create_figure_image(fig):
-    """Convert matplotlib figure to base64 encoded image."""
-    buf = BytesIO()
-    fig.savefig(buf, format='png', dpi=150, bbox_inches='tight')
-    buf.seek(0)
-    img_str = base64.b64encode(buf.getvalue()).decode('utf-8')
-    plt.close(fig)
-    return img_str
-
-def generate_performance_plots(results, output_dir=None):
-    """Generate performance plots from results."""
-    plots = {}
+def create_interactive_performance_plots(results):
+    """Create interactive Plotly plots from results."""
+    plots_html = {}
     
     # Get model names
     model_names = [name for name in results.keys() if name not in ['cross_validation_settings']]
     
     if not model_names:
-        return plots
+        return plots_html
     
-    # 1. Metrics comparison bar chart
-    fig, ax = plt.subplots(figsize=(12, 8))
-    metrics = ['accuracy', 'precision', 'recall', 'f1']
-    metric_labels = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
-    
-    x = np.arange(len(model_names))
-    width = 0.2
-    
-    for i, (metric, label) in enumerate(zip(metrics, metric_labels)):
-        values = []
-        for name in model_names:
-            if name in results:
-                values.append(results[name]['cv_metrics'].get(metric, 0))
+    # 1. Interactive metrics comparison bar chart
+    try:
+        fig = go.Figure()
         
-        if values:
-            ax.bar(x + i*width - width*1.5, values, width, label=label)
+        metrics = ['accuracy', 'precision', 'recall', 'f1']
+        metric_labels = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+        
+        for i, (metric, label) in enumerate(zip(metrics, metric_labels)):
+            values = []
+            for name in model_names:
+                if name in results:
+                    values.append(results[name]['cv_metrics'].get(metric, 0))
+            
+            if values:
+                fig.add_trace(go.Bar(
+                    name=label,
+                    x=model_names,
+                    y=values,
+                    text=[f'{v:.3f}' for v in values],
+                    textposition='auto',
+                    marker_color=px.colors.qualitative.Set1[i],
+                    hovertemplate=f'<b>{label}</b>: %{{y:.3f}}<extra></extra>'
+                ))
+        
+        fig.update_layout(
+            title='Average Cross-Validation Metrics by Model',
+            xaxis_title='Models',
+            yaxis_title='Score',
+            yaxis=dict(range=[0, 1.1]),
+            barmode='group',
+            hovermode='x unified',
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            ),
+            plot_bgcolor='rgba(248, 249, 250, 0.5)',
+            paper_bgcolor='rgba(248, 249, 250, 0.1)',
+        )
+        
+        plots_html['metrics_comparison'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+    except Exception as e:
+        print(f"⚠️  Error creating metrics comparison plot: {e}")
     
-    ax.set_xlabel('Models')
-    ax.set_ylabel('Score')
-    ax.set_title('Average Cross-Validation Metrics by Model')
-    ax.set_xticks(x)
-    ax.set_xticklabels(model_names, rotation=45, ha='right')
-    ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-    ax.set_ylim(0, 1.1)
-    ax.grid(True, alpha=0.3, axis='y')
+    # 2. Interactive F1-Score per fold (line plot)
+    try:
+        fig = go.Figure()
+        
+        for name in model_names:
+            if name in results and 'fold_metrics' in results[name]:
+                fold_f1s = results[name]['fold_metrics'].get('f1_scores', [])
+                if fold_f1s:
+                    fig.add_trace(go.Scatter(
+                        name=name,
+                        x=list(range(1, len(fold_f1s) + 1)),
+                        y=fold_f1s,
+                        mode='lines+markers',
+                        line=dict(width=2),
+                        marker=dict(size=8),
+                        hovertemplate='<b>%{text}</b><br>Fold: %{x}<br>F1-Score: %{y:.3f}<extra></extra>',
+                        text=[name] * len(fold_f1s)
+                    ))
+        
+        fig.update_layout(
+            title='F1-Score per Fold by Model',
+            xaxis_title='Fold',
+            yaxis_title='F1-Score',
+            yaxis=dict(range=[0, 1.1]),
+            hovermode='closest',
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            ),
+            plot_bgcolor='rgba(248, 249, 250, 0.5)',
+            paper_bgcolor='rgba(248, 249, 250, 0.1)',
+        )
+        
+        plots_html['f1_per_fold'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+    except Exception as e:
+        print(f"⚠️  Error creating F1 per fold plot: {e}")
     
-    plots['metrics_comparison'] = create_figure_image(fig)
+    # 3. Interactive radar chart for overall metrics
+    try:
+        fig = go.Figure()
+        
+        categories = ['Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
+        
+        for name in model_names:
+            if name in results and 'overall_metrics' in results[name]:
+                metrics = results[name]['overall_metrics']
+                values = [
+                    metrics.get('accuracy', 0),
+                    metrics.get('precision', 0),
+                    metrics.get('recall', 0),
+                    metrics.get('f1', 0),
+                    metrics.get('roc_auc', 0) if metrics.get('roc_auc') is not None else 0
+                ]
+                
+                # Complete the loop
+                values = values + values[:1]
+                categories_complete = categories + [categories[0]]
+                
+                fig.add_trace(go.Scatterpolar(
+                    name=name,
+                    r=values,
+                    theta=categories_complete,
+                    fill='toself',
+                    line=dict(width=2),
+                    hovertemplate='<b>%{theta}</b>: %{r:.3f}<extra></extra>'
+                ))
+        
+        fig.update_layout(
+            title='Overall Model Performance (Radar Chart)',
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, 1]
+                )
+            ),
+            showlegend=True,
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=1.1
+            ),
+            hovermode='closest',
+        )
+        
+        plots_html['radar_chart'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+    except Exception as e:
+        print(f"⚠️  Error creating radar chart: {e}")
     
-    # 2. F1-Score per fold (line plot)
-    fig, ax = plt.subplots(figsize=(12, 6))
-    
-    for name in model_names:
-        if name in results and 'fold_metrics' in results[name]:
-            fold_f1s = results[name]['fold_metrics'].get('f1_scores', [])
-            if fold_f1s:
-                ax.plot(range(1, len(fold_f1s) + 1), fold_f1s, 
-                       marker='o', linewidth=2, markersize=8, label=name)
-    
-    ax.set_xlabel('Fold')
-    ax.set_ylabel('F1-Score')
-    ax.set_title('F1-Score per Fold by Model')
-    ax.legend()
-    ax.grid(True, alpha=0.3)
-    ax.set_xticks(range(1, max([len(results[name]['fold_metrics'].get('f1_scores', [])) 
-                                for name in model_names if name in results], default=5) + 1))
-    
-    plots['f1_per_fold'] = create_figure_image(fig)
-    
-    # 3. Metric distribution across folds (box plot)
-    fig, ax = plt.subplots(figsize=(12, 8))
-    
-    data = []
-    for name in model_names:
-        if name in results and 'fold_metrics' in results[name]:
-            metrics_data = results[name]['fold_metrics']
-            for metric_name, values in metrics_data.items():
-                if isinstance(values, list) and values:
-                    for fold_idx, value in enumerate(values, 1):
+    # 4. Interactive box plot for metric distributions
+    try:
+        # Prepare data for box plots
+        data = []
+        for name in model_names:
+            if name in results and 'fold_metrics' in results[name]:
+                metrics_data = results[name]['fold_metrics']
+                for metric_name, values in metrics_data.items():
+                    if isinstance(values, list) and values:
                         metric_label = metric_name.replace('_', ' ').title().replace('F1 Scores', 'F1-Score')
-                        data.append({
-                            'Model': name,
-                            'Metric': metric_label,
-                            'Value': value,
-                            'Fold': fold_idx
-                        })
-    
-    if data:
-        df_plot = pd.DataFrame(data)
+                        for fold_idx, value in enumerate(values, 1):
+                            data.append({
+                                'Model': name,
+                                'Metric': metric_label,
+                                'Value': value,
+                                'Fold': fold_idx
+                            })
         
-        # Pivot for boxplot
-        pivot_data = []
-        for name in model_names:
-            for metric in ['Accuracies', 'Precisions', 'Recalls', 'F1 Scores']:
-                if metric in df_plot[df_plot['Model'] == name]['Metric'].unique():
-                    values = df_plot[(df_plot['Model'] == name) & (df_plot['Metric'] == metric)]['Value'].tolist()
-                    pivot_data.extend([{'Model': name, 'Metric': metric, 'Value': v} for v in values])
-        
-        if pivot_data:
-            pivot_df = pd.DataFrame(pivot_data)
-            pivot_df['Metric'] = pivot_df['Metric'].map({
-                'Accuracies': 'Accuracy',
-                'Precisions': 'Precision', 
-                'Recalls': 'Recall',
-                'F1 Scores': 'F1-Score'
-            })
+        if data:
+            df_plot = pd.DataFrame(data)
             
-            # Filter out any NaN values
-            pivot_df = pivot_df.dropna(subset=['Value'])
+            # Create subplots for each metric
+            metrics_to_plot = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+            fig = make_subplots(
+                rows=2, cols=2,
+                subplot_titles=metrics_to_plot,
+                vertical_spacing=0.15,
+                horizontal_spacing=0.1
+            )
             
-            if not pivot_df.empty:
-                sns.boxplot(x='Model', y='Value', hue='Metric', data=pivot_df, ax=ax)
-                ax.set_title('Metric Distributions Across Folds')
-                ax.set_ylabel('Score')
-                ax.set_xlabel('Model')
-                ax.set_ylim(0, 1.1)
-                ax.legend(title='Metric', bbox_to_anchor=(1.05, 1), loc='upper left')
-                ax.grid(True, alpha=0.3, axis='y')
-    
-    plots['metric_distribution'] = create_figure_image(fig)
-    
-    # 4. Overall metrics radar chart
-    fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(projection='polar'))
-    
-    # Prepare data for radar chart
-    categories = ['Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
-    
-    for name in model_names:
-        if name in results and 'overall_metrics' in results[name]:
-            metrics = results[name]['overall_metrics']
-            values = [
-                metrics.get('accuracy', 0),
-                metrics.get('precision', 0),
-                metrics.get('recall', 0),
-                metrics.get('f1', 0),
-                metrics.get('roc_auc', 0) if metrics.get('roc_auc') is not None else 0
-            ]
+            for i, metric in enumerate(metrics_to_plot):
+                row = i // 2 + 1
+                col = i % 2 + 1
+                
+                # Filter data for this metric
+                metric_data = df_plot[df_plot['Metric'] == metric]
+                
+                if not metric_data.empty:
+                    # Add box plot for each model
+                    for model in model_names:
+                        model_data = metric_data[metric_data['Model'] == model]
+                        if not model_data.empty:
+                            fig.add_trace(go.Box(
+                                y=model_data['Value'],
+                                name=model,
+                                boxpoints='all',
+                                jitter=0.3,
+                                pointpos=-1.8,
+                                marker=dict(size=6, opacity=0.6),
+                                line=dict(width=1),
+                                showlegend=(i == 0)  # Only show legend in first subplot
+                            ), row=row, col=col)
+                
+                # Update subplot layout
+                fig.update_yaxes(title_text='Score', range=[0, 1.1], row=row, col=col)
             
-            # Complete the loop
-            values = values + values[:1]
-            angles = np.linspace(0, 2 * np.pi, len(categories), endpoint=False).tolist()
-            angles = angles + angles[:1]
+            fig.update_layout(
+                title='Metric Distributions Across Folds',
+                height=800,
+                showlegend=True,
+                legend=dict(
+                    orientation="h",
+                    yanchor="bottom",
+                    y=1.02,
+                    xanchor="right",
+                    x=1
+                ),
+                plot_bgcolor='rgba(248, 249, 250, 0.5)',
+                paper_bgcolor='rgba(248, 249, 250, 0.1)',
+            )
             
-            ax.plot(angles, values, 'o-', linewidth=2, label=name)
-            ax.fill(angles, values, alpha=0.25)
+            plots_html['metric_distribution'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+    except Exception as e:
+        print(f"⚠️  Error creating box plots: {e}")
     
-    ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(categories)
-    ax.set_ylim(0, 1)
-    ax.set_title('Overall Model Performance (Radar Chart)')
-    ax.legend(bbox_to_anchor=(1.3, 1), loc='upper right')
-    ax.grid(True)
-    
-    plots['radar_chart'] = create_figure_image(fig)
-    
-    # Save plots to files if output_dir provided
-    if output_dir:
-        output_dir = Path(output_dir)
-        output_dir.mkdir(parents=True, exist_ok=True)
-        
-        for i, (name, img_data) in enumerate(plots.items()):
-            # Convert base64 back to image and save
-            img_bytes = base64.b64decode(img_data)
-            img_path = output_dir / f"{name}.png"
-            with open(img_path, 'wb') as f:
-                f.write(img_bytes)
-    
-    return plots
+    return plots_html
 
-def generate_feature_evaluation_plots(feature_eval_path, output_dir=None):
-    """Generate feature evaluation plots from feature evaluation report."""
-    plots = {}
+def create_interactive_feature_plots(feature_eval_path):
+    """Create interactive feature evaluation plots."""
+    plots_html = {}
     
     if not feature_eval_path or not Path(feature_eval_path).exists():
-        return plots
+        return plots_html
     
     try:
         with open(feature_eval_path, 'r') as f:
             feature_data = json.load(f)
         
-        print("📊 Loading feature evaluation data...")
+        print("📊 Creating interactive feature plots...")
         
-        # Create a simple correlation heatmap if we have correlation matrix
+        # 1. Feature Correlation Interactive Plot
         if 'correlation_analysis' in feature_data:
             try:
-                # Create correlation heatmap
-                fig, ax = plt.subplots(figsize=(12, 10))
+                corr_info = feature_data['correlation_analysis']
                 
-                # For demonstration, create a sample correlation matrix
-                # In reality, you'd want to load the actual correlation matrix
-                # or extract it from the feature evaluation report
-                
-                # Create a placeholder message
-                ax.text(0.5, 0.5, 'Feature Correlation Analysis\n(Data available in JSON report)', 
-                       ha='center', va='center', transform=ax.transAxes, fontsize=12)
-                ax.set_title('Feature Correlation Matrix')
-                ax.axis('off')
-                
-                plots['feature_correlation'] = create_figure_image(fig)
+                if 'highly_correlated_pairs' in corr_info and corr_info['highly_correlated_pairs']:
+                    pairs = corr_info['highly_correlated_pairs'][:20]  # Top 20 pairs
+                    
+                    # Prepare data
+                    pair_labels = []
+                    correlations = []
+                    feature1_list = []
+                    feature2_list = []
+                    
+                    for pair in pairs:
+                        f1 = pair.get('feature1', 'Unknown')
+                        f2 = pair.get('feature2', 'Unknown')
+                        corr = pair.get('correlation', 0)
+                        
+                        # Create a safe pair label without backslashes in the f-string
+                        pair_label = f"{f1} ↔ {f2}"
+                        pair_labels.append(pair_label)
+                        correlations.append(abs(corr))
+                        feature1_list.append(f1)
+                        feature2_list.append(f2)
+                    
+                    # Create DataFrame
+                    df_corr = pd.DataFrame({
+                        'Feature Pair': pair_labels,
+                        'Correlation': correlations,
+                        'Feature1': feature1_list,
+                        'Feature2': feature2_list,
+                        'AbsCorrelation': [abs(c) for c in correlations]
+                    })
+                    
+                    # Create interactive bar chart
+                    fig = px.bar(
+                        df_corr,
+                        y='Feature Pair',
+                        x='Correlation',
+                        color='AbsCorrelation',
+                        color_continuous_scale='RdYlBu_r',
+                        orientation='h',
+                        hover_data=['Feature1', 'Feature2'],
+                        title=f'Top {len(pairs)} Highly Correlated Feature Pairs (|r| > 0.8)'
+                    )
+                    
+                    fig.update_layout(
+                        yaxis={'categoryorder': 'total ascending'},
+                        xaxis_title='Absolute Correlation',
+                        yaxis_title='Feature Pair',
+                        coloraxis_colorbar=dict(title='|r|'),
+                        height=max(400, len(pairs) * 25),
+                        hovermode='y unified'
+                    )
+                    
+                    # Add correlation value annotations
+                    fig.update_traces(
+                        texttemplate='%{x:.3f}',
+                        textposition='outside',
+                        hovertemplate='<b>%{customdata[0]} ↔ %{customdata[1]}</b><br>Correlation: %{x:.3f}<extra></extra>'
+                    )
+                    
+                    plots_html['feature_correlation'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
             except Exception as e:
-                print(f"⚠️  Could not create correlation plot: {e}")
+                print(f"⚠️  Error creating correlation plot: {e}")
         
-        # Create feature importance plot if available
+        # 2. Feature-Target Relationship Interactive Plot
+        if 'feature_target_analysis' in feature_data:
+            try:
+                ft_info = feature_data['feature_target_analysis']
+                
+                if 'all_scores' in ft_info:
+                    # Prepare data
+                    features_data = []
+                    for feature, scores in ft_info['all_scores'].items():
+                        features_data.append({
+                            'Feature': feature,
+                            'ANOVA_F': scores.get('anova_f', 0),
+                            'ANOVA_p': scores.get('anova_p', 1),
+                            'Mutual_Info': scores.get('mutual_info', 0),
+                            'Significant': scores.get('significant_anova', False)
+                        })
+                    
+                    df_features = pd.DataFrame(features_data)
+                    
+                    # Create interactive scatter plot
+                    fig = px.scatter(
+                        df_features,
+                        x='ANOVA_F',
+                        y='Mutual_Info',
+                        color='Significant',
+                        size='ANOVA_F',
+                        hover_name='Feature',
+                        hover_data=['ANOVA_p'],
+                        title='Feature-Target Relationship: ANOVA vs Mutual Information',
+                        color_discrete_map={True: '#2ecc71', False: '#e74c3c'},
+                        labels={
+                            'ANOVA_F': 'ANOVA F-value',
+                            'Mutual_Info': 'Mutual Information',
+                            'Significant': 'Significant (p < 0.05)',
+                            'ANOVA_p': 'p-value'
+                        }
+                    )
+                    
+                    # Add trend line
+                    fig.update_traces(
+                        marker=dict(opacity=0.7),
+                        hovertemplate='<b>%{hovertext}</b><br>ANOVA F: %{x:.3f}<br>Mutual Info: %{y:.3f}<br>p-value: %{customdata[0]:.2e}<extra></extra>'
+                    )
+                    
+                    fig.update_layout(
+                        hovermode='closest',
+                        legend_title_text='Significance',
+                        plot_bgcolor='rgba(248, 249, 250, 0.5)',
+                        height=600
+                    )
+                    
+                    plots_html['feature_target_relationship'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+                    
+                    # Also create top features bar chart
+                    top_n = min(15, len(df_features))
+                    
+                    # Top by ANOVA
+                    df_top_anova = df_features.nlargest(top_n, 'ANOVA_F')
+                    fig_anova = px.bar(
+                        df_top_anova,
+                        x='ANOVA_F',
+                        y='Feature',
+                        color='Significant',
+                        orientation='h',
+                        title=f'Top {top_n} Features by ANOVA F-value',
+                        color_discrete_map={True: '#2ecc71', False: '#e74c3c'},
+                        hover_data=['ANOVA_p']
+                    )
+                    
+                    fig_anova.update_layout(
+                        yaxis={'categoryorder': 'total ascending'},
+                        xaxis_title='ANOVA F-value',
+                        yaxis_title='Feature',
+                        height=max(400, top_n * 25),
+                        hovermode='y unified'
+                    )
+                    
+                    plots_html['feature_top_anova'] = pio.to_html(fig_anova, full_html=False, include_plotlyjs=False)
+                    
+                    # Top by Mutual Information
+                    df_top_mi = df_features.nlargest(top_n, 'Mutual_Info')
+                    fig_mi = px.bar(
+                        df_top_mi,
+                        x='Mutual_Info',
+                        y='Feature',
+                        orientation='h',
+                        title=f'Top {top_n} Features by Mutual Information',
+                        color='Mutual_Info',
+                        color_continuous_scale='Viridis',
+                        hover_data=['ANOVA_p', 'Significant']
+                    )
+                    
+                    fig_mi.update_layout(
+                        yaxis={'categoryorder': 'total ascending'},
+                        xaxis_title='Mutual Information Score',
+                        yaxis_title='Feature',
+                        height=max(400, top_n * 25),
+                        hovermode='y unified'
+                    )
+                    
+                    plots_html['feature_top_mi'] = pio.to_html(fig_mi, full_html=False, include_plotlyjs=False)
+            except Exception as e:
+                print(f"⚠️  Error creating feature-target plots: {e}")
+        
+        # 3. Feature Importance Interactive Plots
         if 'feature_importance' in feature_data:
             try:
-                fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+                # Create subplot for different importance methods
+                methods_data = []
                 
-                # 1. Random Forest feature importance
-                ax1 = axes[0, 0]
-                if 'random_forest' in feature_data['feature_importance']:
-                    rf_data = feature_data['feature_importance']['random_forest']
-                    if 'top_features' in rf_data:
-                        features = [item[0] for item in rf_data['top_features'][:10]]
-                        importances = [item[1] for item in rf_data['top_features'][:10]]
-                        
-                        indices = np.arange(len(features))
-                        ax1.barh(indices, importances[::-1])
-                        ax1.set_yticks(indices)
-                        ax1.set_yticklabels(features[::-1])
-                        ax1.set_xlabel('Importance')
-                        ax1.set_title('Random Forest Feature Importance (Top 10)')
-                        ax1.grid(True, alpha=0.3, axis='x')
+                for method_name, method_data in feature_data['feature_importance'].items():
+                    if 'top_features' in method_data and method_data['top_features']:
+                        for feature, importance in method_data['top_features'][:15]:  # Top 15 per method
+                            methods_data.append({
+                                'Method': method_name.replace('_', ' ').title(),
+                                'Feature': feature,
+                                'Importance': importance
+                            })
                 
-                # 2. Mutual Information scores
-                ax2 = axes[0, 1]
-                if 'mutual_information' in feature_data['feature_importance']:
-                    mi_data = feature_data['feature_importance']['mutual_information']
-                    if 'top_features' in mi_data:
-                        features = [item[0] for item in mi_data['top_features'][:10]]
-                        scores = [item[1] for item in mi_data['top_features'][:10]]
-                        
-                        indices = np.arange(len(features))
-                        ax2.bar(indices, scores)
-                        ax2.set_xticks(indices)
-                        ax2.set_xticklabels(features, rotation=45, ha='right')
-                        ax2.set_ylabel('Mutual Information Score')
-                        ax2.set_title('Mutual Information Feature Ranking (Top 10)')
-                        ax2.grid(True, alpha=0.3, axis='y')
-                
-                # 3. PCA explained variance
-                ax3 = axes[1, 0]
-                if 'pca_analysis' in feature_data:
-                    pca_data = feature_data['pca_analysis']
-                    if 'explained_variance' in pca_data:
-                        explained_variance = pca_data['explained_variance']
-                        cumulative_variance = pca_data['cumulative_variance']
-                        
-                        x = range(1, len(explained_variance) + 1)
-                        ax3.bar(x, explained_variance, alpha=0.6, label='Individual')
-                        ax3.plot(x, cumulative_variance, 'r-', marker='o', label='Cumulative')
-                        ax3.axhline(y=0.95, color='g', linestyle='--', alpha=0.5, label='95% threshold')
-                        
-                        ax3.set_xlabel('Principal Component')
-                        ax3.set_ylabel('Explained Variance Ratio')
-                        ax3.set_title('PCA Explained Variance')
-                        ax3.legend()
-                        ax3.grid(True, alpha=0.3)
-                
-                # 4. Feature statistics summary
-                ax4 = axes[1, 1]
-                if 'basic_statistics' in feature_data:
-                    stats_data = feature_data['basic_statistics']
-                    if stats_data:
-                        # Extract some key statistics for a few features
-                        features = list(stats_data.keys())[:5]
-                        
-                        # Create a simple summary
-                        summary_text = "Feature Statistics Summary:\n\n"
-                        for i, feature in enumerate(features[:5]):
-                            stats = stats_data[feature]
-                            summary_text += f"{feature}:\n"
-                            summary_text += f"  Mean: {stats.get('mean', 'N/A'):.3f}\n"
-                            summary_text += f"  Std: {stats.get('std', 'N/A'):.3f}\n"
-                            if i < 4:
-                                summary_text += "\n"
-                        
-                        ax4.text(0.1, 0.5, summary_text, transform=ax4.transAxes,
-                                verticalalignment='center', fontsize=10, fontfamily='monospace')
-                        ax4.set_title('Feature Statistics (Top 5 Features)')
-                        ax4.axis('off')
-                
-                plt.suptitle('Feature Evaluation Analysis', fontsize=16, y=1.02)
-                plt.tight_layout()
-                
-                plots['feature_evaluation_summary'] = create_figure_image(fig)
-                
+                if methods_data:
+                    df_methods = pd.DataFrame(methods_data)
+                    
+                    # Interactive grouped bar chart
+                    fig = px.bar(
+                        df_methods,
+                        x='Feature',
+                        y='Importance',
+                        color='Method',
+                        barmode='group',
+                        title='Feature Importance Across Different Methods (Top 15 per method)',
+                        height=600
+                    )
+                    
+                    fig.update_layout(
+                        xaxis_title='Feature',
+                        yaxis_title='Importance Score',
+                        xaxis_tickangle=-45,
+                        hovermode='x unified',
+                        legend_title_text='Method'
+                    )
+                    
+                    plots_html['feature_importance_comparison'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+                    
+                    # Also create a heatmap of rankings
+                    pivot_methods = df_methods.pivot_table(
+                        index='Feature',
+                        columns='Method',
+                        values='Importance',
+                        aggfunc='first'
+                    ).fillna(0)
+                    
+                    fig_heatmap = go.Figure(data=go.Heatmap(
+                        z=pivot_methods.values,
+                        x=pivot_methods.columns.tolist(),
+                        y=pivot_methods.index.tolist(),
+                        colorscale='Viridis',
+                        hoverongaps=False,
+                        hovertemplate='<b>%{y}</b><br>Method: %{x}<br>Importance: %{z:.3f}<extra></extra>'
+                    ))
+                    
+                    fig_heatmap.update_layout(
+                        title='Feature Importance Heatmap',
+                        xaxis_title='Method',
+                        yaxis_title='Feature',
+                        height=max(400, len(pivot_methods) * 20)
+                    )
+                    
+                    plots_html['feature_importance_heatmap'] = pio.to_html(fig_heatmap, full_html=False, include_plotlyjs=False)
             except Exception as e:
-                print(f"⚠️  Could not create feature evaluation plots: {e}")
+                print(f"⚠️  Error creating feature importance plots: {e}")
         
-        # Create additional feature analysis plots
-        try:
-            # Feature ranking comparison
-            fig, ax = plt.subplots(figsize=(12, 8))
-            
-            # Collect ranking methods
-            ranking_methods = []
-            ranking_data = []
-            
-            if 'feature_importance' in feature_data:
-                for method, data in feature_data['feature_importance'].items():
-                    if 'top_features' in data:
-                        ranking_methods.append(method.replace('_', ' ').title())
-                        # Take top 5 features for each method
-                        top_features = [item[0] for item in data['top_features'][:5]]
-                        ranking_data.append(top_features)
-            
-            if ranking_methods and ranking_data:
-                # Create a heatmap of feature rankings
-                all_features = set()
-                for features in ranking_data:
-                    all_features.update(features)
+        # 4. PCA Analysis Interactive Plot
+        if 'pca_analysis' in feature_data:
+            try:
+                pca_info = feature_data['pca_analysis']
                 
-                # Create ranking matrix
-                ranking_matrix = []
-                for i, method in enumerate(ranking_methods):
-                    row = []
-                    for feature in all_features:
-                        if feature in ranking_data[i]:
-                            # Lower rank is better (1 = best)
-                            rank = ranking_data[i].index(feature) + 1
-                            row.append(rank)
-                        else:
-                            row.append(np.nan)  # Not in top 5
-                    ranking_matrix.append(row)
-                
-                if ranking_matrix:
-                    df_rank = pd.DataFrame(ranking_matrix, index=ranking_methods, columns=list(all_features))
+                if 'explained_variance' in pca_info and pca_info['explained_variance']:
+                    explained_var = pca_info['explained_variance']
+                    cumulative_var = pca_info['cumulative_variance']
                     
-                    # Plot heatmap
-                    sns.heatmap(df_rank, annot=True, fmt='.0f', cmap='YlOrRd_r',
-                               cbar_kws={'label': 'Rank (lower is better)'}, ax=ax)
-                    ax.set_title('Feature Rankings Across Different Methods')
-                    ax.set_xlabel('Feature')
-                    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-                    plt.setp(ax.get_yticklabels(), rotation=0)
+                    # Create interactive line chart
+                    fig = go.Figure()
                     
-                    plots['feature_ranking_comparison'] = create_figure_image(fig)
-            
-        except Exception as e:
-            print(f"⚠️  Could not create feature ranking comparison: {e}")
+                    # Individual explained variance
+                    fig.add_trace(go.Bar(
+                        name='Individual',
+                        x=list(range(1, len(explained_var) + 1)),
+                        y=explained_var,
+                        marker_color='#3498db',
+                        opacity=0.6,
+                        hovertemplate='PC%{x}: %{y:.3f}<extra></extra>'
+                    ))
+                    
+                    # Cumulative explained variance
+                    fig.add_trace(go.Scatter(
+                        name='Cumulative',
+                        x=list(range(1, len(cumulative_var) + 1)),
+                        y=cumulative_var,
+                        mode='lines+markers',
+                        line=dict(color='#e74c3c', width=3),
+                        marker=dict(size=8),
+                        hovertemplate='PC%{x}: %{y:.3f}<extra></extra>'
+                    ))
+                    
+                    # Add 95% threshold line
+                    fig.add_hline(
+                        y=0.95,
+                        line_dash="dash",
+                        line_color="green",
+                        annotation_text="95% threshold",
+                        annotation_position="bottom right"
+                    )
+                    
+                    # Find components needed for 95% variance
+                    if 'components_needed_95' in pca_info:
+                        n_components = pca_info['components_needed_95']
+                        fig.add_vline(
+                            x=n_components,
+                            line_dash="dot",
+                            line_color="green",
+                            annotation_text=f"{n_components} PCs for 95%",
+                            annotation_position="top right"
+                        )
+                    
+                    fig.update_layout(
+                        title='PCA Explained Variance',
+                        xaxis_title='Principal Component',
+                        yaxis_title='Explained Variance Ratio',
+                        hovermode='x unified',
+                        legend=dict(
+                            orientation="h",
+                            yanchor="bottom",
+                            y=1.02,
+                            xanchor="right",
+                            x=1
+                        ),
+                        height=500
+                    )
+                    
+                    plots_html['pca_variance'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+                    
+                    # Also create PC loadings visualization if available
+                    if 'component_loadings' in pca_info:
+                        try:
+                            pc1_loadings = pca_info['component_loadings'].get('PC1', {})
+                            if 'top_positive' in pc1_loadings and 'top_negative' in pc1_loadings:
+                                # Prepare data for PC1 loadings
+                                loadings_data = []
+                                
+                                for feature, loading in pc1_loadings.get('top_positive', []):
+                                    loadings_data.append({
+                                        'Feature': feature,
+                                        'Loading': loading,
+                                        'Type': 'Positive'
+                                    })
+                                
+                                for feature, loading in pc1_loadings.get('top_negative', []):
+                                    loadings_data.append({
+                                        'Feature': feature,
+                                        'Loading': loading,
+                                        'Type': 'Negative'
+                                    })
+                                
+                                if loadings_data:
+                                    df_loadings = pd.DataFrame(loadings_data)
+                                    
+                                    fig_loadings = px.bar(
+                                        df_loadings,
+                                        x='Loading',
+                                        y='Feature',
+                                        color='Type',
+                                        orientation='h',
+                                        title='PC1 Feature Loadings (Most Influential Features)',
+                                        color_discrete_map={'Positive': '#2ecc71', 'Negative': '#e74c3c'},
+                                        height=max(300, len(df_loadings) * 20)
+                                    )
+                                
+                                    fig_loadings.update_layout(
+                                        yaxis={'categoryorder': 'total ascending'},
+                                        xaxis_title='Loading Value',
+                                        yaxis_title='Feature',
+                                        hovermode='y unified'
+                                    )
+                                
+                                    plots_html['pc1_loadings'] = pio.to_html(fig_loadings, full_html=False, include_plotlyjs=False)
+                        except:
+                            pass  # Skip if we can't create loadings plot
+            except Exception as e:
+                print(f"⚠️  Error creating PCA plots: {e}")
         
-        # Create feature-target relationship plot
-        try:
-            if 'feature_target_analysis' in feature_data:
-                ft_data = feature_data['feature_target_analysis']
-                
-                if 'all_scores' in ft_data:
-                    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-                    
-                    # Prepare data for plotting
-                    features = []
-                    anova_f = []
-                    mutual_info = []
-                    
-                    for feature, scores in ft_data['all_scores'].items():
-                        features.append(feature)
-                        anova_f.append(scores.get('anova_f', 0))
-                        mutual_info.append(scores.get('mutual_info', 0))
-                    
-                    # Plot ANOVA F-values
-                    if anova_f:
-                        top_indices = np.argsort(anova_f)[-10:]  # Top 10 features
-                        top_features = [features[i] for i in top_indices]
-                        top_anova = [anova_f[i] for i in top_indices]
-                        
-                        ax1.barh(range(len(top_features)), top_anova)
-                        ax1.set_yticks(range(len(top_features)))
-                        ax1.set_yticklabels(top_features)
-                        ax1.set_xlabel('ANOVA F-value')
-                        ax1.set_title('Top 10 Features by ANOVA F-value')
-                        ax1.grid(True, alpha=0.3, axis='x')
-                    
-                    # Plot Mutual Information scores
-                    if mutual_info:
-                        top_indices = np.argsort(mutual_info)[-10:]  # Top 10 features
-                        top_features = [features[i] for i in top_indices]
-                        top_mi = [mutual_info[i] for i in top_indices]
-                        
-                        ax2.barh(range(len(top_features)), top_mi)
-                        ax2.set_yticks(range(len(top_features)))
-                        ax2.set_yticklabels(top_features)
-                        ax2.set_xlabel('Mutual Information Score')
-                        ax2.set_title('Top 10 Features by Mutual Information')
-                        ax2.grid(True, alpha=0.3, axis='x')
-                    
-                    plt.suptitle('Feature-Target Relationship Analysis', fontsize=14)
-                    plt.tight_layout()
-                    
-                    plots['feature_target_relationship'] = create_figure_image(fig)
-        
-        except Exception as e:
-            print(f"⚠️  Could not create feature-target relationship plot: {e}")
-        
-        # Save feature plots to files if output_dir provided
-        if output_dir:
-            output_dir = Path(output_dir)
-            output_dir.mkdir(parents=True, exist_ok=True)
-            
-            for i, (name, img_data) in enumerate(plots.items()):
-                # Convert base64 back to image and save
-                img_bytes = base64.b64decode(img_data)
-                img_path = output_dir / f"feature_{name}.png"
-                with open(img_path, 'wb') as f:
-                    f.write(img_bytes)
-        
-        print(f"✅ Generated {len(plots)} feature evaluation plots")
+        print(f"✅ Created {len(plots_html)} interactive feature plots")
         
     except Exception as e:
-        print(f"❌ Error loading feature evaluation data: {e}")
+        print(f"❌ Error creating interactive feature plots: {e}")
         import traceback
         traceback.print_exc()
     
-    return plots
+    return plots_html
 
 def generate_model_details_table(results):
     """Generate HTML table with detailed model results."""
@@ -443,7 +638,7 @@ def generate_model_details_table(results):
     
     html = """
     <div class="table-container">
-        <table>
+        <table class="interactive-table">
             <thead>
                 <tr>
                     <th>Model</th>
@@ -468,8 +663,12 @@ def generate_model_details_table(results):
             roc_auc = cv_metrics.get('roc_auc')
             roc_auc_display = f"{roc_auc:.4f}" if roc_auc is not None else 'N/A'
             
+            # Determine row class based on best model
+            best_model = results.get('cross_validation_settings', {}).get('best_model', '')
+            row_class = 'best-model-row' if name == best_model else ''
+            
             html += f"""
-                <tr>
+                <tr class="{row_class}">
                     <td><strong>{name}</strong></td>
                     <td>{cv_metrics.get('accuracy', 0):.4f}</td>
                     <td>{cv_metrics.get('precision', 0):.4f}</td>
@@ -504,7 +703,7 @@ def generate_fold_details_table(results):
     
     html = """
     <div class="table-container">
-        <table>
+        <table class="interactive-table">
             <thead>
                 <tr>
                     <th>Model</th>
@@ -546,6 +745,16 @@ def generate_fold_details_table(results):
                 else:
                     roc_auc_val = 'N/A'
                 
+                # Color code based on F1-score
+                f1_score = f1_scores[fold_idx] if fold_idx < len(f1_scores) else 0
+                f1_class = ''
+                if f1_score > 0.8:
+                    f1_class = 'excellent-score'
+                elif f1_score > 0.6:
+                    f1_class = 'good-score'
+                elif f1_score > 0.4:
+                    f1_class = 'fair-score'
+                
                 html += f"""
                     <tr>
                         <td>{'→' if fold_idx > 0 else name}</td>
@@ -553,7 +762,7 @@ def generate_fold_details_table(results):
                         <td>{accuracy_val}</td>
                         <td>{precision_val}</td>
                         <td>{recall_val}</td>
-                        <td><strong>{f1_val}</strong></td>
+                        <td class="{f1_class}"><strong>{f1_val}</strong></td>
                         <td>{roc_auc_val}</td>
                     </tr>
                 """
@@ -587,127 +796,8 @@ def generate_cv_settings_section(results):
     
     return html
 
-def generate_feature_analysis_section(feature_eval_path=None, feature_plots=None):
-    """Generate HTML section for feature analysis."""
-    html = ""
-    
-    if feature_eval_path and Path(feature_eval_path).exists():
-        try:
-            with open(feature_eval_path, 'r') as f:
-                feature_data = json.load(f)
-            
-            html += """
-            <div class="fair-section">
-                <h3>Feature Analysis Summary</h3>
-            """
-            
-            if 'dataset_info' in feature_data:
-                ds_info = feature_data['dataset_info']
-                html += f"""
-                <ul class="fair-checklist">
-                    <li><strong>Samples:</strong> {ds_info.get('n_samples', 'N/A')}</li>
-                    <li><strong>Features:</strong> {ds_info.get('n_features', 'N/A')}</li>
-                </ul>
-                """
-            
-            if 'correlation_analysis' in feature_data:
-                corr_info = feature_data['correlation_analysis']
-                html += f"""
-                <h4>Correlation Analysis</h4>
-                <ul class="fair-checklist">
-                    <li><strong>Highly correlated feature pairs (&gt;0.8):</strong> {corr_info.get('n_highly_correlated', 0)}</li>
-                </ul>
-                """
-            
-            if 'feature_target_analysis' in feature_data:
-                ft_info = feature_data['feature_target_analysis']
-                html += f"""
-                <h4>Feature-Target Relationship</h4>
-                <ul class="fair-checklist">
-                    <li><strong>Significant features (ANOVA p&lt;0.05):</strong> {len(ft_info.get('anova_significant_features', []))}</li>
-                </ul>
-                """
-                
-                if ft_info.get('mutual_info_top_features'):
-                    html += """
-                    <h4>Top Features by Mutual Information</h4>
-                    <ol>
-                    """
-                    for i, feature in enumerate(ft_info['mutual_info_top_features'][:5], 1):
-                        html += f"<li>{feature}</li>"
-                    html += "</ol>"
-            
-            if 'pca_analysis' in feature_data:
-                pca_info = feature_data['pca_analysis']
-                html += f"""
-                <h4>PCA Analysis</h4>
-                <ul class="fair-checklist">
-                    <li><strong>Components for 95% variance:</strong> {pca_info.get('components_needed_95', 'N/A')}</li>
-                </ul>
-                """
-            
-            html += "</div>"
-            
-        except Exception as e:
-            html += f"""
-            <div class="fair-section">
-                <h3>Feature Analysis</h3>
-                <p>Error loading feature analysis: {e}</p>
-            </div>
-            """
-    
-    # Add feature plots if available
-    if feature_plots:
-        html += """
-        <h3>Feature Evaluation Visualizations</h3>
-        <div class="figure-grid">
-        """
-        
-        # Add feature evaluation plots
-        if 'feature_evaluation_summary' in feature_plots:
-            html += f"""
-            <div class="figure-container">
-                <div class="figure-title">Feature Evaluation Summary</div>
-                <img src="data:image/png;base64,{feature_plots['feature_evaluation_summary']}" alt="Feature Evaluation Summary">
-                <p>Comprehensive feature evaluation including importance scores, mutual information, and PCA analysis.</p>
-            </div>
-            """
-        
-        if 'feature_ranking_comparison' in feature_plots:
-            html += f"""
-            <div class="figure-container">
-                <div class="figure-title">Feature Ranking Comparison</div>
-                <img src="data:image/png;base64,{feature_plots['feature_ranking_comparison']}" alt="Feature Ranking Comparison">
-                <p>Comparison of feature rankings across different evaluation methods (lower rank = better).</p>
-            </div>
-            """
-        
-        if 'feature_target_relationship' in feature_plots:
-            html += f"""
-            <div class="figure-container">
-                <div class="figure-title">Feature-Target Relationship</div>
-                <img src="data:image/png;base64,{feature_plots['feature_target_relationship']}" alt="Feature-Target Relationship">
-                <p>Top features by ANOVA F-values and mutual information scores.</p>
-            </div>
-            """
-        
-        if 'feature_correlation' in feature_plots:
-            html += f"""
-            <div class="figure-container">
-                <div class="figure-title">Feature Correlation Analysis</div>
-                <img src="data:image/png;base64,{feature_plots['feature_correlation']}" alt="Feature Correlation">
-                <p>Analysis of feature correlations to identify redundant features.</p>
-            </div>
-            """
-        
-        html += """
-        </div>
-        """
-    
-    return html
-
-def generate_html_dashboard(results, performance_plots, feature_plots=None, feature_eval_path=None, output_path="ml_results_dashboard.html"):
-    """Generate the HTML dashboard."""
+def generate_html_dashboard(results, performance_plots_html, feature_plots_html=None, feature_eval_path=None, output_path="ml_results_dashboard.html"):
+    """Generate the HTML dashboard with interactive plots."""
     
     # Get current date
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -732,7 +822,12 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
     model_details_table = generate_model_details_table(results)
     fold_details_table = generate_fold_details_table(results)
     cv_settings_section = generate_cv_settings_section(results)
-    feature_analysis_section = generate_feature_analysis_section(feature_eval_path, feature_plots)
+    
+    # Include Plotly.js from CDN
+    plotly_js = '<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>'
+    
+    # Determine if we have feature plots for conditional display
+    has_feature_plots = bool(feature_plots_html)
     
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -741,6 +836,7 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELIXIR - PPI Benchmark ML Results Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {plotly_js}
     <style>
         :root {{
             --primary-color: #2c3e50;
@@ -915,7 +1011,12 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
         }}
         
         /* Tables */
-        table {{
+        .table-container {{
+            overflow-x: auto;
+            margin: 20px 0;
+        }}
+        
+        .interactive-table {{
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
@@ -924,20 +1025,85 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }}
         
-        th, td {{
+        .interactive-table th, .interactive-table td {{
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #e0e0e0;
         }}
         
-        th {{
+        .interactive-table th {{
             background-color: #f8f9fa;
             color: var(--primary-color);
             font-weight: 600;
+            position: sticky;
+            top: 0;
         }}
         
-        tr:hover {{
+        .interactive-table tr:hover {{
             background-color: #f8f9fa;
+            transform: scale(1.005);
+            transition: transform 0.1s ease;
+        }}
+        
+        .interactive-table .best-model-row {{
+            background-color: rgba(39, 174, 96, 0.1);
+            border-left: 4px solid var(--success-color);
+        }}
+        
+        .interactive-table .excellent-score {{
+            color: #27ae60;
+            font-weight: bold;
+        }}
+        
+        .interactive-table .good-score {{
+            color: #f39c12;
+            font-weight: bold;
+        }}
+        
+        .interactive-table .fair-score {{
+            color: #e74c3c;
+            font-weight: bold;
+        }}
+        
+        /* Interactive Plot Containers */
+        .plot-container {{
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }}
+        
+        .plot-title {{
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }}
+        
+        .plot-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }}
+        
+        /* Plotly plot styling */
+        .js-plotly-plot {{
+            width: 100%;
+            height: 500px;
+        }}
+        
+        .plot-description {{
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #555;
+            border-left: 3px solid var(--secondary-color);
         }}
         
         /* Lists */
@@ -984,35 +1150,6 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
         
         .fair-checklist li.needs-improvement:before {{
             content: "⚠️";
-        }}
-        
-        /* Figure containers */
-        .figure-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }}
-        
-        .figure-container {{
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e0e0e0;
-        }}
-        
-        .figure-container img {{
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-        }}
-        
-        .figure-title {{
-            text-align: center;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            font-weight: 600;
         }}
         
         /* Footer */
@@ -1068,9 +1205,12 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
                 padding: 20px;
             }}
             
-            table {{
-                display: block;
-                overflow-x: auto;
+            .plot-grid {{
+                grid-template-columns: 1fr;
+            }}
+            
+            .js-plotly-plot {{
+                height: 400px;
             }}
             
             .badges {{
@@ -1081,10 +1221,6 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             .badge {{
                 width: 90%;
                 text-align: center;
-            }}
-            
-            .figure-grid {{
-                grid-template-columns: 1fr;
             }}
             
             .footer-links {{
@@ -1107,6 +1243,12 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             padding: 20px;
             text-align: center;
             border-left: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }}
+        
+        .highlight-card:hover {{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }}
         
         .highlight-value {{
@@ -1132,6 +1274,7 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             display: flex;
             border-bottom: 2px solid #e0e0e0;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }}
         
         .tab-button {{
@@ -1143,6 +1286,9 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             color: #666;
             border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
         }}
         
         .tab-button.active {{
@@ -1158,14 +1304,44 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
         
         .tab-content {{
             display: none;
+            animation: fadeIn 0.5s ease;
         }}
         
         .tab-content.active {{
             display: block;
         }}
+        
+        @keyframes fadeIn {{
+            from {{ opacity: 0; transform: translateY(10px); }}
+            to {{ opacity: 1; transform: translateY(0); }}
+        }}
+        
+        /* Plot controls */
+        .plot-controls {{
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 10px;
+        }}
+        
+        .plot-btn {{
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }}
+        
+        .plot-btn:hover {{
+            background: var(--primary-color);
+        }}
     </style>
     
     <script>
+        // Tab switching functionality
         function showTab(tabName) {{
             // Hide all tab contents
             const tabContents = document.querySelectorAll('.tab-content');
@@ -1184,12 +1360,99 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
             
             // Mark the clicked button as active
             event.currentTarget.classList.add('active');
+            
+            // Trigger resize for Plotly plots
+            window.dispatchEvent(new Event('resize'));
+            
+            // Save active tab to localStorage
+            localStorage.setItem('activeTab', tabName);
         }}
         
-        // Initialize first tab as active on page load
+        // Plot control functions
+        function downloadPlot(plotId, filename) {{
+            const plotDiv = document.getElementById(plotId);
+            Plotly.downloadImage(plotDiv, {{
+                format: 'png',
+                filename: filename,
+                height: 600,
+                width: 800,
+                scale: 2
+            }});
+        }}
+        
+        function resetPlot(plotId) {{
+            const plotDiv = document.getElementById(plotId);
+            Plotly.relayout(plotDiv, {{}});
+        }}
+        
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {{
-            showTab('summary');
+            // Restore active tab from localStorage
+            const savedTab = localStorage.getItem('activeTab') || 'summary';
+            showTab(savedTab);
+            
+            // Make tables sortable
+            const tables = document.querySelectorAll('.interactive-table');
+            tables.forEach(table => {{
+                const headers = table.querySelectorAll('th');
+                headers.forEach((header, index) => {{
+                    if (index > 0) {{ // Don't make first column (Model name) sortable
+                        header.style.cursor = 'pointer';
+                        header.addEventListener('click', () => {{
+                            sortTable(table, index);
+                        }});
+                    }}
+                }});
+            }});
+            
+            // Add hover effects to performance highlights
+            const highlightCards = document.querySelectorAll('.highlight-card');
+            highlightCards.forEach(card => {{
+                card.addEventListener('mouseenter', function() {{
+                    this.style.transform = 'translateY(-5px)';
+                }});
+                card.addEventListener('mouseleave', function() {{
+                    this.style.transform = 'translateY(0)';
+                }});
+            }});
         }});
+        
+        // Table sorting function
+        function sortTable(table, column) {{
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            const isAscending = table.getAttribute('data-sort-dir') !== 'asc';
+            table.setAttribute('data-sort-dir', isAscending ? 'asc' : 'desc');
+            
+            rows.sort((a, b) => {{
+                const aVal = a.children[column].textContent.trim();
+                const bVal = b.children[column].textContent.trim();
+                
+                // Try to parse as number
+                const aNum = parseFloat(aVal);
+                const bNum = parseFloat(bVal);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {{
+                    return isAscending ? aNum - bNum : bNum - aNum;
+                }} else {{
+                    return isAscending ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                }}
+            }});
+            
+            // Reorder rows
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // Update sort indicators
+            const headers = table.querySelectorAll('th');
+            headers.forEach(header => {{
+                header.textContent = header.textContent.replace(' ↑', '').replace(' ↓', '');
+            }});
+            
+            const currentHeader = headers[column];
+            currentHeader.textContent += isAscending ? ' ↑' : ' ↓';
+        }}
     </script>
 </head>
 <body>
@@ -1198,30 +1461,42 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
         <header>
             <div class="header-content">
                 <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h3>
-                <h1><strong>Machine Learning Results Dashboard</strong></h1>
+                <h1><strong>Interactive ML Results Dashboard</strong></h1>
                 
                 <div class="badges">
                     <span class="badge ml"><i class="fas fa-brain"></i> ML Analysis</span>
                     <span class="badge cv"><i class="fas fa-crosshairs"></i> ClusterID-Aware CV</span>
                     <span class="badge best"><i class="fas fa-trophy"></i> Best Model: {best_model}</span>
                     <span class="badge fair"><i class="fas fa-chart-line"></i> Avg F1: {avg_f1:.3f}</span>
-                    {('<span class="badge feature"><i class="fas fa-chart-line"></i> Feature Analysis</span>' if feature_plots else '')}
-                </div>
+    """
+    
+    # Add feature badge conditionally
+    if has_feature_plots:
+        html_content += """                    <span class="badge feature"><i class="fas fa-chart-line"></i> Interactive Features</span>
+    """
+    
+    html_content += f"""                </div>
                 
                 <div>
-                    <a href="#summary" class="dashboard-link" onclick="showTab('summary'); return false;">
+                    <button class="dashboard-link" onclick="showTab('summary');">
                         <i class="fas fa-home"></i> Summary
-                    </a>
-                    <a href="#performance" class="dashboard-link" onclick="showTab('performance'); return false;">
+                    </button>
+                    <button class="dashboard-link" onclick="showTab('performance');">
                         <i class="fas fa-chart-bar"></i> Performance
-                    </a>
-                    <a href="#models" class="dashboard-link" onclick="showTab('models'); return false;">
+                    </button>
+                    <button class="dashboard-link" onclick="showTab('models');">
                         <i class="fas fa-cogs"></i> Model Details
-                    </a>
-                    <a href="#features" class="dashboard-link" onclick="showTab('features'); return false;">
+                    </button>
+    """
+    
+    # Add feature tab button conditionally
+    if has_feature_plots:
+        html_content += """                    <button class="dashboard-link" onclick="showTab('features');">
                         <i class="fas fa-chart-line"></i> Feature Analysis
-                    </a>
-                </div>
+                    </button>
+    """
+    
+    html_content += f"""                </div>
             </div>
         </header>
 
@@ -1232,8 +1507,14 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
                     <button class="tab-button active" onclick="showTab('summary')">Summary</button>
                     <button class="tab-button" onclick="showTab('performance')">Performance Plots</button>
                     <button class="tab-button" onclick="showTab('models')">Model Details</button>
-                    <button class="tab-button" onclick="showTab('features')">Feature Analysis</button>
-                    <button class="tab-button" onclick="showTab('data')">Dataset Info</button>
+    """
+    
+    # Add feature tab button conditionally
+    if has_feature_plots:
+        html_content += """                    <button class="tab-button" onclick="showTab('features')">Feature Analysis</button>
+    """
+    
+    html_content += f"""                    <button class="tab-button" onclick="showTab('data')">Dataset Info</button>
                 </div>
                 
                 <!-- Summary Tab -->
@@ -1266,57 +1547,140 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
                             <li>Performance evaluated across {n_splits} folds</li>
                             <li><strong>{best_model}</strong> achieved the highest average F1-score</li>
                             <li>Models show consistent performance across different folds</li>
-                            {('<li><strong>Feature analysis</strong> performed to identify important features and correlations</li>' if feature_plots else '')}
-                        </ul>
+    """
+    
+    # Add feature analysis note conditionally
+    if has_feature_plots:
+        html_content += """                            <li><strong>Interactive feature analysis</strong> available with detailed visualizations</li>
+    """
+    
+    html_content += f"""                        </ul>
                         
                         {cv_settings_section}
+                        
+                        <div class="plot-container">
+                            <div class="plot-title">Interactive Dashboard Features</div>
+                            <p style="text-align: center; margin-bottom: 15px;">This dashboard includes interactive visualizations with:</p>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                                    <strong>Hover Interactions</strong><br>Hover over plots to see detailed values
+                                </div>
+                                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #2ecc71;">
+                                    <strong>Zoom & Pan</strong><br>Click and drag to zoom, double-click to reset
+                                </div>
+                                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                                    <strong>Sortable Tables</strong><br>Click table headers to sort columns
+                                </div>
+                                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #9b59b6;">
+                                    <strong>Download Options</strong><br>Save plots as PNG images
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 
                 <!-- Performance Plots Tab -->
                 <div id="performance" class="tab-content">
                     <section class="section">
-                        <h2><i class="fas fa-chart-bar"></i> Performance Visualizations</h2>
+                        <h2><i class="fas fa-chart-bar"></i> Interactive Performance Visualizations</h2>
                         
-                        <div class="figure-grid">
+                        <div class="plot-grid">
     """
     
-    # Add performance plots to HTML
-    if 'metrics_comparison' in performance_plots:
-        html_content += f"""
-                            <div class="figure-container">
-                                <div class="figure-title">Metrics Comparison Across Models</div>
-                                <img src="data:image/png;base64,{performance_plots['metrics_comparison']}" alt="Metrics Comparison">
-                                <p>Comparison of average cross-validation metrics across all trained models. Higher values indicate better performance.</p>
-                            </div>
-        """
+    # Add interactive performance plots
+    plot_counter = 1
     
-    if 'f1_per_fold' in performance_plots:
+    if 'metrics_comparison' in performance_plots_html:
         html_content += f"""
-                            <div class="figure-container">
-                                <div class="figure-title">F1-Score Per Fold</div>
-                                <img src="data:image/png;base64,{performance_plots['f1_per_fold']}" alt="F1-Score Per Fold">
-                                <p>F1-Score for each fold across different models. Consistency across folds indicates robust model performance.</p>
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'metrics_comparison')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Metrics Comparison Across Models</div>
+                                <div id="plot{plot_counter}">
+                                    {performance_plots_html['metrics_comparison']}
+                                </div>
+                                <div class="plot-description">
+                                    Interactive comparison of average cross-validation metrics across all trained models. 
+                                    Hover over bars to see exact values. Click legend items to show/hide metrics.
+                                </div>
                             </div>
         """
+        plot_counter += 1
     
-    if 'metric_distribution' in performance_plots:
+    if 'f1_per_fold' in performance_plots_html:
         html_content += f"""
-                            <div class="figure-container">
-                                <div class="figure-title">Metric Distribution Across Folds</div>
-                                <img src="data:image/png;base64,{performance_plots['metric_distribution']}" alt="Metric Distribution">
-                                <p>Box plots showing distribution of metrics across folds for each model. Tighter distributions indicate more consistent performance.</p>
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'f1_per_fold')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">F1-Score Per Fold</div>
+                                <div id="plot{plot_counter}">
+                                    {performance_plots_html['f1_per_fold']}
+                                </div>
+                                <div class="plot-description">
+                                    F1-Score for each fold across different models. Click and drag to zoom in on specific folds.
+                                    Consistency across folds indicates robust model performance.
+                                </div>
                             </div>
         """
+        plot_counter += 1
     
-    if 'radar_chart' in performance_plots:
+    if 'radar_chart' in performance_plots_html:
         html_content += f"""
-                            <div class="figure-container">
-                                <div class="figure-title">Overall Model Performance (Radar Chart)</div>
-                                <img src="data:image/png;base64,{performance_plots['radar_chart']}" alt="Radar Chart">
-                                <p>Radar chart comparing overall performance across multiple metrics. Larger areas indicate better overall performance.</p>
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'radar_chart')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Overall Model Performance (Radar Chart)</div>
+                                <div id="plot{plot_counter}">
+                                    {performance_plots_html['radar_chart']}
+                                </div>
+                                <div class="plot-description">
+                                    Radar chart comparing overall performance across multiple metrics. 
+                                    Hover over points to see exact values. Larger areas indicate better overall performance.
+                                </div>
                             </div>
         """
+        plot_counter += 1
+    
+    if 'metric_distribution' in performance_plots_html:
+        html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'metric_distribution')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Metric Distributions Across Folds</div>
+                                <div id="plot{plot_counter}">
+                                    {performance_plots_html['metric_distribution']}
+                                </div>
+                                <div class="plot-description">
+                                    Box plots showing distribution of metrics across folds for each model. 
+                                    Hover over points to see individual fold values. Tighter distributions indicate more consistent performance.
+                                </div>
+                            </div>
+        """
+        plot_counter += 1
     
     html_content += f"""
                         </div>
@@ -1329,51 +1693,197 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
                         <h2><i class="fas fa-cogs"></i> Model Performance Details</h2>
                         
                         <h3>Average Cross-Validation Metrics</h3>
-                        <p>The following table shows average performance metrics across all cross-validation folds:</p>
+                        <p>The following table shows average performance metrics across all cross-validation folds. Click column headers to sort.</p>
                         {model_details_table}
                         
                         <h3>Fold-by-Fold Performance</h3>
-                        <p>Detailed performance metrics for each fold of cross-validation:</p>
+                        <p>Detailed performance metrics for each fold of cross-validation. F1-scores are color-coded for quick assessment.</p>
                         {fold_details_table}
                         
-                        <h3>Performance Insights</h3>
-                        <ul class="fair-checklist">
-                            <li>F1-Score is used as the primary metric for model comparison</li>
-                            <li>Precision and Recall provide insight into error types</li>
-                            <li>ROC-AUC indicates overall ranking performance (when available)</li>
-                            <li>Consistency across folds indicates model robustness</li>
-                        </ul>
-                    </section>
-                </div>
-                
-                <!-- Feature Analysis Tab -->
-                <div id="features" class="tab-content">
-                    <section class="section">
-                        <h2><i class="fas fa-chart-line"></i> Feature Analysis</h2>
-                        {feature_analysis_section}
-                        
-                        <h3>Feature Importance Insights</h3>
-                        <ul class="fair-checklist">
-                            <li>Feature importance varies by model type and evaluation method</li>
-                            <li>Random Forest provides intrinsic feature importance scores based on impurity reduction</li>
-                            <li>Mutual information identifies features with strong non-linear relationships to the target</li>
-                            <li>ANOVA F-values measure linear relationships between features and target</li>
-                            <li>PCA analysis reveals feature redundancy and helps with dimensionality reduction</li>
-                        </ul>
-                        
                         <div class="fair-section">
-                            <h3>Next Steps for Feature Engineering</h3>
+                            <h3>Performance Insights</h3>
                             <ul class="fair-checklist">
-                                <li><strong>Remove redundant features:</strong> Consider dropping highly correlated features to reduce dimensionality</li>
-                                <li><strong>Focus on top features:</strong> Build simpler models using only the most important features</li>
-                                <li><strong>Explore interactions:</strong> Create interaction terms between top features</li>
-                                <li><strong>Dimensionality reduction:</strong> Use PCA or other methods to create new feature representations</li>
-                                <li><strong>Feature selection:</strong> Use recursive feature elimination or other selection methods</li>
+                                <li>F1-Score is used as the primary metric for model comparison</li>
+                                <li>Precision and Recall provide insight into error types</li>
+                                <li>ROC-AUC indicates overall ranking performance (when available)</li>
+                                <li>Consistency across folds indicates model robustness</li>
                             </ul>
                         </div>
                     </section>
                 </div>
-                
+    """
+    
+    # Feature Analysis Tab (only if we have feature plots)
+    if has_feature_plots:
+        html_content += """
+                <!-- Feature Analysis Tab -->
+                <div id="features" class="tab-content">
+                    <section class="section">
+                        <h2><i class="fas fa-chart-line"></i> Interactive Feature Analysis</h2>
+                        
+                        <div class="plot-grid">
+        """
+        
+        # Add interactive feature plots
+        feature_plot_counter = 10  # Start plot IDs from 10
+        
+        if 'feature_correlation' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'feature_correlation')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Feature Correlation Analysis</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['feature_correlation']}
+                                </div>
+                                <div class="plot-description">
+                                    Top highly correlated feature pairs (|r| > 0.8). Color indicates correlation strength.
+                                    Highly correlated features may be redundant and candidates for removal.
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        if 'feature_target_relationship' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'feature_target_relationship')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Feature-Target Relationship</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['feature_target_relationship']}
+                                </div>
+                                <div class="plot-description">
+                                    Relationship between features and target variable. 
+                                    Green points indicate features significantly related to target (ANOVA p < 0.05).
+                                    Larger points have higher ANOVA F-values.
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        if 'feature_top_anova' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'feature_top_anova')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Top Features by ANOVA F-value</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['feature_top_anova']}
+                                </div>
+                                <div class="plot-description">
+                                    Features with strongest linear relationships to target (higher F-values = stronger relationship).
+                                    Green bars indicate statistically significant relationships (p < 0.05).
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        if 'feature_top_mi' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'feature_top_mi')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Top Features by Mutual Information</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['feature_top_mi']}
+                                </div>
+                                <div class="plot-description">
+                                    Features with highest mutual information scores (capture non-linear relationships).
+                                    Darker colors indicate higher mutual information scores.
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        if 'feature_importance_comparison' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'feature_importance_comparison')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">Feature Importance Comparison</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['feature_importance_comparison']}
+                                </div>
+                                <div class="plot-description">
+                                    Comparison of feature importance across different evaluation methods.
+                                    Shows how different algorithms rank feature importance.
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        if 'pca_variance' in feature_plots_html:
+            html_content += f"""
+                            <div class="plot-container">
+                                <div class="plot-controls">
+                                    <button class="plot-btn" onclick="downloadPlot('plot{feature_plot_counter}', 'pca_variance')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                    <button class="plot-btn" onclick="resetPlot('plot{feature_plot_counter}')">
+                                        <i class="fas fa-undo"></i> Reset View
+                                    </button>
+                                </div>
+                                <div class="plot-title">PCA Explained Variance</div>
+                                <div id="plot{feature_plot_counter}">
+                                    {feature_plots_html['pca_variance']}
+                                </div>
+                                <div class="plot-description">
+                                    Principal Component Analysis showing variance explained by each component.
+                                    Shows how many components are needed to capture 95% of variance (green dashed line).
+                                </div>
+                            </div>
+            """
+            feature_plot_counter += 1
+        
+        html_content += """
+                        </div>
+                        
+                        <div class="fair-section">
+                            <h3>Feature Analysis Insights</h3>
+                            <ul class="fair-checklist">
+                                <li><strong>Correlation Analysis:</strong> Identifies redundant features that can be removed</li>
+                                <li><strong>ANOVA F-values:</strong> Measures linear relationships between features and target</li>
+                                <li><strong>Mutual Information:</strong> Captures non-linear relationships and dependencies</li>
+                                <li><strong>Feature Importance:</strong> Shows which features contribute most to model predictions</li>
+                                <li><strong>PCA Analysis:</strong> Helps with dimensionality reduction and feature engineering</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+        """
+    
+    html_content += f"""
                 <!-- Dataset Info Tab -->
                 <div id="data" class="tab-content">
                     <section class="section">
@@ -1384,7 +1894,7 @@ def generate_html_dashboard(results, performance_plots, feature_plots=None, feat
 ClusterID-aware CV → Model Training → Evaluation → Visualization</code></pre>
                         
                         <h3>Key Pipeline Components</h3>
-                        <table>
+                        <table class="interactive-table">
                             <thead>
                                 <tr>
                                     <th>Component</th>
@@ -1403,12 +1913,18 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                                     <td>Clean and preprocess features</td>
                                     <td>Handles missing values, categorical encoding</td>
                                 </tr>
-                                <tr>
+    """
+    
+    # Add feature evaluator row conditionally
+    if has_feature_plots:
+        html_content += """                                <tr>
                                     <td>FeatureEvaluator</td>
                                     <td>Analyze feature importance and relationships</td>
-                                    <td>Correlation, ANOVA, mutual information, PCA</td>
+                                    <td>Interactive correlation, ANOVA, mutual information, PCA</td>
                                 </tr>
-                                <tr>
+    """
+    
+    html_content += f"""                                <tr>
                                     <td>ClusterAwareCV</td>
                                     <td>Prevent data leakage</td>
                                     <td>Ensures same-cluster samples stay together</td>
@@ -1421,7 +1937,7 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                                 <tr>
                                     <td>Evaluator</td>
                                     <td>Comprehensive model evaluation</td>
-                                    <td>Multiple metrics, visualizations, statistical tests</td>
+                                    <td>Interactive visualizations, statistical tests</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1429,12 +1945,30 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                         <h3>Methodology Notes</h3>
                         <ul class="fair-checklist">
                             <li><strong>ClusterID-aware cross-validation:</strong> Prevents data leakage by ensuring all interfaces from the same sequence cluster stay together in training or testing sets</li>
-                            <li><strong>Feature evaluation:</strong> Comprehensive analysis including correlation, ANOVA, mutual information, and PCA</li>
-                            <li><strong>Stratified sampling:</strong> Maintains class balance across folds</li>
+    """
+    
+    # Add feature evaluation note conditionally
+    if has_feature_plots:
+        html_content += """                            <li><strong>Interactive feature evaluation:</strong> Comprehensive analysis with zoomable, hoverable plots for correlation, ANOVA, mutual information, and PCA</li>
+    """
+    
+    html_content += f"""                            <li><strong>Stratified sampling:</strong> Maintains class balance across folds</li>
                             <li><strong>Multiple metrics:</strong> Evaluates models using Accuracy, Precision, Recall, F1-Score, and ROC-AUC</li>
                             <li><strong>Feature scaling:</strong> All features standardized for distance-based algorithms</li>
                             <li><strong>Model diversity:</strong> Includes tree-based, linear, and kernel-based models</li>
                         </ul>
+                        
+                        <div class="fair-section">
+                            <h3>Interactive Dashboard Features</h3>
+                            <ul class="fair-checklist">
+                                <li><strong>Hover for Details:</strong> Hover over any plot point to see exact values</li>
+                                <li><strong>Zoom & Pan:</strong> Click and drag to zoom, double-click to reset view</li>
+                                <li><strong>Sortable Tables:</strong> Click column headers to sort table data</li>
+                                <li><strong>Download Plots:</strong> Save any plot as PNG image</li>
+                                <li><strong>Tab Persistence:</strong> Your selected tab is saved between visits</li>
+                                <li><strong>Responsive Design:</strong> Works on desktop, tablet, and mobile</li>
+                            </ul>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -1446,15 +1980,22 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                 <div class="footer-content">
                     <div class="badges">
                         <a href="https://github.com/biofold/ppi-benchmark-fair">
-                        <img src="https://img.shields.io/badge/ML_Results-Dashboard-blue" alt="ML Results Dashboard"></a>
+                        <img src="https://img.shields.io/badge/Interactive-Dashboard-blue" alt="Interactive Dashboard"></a>
                         <a href="https://www.python.org/">
                         <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
-                        <a href="https://scikit-learn.org/">
-                        <img src="https://img.shields.io/badge/scikit--learn-1.3%2B-orange" alt="scikit-learn"></a>
+                        <a href="https://plotly.com/">
+                        <img src="https://img.shields.io/badge/Plotly.js-Interactive-orange" alt="Plotly.js Interactive"></a>
                         <a href="https://mlcommons.org/croissant/">
                         <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
-                        {('<a href="https://scikit-learn.org/stable/modules/feature_selection.html"><img src="https://img.shields.io/badge/Feature-Analysis-purple" alt="Feature Analysis"></a>' if feature_plots else '')}
-                    </div>
+    """
+    
+    # Add feature analysis badge conditionally
+    if has_feature_plots:
+        html_content += """                        <a href="https://scikit-learn.org/stable/modules/feature_selection.html">
+                        <img src="https://img.shields.io/badge/Interactive-Feature_Analysis-purple" alt="Interactive Feature Analysis"></a>
+    """
+    
+    html_content += f"""                    </div>
                     
                     <div class="footer-links">
                         <a href="index.html" class="footer-link">
@@ -1466,14 +2007,14 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                         <a href="https://elixir-europe.org/platforms/3d-bioinfo" class="footer-link" target="_blank">
                             <i class="fas fa-users"></i> ELIXIR 3D-BioInfo
                         </a>
-                        <a href="https://scikit-learn.org/" class="footer-link" target="_blank">
-                            <i class="fas fa-brain"></i> scikit-learn
+                        <a href="https://plotly.com/" class="footer-link" target="_blank">
+                            <i class="fas fa-chart-line"></i> Plotly.js
                         </a>
                     </div>
                     
                     <div class="copyright">
-                        <p>ELIXIR PPI Benchmark ML Results Dashboard • Generated on: {current_date}</p>
-                        <p>Analysis Method: ClusterID-aware Cross-Validation with Feature Evaluation</p>
+                        <p>ELIXIR PPI Benchmark Interactive ML Dashboard • Generated on: {current_date}</p>
+                        <p>Analysis Method: ClusterID-aware Cross-Validation with Interactive Feature Evaluation</p>
                     </div>
                 </div>
             </div>
@@ -1486,14 +2027,14 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
     
-    print(f"✅ HTML dashboard generated: {output_path}")
+    print(f"✅ Interactive HTML dashboard generated: {output_path}")
     
     return html_content
 
 def main():
-    """Main function to generate the HTML dashboard."""
+    """Main function to generate the interactive HTML dashboard."""
     parser = argparse.ArgumentParser(
-        description='Generate interactive HTML dashboard for ML results from ppi_ml_croissant.py'
+        description='Generate interactive HTML dashboard with Plotly.js for ML results from ppi_ml_croissant.py'
     )
     
     parser.add_argument(
@@ -1516,17 +2057,12 @@ def main():
         help='Output HTML file path (default: ml_results_dashboard.html)'
     )
     
-    parser.add_argument(
-        '--save-plots',
-        type=str,
-        help='Directory to save plot images (optional)'
-    )
-    
     args = parser.parse_args()
     
     print("""
 ╔══════════════════════════════════════════════════════════╗
-║  ML Results HTML Dashboard Generator                     ║
+║  Interactive ML Results Dashboard Generator              ║
+║  with Plotly.js Visualizations                           ║
 ║  for ELIXIR PPI Benchmark                                ║
 ╚══════════════════════════════════════════════════════════╝
     """)
@@ -1535,41 +2071,54 @@ def main():
     print(f"📊 Loading results from: {args.results}")
     results = load_results_json(args.results)
     
-    # Generate performance plots
-    print("🎨 Generating performance plots...")
-    performance_plots = generate_performance_plots(results, args.save_plots)
+    # Create interactive performance plots
+    print("🎨 Creating interactive performance plots...")
+    performance_plots_html = create_interactive_performance_plots(results)
     
-    # Generate feature evaluation plots
-    feature_plots = {}
+    # Create interactive feature plots
+    feature_plots_html = {}
     if args.feature_eval:
-        print("📈 Generating feature evaluation plots...")
-        feature_plots = generate_feature_evaluation_plots(args.feature_eval, args.save_plots)
+        print("📈 Creating interactive feature plots...")
+        feature_plots_html = create_interactive_feature_plots(args.feature_eval)
     
     # Generate HTML dashboard
-    print("📄 Generating HTML dashboard...")
+    print("📄 Generating interactive HTML dashboard...")
     html_content = generate_html_dashboard(
         results=results,
-        performance_plots=performance_plots,
-        feature_plots=feature_plots,
+        performance_plots_html=performance_plots_html,
+        feature_plots_html=feature_plots_html,
         feature_eval_path=args.feature_eval,
         output_path=args.output
     )
     
-    print(f"\n✅ Dashboard generation complete!")
+    print(f"\n✅ Interactive dashboard generation complete!")
     print(f"   HTML file: {args.output}")
     print(f"   Models analyzed: {len([k for k in results.keys() if k != 'cross_validation_settings'])}")
     
     if args.feature_eval:
-        print(f"   Feature analysis included: Yes")
-        print(f"   Feature plots generated: {len(feature_plots)}")
+        print(f"   Interactive feature plots included: {len(feature_plots_html)}")
     
-    print(f"\n📋 Dashboard features:")
-    print("   • Interactive tabs for different analysis views")
-    print("   • Performance metrics and visualizations")
-    print("   • Model comparison tables")
-    print("   • Feature analysis summary and plots")
-    print("   • Dataset and methodology information")
-    print("   • Responsive design matching index.html style")
+    print(f"\n🎯 Interactive Dashboard Features:")
+    print("   • Hover-over tooltips with detailed values")
+    print("   • Zoom and pan on all plots")
+    print("   • Click-and-drag to select regions")
+    print("   • Double-click to reset plot views")
+    print("   • Sortable tables (click column headers)")
+    print("   • Download plots as PNG images")
+    print("   • Tab persistence (remembers your selection)")
+    print("   • Responsive design for all devices")
+    
+    print(f"\n📊 Interactive Plots Generated:")
+    print(f"   • Performance metrics comparison")
+    print(f"   • F1-Score per fold trends")
+    print(f"   • Metric distribution box plots")
+    print(f"   • Radar chart for overall performance")
+    if feature_plots_html:
+        print(f"   • Feature correlation analysis")
+        print(f"   • Feature-target relationship scatter plots")
+        print(f"   • ANOVA and mutual information rankings")
+        print(f"   • Feature importance comparisons")
+        print(f"   • PCA explained variance")
     
     return html_content
 
