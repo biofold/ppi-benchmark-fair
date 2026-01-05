@@ -1786,7 +1786,6 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
     if 'metrics_comparison' in performance_plots_html:
         html_content += f"""
                             <div >
-                                <!--
                                 <div class="plot-controls">
                                     <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'metrics_comparison')">
                                         <i class="fas fa-download"></i> Download
@@ -1795,12 +1794,12 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                                         <i class="fas fa-undo"></i> Reset View
                                     </button>
                                 </div>
+                                <!--
+                                 <div class="figure-container" >
+                                 <h2 class="figure-title">Figure 1: FAIR Score Ranking / Gauge</h2>
+                                 <p class="figure-description"> Test</p>
+                                 </div>
                                 -->
-                                <div class="figure-container" >
-                                <h2 class="figure-title">Figure 1: FAIR Score Ranking / Gauge</h2>
-                                <p class="figure-description"> Test</p>
-                                </div>
-    
                                 <div class="plot-title">Metrics Comparison Across Models</div>
                                 <div id="plot{plot_counter}">
                                     {performance_plots_html['metrics_comparison']}
