@@ -18,8 +18,6 @@ import plotly.io as pio
 
 # Set Plotly template
 pio.templates.default = "plotly_white"
-pio.templates["plotly_white"].layout.xaxis.mirror = False
-pio.templates["plotly_white"].layout.yaxis.mirror = False
 
 def load_results_json(results_path):
     """Load results JSON file."""
