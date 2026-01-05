@@ -2955,7 +2955,7 @@ class FAIRVisualizer:
                     <p>Explore all visualizations in the interactive dashboard:</p>
                     <div style="text-align: center; margin: 30px 0;">
                         <a href="fair_dashboard.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #2980b9); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease;">
-                            <i class="fas fa-chart-line"></i> 🚀 Open Interactive Dashboard
+                            <i class="fas fa-chart-line"></i> Open Interactive Dashboard
                         </a>
                     </div>
                     <p>The dashboard includes 9 detailed visualizations with explanations:</p>
