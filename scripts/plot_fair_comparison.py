@@ -2913,7 +2913,7 @@ class FAIRVisualizer:
                 
                 <!-- Top Repositories -->
                 <div class="section" id="ranking">
-                    <h2>🏆 Top Repositories</h2>
+                    <h2><i class="fa fa-trophy"></i> Top Repositories</h2>
                     <div class="repo-list">
                         <table>
                             <tr>
