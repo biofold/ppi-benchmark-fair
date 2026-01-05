@@ -1483,7 +1483,6 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         /* Plot controls */
         .plot-controls {{
             display: flex;
-            border: none;
             justify-content: flex-end;
             gap: 10px;
             margin-bottom: 10px;
@@ -1492,7 +1491,6 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         .plot-btn {{
             background: var(--secondary-color);
             color: white;
-            border: none;
             padding: 8px 15px;
             border-radius: 4px;
             cursor: pointer;
