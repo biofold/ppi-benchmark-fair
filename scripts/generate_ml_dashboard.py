@@ -1850,8 +1850,8 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                         <h3>Fold-by-Fold Performance</h3>
                         <p>Detailed performance metrics for each fold of cross-validation. F1-scores are color-coded for quick assessment.</p>
                         {fold_details_table}
-                        
-                        <section class="section">
+                    </section> 
+                    <section class="section">
                           <div >
                             <h3>Performance Insights</h3>
                             <ul class="fair-checklist">
