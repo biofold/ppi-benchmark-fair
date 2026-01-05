@@ -920,7 +920,7 @@ def generate_cv_settings_section(results):
     settings = results['cross_validation_settings']
     
     html = f"""
-    <div class="fair-section">
+    <div>
         <h3>Cross-Validation Settings</h3>
         <ul class="fair-checklist">
             <li><strong>Method:</strong> {settings.get('method', 'ClusterID-aware stratified cross-validation')}</li>
