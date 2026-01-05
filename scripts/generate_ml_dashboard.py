@@ -1597,7 +1597,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         <!-- Header -->
         <header>
             <div class="header-content">
-                <h1><strong>Interactive ML Results Dashboard</strong></h1>
+                <h1><strong>ML Prediction Dashboard</strong></h1>
                 <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
                  <div>
                     <a href="./index.html" class="dashboard-link">
