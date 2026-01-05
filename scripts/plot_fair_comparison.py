@@ -1192,7 +1192,7 @@ class FAIRVisualizer:
                 }
                 
                 .metric-card {
-                    background: linear-gradient(135deg, var(--primary-color), #4689a3;);
+                    background: linear-gradient(135deg, var(--primary-color), #4689a3);
                     color: white;
                     padding: 25px;
                     border-radius: 12px;
