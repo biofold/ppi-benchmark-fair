@@ -1702,7 +1702,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
     html_content += f"""                        </ul>
                         
                         {cv_settings_section}
-                        
+                        <!-- 
                         <div class="plot-container">
                             <div class="plot-title">Interactive Dashboard Features</div>
                             <p style="text-align: center; margin-bottom: 15px;">This dashboard includes interactive visualizations with:</p>
@@ -1721,6 +1721,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                                 </div>
                             </div>
                         </div>
+                        -->
                     </section>
                 </div>
                 
