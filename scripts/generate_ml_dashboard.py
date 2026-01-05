@@ -1034,7 +1034,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         
         h1 {{
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }}
         
@@ -1143,7 +1143,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         
         h4 {{
             color: #555;
-            margin: 15px 0 10px;
+            margin: 5px 0 5px;
             font-size: 1.1rem;
         }}
         
@@ -1599,38 +1599,22 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
             <div class="header-content">
                 <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h3>
                 <h1><strong>Interactive ML Results Dashboard</strong></h1>
+                <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
+                 <div>
+                    <a href="./index.html" class="dashboard-link">
+                        <i class="fas fa-home"></i> FAIR Metadata
+                    </a>
+                    <a href="./ml_croissant.html" class="dashboard-link">
+                        <i class="fas fa-brain"></i> Machine Learning
+                    </a>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
                 
-                <div class="badges">
-                    <span class="badge ml"><i class="fas fa-brain"></i> ML Analysis</span>
-                    <span class="badge cv"><i class="fas fa-crosshairs"></i> ClusterID-Aware CV</span>
-                    <span class="badge best"><i class="fas fa-trophy"></i> Best Model: {best_model}</span>
-                    <span class="badge fair"><i class="fas fa-chart-line"></i> Avg F1: {avg_f1:.3f}</span>
-    """
-    
-    # Add feature badge conditionally
-    if has_feature_plots:
-        html_content += """                    <span class="badge feature"><i class="fas fa-chart-line"></i> Interactive Features</span>
     """
     
     html_content += f"""                </div>
                 
-                <div>
-                    <button class="dashboard-link" onclick="showTab('summary');">
-                        <i class="fas fa-home"></i> Summary
-                    </button>
-                    <button class="dashboard-link" onclick="showTab('performance');">
-                        <i class="fas fa-chart-bar"></i> Performance
-                    </button>
-                    <button class="dashboard-link" onclick="showTab('models');">
-                        <i class="fas fa-cogs"></i> Model Details
-                    </button>
-    """
-    
-    # Add feature tab button conditionally
-    if has_feature_plots:
-        html_content += """                    <button class="dashboard-link" onclick="showTab('features');">
-                        <i class="fas fa-chart-line"></i> Feature Analysis
-                    </button>
     """
     
     html_content += f"""                </div>
