@@ -1102,7 +1102,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
             font-weight: 400;
             transition: all 0.3s ease;
             border: 2px solid rgba(255,255,255,0.3);
-            margin: 10px;
+            margin-top: 15px;
         }}
         
         .dashboard-link:hover {{
