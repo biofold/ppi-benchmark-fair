@@ -1483,6 +1483,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         /* Plot controls */
         .plot-controls {{
             display: flex;
+            border: none;
             justify-content: flex-end;
             gap: 10px;
             margin-bottom: 10px;
@@ -1502,6 +1503,50 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         .plot-btn:hover {{
             background: var(--primary-color);
         }}
+
+        .figure-container {{
+            background-color: white;
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }}
+
+        .figure-container:hover {{
+           transform: translateY(-3px);
+        }}
+
+        .figure-title {{
+             color: var(--primary-color);
+             margin-bottom: 15px;
+             font-size: 1.5rem;
+             display: flex;
+             align-items: center;
+             gap: 10px;
+         }}
+           .figure-title::before {{
+               content: "📊";
+               font-size: 1.2rem;
+           }}
+
+           .figure-description {{
+               color: #7f8c8d;
+               margin-bottom: 25px;
+               font-size: 1rem;
+               line-height: 1.7;
+           }}
+
+           .figure-embed {{
+               width: 100%;
+               height: 500px;
+               border: none;
+               border-radius: 8px;
+               box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+           }}
+
+
     </style>
     
     <script>
