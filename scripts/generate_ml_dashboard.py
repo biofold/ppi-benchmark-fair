@@ -189,6 +189,251 @@ def generate_performance_plots(results, output_dir=None):
     
     return plots
 
+def generate_feature_evaluation_plots(feature_eval_path, output_dir=None):
+    """Generate feature evaluation plots from feature evaluation report."""
+    plots = {}
+    
+    if not feature_eval_path or not Path(feature_eval_path).exists():
+        return plots
+    
+    try:
+        with open(feature_eval_path, 'r') as f:
+            feature_data = json.load(f)
+        
+        print("📊 Loading feature evaluation data...")
+        
+        # Create a simple correlation heatmap if we have correlation matrix
+        if 'correlation_analysis' in feature_data:
+            try:
+                # Create correlation heatmap
+                fig, ax = plt.subplots(figsize=(12, 10))
+                
+                # For demonstration, create a sample correlation matrix
+                # In reality, you'd want to load the actual correlation matrix
+                # or extract it from the feature evaluation report
+                
+                # Create a placeholder message
+                ax.text(0.5, 0.5, 'Feature Correlation Analysis\n(Data available in JSON report)', 
+                       ha='center', va='center', transform=ax.transAxes, fontsize=12)
+                ax.set_title('Feature Correlation Matrix')
+                ax.axis('off')
+                
+                plots['feature_correlation'] = create_figure_image(fig)
+            except Exception as e:
+                print(f"⚠️  Could not create correlation plot: {e}")
+        
+        # Create feature importance plot if available
+        if 'feature_importance' in feature_data:
+            try:
+                fig, axes = plt.subplots(2, 2, figsize=(15, 12))
+                
+                # 1. Random Forest feature importance
+                ax1 = axes[0, 0]
+                if 'random_forest' in feature_data['feature_importance']:
+                    rf_data = feature_data['feature_importance']['random_forest']
+                    if 'top_features' in rf_data:
+                        features = [item[0] for item in rf_data['top_features'][:10]]
+                        importances = [item[1] for item in rf_data['top_features'][:10]]
+                        
+                        indices = np.arange(len(features))
+                        ax1.barh(indices, importances[::-1])
+                        ax1.set_yticks(indices)
+                        ax1.set_yticklabels(features[::-1])
+                        ax1.set_xlabel('Importance')
+                        ax1.set_title('Random Forest Feature Importance (Top 10)')
+                        ax1.grid(True, alpha=0.3, axis='x')
+                
+                # 2. Mutual Information scores
+                ax2 = axes[0, 1]
+                if 'mutual_information' in feature_data['feature_importance']:
+                    mi_data = feature_data['feature_importance']['mutual_information']
+                    if 'top_features' in mi_data:
+                        features = [item[0] for item in mi_data['top_features'][:10]]
+                        scores = [item[1] for item in mi_data['top_features'][:10]]
+                        
+                        indices = np.arange(len(features))
+                        ax2.bar(indices, scores)
+                        ax2.set_xticks(indices)
+                        ax2.set_xticklabels(features, rotation=45, ha='right')
+                        ax2.set_ylabel('Mutual Information Score')
+                        ax2.set_title('Mutual Information Feature Ranking (Top 10)')
+                        ax2.grid(True, alpha=0.3, axis='y')
+                
+                # 3. PCA explained variance
+                ax3 = axes[1, 0]
+                if 'pca_analysis' in feature_data:
+                    pca_data = feature_data['pca_analysis']
+                    if 'explained_variance' in pca_data:
+                        explained_variance = pca_data['explained_variance']
+                        cumulative_variance = pca_data['cumulative_variance']
+                        
+                        x = range(1, len(explained_variance) + 1)
+                        ax3.bar(x, explained_variance, alpha=0.6, label='Individual')
+                        ax3.plot(x, cumulative_variance, 'r-', marker='o', label='Cumulative')
+                        ax3.axhline(y=0.95, color='g', linestyle='--', alpha=0.5, label='95% threshold')
+                        
+                        ax3.set_xlabel('Principal Component')
+                        ax3.set_ylabel('Explained Variance Ratio')
+                        ax3.set_title('PCA Explained Variance')
+                        ax3.legend()
+                        ax3.grid(True, alpha=0.3)
+                
+                # 4. Feature statistics summary
+                ax4 = axes[1, 1]
+                if 'basic_statistics' in feature_data:
+                    stats_data = feature_data['basic_statistics']
+                    if stats_data:
+                        # Extract some key statistics for a few features
+                        features = list(stats_data.keys())[:5]
+                        
+                        # Create a simple summary
+                        summary_text = "Feature Statistics Summary:\n\n"
+                        for i, feature in enumerate(features[:5]):
+                            stats = stats_data[feature]
+                            summary_text += f"{feature}:\n"
+                            summary_text += f"  Mean: {stats.get('mean', 'N/A'):.3f}\n"
+                            summary_text += f"  Std: {stats.get('std', 'N/A'):.3f}\n"
+                            if i < 4:
+                                summary_text += "\n"
+                        
+                        ax4.text(0.1, 0.5, summary_text, transform=ax4.transAxes,
+                                verticalalignment='center', fontsize=10, fontfamily='monospace')
+                        ax4.set_title('Feature Statistics (Top 5 Features)')
+                        ax4.axis('off')
+                
+                plt.suptitle('Feature Evaluation Analysis', fontsize=16, y=1.02)
+                plt.tight_layout()
+                
+                plots['feature_evaluation_summary'] = create_figure_image(fig)
+                
+            except Exception as e:
+                print(f"⚠️  Could not create feature evaluation plots: {e}")
+        
+        # Create additional feature analysis plots
+        try:
+            # Feature ranking comparison
+            fig, ax = plt.subplots(figsize=(12, 8))
+            
+            # Collect ranking methods
+            ranking_methods = []
+            ranking_data = []
+            
+            if 'feature_importance' in feature_data:
+                for method, data in feature_data['feature_importance'].items():
+                    if 'top_features' in data:
+                        ranking_methods.append(method.replace('_', ' ').title())
+                        # Take top 5 features for each method
+                        top_features = [item[0] for item in data['top_features'][:5]]
+                        ranking_data.append(top_features)
+            
+            if ranking_methods and ranking_data:
+                # Create a heatmap of feature rankings
+                all_features = set()
+                for features in ranking_data:
+                    all_features.update(features)
+                
+                # Create ranking matrix
+                ranking_matrix = []
+                for i, method in enumerate(ranking_methods):
+                    row = []
+                    for feature in all_features:
+                        if feature in ranking_data[i]:
+                            # Lower rank is better (1 = best)
+                            rank = ranking_data[i].index(feature) + 1
+                            row.append(rank)
+                        else:
+                            row.append(np.nan)  # Not in top 5
+                    ranking_matrix.append(row)
+                
+                if ranking_matrix:
+                    df_rank = pd.DataFrame(ranking_matrix, index=ranking_methods, columns=list(all_features))
+                    
+                    # Plot heatmap
+                    sns.heatmap(df_rank, annot=True, fmt='.0f', cmap='YlOrRd_r',
+                               cbar_kws={'label': 'Rank (lower is better)'}, ax=ax)
+                    ax.set_title('Feature Rankings Across Different Methods')
+                    ax.set_xlabel('Feature')
+                    plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+                    plt.setp(ax.get_yticklabels(), rotation=0)
+                    
+                    plots['feature_ranking_comparison'] = create_figure_image(fig)
+            
+        except Exception as e:
+            print(f"⚠️  Could not create feature ranking comparison: {e}")
+        
+        # Create feature-target relationship plot
+        try:
+            if 'feature_target_analysis' in feature_data:
+                ft_data = feature_data['feature_target_analysis']
+                
+                if 'all_scores' in ft_data:
+                    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+                    
+                    # Prepare data for plotting
+                    features = []
+                    anova_f = []
+                    mutual_info = []
+                    
+                    for feature, scores in ft_data['all_scores'].items():
+                        features.append(feature)
+                        anova_f.append(scores.get('anova_f', 0))
+                        mutual_info.append(scores.get('mutual_info', 0))
+                    
+                    # Plot ANOVA F-values
+                    if anova_f:
+                        top_indices = np.argsort(anova_f)[-10:]  # Top 10 features
+                        top_features = [features[i] for i in top_indices]
+                        top_anova = [anova_f[i] for i in top_indices]
+                        
+                        ax1.barh(range(len(top_features)), top_anova)
+                        ax1.set_yticks(range(len(top_features)))
+                        ax1.set_yticklabels(top_features)
+                        ax1.set_xlabel('ANOVA F-value')
+                        ax1.set_title('Top 10 Features by ANOVA F-value')
+                        ax1.grid(True, alpha=0.3, axis='x')
+                    
+                    # Plot Mutual Information scores
+                    if mutual_info:
+                        top_indices = np.argsort(mutual_info)[-10:]  # Top 10 features
+                        top_features = [features[i] for i in top_indices]
+                        top_mi = [mutual_info[i] for i in top_indices]
+                        
+                        ax2.barh(range(len(top_features)), top_mi)
+                        ax2.set_yticks(range(len(top_features)))
+                        ax2.set_yticklabels(top_features)
+                        ax2.set_xlabel('Mutual Information Score')
+                        ax2.set_title('Top 10 Features by Mutual Information')
+                        ax2.grid(True, alpha=0.3, axis='x')
+                    
+                    plt.suptitle('Feature-Target Relationship Analysis', fontsize=14)
+                    plt.tight_layout()
+                    
+                    plots['feature_target_relationship'] = create_figure_image(fig)
+        
+        except Exception as e:
+            print(f"⚠️  Could not create feature-target relationship plot: {e}")
+        
+        # Save feature plots to files if output_dir provided
+        if output_dir:
+            output_dir = Path(output_dir)
+            output_dir.mkdir(parents=True, exist_ok=True)
+            
+            for i, (name, img_data) in enumerate(plots.items()):
+                # Convert base64 back to image and save
+                img_bytes = base64.b64decode(img_data)
+                img_path = output_dir / f"feature_{name}.png"
+                with open(img_path, 'wb') as f:
+                    f.write(img_bytes)
+        
+        print(f"✅ Generated {len(plots)} feature evaluation plots")
+        
+    except Exception as e:
+        print(f"❌ Error loading feature evaluation data: {e}")
+        import traceback
+        traceback.print_exc()
+    
+    return plots
+
 def generate_model_details_table(results):
     """Generate HTML table with detailed model results."""
     model_names = [name for name in results.keys() if name not in ['cross_validation_settings']]
@@ -342,7 +587,7 @@ def generate_cv_settings_section(results):
     
     return html
 
-def generate_feature_analysis_section(feature_eval_path=None):
+def generate_feature_analysis_section(feature_eval_path=None, feature_plots=None):
     """Generate HTML section for feature analysis."""
     html = ""
     
@@ -411,9 +656,57 @@ def generate_feature_analysis_section(feature_eval_path=None):
             </div>
             """
     
+    # Add feature plots if available
+    if feature_plots:
+        html += """
+        <h3>Feature Evaluation Visualizations</h3>
+        <div class="figure-grid">
+        """
+        
+        # Add feature evaluation plots
+        if 'feature_evaluation_summary' in feature_plots:
+            html += f"""
+            <div class="figure-container">
+                <div class="figure-title">Feature Evaluation Summary</div>
+                <img src="data:image/png;base64,{feature_plots['feature_evaluation_summary']}" alt="Feature Evaluation Summary">
+                <p>Comprehensive feature evaluation including importance scores, mutual information, and PCA analysis.</p>
+            </div>
+            """
+        
+        if 'feature_ranking_comparison' in feature_plots:
+            html += f"""
+            <div class="figure-container">
+                <div class="figure-title">Feature Ranking Comparison</div>
+                <img src="data:image/png;base64,{feature_plots['feature_ranking_comparison']}" alt="Feature Ranking Comparison">
+                <p>Comparison of feature rankings across different evaluation methods (lower rank = better).</p>
+            </div>
+            """
+        
+        if 'feature_target_relationship' in feature_plots:
+            html += f"""
+            <div class="figure-container">
+                <div class="figure-title">Feature-Target Relationship</div>
+                <img src="data:image/png;base64,{feature_plots['feature_target_relationship']}" alt="Feature-Target Relationship">
+                <p>Top features by ANOVA F-values and mutual information scores.</p>
+            </div>
+            """
+        
+        if 'feature_correlation' in feature_plots:
+            html += f"""
+            <div class="figure-container">
+                <div class="figure-title">Feature Correlation Analysis</div>
+                <img src="data:image/png;base64,{feature_plots['feature_correlation']}" alt="Feature Correlation">
+                <p>Analysis of feature correlations to identify redundant features.</p>
+            </div>
+            """
+        
+        html += """
+        </div>
+        """
+    
     return html
 
-def generate_html_dashboard(results, plots, feature_eval_path=None, output_path="ml_results_dashboard.html"):
+def generate_html_dashboard(results, performance_plots, feature_plots=None, feature_eval_path=None, output_path="ml_results_dashboard.html"):
     """Generate the HTML dashboard."""
     
     # Get current date
@@ -439,7 +732,7 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
     model_details_table = generate_model_details_table(results)
     fold_details_table = generate_fold_details_table(results)
     cv_settings_section = generate_cv_settings_section(results)
-    feature_analysis_section = generate_feature_analysis_section(feature_eval_path)
+    feature_analysis_section = generate_feature_analysis_section(feature_eval_path, feature_plots)
     
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -556,6 +849,12 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
             background: linear-gradient(135deg, var(--accent-color), #c0392b);
             color: white;
             box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }}
+        
+        .badge.feature {{
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
         }}
         
         .dashboard-link {{
@@ -906,6 +1205,7 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                     <span class="badge cv"><i class="fas fa-crosshairs"></i> ClusterID-Aware CV</span>
                     <span class="badge best"><i class="fas fa-trophy"></i> Best Model: {best_model}</span>
                     <span class="badge fair"><i class="fas fa-chart-line"></i> Avg F1: {avg_f1:.3f}</span>
+                    {('<span class="badge feature"><i class="fas fa-chart-line"></i> Feature Analysis</span>' if feature_plots else '')}
                 </div>
                 
                 <div>
@@ -966,6 +1266,7 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                             <li>Performance evaluated across {n_splits} folds</li>
                             <li><strong>{best_model}</strong> achieved the highest average F1-score</li>
                             <li>Models show consistent performance across different folds</li>
+                            {('<li><strong>Feature analysis</strong> performed to identify important features and correlations</li>' if feature_plots else '')}
                         </ul>
                         
                         {cv_settings_section}
@@ -980,39 +1281,39 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                         <div class="figure-grid">
     """
     
-    # Add plots to HTML
-    if 'metrics_comparison' in plots:
+    # Add performance plots to HTML
+    if 'metrics_comparison' in performance_plots:
         html_content += f"""
                             <div class="figure-container">
                                 <div class="figure-title">Metrics Comparison Across Models</div>
-                                <img src="data:image/png;base64,{plots['metrics_comparison']}" alt="Metrics Comparison">
+                                <img src="data:image/png;base64,{performance_plots['metrics_comparison']}" alt="Metrics Comparison">
                                 <p>Comparison of average cross-validation metrics across all trained models. Higher values indicate better performance.</p>
                             </div>
         """
     
-    if 'f1_per_fold' in plots:
+    if 'f1_per_fold' in performance_plots:
         html_content += f"""
                             <div class="figure-container">
                                 <div class="figure-title">F1-Score Per Fold</div>
-                                <img src="data:image/png;base64,{plots['f1_per_fold']}" alt="F1-Score Per Fold">
+                                <img src="data:image/png;base64,{performance_plots['f1_per_fold']}" alt="F1-Score Per Fold">
                                 <p>F1-Score for each fold across different models. Consistency across folds indicates robust model performance.</p>
                             </div>
         """
     
-    if 'metric_distribution' in plots:
+    if 'metric_distribution' in performance_plots:
         html_content += f"""
                             <div class="figure-container">
                                 <div class="figure-title">Metric Distribution Across Folds</div>
-                                <img src="data:image/png;base64,{plots['metric_distribution']}" alt="Metric Distribution">
+                                <img src="data:image/png;base64,{performance_plots['metric_distribution']}" alt="Metric Distribution">
                                 <p>Box plots showing distribution of metrics across folds for each model. Tighter distributions indicate more consistent performance.</p>
                             </div>
         """
     
-    if 'radar_chart' in plots:
+    if 'radar_chart' in performance_plots:
         html_content += f"""
                             <div class="figure-container">
                                 <div class="figure-title">Overall Model Performance (Radar Chart)</div>
-                                <img src="data:image/png;base64,{plots['radar_chart']}" alt="Radar Chart">
+                                <img src="data:image/png;base64,{performance_plots['radar_chart']}" alt="Radar Chart">
                                 <p>Radar chart comparing overall performance across multiple metrics. Larger areas indicate better overall performance.</p>
                             </div>
         """
@@ -1051,22 +1352,23 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                         <h2><i class="fas fa-chart-line"></i> Feature Analysis</h2>
                         {feature_analysis_section}
                         
-                        <h3>Feature Importance</h3>
-                        <p>Understanding which features contribute most to model predictions:</p>
+                        <h3>Feature Importance Insights</h3>
                         <ul class="fair-checklist">
-                            <li>Feature importance varies by model type</li>
-                            <li>Random Forest provides intrinsic feature importance scores</li>
-                            <li>Mutual information identifies features with strong target relationships</li>
-                            <li>PCA analysis reveals feature redundancy and dimensionality</li>
+                            <li>Feature importance varies by model type and evaluation method</li>
+                            <li>Random Forest provides intrinsic feature importance scores based on impurity reduction</li>
+                            <li>Mutual information identifies features with strong non-linear relationships to the target</li>
+                            <li>ANOVA F-values measure linear relationships between features and target</li>
+                            <li>PCA analysis reveals feature redundancy and helps with dimensionality reduction</li>
                         </ul>
                         
                         <div class="fair-section">
                             <h3>Next Steps for Feature Engineering</h3>
                             <ul class="fair-checklist">
-                                <li>Consider removing highly correlated features</li>
-                                <li>Focus on top features identified by importance analysis</li>
-                                <li>Explore feature interactions and polynomial features</li>
-                                <li>Test dimensionality reduction techniques</li>
+                                <li><strong>Remove redundant features:</strong> Consider dropping highly correlated features to reduce dimensionality</li>
+                                <li><strong>Focus on top features:</strong> Build simpler models using only the most important features</li>
+                                <li><strong>Explore interactions:</strong> Create interaction terms between top features</li>
+                                <li><strong>Dimensionality reduction:</strong> Use PCA or other methods to create new feature representations</li>
+                                <li><strong>Feature selection:</strong> Use recursive feature elimination or other selection methods</li>
                             </ul>
                         </div>
                     </section>
@@ -1102,6 +1404,11 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                                     <td>Handles missing values, categorical encoding</td>
                                 </tr>
                                 <tr>
+                                    <td>FeatureEvaluator</td>
+                                    <td>Analyze feature importance and relationships</td>
+                                    <td>Correlation, ANOVA, mutual information, PCA</td>
+                                </tr>
+                                <tr>
                                     <td>ClusterAwareCV</td>
                                     <td>Prevent data leakage</td>
                                     <td>Ensures same-cluster samples stay together</td>
@@ -1122,6 +1429,7 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                         <h3>Methodology Notes</h3>
                         <ul class="fair-checklist">
                             <li><strong>ClusterID-aware cross-validation:</strong> Prevents data leakage by ensuring all interfaces from the same sequence cluster stay together in training or testing sets</li>
+                            <li><strong>Feature evaluation:</strong> Comprehensive analysis including correlation, ANOVA, mutual information, and PCA</li>
                             <li><strong>Stratified sampling:</strong> Maintains class balance across folds</li>
                             <li><strong>Multiple metrics:</strong> Evaluates models using Accuracy, Precision, Recall, F1-Score, and ROC-AUC</li>
                             <li><strong>Feature scaling:</strong> All features standardized for distance-based algorithms</li>
@@ -1145,6 +1453,7 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                         <img src="https://img.shields.io/badge/scikit--learn-1.3%2B-orange" alt="scikit-learn"></a>
                         <a href="https://mlcommons.org/croissant/">
                         <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+                        {('<a href="https://scikit-learn.org/stable/modules/feature_selection.html"><img src="https://img.shields.io/badge/Feature-Analysis-purple" alt="Feature Analysis"></a>' if feature_plots else '')}
                     </div>
                     
                     <div class="footer-links">
@@ -1226,15 +1535,22 @@ def main():
     print(f"📊 Loading results from: {args.results}")
     results = load_results_json(args.results)
     
-    # Generate plots
+    # Generate performance plots
     print("🎨 Generating performance plots...")
-    plots = generate_performance_plots(results, args.save_plots)
+    performance_plots = generate_performance_plots(results, args.save_plots)
+    
+    # Generate feature evaluation plots
+    feature_plots = {}
+    if args.feature_eval:
+        print("📈 Generating feature evaluation plots...")
+        feature_plots = generate_feature_evaluation_plots(args.feature_eval, args.save_plots)
     
     # Generate HTML dashboard
     print("📄 Generating HTML dashboard...")
     html_content = generate_html_dashboard(
         results=results,
-        plots=plots,
+        performance_plots=performance_plots,
+        feature_plots=feature_plots,
         feature_eval_path=args.feature_eval,
         output_path=args.output
     )
@@ -1245,12 +1561,13 @@ def main():
     
     if args.feature_eval:
         print(f"   Feature analysis included: Yes")
+        print(f"   Feature plots generated: {len(feature_plots)}")
     
     print(f"\n📋 Dashboard features:")
     print("   • Interactive tabs for different analysis views")
     print("   • Performance metrics and visualizations")
     print("   • Model comparison tables")
-    print("   • Feature analysis summary")
+    print("   • Feature analysis summary and plots")
     print("   • Dataset and methodology information")
     print("   • Responsive design matching index.html style")
     
