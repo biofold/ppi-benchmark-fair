@@ -2087,7 +2087,8 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                                 </tr>
                             </tbody>
                         </table>
-                        
+                   </section> 
+                   <section class="section">
                         <h3>Methodology Notes</h3>
                         <ul class="fair-checklist">
                             <li><strong>ClusterID-aware cross-validation:</strong> Prevents data leakage by ensuring all interfaces from the same sequence cluster stay together in training or testing sets</li>
