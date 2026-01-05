@@ -78,6 +78,368 @@ def create_interactive_performance_plots(results):
         )
         
         plots_html['metrics_comparison'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+        print(f"✅ Created metrics comparison plot with {len(model_names)} models")
+    except Exception as e:
+        print(f"⚠️  Error creating metrics comparison plot: {e}")
+    
+    # 2. Interactive F1-Score per fold (line plot)
+    try:
+        fig = go.Figure()
+        has_f1_data = False
+        
+        for name in model_names:
+            if name in results and 'fold_metrics' in results[name]:
+                fold_f1s = results[name]['fold_metrics'].get('f1_scores', [])
+                if fold_f1s:
+                    fig.add_trace(go.Scatter(
+                        name=name,
+                        x=list(range(1, len(fold_f1s) + 1)),
+                        y=fold_f1s,
+                        mode='lines+markers',
+                        line=dict(width=2),
+                        marker=dict(size=8),
+                        hovertemplate='<b>%{text}</b><br>Fold: %{x}<br>F1-Score: %{y:.3f}<extra></extra>',
+                        text=[name] * len(fold_f1s)
+                    ))
+                    has_f1_data = True
+                    print(f"   Added {name} with {len(fold_f1s)} F1 scores")
+        
+        if has_f1_data:
+            fig.update_layout(
+                title='F1-Score per Fold by Model',
+                xaxis_title='Fold',
+                yaxis_title='F1-Score',
+                yaxis=dict(range=[0, 1.1]),
+                hovermode='closest',
+                legend=dict(
+                    orientation="h",
+                    yanchor="bottom",
+                    y=1.02,
+                    xanchor="right",
+                    x=1
+                ),
+                plot_bgcolor='rgba(248, 249, 250, 0.5)',
+                paper_bgcolor='rgba(248, 249, 250, 0.1)',
+            )
+            
+            plots_html['f1_per_fold'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+            print(f"✅ Created F1 per fold plot")
+        else:
+            print("⚠️  No F1 score data available for fold line plot")
+    except Exception as e:
+        print(f"⚠️  Error creating F1 per fold plot: {e}")
+    
+    # 3. Interactive radar chart for overall metrics
+    try:
+        fig = go.Figure()
+        has_radar_data = False
+        
+        categories = ['Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
+        
+        for name in model_names:
+            if name in results and 'overall_metrics' in results[name]:
+                metrics = results[name]['overall_metrics']
+                values = [
+                    metrics.get('accuracy', 0),
+                    metrics.get('precision', 0),
+                    metrics.get('recall', 0),
+                    metrics.get('f1', 0),
+                    metrics.get('roc_auc', 0) if metrics.get('roc_auc') is not None else 0
+                ]
+                
+                # Complete the loop
+                values = values + values[:1]
+                categories_complete = categories + [categories[0]]
+                
+                fig.add_trace(go.Scatterpolar(
+                    name=name,
+                    r=values,
+                    theta=categories_complete,
+                    fill='toself',
+                    line=dict(width=2),
+                    hovertemplate='<b>%{theta}</b>: %{r:.3f}<extra></extra>'
+                ))
+                has_radar_data = True
+        
+        if has_radar_data:
+            fig.update_layout(
+                title='Overall Model Performance (Radar Chart)',
+                polar=dict(
+                    radialaxis=dict(
+                        visible=True,
+                        range=[0, 1]
+                    )
+                ),
+                showlegend=True,
+                legend=dict(
+                    yanchor="top",
+                    y=0.99,
+                    xanchor="left",
+                    x=1.1
+                ),
+                hovermode='closest',
+            )
+            
+            plots_html['radar_chart'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+            print(f"✅ Created radar chart")
+        else:
+            print("⚠️  No overall metrics data available for radar chart")
+    except Exception as e:
+        print(f"⚠️  Error creating radar chart: {e}")
+    
+    # 4. Interactive box plot for metric distributions - FIXED VERSION
+    try:
+        print("📊 Creating metric distribution box plots...")
+        
+        # First, let's check what data we have
+        data_available = []
+        for name in model_names:
+            if name in results and 'fold_metrics' in results[name]:
+                fold_metrics = results[name]['fold_metrics']
+                print(f"   Model '{name}' has fold metrics keys: {list(fold_metrics.keys())}")
+                for metric_name, values in fold_metrics.items():
+                    if isinstance(values, list) and len(values) > 0:
+                        data_available.append(metric_name)
+        
+        # Get unique metric types
+        unique_metrics = list(set(data_available))
+        print(f"   Found metrics with data: {unique_metrics}")
+        
+        if unique_metrics:
+            # Map metric names to display names
+            metric_display_names = {
+                'accuracies': 'Accuracy',
+                'precisions': 'Precision', 
+                'recalls': 'Recall',
+                'f1_scores': 'F1-Score',
+                'roc_aucs': 'ROC-AUC'
+            }
+            
+            # Create subplots - use only metrics that have data
+            metrics_to_plot = []
+            for metric in unique_metrics:
+                display_name = metric_display_names.get(metric, metric.replace('_', ' ').title())
+                metrics_to_plot.append(display_name)
+            
+            # Limit to 4 metrics for a 2x2 grid
+            metrics_to_plot = metrics_to_plot[:4]
+            
+            if metrics_to_plot:
+                rows = 2
+                cols = 2
+                
+                # Adjust grid if we have fewer metrics
+                if len(metrics_to_plot) <= 2:
+                    rows = 1
+                    cols = len(metrics_to_plot)
+                
+                fig = make_subplots(
+                    rows=rows, cols=cols,
+                    subplot_titles=metrics_to_plot,
+                    vertical_spacing=0.2 if rows > 1 else 0.1,
+                    horizontal_spacing=0.15 if cols > 1 else 0.1
+                )
+                
+                plot_index = 0
+                for metric_display in metrics_to_plot:
+                    # Find the original metric name
+                    metric_original = None
+                    for orig_metric, display in metric_display_names.items():
+                        if display == metric_display:
+                            metric_original = orig_metric
+                            break
+                    
+                    if not metric_original:
+                        # Try to find by partial match
+                        for orig_metric in unique_metrics:
+                            if metric_display.lower() in orig_metric.lower() or orig_metric.lower() in metric_display.lower():
+                                metric_original = orig_metric
+                                break
+                    
+                    if metric_original:
+                        row = plot_index // cols + 1
+                        col = plot_index % cols + 1
+                        
+                        # Collect data for this metric
+                        metric_data = []
+                        for name in model_names:
+                            if name in results and 'fold_metrics' in results[name]:
+                                values = results[name]['fold_metrics'].get(metric_original, [])
+                                if isinstance(values, list) and values:
+                                    # Clean the values - remove None/NaN
+                                    clean_values = []
+                                    for v in values:
+                                        if v is not None:
+                                            try:
+                                                # Try to convert to float
+                                                clean_values.append(float(v))
+                                            except (ValueError, TypeError):
+                                                # Skip non-numeric values
+                                                pass
+                                    
+                                    if clean_values:
+                                        metric_data.append({
+                                            'Model': name,
+                                            'Values': clean_values
+                                        })
+                        
+                        # Add box plot for each model with data
+                        if metric_data:
+                            for i, data in enumerate(metric_data):
+                                fig.add_trace(go.Box(
+                                    y=data['Values'],
+                                    name=data['Model'],
+                                    boxpoints='all',  # Show all points
+                                    jitter=0.3,       # Spread points out
+                                    pointpos=-1.8,    # Position points
+                                    marker=dict(
+                                        size=6,
+                                        opacity=0.6,
+                                        color=px.colors.qualitative.Set1[i % len(px.colors.qualitative.Set1)]
+                                    ),
+                                    line=dict(width=1),
+                                    showlegend=(plot_index == 0)  # Only show legend in first subplot
+                                ), row=row, col=col)
+                            
+                            # Update subplot layout
+                            fig.update_yaxes(
+                                title_text='Score',
+                                range=[0, 1.1],
+                                row=row,
+                                col=col
+                            )
+                        else:
+                            # Add placeholder text if no data
+                            fig.add_annotation(
+                                x=0.5, y=0.5,
+                                text=f"No {metric_display} data",
+                                showarrow=False,
+                                font=dict(size=14),
+                                xref=f"x{plot_index + 1}",
+                                yref=f"y{plot_index + 1}"
+                            )
+                        
+                        plot_index += 1
+                
+                # Update overall layout
+                fig.update_layout(
+                    title='Metric Distributions Across Folds',
+                    height=400 * rows,
+                    showlegend=True,
+                    legend=dict(
+                        orientation="h",
+                        yanchor="bottom",
+                        y=1.02,
+                        xanchor="right",
+                        x=1
+                    ),
+                    plot_bgcolor='rgba(248, 249, 250, 0.5)',
+                    paper_bgcolor='rgba(248, 249, 250, 0.1)',
+                )
+                
+                plots_html['metric_distribution'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+                print(f"✅ Created metric distribution plot with {len(metrics_to_plot)} metrics")
+            else:
+                print("⚠️  No metrics to plot for distribution")
+        else:
+            print("⚠️  No fold metrics data available for distribution plots")
+            
+            # Create a placeholder plot
+            fig = go.Figure()
+            fig.add_annotation(
+                x=0.5, y=0.5,
+                text="No fold metrics data available<br>for distribution plots",
+                showarrow=False,
+                font=dict(size=16),
+                xref="paper",
+                yref="paper"
+            )
+            fig.update_layout(
+                title='Metric Distributions Across Folds',
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                height=400
+            )
+            plots_html['metric_distribution'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+            
+    except Exception as e:
+        print(f"⚠️  Error creating box plots: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Create error placeholder
+        fig = go.Figure()
+        fig.add_annotation(
+            x=0.5, y=0.5,
+            text=f"Error creating distribution plot:<br>{str(e)[:100]}...",
+            showarrow=False,
+            font=dict(size=14, color="red"),
+            xref="paper",
+            yref="paper"
+        )
+        fig.update_layout(
+            title='Metric Distributions Across Folds',
+            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            height=400
+        )
+        plots_html['metric_distribution'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
+    
+    return plots_html
+
+def create_interactive_performance_plots2(results):
+    """Create interactive Plotly plots from results."""
+    plots_html = {}
+    
+    # Get model names
+    model_names = [name for name in results.keys() if name not in ['cross_validation_settings']]
+    
+    if not model_names:
+        return plots_html
+    
+    # 1. Interactive metrics comparison bar chart
+    try:
+        fig = go.Figure()
+        
+        metrics = ['accuracy', 'precision', 'recall', 'f1']
+        metric_labels = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+        
+        for i, (metric, label) in enumerate(zip(metrics, metric_labels)):
+            values = []
+            for name in model_names:
+                if name in results:
+                    values.append(results[name]['cv_metrics'].get(metric, 0))
+            
+            if values:
+                fig.add_trace(go.Bar(
+                    name=label,
+                    x=model_names,
+                    y=values,
+                    text=[f'{v:.3f}' for v in values],
+                    textposition='auto',
+                    marker_color=px.colors.qualitative.Set1[i],
+                    hovertemplate=f'<b>{label}</b>: %{{y:.3f}}<extra></extra>'
+                ))
+        
+        fig.update_layout(
+            title='Average Cross-Validation Metrics by Model',
+            xaxis_title='Models',
+            yaxis_title='Score',
+            yaxis=dict(range=[0, 1.1]),
+            barmode='group',
+            hovermode='x unified',
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            ),
+            plot_bgcolor='rgba(248, 249, 250, 0.5)',
+            paper_bgcolor='rgba(248, 249, 250, 0.1)',
+        )
+        
+        plots_html['metrics_comparison'] = pio.to_html(fig, full_html=False, include_plotlyjs=False)
     except Exception as e:
         print(f"⚠️  Error creating metrics comparison plot: {e}")
     
