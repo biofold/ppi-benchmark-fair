@@ -1734,7 +1734,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                     <section class="section">
                         <h2><i class="fas fa-chart-bar"></i> Interactive Performance Visualizations</h2>
                         
-                        <div class="plot-grid">
+                        <div>
     """
     
     # Add interactive performance plots
@@ -1742,7 +1742,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
     
     if 'metrics_comparison' in performance_plots_html:
         html_content += f"""
-                            <div class="plot-container">
+                            <div >
                                 <div class="plot-controls">
                                     <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'metrics_comparison')">
                                         <i class="fas fa-download"></i> Download
