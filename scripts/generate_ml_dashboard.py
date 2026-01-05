@@ -2015,7 +2015,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         html_content += """
                         </div>
                         
-                        <div class="fair-section">
+                        <div >
                             <h3>Feature Analysis Insights</h3>
                             <ul class="fair-checklist">
                                 <li><strong>Correlation Analysis:</strong> Identifies redundant features that can be removed</li>
@@ -2103,7 +2103,8 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                             <li><strong>Feature scaling:</strong> All features standardized for distance-based algorithms</li>
                             <li><strong>Model diversity:</strong> Includes tree-based, linear, and kernel-based models</li>
                         </ul>
-                        
+                       
+                        <!-- 
                         <div class="fair-section">
                             <h3>Interactive Dashboard Features</h3>
                             <ul class="fair-checklist">
@@ -2115,6 +2116,7 @@ ClusterID-aware CV → Model Training → Evaluation → Visualization</code></p
                                 <li><strong>Responsive Design:</strong> Works on desktop, tablet, and mobile</li>
                             </ul>
                         </div>
+                        -->
                     </section>
                 </div>
             </div>
