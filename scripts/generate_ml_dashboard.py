@@ -219,6 +219,10 @@ def generate_model_details_table(results):
             cv_metrics = results[name].get('cv_metrics', {})
             overall_metrics = results[name].get('overall_metrics', {})
             
+            # Format ROC-AUC
+            roc_auc = cv_metrics.get('roc_auc')
+            roc_auc_display = f"{roc_auc:.4f}" if roc_auc is not None else 'N/A'
+            
             html += f"""
                 <tr>
                     <td><strong>{name}</strong></td>
@@ -226,7 +230,7 @@ def generate_model_details_table(results):
                     <td>{cv_metrics.get('precision', 0):.4f}</td>
                     <td>{cv_metrics.get('recall', 0):.4f}</td>
                     <td><strong>{cv_metrics.get('f1', 0):.4f}</strong></td>
-                    <td>{cv_metrics.get('roc_auc', 'N/A') if cv_metrics.get('roc_auc') is not None else 'N/A'}</td>
+                    <td>{roc_auc_display}</td>
                     <td>{overall_metrics.get('accuracy', 0):.4f}</td>
                     <td><strong>{overall_metrics.get('f1', 0):.4f}</strong></td>
                 </tr>
@@ -278,15 +282,34 @@ def generate_fold_details_table(results):
             n_folds = len(fold_metrics.get('accuracies', []))
             
             for fold_idx in range(n_folds):
+                # Get values for this fold with safe indexing
+                accuracies = fold_metrics.get('accuracies', [])
+                precisions = fold_metrics.get('precisions', [])
+                recalls = fold_metrics.get('recalls', [])
+                f1_scores = fold_metrics.get('f1_scores', [])
+                roc_aucs = fold_metrics.get('roc_aucs', [])
+                
+                # Format each metric
+                accuracy_val = f"{accuracies[fold_idx]:.4f}" if fold_idx < len(accuracies) else 'N/A'
+                precision_val = f"{precisions[fold_idx]:.4f}" if fold_idx < len(precisions) else 'N/A'
+                recall_val = f"{recalls[fold_idx]:.4f}" if fold_idx < len(recalls) else 'N/A'
+                f1_val = f"{f1_scores[fold_idx]:.4f}" if fold_idx < len(f1_scores) else 'N/A'
+                
+                # Format ROC-AUC
+                if fold_idx < len(roc_aucs) and roc_aucs[fold_idx] is not None:
+                    roc_auc_val = f"{roc_aucs[fold_idx]:.4f}"
+                else:
+                    roc_auc_val = 'N/A'
+                
                 html += f"""
                     <tr>
                         <td>{'→' if fold_idx > 0 else name}</td>
                         <td>{fold_idx + 1}</td>
-                        <td>{fold_metrics['accuracies'][fold_idx]:.4f if fold_idx < len(fold_metrics['accuracies']) else 'N/A'}</td>
-                        <td>{fold_metrics['precisions'][fold_idx]:.4f if fold_idx < len(fold_metrics['precisions']) else 'N/A'}</td>
-                        <td>{fold_metrics['recalls'][fold_idx]:.4f if fold_idx < len(fold_metrics['recalls']) else 'N/A'}</td>
-                        <td><strong>{fold_metrics['f1_scores'][fold_idx]:.4f if fold_idx < len(fold_metrics['f1_scores']) else 'N/A'}</strong></td>
-                        <td>{fold_metrics['roc_aucs'][fold_idx] if fold_idx < len(fold_metrics.get('roc_aucs', [])) and fold_metrics['roc_aucs'][fold_idx] is not None else 'N/A'}</td>
+                        <td>{accuracy_val}</td>
+                        <td>{precision_val}</td>
+                        <td>{recall_val}</td>
+                        <td><strong>{f1_val}</strong></td>
+                        <td>{roc_auc_val}</td>
                     </tr>
                 """
     
@@ -411,6 +434,12 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
     # Get CV settings
     cv_settings = results.get('cross_validation_settings', {})
     n_splits = cv_settings.get('n_splits', 5)
+    
+    # Generate table content
+    model_details_table = generate_model_details_table(results)
+    fold_details_table = generate_fold_details_table(results)
+    cv_settings_section = generate_cv_settings_section(results)
+    feature_analysis_section = generate_feature_analysis_section(feature_eval_path)
     
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -939,7 +968,7 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                             <li>Models show consistent performance across different folds</li>
                         </ul>
                         
-                        {generate_cv_settings_section(results)}
+                        {cv_settings_section}
                     </section>
                 </div>
                 
@@ -1000,11 +1029,11 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                         
                         <h3>Average Cross-Validation Metrics</h3>
                         <p>The following table shows average performance metrics across all cross-validation folds:</p>
-                        {generate_model_details_table(results)}
+                        {model_details_table}
                         
                         <h3>Fold-by-Fold Performance</h3>
                         <p>Detailed performance metrics for each fold of cross-validation:</p>
-                        {generate_fold_details_table(results)}
+                        {fold_details_table}
                         
                         <h3>Performance Insights</h3>
                         <ul class="fair-checklist">
@@ -1020,7 +1049,7 @@ def generate_html_dashboard(results, plots, feature_eval_path=None, output_path=
                 <div id="features" class="tab-content">
                     <section class="section">
                         <h2><i class="fas fa-chart-line"></i> Feature Analysis</h2>
-                        {generate_feature_analysis_section(feature_eval_path)}
+                        {feature_analysis_section}
                         
                         <h3>Feature Importance</h3>
                         <p>Understanding which features contribute most to model predictions:</p>
