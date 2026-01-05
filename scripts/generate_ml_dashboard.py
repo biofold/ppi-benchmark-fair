@@ -1373,7 +1373,32 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
             gap: 20px;
             margin: 30px 0;
         }}
-        
+
+                .metric-card {{
+                    background: linear-gradient(135deg, var(--primary-color), #4689a3);
+                    color: white;
+                    padding: 25px;
+                    border-radius: 12px;
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                    transition: transform 0.3s ease;
+                }}
+
+                .metric-card:hover {{
+                    transform: translateY(-5px);
+                }}
+
+                .metric-value {{
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }}
+
+                .metric-label {{
+                    font-size: 1rem;
+                    opacity: 0.9;
+                }}
+ 
         .highlight-card {{
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             border-radius: 10px;
@@ -1543,7 +1568,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
             }});
             
             // Add hover effects to performance highlights
-            const highlightCards = document.querySelectorAll('.highlight-card');
+            const highlightCards = document.querySelectorAll('.metric-card');
             highlightCards.forEach(card => {{
                 card.addEventListener('mouseenter', function() {{
                     this.style.transform = 'translateY(-5px)';
@@ -1643,21 +1668,21 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                         <h2><i class="fas fa-home"></i> Analysis Summary</h2>
                         
                         <div class="performance-highlights">
-                            <div class="highlight-card">
-                                <div class="highlight-value">{len(model_names)}</div>
-                                <div class="highlight-label">Models Trained</div>
+                            <div class="metric-card">
+                                <div class="metric-value">{len(model_names)}</div>
+                                <div class="metric-label">Models Trained</div>
                             </div>
-                            <div class="highlight-card">
-                                <div class="highlight-value">{n_splits}</div>
-                                <div class="highlight-label">CV Folds</div>
+                            <div class="metric-card">
+                                <div class="metric-value">{n_splits}</div>
+                                <div class="metric-label">CV Folds</div>
                             </div>
-                            <div class="highlight-card">
-                                <div class="highlight-value">{avg_f1:.3f}</div>
-                                <div class="highlight-label">Average F1-Score</div>
+                            <div class="metric-card">
+                                <div class="metric-value">{avg_f1:.3f}</div>
+                                <div class="metric-label">Average F1-Score</div>
                             </div>
-                            <div class="highlight-card">
-                                <div class="highlight-value">{best_model}</div>
-                                <div class="highlight-label">Best Model</div>
+                            <div class="metric-card">
+                                <div class="metric-value">{best_model}</div>
+                                <div class="metric-label">Best Model</div>
                             </div>
                         </div>
                         
