@@ -1123,8 +1123,28 @@ class FAIRVisualizer:
 
                 h1 {
                     font-size: 2.8rem;
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
                     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                }
+                h4 {
+                   color: #555;
+                    margin: 5px 0 5px;
+                   font-size: 1.1rem;
+                }
+
+                .dashboard-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: rgba(255,255,255,0.15);
+                    color: white;
+                    padding: 6px 6px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-weight: 400;
+                    transition: all 0.3s ease;
+                    border: 2px solid rgba(255,255,255,0.3);
+                    margin-top: 15px;
                 }
                 
                 .tagline {
@@ -2590,7 +2610,7 @@ class FAIRVisualizer:
                 
                 h1 {{
                     font-size: 2.8rem;
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
                     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
                 }}
                 
@@ -2600,6 +2620,12 @@ class FAIRVisualizer:
                     max-width: 800px;
                     margin: 0 auto 30px;
                 }}
+/
+                h4 {{
+                   color: #555;
+                    margin: 5px 0 5px;
+                   font-size: 1.1rem;
+                }}
                 
                 .dashboard-link {{
                     display: inline-flex;
@@ -2608,11 +2634,12 @@ class FAIRVisualizer:
                     background-color: rgba(255,255,255,0.15);
                     color: white;
                     padding: 6px 6px;
-                    border-radius: 12px;
+                    border-radius: 10px;
                     text-decoration: none;
                     font-weight: 400;
                     transition: all 0.3s ease;
                     border: 2px solid rgba(255,255,255,0.3);
+                    margin-top: 15px;
                 }}
                 
                 .dashboard-link:hover {{
