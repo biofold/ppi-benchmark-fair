@@ -920,6 +920,7 @@ def generate_cv_settings_section(results):
     settings = results['cross_validation_settings']
     
     html = f"""
+    <section class="section">
     <div>
         <h3>Cross-Validation Settings</h3>
         <ul class="fair-checklist">
@@ -929,6 +930,7 @@ def generate_cv_settings_section(results):
             <li><strong>Best Model:</strong> <span class="badge fair">{settings.get('best_model', 'Not determined')}</span></li>
         </ul>
     </div>
+    </section>
     """
     
     return html
@@ -1685,7 +1687,8 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                                 <div class="metric-label">Best Model</div>
                             </div>
                         </div>
-                        
+                    </section>
+                    <section class="section"> 
                         <h3>Key Findings</h3>
                         <ul class="fair-checklist">
                             <li>All models trained using <strong>ClusterID-aware cross-validation</strong> to prevent data leakage</li>
@@ -2014,7 +2017,8 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         
         html_content += """
                         </div>
-                        
+                        </section>
+                        <section class="section"> 
                         <div >
                             <h3>Feature Analysis Insights</h3>
                             <ul class="fair-checklist">
