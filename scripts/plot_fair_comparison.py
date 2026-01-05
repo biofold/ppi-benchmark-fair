@@ -1421,11 +1421,14 @@ class FAIRVisualizer:
             <!-- Header - Matching index.html -->
             <header>
                     <div class="header-content">
-                        <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
-                          Benchmark</strong></h3>
                         <h1><strong>FAIR Interactive Dashboard</strong></h1>
+                        <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction
+                          Benchmark</strong></h4>
+                        <!--
                         <div class="top-badge">TOP PERFORMER: """ + f"{self.df_scores['total'].max():.1f}" + """/100 SCORE</div>
                         <p class="tagline">Interactive visualization of FAIR principles compliance across GitHub repositories</p>
+                        -->
+                    <div>
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> FAIR Metadata
                     </a>
@@ -1438,6 +1441,7 @@ class FAIRVisualizer:
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                         <i class="fab fa-github"></i> Repository
                     </a>
+                    </div>
                 </div>
             </header>
             
@@ -2808,24 +2812,26 @@ class FAIRVisualizer:
             <!-- Header - Matching fair_dashboard.html -->
             <header>
                     <div class="header-content">
-                        <h3 style="color:white;"><strong>ELIXIR Protein-Protein Interaction 
-                        Benchmark</strong></h3>
                         <h1><strong>FAIR Assessment Report</strong></h1>
+                        <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction
+                        Benchmark</strong></h4>
                         <!--
                          <div class="top-badge">TOP SCORE: {highest_score:.1f}/100</div>
                         -->
-                    <a href="../index.html" class="dashboard-link">
-                        <i class="fas fa-home"></i> FAIR Metadata
-                    </a>
-                    <a href="#ranking" class="dashboard-link">
-                        <i class="fas fa-chart-bar"></i> Ranking
-                    </a>
-                    <a href="./fair_dashboard.html" class="dashboard-link">
-                        <i class="fas fa-chart-line"></i> Interactive Dashboard
-                    </a>
-                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
-                        <i class="fab fa-github"></i> Repository
-                    </a>
+                    <div>
+                       <a href="../index.html" class="dashboard-link">
+                         <i class="fas fa-home"></i> FAIR Metadata
+                       </a>
+                       <a href="#ranking" class="dashboard-link">
+                         <i class="fas fa-chart-bar"></i> Ranking
+                       </a>
+                       <a href="./fair_dashboard.html" class="dashboard-link">
+                         <i class="fas fa-chart-line"></i> Interactive Dashboard
+                       </a>
+                       <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                         <i class="fab fa-github"></i> Repository
+                       </a>
+                    </div>
                 </div>
             </header>
             
