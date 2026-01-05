@@ -1703,6 +1703,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
     """
     
     html_content += f"""                        </ul>
+                                       </section>
                         
                         {cv_settings_section}
                         <!-- 
