@@ -1491,6 +1491,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
         .plot-btn {{
             background: var(--secondary-color);
             color: white;
+            border: none;
             padding: 8px 15px;
             border-radius: 4px;
             cursor: pointer;
@@ -1785,7 +1786,7 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
     
     if 'metrics_comparison' in performance_plots_html:
         html_content += f"""
-                            <div >
+                            <div class="plot-container">
                                 <div class="plot-controls">
                                     <button class="plot-btn" onclick="downloadPlot('plot{plot_counter}', 'metrics_comparison')">
                                         <i class="fas fa-download"></i> Download
