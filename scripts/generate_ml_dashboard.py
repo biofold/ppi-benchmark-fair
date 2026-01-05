@@ -1845,12 +1845,14 @@ def generate_html_dashboard(results, performance_plots_html, feature_plots_html=
                         <h3>Average Cross-Validation Metrics</h3>
                         <p>The following table shows average performance metrics across all cross-validation folds. Click column headers to sort.</p>
                         {model_details_table}
-                        
+                    </section> 
+                     <section class="section">
                         <h3>Fold-by-Fold Performance</h3>
                         <p>Detailed performance metrics for each fold of cross-validation. F1-scores are color-coded for quick assessment.</p>
                         {fold_details_table}
                         
-                        <div class="fair-section">
+                        <section class="section">
+                          <div >
                             <h3>Performance Insights</h3>
                             <ul class="fair-checklist">
                                 <li>F1-Score is used as the primary metric for model comparison</li>
