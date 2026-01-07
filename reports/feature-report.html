@@ -1,0 +1,785 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Prediction Results Report - 2026-01-07</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+<style>
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #4689a3;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--light-bg);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header - Matching FAIR dashboard */
+header {
+    background: linear-gradient(135deg, var(--primary-color), #4689a3);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+    background-size: cover;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h4 {
+    color: white;
+    margin: 5px 0 5px;
+    font-size: 1.1rem;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.dashboard-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    padding: 6px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.3);
+    margin: 10px 5px;
+    margin-top: 25px;
+}
+
+.dashboard-link:hover {
+    background-color: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Section styling */
+.section {
+    background-color: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* Key Metrics - Matching FAIR dashboard style */
+.key-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.metric-card {
+    background: linear-gradient(135deg, var(--primary-color), #4689a3);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+/* Performance Table Styling */
+.performance-table {
+    width: 100%;
+    text-align: right;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.performance-table th {
+    background: linear-gradient(135deg, var(--primary-color), #4689a3);
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.performance-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.performance-table tr:last-child td {
+    border-bottom: none;
+}
+
+.performance-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.performance-table .best-metric {
+    background-color: rgba(39, 174, 96, 0.1);
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+/* Figure Containers - Matching FAIR dashboard cards */
+.figure-container {
+    background-color: white;
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.figure-container:hover {
+    transform: translateY(-3px);
+}
+
+.figure-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.figure-title::before {
+    content: "\F080";
+    font-family: "Font Awesome 6 Free";
+}
+
+.figure-description {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.figure-embed {
+    width: 100%;
+    height: 560px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.90rem;
+}
+
+.nav-bar a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Control Buttons */
+.controls {
+    text-align: center;
+    margin: 30px 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.toggle-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.toggle-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.toggle-button.hidden {
+    background-color: var(--accent-color);
+}
+
+/* Badge for top performer */
+.top-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--success-color), #219653);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #386277;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 12px;
+}
+
+.footer-content {
+    margin: 15px;
+    padding: 0 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.copyright {
+    margin: 10px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-bar li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-bar a {
+        display: block;
+        width: 90%;
+        margin: 5px auto;
+    }
+    
+    .figure-embed {
+        height: 500px;
+    }
+    
+    .key-metrics {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .performance-table {
+        font-size: 0.9rem;
+    }
+    
+    .performance-table th,
+    .performance-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .figure-embed {
+        height: 400px;
+    }
+    
+    .toggle-button {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .performance-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+</style></head><body><div class='container'>
+
+    <header>
+        <div class="header-content">
+            <h1><strong>Prediction Results Report</strong></h1>
+            <h4><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
+            <div>
+                <a href="../index.html" class="dashboard-link">
+                    <i class="fas fa-home"></i> PPI Benchmark FAIR
+                </a>
+                <a href="#key-metrics" class="dashboard-link">
+                    <i class="fas fa-chart-bar"></i> Performance Metrics
+                </a>
+                <a href="#performance-table" class="dashboard-link">
+                    <i class="fas fa-table"></i> Performance Table
+                </a>
+                <a href="#figures" class="dashboard-link">
+                    <i class="fas fa-chart-line"></i> Visualizations
+                </a>
+                <a href="#footer" class="dashboard-link">
+                    <i class="fas fa-info-circle"></i> Information
+                </a>
+                <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                    <i class="fab fa-github"></i> Repository
+                </a>
+            </div>
+        </div>
+    </header>
+    
+<main class='container'>
+
+    <div class="section" id="key-metrics">
+        <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
+        <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
+        
+        <div class="key-metrics">
+            <div class="metric-card">
+                <div class="metric-value">6</div>
+                <div class="metric-label">Models</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">0.000</div>
+                <div class="metric-label">Best F1 Score</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">0.000</div>
+                <div class="metric-label">Avg F1 Score</div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-value">N/A</div>
+                <div class="metric-label">Best Model</div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="section" id="performance-table">
+        <h2><i class="fas fa-table"></i> Model Performance Summary Table</h2>
+        <p>Detailed performance metrics for all evaluated models. Values shown as mean ± standard error (SE). Best performing values in each metric category are highlighted.</p>
+        
+        <table class="performance-table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                    <th>ROC-AUC</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+
+                <tr>
+                    <td><strong>dataset_info</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+                <tr>
+                    <td><strong>basic_statistics</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+                <tr>
+                    <td><strong>correlation_analysis</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+                <tr>
+                    <td><strong>feature_target_analysis</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+                <tr>
+                    <td><strong>pca_analysis</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+                <tr>
+                    <td><strong>feature_importance</strong></td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">0.000 ± 0.000</td>
+                    <td class="best-metric">N/A</td>
+                </tr>
+        
+
+            </tbody>
+        </table>
+        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+            <p><strong>Note:</strong> Standard error (SE) represents the variability of the metric across cross-validation folds. Smaller SE indicates more consistent performance.</p>
+        </div>
+    </div>
+    
+
+    <!--
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#key-metrics">Key Metrics</a></li>
+            <li><a href="#performance-table">Performance Table</a></li>
+            <li><a href="#figure1">Performance Comparison</a></li>
+            <li><a href="#figure2">F1 per Fold</a></li>
+            <li><a href="#figure3">Radar Chart</a></li>
+        </ul>
+    </div>
+    -->
+    
+
+    <!--
+    <div class="controls">
+        <p style="margin-bottom: 15px; color: var(--primary-color); font-weight: 600;">Dashboard Controls:</p>
+        <button class="toggle-button" onclick="toggleAllFigures('show')">
+            <i class="fas fa-eye"></i> Show All Figures
+        </button>
+        <button class="toggle-button hidden" onclick="toggleAllFigures('hide')">
+            <i class="fas fa-eye-slash"></i> Hide All Figures
+        </button>
+        <button class="toggle-button" onclick="expandAllFigures()">
+            <i class="fas fa-expand"></i> Expand All
+        </button>
+        <button class="toggle-button" onclick="collapseAllFigures()">
+            <i class="fas fa-compress"></i> Collapse All
+        </button>
+    </div>
+    -->
+    
+<div id="figures">
+
+        <div class="figure-container" id="figure1">
+            <h2 class="figure-title">Figure 1: Model Performance Comparison</h2>
+            <p class="figure-description">Bar chart comparing accuracy, precision, recall, and F1 scores across different models.</p>
+            <iframe class="figure-embed" src="figures/performance_comparison.html" loading="lazy" title="Figure 1: Model Performance Comparison"></iframe>
+        </div>
+        
+
+        <div class="figure-container" id="figure2">
+            <h2 class="figure-title">Figure 2: F1 Score per Cross-Validation Fold</h2>
+            <p class="figure-description">Line plot showing F1 score across each cross-validation fold for all models.</p>
+            <iframe class="figure-embed" src="figures/f1_per_fold.html" loading="lazy" title="Figure 2: F1 Score per Cross-Validation Fold"></iframe>
+        </div>
+        
+
+        <div class="figure-container" id="figure3">
+            <h2 class="figure-title">Figure 3: Performance Radar Chart</h2>
+            <p class="figure-description">Radar chart visualizing multiple performance metrics (Accuracy, Precision, Recall, F1, ROC-AUC) for model comparison.</p>
+            <iframe class="figure-embed" src="figures/radar_chart.html" loading="lazy" title="Figure 3: Performance Radar Chart"></iframe>
+        </div>
+        
+</div>
+</main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                Evaluation of machine learning model performance on the ELIXIR PPI Benchmark
+            </div>
+            <div class="footer-content" style="margin-top:25px;">
+                <a href="https://github.com/biofold/ppi-benchmark-fair">
+                <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <a href="https://www.python.org/">
+                <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
+                <a href="https://schema.org/">
+                <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
+                <a href="https://mlcommons.org/croissant/">
+                <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+            </div>
+            <div class="copyright">
+                <p>Prediction Results Report • Generated on: 2026-01-07 01:10:23</p>
+            </div>
+        </div>
+    </footer>
+    
+
+<script>
+    // JavaScript for interactive controls
+    function toggleAllFigures(action) {
+        const figures = document.querySelectorAll('.figure-container iframe');
+        const buttons = document.querySelectorAll('.toggle-button');
+        
+        if (action === 'show') {
+            figures.forEach(fig => {
+                fig.style.display = 'block';
+                fig.parentElement.style.display = 'block';
+            });
+            buttons[0].classList.add('hidden');
+            buttons[1].classList.remove('hidden');
+        } else {
+            figures.forEach(fig => {
+                fig.style.display = 'none';
+            });
+            buttons[0].classList.remove('hidden');
+            buttons[1].classList.add('hidden');
+        }
+    }
+    
+    function expandAllFigures() {
+        const figures = document.querySelectorAll('.figure-embed');
+        figures.forEach(fig => {
+            fig.style.height = '600px';
+        });
+        // Visual feedback
+        showNotification('All figures expanded to full view');
+    }
+    
+    function collapseAllFigures() {
+        const figures = document.querySelectorAll('.figure-embed');
+        figures.forEach(fig => {
+            fig.style.height = '400px';
+        });
+        // Visual feedback
+        showNotification('All figures collapsed to compact view');
+    }
+    
+    // Show a temporary notification
+    function showNotification(message) {
+        // Remove existing notification if any
+        const existingNotification = document.querySelector('.notification');
+        if (existingNotification) {
+            existingNotification.remove();
+        }
+        
+        // Create new notification
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-weight: 600;
+            animation: slideIn 0.3s ease;
+        `;
+        
+        // Add to body
+        document.body.appendChild(notification);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+    
+    // Add CSS for animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('.nav-bar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Lazy loading for iframes
+    document.addEventListener("DOMContentLoaded", function() {
+        const iframes = document.querySelectorAll('.figure-embed');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    if (!iframe.dataset.loaded) {
+                        iframe.dataset.loaded = true;
+                        // Iframes load on src attribute, so no additional action needed
+                    }
+                }
+            });
+        }, { rootMargin: '100px' });
+        
+        iframes.forEach(iframe => observer.observe(iframe));
+        
+        // Set initial state
+        document.querySelectorAll('.toggle-button')[1].classList.add('hidden');
+    });
+</script>
+
+</div></body></html>
