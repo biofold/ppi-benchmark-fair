@@ -1609,7 +1609,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
                 <a href="./feature-report.html" class="dashboard-link">
-                    <i class="fas fa-chart-bar"></i> Feature Report
+                    <i class="fas fa-chart-bar"></i> ML Features
                 </a>
                 <a href="./fair-analysis.html" class="dashboard-link">
                     <i class="fa-solid fa-brain"></i> FAIRfication
