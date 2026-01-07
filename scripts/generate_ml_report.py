@@ -1087,12 +1087,11 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
+                <a href="./feature-report.html" class="dashboard-link">
+                    <i class="fas fa-chart-bar"></i> Machine Learning
+                </a>
                 <a href="./fair-analysis.html" class="dashboard-link">
                     <i class="fa-solid fa-brain"></i> FAIRfication
-                </a>
-                
-                <a href="./feature-report.html" class="dashboard-link">
-                    <i class="fas fa-chart-bar"></i> Feature Report
                 </a>
                 <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                     <i class="fab fa-github"></i> Repository
@@ -1609,8 +1608,8 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
-                <a href="./prediction-report.html" class="dashboard-link">
-                    <i class="fa-solid fa-brain"></i> Machine Learning
+                <a href="./feature-report.html" class="dashboard-link">
+                    <i class="fas fa-chart-bar"></i> Feature Report
                 </a>
                 <a href="./fair-analysis.html" class="dashboard-link">
                     <i class="fa-solid fa-brain"></i> FAIRfication
