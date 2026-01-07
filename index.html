@@ -14,13 +14,13 @@
             --success-color: #27ae60;
             --warning-color: #f39c12;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -28,24 +28,24 @@
             background-color: var(--light-bg);
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         /* Header - Matching fair_dashboard.html */
         header {
             background: linear-gradient(135deg, var(--primary-color),#4689a3); /* #1a252f); */
             color: white;
-            padding: 50px 0;
+            padding: 30px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
             margin-bottom: 40px;
             border-radius: 12px;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -56,19 +56,19 @@
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
             background-size: cover;
         }
-        
+
         .header-content {
             position: relative;
             z-index: 1;
             padding: 0 20px;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .badges {
             display: flex;
             justify-content: center;
@@ -76,7 +76,7 @@
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         .badge {
             display: inline-block;
             padding: 8px 16px;
@@ -86,42 +86,42 @@
             text-decoration: none;
             transition: transform 0.3s ease;
         }
-        
+
         .badge:hover {
             transform: translateY(-2px);
         }
-        
+
         .badge.fair {
             background: linear-gradient(135deg, var(--success-color), #219653);
             color: white;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
-        
+
         .badge.license {
             background-color: #f1f1f1;
             color: #333;
         }
-        
+
         .badge.doi {
             background-color: #4285f4;
             color: white;
         }
-        
+
         .badge.python {
             background-color: #3776ab;
             color: white;
         }
-        
+
         .badge.schema {
             background-color: #6f42c1;
             color: white;
         }
-        
+
         .badge.croissant {
             background-color: #ff9800;
             color: white;
         }
-        
+
         .dashboard-link {
             display: inline-flex;
             align-items: center;
@@ -131,18 +131,19 @@
             padding: 6px 6px;
             border-radius: 10px;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
             transition: all 0.3s ease;
+            margin: 10px 5px;
             border: 2px solid rgba(255,255,255,0.3);
-            margin-top: 15px;
+            margin-top: 25px;
         }
-        
+
         .dashboard-link:hover {
             background-color: rgba(255,255,255,0.25);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
+
         /* Section Cards - Matching fair_dashboard.html */
         .section {
             background-color: white;
@@ -152,7 +153,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-left: 5px solid var(--secondary-color);
         }
-        
+
         h2 {
             color: var(--primary-color);
             margin-bottom: 20px;
@@ -161,24 +162,26 @@
             align-items: center;
             gap: 10px;
         }
-        
+
+        /*
         h2::before {
             content: "📊";
             font-size: 1.5rem;
         }
-        
+        */
+
         h3 {
             color: var(--primary-color);
             margin: 20px 0 10px;
             font-size: 1.3rem;
         }
-        
+
         h4 {
             color: #555;
             margin: 5px 0 5px;
             font-size: 1.1rem;
         }
-        
+
         /* Tables */
         table {
             width: 100%;
@@ -188,34 +191,34 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
+
         th, td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #e0e0e0;
         }
-        
+
         th {
             background-color: #f8f9fa;
             color: var(--primary-color);
             font-weight: 600;
         }
-        
+
         tr:hover {
             background-color: #f8f9fa;
         }
-        
+
         /* Lists */
         ul, ol {
             margin: 15px 0;
             padding-left: 20px;
         }
-        
+
         li {
             margin-bottom: 8px;
             line-height: 1.6;
         }
-        
+
         .fair-section {
             margin: 25px 0;
             padding: 20px;
@@ -223,34 +226,34 @@
             border-radius: 8px;
             border-left: 4px solid;
         }
-        
+
         .fair-section.findable { background-color: #e8e8e8; border-left-color: #e74c3c; }
         .fair-section.accessible { background-color: #e8e8e8; border-left-color: #3498db; }
         .fair-section.interoperable { background-color: #e8e8e8; border-left-color: #9b59b6; }
         .fair-section.reusable { background-color: #e8e8e8; border-left-color: #27ae60; }
-        
+
         .fair-score {
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 10px;
         }
-        
+
         .fair-checklist li {
             list-style-type: none;
             padding-left: 25px;
             position: relative;
         }
-        
+
         .fair-checklist li:before {
             content: "✅";
             position: absolute;
             left: 0;
         }
-        
+
         .fair-checklist li.needs-improvement:before {
             content: "⚠️";
         }
-        
+
         /* Code blocks */
         code {
             /* background-color: #f1f1f1; */
@@ -259,7 +262,7 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
         }
-        
+
         pre {
             background-color: #e8e8e8; /* #f8f9fa; */
             padding: 15px;
@@ -270,7 +273,7 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-        
+
         /* Footer */
         footer {
             background-color: #386277;
@@ -280,12 +283,12 @@
             margin-top: 60px;
             border-radius: 12px;
         }
-        
+
         .footer-content {
-            margin-top: 20px;
+            margin-top: 15px;
             padding: 0 10px;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
@@ -293,7 +296,7 @@
             margin: 30px 0;
             flex-wrap: wrap;
         }
-        
+
         .footer-link {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
@@ -302,43 +305,43 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .footer-link:hover {
             color: white;
         }
-        
+
         .copyright {
-            margin-top: 20px;
+            margin-top: 10px;
             color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
             line-height: 1.6;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-            
+
             .section {
                 padding: 20px;
             }
-            
+
             table {
                 display: block;
                 overflow-x: auto;
             }
-            
+
             .badges {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .badge {
                 width: 90%;
                 text-align: center;
             }
-            
+
             .footer-links {
                 flex-direction: column;
                 gap: 15px;
@@ -351,36 +354,33 @@
         <!-- Header -->
         <header>
             <div class="header-content">
-                <h1><strong>FAIR Metadata</strong></h1>
+                <h1><strong>FAIR Protein Interation Dataset</strong></h1>
                 <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark
                 </strong></h4>
-                <div>
-                    <a href="#quick-start" class="dashboard-link">
-                        <i class="fas fa-rocket"></i> Quick Start
-                    </a>
-                    <a href="#data-stats" class="dashboard-link">
-                        <i class="fas fa-chart-bar"></i> Statistics
-                    </a>
-                    <a href="#fair-eval" class="dashboard-link">
-                        <i class="fas fa-chart-line"></i> FAIR Evaluation
-                    </a>
-                    <a href="./ml_croissant.html" class="dashboard-link">
-                        <i class="fas fa-brain"></i> Machine Learning
-                    </a>
-                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
-                        <i class="fab fa-github"></i> Repository
-                    </a>
-                 </div>
+                <div class="header-content">
+                  <a href="../index.html" class="dashboard-link">
+                    <i class="fas fa-home"></i> PPI Benchmark FAIR
+                  </a>
+                  <a href="./fair-report.html" class="dashboard-link">
+                    <i class="fas fa-chart-bar"></i> FAIR Report
+                  </a>
+                  <a href="./prediction-report.html" class="dashboard-link">
+                    <i class="fa-solid fa-brain"></i> Machine Learning
+                  </a>
+                  <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                </div>
             </div>
         </header>
 
         <main>
             <!-- Overview -->
             <section class="section">
-                <h2>Overview</h2>
+                <h2><i class="fa-solid fa-eye"></i> Overview</h2>
                 <p>This repository provides FAIR-compliant metadata for the <em>ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces</em> – a dataset comprising 1,677 protein structure interfaces with 844 physiological and 833 non-physiological homodimer interfaces for machine learning and structural bioinformatics applications.</p>
                 <p>The <code>ppi_benchmark_fair.py</code> script generates machine-readable JSON-LD metadata compliant with multiple standards:</p>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -421,7 +421,7 @@
 
             <!-- Quick Start -->
             <section class="section" id="quick-start">
-                <h2>Quick Start</h2>
+                <h2><i class="fa-solid fa-rocket"></i> Quick Start</h2>
                 <pre><code># Clone repository
 git lfs clone https://github.com/biofold/ppi-benchmark-fair.git
 cd ppi-benchmark-fair
@@ -443,7 +443,7 @@ python scripts/ppi_benchmark_fair.py \
 
             <!-- Dataset Statistics -->
             <section class="section" id="data-stats">
-                <h2>Dataset Statistics</h2>
+                <h2><i class="fa-solid fa-database"></i> Dataset Statistics</h2>
                 <table>
                     <thead>
                         <tr>
@@ -494,9 +494,9 @@ python scripts/ppi_benchmark_fair.py \
 
             <!-- FAIR Compliance Section -->
             <section class="section" id="fair-eval">
-                <h2>FAIR Compliance Evaluation</h2>
+                <h2><i class="fas fa-bullseye"></i> FAIR Compliance Evaluation</h2>
                 <p>This repository has been evaluated using comprehensive FAIR principles analysis. <strong>Overall Score: 87.5/100</strong></p>
-                
+
                 <div class="fair-section findable">
                     <h3>Findable (85/100) ✅</h3>
                     <ul class="fair-checklist">
@@ -506,7 +506,7 @@ python scripts/ppi_benchmark_fair.py \
                         <li class="needs-improvement">Needs Improvement: Repository topics, GitHub releases, documentation wiki</li>
                     </ul>
                 </div>
-                
+
                 <div class="fair-section accessible">
                     <h3>Accessible (80/100) ✅</h3>
                     <ul class="fair-checklist">
@@ -516,7 +516,7 @@ python scripts/ppi_benchmark_fair.py \
                         <li class="needs-improvement">Needs Improvement: Access rights specification in metadata</li>
                     </ul>
                 </div>
-                
+
                 <div class="fair-section interoperable">
                     <h3>Interoperable (90/100) ✅</h3>
                     <ul class="fair-checklist">
@@ -526,7 +526,7 @@ python scripts/ppi_benchmark_fair.py \
                         <li class="needs-improvement">Needs Improvement: Data schema documentation, format information</li>
                     </ul>
                 </div>
-                
+
                 <div class="fair-section reusable">
                     <h3>Reusable (95/100) ✅</h3>
                     <ul class="fair-checklist">
@@ -536,17 +536,12 @@ python scripts/ppi_benchmark_fair.py \
                         <li>License Info: Explicit LICENSE file, CITATION.cff, issue templates</li>
                     </ul>
                 </div>
-                
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="fair_visualizations/index.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--secondary-color), #4689a3); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600;">
-                        <i class="fas fa-chart-line"></i> FAIR Assessment Report
-                    </a>
-                </div>
+
             </section>
 
             <!-- Metadata Architecture -->
             <section class="section">
-                <h2>Metadata Architecture</h2>
+                <h2><i class="fa-solid fa-building-columns"></i> Metadata Architecture</h2>
                 <h3>Generated File Structure</h3>
                 <pre><code>bioschema/
 ├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)
@@ -554,7 +549,7 @@ python scripts/ppi_benchmark_fair.py \
 │   ├── interface_1A17_6.json            # ProtCID format
 │   ├── interface_1A3A_1.json    # QSalign format
 │   └── ... (1,677 files total)
-├── fair_metadata_package.json            # FAIR assessment package
+├── fair_metadata_package.json            # FAIR Architecture package
 ├── embedded_markup.html                  # HTML with JSON-LD for web discovery
 ├── manifest.json                         # File inventory and checksums
 └── pdb_metadata_cache.json              # Optional: Cached PDB metadata</code></pre>
@@ -584,8 +579,8 @@ python scripts/ppi_benchmark_fair.py \
 
             <!-- Usage Examples -->
             <section class="section">
-                <h2>Usage Examples</h2>
-                
+                <h2><i class="fa-solid fa-code"></i> Usage Examples</h2>
+
                 <h3>Basic Python Usage</h3>
                 <pre><code>import json
 import pandas as pd
@@ -633,7 +628,7 @@ python ppi_benchmark_fair.py \
 
             <!-- Sequence Clustering Information -->
             <section class="section">
-                <h2>Sequence Clustering Information</h2>
+                <h2><i class="fa-solid fa-dna"></i> Sequence Clustering Information</h2>
                 <p>Interfaces are clustered using BLASTClust with 90% sequence identity threshold:</p>
                 <pre><code># Command used for clustering
 blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
@@ -644,7 +639,7 @@ blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
 # -b F: Coverage on both neighbours False
 
 # Result: ~1050 clusters across 1,677 interfaces</code></pre>
-                
+
                 <p>Cluster Properties in Metadata:</p>
                 <ul>
                     <li><code>ClusterID</code>: First InterfaceID in each BLASTClust line</li>
@@ -657,33 +652,33 @@ blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
 
             <!-- For Different User Groups -->
             <section class="section">
-                <h2>For Different User Groups</h2>
-                
-                <h3>🤖 Machine Learning Researchers</h3>
+                <h2><i class="fa-solid fa-people-group"></i> For Different User Communities</h2>
+
+                <h3><i class="fa-solid fa-user-graduate"></i> Machine Learning Researchers</h3>
                 <ul>
                     <li>Stratified Splits: Cluster-based partitioning for non-redundant training/validation</li>
                     <li>Feature-Rich: 50+ structural and sequence features per interface</li>
                     <li>ML-Ready: Croissant 1.0 compatible for automatic pipeline integration</li>
                     <li>Reproducible: Versioned features with full provenance</li>
                 </ul>
-                
-                <h3>🔬 Structural Biologists</h3>
+
+                <h3><i class="fa-solid fa-microscope"></i> Structural Biologists</h3>
                 <ul>
                     <li>Structurally Validated: Chain IDs verified against biological assemblies</li>
                     <li>Biologically Annotated: GO terms, organism information, experimental details</li>
                     <li>FAIR Compliant: Persistent identifiers, provenance tracking</li>
                     <li>Multi-Format: PDB and mmCIF representations available</li>
                 </ul>
-                
-                <h3>📊 Data Stewards & Curators</h3>
+
+                <h3><i class="fas fa-chart-bar"></i> Data Stewards & Curators</h3>
                 <ul>
                     <li>Schema-Compliant: Bioschemas and Schema.org adherence</li>
                     <li>Provenance-Aware: Clear lineage from raw data to enriched metadata</li>
                     <li>Extensible: <code>additionalProperty</code> for custom annotations</li>
                     <li>Web-Discoverable: JSON-LD embedded in HTML for search engines</li>
                 </ul>
-                
-                <h3>💻 Bioinformaticians</h3>
+
+                <h3><i class="fa-solid fa-computer"></i> Bioinformaticians</h3>
                 <ul>
                     <li>API-Ready: Structured JSON for programmatic access</li>
                     <li>Standards-Based: EDAM, GO, UniProt cross-references</li>
@@ -694,8 +689,8 @@ blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
 
             <!-- Technical Implementation -->
             <section class="section">
-                <h2>Technical Implementation</h2>
-                
+                <h2><i class="fas fa-tools"></i> Technical Implementation</h2>
+
                 <h3>Design Principles</h3>
                 <ol>
                     <li>Modular Enrichment: Optional steps (PDB metadata, assembly validation, clustering)</li>
@@ -703,7 +698,7 @@ blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
                     <li>Schema Safety: Extensions use <code>additionalProperty</code> without breaking validation</li>
                     <li>FAIR-by-Design: Built with Findable, Accessible, Interoperable, Reusable principles</li>
                 </ol>
-                
+
                 <h3>Processing Pipeline</h3>
                 <pre><code>CSV Data → Parse → ProteinInterface Objects → Optional Enrichment:
   ├── Assembly Chain Validation (--check-pdb-label/--check-cif-label)
@@ -715,28 +710,27 @@ Generate Metadata → Validate → Output Files</code></pre>
 
             <!-- FAIR Improvements Roadmap -->
             <section class="section">
-                <h2>FAIR Improvements Roadmap</h2>
+                <h2><i class="fa-solid fa-route"></i> FAIR Improvements Roadmap</h2>
                 <p>Based on the FAIR assessment (87.5/100), here are planned improvements:</p>
-                
+
                 <h3>Low Priority (Potential +5 points)</h3>
                 <ul>
                     <li>Create <code>.github/ISSUE_TEMPLATE/</code> for structured issue reporting</li>
                 </ul>
-                
-                <h3>Medium Priority (Potential +40 points)</h3>
+
+                <h3>Medium Priority (Potential +20 points)</h3>
                 <ul>
-                    <li>Add <code>schema.json</code> or <code>data_dictionary.md</code> describing data structure</li>
                     <li>Specify access rights in metadata (open/restricted/closed)</li>
                     <li>Include format information (MIME types, extensions) in metadata</li>
                 </ul>
-                
+
                 <h3>Low Priority (Potential +15 points)</h3>
                 <ul>
                     <li>Add repository topics on GitHub settings</li>
                     <li>Create GitHub releases with version tags</li>
                     <li>Enable and populate documentation wiki</li>
                 </ul>
-                
+
                 <p><strong>Target FAIR Score: 100/100 (Currently: 87.5)</strong></p>
             </section>
 
@@ -744,11 +738,11 @@ Generate Metadata → Validate → Output Files</code></pre>
             <section class="section">
                 <h2><i class="fa fa-copyright"></i>
                 License and Attribution</h2>
-                
+
                 <h3>License</h3>
                 <p>Creative Commons Attribution 4.0 International (CC-BY-4.0)<br>
                 This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
-                
+
                 <h3>Citation</h3>
                 <pre><code>@article{schweke2023discriminating,
    title={Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study},
@@ -770,11 +764,11 @@ Generate Metadata → Validate → Output Files</code></pre>
    publisher={ELIXIR},
    doi={10.5281/zenodo.XXXXXXX}
 }</code></pre>
-                
+
                 <h3>Dataset Reference Publication</h3>
                 <p>"Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study"<br>
                 📄 <a href="https://doi.org/10.1002/pmic.202200323" target="_blank">https://doi.org/10.1002/pmic.202200323</a></p>
-                
+
                 <h3>Contact</h3>
                 <ul>
                     <li>ELIXIR 3D-BioInfo Community: <a href="https://elixir-europe.org/platforms/3d-bioinfo" target="_blank">https://elixir-europe.org/platforms/3d-bioinfo</a></li>
@@ -785,7 +779,7 @@ Generate Metadata → Validate → Output Files</code></pre>
 
             <!-- Related Resources -->
             <section class="section">
-                <h2>Related Resources</h2>
+                <h2><i class="fa-solid fa-cube"></i> Related Resources</h2>
                 <table>
                     <thead>
                         <tr>
@@ -827,10 +821,10 @@ Generate Metadata → Validate → Output Files</code></pre>
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <h3>Contributing</h3>
                 <p>We welcome contributions to improve FAIR compliance! See our <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a> for current improvement tasks.</p>
-                
+
                 <h3>Support</h3>
                 <p>For questions or support, please:</p>
                 <ol>
@@ -838,7 +832,7 @@ Generate Metadata → Validate → Output Files</code></pre>
                     <li>Review existing <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a></li>
                     <li>Create a new issue with detailed description</li>
                 </ol>
-                
+
                 <hr>
                 <p><em>This project is part of the ELIXIR 3D-BioInfo Community's efforts to promote FAIR data practices in structural bioinformatics.</em></p>
             </section>
@@ -850,7 +844,8 @@ Generate Metadata → Validate → Output Files</code></pre>
                 <!--
                   <h3>ELIXIR 3D-BioInfo Community</h3>
                 -->
-                <div class="footer-content">Promoting FAIR data practices in structural bioinformatics</div>
+                <div class="footer-content">Enhancing the FAIRness of the ELIXIR PPI Benchmark
+                </div>
                 <!--
                 <div class="footer-links">
                     <a href="fair_visualizations/index.html" class="footer-link">
@@ -881,10 +876,9 @@ Generate Metadata → Validate → Output Files</code></pre>
                 <a href="https://mlcommons.org/croissant/">
                 <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
                 </div>
-                
+
                 <div class="copyright">
-                    <p>ELIXIR PPI Benchmark FAIR Metadata • Generated on: 2024-12-24</p>
-                    <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
+                    <p>PPI Benchmark FAIR Metadata • Generated on: 2024-12-24</p><br>
                 </div>
             </div>
         </footer>
