@@ -935,15 +935,15 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
             )
 
             fig_anova.update_yaxes(
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
-                showgrid=True,
-                gridwidth=0.5,
-                gridcolor='rgba(0,0,0,0.15)',
             )
 
             out_path = figs_dir / "feature_top_anova.html"
@@ -970,15 +970,15 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
             )
 
             fig_mi.update_yaxes(
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
-                showgrid=True,
-                gridwidth=0.5,
-                gridcolor='rgba(0,0,0,0.15)',
             )
 
             out_path = figs_dir / "feature_top_mi.html"
