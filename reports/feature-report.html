@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Prediction Results Report - 2026-01-07</title>
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Feature Analysis Report - 2026-01-07</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
 <style>
@@ -425,21 +426,19 @@ footer {
         overflow-x: auto;
     }
 }
-</style></head><body><div class='container'>
+</style>
+</head><body><div class='container'>
 
     <header>
         <div class="header-content">
-            <h1><strong>Prediction Results Report</strong></h1>
+            <h1><strong>Feature Analysis Report</strong></h1>
             <h4><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
             <div>
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
                 <a href="#key-metrics" class="dashboard-link">
-                    <i class="fas fa-chart-bar"></i> Performance Metrics
-                </a>
-                <a href="#performance-table" class="dashboard-link">
-                    <i class="fas fa-table"></i> Performance Table
+                    <i class="fas fa-chart-bar"></i> Key Metrics
                 </a>
                 <a href="#figures" class="dashboard-link">
                     <i class="fas fa-chart-line"></i> Visualizations
@@ -457,115 +456,29 @@ footer {
 <main class='container'>
 
     <div class="section" id="key-metrics">
-        <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
-        <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
+        <h2><i class="fas fa-clipboard-check"></i> Key Statistics</h2>
+        <p>Comprehensive analysis of dataset features including importance scores, correlations, and statistical properties.</p>
         
         <div class="key-metrics">
             <div class="metric-card">
-                <div class="metric-value">6</div>
-                <div class="metric-label">Models</div>
+                <div class="metric-value">7</div>
+                <div class="metric-label">Features</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-value">0.000</div>
-                <div class="metric-label">Best F1 Score</div>
+                <div class="metric-value">0</div>
+                <div class="metric-label">Samples</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-value">0.000</div>
-                <div class="metric-label">Avg F1 Score</div>
+                <div class="metric-value">660.1</div>
+                <div class="metric-label">Avg Mean</div>
             </div>
             
             <div class="metric-card">
-                <div class="metric-value">N/A</div>
-                <div class="metric-label">Best Model</div>
+                <div class="metric-value">329.32</div>
+                <div class="metric-label">Avg Std Dev</div>
             </div>
-        </div>
-    </div>
-    
-
-    <div class="section" id="performance-table">
-        <h2><i class="fas fa-table"></i> Model Performance Summary Table</h2>
-        <p>Detailed performance metrics for all evaluated models. Values shown as mean ± standard error (SE). Best performing values in each metric category are highlighted.</p>
-        
-        <table class="performance-table">
-            <thead>
-                <tr>
-                    <th>Model</th>
-                    <th>Accuracy</th>
-                    <th>Precision</th>
-                    <th>Recall</th>
-                    <th>F1-Score</th>
-                    <th>ROC-AUC</th>
-                </tr>
-            </thead>
-            <tbody>
-    
-
-                <tr>
-                    <td><strong>dataset_info</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-                <tr>
-                    <td><strong>basic_statistics</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-                <tr>
-                    <td><strong>correlation_analysis</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-                <tr>
-                    <td><strong>feature_target_analysis</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-                <tr>
-                    <td><strong>pca_analysis</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-                <tr>
-                    <td><strong>feature_importance</strong></td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">0.000 ± 0.000</td>
-                    <td class="best-metric">N/A</td>
-                </tr>
-        
-
-            </tbody>
-        </table>
-        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-            <p><strong>Note:</strong> Standard error (SE) represents the variability of the metric across cross-validation folds. Smaller SE indicates more consistent performance.</p>
         </div>
     </div>
     
@@ -573,11 +486,13 @@ footer {
     <!--
     <div class="nav-bar">
         <ul>
-            <li><a href="#key-metrics">Key Metrics</a></li>
-            <li><a href="#performance-table">Performance Table</a></li>
-            <li><a href="#figure1">Performance Comparison</a></li>
-            <li><a href="#figure2">F1 per Fold</a></li>
-            <li><a href="#figure3">Radar Chart</a></li>
+            <li><a href="#figure1">Feature Importance</a></li>
+            <li><a href="#figure2">ANOVA Top</a></li>
+            <li><a href="#figure3">Mutual Info</a></li>
+            <li><a href="#figure4">Target Relationship</a></li>
+            <li><a href="#figure5">Correlations</a></li>
+            <li><a href="#figure6">PCA Variance</a></li>
+            <li><a href="#figure7">Statistics</a></li>
         </ul>
     </div>
     -->
@@ -604,23 +519,44 @@ footer {
 <div id="figures">
 
         <div class="figure-container" id="figure1">
-            <h2 class="figure-title">Figure 1: Model Performance Comparison</h2>
-            <p class="figure-description">Bar chart comparing accuracy, precision, recall, and F1 scores across different models.</p>
-            <iframe class="figure-embed" src="figures/performance_comparison.html" loading="lazy" title="Figure 1: Model Performance Comparison"></iframe>
+            <h2 class="figure-title">Figure 1: Feature Importance Comparison</h2>
+            <p class="figure-description">Shows feature importance scores from multiple methods (Random Forest, Logistic Regression, Mutual Information).</p>
+            <iframe class="figure-embed" src="figures/feature_importance.html" loading="lazy" title="Figure 1: Feature Importance Comparison"></iframe>
         </div>
         
 
         <div class="figure-container" id="figure2">
-            <h2 class="figure-title">Figure 2: F1 Score per Cross-Validation Fold</h2>
-            <p class="figure-description">Line plot showing F1 score across each cross-validation fold for all models.</p>
-            <iframe class="figure-embed" src="figures/f1_per_fold.html" loading="lazy" title="Figure 2: F1 Score per Cross-Validation Fold"></iframe>
+            <h2 class="figure-title">Figure 2: Top Features by ANOVA F-value</h2>
+            <p class="figure-description">Displays top features ranked by ANOVA F-statistic, indicating strong relationship with target variable.</p>
+            <iframe class="figure-embed" src="figures/feature_top_anova.html" loading="lazy" title="Figure 2: Top Features by ANOVA F-value"></iframe>
         </div>
         
 
         <div class="figure-container" id="figure3">
-            <h2 class="figure-title">Figure 3: Performance Radar Chart</h2>
-            <p class="figure-description">Radar chart visualizing multiple performance metrics (Accuracy, Precision, Recall, F1, ROC-AUC) for model comparison.</p>
-            <iframe class="figure-embed" src="figures/radar_chart.html" loading="lazy" title="Figure 3: Performance Radar Chart"></iframe>
+            <h2 class="figure-title">Figure 3: Top Features by Mutual Information</h2>
+            <p class="figure-description">Shows top features ranked by mutual information score, measuring dependency between feature and target.</p>
+            <iframe class="figure-embed" src="figures/feature_top_mi.html" loading="lazy" title="Figure 3: Top Features by Mutual Information"></iframe>
+        </div>
+        
+
+        <div class="figure-container" id="figure4">
+            <h2 class="figure-title">Figure 4: Feature-Target Relationship (ANOVA vs -log10(p))</h2>
+            <p class="figure-description">Scatter plot comparing ANOVA F-statistic vs -log10(p-value) with mutual information as bubble size.</p>
+            <iframe class="figure-embed" src="figures/feature_target_relationship.html" loading="lazy" title="Figure 4: Feature-Target Relationship (ANOVA vs -log10(p))"></iframe>
+        </div>
+        
+
+        <div class="figure-container" id="figure5">
+            <h2 class="figure-title">Figure 5: Highly Correlated Feature Pairs</h2>
+            <p class="figure-description">Horizontal bar chart showing the most highly correlated feature pairs in the dataset.</p>
+            <iframe class="figure-embed" src="figures/correlation_plot.html" loading="lazy" title="Figure 5: Highly Correlated Feature Pairs"></iframe>
+        </div>
+        
+
+        <div class="figure-container" id="figure6">
+            <h2 class="figure-title">Figure 6: PCA Explained Variance</h2>
+            <p class="figure-description">Bar chart showing explained variance ratio for principal components with cumulative variance line.</p>
+            <iframe class="figure-embed" src="figures/pca_variance.html" loading="lazy" title="Figure 6: PCA Explained Variance"></iframe>
         </div>
         
 </div>
@@ -629,7 +565,7 @@ footer {
     <footer id="footer">
         <div class="container">
             <div class="footer-content">
-                Evaluation of machine learning model performance on the ELIXIR PPI Benchmark
+                Evaluation of machine learning features and their properties on the ELIXIR PPI Benchmark
             </div>
             <div class="footer-content" style="margin-top:25px;">
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
@@ -646,7 +582,7 @@ footer {
                 <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
             </div>
             <div class="copyright">
-                <p>Prediction Results Report • Generated on: 2026-01-07 01:10:23</p>
+                <p>Feature Analysis Report • Generated on: 2026-01-07 01:11:37</p>
             </div>
         </div>
     </footer>
