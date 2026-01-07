@@ -225,6 +225,20 @@ class FAIRVisualizer:
                 width=900,  # Increased width for better layout
                 margin=dict(t=100, b=50, l=150, r=200)  # Increased right margin
             )
+            fig1.update_xaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+            )
+
+            fig1.update_yaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+            )
         
         # Save Figure 1
         if output_format == 'html':
@@ -271,6 +285,20 @@ class FAIRVisualizer:
             width=700,
             showlegend=False,
             margin=dict(t=100, b=50, l=50, r=50)
+        )
+        fig2.update_xaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+        )
+
+        fig2.update_yaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
         )
         
         # Save Figure 2
@@ -456,7 +484,24 @@ class FAIRVisualizer:
                 showlegend=False,
                 margin=dict(t=100, b=50, l=50, r=50)
             )
-        
+
+        fig4.update_xaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+            )
+
+        fig4.update_yaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+        ) 
         # Save Figure 4
         if output_format == 'html':
             fig4.write_html(f"{self.output_dir}/figure4_improvement_priority.html")
@@ -576,6 +621,24 @@ class FAIRVisualizer:
                 margin=dict(t=100, b=50, l=50, r=50)
             )
         
+        fig5.update_xaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+        )
+
+        fig5.update_yaxes(
+                showline=True,
+                linecolor='rgba(0,0,0,0.3)',
+                mirror=True,
+                showgrid=True,
+                gridwidth=0.5,
+                gridcolor='rgba(0,0,0,0.15)',
+        )
+
         # Save Figure 5
         if output_format == 'html':
             fig5.write_html(f"{self.output_dir}/figure5_metadata_analysis.html")
@@ -667,7 +730,21 @@ class FAIRVisualizer:
             ),
             margin=dict(t=100, b=50, l=50, r=50)
         )
-        
+       
+        fig6.update_xaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+        )
+
+        fig6.update_yaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+            showgrid=True,
+            gridwidth=0.5,
+            gridcolor='rgba(0,0,0,0.15)',
+        ) 
         # Save Figure 6
         if output_format == 'html':
             fig6.write_html(f"{self.output_dir}/figure6_principle_comparison.html")
@@ -754,7 +831,22 @@ class FAIRVisualizer:
                 ),
                 margin=dict(t=100, b=100, l=50, r=50)
             )
-        
+
+        fig7.update_xaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+        )
+
+        fig7.update_yaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+            showgrid=True,
+            gridwidth=0.5,
+            gridcolor='rgba(0,0,0,0.15)',
+        )
+ 
         # Save Figure 7
         if output_format == 'html':
             fig7.write_html(f"{self.output_dir}/figure7_performance_breakdown.html")
@@ -863,7 +955,19 @@ class FAIRVisualizer:
                 width=500,
                 margin=dict(t=100, b=50, l=50, r=50)
             )
-        
+
+        fig8.update_xaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+        )
+
+        fig8.update_yaxes(
+            showline=True,
+            linecolor='rgba(0,0,0,0.3)',
+            mirror=True,
+        )       
+ 
         # Save Figure 8
         if output_format == 'html':
             fig8.write_html(f"{self.output_dir}/figure8_missing_elements.html")
@@ -1459,9 +1563,9 @@ class FAIRVisualizer:
                         -->
                     <div>
                     <a href="../index.html" class="dashboard-link">
-                        <i class="fas fa-home"></i> FAIR Metadata
+                        <i class="fas fa-home"></i> PPI Benchmark FAIR
                     </a>
-                    <a href="./index.html" class="dashboard-link">
+                    <a href="./" class="dashboard-link">
                         <i class="fas fa-rocket"></i> Assessment Report
                     </a>
                     <a href="#figure7" class="dashboard-link">

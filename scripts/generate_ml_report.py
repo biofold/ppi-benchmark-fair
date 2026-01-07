@@ -1615,9 +1615,6 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                 <a href="./fair-analysis.html" class="dashboard-link">
                     <i class="fa-solid fa-brain"></i> FAIRfication
                 </a>
-                <a href="#footer" class="dashboard-link">
-                    <i class="fas fa-info-circle"></i> Information
-                </a>
                 <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                     <i class="fab fa-github"></i> Repository
                 </a>
