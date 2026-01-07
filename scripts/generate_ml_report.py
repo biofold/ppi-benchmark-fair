@@ -1663,7 +1663,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         <table class="performance-table">
             <thead>
                 <tr>
-                    <th>Model</th>
+                    <th style="text-align:left !important;">Model</th>
                     <th>Accuracy</th>
                     <th>Precision</th>
                     <th>Recall</th>
@@ -1698,7 +1698,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         
         html_parts.append(f"""
                 <tr>
-                    <td><strong>{data['Model']}</strong></td>
+                    <td style="text-align:left !important;"><strong>{data['Model']}</strong></td>
                     <td class="{accuracy_class}">{accuracy_display}</td>
                     <td class="{precision_class}">{precision_display}</td>
                     <td class="{recall_class}">{recall_display}</td>
