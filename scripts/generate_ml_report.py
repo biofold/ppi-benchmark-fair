@@ -1087,7 +1087,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
-                <a href="./feature-report.html" class="dashboard-link">
+                <a href="./prediction-report.html" class="dashboard-link">
                     <i class="fa-solid fa-brain"></i> Machine Learning
                 </a>
                 <a href="./fair-analysis.html" class="dashboard-link">
