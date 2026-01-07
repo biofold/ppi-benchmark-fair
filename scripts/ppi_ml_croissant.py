@@ -2015,6 +2015,9 @@ class CroissantDatasetLoader:
         Returns:
             Tuple of (features_df, labels_series, cluster_ids_series) or (None, None, None) if extraction fails
         """
+        
+        DROP_FEATURES = ['InterfaceSource', 'Comments']
+
         if not self.interfaces:
             self.logger.error("No interfaces available. Load dataset first.")
             return None, None, None
@@ -2035,7 +2038,9 @@ class CroissantDatasetLoader:
                 for prop in additional_props:
                     prop_name = prop.get('name', '')
                     prop_value = prop.get('value')
-                    
+
+                    if prop_name in DROP_FEATURES: continue
+
                     if prop_name in ['physio', 'label', 'ClusterID']:
                         continue
                     
@@ -2135,7 +2140,7 @@ class CroissantDatasetLoader:
                     prop_value = prop.get('value')
                     
                     # Skip physio/label/ClusterID (already used as target/grouping)
-                    if prop_name in ['physio', 'label', 'ClusterID']:
+                    if prop_name in ['physio', 'label', 'ClusterID'] + DROP_FEATURES:
                         continue
                     
                     # Get feature info
@@ -4157,7 +4162,7 @@ Examples:
   python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --pdb-local-dir ./structure_files --pdb-format
 
   # Full pipeline with all features
-  python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --evaluate-features --feature-analysis --save-plots
+  python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --evaluate-features --feature-analysis
 
   # Structural features only (no model training)
   python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --pdb-features-only --pdb-local-dir ./structure_files
@@ -4213,8 +4218,8 @@ Note: Files are stored in gzipped format (.pdb.gz or .cif.gz)
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='./group_kfold_results',
-        help='Directory to save results and plots (default: ./group_kfold_results)'
+        default='./ml_results',
+        help='Directory to save results and plots (default: ./ml_results)'
     )
 
     parser.add_argument(
@@ -4368,6 +4373,11 @@ def main():
         dataset_source = args.github
         is_github = True
         logger.info(f"Using GitHub repository: {dataset_source}")
+
+    if getattr(args, 'feature_analysis', False) and not getattr(args, 'save_plots', False):
+        logger.info("Flag --feature-analysis was set; enabling --save-plots because feature analysis produces plots")
+        # enable saving so downstream checks that require save_plots will run
+        args.save_plots = True
     
     # Create output directory upfront
     output_dir = Path(args.output_dir)
