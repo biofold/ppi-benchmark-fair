@@ -1606,10 +1606,10 @@ class FAIRVisualizer:
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> PPI Benchmark FAIR
                     </a>
-                    <a href="./fairification.html" class="dashboard-link">
+                    <a href="fair-report.html" class="dashboard-link">
                         <i class="fas fa-bullseye"></i> FAIRification 
                     </a>
-                    <a href="./prediction-report.html" class="dashboard-link">
+                    <a href="/ppi-benchmark-fair/ml-report/index.html" class="dashboard-link">
                         <i class="fa-solid fa-brain"></i> Machine Learning
                     </a>
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
