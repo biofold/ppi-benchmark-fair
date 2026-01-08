@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELIXIR 3D-BioInfo PPI Benchmark FAIRification Hub</title>
+    <title>ELIXIR 3D-BioInfo PPI Benchmark FAIRification</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -311,29 +311,24 @@
         <!-- Header -->
         <header>
             <div class="header-content">
-                <h1>ELIXIR 3D-BioInfo PPI Benchmark FAIRification Hub</h1>
-                <p style="font-size: 1.2rem; margin-top: 10px; opacity: 0.9;">
-                    Transforming protein-protein interaction data into FAIR-compliant, machine learning-ready resources
-                </p>
-                
-                <div class="badges">
-                    <a href="#fairification" class="badge fair">FAIR Score: 87.5/100</a>
-                    <a href="#bioschema" class="badge schema">Bioschemas Compliant</a>
-                    <a href="#croissant" class="badge croissant">MLCommons Croissant</a>
-                    <a href="https://creativecommons.org/licenses/by/4.0/" class="badge license" target="_blank">CC BY 4.0</a>
-                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="badge python" target="_blank">Python 3.8+</a>
-                </div>
-
+                <h1>ELIXIR 3D-BioInfo PPI Benchmark FAIRification</h1>
+                <h4 style="color:white;"><strong>
+                 Transforming ELIXIR 3D-Bioinfo PPI dataser into FAIR-compliant, machine learning-ready resource
+                </strong></h4>
                 <div style="margin-top: 30px;">
-                    <a href="https://biofold.github.io/ppi-benchmark-fair" class="dashboard-link" target="_blank">
-                        <i class="fas fa-globe"></i> Live Website
-                    </a>
+                   <a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" class="dashboard-link" target="_blank">
+                      <i class="fas fa-database"></i> 3D Bioinfo Dataset
+                   </a>
+                   <a href="/ppi-benchmark-fair/fair-report/index.html" class="dashboard-link">
+                       <i class="fas fa-bullseye"></i> FAIRification
+                   </a>
+                   <a href="/ppi-benchmark-fair/ml-report/index.html" class="dashboard-link">
+                     <i class="fa-solid fa-brain"></i> Machine Learning
+                   </a>
                     <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
                         <i class="fab fa-github"></i> GitHub Repository
                     </a>
-                    <a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" class="dashboard-link" target="_blank">
-                        <i class="fas fa-database"></i> Original Dataset
-                    </a>
+
                 </div>
             </div>
         </header>
@@ -343,7 +338,7 @@
             <section class="section">
                 <h2><i class="fa-solid fa-rocket"></i> Project Overview</h2>
                 <p>This project implements comprehensive FAIRification of the <strong>ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces</strong>, transforming the original dataset into a FAIR-compliant, machine learning-ready resource with enhanced metadata and interoperability features.</p>
-                
+
                 <div class="project-grid">
                     <div class="project-card">
                         <div class="card-header">
@@ -394,7 +389,7 @@
             <section class="section" id="architecture">
                 <h2><i class="fa-solid fa-folder-tree"></i> Repository Architecture</h2>
                 <p>The <a href="https://github.com/biofold/ppi-benchmark-fair" target="_blank">ppi-benchmark-fair repository</a> is organized as follows:</p>
-                
+
                 <div class="structure-tree">
                     <strong>ppi-benchmark-fair/</strong>
                     <div class="tree-item">
@@ -492,7 +487,7 @@
             <section class="section" id="croissant">
                 <h2><i class="fa-solid fa-robot"></i> MLCommons Croissant Integration</h2>
                 <p>The dataset is packaged using the MLCommons Croissant 1.0 standard for seamless integration with machine learning pipelines:</p>
-                
+
                 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
                     <h4>Croissant Features:</h4>
                     <ul style="margin-top: 10px; padding-left: 20px;">
@@ -517,17 +512,17 @@
             <!-- Getting Started -->
             <section class="section">
                 <h2><i class="fa-solid fa-play-circle"></i> Getting Started</h2>
-                
+
                 <h3>Quick Usage</h3>
                 <div style="background-color: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin: 15px 0;">
                     <code style="color: #fff; font-family: 'Courier New', monospace;">
                         # Clone repository with Git LFS<br>
                         git lfs clone https://github.com/biofold/ppi-benchmark-fair.git<br>
                         cd ppi-benchmark-fair<br><br>
-                        
+
                         # Generate FAIR metadata<br>
                         python scripts/ppi_benchmark_fair.py --fetch-pdb-metadata --output bioschema<br><br>
-                        
+
                         # Run ML experiments<br>
                         python scripts/ml_experiments.py --config configs/ml_basic.yaml
                     </code>
@@ -621,7 +616,7 @@
                 <p style="margin: 15px 0; opacity: 0.9;">
                     Enhancing FAIRness and machine learning readiness of protein-protein interaction data
                 </p>
-                
+
                 <div class="footer-badges">
                     <a href="https://github.com/biofold/ppi-benchmark-fair">
                         <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100">
@@ -655,7 +650,7 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
@@ -670,7 +665,7 @@
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.dashboard-link');
-            
+
             let currentSection = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
