@@ -1098,7 +1098,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     <header>
         <div class="header-content">
             <h1><strong>Feature Analysis Report</strong></h1>
-            <h4><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
+            <h4><strong>Transforming ELIXIR 3D-Bioinfo PPI dataset into FAIR-compliant, machine learning-ready resource</strong></h4>
             <div>
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
@@ -1680,7 +1680,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     <header>
         <div class="header-content">
             <h1><strong>Prediction Results Report</strong></h1>
-            <h4><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
+            <h4><strong>Transforming ELIXIR 3D-Bioinfo PPI dataset into FAIR-compliant, machine learning-ready resource</strong></h4>
             <div>
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR

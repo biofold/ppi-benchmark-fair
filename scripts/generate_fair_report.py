@@ -1601,7 +1601,7 @@ class FAIRVisualizer:
         <header>
             <div class="header-content">
                 <h1><strong>FAIR Analysis Report</strong></h1>
-                <h4><strong>ELIXIR Protein-Protein Interaction Benchmark</strong></h4>
+                <h4><strong>Transforming ELIXIR 3D-Bioinfo PPI dataset into FAIR-compliant, machine learning-ready resource</strong></h4>
                 <div>
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> PPI Benchmark FAIR
