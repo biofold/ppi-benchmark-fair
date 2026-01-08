@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIXIR - PPI Benchmark FAIR Metadata</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #4689a3; /* #3498db; */
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header - Matching fair_dashboard.html */
+        header {
+            background: linear-gradient(135deg, var(--primary-color),#4689a3); /* #1a252f); */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 12px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge.fair {
+            background: linear-gradient(135deg, var(--success-color), #219653);
+            color: white;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+        }
+
+        .badge.license {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .badge.doi {
+            background-color: #4285f4;
+            color: white;
+        }
+
+        .badge.python {
+            background-color: #3776ab;
+            color: white;
+        }
+
+        .badge.schema {
+            background-color: #6f42c1;
+            color: white;
+        }
+
+        .badge.croissant {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .dashboard-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255,255,255,0.15);
+            color: white;
+            padding: 6px 6px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-top: 25px;
+        }
+
+        .dashboard-link:hover {
+            background-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Section Cards - Matching fair_dashboard.html */
+        .section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /*
+        h2::before {
+            content: "📊";
+            font-size: 1.5rem;
+        }
+        */
+
+        h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.3rem;
+        }
+
+        h4 {
+            color: #555;
+            margin: 5px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .fair-section {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .fair-section.findable { background-color: #e8e8e8;} /* border-left-color: #e74c3c; } */
+        .fair-section.accessible { background-color: #e8e8e8;} /* border-left-color: #3498db; } */
+        .fair-section.interoperable { background-color: #e8e8e8;} /* border-left-color: #9b59b6; } */
+        .fair-section.reusable { background-color: #e8e8e8;} /*border-left-color: #27ae60; } */
+
+        .fair-score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fair-checklist li {
+            list-style-type: none;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .fair-checklist li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        .fair-checklist li.needs-improvement:before {
+            content: "⚠️";
+        }
+
+        /* Code blocks */
+        code {
+            /* background-color: #f1f1f1; */
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: #e8e8e8; /* #f8f9fa; */
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            /* border-left: 4px solid var(--secondary-color); */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #386277;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 12px;
+        }
+
+        .footer-content {
+            margin-top: 15px;
+            padding: 0 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .badge {
+                width: 90%;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><strong>FAIR Metadata</strong></h1>
+                <h4 style="color:white;"><strong>ELIXIR Protein-Protein Interaction Benchmark
+                </strong></h4>
+                <div class="header-content">
+                  <a href="../index.html" class="dashboard-link">
+                    <i class="fas fa-home"></i> PPI Benchmark FAIR
+                  </a>
+                  <a href="./fair-report.html" class="dashboard-link">
+                    <i class="fas fa-chart-bar"></i> FAIR Report
+                  </a>
+                  <a href="./prediction-report.html" class="dashboard-link">
+                    <i class="fa-solid fa-brain"></i> Machine Learning
+                  </a>
+                  <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Overview -->
+            <section class="section">
+                <h2><i class="fa-solid fa-eye"></i> Overview</h2>
+                <p>This repository provides FAIR-compliant metadata for the <em>ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces</em> – a dataset comprising 1,677 protein structure interfaces with 844 physiological and 833 non-physiological homodimer interfaces for machine learning and structural bioinformatics applications.</p>
+                <p>The <code>ppi_benchmark_fair.py</code> script generates machine-readable JSON-LD metadata compliant with multiple standards:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Standard</th>
+                            <th>Purpose</th>
+                            <th>Compliance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://schema.org/" target="_blank">Schema.org</a></td>
+                            <td>Dataset discovery</td>
+                            <td>✅ Full</td>
+                        </tr>
+                        <tr>
+                            <td>Bioschemas</td>
+                            <td>Life-science extensions</td>
+                            <td>✅ Profile 1.0-RELEASE</td>
+                        </tr>
+                        <tr>
+                            <td>MLCommons Croissant</td>
+                            <td>ML dataset interoperability</td>
+                            <td>✅ Version 1.0</td>
+                        </tr>
+                        <tr>
+                            <td>EDAM Ontology</td>
+                            <td>Bioinformatics operations</td>
+                            <td>✅ Integrated</td>
+                        </tr>
+                        <tr>
+                            <td>Gene Ontology</td>
+                            <td>Molecular functions</td>
+                            <td>✅ GO:0005515</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Quick Start -->
+            <section class="section" id="quick-start">
+                <h2><i class="fa-solid fa-rocket"></i> Quick Start</h2>
+                <pre><code># Clone repository
+git lfs clone https://github.com/biofold/ppi-benchmark-fair.git
+cd ppi-benchmark-fair
+
+# Install requirements
+pip install -r requirements.txt
+
+# Generate basic metadata
+python ppi_benchmark_fair.py --output bioschema
+
+# Generate enriched metadata (recommended)
+python scripts/ppi_benchmark_fair.py \
+  --fetch-pdb-metadata \
+  --check-pdb-label \
+  --cluster data/ppi_benchmark_seqs.clust_25_05 \
+  --output bioschema \
+  --verbose</code></pre>
+            </section>
+
+            <!-- Dataset Statistics -->
+            <section class="section" id="data-stats">
+                <h2><i class="fa-solid fa-database"></i> Dataset Statistics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Interfaces</td>
+                            <td>1,677</td>
+                            <td>Balanced binary classification</td>
+                        </tr>
+                        <tr>
+                            <td>Physiological (TRUE)</td>
+                            <td>844</td>
+                            <td>50.3% of dataset</td>
+                        </tr>
+                        <tr>
+                            <td>Non-physiological (FALSE)</td>
+                            <td>833</td>
+                            <td>49.7% of dataset</td>
+                        </tr>
+                        <tr>
+                            <td>Unique PDB Structures</td>
+                            <td>1673</td>
+                            <td>Proteins with multiple interfaces</td>
+                        </tr>
+                        <tr>
+                            <td>Sequence Clusters</td>
+                            <td>1050</td>
+                            <td>BLASTClust with 90% identity</td>
+                        </tr>
+                        <tr>
+                            <td>Resolution Range</td>
+                            <td>1.0–4.5Å</td>
+                            <td>X-ray crystallography</td>
+                        </tr>
+                        <tr>
+                            <td>Experimental Methods</td>
+                            <td>85% X-ray, 10% Cryo-EM, 5% NMR</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- FAIR Compliance Section -->
+            <section class="section" id="fair-eval">
+                <h2><i class="fas fa-bullseye"></i> FAIR Compliance Evaluation</h2>
+                <p>This repository has been evaluated using comprehensive FAIR principles analysis. <strong>Overall Score: 87.5/100</strong></p>
+
+                <div class="fair-section findable">
+                    <h3>Findable (85/100) ✅</h3>
+                    <ul class="fair-checklist">
+                        <li>Rich Metadata: 1,681 metadata files with structured annotations</li>
+                        <li>Persistent Identifier: DOI assigned via Zenodo</li>
+                        <li>Keywords: EDAM ontology terms integrated</li>
+                        <li class="needs-improvement">Needs Improvement: Repository topics, GitHub releases, documentation wiki</li>
+                    </ul>
+                </div>
+
+                <div class="fair-section accessible">
+                    <h3>Accessible (80/100) ✅</h3>
+                    <ul class="fair-checklist">
+                        <li>Open Access: CC-BY-4.0 license</li>
+                        <li>Standard Protocols: HTTPS access to all data</li>
+                        <li>Multiple Formats: CSV, JSON-LD, PDB, mmCIF</li>
+                        <li class="needs-improvement">Needs Improvement: Access rights specification in metadata</li>
+                    </ul>
+                </div>
+
+                <div class="fair-section interoperable">
+                    <h3>Interoperable (90/100) ✅</h3>
+                    <ul class="fair-checklist">
+                        <li><a href="https://schema.org/Bioschemas" target="_blank">Schema.org/Bioschemas</a>: Full compliance</li>
+                        <li>MLCommons Croissant: ML dataset standard</li>
+                        <li>Domain Vocabularies: EDAM, GO, Pfam, SCOP</li>
+                        <li class="needs-improvement">Needs Improvement: Data schema documentation, format information</li>
+                    </ul>
+                </div>
+
+                <div class="fair-section reusable">
+                    <h3>Reusable (95/100) ✅</h3>
+                    <ul class="fair-checklist">
+                        <li>Provenance: Full processing pipeline documented</li>
+                        <li>Contact Information: ELIXIR 3D-BioInfo Community</li>
+                        <li>Examples: Usage scripts provided</li>
+                        <li>License Info: Explicit LICENSE file, CITATION.cff, issue templates</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Metadata Architecture -->
+            <section class="section">
+                <h2><i class="fa-solid fa-building-columns"></i> Metadata Architecture</h2>
+                <h3>Generated File Structure</h3>
+                <pre><code>bioschema/
+├── dataset_with_interfaces.json          # Complete dataset (all 1,677 interfaces)
+├── interface_protein_pairs/              # Individual interface files
+│   ├── interface_1A17_6.json            # ProtCID format
+│   ├── interface_1A3A_1.json    # QSalign format
+│   └── ... (1,677 files total)
+├── fair_metadata_package.json            # FAIR Architecture package
+├── embedded_markup.html                  # HTML with JSON-LD for web discovery
+├── manifest.json                         # File inventory and checksums
+└── pdb_metadata_cache.json              # Optional: Cached PDB metadata</code></pre>
+
+                <h3>Data Schema</h3>
+                <pre><code>{
+  "@context": ["https://schema.org/", {"cr": "https://mlcommons.org/croissant/1.0"}],
+  "@type": ["Dataset", "cr:Dataset"],
+  "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
+  "hasPart": [ /* 1,677 interface items */ ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://.../benchmark_annotated_updated_30042023.csv"
+    }
+  ]
+}</code></pre>
+
+                <h3>Interface ID Formats</h3>
+                <ul>
+                    <li>ProtCID: <code>{PDB_ID}_{integer}</code> (e.g., <code>1ABC_1</code>)</li>
+                    <li>QSalign: <code>{PDB_ID}_{integer}</code> (e.g., <code>1DEF_assembly1</code>)</li>
+                    <li>Cleaned: Original InterfaceID with standardized formatting</li>
+                </ul>
+            </section>
+
+            <!-- Usage Examples -->
+            <section class="section">
+                <h2><i class="fa-solid fa-code"></i> Usage Examples</h2>
+
+                <h3>Basic Python Usage</h3>
+                <pre><code>import json
+import pandas as pd
+from pathlib import Path
+
+# Load dataset metadata
+with open('bioschema/dataset_with_interfaces.json', 'r') as f:
+    dataset = json.load(f)
+
+print(f"Dataset: {dataset['name']}")
+print(f"Total interfaces: {dataset['numberOfItems']}")  # 1677
+print(f"License: {dataset['license']}")
+
+# Load specific interface
+interface_file = 'bioschema/interface_protein_pairs/interface_1A17_5.json'
+with open(interface_file, 'r') as f:
+    interface = json.load(f)
+
+# Extract features for ML
+features = {}
+for prop in interface['additionalProperty']:
+    if prop['name'] == 'physio':
+        features['label'] = 1 if prop['value'] else 0
+    elif prop['name'] == 'Buried Surface Area (BSA)':
+        features['bsa'] = prop['value']
+    elif prop['name'] == 'ClusterID':
+        features['cluster'] = prop['value']  # For stratified splits
+
+print(f"Features: {features}")</code></pre>
+
+                <h3>Command Line Options</h3>
+                <pre><code># Full metadata generation with all enrichments
+python ppi_benchmark_fair.py \
+  --csv-url "https://raw.githubusercontent.com/.../benchmark.csv" \
+  --mmcif-url "https://raw.githubusercontent.com/.../mmcif/" \
+  --pdb-url "https://raw.githubusercontent.com/.../pdb/" \
+  --fetch-pdb-metadata \           # Fetch PDB metadata from RCSB API
+  --check-pdb-label \              # Validate chains in PDB files
+  --check-cif-label \              # Validate chains in mmCIF files
+  --cluster "data/clusters.txt" \  # Add sequence cluster information
+  --output "metadata_output" \     # Custom output directory
+  --verbose \                      # Detailed logging
+  --separator ","                  # CSV separator (auto-detects if fails)</code></pre>
+            </section>
+
+            <!-- Sequence Clustering Information -->
+            <section class="section">
+                <h2><i class="fa-solid fa-dna"></i> Sequence Clustering Information</h2>
+                <p>Interfaces are clustered using BLASTClust with 90% sequence identity threshold:</p>
+                <pre><code># Command used for clustering
+blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
+
+# Interpretation:
+# -S 25: Score threshold 25 bits
+# -L 0.5: Length coverage threshold 50%
+# -b F: Coverage on both neighbours False
+
+# Result: ~1050 clusters across 1,677 interfaces</code></pre>
+
+                <p>Cluster Properties in Metadata:</p>
+                <ul>
+                    <li><code>ClusterID</code>: First InterfaceID in each BLASTClust line</li>
+                    <li><code>ClusterSize</code>: Number of interfaces in the cluster</li>
+                    <li><code>ClusterMembers</code>: List of other interfaces in same cluster</li>
+                    <li><code>ClusterMethod</code>: "BLASTClust sequence clustering"</li>
+                    <li><code>ClusterMethodOptions</code>: "-S 25 -L 0.5 -b F"</li>
+                </ul>
+            </section>
+
+            <!-- For Different User Groups -->
+            <section class="section">
+                <h2><i class="fa-solid fa-people-group"></i> For Different User Communities</h2>
+
+                <h3><i class="fa-solid fa-user-graduate"></i> Machine Learning Researchers</h3>
+                <ul>
+                    <li>Stratified Splits: Cluster-based partitioning for non-redundant training/validation</li>
+                    <li>Feature-Rich: 50+ structural and sequence features per interface</li>
+                    <li>ML-Ready: Croissant 1.0 compatible for automatic pipeline integration</li>
+                    <li>Reproducible: Versioned features with full provenance</li>
+                </ul>
+
+                <h3><i class="fa-solid fa-microscope"></i> Structural Biologists</h3>
+                <ul>
+                    <li>Structurally Validated: Chain IDs verified against biological assemblies</li>
+                    <li>Biologically Annotated: GO terms, organism information, experimental details</li>
+                    <li>FAIR Compliant: Persistent identifiers, provenance tracking</li>
+                    <li>Multi-Format: PDB and mmCIF representations available</li>
+                </ul>
+
+                <h3><i class="fas fa-chart-bar"></i> Data Stewards & Curators</h3>
+                <ul>
+                    <li>Schema-Compliant: Bioschemas and Schema.org adherence</li>
+                    <li>Provenance-Aware: Clear lineage from raw data to enriched metadata</li>
+                    <li>Extensible: <code>additionalProperty</code> for custom annotations</li>
+                    <li>Web-Discoverable: JSON-LD embedded in HTML for search engines</li>
+                </ul>
+
+                <h3><i class="fa-solid fa-computer"></i> Bioinformaticians</h3>
+                <ul>
+                    <li>API-Ready: Structured JSON for programmatic access</li>
+                    <li>Standards-Based: EDAM, GO, UniProt cross-references</li>
+                    <li>Pipeline-Friendly: Modular, incremental metadata generation</li>
+                    <li>Version-Controlled: Git-tracked with clear update history</li>
+                </ul>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="section">
+                <h2><i class="fas fa-tools"></i> Technical Implementation</h2>
+
+                <h3>Design Principles</h3>
+                <ol>
+                    <li>Modular Enrichment: Optional steps (PDB metadata, assembly validation, clustering)</li>
+                    <li>Provenance Preservation: All modifications timestamped and logged</li>
+                    <li>Schema Safety: Extensions use <code>additionalProperty</code> without breaking validation</li>
+                    <li>FAIR-by-Design: Built with Findable, Accessible, Interoperable, Reusable principles</li>
+                </ol>
+
+                <h3>Processing Pipeline</h3>
+                <pre><code>CSV Data → Parse → ProteinInterface Objects → Optional Enrichment:
+  ├── Assembly Chain Validation (--check-pdb-label/--check-cif-label)
+  ├── PDB Metadata Fetching (--fetch-pdb-metadata)
+  └── Cluster Assignment (--cluster file)
+    ↓
+Generate Metadata → Validate → Output Files</code></pre>
+            </section>
+
+            <!-- FAIR Improvements Roadmap -->
+            <section class="section">
+                <h2><i class="fa-solid fa-route"></i> FAIR Improvements Roadmap</h2>
+                <p>Based on the FAIR assessment (87.5/100), here are planned improvements:</p>
+
+                <h3>Low Priority (Potential +5 points)</h3>
+                <ul>
+                    <li>Create <code>.github/ISSUE_TEMPLATE/</code> for structured issue reporting</li>
+                </ul>
+
+                <h3>Medium Priority (Potential +20 points)</h3>
+                <ul>
+                    <li>Specify access rights in metadata (open/restricted/closed)</li>
+                    <li>Include format information (MIME types, extensions) in metadata</li>
+                </ul>
+
+                <h3>Low Priority (Potential +15 points)</h3>
+                <ul>
+                    <li>Add repository topics on GitHub settings</li>
+                    <li>Create GitHub releases with version tags</li>
+                    <li>Enable and populate documentation wiki</li>
+                </ul>
+
+                <p><strong>Target FAIR Score: 100/100 (Currently: 87.5)</strong></p>
+            </section>
+
+            <!-- License and Attribution -->
+            <section class="section">
+                <h2><i class="fa fa-copyright"></i>
+                License and Attribution</h2>
+
+                <h3>License</h3>
+                <p>Creative Commons Attribution 4.0 International (CC-BY-4.0)<br>
+                This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+
+                <h3>Citation</h3>
+                <pre><code>@article{schweke2023discriminating,
+   title={Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study},
+   author={Schweke, H. and Xu, Q. and Cazals, F. and Teyra, J. and Zimmermann, O. and Brenke, R. and Mihalek, I. and Res, I. and Ferré, A. and Lafita, A. and Guzzo, C. R. and Bordogna, A. and Bonvin, A. M. J. J. and Dey, S. and Gao, M. and Vangone, A. and Oliva, R. and Guarnera, E. and Roche, D. B. and Bhattacharya, S. and Brylinski, M. and Dijkstra, M. and Esquivel-Rodríguez, J. and Kihara, D. and Lensink, M. F. and Murakami, Y. and Nadzirin, N. and Nagarajan, R. and Oliveira, S. H. P. and Pires, D. E. V. and Roy, R. S. and Sanchez-Garcia, R. and Schueler-Furman, O. and Trellet, M. and Wodak, S. J.},
+   journal={Proteomics},
+   volume={23},
+   number={17},
+   pages={e2200323},
+   year={2023},
+   publisher={Wiley},
+   doi={10.1002/pmic.202200323}
+}
+
+@dataset{elixir2024fairmetadata,
+   title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces FAIR Metadata},
+   author={{ELIXIR 3D-BioInfo Community}},
+   year={2024},
+   version={1.0},
+   publisher={ELIXIR},
+   doi={10.5281/zenodo.XXXXXXX}
+}</code></pre>
+
+                <h3>Dataset Reference Publication</h3>
+                <p>"Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study"<br>
+                📄 <a href="https://doi.org/10.1002/pmic.202200323" target="_blank">https://doi.org/10.1002/pmic.202200323</a></p>
+
+                <h3>Contact</h3>
+                <ul>
+                    <li>ELIXIR 3D-BioInfo Community: <a href="https://elixir-europe.org/platforms/3d-bioinfo" target="_blank">https://elixir-europe.org/platforms/3d-bioinfo</a></li>
+                    <li>Repository Issues: <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a></li>
+                    <li>Dataset Source: <a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" target="_blank">Original Benchmark</a></li>
+                </ul>
+            </section>
+
+            <!-- Related Resources -->
+            <section class="section">
+                <h2><i class="fa-solid fa-cube"></i> Related Resources</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ELIXIR 3D-BioInfo</td>
+                            <td>Community platform</td>
+                            <td><a href="https://elixir-europe.org/platforms/3d-bioinfo" target="_blank">https://elixir-europe.org/platforms/3d-bioinfo</a></td>
+                        </tr>
+                        <tr>
+                            <td>Source Code</td>
+                            <td>This repository</td>
+                            <td><a href="https://github.com/biofold/ppi-benchmark-fair" target="_blank">https://github.com/biofold/ppi-benchmark-fair</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dataset Repository</td>
+                            <td>Original benchmark data</td>
+                            <td><a href="https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces" target="_blank">https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bioschemas</td>
+                            <td>Life-science metadata standards</td>
+                            <td><a href="https://bioschemas.org/" target="_blank">https://bioschemas.org</a></td>
+                        </tr>
+                        <tr>
+                            <td>MLCommons Croissant</td>
+                            <td>ML dataset standard</td>
+                            <td><a href="https://mlcommons.org/croissant" target="_blank">https://mlcommons.org/croissant</a></td>
+                        </tr>
+                        <tr>
+                            <td>RCSB PDB API</td>
+                            <td>Protein Data Bank API</td>
+                            <td><a href="https://data.rcsb.org/" target="_blank">https://data.rcsb.org</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Contributing</h3>
+                <p>We welcome contributions to improve FAIR compliance! See our <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a> for current improvement tasks.</p>
+
+                <h3>Support</h3>
+                <p>For questions or support, please:</p>
+                <ol>
+                    <li>Check the FAIR Improvements Roadmap section</li>
+                    <li>Review existing <a href="https://github.com/biofold/ppi-benchmark-fair/issues" target="_blank">GitHub Issues</a></li>
+                    <li>Create a new issue with detailed description</li>
+                </ol>
+
+                <hr>
+                <p><em>This project is part of the ELIXIR 3D-BioInfo Community's efforts to promote FAIR data practices in structural bioinformatics.</em></p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <!--
+                  <h3>ELIXIR 3D-BioInfo Community</h3>
+                -->
+                <div class="footer-content">Enhancing the FAIRness of the ELIXIR PPI Benchmark
+                </div>
+                <!--
+                <div class="footer-links">
+                    <a href="fair_visualizations/index.html" class="footer-link">
+                        <i class="fas fa-chart-bar"></i> FAIR Evaluation
+                    </a>
+                    <a href="https://www.go-fair.org/fair-principles/" class="footer-link" target="_blank">
+                        <i class="fas fa-book"></i> FAIR Principles
+                    </a>
+                    <a href="https://elixir-europe.org/platforms/3d-bioinfo" class="footer-link" target="_blank">
+                        <i class="fas fa-users"></i> ELIXIR 3D-BioInfo
+                    </a>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="footer-link" target="_blank">
+                        <i class="fab fa-github"></i> Repository
+                    </a>
+                </div>
+                -->
+                <div class="footer-content">
+                <a href="https://github.com/biofold/ppi-benchmark-fair">
+                <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
+                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
+                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <a href="https://www.python.org/">
+                <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
+                <a href="https://schema.org/">
+                <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
+                <a href="https://mlcommons.org/croissant/">
+                <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+                </div>
+
+                <div class="copyright">
+                    <p>PPI Benchmark FAIR Metadata • Generated on: 2024-12-24</p><br>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
