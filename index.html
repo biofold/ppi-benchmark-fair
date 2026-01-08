@@ -270,6 +270,13 @@
             margin-bottom: 10px;
         }
 
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
         .metric-card {
             background: linear-gradient(135deg, var(--primary-color), #4689a3);
             color: white;
@@ -279,7 +286,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
         }
-        
+
         .metric-card:hover {
             transform: translateY(-5px);
         }
@@ -463,7 +470,7 @@
                 <h2><i class="fa-solid fa-rocket"></i> Project Overview</h2>
                 <p>This project implements comprehensive FAIRification of the <strong>ELIXIR 3D-BioInfo Benchmark for Protein–Protein Interfaces</strong>, transforming the original dataset into a FAIR-compliant, machine learning-ready resource with enhanced metadata and interoperability features.</p>
 
-                <div class="stats-grid">
+                <div class="key-metrics">
                     <div class="metric-card">
                         <div class="metric-value">1,677</div>
                         <div class="metric-label">Protein Interfaces</div>
@@ -476,8 +483,8 @@
                         <div class="metric-value">833</div>
                         <div class="metric-label">Non-physiological Interfaces</div>
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-number">87.5%</div>
+                    <div class="metric-card">
+                        <div class="metric-value">87.5%</div>
                         <div class="metric-label">FAIR Score</div>
                     </div>
                 </div>
