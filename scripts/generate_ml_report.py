@@ -25,6 +25,14 @@ from typing import Dict, List, Any, Optional
 #pio.templates.default = "plotly_white"
 #pio.templates.default = "plotly" #"seaborn"
 
+# Add at the top of the script after imports
+STANDARD_MARGINS = {
+    'feature_plots': dict(t=60, b=140, l=80, r=40),
+    'prediction_plots': dict(t=60, b=140, l=80, r=40),
+    'tall_plots': dict(t=60, b=60, l=40, r=40),  # For plots with many items
+}
+
+
 # CSS / page style matching FAIR Interactive Dashboard
 PAGE_STYLE = """
 :root {
@@ -218,11 +226,10 @@ h4 {
 }
 
 /* Figure Containers - Matching FAIR dashboard cards */
-/* Simply increase the padding in the figure-container */
 .figure-container {
     background-color: white;
-    margin: 30px 0;
-    padding: 50px 30px 30px 30px; /* Top, Right, Bottom, Left */
+    margin: 40px 0;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border-left: 5px solid var(--secondary-color);
@@ -254,15 +261,12 @@ h4 {
     line-height: 1.7;
 }
 
-/* And give the iframe itself some internal spacing */
 .figure-embed {
     width: 100%;
     height: 560px;
     border: none;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    /* Add some margin inside the iframe area */
-    margin: 30px 0;
 }
 
 /* Navigation Bar */
@@ -662,7 +666,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 barmode='group',
                 xaxis_tickangle=-45,
                 height=520,
-                margin=dict(t=20, b=180, l=60, r=20),
+                margin=dict(t=30, b=180, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -719,7 +723,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             ))
             fig.update_layout(
                 height=max(400, len(pair_labels) * 28),
-                margin=dict(t=20, b=20, l=20, r=20),
+                margin=dict(t=30, b=20, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -764,7 +768,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 fig.add_trace(go.Scatter(x=pcs, y=cumulative_variance, name='Cumulative', line=dict(color='#e74c3c', width=3), marker=dict(size=6)))
             fig.update_layout(
                 height=520,
-                margin=dict(t=20, b=100, l=60, r=20),
+                margin=dict(t=30, b=100, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -865,7 +869,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 # Add axis labels
                 fig.update_layout(
                     height=620,
-                    margin=dict(t=20, b=80, l=60, r=20),
+                    margin=dict(t=30, b=80, l=60, r=20),
                     plot_bgcolor='white',
                     paper_bgcolor='white',
                     font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -935,7 +939,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
 
             fig_anova.update_layout(
                 height=max(400, top_n * 28),
-                margin=dict(t=20, b=80, l=20, r=20),
+                margin=dict(t=30, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -970,7 +974,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             fig_mi = px.bar(df_top_mi, x='mutual_info', y='Feature', orientation='h', color='mutual_info', color_continuous_scale='Viridis')
             fig_mi.update_layout(
                 height=max(400, top_n * 28),
-                margin=dict(t=20, b=80, l=20, r=20),
+                margin=dict(t=30, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1026,7 +1030,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             fig = go.Figure(data=go.Heatmap(z=df_stats.values, x=df_stats.columns, y=df_stats.index, colorscale='Viridis'))
             fig.update_layout(
                 height=520,
-                margin=dict(t=20, b=120, l=60, r=20),
+                margin=dict(t=30, b=120, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1377,7 +1381,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         fig.update_layout(
             barmode='group',
             height=520,
-            margin=dict(t=20, b=120, l=60, r=20),
+            margin=dict(t=30, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1439,7 +1443,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         # Add axis labels
         fig.update_layout(
             height=520,
-            margin=dict(t=20, b=120, l=60, r=20),
+            margin=dict(t=30, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1515,7 +1519,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         # Add axis labels and formatting
         fig.update_layout(
             height=620,
-            margin=dict(t=20, b=120, l=20, r=20),
+            margin=dict(t=30, b=120, l=20, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
