@@ -8,7 +8,7 @@
     <style>
         :root {
             --primary-color: #2c3e50;
-            --secondary-color: #3498db;
+            --secondary-color: #4689a3;
             --accent-color: #e74c3c;
             --light-bg: #f8f9fa;
             --success-color: #27ae60;
@@ -34,11 +34,11 @@
             margin: 0 auto;
         }
         
-        /* Header - Matching index.html */
+        /* Header - Matching second file */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #1a252f);
+            background: linear-gradient(135deg, var(--primary-color), #4689a3);
             color: white;
-            padding: 50px 0;
+            padding: 30px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -65,7 +65,7 @@
         
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
@@ -114,8 +114,9 @@
         }
         
         .badge.fair {
-            background-color: #f39c12;
+            background: linear-gradient(135deg, var(--success-color), #219653);
             color: white;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
         
         .dashboard-link {
@@ -124,13 +125,14 @@
             gap: 10px;
             background-color: rgba(255,255,255,0.15);
             color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 10px 20px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: all 0.3s ease;
+            margin: 10px 5px;
             border: 2px solid rgba(255,255,255,0.3);
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .dashboard-link:hover {
@@ -139,7 +141,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        /* Section Cards - Matching index.html */
+        /* Section Cards - Matching second file */
         .section {
             background-color: white;
             margin: 30px 0;
@@ -158,17 +160,14 @@
             gap: 10px;
         }
         
-        h2::before {
-            content: "📊";
-            font-size: 1.5rem;
+        h2 i {
+            font-size: 1.3rem;
         }
         
         h3 {
             color: var(--primary-color);
             margin: 20px 0 10px;
             font-size: 1.3rem;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #f0f0f0;
         }
         
         h4 {
@@ -269,20 +268,19 @@
             margin: 15px 0;
         }
         
-        /* Footer */
+        /* Footer - Matching second file */
         footer {
-            background-color: var(--primary-color);
+            background-color: #386277;
             color: white;
-            padding: 40px 0;
+            padding: 10px 0;
             text-align: center;
             margin-top: 60px;
             border-radius: 12px;
         }
         
         .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            margin-top: 15px;
+            padding: 0 10px;
         }
         
         .footer-links {
@@ -307,10 +305,17 @@
         }
         
         .copyright {
-            margin-top: 30px;
+            margin-top: 20px;
             color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
-            line-height: 1.6;
+        }
+        
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
         }
         
         /* Responsive */
@@ -670,7 +675,7 @@
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">HomomericStructure</span></td>
-                                <td><span class="type-boolean">Boolean</span></td>
+                            <td><span class="type-boolean">Boolean</span></td>
                                 <td>Whether structure is homomeric</td>
                                 <td><code>true</code></td>
                             </tr>
@@ -1067,9 +1072,11 @@ for prop in protein['additionalProperty']:
 
         <!-- Footer -->
         <footer>
-            <div class="footer-content">
-                <h3>ELIXIR 3D-BioInfo Community</h3>
-                <p>Data Dictionary for FAIR Protein-Protein Interface Metadata</p>
+            <div class="container">
+                <div class="footer-content">
+                    <h3>ELIXIR 3D-BioInfo Community</h3>
+                    <p>Data Dictionary for FAIR Protein-Protein Interface Metadata</p>
+                </div>
                 
                 <div class="footer-links">
                     <a href="index.html" class="footer-link">
@@ -1083,6 +1090,24 @@ for prop in protein['additionalProperty']:
                     </a>
                     <a href="https://bioschemas.org/" class="footer-link" target="_blank">
                         <i class="fas fa-microscope"></i> Bioschemas
+                    </a>
+                </div>
+                
+                <div class="footer-badges">
+                    <a href="https://github.com/biofold/ppi-benchmark-fair">
+                        <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100">
+                    </a>
+                    <a href="https://creativecommons.org/licenses/by/4.0/">
+                        <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0">
+                    </a>
+                    <a href="https://www.python.org/">
+                        <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+">
+                    </a>
+                    <a href="https://schema.org/">
+                        <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas">
+                    </a>
+                    <a href="https://mlcommons.org/croissant/">
+                        <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant">
                     </a>
                 </div>
                 
