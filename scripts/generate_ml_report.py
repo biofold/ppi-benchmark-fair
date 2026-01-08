@@ -398,44 +398,44 @@ footer {
     h1 {
         font-size: 2.2rem;
     }
-    
+
     .tagline {
         font-size: 1.1rem;
     }
-    
+
     .nav-bar ul {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .nav-bar li {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav-bar a {
         display: block;
         width: 90%;
         margin: 5px auto;
     }
-    
+
     .figure-embed {
         height: 500px;
     }
-    
+
     .key-metrics {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
-    
+
     .metric-value {
         font-size: 2rem;
     }
-    
+
     .performance-table {
         font-size: 0.9rem;
     }
-    
+
     .performance-table th,
     .performance-table td {
         padding: 10px;
@@ -446,13 +446,13 @@ footer {
     .figure-embed {
         height: 400px;
     }
-    
+
     .toggle-button {
         display: block;
         width: 90%;
         margin: 10px auto;
     }
-    
+
     .performance-table {
         display: block;
         overflow-x: auto;
@@ -466,7 +466,7 @@ JS_SCRIPT = """
     function toggleAllFigures(action) {
         const figures = document.querySelectorAll('.figure-container iframe');
         const buttons = document.querySelectorAll('.toggle-button');
-        
+
         if (action === 'show') {
             figures.forEach(fig => {
                 fig.style.display = 'block';
@@ -482,7 +482,7 @@ JS_SCRIPT = """
             buttons[1].classList.add('hidden');
         }
     }
-    
+
     function expandAllFigures() {
         const figures = document.querySelectorAll('.figure-embed');
         figures.forEach(fig => {
@@ -491,7 +491,7 @@ JS_SCRIPT = """
         // Visual feedback
         showNotification('All figures expanded to full view');
     }
-    
+
     function collapseAllFigures() {
         const figures = document.querySelectorAll('.figure-embed');
         figures.forEach(fig => {
@@ -500,7 +500,7 @@ JS_SCRIPT = """
         // Visual feedback
         showNotification('All figures collapsed to compact view');
     }
-    
+
     // Show a temporary notification
     function showNotification(message) {
         // Remove existing notification if any
@@ -508,7 +508,7 @@ JS_SCRIPT = """
         if (existingNotification) {
             existingNotification.remove();
         }
-        
+
         // Create new notification
         const notification = document.createElement('div');
         notification.className = 'notification';
@@ -526,17 +526,17 @@ JS_SCRIPT = """
             font-weight: 600;
             animation: slideIn 0.3s ease;
         `;
-        
+
         // Add to body
         document.body.appendChild(notification);
-        
+
         // Remove after 3 seconds
         setTimeout(() => {
             notification.style.animation = 'slideOut 0.3s ease';
             setTimeout(() => notification.remove(), 300);
         }, 3000);
     }
-    
+
     // Add CSS for animations
     const style = document.createElement('style');
     style.textContent = `
@@ -550,7 +550,7 @@ JS_SCRIPT = """
         }
     `;
     document.head.appendChild(style);
-    
+
     // Smooth scrolling for navigation
     document.querySelectorAll('.nav-bar a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -567,11 +567,11 @@ JS_SCRIPT = """
             }
         });
     });
-    
+
     // Lazy loading for iframes
     document.addEventListener("DOMContentLoaded", function() {
         const iframes = document.querySelectorAll('.figure-embed');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -583,9 +583,9 @@ JS_SCRIPT = """
                 }
             });
         }, { rootMargin: '100px' });
-        
+
         iframes.forEach(iframe => observer.observe(iframe));
-        
+
         // Set initial state
         document.querySelectorAll('.toggle-button')[1].classList.add('hidden');
     });
@@ -655,9 +655,9 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
 
             # Add axis labels
             fig.update_layout(
-                barmode='group', 
-                xaxis_tickangle=-45, 
-                height=520, 
+                barmode='group',
+                xaxis_tickangle=-45,
+                height=520,
                 margin=dict(t=20, b=180, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -671,13 +671,13 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
             )
-            
+
             fig.update_yaxes(
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
             )
-            
+
             out_path = figs_dir / "feature_importance.html"
             fig.write_html(str(out_path), include_plotlyjs='cdn')
             plots_map['feature_importance'] = os.path.relpath(out_path, output_dir)
@@ -714,7 +714,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 hovertemplate='<b>%{y}</b><br>Correlation: %{x:.3f}<extra></extra>'
             ))
             fig.update_layout(
-                height=max(400, len(pair_labels) * 28), 
+                height=max(400, len(pair_labels) * 28),
                 margin=dict(t=20, b=20, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -737,7 +737,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 linecolor='rgba(0,0,0,0.3)',
                 mirror=True,
             )
-            
+
             out_path = figs_dir / "correlation_plot.html"
             fig.write_html(str(out_path), include_plotlyjs='cdn')
             plots_map['correlation_plot'] = os.path.relpath(out_path, output_dir)
@@ -759,7 +759,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             if cumulative_variance:
                 fig.add_trace(go.Scatter(x=pcs, y=cumulative_variance, name='Cumulative', line=dict(color='#e74c3c', width=3), marker=dict(size=6)))
             fig.update_layout(
-                height=520, 
+                height=520,
                 margin=dict(t=20, b=100, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -860,7 +860,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 )
                 # Add axis labels
                 fig.update_layout(
-                    height=620, 
+                    height=620,
                     margin=dict(t=20, b=80, l=60, r=20),
                     plot_bgcolor='white',
                     paper_bgcolor='white',
@@ -924,13 +924,13 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             df_top_anova = df_rows.nlargest(top_n, 'anova_f')
             fig_anova = px.bar(df_top_anova, x='anova_f', y='Feature', orientation='h', color='anova_f', color_continuous_scale='Blues')
             fig_anova.update_traces(marker=
-                    dict(line = 
+                    dict(line =
                         dict (color='rgba(0,0,0,0.3)',width=0.5)
                         )
             )
 
             fig_anova.update_layout(
-                height=max(400, top_n * 28), 
+                height=max(400, top_n * 28),
                 margin=dict(t=20, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -965,7 +965,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             df_top_mi = df_rows.nlargest(top_n, 'mutual_info')
             fig_mi = px.bar(df_top_mi, x='mutual_info', y='Feature', orientation='h', color='mutual_info', color_continuous_scale='Viridis')
             fig_mi.update_layout(
-                height=max(400, top_n * 28), 
+                height=max(400, top_n * 28),
                 margin=dict(t=20, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -974,7 +974,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 yaxis_title="Features",
                 coloraxis_colorbar_title="MI Score"
             )
-         
+
             fig_mi.update_xaxes(
                 showline=True,
                 linecolor='rgba(0,0,0,0.3)',
@@ -1021,7 +1021,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             df_stats = pd.DataFrame(stats_data).set_index('Feature').T
             fig = go.Figure(data=go.Heatmap(z=df_stats.values, x=df_stats.columns, y=df_stats.index, colorscale='Viridis'))
             fig.update_layout(
-                height=520, 
+                height=520,
                 margin=dict(t=20, b=120, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
@@ -1053,18 +1053,18 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
 
     out_dir = Path(output_path).parent or Path('.')
     rel = lambda p: os.path.relpath(p, start=out_dir)
-    
+
     current_date = datetime.now().strftime("%Y-%m-%d")
-    
+
     # Extract basic metrics for key metrics section
     dataset_info = report.get('dataset_info', {})
     num_features = len(dataset_info.get('feature_names', []))
     num_samples = dataset_info.get('num_samples', 0)
-    
+
     basic_stats = report.get('basic_statistics', {})
     avg_mean = np.mean([stats.get('mean', 0) for stats in basic_stats.values()]) if basic_stats else 0
     avg_std = np.mean([stats.get('std', 0) for stats in basic_stats.values()]) if basic_stats else 0
-    
+
     # Build cards in the order we expect (removed test_plot)
     cards = [
         ('Figure 1: Feature Importance Comparison', plots_map.get('feature_importance')),
@@ -1085,7 +1085,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     html_parts.append('<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>')
     html_parts.append(f"<style>{PAGE_STYLE}</style>")
     html_parts.append("</head><body><div class='container'>")
-    
+
     # Header matching FAIR dashboard with updated subtitle
     html_parts.append(f"""
     <header>
@@ -1109,32 +1109,32 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         </div>
     </header>
     """)
-    
+
     # Main content
     html_parts.append("<main class='container'>")
-    
+
     # Key Metrics Section (removed green box)
     html_parts.append(f"""
     <div class="section" id="key-metrics">
         <h2><i class="fas fa-clipboard-check"></i> Key Statistics</h2>
         <p>Comprehensive analysis of dataset features including importance scores, correlations, and statistical properties.</p>
-        
+
         <div class="key-metrics">
             <div class="metric-card">
                 <div class="metric-value">{num_features}</div>
                 <div class="metric-label">Features</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{num_samples}</div>
                 <div class="metric-label">Samples</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{avg_mean:.1f}</div>
                 <div class="metric-label">Avg Mean</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{avg_std:.2f}</div>
                 <div class="metric-label">Avg Std Dev</div>
@@ -1142,7 +1142,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         </div>
     </div>
     """)
-    
+
     # Navigation Bar (commented out but available)
     html_parts.append("""
     <!--
@@ -1159,7 +1159,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     </div>
     -->
     """)
-    
+
     # Control Buttons (commented out but available)
     html_parts.append("""
     <!--
@@ -1180,18 +1180,18 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     </div>
     -->
     """)
-    
+
     # Figures Section
     html_parts.append(f'<div id="figures">')
-    
+
     # Add figure cards
     figure_counter = 1
     for title, rel_path in cards:
         if not rel_path:
             continue
-        
+
         embed_src = rel(Path(output_path).parent / rel_path)
-        
+
         # Get description based on figure type
         descriptions = {
             'Feature Importance Comparison': 'Shows feature importance scores from multiple methods (Random Forest, Logistic Regression, Mutual Information).',
@@ -1202,9 +1202,9 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
             'PCA Explained Variance': 'Bar chart showing explained variance ratio for principal components with cumulative variance line.',
             'Feature Statistics Heatmap': 'Heatmap visualization of basic statistics (mean, std, min, max, median) for the top features.',
         }
-        
+
         description = descriptions.get(title.split(': ')[1] if ': ' in title else title, 'Feature analysis visualization.')
-        
+
         html_parts.append(f"""
         <div class="figure-container" id="figure{figure_counter}">
             <h2 class="figure-title">{title}</h2>
@@ -1213,10 +1213,10 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         </div>
         """)
         figure_counter += 1
-    
+
     html_parts.append('</div>')
     html_parts.append("</main>")
-    
+
     # Footer with updated badges
     html_parts.append(f"""
     <footer id="footer">
@@ -1244,10 +1244,10 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         </div>
     </footer>
     """)
-    
+
     # Add JavaScript
     html_parts.append(JS_SCRIPT)
-    
+
     html_parts.append("</div></body></html>")
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -1269,29 +1269,56 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
 
     plots_map: Dict[str, str] = {}
 
-    # Extract model names and calculate standard errors for each metric
-    model_names = [k for k in results.keys() if k != 'cross_validation_settings']
+    # FIXED: Extract model names correctly
+    metadata_keys = {'cross_validation_settings', 'metadata', 'dataset_info', 'timestamp',
+                     'model_settings', 'experiment_info', 'feature_info'}
+
+    # Identify actual model results
+    model_names = []
+    for key in results.keys():
+        if key in metadata_keys:
+            continue
+        if isinstance(results[key], dict):
+            if 'cv_metrics' in results[key] or 'fold_metrics' in results[key]:
+                model_names.append(key)
+
     if not model_names:
+        # Fallback: look for common model names
+        potential_models = ['RandomForest', 'LogisticRegression', 'SVM', 'XGBoost',
+                           'GradientBoosting', 'DecisionTree', 'KNN', 'NeuralNetwork',
+                           'AdaBoost', 'GaussianNB', 'MLP', 'LGBM', 'CatBoost']
+
+        for key in results.keys():
+            if any(model_name.lower() in key.lower() for model_name in potential_models):
+                model_names.append(key)
+
+    # Final fallback
+    if not model_names:
+        model_names = [k for k in results.keys() if k not in metadata_keys and k != 'cross_validation_settings']
+
+    if not model_names:
+        if verbose:
+            print("⚠️  No valid model results found in JSON")
         return plots_map
 
     # Basic performance comparison bar chart (accuracy/precision/recall/f1) with error bars
     try:
         metrics = ['accuracy', 'precision', 'recall', 'f1']
-        
+
         # Prepare data for error bars
         error_data = {}
         for metric in metrics:
             error_data[metric] = {'values': [], 'errors': []}
-        
+
         # Calculate standard errors for each model and metric
         for name in model_names:
             fold_metrics = results[name].get('fold_metrics', {})
             cv_metrics = results[name].get('cv_metrics', {})
-            
+
             for metric in metrics:
                 # Get the mean value
                 mean_value = cv_metrics.get(metric, 0)
-                
+
                 # Get fold scores for this metric
                 if metric == 'accuracy':
                     fold_scores = fold_metrics.get('accuracies', [])
@@ -1303,29 +1330,29 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
                     fold_scores = fold_metrics.get('f1_scores', [])
                 else:
                     fold_scores = []
-                
+
                 # Calculate standard error
                 if len(fold_scores) > 1:
                     std_err = np.std(fold_scores) / np.sqrt(len(fold_scores))
                 else:
                     std_err = 0
-                
+
                 error_data[metric]['values'].append(mean_value)
                 error_data[metric]['errors'].append(std_err)
-        
+
         # Create the bar chart with error bars
         fig = go.Figure()
-        
+
         colors = ['#4689a3', '#e74c3c', '#27ae60', '#f39c12']  # Different colors for each metric
-        
+
         for i, metric in enumerate(metrics):
             values = error_data[metric]['values']
             errors = error_data[metric]['errors']
-            
+
             # Add bar trace with error bars
             fig.add_trace(go.Bar(
-                name=metric.capitalize(), 
-                x=model_names, 
+                name=metric.capitalize(),
+                x=model_names,
                 y=values,
                 error_y=dict(
                     type='data',
@@ -1336,16 +1363,16 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
                     color='rgba(0,0,0,0.6)'
                 ),
                 marker_color=colors[i],
-                hovertemplate='<b>%{x}</b><br>' + 
+                hovertemplate='<b>%{x}</b><br>' +
                             f'{metric.capitalize()}: %{{y:.3f}}<br>' +
                             'Standard Error: ±%{customdata[0]:.3f}<extra></extra>',
                 customdata=np.array([errors]).T  # For hover display
             ))
-        
+
         # Customize the layout with axis labels
         fig.update_layout(
-            barmode='group', 
-            height=520, 
+            barmode='group',
+            height=520,
             margin=dict(t=20, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
@@ -1360,7 +1387,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             xaxis_title="Models",
             yaxis_title="Score"
         )
-        
+
         # Update x-axis and y-axis with better formatting
         fig.update_xaxes(
             showline=True,
@@ -1368,7 +1395,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             linecolor='rgba(0,0,0,0.3)',
             tickformat='.2f'
         )
-        
+
         fig.update_yaxes(
             range=[0, 1.05],  # For metrics normalized between 0-1
             showline=True,
@@ -1376,13 +1403,13 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             linecolor='rgba(0,0,0,0.3)',
             tickformat='.2f'
         )
-        
+
         out_path = figs_dir / "performance_comparison.html"
         fig.write_html(str(out_path), include_plotlyjs='cdn')
         plots_map['performance_comparison'] = os.path.relpath(out_path, output_dir)
         if verbose:
             print("  ✅ performance_comparison with error bars saved")
-            
+
     except Exception as e:
         if verbose:
             print(f"  ⚠️ performance_comparison error: {e}")
@@ -1395,19 +1422,19 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             fold_f1s = fold_metrics.get('f1_scores', [])
             if fold_f1s:
                 fig.add_trace(go.Scatter(
-                    x=list(range(1, len(fold_f1s) + 1)), 
-                    y=fold_f1s, 
-                    mode='lines+markers', 
+                    x=list(range(1, len(fold_f1s) + 1)),
+                    y=fold_f1s,
+                    mode='lines+markers',
                     name=name,
                     line=dict(width=3),
                     marker=dict(size=8),
                     hovertemplate=f'<b>{name}</b><br>' +
                             f'F1: %{{y:.3f}}<br>'
                 ))
-        
+
         # Add axis labels
         fig.update_layout(
-            height=520, 
+            height=520,
             margin=dict(t=20, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
@@ -1422,7 +1449,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
                 x=1
             )
         )
-        
+
         # Add grid lines
         fig.update_xaxes(
             dtick=1,
@@ -1434,7 +1461,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             gridcolor='rgba(0,0,0,0.15)',
             tickmode='linear'
         )
-        
+
         fig.update_yaxes(
             showline=True,
             linecolor='rgba(0,0,0,0.3)',
@@ -1445,7 +1472,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             range=[0, 1.0],
             tickformat='.2f'
         )
-        
+
         out_path = figs_dir / "f1_per_fold.html"
         fig.write_html(str(out_path), include_plotlyjs='cdn')
         plots_map['f1_per_fold'] = os.path.relpath(out_path, output_dir)
@@ -1459,9 +1486,9 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
     try:
         categories = ['Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
         fig = go.Figure()
-        
+
         colors = ['#4689a3', '#e74c3c', '#27ae60', '#f39c12', '#9b59b6']
-        
+
         for idx, name in enumerate(model_names):
             cv = results[name].get('cv_metrics', {})
             values = [
@@ -1474,16 +1501,16 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
             vals = values + [values[0]]
             cats = categories + [categories[0]]
             fig.add_trace(go.Scatterpolar(
-                r=vals, 
-                theta=cats, 
-                fill='toself', 
+                r=vals,
+                theta=cats,
+                fill='toself',
                 name=name,
                 line=dict(color=colors[idx % len(colors)], width=2)
             ))
-        
+
         # Add axis labels and formatting
         fig.update_layout(
-            height=620, 
+            height=620,
             margin=dict(t=20, b=120, l=20, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
@@ -1510,7 +1537,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
                 x=1
             )
         )
-        
+
         out_path = figs_dir / "radar_chart.html"
         fig.write_html(str(out_path), include_plotlyjs='cdn')
         plots_map['radar_chart'] = os.path.relpath(out_path, output_dir)
@@ -1531,51 +1558,83 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     """
     out_dir = Path(output_path).parent or Path('.')
     current_date = datetime.now().strftime("%Y-%m-%d")
-    
-    # Calculate metrics and prepare performance table data
-    model_names = [k for k in results.keys() if k != 'cross_validation_settings']
+
+    # FIXED: Only consider keys that have 'cv_metrics' as actual model results
+    # Common metadata keys to exclude
+    metadata_keys = {'cross_validation_settings', 'metadata', 'dataset_info', 'timestamp',
+                     'model_settings', 'experiment_info', 'feature_info'}
+
+    # Identify actual model results by checking for cv_metrics or fold_metrics
+    model_names = []
+    for key in results.keys():
+        if key in metadata_keys:
+            continue
+        # Check if this key contains model results (has cv_metrics or fold_metrics)
+        if isinstance(results[key], dict):
+            if 'cv_metrics' in results[key] or 'fold_metrics' in results[key]:
+                model_names.append(key)
+
+    # If the above doesn't work, fall back to explicit list of known model names
+    if not model_names:
+        # Common ML model names to look for
+        potential_models = ['RandomForest', 'LogisticRegression', 'SVM', 'XGBoost',
+                           'GradientBoosting', 'DecisionTree', 'KNN', 'NeuralNetwork',
+                           'AdaBoost', 'GaussianNB', 'MLP', 'LGBM', 'CatBoost']
+
+        for key in results.keys():
+            if any(model_name.lower() in key.lower() for model_name in potential_models):
+                model_names.append(key)
+
+    # If still no models found, use all keys except known metadata
+    if not model_names:
+        model_names = [k for k in results.keys() if k not in metadata_keys and k != 'cross_validation_settings']
+
     best_model = None
     best_f1 = 0
     avg_f1 = 0
-    
+
     # Prepare data for performance table with standard errors
     performance_data = []
     for name in model_names:
-        cv_metrics = results[name].get('cv_metrics', {})
+        if name not in results:
+            continue
+
+        model_result = results[name]
+        cv_metrics = model_result.get('cv_metrics', {})
         f1 = cv_metrics.get('f1', 0)
         accuracy = cv_metrics.get('accuracy', 0)
         precision = cv_metrics.get('precision', 0)
         recall = cv_metrics.get('recall', 0)
         roc_auc = cv_metrics.get('roc_auc', 0) or 0
-        
+
         # Get standard errors from fold metrics if available
-        fold_metrics = results[name].get('fold_metrics', {})
-        
+        fold_metrics = model_result.get('fold_metrics', {})
+
         # Calculate standard error for F1
         f1_scores = fold_metrics.get('f1_scores', [])
         f1_std_err = np.std(f1_scores) / np.sqrt(len(f1_scores)) if len(f1_scores) > 1 else 0
-        
+
         # Calculate standard error for accuracy
         accuracy_scores = fold_metrics.get('accuracies', [])
         accuracy_std_err = np.std(accuracy_scores) / np.sqrt(len(accuracy_scores)) if len(accuracy_scores) > 1 else 0
-        
+
         # Calculate standard error for precision
         precision_scores = fold_metrics.get('precisions', [])
         precision_std_err = np.std(precision_scores) / np.sqrt(len(precision_scores)) if len(precision_scores) > 1 else 0
-        
+
         # Calculate standard error for recall
         recall_scores = fold_metrics.get('recalls', [])
         recall_std_err = np.std(recall_scores) / np.sqrt(len(recall_scores)) if len(recall_scores) > 1 else 0
-        
+
         # Calculate standard error for ROC-AUC
         roc_auc_scores = fold_metrics.get('roc_aucs', [])
         roc_auc_std_err = np.std(roc_auc_scores) / np.sqrt(len(roc_auc_scores)) if len(roc_auc_scores) > 1 else 0
-        
+
         avg_f1 += f1
         if f1 > best_f1:
             best_f1 = f1
             best_model = name
-            
+
         performance_data.append({
             'Model': name,
             'Accuracy': accuracy,
@@ -1589,16 +1648,16 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
             'ROC-AUC': roc_auc,
             'ROC-AUC_SE': roc_auc_std_err
         })
-    
+
     if model_names:
         avg_f1 /= len(model_names)
-    
+
     # Find best metrics for highlighting (ignoring standard errors for comparison)
-    best_accuracy = max([d['Accuracy'] for d in performance_data])
-    best_precision = max([d['Precision'] for d in performance_data])
-    best_recall = max([d['Recall'] for d in performance_data])
-    best_roc_auc = max([d['ROC-AUC'] for d in performance_data])
-    
+    best_accuracy = max([d['Accuracy'] for d in performance_data]) if performance_data else 0
+    best_precision = max([d['Precision'] for d in performance_data]) if performance_data else 0
+    best_recall = max([d['Recall'] for d in performance_data]) if performance_data else 0
+    best_roc_auc = max([d['ROC-AUC'] for d in performance_data]) if performance_data else 0
+
     # Build HTML
     html_parts = []
     html_parts.append("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>")
@@ -1606,7 +1665,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     html_parts.append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">')
     html_parts.append('<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>')
     html_parts.append(f"<style>{PAGE_STYLE}</style></head><body><div class='container'>")
-    
+
     # Header with updated subtitle
     html_parts.append(f"""
     <header>
@@ -1630,31 +1689,31 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
     </header>
     """)
-    
+
     html_parts.append("<main class='container'>")
-    
+
     # Key Metrics Section
     html_parts.append(f"""
     <div class="section" id="key-metrics">
         <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
         <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
-        
+
         <div class="key-metrics">
             <div class="metric-card">
                 <div class="metric-value">{len(model_names)}</div>
                 <div class="metric-label">Models</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{best_f1:.3f}</div>
                 <div class="metric-label">Best F1 Score</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{avg_f1:.3f}</div>
                 <div class="metric-label">Avg F1 Score</div>
             </div>
-            
+
             <div class="metric-card">
                 <div class="metric-value">{best_model if best_model else 'N/A'}</div>
                 <div class="metric-label">Best Model</div>
@@ -1662,13 +1721,13 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
     </div>
     """)
-    
+
     # Performance Table Section
     html_parts.append(f"""
     <div class="section" id="performance-table">
         <h2><i class="fas fa-table"></i> Model Performance Summary Table</h2>
         <p>Detailed performance metrics for all evaluated models. Values shown as mean ± standard error (SE). Best performing values in each metric category are highlighted.</p>
-        
+
         <table class="performance-table">
             <thead>
                 <tr>
@@ -1682,7 +1741,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
             </thead>
             <tbody>
     """)
-    
+
     # Add table rows
     for data in performance_data:
         # Determine which metrics are best for highlighting
@@ -1691,20 +1750,20 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         recall_class = 'best-metric' if abs(data['Recall'] - best_recall) < 0.001 else ''
         f1_class = 'best-metric' if abs(data['F1-Score'] - best_f1) < 0.001 else ''
         roc_auc_class = 'best-metric' if abs(data['ROC-AUC'] - best_roc_auc) < 0.001 else ''
-        
+
         # Format values with standard errors
         accuracy_display = f"{data['Accuracy']:.3f} ± {data['Accuracy_SE']:.3f}"
         precision_display = f"{data['Precision']:.3f} ± {data['Precision_SE']:.3f}"
         recall_display = f"{data['Recall']:.3f} ± {data['Recall_SE']:.3f}"
         f1_display = f"{data['F1-Score']:.3f} ± {data['F1-Score_SE']:.3f}"
-        
+
         # Format ROC-AUC - handle None or 0 values
         roc_auc_value = data['ROC-AUC']
         if roc_auc_value == 0 or roc_auc_value is None:
             roc_auc_display = 'N/A'
         else:
             roc_auc_display = f"{roc_auc_value:.3f} ± {data['ROC-AUC_SE']:.3f}"
-        
+
         html_parts.append(f"""
                 <tr>
                     <td style="text-align:left !important;"><strong>{data['Model']}</strong></td>
@@ -1715,7 +1774,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                     <td class="{roc_auc_class}">{roc_auc_display}</td>
                 </tr>
         """)
-    
+
     html_parts.append("""
             </tbody>
         </table>
@@ -1724,7 +1783,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
     </div>
     """)
-    
+
     # Navigation Bar (commented out but available)
     html_parts.append("""
     <!--
@@ -1739,7 +1798,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     </div>
     -->
     """)
-    
+
     # Control Buttons (commented out but available)
     html_parts.append("""
     <!--
@@ -1760,17 +1819,17 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     </div>
     -->
     """)
-    
+
     # Figures Section
     html_parts.append(f'<div id="figures">')
-    
+
     # Cards in sensible order
     items = [
         ('Figure 1: Model Performance Comparison', plots_map.get('performance_comparison'), 'Bar chart comparing accuracy, precision, recall, and F1 scores across different models.'),
         ('Figure 2: F1 Score per Cross-Validation Fold', plots_map.get('f1_per_fold'), 'Line plot showing F1 score across each cross-validation fold for all models.'),
         ('Figure 3: Performance Radar Chart', plots_map.get('radar_chart'), 'Radar chart visualizing multiple performance metrics (Accuracy, Precision, Recall, F1, ROC-AUC) for model comparison.')
     ]
-    
+
     figure_counter = 1
     for title, rel_path, description in items:
         if not rel_path:
@@ -1784,10 +1843,10 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
         """)
         figure_counter += 1
-    
+
     html_parts.append('</div>')
     html_parts.append("</main>")
-    
+
     # Footer with updated badges
     html_parts.append(f"""
     <footer id="footer">
@@ -1815,10 +1874,10 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
     </footer>
     """)
-    
+
     # Add JavaScript
     html_parts.append(JS_SCRIPT)
-    
+
     html_parts.append("</div></body></html>")
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
