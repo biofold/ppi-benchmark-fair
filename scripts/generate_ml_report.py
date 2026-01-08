@@ -1734,7 +1734,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     # Performance Table Section
     html_parts.append(f"""
     <div class="section" id="performance-table">
-        <h2><i class="fas fa-table"></i> Model Performance Summary Table</h2>
+        <h2><i class="fas fa-table"></i> Model Performance Summary</h2>
         <p>Detailed performance metrics for all evaluated models. Values shown as mean ± standard error (SE). Best performing values in each metric category are highlighted.</p>
 
         <table class="performance-table">
