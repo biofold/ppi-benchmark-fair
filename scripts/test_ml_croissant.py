@@ -3581,9 +3581,6 @@ class ProteinInteractionClassifier:
         # Create CV splits
         cv_splits = self.create_group_kfold_splits(X, y, cluster_ids)
 
-        # Initialize fold assignments array
-        self.fold_assignments = np.zeros(len(X), dtype=int)  # Store fold for each sample
-
         # Initialize results storage
         self.results = {}
         all_predictions = {}
@@ -3600,6 +3597,7 @@ class ProteinInteractionClassifier:
             fold_recalls = []
             fold_f1s = []
             fold_roc_aucs = []
+            fold_confusion_matrices = []
 
             # Initialize arrays for overall predictions
             all_predictions[name] = []
@@ -3609,9 +3607,6 @@ class ProteinInteractionClassifier:
             # Perform cross-validation
             for fold_idx, (train_idx, test_idx) in enumerate(cv_splits):
                 self.logger.debug(f"  Fold {fold_idx + 1}/{self.n_splits}...")
-
-                # Store fold assignment for test samples
-                self.fold_assignments[test_idx] = fold_idx + 1  # 1-indexed for clarity
 
                 # Split data
                 X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
@@ -3626,6 +3621,13 @@ class ProteinInteractionClassifier:
                     model.fit(X_train_scaled, y_train)
                 except Exception as e:
                     self.logger.error(f"    Error training model: {e}")
+                    # Store zeros for this fold if training fails
+                    fold_accuracies.append(0.0)
+                    fold_precisions.append(0.0)
+                    fold_recalls.append(0.0)
+                    fold_f1s.append(0.0)
+                    fold_roc_aucs.append(0.0)
+                    fold_confusion_matrices.append([[0, 0], [0, 0]])
                     continue
 
                 # Make predictions
@@ -3643,6 +3645,9 @@ class ProteinInteractionClassifier:
                 recall = recall_score(y_test, y_pred, zero_division=0)
                 f1 = f1_score(y_test, y_pred, zero_division=0)
 
+                # Calculate confusion matrix
+                cm = confusion_matrix(y_test, y_pred)
+
                 # Calculate ROC-AUC if probability estimates are available
                 roc_auc = None
                 if y_pred_proba is not None:
@@ -3652,12 +3657,15 @@ class ProteinInteractionClassifier:
                         roc_auc = None
 
                 # Store fold results
-                fold_accuracies.append(accuracy)
-                fold_precisions.append(precision)
-                fold_recalls.append(recall)
-                fold_f1s.append(f1)
+                fold_accuracies.append(float(accuracy))
+                fold_precisions.append(float(precision))
+                fold_recalls.append(float(recall))
+                fold_f1s.append(float(f1))
+                fold_confusion_matrices.append(cm.tolist())
                 if roc_auc is not None:
-                    fold_roc_aucs.append(roc_auc)
+                    fold_roc_aucs.append(float(roc_auc))
+                else:
+                    fold_roc_aucs.append(None)
 
                 # Store predictions for overall evaluation
                 all_predictions[name].extend(y_pred)
@@ -3665,22 +3673,23 @@ class ProteinInteractionClassifier:
                 if y_pred_proba is not None:
                     all_proba_predictions[name].extend(y_pred_proba.tolist() if hasattr(y_pred_proba, 'tolist') else list(y_pred_proba))
 
-            # Calculate average metrics across folds
-            if fold_accuracies:
-                avg_accuracy = np.mean(fold_accuracies)
-                avg_precision = np.mean(fold_precisions)
-                avg_recall = np.mean(fold_recalls)
-                avg_f1 = np.mean(fold_f1s)
-                avg_roc_auc = np.mean(fold_roc_aucs) if fold_roc_aucs else None
-            else:
-                avg_accuracy = avg_precision = avg_recall = avg_f1 = avg_roc_auc = 0
+            # Calculate average metrics across folds (skip None values for ROC-AUC)
+            avg_accuracy = np.mean(fold_accuracies) if fold_accuracies else 0.0
+            avg_precision = np.mean(fold_precisions) if fold_precisions else 0.0
+            avg_recall = np.mean(fold_recalls) if fold_recalls else 0.0
+            avg_f1 = np.mean(fold_f1s) if fold_f1s else 0.0
 
-            # Calculate overall metrics
-            if all_true_labels[name]:
+            # Average ROC-AUC (only for folds that have it)
+            valid_roc_aucs = [v for v in fold_roc_aucs if v is not None]
+            avg_roc_auc = np.mean(valid_roc_aucs) if valid_roc_aucs else None
+
+            # Calculate overall metrics (all folds combined)
+            if all_true_labels[name] and all_predictions[name]:
                 overall_accuracy = accuracy_score(all_true_labels[name], all_predictions[name])
                 overall_precision = precision_score(all_true_labels[name], all_predictions[name], zero_division=0)
                 overall_recall = recall_score(all_true_labels[name], all_predictions[name], zero_division=0)
                 overall_f1 = f1_score(all_true_labels[name], all_predictions[name], zero_division=0)
+                overall_confusion_matrix = confusion_matrix(all_true_labels[name], all_predictions[name]).tolist()
 
                 overall_roc_auc = None
                 if all_proba_predictions[name]:
@@ -3689,35 +3698,39 @@ class ProteinInteractionClassifier:
                     except:
                         overall_roc_auc = None
             else:
-                overall_accuracy = overall_precision = overall_recall = overall_f1 = 0
+                overall_accuracy = overall_precision = overall_recall = overall_f1 = 0.0
                 overall_roc_auc = None
+                overall_confusion_matrix = [[0, 0], [0, 0]]
 
-            # Store results
+            # Store results with all metrics
             self.results[name] = {
                 'cv_metrics': {
-                    'accuracy': avg_accuracy,
-                    'precision': avg_precision,
-                    'recall': avg_recall,
-                    'f1': avg_f1,
-                    'roc_auc': avg_roc_auc
+                    'accuracy': float(avg_accuracy),
+                    'precision': float(avg_precision),
+                    'recall': float(avg_recall),
+                    'f1': float(avg_f1),
+                    'roc_auc': float(avg_roc_auc) if avg_roc_auc is not None else None
                 },
                 'overall_metrics': {
-                    'accuracy': overall_accuracy,
-                    'precision': overall_precision,
-                    'recall': overall_recall,
-                    'f1': overall_f1,
-                    'roc_auc': overall_roc_auc
+                    'accuracy': float(overall_accuracy),
+                    'precision': float(overall_precision),
+                    'recall': float(overall_recall),
+                    'f1': float(overall_f1),
+                    'roc_auc': float(overall_roc_auc) if overall_roc_auc is not None else None,
+                    'confusion_matrix': overall_confusion_matrix
                 },
                 'fold_metrics': {
-                    'accuracies': fold_accuracies,
-                    'precisions': fold_precisions,
-                    'recalls': fold_recalls,
-                    'f1_scores': fold_f1s,
-                    'roc_aucs': fold_roc_aucs
+                    'accuracies': [float(v) for v in fold_accuracies],
+                    'precisions': [float(v) for v in fold_precisions],
+                    'recalls': [float(v) for v in fold_recalls],
+                    'f1_scores': [float(v) for v in fold_f1s],
+                    'roc_aucs': [float(v) if v is not None else None for v in fold_roc_aucs],
+                    'confusion_matrices': fold_confusion_matrices
                 },
-                'predictions': all_predictions[name],
-                'true_labels': all_true_labels[name],
-                'probabilities': all_proba_predictions[name] if all_proba_predictions[name] else None
+                'predictions': {
+                    'n_samples': len(all_predictions[name]),
+                    'has_probabilities': len(all_proba_predictions[name]) > 0 if name in all_proba_predictions else False
+                }
             }
 
             # Print results
@@ -3727,7 +3740,7 @@ class ProteinInteractionClassifier:
             self.logger.info(f"    Average Recall:    {avg_recall:.4f} (±{np.std(fold_recalls) if fold_recalls else 0:.4f})")
             self.logger.info(f"    Average F1-Score:  {avg_f1:.4f} (±{np.std(fold_f1s) if fold_f1s else 0:.4f})")
             if avg_roc_auc is not None:
-                self.logger.info(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(fold_roc_aucs) if fold_roc_aucs else 0:.4f})")
+                self.logger.info(f"    Average ROC-AUC:   {avg_roc_auc:.4f} (±{np.std(valid_roc_aucs) if valid_roc_aucs else 0:.4f})")
 
             self.logger.info(f"  Overall Results (all folds combined):")
             self.logger.info(f"    Accuracy:  {overall_accuracy:.4f}")
@@ -3740,8 +3753,9 @@ class ProteinInteractionClassifier:
         # Determine best model based on average F1-score
         best_f1 = -1
         for name, metrics in self.results.items():
-            if metrics['cv_metrics']['f1'] > best_f1:
-                best_f1 = metrics['cv_metrics']['f1']
+            cv_f1 = metrics['cv_metrics']['f1']
+            if cv_f1 > best_f1:
+                best_f1 = cv_f1
                 self.best_model_name = name
                 self.best_model = self.models[name]
 
@@ -3808,6 +3822,9 @@ class ProteinInteractionClassifier:
         """
         self.logger.info(f"\n=== TRAINING AND EVALUATING MODELS (Test size: {test_size}) ===")
 
+        # Store test_size for reference
+        self.test_split = test_size
+
         # Store feature names
         if feature_names is not None:
             self.feature_names = feature_names
@@ -3818,6 +3835,13 @@ class ProteinInteractionClassifier:
         X_train, X_test, y_train, y_test, cluster_ids_train, cluster_ids_test = self.train_test_split(
             X, y, cluster_ids, test_size=test_size, random_state=self.random_state
         )
+
+        # Store fold assignments (0 = test set, -1 = train set)
+        if hasattr(self, 'fold_assignments'):
+            # Mark test set as fold 0
+            test_mask = cluster_ids.isin(cluster_ids_test.unique())
+            self.fold_assignments = np.where(test_mask, 0, -1)
+            self.logger.debug(f"Test set marked as fold 0: {np.sum(test_mask)} samples")
 
         # Scale features
         X_train_scaled = self.scaler.fit_transform(X_train)
@@ -3847,6 +3871,9 @@ class ProteinInteractionClassifier:
                 recall = recall_score(y_test, y_pred, zero_division=0)
                 f1 = f1_score(y_test, y_pred, zero_division=0)
 
+                # Calculate confusion matrix
+                cm = confusion_matrix(y_test, y_pred)
+
                 # Calculate ROC-AUC if probability estimates are available
                 roc_auc = None
                 if y_pred_proba is not None:
@@ -3855,20 +3882,27 @@ class ProteinInteractionClassifier:
                     except:
                         roc_auc = None
 
-                # Calculate confusion matrix
-                cm = confusion_matrix(y_test, y_pred)
-
-                # Store results
+                # Store results with all metrics
                 self.results[name] = {
-                    'accuracy': accuracy,
-                    'precision': precision,
-                    'recall': recall,
-                    'f1': f1,
-                    'roc_auc': roc_auc,
+                    'accuracy': float(accuracy),
+                    'precision': float(precision),
+                    'recall': float(recall),
+                    'f1': float(f1),
+                    'roc_auc': float(roc_auc) if roc_auc is not None else None,
                     'confusion_matrix': cm.tolist(),
-                    'predictions': y_pred.tolist() if hasattr(y_pred, 'tolist') else list(y_pred),
-                    'true_labels': y_test.tolist() if hasattr(y_test, 'tolist') else list(y_test),
-                    'probabilities': y_pred_proba.tolist() if y_pred_proba is not None and hasattr(y_pred_proba, 'tolist') else list(y_pred_proba) if y_pred_proba is not None else None
+                    'test_set_info': {
+                        'n_test_samples': len(y_test),
+                        'n_train_samples': len(y_train),
+                        'test_size_percentage': test_size * 100,
+                        'n_test_clusters': len(cluster_ids_test.unique()),
+                        'n_train_clusters': len(cluster_ids_train.unique())
+                    },
+                    'predictions': {
+                        'y_true': y_test.tolist() if hasattr(y_test, 'tolist') else list(y_test),
+                        'y_pred': y_pred.tolist() if hasattr(y_pred, 'tolist') else list(y_pred),
+                        'has_probabilities': y_pred_proba is not None,
+                        'n_samples': len(y_test)
+                    }
                 }
 
                 # Print results
@@ -3880,6 +3914,14 @@ class ProteinInteractionClassifier:
                 if roc_auc is not None:
                     self.logger.info(f"    ROC-AUC:   {roc_auc:.4f}")
 
+                # Print confusion matrix
+                tn, fp, fn, tp = cm.ravel()
+                self.logger.info(f"    Confusion Matrix:")
+                self.logger.info(f"      True Negatives:  {tn}")
+                self.logger.info(f"      False Positives: {fp}")
+                self.logger.info(f"      False Negatives: {fn}")
+                self.logger.info(f"      True Positives:  {tp}")
+
                 # Print classification report
                 self.logger.info(f"    Classification Report:")
                 report = classification_report(y_test, y_pred, target_names=['Non-physio', 'Physio'])
@@ -3888,25 +3930,37 @@ class ProteinInteractionClassifier:
 
             except Exception as e:
                 self.logger.error(f"  Error training {name}: {e}")
+                import traceback
+                traceback.print_exc()
+
+                # Store empty results on error
                 self.results[name] = {
-                    'accuracy': 0,
-                    'precision': 0,
-                    'recall': 0,
-                    'f1': 0,
+                    'accuracy': 0.0,
+                    'precision': 0.0,
+                    'recall': 0.0,
+                    'f1': 0.0,
                     'roc_auc': None,
                     'confusion_matrix': [[0, 0], [0, 0]],
-                    'predictions': [],
-                    'true_labels': [],
-                    'probabilities': None
+                    'test_set_info': {
+                        'n_test_samples': len(y_test),
+                        'n_train_samples': len(y_train),
+                        'test_size_percentage': test_size * 100,
+                        'error': str(e)
+                    },
+                    'predictions': {
+                        'error': str(e)
+                    }
                 }
 
         # Determine best model based on F1-score
         best_f1 = -1
         for name, metrics in self.results.items():
-            if metrics['f1'] > best_f1:
-                best_f1 = metrics['f1']
-                self.best_model_name = name
-                self.best_model = self.models[name]
+            if 'error' not in metrics.get('predictions', {}):  # Skip models with errors
+                f1_score_val = metrics.get('f1', 0)
+                if f1_score_val > best_f1:
+                    best_f1 = f1_score_val
+                    self.best_model_name = name
+                    self.best_model = self.models[name]
 
         if self.best_model_name:
             self.logger.info(f"\n✅ Best model: {self.best_model_name} (F1-Score: {best_f1:.4f})")
@@ -4198,56 +4252,151 @@ class ProteinInteractionClassifier:
 
         self.logger.info("Feature importance analysis complete")
 
-    def save_results(self, output_dir=".", include_dataset_csv=True):
+    def save_results(self, output_dir=".", dataset_csv_path=None):
         """Save model results to files."""
         if not self.results:
             self.logger.error("No results to save.")
             return
 
         output_path = Path(output_dir)
-        output_path.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
+        output_path.mkdir(parents=True, exist_ok=True)
 
         # Prepare results for saving
         results_dict = {}
-        for name, metrics in self.results.items():
-            results_dict[name] = {
-                'cv_metrics': {
-                    k: (float(v) if isinstance(v, (np.float32, np.float64)) else v)
-                    for k, v in metrics.get('cv_metrics', {}).items()
-                },
-                'overall_metrics': {
-                    k: (float(v) if isinstance(v, (np.float32, np.float64)) else v)
-                    for k, v in metrics.get('overall_metrics', {}).items()
-                },
-                'fold_metrics': {
-                    k: ([float(val) for val in v] if isinstance(v, list) else v)
-                    for k, v in metrics.get('fold_metrics', {}).items()
-                },
-                'accuracy': metrics.get('accuracy', 0),
-                'precision': metrics.get('precision', 0),
-                'recall': metrics.get('recall', 0),
-                'f1': metrics.get('f1', 0),
-                'roc_auc': metrics.get('roc_auc'),
-                'confusion_matrix': metrics.get('confusion_matrix', [[0, 0], [0, 0]])
+        for model_name, metrics in self.results.items():
+            # Check structure type
+            if 'cv_metrics' in metrics:
+                # Cross-validation results
+                results_dict[model_name] = {
+                    'cv_metrics': metrics['cv_metrics'],
+                    'overall_metrics': metrics.get('overall_metrics', {}),
+                    'fold_metrics': metrics.get('fold_metrics', {}),
+                    'has_cross_validation': True
+                }
+            else:
+                # Train/test split results
+                results_dict[model_name] = {
+                    'test_metrics': {
+                        'accuracy': metrics.get('accuracy', 0.0),
+                        'precision': metrics.get('precision', 0.0),
+                        'recall': metrics.get('recall', 0.0),
+                        'f1': metrics.get('f1', 0.0),
+                        'roc_auc': metrics.get('roc_auc'),
+                        'confusion_matrix': metrics.get('confusion_matrix', [[0, 0], [0, 0]])
+                    },
+                    'test_set_info': metrics.get('test_set_info', {}),
+                    'has_cross_validation': False
+                }
+
+            # Add error if present
+            if 'error' in metrics:
+                results_dict[model_name]['error'] = metrics['error']
+
+        # Add dataset information
+        if self.y_data is not None:
+            y_array = np.array(self.y_data)
+            positive_count = int(np.sum(y_array == 1))
+            negative_count = int(np.sum(y_array == 0))
+            total_count = int(len(y_array))
+
+        results_dict['dataset_info'] = {
+            'n_samples': self.X_data.shape[0] if self.X_data is not None else 0,
+            'n_features': self.X_data.shape[1] if self.X_data is not None and len(self.X_data.shape) > 1 else 0,
+            'dataset_csv_path': str(dataset_csv_path) if dataset_csv_path else None,
+            'class_distribution': {
+                'positive_cases': positive_count if 'positive_count' in locals() else 0,
+                'negative_cases': negative_count if 'negative_count' in locals() else 0,
+                'total_samples': total_count if 'total_count' in locals() else 0,
+                'positive_percentage': float(positive_count / total_count * 100) if 'total_count' in locals() and total_count > 0 else 0.0,
+                'negative_percentage': float(negative_count / total_count * 100) if 'total_count' in locals() and total_count > 0 else 0.0
             }
+        }
 
         # Add cross-validation settings
-        results_dict['cross_validation_settings'] = {
+        results_dict['experiment_settings'] = {
             'n_splits': self.n_splits,
-            'method': 'GroupKFold cross-validation (ClusterID as groups)',
             'random_state': self.random_state,
-            'best_model': self.best_model_name
+            'best_model': self.best_model_name,
+            'test_split_used': hasattr(self, 'test_split') and self.test_split > 0
+        }
+
+        # Add timestamp
+        import datetime
+        results_dict['metadata'] = {
+            'timestamp': datetime.datetime.now().isoformat(),
+            'script_version': '1.0'
         }
 
         # Save as JSON
-        results_file = output_path / "group_kfold_cv_results.json"
+        results_file = output_path / "ml_results.json"
         with open(results_file, 'w') as f:
-            json.dump(results_dict, f, indent=2)
-
-        if include_dataset_csv and self.dataset_stored:
-            self.save_dataset_csv(output_dir=output_dir)
+            json.dump(results_dict, f, indent=2, default=str)
 
         self.logger.info(f"Results saved to: {results_file}")
+
+        # Also save a simplified version
+        self._save_simple_summary(output_path)
+
+        return results_file
+
+    def _save_simple_summary(self, output_path):
+        """Save a simple text summary."""
+        summary_path = output_path / "results_summary.txt"
+
+        with open(summary_path, 'w') as f:
+            f.write("=" * 60 + "\n")
+            f.write("MACHINE LEARNING RESULTS SUMMARY\n")
+            f.write("=" * 60 + "\n\n")
+
+            # Best model
+            if self.best_model_name:
+                f.write(f"BEST MODEL: {self.best_model_name}\n\n")
+
+            # Model performances
+            f.write("MODEL PERFORMANCES:\n")
+            f.write("-" * 40 + "\n")
+
+            for model_name, metrics in self.results.items():
+                f.write(f"\n{model_name}:\n")
+
+                if 'cv_metrics' in metrics:
+                    # CV results
+                    cv = metrics['cv_metrics']
+                    overall = metrics.get('overall_metrics', {})
+
+                    f.write(f"  Cross-Validation (average):\n")
+                    f.write(f"    Accuracy:  {cv.get('accuracy', 0):.4f}\n")
+                    f.write(f"    Precision: {cv.get('precision', 0):.4f}\n")
+                    f.write(f"    Recall:    {cv.get('recall', 0):.4f}\n")
+                    f.write(f"    F1-Score:  {cv.get('f1', 0):.4f}\n")
+                    if cv.get('roc_auc'):
+                        f.write(f"    ROC-AUC:   {cv.get('roc_auc', 0):.4f}\n")
+
+                    f.write(f"  Overall (all folds combined):\n")
+                    f.write(f"    Accuracy:  {overall.get('accuracy', 0):.4f}\n")
+                    f.write(f"    Precision: {overall.get('precision', 0):.4f}\n")
+                    f.write(f"    Recall:    {overall.get('recall', 0):.4f}\n")
+                    f.write(f"    F1-Score:  {overall.get('f1', 0):.4f}\n")
+                    if overall.get('roc_auc'):
+                        f.write(f"    ROC-AUC:   {overall.get('roc_auc', 0):.4f}\n")
+
+                else:
+                    # Train/test results
+                    f.write(f"  Test Set:\n")
+                    f.write(f"    Accuracy:  {metrics.get('accuracy', 0):.4f}\n")
+                    f.write(f"    Precision: {metrics.get('precision', 0):.4f}\n")
+                    f.write(f"    Recall:    {metrics.get('recall', 0):.4f}\n")
+                    f.write(f"    F1-Score:  {metrics.get('f1', 0):.4f}\n")
+                    if metrics.get('roc_auc'):
+                        f.write(f"    ROC-AUC:   {metrics.get('roc_auc', 0):.4f}\n")
+
+                    # Confusion matrix
+                    cm = metrics.get('confusion_matrix', [[0, 0], [0, 0]])
+                    f.write(f"    Confusion Matrix:\n")
+                    f.write(f"      TN={cm[0][0]}, FP={cm[0][1]}\n")
+                    f.write(f"      FN={cm[1][0]}, TP={cm[1][1]}\n")
+
+        self.logger.info(f"Summary saved to: {summary_path}")
 
 
 # ============================================
