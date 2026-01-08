@@ -1685,7 +1685,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                 <a href="../index.html" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
-                <a href="/ppi-benchmark-fair/fair-report/feature-report.html" class="dashboard-link">
+                <a href="/ppi-benchmark-fair/ml-report/feature-report.html" class="dashboard-link">
                     <i class="fas fa-chart-bar"></i> ML Features
                 </a>
                 <a href="/ppi-benchmark-fair/fair-report/index.html" class="dashboard-link">
