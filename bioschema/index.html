@@ -8,7 +8,7 @@
     <style>
         :root {
             --primary-color: #2c3e50;
-            --secondary-color: #3498db;
+            --secondary-color: #4689a3;
             --accent-color: #e74c3c;
             --light-bg: #f8f9fa;
             --success-color: #27ae60;
@@ -34,11 +34,11 @@
             margin: 0 auto;
         }
         
-        /* Header - Matching index.html */
+        /* Header - Matching second file */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #1a252f);
+            background: linear-gradient(135deg, var(--primary-color), #4689a3);
             color: white;
-            padding: 50px 0;
+            padding: 30px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -65,7 +65,7 @@
         
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
@@ -124,13 +124,14 @@
             gap: 10px;
             background-color: rgba(255,255,255,0.15);
             color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 10px 20px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: all 0.3s ease;
+            margin: 10px 5px;
             border: 2px solid rgba(255,255,255,0.3);
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .dashboard-link:hover {
@@ -139,7 +140,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        /* Section Cards - Matching index.html */
+        /* Section Cards - Matching second file */
         .section {
             background-color: white;
             margin: 30px 0;
@@ -158,9 +159,8 @@
             gap: 10px;
         }
         
-        h2::before {
-            content: "📚";
-            font-size: 1.5rem;
+        h2 i {
+            font-size: 1.3rem;
         }
         
         h3 {
@@ -175,38 +175,38 @@
             font-size: 1.1rem;
         }
         
-	/* Tables */
-	table {
-	    width: 100%;
-	    border-collapse: collapse;
-	    margin: 15px 0;
-	    border-radius: 8px;
-	    overflow: hidden;
-	    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-	    table-layout: auto; /* Changed from default to auto */
-	    word-wrap: break-word; /* Allow breaking long words */
-	}
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            table-layout: auto;
+            word-wrap: break-word;
+        }
 
-	th, td {
-	    padding: 15px;
-	    text-align: left;
-	    border-bottom: 1px solid #e0e0e0;
-	    word-wrap: break-word; /* Allow text wrapping */
-	    overflow-wrap: break-word; /* Modern alternative */
-	    white-space: normal; /* Changed from nowrap to normal */
-	    max-width: 300px; /* Optional: limit cell width */
-	}
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            max-width: 300px;
+        }
 
-	th {
-	    background-color: #f8f9fa;
-	    color: var(--primary-color);
-	    font-weight: 600;
-	    white-space: normal; /* Allow header text to wrap */
-	}
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 600;
+            white-space: normal;
+        }
 
-	tr:hover {
-	    background-color: #f8f9fa;
-}
+        tr:hover {
+            background-color: #f8f9fa;
+        }
         
         /* Lists */
         ul, ol {
@@ -248,7 +248,7 @@
             border-left: 4px solid;
         }
         
-        .property-category.core { border-left-color: #3498db; }
+        .property-category.core { border-left-color: #4689a3; }
         .property-category.metrics { border-left-color: #27ae60; }
         .property-category.bio { border-left-color: #9b59b6; }
         .property-category.clustering { border-left-color: #e74c3c; }
@@ -281,20 +281,19 @@
             color: var(--primary-color);
         }
         
-        /* Footer */
+        /* Footer - Matching second file */
         footer {
-            background-color: var(--primary-color);
+            background-color: #386277;
             color: white;
-            padding: 40px 0;
+            padding: 10px 0;
             text-align: center;
             margin-top: 60px;
             border-radius: 12px;
         }
         
         .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            margin-top: 15px;
+            padding: 0 10px;
         }
         
         .footer-links {
@@ -319,10 +318,18 @@
         }
         
         .copyright {
-            margin-top: 30px;
+            margin-top: 20px;
             color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
             line-height: 1.6;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
         }
         
         /* Responsive */
@@ -338,12 +345,12 @@
             table {
                 display: block;
                 overflow-x: auto;
-                -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+                -webkit-overflow-scrolling: touch;
             }
 
             th, td {
                 max-width: none;
-                min-width: 120px; /* Ensure minimum width on mobile */
+                min-width: 120px;
             }           
  
             .badges {
@@ -374,19 +381,19 @@
             <div class="container"> 
             <div class="header-content">
                 <h1><strong>Protein-Protein Interface Dataset<br>Data Dictionary</strong></h1>
-                                <div>
-                <a href="https://github.com/biofold/ppi-benchmark-fair">
-                <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
-		    <a href="https://creativecommons.org/licenses/by/4.0/">
-		    <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
-                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
-                <a href="https://www.python.org/">
-                <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
-                <a href="https://schema.org/">
-                <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
-                <a href="https://mlcommons.org/croissant/">
-                <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+                <div>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair">
+                    <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
+                    <a href="https://creativecommons.org/licenses/by/4.0/">
+                    <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                    <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
+                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                    <a href="https://www.python.org/">
+                    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
+                    <a href="https://schema.org/">
+                    <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
+                    <a href="https://mlcommons.org/croissant/">
+                    <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
                 </div>
                 <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">Comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema</p>
                 <a href="../index.html" class="dashboard-link">
@@ -399,7 +406,7 @@
         <main>
             <!-- Overview -->
             <section class="section">
-                <h2>Overview</h2>
+                <h2><i class="fas fa-info-circle"></i> Overview</h2>
                 <p>A benchmark dataset containing <strong>1677 protein crystal structures</strong> with <strong>844 physiological</strong> and <strong>833 non-physiological</strong> homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.</p>
                 
                 <div class="property-category core">
@@ -455,7 +462,7 @@
 
             <!-- Root Dataset Properties -->
             <section class="section">
-                <h2>Root Dataset Properties</h2>
+                <h2><i class="fas fa-layer-group"></i> Root Dataset Properties</h2>
                 <p>Top-level properties describing the complete dataset</p>
                 
                 <table class="property-table">
@@ -636,7 +643,7 @@
 
             <!-- Interface Entry Structure -->
             <section class="section">
-                <h2>Interface Entry Structure (hasPart items)</h2>
+                <h2><i class="fas fa-handshake"></i> Interface Entry Structure (hasPart items)</h2>
                 <p>Individual interface entries within the dataset</p>
                 
                 <table>
@@ -705,7 +712,7 @@
 
             <!-- Interface Additional Properties -->
             <section class="section">
-                <h2>Interface Additional Properties</h2>
+                <h2><i class="fas fa-tags"></i> Interface Additional Properties</h2>
                 
                 <div class="property-category core">
                     <h3>Core Interface Properties</h3>
@@ -1090,7 +1097,7 @@
 
             <!-- Protein Entity Structure -->
             <section class="section">
-                <h2>Protein Entity Structure (mainEntity)</h2>
+                <h2><i class="fas fa-dna"></i> Protein Entity Structure (mainEntity)</h2>
                 <p>Protein objects representing the main molecular entities in each interface</p>
                 
                 <table>
@@ -1315,7 +1322,7 @@
 
             <!-- Data File Structure -->
             <section class="section">
-                <h2>Data File Structure</h2>
+                <h2><i class="fas fa-file-code"></i> Data File Structure</h2>
                 
                 <h3>Available File Formats</h3>
                 <table>
@@ -1353,7 +1360,7 @@
 
             <!-- Data Validation Rules -->
             <section class="section">
-                <h2>Data Validation Rules</h2>
+                <h2><i class="fas fa-check-circle"></i> Data Validation Rules</h2>
                 
                 <h3>Required Fields Validation</h3>
                 <p>Interface entries must have:</p>
@@ -1412,7 +1419,7 @@
 
             <!-- Usage Examples -->
             <section class="section">
-                <h2>Usage Examples</h2>
+                <h2><i class="fas fa-code"></i> Usage Examples</h2>
                 
                 <h3>Accessing Interface Data</h3>
                 <pre><code># Example patterns
@@ -1442,7 +1449,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
 
             <!-- License and Attribution -->
             <section class="section">
-                <h2>License and Attribution</h2>
+                <h2><i class="fas fa-balance-scale"></i> License and Attribution</h2>
                 
                 <h3>License</h3>
                 <p><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong><br>
@@ -1459,7 +1466,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
 
             <!-- Contact and Support -->
             <section class="section">
-                <h2>Contact and Support</h2>
+                <h2><i class="fas fa-link"></i> Contact and Support</h2>
                 
                 <table>
                     <thead>
@@ -1515,9 +1522,11 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
 
         <!-- Footer -->
         <footer>
-            <div class="footer-content">
-                <h3>ELIXIR 3D-BioInfo Community</h3>
-                <p>Comprehensive Data Dictionary for PPI Benchmark</p>
+            <div class="container">
+                <div class="footer-content">
+                    <h3>ELIXIR 3D-BioInfo Community</h3>
+                    <p>Comprehensive Data Dictionary for PPI Benchmark</p>
+                </div>
                 
                 <div class="footer-links">
                     <a href="index.html" class="footer-link">
@@ -1531,6 +1540,24 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
                     </a>
                     <a href="https://mlcommons.org/croissant" class="footer-link" target="_blank">
                         <i class="fas fa-database"></i> Croissant
+                    </a>
+                </div>
+
+                <div class="footer-badges">
+                    <a href="https://github.com/biofold/ppi-benchmark-fair">
+                        <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100">
+                    </a>
+                    <a href="https://creativecommons.org/licenses/by/4.0/">
+                        <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0">
+                    </a>
+                    <a href="https://www.python.org/">
+                        <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+">
+                    </a>
+                    <a href="https://schema.org/">
+                        <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas">
+                    </a>
+                    <a href="https://mlcommons.org/croissant/">
+                        <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant">
                     </a>
                 </div>
                 
