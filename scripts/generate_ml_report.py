@@ -666,7 +666,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 barmode='group',
                 xaxis_tickangle=-45,
                 height=520,
-                margin=dict(t=60, b=180, l=60, r=20),
+                margin=dict(t=20, b=180, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -723,7 +723,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             ))
             fig.update_layout(
                 height=max(400, len(pair_labels) * 28),
-                margin=dict(t=60, b=20, l=20, r=20),
+                margin=dict(t=20, b=20, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -768,7 +768,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 fig.add_trace(go.Scatter(x=pcs, y=cumulative_variance, name='Cumulative', line=dict(color='#e74c3c', width=3), marker=dict(size=6)))
             fig.update_layout(
                 height=520,
-                margin=dict(t=60, b=100, l=60, r=20),
+                margin=dict(t=20, b=100, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -869,7 +869,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
                 # Add axis labels
                 fig.update_layout(
                     height=620,
-                    margin=dict(t=60, b=80, l=60, r=20),
+                    margin=dict(t=20, b=80, l=60, r=20),
                     plot_bgcolor='white',
                     paper_bgcolor='white',
                     font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -939,7 +939,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
 
             fig_anova.update_layout(
                 height=max(400, top_n * 28),
-                margin=dict(t=60, b=80, l=20, r=20),
+                margin=dict(t=20, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -974,7 +974,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             fig_mi = px.bar(df_top_mi, x='mutual_info', y='Feature', orientation='h', color='mutual_info', color_continuous_scale='Viridis')
             fig_mi.update_layout(
                 height=max(400, top_n * 28),
-                margin=dict(t=60, b=80, l=20, r=20),
+                margin=dict(t=20, b=80, l=20, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1030,7 +1030,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             fig = go.Figure(data=go.Heatmap(z=df_stats.values, x=df_stats.columns, y=df_stats.index, colorscale='Viridis'))
             fig.update_layout(
                 height=520,
-                margin=dict(t=60, b=120, l=60, r=20),
+                margin=dict(t=20, b=120, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1217,7 +1217,9 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         <div class="figure-container" id="figure{figure_counter}">
             <h2 class="figure-title">{title}</h2>
             <p class="figure-description">{description}</p>
+            <div style="padding: 40px 20px; background: white; border-radius: 8px; margin: 10px 0;">
             <iframe class="figure-embed" src="{embed_src}" loading="lazy" title="{title}"></iframe>
+        </div>
         </div>
         """)
         figure_counter += 1
@@ -1381,7 +1383,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         fig.update_layout(
             barmode='group',
             height=520,
-            margin=dict(t=60, b=120, l=60, r=20),
+            margin=dict(t=20, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1443,7 +1445,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         # Add axis labels
         fig.update_layout(
             height=520,
-            margin=dict(t=60, b=120, l=60, r=20),
+            margin=dict(t=20, b=120, l=60, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1519,7 +1521,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
         # Add axis labels and formatting
         fig.update_layout(
             height=620,
-            margin=dict(t=60, b=120, l=20, r=20),
+            margin=dict(t=20, b=120, l=20, r=20),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
@@ -1847,7 +1849,9 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         <div class="figure-container" id="figure{figure_counter}">
             <h2 class="figure-title">{title}</h2>
             <p class="figure-description">{description}</p>
-            <iframe class="figure-embed" src="{embed_src}" loading="lazy" title="{title}"></iframe>
+            <div style="padding: 40px 20px; background: white; border-radius: 8px; margin: 10px 0;">
+               <iframe class="figure-embed" src="{embed_src}" loading="lazy" title="{title}"></iframe>
+            </div>
         </div>
         """)
         figure_counter += 1
