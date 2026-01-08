@@ -665,8 +665,7 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
             fig.update_layout(
                 barmode='group',
                 xaxis_tickangle=-45,
-                height=520,
-                margin=dict(t=30, b=180, l=60, r=20),
+                margin=dict(t=40, b=180, l=60, r=20),
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 font=dict(family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif"),
