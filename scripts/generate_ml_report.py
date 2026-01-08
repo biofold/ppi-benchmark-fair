@@ -267,6 +267,7 @@ h4 {
     border: none;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: auto;
 }
 
 /* Navigation Bar */
