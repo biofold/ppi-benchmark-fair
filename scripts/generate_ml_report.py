@@ -1217,7 +1217,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
         <div class="figure-container" id="figure{figure_counter}">
             <h2 class="figure-title">{title}</h2>
             <p class="figure-description">{description}</p>
-            <div style="padding: 40px 20px; background: white; border-radius: 8px; margin: 10px 0;">
+            <div style="padding: 50px 20px; background: white; border-radius: 8px; margin: 10px 0;">
             <iframe class="figure-embed" src="{embed_src}" loading="lazy" title="{title}"></iframe>
         </div>
         </div>
@@ -1849,7 +1849,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         <div class="figure-container" id="figure{figure_counter}">
             <h2 class="figure-title">{title}</h2>
             <p class="figure-description">{description}</p>
-            <div style="padding: 40px 20px; background: white; border-radius: 8px; margin: 10px 0;">
+            <div style="padding: 50px 20px; background: white; border-radius: 8px; margin: 10px 0;">
                <iframe class="figure-embed" src="{embed_src}" loading="lazy" title="{title}"></iframe>
             </div>
         </div>
