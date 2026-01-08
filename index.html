@@ -216,11 +216,31 @@
             margin: 25px 0;
         }
 
-        .feature-item {
-            background: #f8f9fa;
-            padding: 20px;
+        .model-card {
+            flex: 1;
+            min-width: 250px;
+            background: #e8e8e8;
+            padding: 25px;
             border-radius: 10px;
-            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-right: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .model-card.rf {
+            border-right-color: var(--secondary-color);
+        }
+
+        .model-card.svm {
+            border-right-color: var(--success-color);
+        }
+
+        .model-card.lr {
+            border-right-color: var(--warning-color);
         }
 
         /* Stats Grid */
@@ -528,19 +548,19 @@
                 <h2><i class="fa-solid fa-star"></i> Key Features & Innovations</h2>
 
                 <div class="feature-highlights">
-                    <div class="feature-item">
+                    <div class="model-card">
                         <h4><i class="fa-solid fa-code-merge"></i> MLCommons Croissant 1.0</h4>
                         <p>Standardized ML dataset packaging for seamless integration with machine learning frameworks and automatic data loading.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="model-card">
                         <h4><i class="fa-solid fa-dna"></i> Structural Feature Extraction</h4>
                         <p>Automatic extraction of interface residues within 10Å distance from PDB/mmCIF files using BioPython.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="model-card">
                         <h4><i class="fa-solid fa-users"></i> Cluster-Aware Validation</h4>
                         <p>GroupKFold cross-validation using sequence clusters to prevent data leakage and ensure realistic evaluation.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="model-card">
                         <h4><i class="fa-solid fa-chart-bar"></i> Comprehensive Evaluation</h4>
                         <p>Multiple ML models (Random Forest, SVM, Logistic Regression) with detailed performance metrics and visualization.</p>
                     </div>
@@ -553,19 +573,19 @@
                 <p>Summary of model performance from our integrated ML pipeline:</p>
 
                 <div class="model-comparison">
-                    <div class="model-item">
+                    <div class="model-card rf">
                         <h4><i class="fas fa-tree"></i> Random Forest</h4>
                         <p><strong>Accuracy:</strong> 0.827 (±0.012)</p>
                         <p><strong>ROC-AUC:</strong> 0.898 (±0.008)</p>
                         <p><strong>Best for:</strong> Feature importance analysis and robust performance</p>
                     </div>
-                    <div class="model-item">
+                    <div class="model-card svm">
                         <h4><i class="fas fa-project-diagram"></i> Support Vector Machine</h4>
                         <p><strong>Accuracy:</strong> 0.812 (±0.015)</p>
                         <p><strong>ROC-AUC:</strong> 0.885 (±0.010)</p>
                         <p><strong>Best for:</strong> High-dimensional feature spaces</p>
                     </div>
-                    <div class="model-item">
+                    <div class="model-card lr">
                         <h4><i class="fas fa-chart-line"></i> Logistic Regression</h4>
                         <p><strong>Accuracy:</strong> 0.798 (±0.018)</p>
                         <p><strong>ROC-AUC:</strong> 0.872 (±0.012)</p>
