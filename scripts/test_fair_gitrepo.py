@@ -1372,7 +1372,9 @@ def main():
     REPOS_TO_COMPARE = [
         "https://github.com/biofold/ppi-benchmark-fair",
         "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
-        "https://github.com/google-deepmind/alphafold"
+        "https://github.com/google-deepmind/alphafold",
+        "https://github.com/fairlearn/fairlearn",
+        "https://github.com/alan-turing-institute/the-turing-way"
         # Add more repositories with metadata files
         # "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
         # "https://github.com/example/repo-with-bioschema",
