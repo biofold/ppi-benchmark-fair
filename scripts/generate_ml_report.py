@@ -222,7 +222,7 @@ h4 {
 .figure-container {
     background-color: white;
     margin: 30px 0;
-    padding: 40px 30px 30px 30px; /* Top, Right, Bottom, Left */
+    padding: 50px 30px 30px 30px; /* Top, Right, Bottom, Left */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border-left: 5px solid var(--secondary-color);
