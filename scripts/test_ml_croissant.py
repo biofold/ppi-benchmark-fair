@@ -606,6 +606,16 @@ class PDBFeatureExtractor:
             if all_avg_fractions:
                 features['avg_interface_fraction'] = float(np.mean(all_avg_fractions))
                 features['std_interface_fraction'] = float(np.std(all_avg_fractions))
+            # Convert all values to Python native types for JSON serialization
+            for key, value in list(features.items()):
+                if isinstance(value, (np.integer, np.int32, np.int64)):
+                    features[key] = int(value)
+                elif isinstance(value, (np.floating, np.float32, np.float64)):
+                    features[key] = float(value)
+                elif isinstance(value, np.ndarray):
+                    features[key] = value.tolist()
+                elif isinstance(value, np.bool_):
+                    features[key] = bool(value)
 
             # Add features from the first chain pair (most representative)
             if interface_features:
@@ -2355,12 +2365,22 @@ class CroissantDatasetLoader:
             self.logger.debug(f"Processing {interface_id}: chains {chain_ids}, file: {Path(pdb_file).name}")
             interface_features = pdb_feature_extractor.extract_interface_features(interface_id, pdb_file, chain_ids, radius)
 
-            # Clean up temporary downloaded file (only if it's temporary)
-            if pdb_file and os.path.exists(pdb_file) and 'tmp' in pdb_file:
-                try:
-                    os.unlink(pdb_file)
-                except:
-                    pass
+            # Clean up temporary downloaded file
+            if pdb_file and os.path.exists(pdb_file):
+                # Check if it's a temporary file using multiple methods
+                is_temp = (
+                    'tmp' in pdb_file or
+                    pdb_file.startswith('/tmp/') or
+                    pdb_file.startswith(tempfile.gettempdir()) or
+                    (Path(pdb_file).parent == Path(tempfile.gettempdir()))
+                )
+
+                if is_temp:
+                    try:
+                        os.unlink(pdb_file)
+                        self.logger.debug(f"Cleaned up temporary file: {pdb_file}")
+                    except Exception as e:
+                        self.logger.warning(f"Could not delete temporary file {pdb_file}: {e}")
 
             if interface_features['success']:
                 # Create feature dictionary
@@ -3369,104 +3389,180 @@ class ProteinInteractionClassifier:
         self.feature_evaluation_report = None
         self.feature_names = None
         self.dataset_stored = False
+        self.fold_assignments = None  # ADD THIS LINE
         self.logger = logging.getLogger(__name__)
 
     def store_dataset(self, X, y, cluster_ids=None, original_features_df=None, feature_names=None):
         """Store dataset for saving and analysis."""
-        self.X_data = X
-        self.y_data = y
-        self.cluster_ids = cluster_ids
-        self.original_features_df = original_features_df
+        try:
+            # Validate inputs
+            if X is None or y is None:
+                self.logger.error("Cannot store dataset: X or y is None")
+                return False
 
-        if feature_names is not None:
-            self.feature_names = feature_names
-        elif isinstance(X, pd.DataFrame):
-            self.feature_names = list(X.columns)
-        else:
-            self.feature_names = [f'feature_{i}' for i in range(X.shape[1])]
+            if len(X) != len(y):
+                self.logger.warning(f"X length ({len(X)}) doesn't match y length ({len(y)})")
 
-        self.dataset_stored = True
-        self.logger.info(f"Dataset stored: {X.shape[0]} samples, {X.shape[1]} features")
+            self.X_data = X
+            self.y_data = y
+            self.cluster_ids = cluster_ids
+            self.original_features_df = original_features_df
 
+            if feature_names is not None:
+                self.feature_names = feature_names
+            elif isinstance(X, pd.DataFrame):
+                self.feature_names = list(X.columns)
+            else:
+                # For numpy arrays, ensure we have the right number of feature names
+                if hasattr(X, 'shape'):
+                    self.feature_names = [f'feature_{i}' for i in range(X.shape[1])]
+                else:
+                    self.feature_names = [f'feature_{i}' for i in range(len(X[0]))] if X else []
+
+            self.dataset_stored = True
+
+            # Log dataset statistics
+            if hasattr(y, '__len__'):
+                unique_classes = np.unique(y)
+                class_dist = {cls: np.sum(y == cls) for cls in unique_classes}
+                self.logger.info(f"Dataset stored: {len(X)} samples, {len(self.feature_names)} features")
+                self.logger.info(f"Class distribution: {class_dist}")
+
+                if cluster_ids is not None:
+                    unique_clusters = len(np.unique(cluster_ids))
+                    self.logger.info(f"Unique clusters: {unique_clusters}")
+
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error storing dataset: {e}")
+            import traceback
+            traceback.print_exc()
+            self.dataset_stored = False
+            return False
     def save_dataset_csv(self, output_dir=".", filename="ml_dataset_complete.csv", include_fold_assignments=True):
         """
         Save the complete dataset (features + labels + metadata) to CSV.
         """
-        if not self.dataset_stored:
-            self.logger.error("No dataset stored. Call store_dataset() first.")
+        try:
+            if not self.dataset_stored:
+                self.logger.error("No dataset stored. Call store_dataset() first.")
+                return None
+
+            # Define features to drop (consolidated list)
+            DROP_FEATURES = ['ClusterSize', 'InterfaceSource', 'Comments']
+
+            output_path = Path(output_dir)
+            output_path.mkdir(parents=True, exist_ok=True)
+
+            # Validate data exists
+            if self.X_data is None or self.y_data is None:
+                self.logger.error("No data available to save.")
+                return None
+
+            # Create DataFrame for the processed features
+            if isinstance(self.X_data, pd.DataFrame):
+                processed_df = self.X_data.copy()
+            else:
+                # If X_data is a numpy array, convert to DataFrame
+                if self.feature_names is None:
+                    self.feature_names = [f'feature_{i}' for i in range(self.X_data.shape[1])]
+
+                # Validate feature names length
+                if len(self.feature_names) != self.X_data.shape[1]:
+                    self.logger.warning(f"Feature names count ({len(self.feature_names)}) doesn't match data columns ({self.X_data.shape[1]}). Using generic names.")
+                    self.feature_names = [f'feature_{i}' for i in range(self.X_data.shape[1])]
+
+                processed_df = pd.DataFrame(self.X_data, columns=self.feature_names)
+
+            # Create a NEW DataFrame with proper column order
+            ordered_data = {}
+
+            # 0. Add fold assignments if available
+            if include_fold_assignments and self.fold_assignments is not None:
+                ordered_data['cv_fold'] = self.fold_assignments
+                self.logger.debug(f"Added fold assignments: {np.unique(self.fold_assignments)} folds")
+            else:
+                self.logger.debug("No fold assignments available to add.")
+
+            # 1. Add identifiers first
+            if self.original_features_df is not None:
+                if 'interface_id' in self.original_features_df.columns:
+                    ordered_data['interface_id'] = self.original_features_df['interface_id']
+                else:
+                    self.logger.debug("No interface_id column in original features.")
+
+            # 2. Add cluster_id
+            if self.cluster_ids is not None:
+                ordered_data['cluster_id'] = self.cluster_ids
+            else:
+                self.logger.debug("No cluster_ids available.")
+
+            # 3. Add PDB extraction status if available
+            if (self.original_features_df is not None and
+                'extraction_success' in self.original_features_df.columns):
+                ordered_data['pdb_extraction_success'] = self.original_features_df['extraction_success']
+                self.logger.debug("Added PDB extraction status.")
+            else:
+                self.logger.debug("No PDB extraction status available.")
+
+            # 4. Add ALL features from processed_df
+            for col in processed_df.columns:
+                ordered_data[col] = processed_df[col]
+
+            self.logger.debug(f"Added {len(processed_df.columns)} features to dataset.")
+
+            # 5. Add label last
+            ordered_data['label'] = self.y_data
+
+            # Create final DataFrame
+            final_df = pd.DataFrame(ordered_data)
+
+            if final_df.empty:
+                self.logger.error("Created empty DataFrame. Nothing to save.")
+                return None
+
+            # Exclude Columns in DROP_FEATURES
+            dropped_cols = [col for col in DROP_FEATURES if col in final_df.columns]
+            if dropped_cols:
+                final_df = final_df.drop(dropped_cols, axis=1, errors='ignore')
+                self.logger.info(f"Dropped columns: {dropped_cols}")
+
+            # Check for NaN values
+            nan_count = final_df.isna().sum().sum()
+            if nan_count > 0:
+                self.logger.warning(f"Dataset contains {nan_count} NaN values.")
+
+            # Save to CSV
+            csv_path = output_path / filename
+            final_df.to_csv(csv_path, index=False)
+
+            self.logger.info(f"✓ Dataset saved to: {csv_path}")
+            self.logger.info(f"  Total samples: {len(final_df)}")
+            self.logger.info(f"  Total columns: {len(final_df.columns)}")
+
+            # Log fold distribution if available
+            if 'cv_fold' in final_df.columns:
+                fold_counts = final_df['cv_fold'].value_counts().sort_index()
+                self.logger.info(f"  Fold distribution:")
+                for fold, count in fold_counts.items():
+                    self.logger.info(f"    Fold {int(fold)}: {count} samples")
+
+            # Show column order
+            cols = list(final_df.columns)
+            if len(cols) <= 15:
+                self.logger.info(f"  Columns: {', '.join(cols)}")
+            else:
+                self.logger.info(f"  First 15 columns: {', '.join(cols[:15])}...")
+                self.logger.debug(f"  All columns: {cols}")
+
+            return csv_path
+
+        except Exception as e:
+            self.logger.error(f"Failed to save dataset CSV: {e}")
+            import traceback
+            traceback.print_exc()
             return None
-
-        DROP_FEATURES = ['ClusterSize']
-
-        output_path = Path(output_dir)
-        output_path.mkdir(parents=True, exist_ok=True)
-
-        # Create DataFrame for the processed features
-        if isinstance(self.X_data, pd.DataFrame):
-            processed_df = self.X_data.copy()
-        else:
-            # If X_data is a numpy array, convert to DataFrame
-            processed_df = pd.DataFrame(self.X_data, columns=self.feature_names)
-
-        # Create a NEW DataFrame with proper column order
-        ordered_data = {}
-
-        # 0. Add fold assignments if available
-        if include_fold_assignments and hasattr(self, 'fold_assignments') and self.fold_assignments is not None:
-            ordered_data['cv_fold'] = self.fold_assignments
-            self.logger.debug(f"Added fold assignments: {np.unique(self.fold_assignments)} folds")
-
-        # 1. Add identifiers first
-        if self.original_features_df is not None:
-            if 'interface_id' in self.original_features_df.columns:
-                ordered_data['interface_id'] = self.original_features_df['interface_id']
-
-        # 2. Add cluster_id
-        if self.cluster_ids is not None:
-            ordered_data['cluster_id'] = self.cluster_ids
-
-        # 3. Add PDB extraction status if available
-        if (self.original_features_df is not None and
-            'extraction_success' in self.original_features_df.columns):
-            ordered_data['pdb_extraction_success'] = self.original_features_df['extraction_success']
-
-        # 4. Add ALL features from processed_df
-        for col in processed_df.columns:
-            ordered_data[col] = processed_df[col]
-
-        # 5. Add label last
-        ordered_data['label'] = self.y_data
-
-        # Create final DataFrame
-        final_df = pd.DataFrame(ordered_data)
-
-        # Exclude Columns in DROP_FEATURES
-        final_df = final_df.drop([col for col in DROP_FEATURES if col in final_df.columns], axis=1, errors='ignore')
-
-        # Save to CSV
-        csv_path = output_path / filename
-        final_df.to_csv(csv_path, index=False)
-
-        self.logger.info(f"✓ Dataset saved to: {csv_path}")
-        self.logger.info(f"  Total samples: {len(final_df)}")
-        self.logger.info(f"  Total columns: {len(final_df.columns)}")
-
-        # Log fold distribution if available
-        if 'cv_fold' in final_df.columns:
-            fold_counts = final_df['cv_fold'].value_counts().sort_index()
-            self.logger.info(f"  Fold distribution:")
-            for fold, count in fold_counts.items():
-                self.logger.info(f"    Fold {int(fold)}: {count} samples")
-
-        # Show column order
-        cols = list(final_df.columns)
-        if len(cols) <= 10:
-            self.logger.info(f"  Columns: {', '.join(cols)}")
-        else:
-            self.logger.info(f"  First 10 columns: {', '.join(cols[:10])}...")
-
-        return csv_path
-
     def evaluate_features(self, X, y, feature_names=None, save_path=None):
         """
         Perform comprehensive feature evaluation.
@@ -4016,11 +4112,41 @@ class ProteinInteractionClassifier:
         # Plot 3: ROC curves (if available)
         ax = axes[0, 2]
         for name in model_names:
-            if self.results[name]['probabilities']:
-                fpr, tpr, _ = roc_curve(self.results[name]['true_labels'],
-                                       self.results[name]['probabilities'])
-                roc_auc = auc(fpr, tpr)
-                ax.plot(fpr, tpr, label=f'{name} (AUC = {roc_auc:.3f})')
+            # Check if probabilities exist in the results structure
+            has_probs = False
+            y_true = None
+            y_probs = None
+
+            # Try different possible locations for probabilities
+            if 'predictions' in self.results[name]:
+                pred_data = self.results[name]['predictions']
+                if 'has_probabilities' in pred_data and pred_data['has_probabilities']:
+                    if 'probabilities' in pred_data:
+                        y_probs = pred_data['probabilities']
+                    elif 'y_pred_proba' in pred_data:
+                        y_probs = pred_data['y_pred_proba']
+
+                if 'y_true' in pred_data:
+                    y_true = pred_data['y_true']
+
+            # Fallback: check old structure
+            if not y_true and 'true_labels' in self.results[name]:
+                y_true = self.results[name]['true_labels']
+
+            if not y_probs and 'probabilities' in self.results[name]:
+                y_probs = self.results[name]['probabilities']
+
+            if y_true and y_probs and len(y_true) == len(y_probs):
+                try:
+                    fpr, tpr, _ = roc_curve(y_true, y_probs)
+                    roc_auc = auc(fpr, tpr)
+                    ax.plot(fpr, tpr, label=f'{name} (AUC = {roc_auc:.3f})')
+                    has_probs = True
+                except Exception as e:
+                    self.logger.warning(f"Could not plot ROC for {name}: {e}")
+
+            if not has_probs:
+                self.logger.debug(f"No probability data available for {name} ROC curve")
 
         ax.plot([0, 1], [0, 1], 'k--', label='Random')
         ax.set_xlabel('False Positive Rate')
@@ -4032,8 +4158,41 @@ class ProteinInteractionClassifier:
         # Plot 4: Confusion matrix for best model
         if self.best_model_name:
             ax = axes[1, 0]
-            y_true = self.results[self.best_model_name]['true_labels']
-            y_pred = self.results[self.best_model_name]['predictions']
+            # Get y_true and y_pred from the correct location
+            y_true = None
+            y_pred = None
+
+            if 'predictions' in self.results[self.best_model_name]:
+                pred_data = self.results[self.best_model_name]['predictions']
+                if 'y_true' in pred_data:
+                    y_true = pred_data['y_true']
+                if 'y_pred' in pred_data:
+                    y_pred = pred_data['y_pred']
+
+            # Fallback to old structure
+            if not y_true and 'true_labels' in self.results[self.best_model_name]:
+                y_true = self.results[self.best_model_name]['true_labels']
+
+            if not y_pred and 'predictions' in self.results[self.best_model_name]:
+                # This might be a list in the predictions key itself
+                preds = self.results[self.best_model_name]['predictions']
+                if isinstance(preds, list):
+                    y_pred = preds
+
+            if y_true and y_pred and len(y_true) == len(y_pred):
+                cm = confusion_matrix(y_true, y_pred)
+                sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax,
+                           xticklabels=['Non-physio', 'Physio'],
+                           yticklabels=['Non-physio', 'Physio'])
+                ax.set_xlabel('Predicted')
+                ax.set_ylabel('True')
+                ax.set_title(f'Confusion Matrix - {self.best_model_name}')
+            else:
+                ax.text(0.5, 0.5, f'No prediction data\nfor {self.best_model_name}',
+                        ha='center', va='center', transform=ax.transAxes)
+                ax.set_title(f'Confusion Matrix - {self.best_model_name}')
+                ax.set_xticks([])
+                ax.set_yticks([])
 
             if y_true and y_pred:
                 cm = confusion_matrix(y_true, y_pred)
@@ -5107,15 +5266,34 @@ def main():
 
         logger.info("ML pipeline with GroupKFold cross-validation and structural feature extraction completed successfully!")
 
+    except KeyboardInterrupt:
+        logger.info("\nPipeline interrupted by user.")
+        if 'loader' in locals():
+            loader.cleanup()
+        return 1
+
     except Exception as e:
         logger.error(f"Error in ML pipeline: {e}")
         import traceback
-        traceback.print_exc()
+        logger.error(f"Traceback: {traceback.format_exc()}")
+
+        # Try to save partial results if classifier exists
+        if 'classifier' in locals() and hasattr(classifier, 'results') and classifier.results:
+            try:
+                logger.info("Attempting to save partial results...")
+                classifier.save_results(output_dir=args.output_dir)
+            except Exception as save_error:
+                logger.error(f"Could not save partial results: {save_error}")
+
+        return 1
 
     finally:
         # Cleanup temporary files
         if 'loader' in locals():
-            loader.cleanup()
+            try:
+                loader.cleanup()
+            except Exception as cleanup_error:
+                logger.warning(f"Error during cleanup: {cleanup_error}")
 
 
 def example_usage():
