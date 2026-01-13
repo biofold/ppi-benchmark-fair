@@ -14,13 +14,13 @@
             --success-color: #27ae60;
             --warning-color: #f39c12;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -28,12 +28,12 @@
             background-color: var(--light-bg);
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         /* Header - Matching second file */
         header {
             background: linear-gradient(135deg, var(--primary-color), #4689a3);
@@ -45,7 +45,7 @@
             margin-bottom: 40px;
             border-radius: 12px;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -56,19 +56,19 @@
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
             background-size: cover;
         }
-        
+
         .header-content {
             position: relative;
             z-index: 1;
             padding: 0 20px;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .badges {
             display: flex;
             justify-content: center;
@@ -76,7 +76,7 @@
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         .badge {
             display: inline-block;
             padding: 8px 16px;
@@ -86,39 +86,39 @@
             text-decoration: none;
             transition: transform 0.3s ease;
         }
-        
+
         .badge:hover {
             transform: translateY(-2px);
         }
-        
+
         .badge.schema {
             background: linear-gradient(135deg, #6f42c1, #563d7c);
             color: white;
             box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
         }
-        
+
         .badge.dictionary {
             background: linear-gradient(135deg, #27ae60, #219653);
             color: white;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
-        
+
         .badge.json {
             background-color: #3776ab;
             color: white;
         }
-        
+
         .badge.pdb {
             background-color: #e74c3c;
             color: white;
         }
-        
+
         .badge.fair {
             background: linear-gradient(135deg, var(--success-color), #219653);
             color: white;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
-        
+
         .dashboard-link {
             display: inline-flex;
             align-items: center;
@@ -134,13 +134,13 @@
             border: 2px solid rgba(255,255,255,0.3);
             margin-top: 25px;
         }
-        
+
         .dashboard-link:hover {
             background-color: rgba(255,255,255,0.25);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
+
         /* Section Cards - Matching second file */
         .section {
             background-color: white;
@@ -150,7 +150,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-left: 5px solid var(--secondary-color);
         }
-        
+
         h2 {
             color: var(--primary-color);
             margin-bottom: 20px;
@@ -159,23 +159,23 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         h2 i {
             font-size: 1.3rem;
         }
-        
+
         h3 {
             color: var(--primary-color);
             margin: 20px 0 10px;
             font-size: 1.3rem;
         }
-        
+
         h4 {
             color: #555;
             margin: 15px 0 10px;
             font-size: 1.1rem;
         }
-        
+
         /* Tables */
         table {
             width: 100%;
@@ -185,45 +185,45 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
+
         th, td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #e0e0e0;
         }
-        
+
         th {
             background-color: #f8f9fa;
             color: var(--primary-color);
             font-weight: 600;
         }
-        
+
         tr:hover {
             background-color: #f8f9fa;
         }
-        
+
         .field-required {
             background-color: #e8f5e9;
             font-weight: 600;
             color: #27ae60;
         }
-        
+
         .field-required::after {
             content: " ✓";
             font-weight: bold;
         }
-        
+
         /* Lists */
         ul, ol {
             margin: 15px 0;
             padding-left: 20px;
         }
-        
+
         li {
             margin-bottom: 8px;
             line-height: 1.6;
         }
-        
+
         .data-section {
             margin: 25px 0;
             padding: 20px;
@@ -231,7 +231,7 @@
             border-radius: 8px;
             border-left: 4px solid var(--secondary-color);
         }
-        
+
         .field-highlight {
             background-color: #e3f2fd;
             padding: 3px 6px;
@@ -239,7 +239,7 @@
             font-family: 'Courier New', monospace;
             font-weight: 600;
         }
-        
+
         /* Code blocks */
         code {
             background-color: #f1f1f1;
@@ -248,7 +248,7 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
         }
-        
+
         pre {
             background-color: #f8f9fa;
             padding: 15px;
@@ -259,7 +259,7 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-        
+
         .example-box {
             background-color: #e8f5e9;
             border: 1px solid #c8e6c9;
@@ -267,7 +267,7 @@
             border-radius: 8px;
             margin: 15px 0;
         }
-        
+
         /* Footer - Matching second file */
         footer {
             background-color: #386277;
@@ -277,12 +277,12 @@
             margin-top: 60px;
             border-radius: 12px;
         }
-        
+
         .footer-content {
             margin-top: 15px;
             padding: 0 10px;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
@@ -290,7 +290,7 @@
             margin: 30px 0;
             flex-wrap: wrap;
         }
-        
+
         .footer-link {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
@@ -299,17 +299,17 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .footer-link:hover {
             color: white;
         }
-        
+
         .copyright {
             margin-top: 20px;
             color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
         }
-        
+
         .footer-badges {
             display: flex;
             justify-content: center;
@@ -317,38 +317,38 @@
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-            
+
             .section {
                 padding: 20px;
             }
-            
+
             table {
                 display: block;
                 overflow-x: auto;
             }
-            
+
             .badges {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .badge {
                 width: 90%;
                 text-align: center;
             }
-            
+
             .footer-links {
                 flex-direction: column;
                 gap: 15px;
             }
         }
-        
+
         /* Schema visualization */
         .schema-tree {
             background-color: #f8f9fa;
@@ -358,22 +358,22 @@
             font-family: 'Courier New', monospace;
             line-height: 1.8;
         }
-        
+
         .schema-tree .level-1 {
             margin-left: 0;
             font-weight: bold;
             color: var(--primary-color);
         }
-        
+
         .schema-tree .level-2 {
             margin-left: 20px;
         }
-        
+
         .schema-tree .level-3 {
             margin-left: 40px;
             color: #666;
         }
-        
+
         /* Type indicators */
         .type-string { color: #22863a; font-weight: 600; }
         .type-number { color: #005cc5; font-weight: 600; }
@@ -387,7 +387,7 @@
         <!-- Header -->
         <header>
             <div class="header-content">
-                <h1><strong>Protein-Protein Interaface<br>Data Dictionary</strong></h1>
+                <h1><strong>Protein-Protein Interaface Data Dictionary</strong></h1>
                 <div>
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
                 <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
@@ -413,7 +413,7 @@
             <section class="section">
                 <h2><i class="fas fa-info-circle"></i> Overview</h2>
                 <p>This data dictionary describes the structure and semantics of protein-protein interaction interface data following <strong>schema.org</strong> and <strong>Bioschemas</strong> standards. The data represents structural and functional information about protein interfaces from the Protein Data Bank (PDB).</p>
-                
+
                 <div class="example-box">
                     <h4>📋 Key Features:</h4>
                     <ul>
@@ -429,7 +429,7 @@
             <!-- Root Level Fields -->
             <section class="section">
                 <h2><i class="fas fa-layer-group"></i> Root Level Fields</h2>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -498,7 +498,7 @@
             <section class="section">
                 <h2><i class="fas fa-dna"></i> Protein Object</h2>
                 <p>Describes the protein structure and metadata involved in the interface.</p>
-                
+
                 <h3>Core Protein Properties</h3>
                 <table>
                     <thead>
@@ -554,7 +554,7 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <h3>Taxonomic Information</h3>
                 <ul>
                     <li><span class="field-highlight">taxonomicRange</span>: Object containing organism information
@@ -565,7 +565,7 @@
                         </ul>
                     </li>
                 </ul>
-                
+
                 <h3>Structural Representations</h3>
                 <ul>
                     <li><span class="field-highlight">hasRepresentation</span>: Array of file references
@@ -581,7 +581,7 @@
             <section class="section">
                 <h2><i class="fas fa-tag"></i> PropertyValue Object</h2>
                 <p>Generic container for key-value pairs with metadata.</p>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -636,7 +636,7 @@
             <section class="section">
                 <h2><i class="fas fa-flask"></i> Protein Properties</h2>
                 <p><span class="field-highlight">additionalProperty</span> within the Protein object contains metadata about the protein structure.</p>
-                
+
                 <div class="data-section">
                     <h3>Structural Metadata</h3>
                     <table>
@@ -688,7 +688,7 @@
                         </tbody>
                     </table>
                 </div>
-                
+
                 <div class="data-section">
                     <h3>Biological Information</h3>
                     <table>
@@ -734,7 +734,7 @@
             <section class="section">
                 <h2><i class="fas fa-handshake"></i> Interface Properties</h2>
                 <p><span class="field-highlight">additionalProperty</span> at the root level describes the physical and chemical characteristics of the protein-protein interface.</p>
-                
+
                 <div class="data-section">
                     <h3>Interface Identification</h3>
                     <table>
@@ -774,7 +774,7 @@
                         </tbody>
                     </table>
                 </div>
-                
+
                 <div class="data-section">
                     <h3>Chain Information</h3>
                     <table>
@@ -814,7 +814,7 @@
                         </tbody>
                     </table>
                 </div>
-                
+
                 <div class="data-section">
                     <h3>Interface Biophysical Properties</h3>
                     <table>
@@ -864,7 +864,7 @@
             <!-- Data Types and Formats -->
             <section class="section">
                 <h2><i class="fas fa-file-code"></i> Data Types and Formats</h2>
-                
+
                 <h3>Strings</h3>
                 <ul>
                     <li><strong>PDB IDs</strong>: 4-character codes (e.g., <code>"1A17"</code>)</li>
@@ -873,7 +873,7 @@
                     <li><strong>DOIs</strong>: Valid DOI format (e.g., <code>"10.1093/emboj/17.5.1192"</code>)</li>
                     <li><strong>URLs</strong>: Valid HTTP/HTTPS URLs</li>
                 </ul>
-                
+
                 <h3>Numbers</h3>
                 <ul>
                     <li><strong>Resolution</strong>: Positive floating-point (Ångströms)</li>
@@ -881,13 +881,13 @@
                     <li><strong>Fractions</strong>: 0.0 to 1.0</li>
                     <li><strong>Counts</strong>: Positive integers</li>
                 </ul>
-                
+
                 <h3>Booleans</h3>
                 <ul>
                     <li><code>true</code>/<code>false</code> for binary properties</li>
                     <li>Used for: <span class="field-highlight">physio</span>, <span class="field-highlight">HomomericStructure</span></li>
                 </ul>
-                
+
                 <h3>Arrays</h3>
                 <ul>
                     <li>Used for: <span class="field-highlight">alternateName</span>, <span class="field-highlight">additionalProperty</span>, <span class="field-highlight">ClusterMembers</span></li>
@@ -898,13 +898,13 @@
             <!-- Controlled Vocabularies -->
             <section class="section">
                 <h2><i class="fas fa-book"></i> Controlled Vocabularies</h2>
-                
+
                 <h3>Interface Classification</h3>
                 <ul>
                     <li><code>"Physiological"</code> - Biologically relevant interface</li>
                     <li><code>"Non-physiological"</code> - Crystal packing artifact</li>
                 </ul>
-                
+
                 <h3>Homomer Types</h3>
                 <ul>
                     <li><code>"monomer"</code> - Single chain</li>
@@ -913,7 +913,7 @@
                     <li><code>"tetramer"</code> - Four identical chains</li>
                     <li><code>"polymer"</code> - Multiple identical chains</li>
                 </ul>
-                
+
                 <h3>Experimental Methods</h3>
                 <ul>
                     <li><code>"X-RAY DIFFRACTION"</code></li>
@@ -926,7 +926,7 @@
             <!-- Schema Structure Visualization -->
             <section class="section">
                 <h2><i class="fas fa-sitemap"></i> Schema Structure</h2>
-                
+
                 <div class="schema-tree">
                     <div class="level-1">Root (DataCatalogItem)</div>
                     <div class="level-2">├── mainEntity (Protein)</div>
@@ -941,7 +941,7 @@
                     <div class="level-3">    ├── Biological context</div>
                     <div class="level-3">    └── Clustering info</div>
                 </div>
-                
+
                 <h3>Data Relationships</h3>
                 <pre><code>{
   "@context": "https://schema.org",
@@ -958,7 +958,7 @@
             <!-- Usage Examples -->
             <section class="section">
                 <h2><i class="fas fa-code"></i> Usage Examples</h2>
-                
+
                 <h3>Accessing Interface Properties in Python</h3>
                 <pre><code>import json
 
@@ -983,7 +983,7 @@ for prop in data['additionalProperty']:
 print(f"Interface: {interface_id}")
 print(f"Protein: {protein_name}")
 print(f"Properties: {properties}")</code></pre>
-                
+
                 <h3>Working with Protein Metadata</h3>
                 <pre><code># Access protein metadata
 protein = data['mainEntity']
@@ -994,7 +994,7 @@ for prop in protein['additionalProperty']:
         sequence = prop['value']
         seq_length = prop.get('sequenceLength', len(sequence))
         print(f"Sequence length: {seq_length}")
-    
+
     if prop['name'] == 'PDBStructureMetadata':
         pdb_metadata = json.loads(prop['value'])
         resolution = pdb_metadata['resolution']
@@ -1004,13 +1004,13 @@ for prop in protein['additionalProperty']:
             <!-- Quality Indicators -->
             <section class="section">
                 <h2><i class="fas fa-check-circle"></i> Quality Indicators</h2>
-                
+
                 <h3>Completeness</h3>
                 <ul>
                     <li><strong>Complete metadata</strong>: <code>PDBMetadataStatus: "Complete metadata available"</code></li>
                     <li><strong>Partial metadata</strong>: May have null/missing values for some fields</li>
                 </ul>
-                
+
                 <h3>Validation</h3>
                 <ul>
                     <li>All PDB IDs should exist in RCSB PDB</li>
@@ -1018,7 +1018,7 @@ for prop in protein['additionalProperty']:
                     <li>Sequences should be valid amino acid strings</li>
                     <li>URLs should be accessible</li>
                 </ul>
-                
+
                 <h3>Consistency</h3>
                 <ul>
                     <li><span class="field-highlight">InterfaceChains</span> should match <span class="field-highlight">AuthChain1</span>/<span class="field-highlight">AuthChain2</span></li>
@@ -1030,7 +1030,7 @@ for prop in protein['additionalProperty']:
             <!-- Related Resources -->
             <section class="section">
                 <h2><i class="fas fa-link"></i> Related Resources</h2>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -1077,7 +1077,7 @@ for prop in protein['additionalProperty']:
                     <h3>ELIXIR 3D-BioInfo Community</h3>
                     <p>Data Dictionary for FAIR Protein-Protein Interface Metadata</p>
                 </div>
-                
+
                 <div class="footer-links">
                     <a href="index.html" class="footer-link">
                         <i class="fas fa-home"></i> Main Documentation
@@ -1092,7 +1092,7 @@ for prop in protein['additionalProperty']:
                         <i class="fas fa-microscope"></i> Bioschemas
                     </a>
                 </div>
-                
+
                 <div class="footer-badges">
                     <a href="https://github.com/biofold/ppi-benchmark-fair">
                         <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100">
@@ -1110,7 +1110,7 @@ for prop in protein['additionalProperty']:
                         <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant">
                     </a>
                 </div>
-                
+
                 <div class="copyright">
                     <p>ELIXIR PPI Benchmark Data Dictionary • Generated on: 2024-12-25</p>
                     <p>FAIR Principles: Findable, Accessible, Interoperable, Reusable</p>
