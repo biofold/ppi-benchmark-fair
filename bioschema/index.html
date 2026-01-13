@@ -690,60 +690,60 @@
                         <tr>
                             <th>Field</th>
                             <th>Type</th>
-                            <th>Required</th>
                             <th>Description</th>
                             <th>Pattern/Example</th>
+                            <th>Required</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><span class="field-highlight">@type</td>
-                            <td>String</td>
-                            <td>Yes</td>
+                            <td><span class="type-string">String</td>
                             <td>Data catalog item type</td>
                             <td>"DataCatalogItem"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">name</td>
-                            <td>String</td>
-                            <td>Yes</td>
+                            <td><span class="type-string">String</td>
                             <td>Interface name</td>
                             <td>^Interface [A-Z0-9]{4}_\d+$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">description</td>
-                            <td>String</td>
-                            <td>Yes</td>
+                            <td><span class="type-string">String</td>
                             <td>Interface description</td>
                             <td>Text description</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">identifier</td>
-                            <td>String</td>
-                            <td>Yes</td>
+                            <td><span class="type-string">String</td>
                             <td>Interface identifier</td>
                             <td>^[A-Z0-9]{4}_\d+$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">url</td>
-                            <td>String (URI)</td>
-                            <td>Yes</td>
+                            <td><span class="type-string">String (URI)</td>
                             <td>RCSB PDB URL</td>
                             <td>^https://www\.rcsb\.org/structure/[A-Z0-9]{4}$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">additionalProperty</td>
-                            <td>Array[PropertyValue]</td>
-                            <td>Yes</td>
+                            <td><span class="type-array">Array[PropertyValue]</td>
                             <td>Interface properties</td>
                             <td>Array (min 20 items)</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">mainEntity</td>
                             <td>Protein</td>
-                            <td>Yes</td>
                             <td>Protein entity</td>
                             <td>Protein object</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                     </tbody>
                 </table>
