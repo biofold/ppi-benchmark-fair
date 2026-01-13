@@ -14,13 +14,13 @@
             --success-color: #27ae60;
             --warning-color: #f39c12;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -28,12 +28,12 @@
             background-color: var(--light-bg);
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         /* Header - Matching second file */
         header {
             background: linear-gradient(135deg, var(--primary-color), #4689a3);
@@ -45,7 +45,7 @@
             margin-bottom: 40px;
             border-radius: 12px;
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -56,19 +56,19 @@
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
             background-size: cover;
         }
-        
+
         .header-content {
             position: relative;
             z-index: 1;
             padding: 0 20px;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 5px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .badges {
             display: flex;
             justify-content: center;
@@ -76,7 +76,7 @@
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         .badge {
             display: inline-block;
             padding: 8px 16px;
@@ -86,38 +86,38 @@
             text-decoration: none;
             transition: transform 0.3s ease;
         }
-        
+
         .badge:hover {
             transform: translateY(-2px);
         }
-        
+
         .badge.schema {
             background: linear-gradient(135deg, #6f42c1, #5a32a3);
             color: white;
             box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
         }
-        
+
         .badge.dictionary {
             background-color: #27ae60;
             color: white;
         }
-        
+
         .badge.croissant {
             background-color: #ff9800;
             color: white;
         }
-        
+
         .badge.bioschemas {
             background-color: #4285f4;
             color: white;
         }
-        
+
         .badge.fair {
             background: linear-gradient(135deg, var(--success-color), #219653);
             color: white;
             box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
         }
-        
+
         .dashboard-link {
             display: inline-flex;
             align-items: center;
@@ -133,13 +133,13 @@
             border: 2px solid rgba(255,255,255,0.3);
             margin-top: 25px;
         }
-        
+
         .dashboard-link:hover {
             background-color: rgba(255,255,255,0.25);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
+
         /* Section Cards - Matching second file */
         .section {
             background-color: white;
@@ -149,7 +149,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-left: 5px solid var(--secondary-color);
         }
-        
+
         h2 {
             color: var(--primary-color);
             margin-bottom: 20px;
@@ -158,23 +158,23 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         h2 i {
             font-size: 1.3rem;
         }
-        
+
         h3 {
             color: var(--primary-color);
             margin: 20px 0 10px;
             font-size: 1.3rem;
         }
-        
+
         h4 {
             color: #555;
             margin: 15px 0 10px;
             font-size: 1.1rem;
         }
-        
+
         /* Tables */
         table {
             width: 100%;
@@ -207,18 +207,18 @@
         tr:hover {
             background-color: #f8f9fa;
         }
-        
+
         /* Lists */
         ul, ol {
             margin: 15px 0;
             padding-left: 20px;
         }
-        
+
         li {
             margin-bottom: 8px;
             line-height: 1.6;
         }
-        
+
         /* Code blocks */
         code {
             background-color: #f1f1f1;
@@ -227,7 +227,7 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
         }
-        
+
         pre {
             background-color: #f8f9fa;
             padding: 15px;
@@ -238,7 +238,7 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-        
+
         /* Property categories */
         .property-category {
             margin: 25px 0;
@@ -247,19 +247,19 @@
             border-radius: 8px;
             border-left: 4px solid;
         }
-        
+
         .property-category.core { border-left-color: #4689a3; }
         .property-category.metrics { border-left-color: #27ae60; }
         .property-category.bio { border-left-color: #9b59b6; }
         .property-category.clustering { border-left-color: #e74c3c; }
         .property-category.pdb { border-left-color: #f39c12; }
-        
+
         .property-table th:nth-child(1) { width: 25%; }
         .property-table th:nth-child(2) { width: 10%; }
         .property-table th:nth-child(3) { width: 10%; }
         .property-table th:nth-child(4) { width: 25%; }
         .property-table th:nth-child(5) { width: 30%; }
-        
+
         /* Validation rules */
         .validation-rules {
             display: grid;
@@ -267,7 +267,7 @@
             gap: 20px;
             margin: 20px 0;
         }
-        
+
         .validation-card {
             background: white;
             border-radius: 8px;
@@ -275,12 +275,12 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             border-top: 4px solid var(--secondary-color);
         }
-        
+
         .validation-card h4 {
             margin-top: 0;
             color: var(--primary-color);
         }
-        
+
         /* Footer - Matching second file */
         footer {
             background-color: #386277;
@@ -290,12 +290,12 @@
             margin-top: 60px;
             border-radius: 12px;
         }
-        
+
         .footer-content {
             margin-top: 15px;
             padding: 0 10px;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
@@ -303,7 +303,7 @@
             margin: 30px 0;
             flex-wrap: wrap;
         }
-        
+
         .footer-link {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
@@ -312,11 +312,11 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .footer-link:hover {
             color: white;
         }
-        
+
         .copyright {
             margin-top: 20px;
             color: rgba(255,255,255,0.6);
@@ -331,17 +331,17 @@
             gap: 10px;
             margin: 20px 0;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
-            
+
             .section {
                 padding: 20px;
             }
-            
+
             table {
                 display: block;
                 overflow-x: auto;
@@ -351,23 +351,23 @@
             th, td {
                 max-width: none;
                 min-width: 120px;
-            }           
- 
+            }
+
             .badges {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .badge {
                 width: 90%;
                 text-align: center;
             }
-            
+
             .footer-links {
                 flex-direction: column;
                 gap: 15px;
             }
-             
+
             .validation-rules {
                 grid-template-columns: 1fr;
             }
@@ -378,27 +378,26 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <div class="container"> 
+            <div class="container">
             <div class="header-content">
                 <h1><strong>Protein-Protein Interface Dataset<br>Data Dictionary</strong></h1>
-                <div>
-                    <a href="https://github.com/biofold/ppi-benchmark-fair">
-                    <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
-                    <a href="https://creativecommons.org/licenses/by/4.0/">
-                    <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
-                    <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
-                    <a href="https://www.python.org/">
-                    <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
-                    <a href="https://schema.org/">
-                    <img src="https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue" alt="Schema.org+Bioschemas"></a>
-                    <a href="https://mlcommons.org/croissant/">
-                    <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
+                <h4 style="color:white;"><strong>
+                 Transforming ELIXIR 3D-Bioinfo PPI dataset into FAIR-compliant, machine learning-ready resource
+                </strong></h4>
+                <div class="header-content">
+                   <a href="/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                      <i class="fas fa-home"></i> 3D Bioinfo Dataset
+                   </a>
+                   <a href="/ppi-benchmark-fair/fair-report/index.html" class="dashboard-link">
+                       <i class="fas fa-bullseye"></i> FAIRification
+                   </a>
+                   <a href="/ppi-benchmark-fair/ml-report/index.html" class="dashboard-link">
+                     <i class="fa-solid fa-brain"></i> Machine Learning
+                   </a>
+                    <a href="https://github.com/biofold/ppi-benchmark-fair" class="dashboard-link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub Repository
+                    </a>
                 </div>
-                <p style="max-width: 800px; margin: 20px auto; opacity: 0.9;">Comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema</p>
-                <a href="../index.html" class="dashboard-link">
-                    <i class="fas fa-arrow-left"></i> Back to Main Documentation
-                </a>
             </div>
             </div>
         </header>
@@ -408,7 +407,7 @@
             <section class="section">
                 <h2><i class="fas fa-info-circle"></i> Overview</h2>
                 <p>A benchmark dataset containing <strong>1677 protein crystal structures</strong> with <strong>844 physiological</strong> and <strong>833 non-physiological</strong> homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.</p>
-                
+
                 <div class="property-category core">
                     <h3>Dataset Metadata</h3>
                     <table>
@@ -464,7 +463,7 @@
             <section class="section">
                 <h2><i class="fas fa-layer-group"></i> Root Dataset Properties</h2>
                 <p>Top-level properties describing the complete dataset</p>
-                
+
                 <table class="property-table">
                     <thead>
                         <tr>
@@ -645,7 +644,7 @@
             <section class="section">
                 <h2><i class="fas fa-handshake"></i> Interface Entry Structure (hasPart items)</h2>
                 <p>Individual interface entries within the dataset</p>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -713,7 +712,7 @@
             <!-- Interface Additional Properties -->
             <section class="section">
                 <h2><i class="fas fa-tags"></i> Interface Additional Properties</h2>
-                
+
                 <div class="property-category core">
                     <h3>Core Interface Properties</h3>
                     <table class="property-table">
@@ -1099,7 +1098,7 @@
             <section class="section">
                 <h2><i class="fas fa-dna"></i> Protein Entity Structure (mainEntity)</h2>
                 <p>Protein objects representing the main molecular entities in each interface</p>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -1323,7 +1322,7 @@
             <!-- Data File Structure -->
             <section class="section">
                 <h2><i class="fas fa-file-code"></i> Data File Structure</h2>
-                
+
                 <h3>Available File Formats</h3>
                 <table>
                     <thead>
@@ -1361,7 +1360,7 @@
             <!-- Data Validation Rules -->
             <section class="section">
                 <h2><i class="fas fa-check-circle"></i> Data Validation Rules</h2>
-                
+
                 <h3>Required Fields Validation</h3>
                 <p>Interface entries must have:</p>
                 <ul>
@@ -1372,7 +1371,7 @@
                     <li>BSA and atomic contacts values</li>
                     <li>Valid taxonomicRange with NCBI taxonomy ID</li>
                 </ul>
-                
+
                 <p>Protein entities must have:</p>
                 <ul>
                     <li>Valid PDB ID pattern ([A-Z0-9]{4})</li>
@@ -1393,7 +1392,7 @@
                             <tr><td>Resolution</td><td>Number</td><td>Must be positive</td></tr>
                         </table>
                     </div>
-                    
+
                     <div class="validation-card">
                         <h4>Pattern Validation</h4>
                         <table>
@@ -1420,7 +1419,7 @@
             <!-- Usage Examples -->
             <section class="section">
                 <h2><i class="fas fa-code"></i> Usage Examples</h2>
-                
+
                 <h3>Accessing Interface Data</h3>
                 <pre><code># Example patterns
 interface_id = entry["identifier"]  # e.g., "1A17_6"
@@ -1450,11 +1449,11 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
             <!-- License and Attribution -->
             <section class="section">
                 <h2><i class="fas fa-balance-scale"></i> License and Attribution</h2>
-                
+
                 <h3>License</h3>
                 <p><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong><br>
                 This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
-                
+
                 <h3>Citation</h3>
                 <p>When using this dataset, please cite:</p>
                 <ul>
@@ -1467,7 +1466,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
             <!-- Contact and Support -->
             <section class="section">
                 <h2><i class="fas fa-link"></i> Contact and Support</h2>
-                
+
                 <table>
                     <thead>
                         <tr>
@@ -1513,7 +1512,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
                     <p><strong>Note:</strong> This data dictionary provides comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema. All properties follow JSON Schema validation rules and are compatible with both BioSchemas and ML Commons Croissant standards.</p>
                 </div>
@@ -1527,7 +1526,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
                     <h3>ELIXIR 3D-BioInfo Community</h3>
                     <p>Comprehensive Data Dictionary for PPI Benchmark</p>
                 </div>
-                
+
                 <div class="footer-links">
                     <a href="index.html" class="footer-link">
                         <i class="fas fa-home"></i> Main Documentation
@@ -1560,7 +1559,7 @@ mmcif_url = f"https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/
                         <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant">
                     </a>
                 </div>
-                
+
                 <div class="copyright">
                     <p>ELIXIR PPI Benchmark Data Dictionary • Generated on: 2025-12-26</p>
                     <p>Schema.org • Bioschemas • ML Commons Croissant 1.0</p>
