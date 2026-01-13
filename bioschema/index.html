@@ -760,81 +760,81 @@
                             <tr>
                                 <th>Property Name</th>
                                 <th>Type</th>
-                                <th>Required</th>
                                 <th>Description</th>
                                 <th>Example</th>
+                                <th>Required</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><span class="field-highlight">InterfaceID</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Unique interface identifier</td>
                                 <td>"1A17_6"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">InterfaceSource</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Source of interface ID</td>
                                 <td>"ProtCID"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">physio</td>
                                 <td><span class="type-boolean">Boolean</td>
-                                <td>Yes</td>
                                 <td>Physiological classification</td>
                                 <td>false</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">label</td>
                                 <td><span class="type-number">Integer</td>
-                                <td>Yes</td>
                                 <td>Numeric label</td>
                                 <td>0</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">AuthChain1</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>First chain in interface</td>
                                 <td>"A"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">AuthChain2</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Second chain in interface</td>
                                 <td>"A"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">SymmetryOp1</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Symmetry operation chain 1</td>
                                 <td>"1_555"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">SymmetryOp2</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Symmetry operation chain 2</td>
                                 <td>"15_545"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">LabelChain1</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>First chain in assembly</td>
                                 <td>"A"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">LabelChain2</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Second chain in assembly</td>
                                 <td>"B"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                         </tbody>
                     </table>
@@ -906,32 +906,32 @@
                             <tr>
                                 <th>Property Name</th>
                                 <th>Type</th>
-                                <th>Required</th>
                                 <th>Description</th>
                                 <th>Example</th>
+                                <th>Required</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><span class="field-highlight">Gene</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Gene name</td>
                                 <td>"PPP5C"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">Superfamily</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Protein superfamily</td>
                                 <td>"1.25.40.10"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">Pfam</td>
                                 <td><span class="type-string">String</td>
-                                <td>No</td>
                                 <td>Pfam domain</td>
                                 <td>"PF00359"</td>
+                                <td>No</td>
                             </tr>
                         </tbody>
                     </table>
@@ -944,46 +944,46 @@
                             <tr>
                                 <th>Property Name</th>
                                 <th>Type</th>
-                                <th>Required</th>
                                 <th>Description</th>
                                 <th>Example</th>
+                                <th>Required</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><span class="field-highlight">ClusterID</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Sequence cluster ID</td>
                                 <td>"1A17_6"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">ClusterSize</td>
                                 <td><span class="type-number">Integer</td>
-                                <td>Yes</td>
                                 <td>Number in cluster</td>
                                 <td>1</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">ClusterMembers</td>
                                 <td><span class="type-array">Array[String]</td>
-                                <td>Yes</td>
                                 <td>Other interfaces in cluster</td>
                                 <td>["3O77_2", ...]</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">ClusterMethod</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Clustering method</td>
                                 <td>"BLASTClust sequence clustering"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">ClusterMethodOptions</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Clustering parameters</td>
                                 <td>"-S 25 -L 0.5 -b F"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                         </tbody>
                     </table>
@@ -996,137 +996,137 @@
                             <tr>
                                 <th>Property Name</th>
                                 <th>Type</th>
-                                <th>Required</th>
                                 <th>Description</th>
                                 <th>Example</th>
+                                <th>Required</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><span class="field-highlight">PDBStructureMetadata</td>
                                 <td><span class="type-string">String/Object</td>
-                                <td>Yes</td>
                                 <td>Complete RCSB metadata</td>
                                 <td>JSON string/object</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">PDBMetadataStatus</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Metadata status</td>
                                 <td>"Complete metadata available"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">Resolution</td>
                                 <td><span class="type-numebr">Number</td>
-                                <td>Yes</td>
                                 <td>X-ray resolution</td>
                                 <td>2.45</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">SourceOrganism</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Source organism</td>
                                 <td>"Homo sapiens"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">HomomericStructure</td>
                                 <td><span class="type-boolean">Boolean</td>
-                                <td>Yes</td>
                                 <td>Is homomeric</td>
                                 <td>true</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">HomomerType</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Type of homomer</td>
                                 <td>"monomer"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">ChainCount</td>
                                 <td><span class="type-number">Integer</td>
-                                <td>Yes</td>
                                 <td>Number of chains</td>
                                 <td>1</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">UniqueSequenceCount</td>
                                 <td><span class="type-number">Integer</td>
-                                <td>Yes</td>
                                 <td>Unique sequences</td>
                                 <td>1</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">Chain_*_Sequence</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes*</td>
                                 <td>Amino acid sequence</td>
                                 <td>"RDEPPADGALK..."</td>
+                                <td class="field-required">Yes*</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">PrimaryCitation</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Publication title</td>
                                 <td>Title text</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">PublicationDOI</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Publication DOI</td>
                                 <td>"10.1093/emboj/17.5.1192"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">Entity_*</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes*</td>
                                 <td>Entity information</td>
                                 <td>"Chains: A, Length: 166"</td>
+                                <td class="field-required">Yes*</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">NCBI_Taxonomy_ID</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Taxonomy ID</td>
                                 <td>"9606"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">AssociatedInterface</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Interface ID</td>
                                 <td>"1A17_6"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">InterfaceChains</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Chains in interface</td>
                                 <td>"A-A", "nan-nan"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">InterfaceClassification</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Interface class</td>
                                 <td>"Non-physiological"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">LabelInterfaceChains</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>Assembly chains</td>
                                 <td>"A-B"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                             <tr>
                                 <td><span class="field-highlight">PDB_ID</td>
                                 <td><span class="type-string">String</td>
-                                <td>Yes</td>
                                 <td>PDB identifier</td>
                                 <td>"1A17"</td>
+                                <td class="field-required">Yes</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1144,109 +1144,109 @@
                         <tr>
                             <th>Field</th>
                             <th>Type</th>
-                            <th>Required</th>
                             <th>Description</th>
                             <th>Pattern/Example</th>
+                            <th>Required</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><span class="field-highlight">@context</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Schema.org context</td>
                             <td>"https://schema.org"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">@type</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Protein type</td>
                             <td>"Protein"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">@id</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Protein identifier</td>
                             <td>^#protein_[A-Z0-9]{4}$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">dct:conformsTo</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>BioSchemas profile</td>
                             <td>"https://bioschemas.org/profiles/Protein/0.11-RELEASE"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">identifier</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>PDB ID</td>
                             <td>^[A-Z0-9]{4}$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">name</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Protein name</td>
                             <td>^Protein [A-Z0-9]{4}$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">description</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Protein description</td>
                             <td>Text description</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">url</td>
                             <td><span class="type-string">String (URI)</td>
-                            <td>Yes</td>
                             <td>RCSB PDB URL</td>
                             <td>^https://www\.rcsb\.org/structure/[A-Z0-9]{4}$</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">taxonomicRange</td>
                             <td>TaxonomicRange</td>
-                            <td>Yes</td>
                             <td>Organism taxonomy</td>
                             <td>TaxonomicRange object</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">alternateName</td>
                             <td><span class="type-array">Array[String]</td>
-                            <td>Yes</td>
                             <td>Alternative names</td>
                             <td>Min 2 items, includes PDB {ID}</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">hasRepresentation</td>
                             <td><span class="type-array">Array[ProteinRep]</td>
-                            <td>Yes</td>
                             <td>Structure files</td>
                             <td>Min 3 items</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                           <td><span class="field-highlight">additionalProperty</td>
                             <td><span class="type-array">Array[PropertyValue]</td>
-                            <td>Yes</td>
                             <td>Protein properties</td>
                             <td>Similar to interface properties</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">hasMolecularFunction</td>
                             <td>DefinedTerm</td>
-                            <td>Yes</td>
                             <td>Molecular function</td>
                             <td>DefinedTerm object</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">bioChemInteraction</td>
                             <td>Protein</td>
-                            <td>Yes</td>
                             <td>Interaction info</td>
                             <td>Protein object</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1257,18 +1257,18 @@
                         <tr>
                             <th>Field</th>
                             <th>Type</th>
-                            <th>Required</th>
                             <th>Description</th>
                             <th>Example</th>
+                            <th>Required</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><span class="field-highlight">@type</td>
                             <td><span class="type-string">String</td>
-                            <td>No</td>
                             <td>DefinedTerm type</td>
                             <td>"DefinedTerm"</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">name</td>
@@ -1276,6 +1276,7 @@
                             <td>No</td>
                             <td>Organism name</td>
                             <td>"Homo sapiens"</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">inDefinedTermSet</td>
@@ -1283,6 +1284,7 @@
                             <td>No</td>
                             <td>Taxonomy set</td>
                             <td>"https://www.ncbi.nlm.nih.gov/taxonomy"</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">description</td>
@@ -1290,6 +1292,7 @@
                             <td>No</td>
                             <td>Description</td>
                             <td>"Organism taxonomy information from PDB metadata"</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">termCode</td>
@@ -1297,6 +1300,7 @@
                             <td>No</td>
                             <td>Taxonomy ID</td>
                             <td>"9606"</td>
+                            <td>No</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">url</td>
@@ -1311,6 +1315,7 @@
                             <td>No</td>
                             <td>Identifier</td>
                             <td>"taxonomy:9606"</td>
+                            <td>No</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1321,39 +1326,39 @@
                         <tr>
                             <th>Field</th>
                             <th>Type</th>
-                            <th>Required</th>
                             <th>Description</th>
                             <th>Allowed Values</th>
+                            <th>Required</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><span class="field-highlight">@type</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>PropertyValue type</td>
                             <td>"PropertyValue"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">name</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Representation type</td>
                             <td>"PDB Structure", "mmCIF Structure", "PDB ID"</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">value</td>
                             <td><span class="type-string">String (URI)</td>
-                            <td>Yes</td>
                             <td>URL or identifier</td>
                             <td>URI for files, ID for PDB ID</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                         <tr>
                             <td><span class="field-highlight">description</td>
                             <td><span class="type-string">String</td>
-                            <td>Yes</td>
                             <td>Description</td>
                             <td>Text description</td>
+                            <td class="field-required">Yes</td>
                         </tr>
                     </tbody>
                 </table>
