@@ -214,6 +214,17 @@
             background-color: #f8f9fa;
         }
 
+        .field-required {
+            background-color: #e8f5e9;
+            font-weight: 600;
+            color: #27ae60;
+        }
+
+        .field-required::after {
+            content: " ✓";
+            font-weight: bold;
+        }
+
         /* Lists */
         ul, ol {
             margin: 15px 0;
@@ -223,6 +234,22 @@
         li {
             margin-bottom: 8px;
             line-height: 1.6;
+        }
+
+        .data-section {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .field-highlight {
+            background-color: #e3f2fd;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
         }
 
         /* Code blocks */
@@ -378,6 +405,12 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Type indicators */
+        .type-string { color: #22863a; font-weight: 600; }
+        .type-number { color: #005cc5; font-weight: 600; }
+        .type-boolean { color: #d73a49; font-weight: 600; }
+        .type-array { color: #6f42c1; font-weight: 600; }
+        .type-object { color: #e36209; font-weight: 600; }
     </style>
 </head>
 <body>
