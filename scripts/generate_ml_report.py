@@ -634,8 +634,8 @@ def create_feature_plots(report: dict, output_dir: str, verbose: bool = False) -
     # 1. Feature Importance Comparison (grouped bars)
     try:
         importance_data = report.get('feature_importance', {})
-        methods = [('random_forest', 'Random Forest', '#4689a3'),
-                   ('logistic_regression', 'Logistic Regression', '#e74c3c'),
+        methods = [('random_forest', 'Gini Importance', '#4689a3'),
+                   ('logistic_regression', 'LR Coefficient', '#e74c3c'),
                    ('mutual_information', 'Mutual Information', '#27ae60')]
 
         all_features_data = []
@@ -1066,7 +1066,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     # Extract basic metrics for key metrics section
     dataset_info = report.get('dataset_info', {})
     num_features = len(dataset_info.get('feature_names', []))
-    num_samples = dataset_info.get('num_samples', 0)
+    num_samples = dataset_info.get('n_samples', 0)
 
     basic_stats = report.get('basic_statistics', {})
     avg_mean = np.mean([stats.get('mean', 0) for stats in basic_stats.values()]) if basic_stats else 0
