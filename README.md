@@ -62,21 +62,21 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 * ✅ Rich Metadata: 1,681 metadata files with structured annotations  
 * ✅ Persistent Identifier: DOI assigned via Zenodo  
 * ✅ Keywords: EDAM ontology terms integrated  
-* ⚠️ Needs Improvement: Repository topics, GitHub releases, documentation wiki
+* ⚠️  Possible Improvement: Repository topics, GitHub releases, documentation wiki
 
 ### **Accessible (80/100) ✅**
 
 * ✅ Open Access: CC-BY-4.0 license  
 * ✅ Standard Protocols: HTTPS access to all data  
 * ✅ Multiple Formats: CSV, JSON-LD, PDB, mmCIF  
-* ⚠️ Needs Improvement: Access rights specification in metadata
+* ⚠️  Possible Improvement: Access rights specification in metadata
 
 ### **Interoperable (90/100) ✅**
 
 * ✅ [Schema.org/Bioschemas](https://schema.org/Bioschemas): Full compliance  
 * ✅ MLCommons Croissant: ML dataset standard  
 * ✅ Domain Vocabularies: EDAM, GO, Pfam, SCOP  
-* ⚠️ Needs Improvement: Data schema documentation, format information
+* ⚠️  Possible Improvement: Data schema documentation, format information
 
 ### **Reusable (95/100) ✅**
 
