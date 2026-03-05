@@ -1237,7 +1237,7 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
                 <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
                 <a href="https://creativecommons.org/licenses/by/4.0/">
-                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
                 <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
                 <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
                 <a href="https://www.python.org/">
@@ -1869,7 +1869,8 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
                 <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
                 <a href="https://creativecommons.org/licenses/by/4.0/">
-                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0"></a>
+                <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY--NC 4.0"></a>
+
                 <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
                 <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
                 <a href="https://www.python.org/">

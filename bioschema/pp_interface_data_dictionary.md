@@ -11,7 +11,7 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | Name | Protein-Protein Interaction Interface Benchmark Dataset |
 | Identifier | [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) |
 | URL | [https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces) |
-| License | CC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) |
+| License | CC BY-NC 4.0 ([https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)) |
 | Version | 1.0 |
 | Date Published | 2023-04-30 |
 | Date Modified | 2025-12-26 |
@@ -270,7 +270,7 @@ Protein entities must have:
 
 ## **License and Attribution**
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License: Creative Commons Attribution 4.0 International (CC BY-NC 4.0)
 
 When using this dataset, please cite:
 
