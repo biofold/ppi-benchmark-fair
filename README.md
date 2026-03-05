@@ -1,7 +1,7 @@
 # **ELIXIR - Protein-Protein Interaction Benchmark - FAIR Metadata**
 
 [![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20B--NCY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Schema.org+Bioschemas](https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue)](https://schema.org/)
@@ -66,7 +66,7 @@ The `ppi_benchmark_fair.py` script generates machine-readable JSON-LD metadata c
 
 ### **Accessible (80/100) ✅**
 
-* ✅ Open Access: CC-BY-4.0 license  
+* ✅ Open Access: CC BY-NC 4.0 license  
 * ✅ Standard Protocols: HTTPS access to all data  
 * ✅ Multiple Formats: CSV, JSON-LD, PDB, mmCIF  
 * ⚠️  Possible Improvement: Access rights specification in metadata
@@ -306,7 +306,7 @@ Target FAIR Score: 100/100 (Currently: 87.5)
 
 ### **License**
 
-Creative Commons Attribution 4.0 International (CC-BY-4.0)  
+Creative Commons Attribution 4.0 International (CC BY-NC 4.0)  
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 ### **Citation**

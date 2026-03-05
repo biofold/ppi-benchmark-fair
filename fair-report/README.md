@@ -109,7 +109,7 @@ Below is a compact example that fills required fields so you can visualize struc
       "standards_compliance": ["Bioschemas Dataset Profile 1.0-RELEASE"]
     },
     "reusability": {
-      "license": "CC-BY-4.0",
+      "license": "CC BY-NC 4.0",
       "provenance": {
         "creation_date": "2023-04-30",
         "creators": ["ELIXIR 3D-BioInfo Community"],

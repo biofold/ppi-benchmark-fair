@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/schema.json",
-  "title": "FAIR Metadata Package Schema",
-  "description": "Schema for FAIR metadata package for protein-protein interaction interface benchmark dataset",
+  "$id": "https://github.com/biofold/ppi-benchmark-fair/blob/master/bioschema/schema.json",
+  "title": "ELIXIR 3D-BioInfo FAIR Benchmark Dataset Schema",
+  "description": "Schema for protein-protein interaction interface benchmark dataset in JSON-LD format",
   "type": "object",
   "required": ["fair_metadata", "bioschemas_markup"],
   "properties": {
