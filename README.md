@@ -2,7 +2,7 @@
 
 [![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20B--NCY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://img.shields.io/badge/DOI-orange.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Schema.org+Bioschemas](https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue)](https://schema.org/)
 [![MLCommons Croissant](https://img.shields.io/badge/ML-Croissant_1.0-yellow)](https://mlcommons.org/croissant/)
