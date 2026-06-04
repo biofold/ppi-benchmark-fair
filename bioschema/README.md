@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-A benchmark dataset containing 7 protein crystal structures with 4 physiological and 3 non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.
+A benchmark dataset containing 1,677 protein crystal structures with 844 physiological and 833 non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.
 
 ## **Dataset Metadata**
 
@@ -15,7 +15,7 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | Version | 1.0 |
 | Date Published | 2023-04-30 |
 | Date Modified | 2025-12-26 |
-| Size | 7 entries |
+| Size | 1677 entries |
 | Schema Conformance | ML Commons Croissant 1.0 & BioSchemas Dataset Profile 1.0-RELEASE |
 
 ## **Root Dataset Properties**
