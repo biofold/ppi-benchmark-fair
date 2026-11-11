@@ -1,5 +1,8 @@
 # **ELIXIR - Protein-Protein Interaction Benchmark - FAIR Metadata**
 
+**[→ View the FAIR Data Portal](https://biofold.github.io/ppi-benchmark-fair)**
+
+
 [![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20B--NCY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.XXXXXXX-orange.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
