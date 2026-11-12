@@ -1,5 +1,5 @@
 {
-  "title": "ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces: FAIR Metadata",
+  "title": "ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata",
   "upload_type": "dataset",
   "description": "<p>FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces from 1,645 protein crystal structures, together with the structure files (PDB and mmCIF), an in-repository snapshot of the PDB metadata of every entry, and the documentation of the label curation.</p><p>The benchmark was published by Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323; 836 physiological and 841 non-physiological interfaces). This package uses the curated annotation file of the benchmark authors (844 physiological and 833 non-physiological interfaces; 16 labels revised, 20 interfaces flagged ambiguous and 6 flagged for deletion). Every interface carries both the curated label and the published label (<code>PublishedPhysio</code>). See <code>data/curation/README.md</code>.</p><p>Please cite the original publication as well as this package.</p>",
   "creators": [

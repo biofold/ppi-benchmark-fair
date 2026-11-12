@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this dataset or its FAIR metadata, please cite both the original publication (Schweke et al. 2023) and this metadata package."
-title: "ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces: FAIR Metadata"
+title: "ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata"
 abstract: >-
   FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces
   from 1,645 protein crystal structures, with the structure files, an in-repo snapshot of the PDB metadata and the documentation of

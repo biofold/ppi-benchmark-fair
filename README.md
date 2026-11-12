@@ -351,7 +351,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
 `}`
 
 `@dataset{capriotti2026ppifair,`
-   `title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces: FAIR Metadata},`
+   `title={ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata},`
    `author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},`
    `year={2026},`
    `version={1.0.0},`
