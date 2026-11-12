@@ -360,6 +360,8 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
    `note={DOI assigned by Zenodo at the first release; cite the concept DOI once it is available}`
 `}`
 
+Project report (Zenodo, all versions): Capriotti E, Martelli PL, Savojardo C. *FAIRification of the ELIXIR 3D-Bioinfo Protein-Protein Interface Benchmark*. Zenodo, 2026. [doi:10.5281/zenodo.24144349](https://doi.org/10.5281/zenodo.24144349). The first version is [doi:10.5281/zenodo.24144350](https://doi.org/10.5281/zenodo.24144350).
+
 Please cite **both** the original paper and this metadata package. The author list of the paper is the one of the published article (46 authors, Crossref and PubMed).
 
 

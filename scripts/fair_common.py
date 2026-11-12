@@ -258,12 +258,30 @@ DERIVATION_NOTE = (
 )
 
 
+PROJECT_RECORD_DOI = "10.5281/zenodo.24144349"  # Zenodo concept DOI of the project record (all versions)
+PROJECT_RECORD = {
+    "@type": "Report",
+    "@id": "https://doi.org/" + PROJECT_RECORD_DOI,
+    "name": "FAIRification of the ELIXIR 3D-Bioinfo Protein-Protein Interface Benchmark",
+    "identifier": "https://doi.org/" + PROJECT_RECORD_DOI,
+    "url": "https://doi.org/" + PROJECT_RECORD_DOI,
+    "datePublished": "2026-11-11",
+    "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "author": [
+        {"@type": "Person", "name": "Emidio Capriotti", "identifier": "https://orcid.org/0000-0002-2323-0963"},
+        {"@type": "Person", "name": "Pier Luigi Martelli", "identifier": "https://orcid.org/0000-0002-0274-5669"},
+        {"@type": "Person", "name": "Castrense Savojardo", "identifier": "https://orcid.org/0000-0002-7359-0633"},
+    ],
+}
+
+
 def apply_provenance(dataset: Dict[str, Any]) -> Dict[str, Any]:
     """Set license, creators, citation of the original work and identifiers on a Dataset block."""
     dataset["license"] = FAIR_LICENSE_URL
     dataset["creator"] = copy.deepcopy(FAIR_CREATORS)
     dataset["citation"] = copy.deepcopy(SCHWEKE_CITATION)
     dataset["isBasedOn"] = copy.deepcopy(FAIR_IS_BASED_ON)
+    dataset["subjectOf"] = copy.deepcopy(PROJECT_RECORD)
     dataset["@id"] = FAIR_REPO_URL
     dataset["url"] = FAIR_PORTAL_URL
     if DERIVATION_NOTE.strip() not in dataset.get("description", ""):

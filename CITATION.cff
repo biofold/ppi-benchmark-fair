@@ -146,3 +146,20 @@ references:
     authors:
       - name: "ELIXIR 3D-BioInfo Community"
     url: "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"
+  - type: report
+    title: "FAIRification of the ELIXIR 3D-Bioinfo Protein-Protein Interface Benchmark"
+    authors:
+      - family-names: "Capriotti"
+        given-names: "Emidio"
+        orcid: "https://orcid.org/0000-0002-2323-0963"
+      - family-names: "Martelli"
+        given-names: "Pier Luigi"
+        orcid: "https://orcid.org/0000-0002-0274-5669"
+      - family-names: "Savojardo"
+        given-names: "Castrense"
+        orcid: "https://orcid.org/0000-0002-7359-0633"
+    year: 2026
+    doi: "10.5281/zenodo.24144349"
+    publisher:
+      name: "Zenodo"
+    url: "https://doi.org/10.5281/zenodo.24144349"

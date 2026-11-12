@@ -799391,7 +799391,33 @@
           "name": "ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces (original benchmark repository)",
           "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"
         }
-      ]
+      ],
+      "subjectOf": {
+        "@type": "Report",
+        "@id": "https://doi.org/10.5281/zenodo.24144349",
+        "name": "FAIRification of the ELIXIR 3D-Bioinfo Protein-Protein Interface Benchmark",
+        "identifier": "https://doi.org/10.5281/zenodo.24144349",
+        "url": "https://doi.org/10.5281/zenodo.24144349",
+        "datePublished": "2026-11-11",
+        "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Emidio Capriotti",
+            "identifier": "https://orcid.org/0000-0002-2323-0963"
+          },
+          {
+            "@type": "Person",
+            "name": "Pier Luigi Martelli",
+            "identifier": "https://orcid.org/0000-0002-0274-5669"
+          },
+          {
+            "@type": "Person",
+            "name": "Castrense Savojardo",
+            "identifier": "https://orcid.org/0000-0002-7359-0633"
+          }
+        ]
+      }
     },
     "total_interfaces": 1677,
     "sample_proteins": [

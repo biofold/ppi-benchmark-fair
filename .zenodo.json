@@ -63,6 +63,12 @@
       "relation": "isAlternateIdentifier",
       "identifier": "https://biofold.github.io/ppi-benchmark-fair",
       "scheme": "url"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "10.5281/zenodo.24144349",
+      "scheme": "doi",
+      "resource_type": "publication-report"
     }
   ],
   "references": [
