@@ -1,4 +1,4 @@
-# **ELIXIR - Protein-Protein Interaction Benchmark - FAIR Metadata**
+# **ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata**
 
 **[→ View the FAIR Data Portal](https://biofold.github.io/ppi-benchmark-fair)**
 

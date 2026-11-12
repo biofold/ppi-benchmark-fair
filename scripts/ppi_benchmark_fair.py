@@ -1,5 +1,5 @@
 """
-Script to import protein-protein interaction benchmark data and generate FAIR-compliant
+Script to import protein-protein interface benchmark data and generate FAIR-compliant
 Bioschemas markup with Croissant compatibility for ML datasets.
 
 Revised: fixes and robustness improvements:
@@ -213,7 +213,7 @@ class ClusterIDProcessor:
         return clean_id
 
 class PPIBenchmarkProcessor:
-    """Processor for protein-protein interaction benchmark data with Croissant support."""
+    """Processor for protein-protein interface benchmark data with Croissant support."""
 
     def __init__(self, csv_url: str, mmcif_base_url: str, pdb_base_url: str,
                  csv_separator: str = ',', auto_detect_separator: bool = False,
@@ -4305,7 +4305,7 @@ def validate_interface_chains(pdb_id: str,
 def parse_arguments():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="Generate FAIR-compliant Bioschemas markup for protein-protein interaction benchmark data with Croissant compatibility.",
+        description="Generate FAIR-compliant Bioschemas markup for protein-protein interface benchmark data with Croissant compatibility.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
