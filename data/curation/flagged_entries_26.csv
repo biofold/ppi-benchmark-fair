@@ -1,0 +1,27 @@
+entry_id,flag,label_published,label_updated,n_approaches_wrong,conclusion,protcid_evidence,note
+1dvr_1,ambiguous,True,True,3.0,?,ProtCID=maybe_non_physio; 40 CFs but 1dvr in cluster of only 2 CFs,
+2eav_1,ambiguous,True,True,3.0,?,"maybe; one cluster of 2 CFs, only structures of 2 proteins",
+2imz_1,ambiguous,True,True,2.0,?,"maybe: chain cluster 2/5 CFs , seqid = 93%; domain cluster 2/29 CFs seqid=100%",
+2itf_5,ambiguous,True,True,2.0,?,"maybe: chain cluster 2/17 CFs, 4/25 entries; domain cluster 2/24 CFs, 4/33 entries ",
+2qms_1,ambiguous,False,False,2.0,?,"ProtCID cluster: 4/118 CFs, 5/219 entries",
+3aw8_1,ambiguous,True,True,2.0,?,no clusters. Only 1 CF and 1 entry of this UniProt. ,
+3c1q_1,ambiguous,True,True,2.0,?,"ProtCID cluster 2/4 CFs, 4/6 entries, seq id = 61",
+3ctz_1,ambiguous,True,True,2.0,?,"chain cluster 2/3 CFs,3/5 entries, seq id = 33; domain cluster 3/76 CFs, 5/280 entries, seq id = 43",
+3igd_1,ambiguous,True,True,2.0,?,"chain cluster: 2/5 CFs, 3/7 entries, seq id = 93",
+3lf7_2,ambiguous,True,True,2.0,?,no chain cluster. Domain cluster: 2/25 CFs. Only 1 CF (7 entries) of this UniProt Q1W3Z7_ASPJA,Not enough evidence
+3lfi_1,ambiguous,True,True,2.0,?,no chain cluster. Domain cluster: 2/25 CFs. Same interface as 3lf7_2.  ,
+3qat_3,ambiguous,True,True,2.0,?,"no chain cluster, domain cluster 3/61 CFs. ",
+3rtl_6,ambiguous,True,True,2.0,?,"chain cluster 2/17 CFs, 4/25 entries, seq id = 24",
+4flb_1,ambiguous,True,True,2.0,?,"chain cluster 3/20 CFs, 3/20 entries, seq id = 37",
+4fn9_1,ambiguous,True,True,2.0,?,"chain cluster 7/374 CFs, 9/1827 entries, seq id = 62",
+4nzj_2,ambiguous,True,True,3.0,?,ProtCID=maybe_nonphysio; 2/2 CFs not much data; 2/11 CFs for Frizzled domain,Enzyme and pathway databases: BioCyci BFRA272559:G1GHZ-1453-MONOMER 
+4qhj_1,ambiguous,False,False,3.0,?,ambiguous; same interface residues as 4qhg (same UNP) but rotated 30 degrees,
+4qin_1,ambiguous,True,True,3.0,?,ProtCID=maybe_physio; 2/3 CFs not much data,
+5hm4_1,ambiguous,True,True,2.0,?,"maybe: chain cluster 2/98 CFs, 2/212 entrie, seq id = 61",
+5y4t_1,ambiguous,True,True,2.0,?,"maybe: chain cluster 4/159 CFs, 4/223 entries, seq id = 26",
+2x2a_1,to delete,True,True,3.0,del,recommended delete in June 2020; 7 CFs of this Unp; only 2 in this clusteer ,
+3p0c_3,to delete,True,True,2.0,del,recommended delete in June 2020,
+3ucr_1,to delete,False,False,2.0,del,recommended delete in June 2020,
+4o1w_1,to delete,True,True,2.0,del,"recommended delete in June 2020. chain cluster 3/93 CFs, domain cluster 5/117 CFs",
+4wov_3,to delete,True,True,3.0,del,recommended deletion in June 2020; ProtCID=NonPhysio(9 CFs of TYK2 only one has this dimer),this dimer not mentioned in the paper
+5z70_2,to delete,False,False,3.0,del,recommended deletion in June 2020; ProtCAD=physio 4/5 CFs; all of these UNPs; this assembly is slightly distorted but is very similar to assembly 1 which is in the ProtCAD cluster,

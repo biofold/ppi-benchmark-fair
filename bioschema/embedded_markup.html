@@ -1,3 +1,711 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ed8f296826b4522326795c0e9d8ef16ff1df06a00eb196ee7fafefe25385761
-size 111526266
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bioschemas & Croissant Markup - PPI Benchmark Dataset</title>
+        <script type="application/ld+json">
+        {
+    "@context": [
+        "https://schema.org/",
+        {
+            "cr": "https://mlcommons.org/croissant/1.0"
+        }
+    ],
+    "@type": [
+        "Dataset",
+        "cr:Dataset"
+    ],
+    "@id": "https://github.com/biofold/ppi-benchmark-fair",
+    "cr:conformsTo": "https://mlcommons.org/croissant/1.0",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
+    "name": "Protein-Protein Interaction Interface Benchmark Dataset",
+    "description": "A benchmark dataset of 1677 protein crystal structures with 844 physiological and 833 non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics. This package is derived from the benchmark of Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323). It uses the post-publication curated annotation file (30 April 2023), in which 16 interface labels were revised relative to the published split of 836 physiological and 841 non-physiological interfaces.",
+    "identifier": "https://github.com/biofold/ppi-benchmark-fair",
+    "url": "https://biofold.github.io/ppi-benchmark-fair",
+    "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "keywords": [
+        {
+            "@type": "DefinedTerm",
+            "name": "Protein interaction",
+            "inDefinedTermSet": "http://edamontology.org/topic_0128"
+        },
+        {
+            "@type": "DefinedTerm",
+            "name": "Protein structure",
+            "inDefinedTermSet": "http://edamontology.org/topic_2814"
+        },
+        {
+            "@type": "DefinedTerm",
+            "name": "Benchmarking",
+            "inDefinedTermSet": "http://edamontology.org/operation_2816"
+        },
+        {
+            "@type": "DefinedTerm",
+            "name": "Machine Learning Dataset",
+            "inDefinedTermSet": "http://edamontology.org/topic_3474"
+        }
+    ],
+    "creator": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0002-2323-0963",
+            "name": "Emidio Capriotti",
+            "givenName": "Emidio",
+            "familyName": "Capriotti",
+            "url": "https://orcid.org/0000-0002-2323-0963",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "University of Bologna"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0002-0274-5669",
+            "name": "Pier Luigi Martelli",
+            "givenName": "Pier Luigi",
+            "familyName": "Martelli",
+            "url": "https://orcid.org/0000-0002-0274-5669",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "University of Bologna"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0002-7359-0633",
+            "name": "Castrense Savojardo",
+            "givenName": "Castrense",
+            "familyName": "Savojardo",
+            "url": "https://orcid.org/0000-0002-7359-0633",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "University of Bologna"
+            }
+        }
+    ],
+    "datePublished": "2023-04-30",
+    "publisher": {
+        "@type": "Organization",
+        "name": "ELIXIR Europe",
+        "url": "https://elixir-europe.org"
+    },
+    "version": "1.0",
+    "distribution": [
+        {
+            "@type": "cr:FileObject",
+            "@id": "file_benchmark_csv",
+            "name": "Benchmark annotations (CSV)",
+            "description": "CSV file containing all interface annotations and labels",
+            "contentUrl": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_annotated_updated_30042023.csv",
+            "encodingFormat": "text/csv",
+            "sha256": null
+        },
+        {
+            "@type": "cr:FileObject",
+            "@id": "file_mmcif_archive",
+            "name": "mmCIF structure files archive",
+            "description": "ZIP archive containing all mmCIF format structure files",
+            "contentUrl": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/",
+            "encodingFormat": "application/zip",
+            "contains": [
+                {
+                    "@type": "cr:FileSet",
+                    "pattern": "benchmark_mmcif_format/*.cif.gz",
+                    "description": "Compressed mmCIF files for all interfaces"
+                }
+            ]
+        },
+        {
+            "@type": "cr:FileObject",
+            "@id": "file_pdb_archive",
+            "name": "PDB structure files archive",
+            "description": "ZIP archive containing all PDB format structure files",
+            "contentUrl": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/",
+            "encodingFormat": "application/zip",
+            "contains": [
+                {
+                    "@type": "cr:FileSet",
+                    "pattern": "benchmark_pdb_format/*.pdb.gz",
+                    "description": "Compressed PDB files for all interfaces"
+                }
+            ]
+        },
+        {
+            "@type": "cr:FileObject",
+            "@id": "file_dataset_json",
+            "name": "Dataset metadata JSON",
+            "description": "Complete dataset metadata in JSON-LD format",
+            "contentUrl": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/blob/main/dataset.json",
+            "encodingFormat": "application/json"
+        }
+    ],
+    "recordSet": [
+        {
+            "@type": "cr:RecordSet",
+            "@id": "recordset_protein_interfaces",
+            "name": "protein_interfaces",
+            "description": "Protein-protein interaction interface records",
+            "field": [
+                {
+                    "@type": "cr:Field",
+                    "name": "InterfaceID",
+                    "description": "Unique interface identifier (e.g., 1A17_6)",
+                    "dataType": "https://schema.org/Text",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "InterfaceID"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "PDB_ID",
+                    "description": "Protein Data Bank identifier (4-letter code)",
+                    "dataType": "https://schema.org.Text",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "PDB_ID"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "physio",
+                    "description": "Physiological classification (True=physiological, False=non-physiological)",
+                    "dataType": "https://schema.org/Boolean",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "physio"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "label",
+                    "description": "Numeric label (1=physiological, 0=non-physiological)",
+                    "dataType": "https://schema.org/Integer",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "label"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "bsa",
+                    "description": "Buried surface area at the interface in square angstroms",
+                    "dataType": "https://schema.org/Float",
+                    "unitCode": "\u00c5\u00b2",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Buried Surface Area (BSA)"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Atomic_Contacts",
+                    "description": "Number of atomic contacts at the interface",
+                    "dataType": "https://schema.org/Integer",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Atomic Contacts"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Gene",
+                    "description": "Gene name associated with the protein",
+                    "dataType": "https://schema.org/Text",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Gene"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Superfamily",
+                    "description": "Protein superfamily classification",
+                    "dataType": "https://schema.org/Text",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Superfamily"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "BSA_Polar",
+                    "description": "Polar component of buried surface area",
+                    "dataType": "https://schema.org/Float",
+                    "unitCode": "\u00c5\u00b2",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "BSA Polar"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "BSA_Apolar",
+                    "description": "Apolar component of buried surface area",
+                    "dataType": "https://schema.org/Float",
+                    "unitCode": "\u00c5\u00b2",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "BSA Apolar"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Fraction_Polar",
+                    "description": "Fraction of polar contacts at the interface",
+                    "dataType": "https://schema.org/Float",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Fraction Polar"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Fraction_Apolar",
+                    "description": "Fraction of apolar contacts at the interface",
+                    "dataType": "https://schema.org/Float",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Fraction Apolar"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Resolution",
+                    "description": "X-ray crystallography resolution in angstroms",
+                    "dataType": "https://schema.org/Float",
+                    "unitCode": "\u00c5",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Resolution"
+                        }
+                    }
+                },
+                {
+                    "@type": "cr:Field",
+                    "name": "Organism",
+                    "description": "Source organism of the protein",
+                    "dataType": "https://schema.org/Text",
+                    "source": {
+                        "fileObject": "file_benchmark_csv",
+                        "extract": {
+                            "column": "Organism"
+                        }
+                    }
+                }
+            ],
+            "key": [
+                "InterfaceID"
+            ]
+        }
+    ],
+    "cr:defaultRecordSet": "recordset_protein_interfaces",
+    "cr:dataStandard": {
+        "@type": "CreativeWork",
+        "name": "Croissant 1.0",
+        "url": "https://mlcommons.org/croissant/1.0"
+    },
+    "citation": {
+        "@type": "ScholarlyArticle",
+        "@id": "https://doi.org/10.1002/pmic.202200323",
+        "name": "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study",
+        "author": [
+            {
+                "@type": "Person",
+                "givenName": "Hugo",
+                "familyName": "Schweke",
+                "name": "Hugo Schweke"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Qifang",
+                "familyName": "Xu",
+                "name": "Qifang Xu"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Gerardo",
+                "familyName": "Tauriello",
+                "name": "Gerardo Tauriello"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Lorenzo",
+                "familyName": "Pantolini",
+                "name": "Lorenzo Pantolini"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Torsten",
+                "familyName": "Schwede",
+                "name": "Torsten Schwede"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Fr\u00e9d\u00e9ric",
+                "familyName": "Cazals",
+                "name": "Fr\u00e9d\u00e9ric Cazals"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Alix",
+                "familyName": "Lh\u00e9ritier",
+                "name": "Alix Lh\u00e9ritier"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Juan",
+                "familyName": "Fernandez-Recio",
+                "name": "Juan Fernandez-Recio"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Luis Angel",
+                "familyName": "Rodr\u00edguez-Lumbreras",
+                "name": "Luis Angel Rodr\u00edguez-Lumbreras"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Ora",
+                "familyName": "Schueler-Furman",
+                "name": "Ora Schueler-Furman"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Julia K.",
+                "familyName": "Varga",
+                "name": "Julia K. Varga"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Brian",
+                "familyName": "Jim\u00e9nez-Garc\u00eda",
+                "name": "Brian Jim\u00e9nez-Garc\u00eda"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Manon F.",
+                "familyName": "R\u00e9au",
+                "name": "Manon F. R\u00e9au"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Alexandre M. J. J.",
+                "familyName": "Bonvin",
+                "name": "Alexandre M. J. J. Bonvin"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Castrense",
+                "familyName": "Savojardo",
+                "name": "Castrense Savojardo"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Pier-Luigi",
+                "familyName": "Martelli",
+                "name": "Pier-Luigi Martelli"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Rita",
+                "familyName": "Casadio",
+                "name": "Rita Casadio"
+            },
+            {
+                "@type": "Person",
+                "givenName": "J\u00e9r\u00f4me",
+                "familyName": "Tubiana",
+                "name": "J\u00e9r\u00f4me Tubiana"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Haim J.",
+                "familyName": "Wolfson",
+                "name": "Haim J. Wolfson"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Romina",
+                "familyName": "Oliva",
+                "name": "Romina Oliva"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Didier",
+                "familyName": "Barradas-Bautista",
+                "name": "Didier Barradas-Bautista"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Tiziana",
+                "familyName": "Ricciardelli",
+                "name": "Tiziana Ricciardelli"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Luigi",
+                "familyName": "Cavallo",
+                "name": "Luigi Cavallo"
+            },
+            {
+                "@type": "Person",
+                "givenName": "\u010ceslovas",
+                "familyName": "Venclovas",
+                "name": "\u010ceslovas Venclovas"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Kliment",
+                "familyName": "Olechnovi\u010d",
+                "name": "Kliment Olechnovi\u010d"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Raphael",
+                "familyName": "Guerois",
+                "name": "Raphael Guerois"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Jessica",
+                "familyName": "Andreani",
+                "name": "Jessica Andreani"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Juliette",
+                "familyName": "Martin",
+                "name": "Juliette Martin"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Xiao",
+                "familyName": "Wang",
+                "name": "Xiao Wang"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Genki",
+                "familyName": "Terashi",
+                "name": "Genki Terashi"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Daipayan",
+                "familyName": "Sarkar",
+                "name": "Daipayan Sarkar"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Charles",
+                "familyName": "Christoffer",
+                "name": "Charles Christoffer"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Tunde",
+                "familyName": "Aderinwale",
+                "name": "Tunde Aderinwale"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Jacob",
+                "familyName": "Verburgt",
+                "name": "Jacob Verburgt"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Daisuke",
+                "familyName": "Kihara",
+                "name": "Daisuke Kihara"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Anthony",
+                "familyName": "Marchand",
+                "name": "Anthony Marchand"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Bruno E.",
+                "familyName": "Correia",
+                "name": "Bruno E. Correia"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Rui",
+                "familyName": "Duan",
+                "name": "Rui Duan"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Liming",
+                "familyName": "Qiu",
+                "name": "Liming Qiu"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Xianjin",
+                "familyName": "Xu",
+                "name": "Xianjin Xu"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Shuang",
+                "familyName": "Zhang",
+                "name": "Shuang Zhang"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Xiaoqin",
+                "familyName": "Zou",
+                "name": "Xiaoqin Zou"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Sucharita",
+                "familyName": "Dey",
+                "name": "Sucharita Dey"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Roland L.",
+                "familyName": "Dunbrack",
+                "name": "Roland L. Dunbrack"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Emmanuel D.",
+                "familyName": "Levy",
+                "name": "Emmanuel D. Levy"
+            },
+            {
+                "@type": "Person",
+                "givenName": "Shoshana J.",
+                "familyName": "Wodak",
+                "name": "Shoshana J. Wodak"
+            }
+        ],
+        "datePublished": "2023-06-27",
+        "isPartOf": {
+            "@type": "PublicationIssue",
+            "issueNumber": "17",
+            "isPartOf": {
+                "@type": "PublicationVolume",
+                "volumeNumber": "23",
+                "isPartOf": {
+                    "@type": "Periodical",
+                    "name": "Proteomics"
+                }
+            }
+        },
+        "pagination": "e2200323",
+        "identifier": [
+            "https://doi.org/10.1002/pmic.202200323",
+            {
+                "@type": "PropertyValue",
+                "propertyID": "PMID",
+                "value": "37365936"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "PMCID",
+                "value": "PMC10937251"
+            }
+        ],
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37365936/",
+        "sameAs": "https://doi.org/10.1002/pmic.202200323"
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "physio",
+            "description": "Binary label indicating physiological (TRUE) or non-physiological (FALSE) homodimer",
+            "value": "Boolean classification"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "bsa",
+            "description": "Buried surface area of the protein-protein interface",
+            "unitCode": "\u00c5\u00b2",
+            "value": "Surface area"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "contacts",
+            "description": "Number of atomic contacts at the interface",
+            "value": "Integer count"
+        }
+    ],
+    "measurementTechnique": [
+        "X-ray crystallography",
+        "Conservation of interaction geometry analysis",
+        "Cross-crystal form comparison (ProtCID)",
+        "Homolog comparison (QSalign)"
+    ],
+    "dateCreated": "2023-04-30",
+    "dateModified": "2026-11-11",
+    "maintainer": {
+        "@type": "Organization",
+        "name": "ELIXIR 3D-BioInfo Community",
+        "url": "https://elixir-europe.org/platforms/3d-bioinfo"
+    },
+    "size": "1677 entries",
+    "numberOfItems": 1677,
+    "isBasedOn": [
+        {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1002/pmic.202200323",
+            "name": "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study",
+            "url": "https://doi.org/10.1002/pmic.202200323"
+        },
+        {
+            "@type": "Dataset",
+            "@id": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
+            "name": "ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces (original benchmark repository)",
+            "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"
+        }
+    ],
+    "hasPart": {
+        "@type": "DataDownload",
+        "name": "Per-interface items",
+        "description": "The 1677 interface items are in bioschema/dataset_with_interfaces.json and bioschema/interface_protein_pairs/.",
+        "contentUrl": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/bioschema/dataset_with_interfaces.json",
+        "encodingFormat": "application/ld+json"
+    }
+}
+        </script>
+        </head>
+        <body>
+        <h1>Protein-Protein Interaction Interface Benchmark Dataset</h1>
+        <p>This page contains embedded Bioschemas and Croissant markup for the dataset.</p>
+        <p>The JSON-LD markup in the header makes this dataset discoverable by search engines and compatible with Google Dataset Search and ML dataset platforms.</p>
+        </body>
+        </html>

@@ -13,7 +13,15 @@
     "name": "Protein 4NQQ",
     "description": "Protein structure with PDB ID: 4NQQ. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 4NQQ_1 as a homodimer.",
     "url": "https://www.rcsb.org/structure/4NQQ",
-    "taxonomicRange": {},
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Mus musculus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "description": "Organism taxonomy information from PDB metadata",
+      "termCode": "10090",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090",
+      "identifier": "taxonomy:10090"
+    },
     "alternateName": [
       "PDB 4NQQ",
       "Protein ID 4NQQ"
@@ -22,13 +30,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/4nqq_1.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/4nqq_1.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4nqq.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/4nqq.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -96,26 +104,51 @@
       {
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
-        "description": "Structural metadata from RCSB Protein Data Bank",
-        "value": "{\"pdb_id\": \"4NQQ\", \"structure_metadata\": {\"pdb_id\": \"4NQQ\", \"resolution\": 3.2, \"deposition_date\": \"2013-11-25T00:00:00+0000\", \"release_date\": \"2014-09-24T00:00:00+0000\", \"experimental_method\": null, \"source_organism\": [], \"citation\": {\"title\": \"Structural and energetic determinants of adhesive binding specificity in type I cadherins.\", \"doi\": \"10.1073/pnas.1416737111\", \"authors\": [\"Vendome, J.\", \"Felsovalyi, K.\", \"Song, H.\", \"Yang, Z.\", \"Jin, X.\", \"Brasch, J.\", \"Harrison, O.J.\", \"Ahlsen, G.\", \"Bahna, F.\", \"Kaczynska, A.\", \"Katsamba, P.S.\", \"Edmond, D.\", \"Hubbell, W.L.\", \"Shapiro, L.\", \"Honig, B.\"]}, \"entity_count\": 4, \"r_factor\": null, \"space_group\": null, \"unit_cell\": {\"a\": 123.085, \"b\": 188.7, \"c\": 53.15, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"obsolete\": false, \"replaced_by\": null, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": [\"1\", \"2\", \"3\", \"4\"], \"polymer_composition\": \"homomeric protein\", \"assembly_polymer_count\": 2}, \"entity_metadata\": {}, \"interface_chains\": {\"chain1\": \"nan\", \"chain2\": \"nan\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2026-01-03T13:51:31.674301\"}",
+        "description": "Structural metadata from RCSB Protein Data Bank. Full record: in-repo snapshot (value); live record at RCSB (url).",
+        "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/4NQQ.json",
+        "url": "https://data.rcsb.org/rest/v1/core/entry/4NQQ",
+        "sameAs": "https://www.rcsb.org/structure/4NQQ",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
           "value": {
             "resolution": 3.2,
-            "experimentalMethod": null,
+            "experimentalMethod": "X-RAY DIFFRACTION",
             "depositionDate": "2013-11-25T00:00:00+0000",
             "releaseDate": "2014-09-24T00:00:00+0000",
-            "sourceOrganism": [],
-            "spaceGroup": null,
+            "sourceOrganism": [
+              "Mus musculus"
+            ],
+            "spaceGroup": "P 21 21 2",
             "rFactor": null,
             "entityCount": 4,
-            "chainCount": null,
-            "uniqueSequences": null,
-            "isHomomer": false,
-            "homomerType": null
+            "chainCount": 4,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "taxonomyIds": [
+              10090
+            ],
+            "primaryTaxonomyId": 10090
           }
-        }
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "interface_chains",
+            "value": {
+              "chain1": "nan",
+              "chain2": "nan",
+              "assembly_chain1": "A",
+              "assembly_chain2": "B"
+            }
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "enrichment_timestamp",
+            "value": "2026-11-11T18:12:13.214169"
+          }
+        ]
       },
       {
         "@type": "PropertyValue",
@@ -132,6 +165,88 @@
       },
       {
         "@type": "PropertyValue",
+        "name": "ExperimentalMethod",
+        "value": "X-RAY DIFFRACTION",
+        "description": "Experimental method used for structure determination"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Mus musculus",
+        "description": "Mus musculus (taxonomy ID: 10090)",
+        "taxonomyId": 10090,
+        "taxonomyUrl": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 4,
+        "description": "Number of chains in the structure (from RCSB API)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences (from RCSB API)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "EWVMPPIFVPENGKGPFPQRLNQLKSNKDRGTKIFYSITGPGADSPPEGVFTIEKESGWLLLHMPLDREKIVKYELYGHAVSENGASVEEPMNISIIVTDQNDNKPKFTQDTFRGSVLEGVMPGTSVMQVTATDEDDAVNTYNGVVAYSIHSQEPKEPHDLMFTIHKSTGTISVISSGLDREKVPEYRLTVQATDMDGEGSTTTAEAVVQILD",
+        "description": "Amino acid sequence for chain A (length: 213) from RCSB API",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 213,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/4NQQ"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "EWVMPPIFVPENGKGPFPQRLNQLKSNKDRGTKIFYSITGPGADSPPEGVFTIEKESGWLLLHMPLDREKIVKYELYGHAVSENGASVEEPMNISIIVTDQNDNKPKFTQDTFRGSVLEGVMPGTSVMQVTATDEDDAVNTYNGVVAYSIHSQEPKEPHDLMFTIHKSTGTISVISSGLDREKVPEYRLTVQATDMDGEGSTTTAEAVVQILD",
+        "description": "Amino acid sequence for chain B (length: 213) from RCSB API",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 213,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/4NQQ"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "EWVMPPIFVPENGKGPFPQRLNQLKSNKDRGTKIFYSITGPGADSPPEGVFTIEKESGWLLLHMPLDREKIVKYELYGHAVSENGASVEEPMNISIIVTDQNDNKPKFTQDTFRGSVLEGVMPGTSVMQVTATDEDDAVNTYNGVVAYSIHSQEPKEPHDLMFTIHKSTGTISVISSGLDREKVPEYRLTVQATDMDGEGSTTTAEAVVQILD",
+        "description": "Amino acid sequence for chain C (length: 213) from RCSB API",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 213,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/4NQQ"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_D_Sequence",
+        "value": "EWVMPPIFVPENGKGPFPQRLNQLKSNKDRGTKIFYSITGPGADSPPEGVFTIEKESGWLLLHMPLDREKIVKYELYGHAVSENGASVEEPMNISIIVTDQNDNKPKFTQDTFRGSVLEGVMPGTSVMQVTATDEDDAVNTYNGVVAYSIHSQEPKEPHDLMFTIHKSTGTISVISSGLDREKVPEYRLTVQATDMDGEGSTTTAEAVVQILD",
+        "description": "Amino acid sequence for chain D (length: 213) from RCSB API",
+        "chainId": "D",
+        "entityId": "1",
+        "sequenceLength": 213,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/4NQQ"
+      },
+      {
+        "@type": "PropertyValue",
         "name": "PrimaryCitation",
         "value": "Structural and energetic determinants of adhesive binding specificity in type I cadherins.",
         "description": "Primary publication for this structure"
@@ -141,6 +256,22 @@
         "name": "PublicationDOI",
         "value": "10.1073/pnas.1416737111",
         "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, D, Length: 213",
+        "description": "Entity 1 information",
+        "organism": "Mus musculus",
+        "taxonomyId": 10090,
+        "taxonomyUrl": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "NCBI_Taxonomy_ID",
+        "value": "10090",
+        "description": "NCBI Taxonomy ID for Mus musculus",
+        "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
       },
       {
         "@type": "PropertyValue",
@@ -322,6 +453,12 @@
       "name": "Fraction Apolar",
       "value": 0.59960902585158,
       "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PublishedPhysio",
+      "value": true,
+      "description": "Label in the published benchmark (Schweke et al. 2023, benchmark_annotated.csv); 'physio' holds the label of the curated annotation file used by this package"
     },
     {
       "@type": "PropertyValue",

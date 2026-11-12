@@ -13,7 +13,15 @@
     "name": "Protein 1P35",
     "description": "Protein structure with PDB ID: 1P35. Part of the ELIXIR 3D-BioInfo benchmark dataset. This protein participates in interface 1P35_11 as a homodimer.",
     "url": "https://www.rcsb.org/structure/1P35",
-    "taxonomicRange": {},
+    "taxonomicRange": {
+      "@type": "DefinedTerm",
+      "name": "Autographa californica nucleopolyhedrovirus",
+      "inDefinedTermSet": "https://www.ncbi.nlm.nih.gov/taxonomy",
+      "description": "Organism taxonomy information from PDB metadata",
+      "termCode": "46015",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46015",
+      "identifier": "taxonomy:46015"
+    },
     "alternateName": [
       "PDB 1P35",
       "Protein ID 1P35"
@@ -22,13 +30,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/1p35_11.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/1p35_11.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/1p35_11.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/1p35_11.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -96,32 +104,173 @@
       {
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
-        "description": "Structural metadata from RCSB Protein Data Bank",
-        "value": "{\"pdb_id\": \"1P35\", \"structure_metadata\": {\"pdb_id\": \"1P35\", \"resolution\": null, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": null, \"source_organism\": [], \"citation\": null, \"entity_count\": 0, \"r_factor\": null, \"space_group\": null, \"unit_cell\": null, \"found_in_api\": false, \"obsolete\": false, \"replaced_by\": null, \"sequences\": {}, \"chain_info\": {}, \"entity_info\": {}, \"is_homomer\": false, \"sequence_clusters\": [], \"chain_ids\": [], \"entity_ids\": []}, \"entity_metadata\": {}, \"interface_chains\": {\"chain1\": \"B\", \"chain2\": \"B\", \"assembly_chain1\": \"A\", \"assembly_chain2\": \"B\"}, \"enrichment_timestamp\": \"2026-01-03T13:49:28.475259\"}",
+        "description": "Structural metadata from RCSB Protein Data Bank. Full record: in-repo snapshot (value); live record at RCSB (url).",
+        "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/1P35.json",
+        "url": "https://data.rcsb.org/rest/v1/core/entry/1P35",
+        "sameAs": "https://www.rcsb.org/structure/1P35",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
           "value": {
-            "resolution": null,
-            "experimentalMethod": null,
-            "depositionDate": null,
-            "releaseDate": null,
-            "sourceOrganism": [],
-            "spaceGroup": null,
+            "resolution": 2.2,
+            "experimentalMethod": "X-RAY DIFFRACTION",
+            "depositionDate": "1998-09-18T00:00:00+0000",
+            "releaseDate": "1999-06-01T00:00:00+0000",
+            "sourceOrganism": [
+              "Autographa californica nucleopolyhedrovirus"
+            ],
+            "spaceGroup": "C 2 2 21",
             "rFactor": null,
-            "entityCount": 0,
-            "chainCount": null,
-            "uniqueSequences": null,
-            "isHomomer": false,
-            "homomerType": null
+            "entityCount": 4,
+            "chainCount": 3,
+            "uniqueSequences": 1,
+            "isHomomer": true,
+            "homomerType": "monomer",
+            "taxonomyIds": [
+              46015
+            ],
+            "primaryTaxonomyId": 46015
           }
-        }
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "interface_chains",
+            "value": {
+              "chain1": "B",
+              "chain2": "B",
+              "assembly_chain1": "A",
+              "assembly_chain2": "B"
+            }
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "interface_sequence_analysis",
+            "value": {
+              "chain1_sequence_length": 299,
+              "chain2_sequence_length": 299,
+              "sequences_identical": true,
+              "sequence_identity": 100.0
+            }
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "enrichment_timestamp",
+            "value": "2026-11-11T18:12:10.937358"
+          }
+        ]
       },
       {
         "@type": "PropertyValue",
         "name": "PDBMetadataStatus",
         "value": "Complete metadata available",
         "description": "This PDB entry is current and all metadata has been fetched successfully"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Resolution",
+        "value": 2.2,
+        "unitCode": "Å",
+        "description": "X-ray crystallography resolution"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ExperimentalMethod",
+        "value": "X-RAY DIFFRACTION",
+        "description": "Experimental method used for structure determination"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SourceOrganism",
+        "value": "Autographa californica nucleopolyhedrovirus",
+        "description": "Autographa californica nucleopolyhedrovirus (taxonomy ID: 46015)",
+        "taxonomyId": 46015,
+        "taxonomyUrl": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46015"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomericStructure",
+        "value": true,
+        "description": "This is a homomeric monomer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "HomomerType",
+        "value": "monomer",
+        "description": "Type of homomeric assembly"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ChainCount",
+        "value": 3,
+        "description": "Number of chains in the structure (from RCSB API)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "UniqueSequenceCount",
+        "value": 1,
+        "description": "Number of unique amino acid sequences (from RCSB API)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_A_Sequence",
+        "value": "CVIFPVEIDVSQTIIRDCQVDKQTRELVYINKIMNTQLTKPVLMMFNISGPIRSVTRKNNNLRDRIKSKVDEQFDQLERDYSDQMDGFHDSIKYFKDEHYSVSCQNGSVLKSKFAKILKSHDYTDKKSIEAYEKYCLPKLVDERNDYYVAVCVLKPGFENGSNQVLSFEYNPIGNKVIVPFAHEINDTGLYEYDVVAYVDSVQFDGEQFEEFVQSLILPSSFKNSEKVLYYNEASKNKSMIYKALEFTTESSWGKSEKYNWKIFCNGFIYDKKSKVLYVKLHNVTSALNKNVILNTIKA",
+        "description": "Amino acid sequence for chain A (length: 299) from RCSB API",
+        "chainId": "A",
+        "entityId": "1",
+        "sequenceLength": 299,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/1P35"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_B_Sequence",
+        "value": "CVIFPVEIDVSQTIIRDCQVDKQTRELVYINKIMNTQLTKPVLMMFNISGPIRSVTRKNNNLRDRIKSKVDEQFDQLERDYSDQMDGFHDSIKYFKDEHYSVSCQNGSVLKSKFAKILKSHDYTDKKSIEAYEKYCLPKLVDERNDYYVAVCVLKPGFENGSNQVLSFEYNPIGNKVIVPFAHEINDTGLYEYDVVAYVDSVQFDGEQFEEFVQSLILPSSFKNSEKVLYYNEASKNKSMIYKALEFTTESSWGKSEKYNWKIFCNGFIYDKKSKVLYVKLHNVTSALNKNVILNTIKA",
+        "description": "Amino acid sequence for chain B (length: 299) from RCSB API",
+        "chainId": "B",
+        "entityId": "1",
+        "sequenceLength": 299,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/1P35"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Chain_C_Sequence",
+        "value": "CVIFPVEIDVSQTIIRDCQVDKQTRELVYINKIMNTQLTKPVLMMFNISGPIRSVTRKNNNLRDRIKSKVDEQFDQLERDYSDQMDGFHDSIKYFKDEHYSVSCQNGSVLKSKFAKILKSHDYTDKKSIEAYEKYCLPKLVDERNDYYVAVCVLKPGFENGSNQVLSFEYNPIGNKVIVPFAHEINDTGLYEYDVVAYVDSVQFDGEQFEEFVQSLILPSSFKNSEKVLYYNEASKNKSMIYKALEFTTESSWGKSEKYNWKIFCNGFIYDKKSKVLYVKLHNVTSALNKNVILNTIKA",
+        "description": "Amino acid sequence for chain C (length: 299) from RCSB API",
+        "chainId": "C",
+        "entityId": "1",
+        "sequenceLength": 299,
+        "sequenceSource": "RCSB API",
+        "sourceUrl": "https://www.rcsb.org/structure/1P35"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PrimaryCitation",
+        "value": "Crystal structure of baculovirus P35: role of a novel reactive site loop in apoptotic caspase inhibition.",
+        "description": "Primary publication for this structure"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "PublicationDOI",
+        "value": "10.1093/emboj/18.8.2031",
+        "description": "DOI of the primary publication"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Entity_1",
+        "value": "Chains: A, B, C, Length: 299",
+        "description": "Entity 1 information",
+        "organism": "Autographa californica nucleopolyhedrovirus",
+        "taxonomyId": 46015,
+        "taxonomyUrl": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46015"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "NCBI_Taxonomy_ID",
+        "value": "46015",
+        "description": "NCBI Taxonomy ID for Autographa californica nucleopolyhedrovirus",
+        "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46015"
       },
       {
         "@type": "PropertyValue",
@@ -294,6 +443,12 @@
       "name": "Fraction Apolar",
       "value": 0.447185596031596,
       "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PublishedPhysio",
+      "value": false,
+      "description": "Label in the published benchmark (Schweke et al. 2023, benchmark_annotated.csv); 'physio' holds the label of the curated annotation file used by this package"
     },
     {
       "@type": "PropertyValue",

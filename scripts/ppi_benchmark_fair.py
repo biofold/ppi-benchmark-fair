@@ -14,10 +14,12 @@ Revised: fixes and robustness improvements:
 import pandas as pd
 import json
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from io import BytesIO
 from datetime import datetime
 from typing import Set, Dict, List, Tuple, Any, Optional
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace as _dc_replace
 from pathlib import Path
 import logging
 import os
@@ -31,6 +33,13 @@ from collections import Counter, defaultdict
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# Shared definitions (license, creators, citation of the original work, PDB snapshot handling)
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fair_common import (FAIR_LICENSE_URL, FAIR_LICENSE_NAME, FAIR_CREATORS, SCHWEKE_DOI,
+                         DEFAULT_PDB_SNAPSHOT_URL, apply_provenance, build_pdb_metadata_property,
+                         without_interfaces)
 
 @dataclass
 class ProteinInterface:
@@ -211,7 +220,9 @@ class PPIBenchmarkProcessor:
                  check_pdb_label: bool = False, pdb_label_dir: Optional[str] = None,
                  check_cif_label: bool = False, cif_label_dir: Optional[str] = None,
                  fetch_pdb_metadata: bool = False, pdb_api_base_url: str = "https://data.rcsb.org/rest/v1",
-                 cluster_file: Optional[str] = None):
+                 cluster_file: Optional[str] = None,
+                 inline_pdb_metadata: bool = False, pdb_snapshot_url: str = DEFAULT_PDB_SNAPSHOT_URL,
+                 published_csv: Optional[str] = None):
         """
         Initialize the processor with the CSV and structure file URLs.
 
@@ -228,6 +239,11 @@ class PPIBenchmarkProcessor:
             fetch_pdb_metadata: Whether to fetch additional PDB metadata from RCSB API
             pdb_api_base_url: Base URL for RCSB PDB REST API
             cluster_file: Path to BLASTClust output file (optional)
+            inline_pdb_metadata: Embed the full RCSB record in every interface item (large) instead of linking
+                to the in-repo snapshot (bioschema/pdb_metadata/<PDB_ID>.json) and to the live RCSB record
+            pdb_snapshot_url: Base URL under which the snapshot files are published
+            published_csv: CSV with the labels of the published benchmark (benchmark_annotated.csv); when given,
+                every interface also gets a PublishedPhysio property next to the label of the curated file
         """
         self.csv_url = csv_url
         self.mmcif_base_url = mmcif_base_url.rstrip('/') + '/'
@@ -241,6 +257,11 @@ class PPIBenchmarkProcessor:
         self.fetch_pdb_metadata = fetch_pdb_metadata
         self.pdb_api_base_url = pdb_api_base_url.rstrip('/')
         self.cluster_file = cluster_file
+        self.inline_pdb_metadata = inline_pdb_metadata
+        self.pdb_snapshot_url = pdb_snapshot_url.rstrip("/") + "/"
+        self.pdb_snapshots = {}  # PDB ID -> entry-level record written to <output>/pdb_metadata/
+        self.published_csv = published_csv
+        self.published_labels = {}  # InterfaceID -> label in the published benchmark
 
         self.dataset = None
         self.protein_interfaces = []
@@ -255,6 +276,11 @@ class PPIBenchmarkProcessor:
         # requests session reuse
         self.session = requests.Session()
         self.session.headers.update({'User-Agent': 'ppi_benchmark_fair/1.0'})
+        # Retry transient failures (timeouts, connection errors, HTTP 429/5xx) so that a single failed
+        # request does not leave a PDB entry with empty metadata. 404 (e.g. obsolete entries) is not retried.
+        _retry = Retry(total=4, backoff_factor=1.5, status_forcelist=[429, 500, 502, 503, 504], allowed_methods=['GET'])
+        self.session.mount('https://', HTTPAdapter(max_retries=_retry))
+        self.session.mount('http://', HTTPAdapter(max_retries=_retry))
 
     def fetch_pdb_structure_metadata_robust(self, pdb_id: str) -> Dict[str, Any]:
         """
@@ -345,13 +371,16 @@ class PPIBenchmarkProcessor:
                         elif res is not None:
                             metadata["resolution"] = float(res)
 
-                    # Experimental method
-                    if "exptl_method" in entry_info:
-                        methods = entry_info["exptl_method"]
-                        if isinstance(methods, list) and methods:
-                            metadata["experimental_method"] = methods[0]
-                        elif methods:
-                            metadata["experimental_method"] = methods
+                    # Experimental method: RCSB reports it in exptl[].method and in
+                    # rcsb_entry_info.experimental_method (older code looked for "exptl_method", which does not exist)
+                    method = None
+                    if data.get("exptl"):
+                        method = data["exptl"][0].get("method")
+                    if not method:
+                        raw_method = entry_info.get("experimental_method") or entry_info.get("exptl_method")
+                        method = raw_method[0] if isinstance(raw_method, list) and raw_method else raw_method
+                    if method:
+                        metadata["experimental_method"] = method
 
                     # Polymer composition
                     if "polymer_composition" in entry_info:
@@ -368,7 +397,7 @@ class PPIBenchmarkProcessor:
                     citation = data["citation"][0]
                     citation_info = {
                         "title": citation.get("title"),
-                        "doi": citation.get("pdbx_database_id_doi"),
+                        "doi": citation.get("pdbx_database_id_DOI") or citation.get("pdbx_database_id_doi"),  # RCSB changed the key case
                         "authors": citation.get("rcsb_authors")
                     }
                     metadata["citation"] = {k: v for k, v in citation_info.items() if v}
@@ -620,6 +649,26 @@ class PPIBenchmarkProcessor:
         # If obsolete and no sequences, try header parsing
         if structure_metadata.get("obsolete", False):
             logger.warning(f"PDB entry {interface.ID} is OBSOLETE. Replaced by: {structure_metadata.get('replaced_by', 'Unknown')}")
+
+            # RCSB keeps a removal record for obsolete entries (the entry endpoints return 404)
+            removed = self.fetch_removed_holding(pdb_id)
+            if removed:
+                holding = removed.get("rcsb_repository_holdings_removed", {}) or {}
+                structure_metadata["rcsb_removed_holding"] = removed
+                if holding.get("remove_date") and not structure_metadata.get("obsolete_date"):
+                    structure_metadata["obsolete_date"] = holding["remove_date"]
+                for source_key, target_key in (("deposit_date", "deposition_date"), ("release_date", "release_date")):
+                    if holding.get(source_key) and not structure_metadata.get(target_key):
+                        structure_metadata[target_key] = holding[source_key]
+                if holding.get("title") and not structure_metadata.get("title"):
+                    structure_metadata["title"] = holding["title"]
+                if holding.get("id_codes_replaced_by") and not structure_metadata.get("replaced_by"):
+                    structure_metadata["replaced_by"] = holding["id_codes_replaced_by"]
+
+            # Keep a metadata snapshot of the entry that replaces the obsolete one (not part of the benchmark)
+            replacements = structure_metadata.get("replaced_by") or []
+            for replacement_id in ([replacements] if isinstance(replacements, str) else replacements):
+                self._record_replacement_snapshot(replacement_id, interface, pdb_id)
             
             # If obsolete and no sequences, try to get sequences from header
             if not structure_metadata.get("sequences"):
@@ -730,8 +779,10 @@ class PPIBenchmarkProcessor:
                         if response.status_code == 200:
                             entity_data = response.json()
                             entity_metadata[entity_id] = entity_data
-                    except:
-                        pass
+                        elif response.status_code != 404:
+                            logger.warning(f"Entity {pdb_id}/{entity_id}: HTTP {response.status_code}")
+                    except Exception as exc:
+                        logger.warning(f"Could not fetch entity metadata for {pdb_id}/{entity_id}: {exc}")
 
         # Combine metadata
         enriched_metadata = {
@@ -1471,7 +1522,8 @@ class PPIBenchmarkProcessor:
                             "name": f"ReplacedBy_{i+1}",
                             "value": replacement,
                             "description": f"Newer PDB ID that replaces this obsolete entry",
-                            "url": f"https://www.rcsb.org/structure/{replacement}"
+                            "url": f"https://www.rcsb.org/structure/{replacement}",
+                            **self._replacement_link(replacement)
                         })
                 else:
                     obsolete_properties.append({
@@ -1479,7 +1531,8 @@ class PPIBenchmarkProcessor:
                         "name": "ReplacedBy",
                         "value": structure_meta["replaced_by"],
                         "description": "Newer PDB ID that replaces this obsolete entry",
-                        "url": f"https://www.rcsb.org/structure/{structure_meta['replaced_by']}"
+                        "url": f"https://www.rcsb.org/structure/{structure_meta['replaced_by']}",
+                        **self._replacement_link(structure_meta['replaced_by'])
                     })
 
             if structure_meta.get("obsolete_date"):
@@ -1521,17 +1574,13 @@ class PPIBenchmarkProcessor:
                     "experimental_method": structure_meta.get("experimental_method")
                 }
                 
-                minimal_metadata = {
-                    "@type": "PropertyValue",
-                    "name": "PDBStructureMetadata",
-                    "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
-                    "value": json.dumps(structure_meta, default=str),
-                    "valueReference": {
-                        "@type": "PropertyValue",
-                        "name": "ParsedPDBMetadata",
-                        "value": metadata_summary
-                    }
-                }
+                minimal_metadata, _snapshot = build_pdb_metadata_property(
+                    structure_meta,
+                    "Structural metadata from PDB (OBSOLETE ENTRY - data from header file).",
+                    {"@type": "PropertyValue", "name": "ParsedPDBMetadata", "value": metadata_summary},
+                    snapshot_base_url=self.pdb_snapshot_url, inline=self.inline_pdb_metadata,
+                    default_retrieved=datetime.now().strftime("%Y-%m-%d"))
+                self._record_pdb_snapshot(_snapshot)
                 protein_markup["additionalProperty"].append(minimal_metadata)
 
             # Add a note about limited metadata
@@ -1579,17 +1628,13 @@ class PPIBenchmarkProcessor:
                     parsed_metadata["taxonomyIds"] = taxonomy_ids
                     parsed_metadata["primaryTaxonomyId"] = taxonomy_ids[0]
 
-            pdb_metadata_property = {
-                "@type": "PropertyValue",
-                "name": "PDBStructureMetadata",
-                "description": "Structural metadata from RCSB Protein Data Bank",
-                "value": json.dumps(pdb_metadata, default=str),
-                "valueReference": {
-                    "@type": "PropertyValue",
-                    "name": "ParsedPDBMetadata",
-                    "value": parsed_metadata
-                }
-            }
+            pdb_metadata_property, _snapshot = build_pdb_metadata_property(
+                pdb_metadata,
+                "Structural metadata from RCSB Protein Data Bank.",
+                {"@type": "PropertyValue", "name": "ParsedPDBMetadata", "value": parsed_metadata},
+                snapshot_base_url=self.pdb_snapshot_url, inline=self.inline_pdb_metadata,
+                default_retrieved=datetime.now().strftime("%Y-%m-%d"))
+            self._record_pdb_snapshot(_snapshot)
 
             # Add to protein markup
             protein_markup["additionalProperty"].append(pdb_metadata_property)
@@ -1896,7 +1941,7 @@ class PPIBenchmarkProcessor:
 
             # Try with the specified separator first
             try:
-                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator).head(2)
+                self.dataset = pd.read_csv(self.csv_url, sep=self.csv_separator)
                 logger.info(f"Successfully loaded {len(self.dataset)} records with separator '{self.csv_separator}'")
             except Exception as e:
                 logger.warning(f"Failed with separator '{self.csv_separator}': {e}")
@@ -1996,8 +2041,77 @@ class PPIBenchmarkProcessor:
                 return row[column_name]
         return None
 
+    def _replacement_link(self, replacement_id: str) -> Dict[str, Any]:
+        """Link from an obsolete entry to the in-repo snapshot of the entry that replaces it."""
+        if self.inline_pdb_metadata or not replacement_id:
+            return {}
+        return {"valueReference": {
+            "@type": "PropertyValue", "name": "ReplacementSnapshot",
+            "value": f"{self.pdb_snapshot_url}{str(replacement_id).upper()}.json",
+            "description": "In-repo metadata snapshot of the replacement entry (the entry is not part of the benchmark)"}}
+
+    def _record_replacement_snapshot(self, replacement_id: str, interface: "ProteinInterface", replaces: str) -> None:
+        """Fetch and record the entry-level metadata of the PDB entry that replaces an obsolete benchmark entry."""
+        replacement_id = str(replacement_id).upper()
+        if self.inline_pdb_metadata or not replacement_id or replacement_id in self.pdb_snapshots:
+            return
+        try:
+            blob = self.enrich_protein_with_pdb_metadata(_dc_replace(interface, ID=replacement_id))
+        except Exception as exc:
+            logger.warning(f"Could not fetch metadata of replacement entry {replacement_id}: {exc}")
+            return
+        _, snapshot = build_pdb_metadata_property(blob, "", None, snapshot_base_url=self.pdb_snapshot_url,
+                                                  default_retrieved=datetime.now().strftime("%Y-%m-%d"))
+        if snapshot:
+            snapshot["snapshot"]["role"] = "replacement of an obsolete benchmark entry (not part of the benchmark)"
+            snapshot["snapshot"]["replaces"] = replaces
+            self.pdb_snapshots.setdefault(snapshot["pdb_id"], snapshot)
+
+    def fetch_removed_holding(self, pdb_id: str) -> Optional[Dict[str, Any]]:
+        """Fetch the RCSB removal record (replacement IDs, deposition/release/removal dates, title) of an obsolete entry."""
+        try:
+            response = self.session.get(f"{self.pdb_api_base_url}/holdings/removed/{pdb_id.upper()}", timeout=30)
+            if response.status_code == 200:
+                return response.json()
+            logger.warning(f"No removal record for {pdb_id} (HTTP {response.status_code})")
+        except Exception as exc:
+            logger.warning(f"Could not fetch removal record for {pdb_id}: {exc}")
+        return None
+
+    def _load_published_labels(self) -> None:
+        """Read the published benchmark labels (benchmark_annotated.csv) keyed by the InterfaceID used here."""
+        if not self.published_csv:
+            return
+        published = pd.read_csv(self.published_csv, sep=self.csv_separator)
+        cols = {str(c).strip().lower(): c for c in published.columns}
+        id_col, if_col, physio_col = cols["id"], cols["interfaceid"], cols["physio"]
+        for _, row in published.iterrows():
+            entry_id = str(row[id_col]).strip().upper()
+            if pd.notna(row[if_col]) and str(row[if_col]).strip() != "":
+                entry_id = f"{entry_id}_{int(float(row[if_col]))}"
+            value = str(row[physio_col]).strip().upper()
+            self.published_labels[entry_id] = value in ("TRUE", "T", "1", "YES")
+        logger.info(f"Loaded published labels for {len(self.published_labels)} interfaces from {self.published_csv}")
+
+    def _record_pdb_snapshot(self, snapshot: Optional[Dict[str, Any]]) -> None:
+        """Keep one entry-level PDB record per PDB ID; combine entity records retrieved at different times."""
+        if not snapshot:
+            return
+        pdb_id = snapshot["pdb_id"]
+        known = self.pdb_snapshots.get(pdb_id)
+        if known is None:
+            self.pdb_snapshots[pdb_id] = snapshot
+            return
+        entities = snapshot.get("entity_metadata") or {}
+        if entities:
+            known_entities = known.setdefault("entity_metadata", {})
+            for entity_id, record in entities.items():
+                known_entities.setdefault(entity_id, record)
+
     def _generate_html_snippet(self, dataset_markup: Dict[str, Any]) -> str:
-        """Generate HTML snippet with embedded JSON-LD markup."""
+        """Generate HTML snippet with embedded JSON-LD markup (dataset level only unless inline_pdb_metadata)."""
+        if not self.inline_pdb_metadata:
+            dataset_markup = without_interfaces(dataset_markup)
         html = """<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -2026,6 +2140,8 @@ class PPIBenchmarkProcessor:
         """
         if self.dataset is None:
             self.load_data()
+
+        self._load_published_labels()
 
         # Parse cluster file BEFORE processing interfaces if available
         if self.cluster_processor:
@@ -2404,9 +2520,9 @@ class PPIBenchmarkProcessor:
             "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
             "name": "Protein-Protein Interaction Interface Benchmark Dataset",
             "description": f"A benchmark dataset of {stats['total_entries']} protein crystal structures with {stats.get('physiological_count', 0)} physiological and {stats.get('non_physiological_count', 0)} non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics.",
-            "identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
+            "identifier": "https://github.com/biofold/ppi-benchmark-fair",
             "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
-            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "license": FAIR_LICENSE_URL,
 
             # Keywords as DefinedTerm list
             "keywords": [
@@ -2817,6 +2933,7 @@ class PPIBenchmarkProcessor:
             dataset_markup["hasPart"] = interface_items
             dataset_markup["numberOfItems"] = len(interface_items)
 
+        apply_provenance(dataset_markup)
         return dataset_markup
 
 
@@ -2961,7 +3078,17 @@ class PPIBenchmarkProcessor:
                 "@type": "PropertyValue",
                 "name": "Comments",
                 "value": str(interface.comments),
-                "description": "Additional comments about the interface"
+                "description": "Curation flag of the updated annotation file (see data/curation/README.md)"
+            })
+
+        published_label = self.published_labels.get(interface.InterfaceID)
+        if published_label is not None:
+            interface_item["additionalProperty"].append({
+                "@type": "PropertyValue",
+                "name": "PublishedPhysio",
+                "value": published_label,
+                "description": "Label in the published benchmark (Schweke et al. 2023, benchmark_annotated.csv); "
+                               "'physio' holds the label of the curated annotation file used by this package"
             })
 
     def _generate_protein_for_interface(self, interface: ProteinInterface) -> Dict[str, Any]:
@@ -3230,7 +3357,7 @@ class PPIBenchmarkProcessor:
         fair_package = {
             "fair_metadata": {
                 "findability": {
-                    "persistent_identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
+                    "persistent_identifier": "https://github.com/biofold/ppi-benchmark-fair",
                     "rich_metadata": True,
                     "searchable_registry": ["Google Dataset Search", "WorkflowHub", "bio.tools", "Hugging Face Datasets"],
                     "versioning": {
@@ -3255,12 +3382,12 @@ class PPIBenchmarkProcessor:
                     ]
                 },
                 "reusability": {
-                    "license": "CC BY-NC 4.0",
+                    "license": FAIR_LICENSE_NAME,
                     "provenance": {
                         "creation_date": "2023-04-30",
-                        "creators": ["ELIXIR 3D-BioInfo Community"],
+                        "creators": [c["name"] for c in FAIR_CREATORS],
                         "methods": ["QSalign", "ProtCID", "Conservation analysis"],
-                        "reference_publication": "https://pubmed.ncbi.nlm.nih.gov/37365936/",
+                        "reference_publication": "https://doi.org/" + SCHWEKE_DOI,
                         "data_sources": ["Protein Data Bank (PDB)", "ProtCID", "QSalign"]
                     },
                     "documentation": {
@@ -3534,6 +3661,15 @@ class PPIBenchmarkProcessor:
         html_file = os.path.join(output_dir, "embedded_markup.html")
         with open(html_file, 'w', encoding='utf-8') as f:
             f.write(html_snippet)
+
+        # Write the in-repo PDB metadata snapshot (one file per PDB entry)
+        if self.pdb_snapshots and not self.inline_pdb_metadata:
+            snapshot_dir = os.path.join(output_dir, "pdb_metadata")
+            os.makedirs(snapshot_dir, exist_ok=True)
+            for pdb_id, record in sorted(self.pdb_snapshots.items()):
+                with open(os.path.join(snapshot_dir, f"{pdb_id}.json"), 'w', encoding='utf-8') as f:
+                    json.dump(record, f, indent=2, ensure_ascii=False)
+            logger.info(f"Saved PDB metadata snapshot for {len(self.pdb_snapshots)} entries to {snapshot_dir}")
 
         # Save PDB metadata cache separately
         if self.fetch_pdb_metadata and self.pdb_metadata_cache:
@@ -4184,20 +4320,20 @@ Examples:
 
     parser.add_argument(
         "--csv-url",
-        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_annotated_updated_30042023.csv",
         help="URL of the CSV file (default: the benchmark dataset)"
     )
 
     parser.add_argument(
         "--mmcif-url",
-        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/",
         #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_mmcif_format/",
         help="Base URL for mmCIF structure files"
     )
 
     parser.add_argument(
         "--pdb-url",
-        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/",
+        default="https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/",
         #default="https://raw.githubusercontent.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces/main/benchmark/benchmark_pdb_format/",
         help="Base URL for PDB structure files"
     )
@@ -4259,6 +4395,26 @@ Examples:
     parser.add_argument(
         "--cluster",
         help="Path to BLASTClust output file for adding cluster information"
+    )
+
+    parser.add_argument(
+        "--inline-pdb-metadata",
+        action="store_true",
+        help="Embed the full RCSB record in every interface item (very large output). Default: link to the "
+             "in-repo snapshot <output>/pdb_metadata/<PDB_ID>.json and to the live RCSB record"
+    )
+
+    parser.add_argument(
+        "--pdb-snapshot-url",
+        default=DEFAULT_PDB_SNAPSHOT_URL,
+        help="Base URL under which the pdb_metadata snapshot files are published (default: %(default)s)"
+    )
+
+    parser.add_argument(
+        "--published-csv",
+        default=None,
+        help="CSV with the labels of the published benchmark (benchmark_annotated.csv). When given, every interface "
+             "also gets a PublishedPhysio property next to the label of the curated annotation file"
     )
 
     parser.add_argument(
@@ -4396,7 +4552,10 @@ Settings:
         cif_label_dir=args.cif_label_dir,
         fetch_pdb_metadata=args.fetch_pdb_metadata,
         pdb_api_base_url=args.pdb_api_url,
-        cluster_file=args.cluster
+        cluster_file=args.cluster,
+        inline_pdb_metadata=args.inline_pdb_metadata,
+        pdb_snapshot_url=args.pdb_snapshot_url,
+        published_csv=args.published_csv
     )
 
     try:

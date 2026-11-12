@@ -2,20 +2,20 @@
 
 ## **Overview**
 
-A benchmark dataset containing 7 protein crystal structures with 4 physiological and 3 non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.
+A benchmark dataset containing 1,677 homodimer interfaces from 1,645 protein crystal structures, 844 physiological and 833 non-physiological in the annotation file used here (836 and 841 in the published benchmark), for evaluating protein-protein interface scoring functions. Designed for machine learning applications in structural bioinformatics.
 
 ## **Dataset Metadata**
 
 | Property | Value |
 | :---- | :---- |
 | Name | Protein-Protein Interaction Interface Benchmark Dataset |
-| Identifier | [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) |
+| Identifier | [https://github.com/biofold/ppi-benchmark-fair](https://github.com/biofold/ppi-benchmark-fair) |
 | URL | [https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces) |
 | License | CC BY-NC 4.0 ([https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)) |
 | Version | 1.0 |
 | Date Published | 2023-04-30 |
 | Date Modified | 2025-12-26 |
-| Size | 7 entries |
+| Size | 1677 entries |
 | Schema Conformance | ML Commons Croissant 1.0 & BioSchemas Dataset Profile 1.0-RELEASE |
 
 ## **Root Dataset Properties**
@@ -29,9 +29,9 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | `dct:conformsTo` | String | Yes | BioSchemas profile | `"https://bioschemas.org/profiles/Dataset/1.0-RELEASE"` |
 | `name` | String | Yes | Dataset name | `"Protein-Protein Interaction Interface Benchmark Dataset"` |
 | `description` | String | Yes | Comprehensive description | Text description |
-| `identifier` | String (URI) | Yes | DOI identifier | `"https://doi.org/10.5281/zenodo.XXXXXXX"` |
+| `identifier` | String (URI) | Yes | Persistent identifier (repository URL until a DOI is assigned) | `"https://github.com/biofold/ppi-benchmark-fair"` |
 | `url` | String (URI) | Yes | GitHub repository URL | `"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"` |
-| `license` | String (URI) | Yes | License URL | `"https://creativecommons.org/licenses/by/4.0/"` |
+| `license` | String (URI) | Yes | License URL | `"https://creativecommons.org/licenses/by-nc/4.0/"` |
 | `keywords` | Array\[DefinedTerm\] | Yes | EDAM ontology keywords | Array of DefinedTerm objects |
 | `creator` | Array\[Organization\] | Yes | Creator organizations | Array of Organization objects |
 | `datePublished` | String (Date) | Yes | Publication date | `"2023-04-30"` (YYYY-MM-DD) |
@@ -43,7 +43,7 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | `dateCreated` | String (Date) | Yes | Creation date | `"2023-04-30"` |
 | `dateModified` | String (Date) | Yes | Last modification date | `"2025-12-26"` |
 | `maintainer` | Organization | Yes | Maintaining organization | Organization object |
-| `size` | String | Yes | Dataset size description | `"7 entries"` |
+| `size` | String | Yes | Dataset size description | `"1677 entries"` |
 | `hasPart` | Array\[Interface\] | Yes | Interface entries | Array of Interface objects |
 
 ## **Interface Entry Structure (hasPart items)**
@@ -66,7 +66,9 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | `InterfaceID` | String | Yes | Unique interface identifier | Pattern: `[A-Z0-9]{4}_\d+` | `"1A17_6"` |
 | `InterfaceSource` | String | Yes | Source of interface ID | `"ProtCID"`, `"QSalign"` | `"ProtCID"` |
-| `physio` | Boolean | Yes | Physiological classification | `true`, `false` | `false` |
+| `physio` | Boolean | Yes | Physiological classification in the curated annotation file used by this package (844 physiological, 833 non-physiological) | `true`, `false` | `false` |
+| `PublishedPhysio` | Boolean | Yes | Classification in the published benchmark (Schweke et al. 2023; 836 physiological, 841 non-physiological). Differs from `physio` for 16 interfaces | `true`, `false` | `false` |
+| `Comments` | String | No | Curation flag of the updated annotation file: `physio after curation`, `non-physio after curation`, `ambiguous` or `to delete`. Absent for the 1,635 unflagged interfaces. See `data/curation/README.md` | String | `"physio after curation"` |
 | `label` | Integer | Yes | Numeric label | `0`, `1` | `0` |
 | `AuthChain1` | String | Yes | First chain in interface | Single letter or `"nan"` | `"A"` |
 | `AuthChain2` | String | Yes | Second chain in interface | Single letter or `"nan"` | `"A"` |
@@ -108,9 +110,10 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 
 | Property Name | Type | Required | Description | Validation | Example |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| `PDBStructureMetadata` | String/Object | Yes | Complete RCSB metadata | JSON format | JSON string/object |
+| `PDBStructureMetadata` | String (URL) | Yes | Link to the in-repo snapshot of the RCSB metadata of the PDB entry (`bioschema/pdb_metadata/<PDB_ID>.json`, see "PDB Metadata Snapshot Files"). The property `url` is the live RCSB record, `valueReference` the parsed summary, and `additionalProperty` the interface-specific context (`interface_chains`, `interface_sequence_analysis`, `enrichment_timestamp`) | URL | `"https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/1A17.json"` |
 | `PDBMetadataStatus` | String | Yes | Metadata status | String | `"Complete metadata available"` |
 | `Resolution` | Number | Yes | X-ray resolution | \> 0 (Å) | `2.45` |
+| `ExperimentalMethod` | String | Yes | Experimental method (all benchmark entries served by RCSB are X-ray diffraction) | String | `"X-RAY DIFFRACTION"` |
 | `SourceOrganism` | String | Yes | Source organism | String | `"Homo sapiens"` |
 | `HomomericStructure` | Boolean | Yes | Is homomeric | Boolean | `true` |
 | `HomomerType` | String | Yes | Type of homomer | String | `"monomer"` |
@@ -169,20 +172,37 @@ A benchmark dataset containing 7 protein crystal structures with 4 physiological
 | `value` | String (URI) | Yes | URL or identifier | URI for files, ID for PDB ID |
 | `description` | String | Yes | Description | Text description |
 
+## **PDB Metadata Snapshot Files**
+
+`bioschema/pdb_metadata/<PDB_ID>.json` holds the entry-level PDB metadata of each benchmark entry (1,645 files) and of the three entries that replaced obsolete benchmark entries (6YQD, 7JNY, 6OH6; marked with `snapshot.role`). The records were retrieved from the RCSB PDB Data API (`https://data.rcsb.org/rest/v1`) by `scripts/ppi_benchmark_fair.py`. PDB archive data are available under CC0 1.0.
+
+| Field | Content |
+| :---- | :---- |
+| `pdb_id` | PDB identifier |
+| `snapshot` | Provenance: `retrieved` (date), `source`, `live_record` (RCSB URL), `license`, and, where relevant, `note`, `amendments`, `role` and `replaces` |
+| `structure_metadata` | Entry summary parsed by the generator: resolution, dates, experimental method, source organism, primary citation, chain and entity information, sequences, homomer type |
+| `entity_metadata` | Polymer-entity records as returned by RCSB, keyed by entity ID (empty for obsolete entries, which RCSB no longer serves) |
+| `rcsb_removed_holding` | Only for obsolete entries: the RCSB removal record (replacement ID, deposition, release and removal dates, title), stored as returned |
+
+Most records were retrieved on 2026-01-03. Records for 1P35, 3G0K, 4NQQ (first retrieval incomplete), the three obsolete entries (removal record added) and the three replacements carry the retrieval date 2026-11-11 in `snapshot.retrieved`. `experimental_method` was filled on 2026-11-11 from the RCSB `exptl.method` field for all entries (the first run did not capture it); this is recorded in `snapshot.amendments`.
+The interface-specific part of the original record (`interface_chains`, `interface_sequence_analysis`, `enrichment_timestamp`) stays in the interface item, as `additionalProperty` of `PDBStructureMetadata`.
+
 ## **Data File Structure**
 
 ### **Available File Formats**
 
 | Format | Location Pattern | Example | Compression |
 | :---- | :---- | :---- | :---- |
-| PDB Format | `https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/{pdb_id}_{interface}.pdb.gz` | `1a17_6.pdb.gz` | gzip |
-| mmCIF Format | `https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/{pdb_id}_{interface}.cif.gz` | `1a17_6.cif.gz` | gzip |
+| PDB Format | `https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/{interface_id}.pdb.gz` | `1a17_6.pdb.gz`, `1a3a_1.pdb.gz` | gzip |
+| mmCIF Format | ProtCID interfaces: `https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/{pdb_id}_{n}.cif.gz`; QSalign interfaces: `.../benchmark_mmcif_format/{pdb_id}.cif.gz` | `1a17_6.cif.gz` (ProtCID), `1a3a.cif.gz` (QSalign) | gzip |
 
 ### **File Naming Convention**
 
-* PDB ID: Lowercase (e.g., `1a17` not `1A17`)  
-* Interface: Appended with underscore (e.g., `_6`)  
-* Compression: All files are gzipped (`.gz` extension)
+* PDB ID: lowercase (e.g., `1a17` not `1A17`)  
+* PDB files: one per interface, named after the interface ID (`{pdb_id}_{n}.pdb.gz`, 1,677 files)  
+* mmCIF files: ProtCID-derived interfaces are named `{pdb_id}_{n}.cif.gz`; QSalign-derived interfaces share one file per PDB entry, `{pdb_id}.cif.gz` (1,673 files for 1,677 interfaces). The file name is therefore not always built from the interface ID.  
+* Compression: all files are gzipped (`.gz` extension)
+* `data/replacement_structures/` holds the current mmCIF files of the entries that replaced three obsolete benchmark entries; they are not part of the benchmark.
 
 ## **Data Validation Rules**
 
@@ -270,11 +290,11 @@ Protein entities must have:
 
 ## **License and Attribution**
 
-License: Creative Commons Attribution 4.0 International (CC BY-NC 4.0)
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
 When using this dataset, please cite:
 
-1. Dataset DOI: [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)  
+1. Dataset (DOI assigned at the first release): [https://github.com/biofold/ppi-benchmark-fair](https://github.com/biofold/ppi-benchmark-fair)  
 2. Original Publication: "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study" (DOI: 10.1002/pmic.202200323)  
 3. ELIXIR 3D-BioInfo Community
 
@@ -290,7 +310,7 @@ When using this dataset, please cite:
 
 | Version | Date | Description |
 | :---- | :---- | :---- |
-| 1.0 | 2023-04-30 | Initial release with 7 protein interfaces |
+| 1.0.0 | first Zenodo archive | 1,677 interfaces; light JSON-LD files with an in-repo PDB metadata snapshot; documentation of the label curation |
 | Latest | 2025-12-26 | Updated metadata enrichment |
 
 This data dictionary provides comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema. All properties follow JSON Schema validation rules and are compatible with both BioSchemas and ML Commons Croissant standards.  

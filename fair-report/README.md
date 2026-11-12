@@ -89,7 +89,7 @@ Below is a compact example that fills required fields so you can visualize struc
 {
   "fair_metadata": {
     "findability": {
-      "persistent_identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
+      "persistent_identifier": "https://github.com/biofold/ppi-benchmark-fair",
       "rich_metadata": true,
       "searchable_registry": ["Google Dataset Search"],
       "versioning": {
@@ -132,12 +132,12 @@ Below is a compact example that fills required fields so you can visualize struc
     "dataset": {
       "@context": ["https://schema.org/"],
       "@type": ["Dataset"],
-      "@id": "https://doi.org/10.5281/zenodo.XXXXXXX",
+      "@id": "https://github.com/biofold/ppi-benchmark-fair",
       "name": "Protein-Protein Interaction Interface Benchmark Dataset",
       "description": "Minimal dataset description",
-      "identifier": "https://doi.org/10.5281/zenodo.XXXXXXX",
+      "identifier": "https://github.com/biofold/ppi-benchmark-fair",
       "url": "https://github.com/OWNER/REPO",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
       "keywords": [
         { "@type": "DefinedTerm", "name": "protein-protein interaction", "inDefinedTermSet": "http://example.org/terms" }
       ],

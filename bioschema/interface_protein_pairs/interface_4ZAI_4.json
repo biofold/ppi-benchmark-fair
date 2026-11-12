@@ -30,13 +30,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/4zai_4.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/4zai_4.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4zai_4.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/4zai_4.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -106,7 +106,19 @@
         "name": "ReplacedBy",
         "value": "7JNY",
         "description": "Newer PDB ID that replaces this obsolete entry",
-        "url": "https://www.rcsb.org/structure/7JNY"
+        "url": "https://www.rcsb.org/structure/7JNY",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ReplacementSnapshot",
+          "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/7JNY.json",
+          "description": "In-repo metadata snapshot of the replacement entry (the entry is not part of the benchmark)"
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ObsoleteDate",
+        "value": "2020-10-07T00:00:00+0000",
+        "description": "Date when this entry was obsoleted"
       },
       {
         "@type": "PropertyValue",
@@ -117,8 +129,10 @@
       {
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
-        "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
-        "value": "{\"pdb_id\": \"4ZAI\", \"resolution\": 1.95, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": \"X-RAY DIFFRACTION\", \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": {\"title\": \"CRYSTAL STRUCTURE OF CXCL13 \", \"authors\": [\"E.M.ROSENBERG JR.\", \"D.RAJASEKARAN\", \"J.W.MURPHY\", \"G.PANTOURIS\", \"E.J.LOLIS\"], \"journal\": \"\", \"volume\": \"\", \"page\": \"\", \"year\": \"\"}, \"entity_count\": 0, \"r_factor\": null, \"space_group\": \"P 31 2 1\", \"unit_cell\": {\"a\": 48.968, \"b\": 48.968, \"c\": 80.276, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 120.0}, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"7JNY\", \"sequences\": {\"A\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"sequence_length\": 88, \"residue_count\": 88, \"num_seqres_records\": 7}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP\", \"chains\": [\"A\"], \"chain_count\": 1}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 1, \"unique_sequences\": 1, \"homomer_type\": \"monomer\", \"homomer_chains\": 1}",
+        "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file). Full record: in-repo snapshot (value); live record at RCSB (url).",
+        "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/4ZAI.json",
+        "url": "https://data.rcsb.org/rest/v1/core/entry/4ZAI",
+        "sameAs": "https://www.rcsb.org/structure/4ZAI",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
@@ -126,10 +140,10 @@
             "pdb_id": "4ZAI",
             "obsolete": true,
             "replaced_by": "7JNY",
-            "obsolete_date": null,
+            "obsolete_date": "2020-10-07T00:00:00+0000",
             "found_in_header": false,
-            "deposition_date": null,
-            "release_date": null,
+            "deposition_date": "2015-04-13T00:00:00+0000",
+            "release_date": "2015-07-15T00:00:00+0000",
             "has_sequences": true,
             "chains_from_header": [
               "A"
@@ -380,6 +394,12 @@
       "name": "Fraction Apolar",
       "value": 0.598328652647441,
       "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PublishedPhysio",
+      "value": false,
+      "description": "Label in the published benchmark (Schweke et al. 2023, benchmark_annotated.csv); 'physio' holds the label of the curated annotation file used by this package"
     },
     {
       "@type": "PropertyValue",

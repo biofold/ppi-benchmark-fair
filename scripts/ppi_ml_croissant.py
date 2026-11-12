@@ -1380,7 +1380,7 @@ class CroissantDatasetLoader:
             owner, repo = parts[0], parts[1]
 
             # Try to download the dataset_with_interfaces.json file directly
-            raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/bioschemas_output/dataset_with_interfaces.json"
+            raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/master/bioschema/dataset_with_interfaces.json"
 
             self.logger.debug(f"Attempting to download: {raw_url}")
             response = requests.get(raw_url, timeout=30)
@@ -2026,7 +2026,7 @@ class CroissantDatasetLoader:
             Tuple of (features_df, labels_series, cluster_ids_series) or (None, None, None) if extraction fails
         """
 
-        DROP_FEATURES = ['InterfaceSource', 'Comments']
+        DROP_FEATURES = ['InterfaceSource', 'Comments', 'PublishedPhysio']
 
         if not self.interfaces:
             self.logger.error("No interfaces available. Load dataset first.")
@@ -2051,7 +2051,7 @@ class CroissantDatasetLoader:
 
                     if prop_name in DROP_FEATURES: continue
 
-                    if prop_name in ['physio', 'label', 'ClusterID']:
+                    if prop_name in ['physio', 'label', 'ClusterID', 'PublishedPhysio']:
                         continue
 
                     if prop_name not in self.all_features_info:
@@ -2150,7 +2150,7 @@ class CroissantDatasetLoader:
                     prop_value = prop.get('value')
 
                     # Skip physio/label/ClusterID (already used as target/grouping)
-                    if prop_name in ['physio', 'label', 'ClusterID'] + DROP_FEATURES:
+                    if prop_name in ['physio', 'label', 'ClusterID', 'PublishedPhysio'] + DROP_FEATURES:
                         continue
 
                     # Get feature info
@@ -3450,7 +3450,7 @@ class ProteinInteractionClassifier:
                 return None
 
             # Define features to drop (consolidated list)
-            DROP_FEATURES = ['ClusterSize', 'InterfaceSource', 'Comments']
+            DROP_FEATURES = ['ClusterSize', 'InterfaceSource', 'Comments', 'PublishedPhysio']
 
             output_path = Path(output_dir)
             output_path.mkdir(parents=True, exist_ok=True)
@@ -4720,8 +4720,11 @@ def setup_logging(log_level='INFO', log_file=None):
         datefmt=date_format
     )
 
-    # Get root logger
+    # Get root logger and set its level explicitly: logging.basicConfig() is a no-op
+    # when a handler already exists (e.g. after the import-time BioPython warning),
+    # which would leave the root level at WARNING and hide INFO messages.
     root_logger = logging.getLogger()
+    root_logger.setLevel(numeric_level)
 
     # Remove existing handlers to avoid duplicates
     for handler in root_logger.handlers[:]:

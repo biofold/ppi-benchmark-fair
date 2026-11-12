@@ -429,22 +429,23 @@
             <section class="section" id="quick-start">
                 <h2><i class="fa-solid fa-rocket"></i> Quick Start</h2>
                 <pre><code># Clone repository
-git lfs clone https://github.com/biofold/ppi-benchmark-fair.git
+git clone https://github.com/biofold/ppi-benchmark-fair.git
 cd ppi-benchmark-fair
 
 # Install requirements
 pip install -r requirements.txt
 
 # Generate basic metadata
-python ppi_benchmark_fair.py --output bioschema
+python scripts/ppi_benchmark_fair.py --output bioschema
 
 # Generate enriched metadata (recommended)
 python scripts/ppi_benchmark_fair.py \
   --fetch-pdb-metadata \
   --check-pdb-label \
   --cluster data/ppi_benchmark_seqs.clust_25_05 \
+  --published-csv data/curation/benchmark_annotated_published.csv \
   --output bioschema \
-  --verbose</code></pre>
+  --log-level INFO</code></pre>
             </section>
 
             <!-- Dataset Statistics -->
@@ -476,22 +477,22 @@ python scripts/ppi_benchmark_fair.py \
                         </tr>
                         <tr>
                             <td>Unique PDB Structures</td>
-                            <td>1673</td>
-                            <td>Proteins with multiple interfaces</td>
+                            <td>1,645</td>
+                            <td>Distinct PDB entries; some contain several interfaces</td>
                         </tr>
                         <tr>
                             <td>Sequence Clusters</td>
                             <td>1050</td>
-                            <td>BLASTClust with 90% identity</td>
+                            <td>BLASTClust, 25% sequence identity, 50% length coverage</td>
                         </tr>
                         <tr>
                             <td>Resolution Range</td>
-                            <td>1.0–4.5Å</td>
+                            <td>0.90–3.94 Å (median 2.20 Å)</td>
                             <td>X-ray crystallography</td>
                         </tr>
                         <tr>
                             <td>Experimental Methods</td>
-                            <td>85% X-ray, 10% Cryo-EM, 5% NMR</td>
+                            <td>X-ray crystallography (all 1,642 entries served by the RCSB PDB)</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -506,8 +507,8 @@ python scripts/ppi_benchmark_fair.py \
                 <div class="fair-section findable">
                     <h3>Findable (85/100) ✅</h3>
                     <ul class="fair-checklist">
-                        <li>Rich Metadata: 1,681 metadata files with structured annotations</li>
-                        <li>Persistent Identifier: DOI assigned via Zenodo</li>
+                        <li>Rich Metadata: one JSON-LD file per interface (1,677) plus dataset-level files</li>
+                        <li>Persistent Identifier: DOI assigned by Zenodo at release v1.0.0</li>
                         <li>Keywords: EDAM ontology terms integrated</li>
                         <li class="needs-improvement">Needs Improvement: Repository topics, GitHub releases, documentation wiki</li>
                     </ul>
@@ -618,31 +619,35 @@ for prop in interface['additionalProperty']:
 print(f"Features: {features}")</code></pre>
 
                 <h3>Command Line Options</h3>
-                <pre><code># Full metadata generation with all enrichments
-python ppi_benchmark_fair.py \
-  --csv-url "https://raw.githubusercontent.com/.../benchmark.csv" \
-  --mmcif-url "https://raw.githubusercontent.com/.../mmcif/" \
-  --pdb-url "https://raw.githubusercontent.com/.../pdb/" \
-  --fetch-pdb-metadata \           # Fetch PDB metadata from RCSB API
-  --check-pdb-label \              # Validate chains in PDB files
-  --check-cif-label \              # Validate chains in mmCIF files
-  --cluster "data/clusters.txt" \  # Add sequence cluster information
-  --output "metadata_output" \     # Custom output directory
-  --verbose \                      # Detailed logging
-  --separator ","                  # CSV separator (auto-detects if fails)</code></pre>
+                <pre><code># Full metadata generation with all enrichments (comments on separate lines)
+python scripts/ppi_benchmark_fair.py \
+  --csv-url "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_annotated_updated_30042023.csv" \
+  --fetch-pdb-metadata \
+  --check-pdb-label \
+  --check-cif-label \
+  --cluster data/ppi_benchmark_seqs.clust_25_05 \
+  --published-csv data/curation/benchmark_annotated_published.csv \
+  --output bioschema \
+  --log-level INFO
+
+# --fetch-pdb-metadata  fetch entry metadata from the RCSB PDB API (stored once per entry in bioschema/pdb_metadata/)
+# --check-pdb-label / --check-cif-label  validate the chains against the PDB / mmCIF files
+# --cluster             add sequence-cluster information (BLASTClust output)
+# --published-csv       add the label of the published benchmark as PublishedPhysio
+# --separator           CSV separator (default ","; --auto-detect tries others)</code></pre>
             </section>
 
             <!-- Sequence Clustering Information -->
             <section class="section">
                 <h2><i class="fa-solid fa-dna"></i> Sequence Clustering Information</h2>
-                <p>Interfaces are clustered using BLASTClust with 90% sequence identity threshold:</p>
+                <p>Interfaces are clustered using BLASTClust with a 25% sequence identity threshold and 50% length coverage:</p>
                 <pre><code># Command used for clustering
 blastclust -i sequences.fasta -o clusters.txt -S 25 -L 0.5 -b F
 
 # Interpretation:
-# -S 25: Score threshold 25 bits
+# -S 25: Percent identity threshold (25%)
 # -L 0.5: Length coverage threshold 50%
-# -b F: Coverage on both neighbours False
+# -b F: Length coverage required on only one of the two sequences
 
 # Result: ~1050 clusters across 1,677 interfaces</code></pre>
 
@@ -746,13 +751,13 @@ Generate Metadata → Validate → Output Files</code></pre>
                 License and Attribution</h2>
 
                 <h3>License</h3>
-                <p>Creative Commons Attribution 4.0 International (CC BY-NC 4.0)<br>
-                This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+                <p>Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)<br>
+                This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 
                 <h3>Citation</h3>
                 <pre><code>@article{schweke2023discriminating,
    title={Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study},
-   author={Schweke, H. and Xu, Q. and Cazals, F. and Teyra, J. and Zimmermann, O. and Brenke, R. and Mihalek, I. and Res, I. and Ferré, A. and Lafita, A. and Guzzo, C. R. and Bordogna, A. and Bonvin, A. M. J. J. and Dey, S. and Gao, M. and Vangone, A. and Oliva, R. and Guarnera, E. and Roche, D. B. and Bhattacharya, S. and Brylinski, M. and Dijkstra, M. and Esquivel-Rodríguez, J. and Kihara, D. and Lensink, M. F. and Murakami, Y. and Nadzirin, N. and Nagarajan, R. and Oliveira, S. H. P. and Pires, D. E. V. and Roy, R. S. and Sanchez-Garcia, R. and Schueler-Furman, O. and Trellet, M. and Wodak, S. J.},
+   author={Schweke, Hugo and Xu, Qifang and Tauriello, Gerardo and Pantolini, Lorenzo and Schwede, Torsten and Cazals, Frédéric and Lhéritier, Alix and Fernandez-Recio, Juan and Rodríguez-Lumbreras, Luis Angel and Schueler-Furman, Ora and Varga, Julia K. and Jiménez-García, Brian and Réau, Manon F. and Bonvin, Alexandre M. J. J. and Savojardo, Castrense and Martelli, Pier-Luigi and Casadio, Rita and Tubiana, Jérôme and Wolfson, Haim J. and Oliva, Romina and Barradas-Bautista, Didier and Ricciardelli, Tiziana and Cavallo, Luigi and Venclovas, Česlovas and Olechnovič, Kliment and Guerois, Raphael and Andreani, Jessica and Martin, Juliette and Wang, Xiao and Terashi, Genki and Sarkar, Daipayan and Christoffer, Charles and Aderinwale, Tunde and Verburgt, Jacob and Kihara, Daisuke and Marchand, Anthony and Correia, Bruno E. and Duan, Rui and Qiu, Liming and Xu, Xianjin and Zhang, Shuang and Zou, Xiaoqin and Dey, Sucharita and Dunbrack, Roland L. and Levy, Emmanuel D. and Wodak, Shoshana J.},
    journal={Proteomics},
    volume={23},
    number={17},
@@ -762,13 +767,14 @@ Generate Metadata → Validate → Output Files</code></pre>
    doi={10.1002/pmic.202200323}
 }
 
-@dataset{elixir2024fairmetadata,
-   title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces FAIR Metadata},
-   author={{ELIXIR 3D-BioInfo Community}},
-   year={2024},
-   version={1.0},
-   publisher={ELIXIR},
-   doi={10.5281/zenodo.XXXXXXX}
+@dataset{capriotti2026ppifair,
+   title={ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces: FAIR Metadata},
+   author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},
+   year={2026},
+   version={1.0.0},
+   publisher={Zenodo},
+   url={https://github.com/biofold/ppi-benchmark-fair},
+   note={DOI assigned by Zenodo at the first release}
 }</code></pre>
 
                 <h3>Dataset Reference Publication</h3>
@@ -871,10 +877,9 @@ Generate Metadata → Validate → Output Files</code></pre>
                 <div class="footer-content">
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
                 <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
-                <a href="https://creativecommons.org/licenses/by/4.0/">
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/">
                 <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
-                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <img src="https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey" alt="DOI: assigned at first release">
                 <a href="https://www.python.org/">
                 <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
                 <a href="https://schema.org/">
@@ -884,7 +889,7 @@ Generate Metadata → Validate → Output Files</code></pre>
                 </div>
 
                 <div class="copyright">
-                    <p>PPI Benchmark FAIR Metadata • Generated on: 2024-12-24<br></p>
+                    <p>PPI Benchmark FAIR Metadata • Generated on: 2026-11-11<br></p>
                 </div>
             </div>
         </footer>

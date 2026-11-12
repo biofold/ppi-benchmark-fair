@@ -30,13 +30,13 @@
       {
         "@type": "PropertyValue",
         "name": "PDB Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_pdb_format/4nk0_2.pdb.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_pdb_format/4nk0_2.pdb.gz",
         "description": "Compressed PDB format structure file"
       },
       {
         "@type": "PropertyValue",
         "name": "mmCIF Structure",
-        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_mmcif_format/4nk0.cif.gz",
+        "value": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_mmcif_format/4nk0.cif.gz",
         "description": "Compressed mmCIF format structure file"
       },
       {
@@ -106,7 +106,19 @@
         "name": "ReplacedBy",
         "value": "6YQD",
         "description": "Newer PDB ID that replaces this obsolete entry",
-        "url": "https://www.rcsb.org/structure/6YQD"
+        "url": "https://www.rcsb.org/structure/6YQD",
+        "valueReference": {
+          "@type": "PropertyValue",
+          "name": "ReplacementSnapshot",
+          "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/6YQD.json",
+          "description": "In-repo metadata snapshot of the replacement entry (the entry is not part of the benchmark)"
+        }
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ObsoleteDate",
+        "value": "2020-04-29T00:00:00+0000",
+        "description": "Date when this entry was obsoleted"
       },
       {
         "@type": "PropertyValue",
@@ -117,8 +129,10 @@
       {
         "@type": "PropertyValue",
         "name": "PDBStructureMetadata",
-        "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file)",
-        "value": "{\"pdb_id\": \"4NK0\", \"resolution\": 2.02, \"deposition_date\": null, \"release_date\": null, \"experimental_method\": \"X-RAY DIFFRACTION\", \"source_organism\": [\"HOMO SAPIENS\"], \"citation\": {\"title\": \"HUMAN HISTIDINE TRIAD NUCLEOTIDE-BINDING PROTEIN 2 (HHINT2) IN P212121 SPACE GROUP AT 2.02 A \", \"authors\": [\"R.M.DOLOT\", \"A.WLODARCZYK\", \"G.D.BUJACZ\", \"B.NAWROT\"], \"journal\": \"\", \"volume\": \"\", \"page\": \"\", \"year\": \"\"}, \"entity_count\": 0, \"r_factor\": null, \"space_group\": \"P 21 21 21\", \"unit_cell\": {\"a\": 38.012, \"b\": 73.88, \"c\": 77.042, \"alpha\": 90.0, \"beta\": 90.0, \"gamma\": 90.0}, \"found_in_api\": true, \"obsolete\": true, \"replaced_by\": \"6YQD\", \"sequences\": {\"A\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"B\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\"}, \"chain_info\": {\"A\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}, \"B\": {\"entity_id\": \"1\", \"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"sequence_length\": 163, \"residue_count\": 163, \"num_seqres_records\": 13}}, \"entity_info\": {}, \"is_homomer\": true, \"sequence_clusters\": [{\"sequence\": \"MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG\", \"chains\": [\"A\", \"B\"], \"chain_count\": 2}], \"chain_ids\": [], \"entity_ids\": [], \"taxonomy_ids\": [9606], \"primary_taxonomy_id\": 9606, \"chain_count\": 2, \"unique_sequences\": 1, \"homomer_type\": \"2-mer\", \"homomer_chains\": 2}",
+        "description": "Structural metadata from PDB (OBSOLETE ENTRY - data from header file). Full record: in-repo snapshot (value); live record at RCSB (url).",
+        "value": "https://biofold.github.io/ppi-benchmark-fair/bioschema/pdb_metadata/4NK0.json",
+        "url": "https://data.rcsb.org/rest/v1/core/entry/4NK0",
+        "sameAs": "https://www.rcsb.org/structure/4NK0",
         "valueReference": {
           "@type": "PropertyValue",
           "name": "ParsedPDBMetadata",
@@ -126,10 +140,10 @@
             "pdb_id": "4NK0",
             "obsolete": true,
             "replaced_by": "6YQD",
-            "obsolete_date": null,
+            "obsolete_date": "2020-04-29T00:00:00+0000",
             "found_in_header": false,
-            "deposition_date": null,
-            "release_date": null,
+            "deposition_date": "2013-11-11T00:00:00+0000",
+            "release_date": "2013-12-11T00:00:00+0000",
             "has_sequences": true,
             "chains_from_header": [
               "A",
@@ -392,6 +406,12 @@
       "name": "Fraction Apolar",
       "value": 0.705802709479976,
       "description": "Fraction of apolar contacts at the interface"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "PublishedPhysio",
+      "value": false,
+      "description": "Label in the published benchmark (Schweke et al. 2023, benchmark_annotated.csv); 'physio' holds the label of the curated annotation file used by this package"
     },
     {
       "@type": "PropertyValue",

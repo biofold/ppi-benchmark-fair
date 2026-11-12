@@ -1,0 +1,126 @@
+{
+  "pdb_id": "5A0J",
+  "snapshot": {
+    "retrieved": "2026-11-11",
+    "source": "RCSB PDB Data API (https://data.rcsb.org/rest/v1), processed by scripts/ppi_benchmark_fair.py",
+    "live_record": "https://data.rcsb.org/rest/v1/core/entry/5A0J",
+    "license": "CC0-1.0 (wwPDB archive data)",
+    "note": "obsolete entry: header-derived metadata (2026-01-03) completed on 2026-11-11 with the RCSB removal record (removal date, deposition/release dates, title, replacement ID)"
+  },
+  "resolution": 2.36,
+  "deposition_date": "2015-04-20T00:00:00+0000",
+  "release_date": "2016-03-23T00:00:00+0000",
+  "experimental_method": "X-RAY DIFFRACTION",
+  "source_organism": [
+    "STREPTOMYCES SP."
+  ],
+  "citation": {
+    "title": "CRYSTALLOGRAPHIC STRUCTURE OF A BACTERIAL CLASS I LABDANE-RELATED DITERPENE SYNTHASE. ",
+    "authors": [
+      "S.CENTENO-LEIJA",
+      "S.SANCHEZ",
+      "E.RUDINO-PINERA",
+      "H.SERRANO-POSADA"
+    ],
+    "journal": "",
+    "volume": "",
+    "page": "",
+    "year": ""
+  },
+  "entity_count": 0,
+  "r_factor": null,
+  "space_group": "P 32 2 1",
+  "unit_cell": {
+    "a": 107.208,
+    "b": 107.208,
+    "c": 88.969,
+    "alpha": 90.0,
+    "beta": 90.0,
+    "gamma": 120.0
+  },
+  "found_in_api": true,
+  "obsolete": true,
+  "replaced_by": "6OH6",
+  "sequences": {
+    "A": "MTDTDDGGTMLPLPDFTATFPEPFPAGPHSERTEHRLLDWLEEHPLLPSAKAKAVLVNITSHGASRTFPTADADDLLLFAELLLWLTAFDDVHAEGNGVGGPAALVDRASELMLVLAGGNPPRAMSPFPAVLHDLLARFRARASAAAYHRLAASLRDTLMALVWEAHHVAKPEGVALATYLAMRPHTVFIKTITAAGEILLGYELTDTQRALAAVRNLETAVANLAGWINDLASYEREMQRGRGQPLSLPTLLHARHGGTIEEAFTRASSMCENEAAVARRGITHLAHASPNALTAHARALEDITRSFIWHTSHARYQGIRPNRGSSTSSPARSLQHHHHHH"
+  },
+  "chain_info": {
+    "A": {
+      "entity_id": "1",
+      "sequence": "MTDTDDGGTMLPLPDFTATFPEPFPAGPHSERTEHRLLDWLEEHPLLPSAKAKAVLVNITSHGASRTFPTADADDLLLFAELLLWLTAFDDVHAEGNGVGGPAALVDRASELMLVLAGGNPPRAMSPFPAVLHDLLARFRARASAAAYHRLAASLRDTLMALVWEAHHVAKPEGVALATYLAMRPHTVFIKTITAAGEILLGYELTDTQRALAAVRNLETAVANLAGWINDLASYEREMQRGRGQPLSLPTLLHARHGGTIEEAFTRASSMCENEAAVARRGITHLAHASPNALTAHARALEDITRSFIWHTSHARYQGIRPNRGSSTSSPARSLQHHHHHH",
+      "sequence_length": 342,
+      "residue_count": 342,
+      "num_seqres_records": 27
+    }
+  },
+  "entity_info": {},
+  "is_homomer": true,
+  "sequence_clusters": [
+    {
+      "sequence": "MTDTDDGGTMLPLPDFTATFPEPFPAGPHSERTEHRLLDWLEEHPLLPSAKAKAVLVNITSHGASRTFPTADADDLLLFAELLLWLTAFDDVHAEGNGVGGPAALVDRASELMLVLAGGNPPRAMSPFPAVLHDLLARFRARASAAAYHRLAASLRDTLMALVWEAHHVAKPEGVALATYLAMRPHTVFIKTITAAGEILLGYELTDTQRALAAVRNLETAVANLAGWINDLASYEREMQRGRGQPLSLPTLLHARHGGTIEEAFTRASSMCENEAAVARRGITHLAHASPNALTAHARALEDITRSFIWHTSHARYQGIRPNRGSSTSSPARSLQHHHHHH",
+      "chains": [
+        "A"
+      ],
+      "chain_count": 1
+    }
+  ],
+  "chain_ids": [],
+  "entity_ids": [],
+  "rcsb_removed_holding": {
+    "rcsb_repository_holdings_removed": {
+      "audit_authors": [
+        "Centeno-Leija, S.",
+        "Sanchez, S.",
+        "Rudino-Pinera, E.",
+        "Serrano-Posada, H."
+      ],
+      "deposit_date": "2015-04-20T00:00:00.000+00:00",
+      "id_codes_replaced_by": [
+        "6OH6"
+      ],
+      "release_date": "2016-03-23T00:00:00.000+00:00",
+      "remove_date": "2019-04-17T00:00:00.000+00:00",
+      "repository_content_types": [
+        "entry PDB",
+        "entry PDBML",
+        "entry mmCIF",
+        "structure factors"
+      ],
+      "title": "Crystallographic structure of the bacterial labdane-related diterpene synthase LrdC in complex with Mg and PPi at 2.36 A resolution."
+    },
+    "rcsb_repository_holdings_removed_audit_author": [
+      {
+        "audit_author": "Centeno-Leija, S.",
+        "ordinal_id": 1
+      },
+      {
+        "audit_author": "Sanchez, S.",
+        "ordinal_id": 2
+      },
+      {
+        "audit_author": "Rudino-Pinera, E.",
+        "ordinal_id": 3
+      },
+      {
+        "audit_author": "Serrano-Posada, H.",
+        "ordinal_id": 4
+      }
+    ],
+    "rcsb_repository_holdings_removed_entry_container_identifiers": {
+      "entry_id": "5A0J",
+      "rcsb_id": "5A0J",
+      "update_id": "2026_45"
+    },
+    "rcsb_id": "5A0J"
+  },
+  "obsolete_date": "2019-04-17T00:00:00+0000",
+  "title": "Crystallographic structure of the bacterial labdane-related diterpene synthase LrdC in complex with Mg and PPi at 2.36 A resolution.",
+  "taxonomy_ids": [
+    1931
+  ],
+  "primary_taxonomy_id": 1931,
+  "chain_count": 1,
+  "unique_sequences": 1,
+  "homomer_type": "monomer",
+  "homomer_chains": 1
+}

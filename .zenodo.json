@@ -1,0 +1,71 @@
+{
+  "title": "ELIXIR 3D-BioInfo Benchmark for Protein-Protein Interfaces: FAIR Metadata",
+  "upload_type": "dataset",
+  "description": "<p>FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces from 1,645 protein crystal structures, together with the structure files (PDB and mmCIF), an in-repository snapshot of the PDB metadata of every entry, and the documentation of the label curation.</p><p>The benchmark was published by Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323; 836 physiological and 841 non-physiological interfaces). This package uses the curated annotation file of the benchmark authors (844 physiological and 833 non-physiological interfaces; 16 labels revised, 20 interfaces flagged ambiguous and 6 flagged for deletion). Every interface carries both the curated label and the published label (<code>PublishedPhysio</code>). See <code>data/curation/README.md</code>.</p><p>Please cite the original publication as well as this package.</p>",
+  "creators": [
+    {
+      "name": "Capriotti, Emidio",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-2323-0963"
+    },
+    {
+      "name": "Martelli, Pier Luigi",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-0274-5669"
+    },
+    {
+      "name": "Savojardo, Castrense",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-7359-0633"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "protein-protein interaction",
+    "structural bioinformatics",
+    "machine learning",
+    "benchmark dataset",
+    "FAIR data",
+    "Bioschemas",
+    "Croissant",
+    "homodimer interfaces"
+  ],
+  "communities": [
+    {
+      "identifier": "elixir"
+    },
+    {
+      "identifier": "biofold"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "10.1002/pmic.202200323",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "10.5281/zenodo.22730058",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isAlternateIdentifier",
+      "identifier": "https://biofold.github.io/ppi-benchmark-fair",
+      "scheme": "url"
+    }
+  ],
+  "references": [
+    "Schweke H, Xu Q, Tauriello G, Pantolini L, Schwede T, Cazals F, Lhéritier A, Fernandez-Recio J, Rodríguez-Lumbreras LA, Schueler-Furman O, Varga JK, Jiménez-García B, Réau MF, Bonvin AMJJ, Savojardo C, Martelli PL, Casadio R, Tubiana J, Wolfson HJ, Oliva R, Barradas-Bautista D, Ricciardelli T, Cavallo L, Venclovas Č, Olechnovič K, Guerois R, Andreani J, Martin J, Wang X, Terashi G, Sarkar D, Christoffer C, Aderinwale T, Verburgt J, Kihara D, Marchand A, Correia BE, Duan R, Qiu L, Xu X, Zhang S, Zou X, Dey S, Dunbrack RL, Levy ED, Wodak SJ. Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study. Proteomics. 2023 Sep;23(17):e2200323. doi: 10.1002/pmic.202200323. Epub 2023 Jun 27. PMID: 37365936; PMCID: PMC10937251."
+  ]
+}

@@ -552,21 +552,21 @@
 
                 <h3>Basic Usage</h3>
                 <pre><code># Basic usage with local dataset
-python ppi_ml_croissant.py --local ./bioschemas_output
+python scripts/ppi_ml_croissant.py --local ./bioschema
 
 # With structural feature extraction (mmCIF format)
-python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features
+python scripts/ppi_ml_croissant.py --local ./bioschema --extract-pdb-features
 
 # With PDB format
-python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --pdb-format
+python scripts/ppi_ml_croissant.py --local ./bioschema --extract-pdb-features --pdb-format
 
 # Quick mode (reduced output)
-python ppi_ml_croissant.py --local ./bioschemas_output --quick</code></pre>
+python scripts/ppi_ml_croissant.py --local ./bioschema --quick</code></pre>
 
                 <h3>Advanced Usage</h3>
                 <pre><code># Full pipeline with all features
-python ppi_ml_croissant.py \
-  --local ./bioschemas_output \
+python scripts/ppi_ml_croissant.py \
+  --local ./bioschema \
   --extract-pdb-features \
   --pdb-local-dir ./structure_files \
   --evaluate-features \
@@ -578,10 +578,10 @@ python ppi_ml_croissant.py \
   --log-level INFO
 
 # Download structure files only
-python ppi_ml_croissant.py --local ./bioschemas_output --extract-pdb-features --pdb-features-only
+python scripts/ppi_ml_croissant.py --local ./bioschema --extract-pdb-features --pdb-features-only
 
 # Train/test split instead of CV
-python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></pre>
+python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></pre>
             </section>
 
             <!-- Output Example -->
@@ -596,85 +596,112 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
                     <div class="output-line">║  and Interface Structural Feature Extraction (10Å distance)║</div>
                     <div class="output-line">╚════════════════════════════════════════════════════════════╝</div>
                     <div class="output-line"></div>
-                    <div class="output-line output-info">INFO: Using local directory: ./bioschemas_output</div>
-                    <div class="output-line output-info">INFO: Output directory: ./ml_results</div>
+                    <div class="output-line output-info">INFO: Using local directory: bioschema</div>
+                    <div class="output-line output-info">INFO: Output directory: /tmp/ml_log</div>
                     <div class="output-line"></div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line">Step 1: Loading Croissant dataset</div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line output-success">INFO: Dataset loaded successfully!</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line output-info">INFO: Step 1: Loading Croissant dataset</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line output-info">INFO: Dataset loaded successfully!</div>
                     <div class="output-line output-info">INFO: Number of interfaces: 1677</div>
                     <div class="output-line"></div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line">Step 2: Extracting features, labels, and ClusterIDs</div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line output-success">INFO: Successfully extracted 1677 samples</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line output-info">INFO: Step 2: Extracting features, labels, and ClusterIDs</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line output-info">INFO: Successfully extracted 1677 samples</div>
+                    <div class="output-line output-info">INFO: ClusterID Statistics:</div>
+                    <div class="output-line output-info">INFO:   Unique ClusterIDs: 1050</div>
+                    <div class="output-line output-info">INFO:   Interfaces without ClusterID: 0</div>
                     <div class="output-line output-info">INFO: Class distribution:</div>
                     <div class="output-line output-info">INFO:   Physiological (1): 844 samples</div>
                     <div class="output-line output-info">INFO:   Non-physiological (0): 833 samples</div>
                     <div class="output-line"></div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line">Step 4: Extracting Structural Features</div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line output-info">INFO: Using 1200 available interface structure files</div>
-                    <div class="output-line output-info">INFO: File format: mmCIF (default)</div>
-                    <div class="output-line output-info">INFO: Local directory: ./structure_files</div>
-                    <div class="output-line output-success">INFO: Successfully extracted structural features for 1150 interfaces</div>
-                    <div class="output-line"></div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line">Step 8: Training and evaluating models</div>
-                    <div class="output-line">============================================================</div>
-                    <div class="output-line output-info">INFO: --- Training Random Forest with GroupKFold CV ---</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line output-info">INFO: Step 9: Training and evaluating models</div>
+                    <div class="output-line output-info">INFO: ============================================================</div>
+                    <div class="output-line">--- Training Random Forest with GroupKFold CV ---</div>
                     <div class="output-line output-info">INFO:   CV Results for Random Forest:</div>
-                    <div class="output-line output-success">INFO:     Average Accuracy:  0.827 (±0.012)</div>
-                    <div class="output-line output-success">INFO:     Average Precision: 0.831 (±0.015)</div>
-                    <div class="output-line output-success">INFO:     Average Recall:    0.824 (±0.018)</div>
-                    <div class="output-line output-success">INFO:     Average F1-Score:  0.827 (±0.013)</div>
-                    <div class="output-line output-success">INFO:     Average ROC-AUC:   0.898 (±0.008)</div>
+                    <div class="output-line output-info">INFO:     Average Accuracy:  0.7734 (±0.0205)</div>
+                    <div class="output-line output-info">INFO:     Average Precision: 0.7764 (±0.0519)</div>
+                    <div class="output-line output-info">INFO:     Average Recall:    0.7672 (±0.0422)</div>
+                    <div class="output-line output-info">INFO:     Average F1-Score:  0.7704 (±0.0357)</div>
+                    <div class="output-line output-info">INFO:     Average ROC-AUC:   0.8585 (±0.0142)</div>
                     <div class="output-line"></div>
-                    <div class="output-line output-success">INFO: ✅ Best model: Random Forest (Average F1-Score: 0.827)</div>
+                    <div class="output-line output-success">INFO: ✅ Best model: Random Forest (Average F1-Score: 0.7704)</div>
+                    <div class="output-line output-info">INFO: Best model: Random Forest</div>
                 </div>
 
                 <h3>Generated Files Structure</h3>
                 <pre><code>ml_results/
-├── group_kfold_cv_results.json          # Complete ML results with all metrics
-├── structural_features.csv              # Extracted PDB/mmCIF interface features
-├── feature_evaluation_report.json       # Comprehensive feature analysis
-├── group_kfold_cv_results.png           # CV performance visualization
-├── feature_evaluation_plots.png         # Feature analysis visualizations
-├── feature_importance.png               # Feature importance ranking
-└── feature_ranking_analysis.png         # Comparison of feature ranking methods</code></pre>
+├── ml_results.json                      # Complete ML results with all metrics
+├── results_summary.txt                  # Human-readable summary of the results
+├── ml_dataset_complete.csv              # Interface table used for training (features, label, cluster_id)
+├── group_kfold_cv_results.png           # CV performance plot (with --save-plots)
+├── feature_evaluation_report.json       # Feature analysis (with --evaluate-features --save-plots)
+├── feature_evaluation_plots.png         # Feature analysis plots (with --evaluate-features --save-plots)
+└── feature_ranking_analysis.png         # Comparison of feature ranking methods (with --evaluate-features --save-plots)</code></pre>
 
-                <h3>Example JSON Output (group_kfold_cv_results.json)</h3>
+                <h3>Example JSON Output (ml_results.json, abridged)</h3>
                 <pre><code>{
   "Random Forest": {
     "cv_metrics": {
-      "accuracy": 0.827,
-      "precision": 0.831,
-      "recall": 0.824,
-      "f1": 0.827,
-      "roc_auc": 0.898
+      "accuracy": 0.773,
+      "precision": 0.776,
+      "recall": 0.767,
+      "f1": 0.77,
+      "roc_auc": 0.858
     },
     "overall_metrics": {
-      "accuracy": 0.829,
-      "precision": 0.833,
-      "recall": 0.826,
-      "f1": 0.829,
-      "roc_auc": 0.901
+      "accuracy": 0.773,
+      "precision": 0.779,
+      "recall": 0.768,
+      "f1": 0.773,
+      "roc_auc": 0.858
     },
     "fold_metrics": {
-      "accuracies": [0.819, 0.831, 0.825, 0.834, 0.826],
-      "precisions": [0.822, 0.836, 0.828, 0.839, 0.830],
-      "recalls": [0.816, 0.830, 0.822, 0.833, 0.825],
-      "f1_scores": [0.819, 0.833, 0.825, 0.836, 0.827],
-      "roc_aucs": [0.895, 0.901, 0.897, 0.903, 0.894]
+      "accuracies": [
+        0.765,
+        0.807,
+        0.776,
+        0.743,
+        0.776
+      ],
+      "precisions": [
+        0.688,
+        0.832,
+        0.824,
+        0.766,
+        0.772
+      ],
+      "recalls": [
+        0.791,
+        0.828,
+        0.747,
+        0.702,
+        0.767
+      ],
+      "f1_scores": [
+        0.736,
+        0.83,
+        0.784,
+        0.733,
+        0.769
+      ],
+      "roc_aucs": [
+        0.871,
+        0.866,
+        0.872,
+        0.839,
+        0.843
+      ]
     }
   },
-  "cross_validation_settings": {
+  "...": "SVM and Logistic Regression have the same structure",
+  "experiment_settings": {
     "n_splits": 5,
-    "method": "GroupKFold cross-validation (ClusterID as groups)",
     "random_state": 42,
-    "best_model": "Random Forest"
+    "best_model": "Random Forest",
+    "test_split_used": false
   }
 }</code></pre>
 
@@ -877,7 +904,7 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
 - 1abc.pdb.gz    → Lowercase PDB ID
 - MixedCase.pdb.gz → Automatic detection</code></pre>
 
-                <h3>Example Structural Features Output</h3>
+                <h3>Example Structural Features Output (illustrative format, not real data)</h3>
                 <pre><code>interface_id,extraction_success,pdb_file,chain_ids,pdb_avg_total_interface_residues,...
 1ABC_1,True,1abc.cif.gz,A-B,24.5,...
 1DEF_1,True,1def.pdb.gz,C-D,18.2,...
@@ -936,30 +963,31 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
                     <tbody>
                         <tr>
                             <td><strong>Random Forest</strong></td>
-                            <td>0.827</td>
-                            <td>0.831</td>
-                            <td>0.824</td>
-                            <td>0.827</td>
-                            <td>0.898</td>
+                            <td>0.773</td>
+                            <td>0.776</td>
+                            <td>0.767</td>
+                            <td>0.770</td>
+                            <td>0.858</td>
                         </tr>
                         <tr>
                             <td>Support Vector Machine</td>
-                            <td>0.812</td>
-                            <td>0.818</td>
-                            <td>0.807</td>
-                            <td>0.812</td>
-                            <td>0.885</td>
+                            <td>0.761</td>
+                            <td>0.768</td>
+                            <td>0.745</td>
+                            <td>0.756</td>
+                            <td>0.852</td>
                         </tr>
                         <tr>
                             <td>Logistic Regression</td>
-                            <td>0.798</td>
-                            <td>0.804</td>
-                            <td>0.793</td>
-                            <td>0.798</td>
-                            <td>0.872</td>
+                            <td>0.761</td>
+                            <td>0.759</td>
+                            <td>0.769</td>
+                            <td>0.762</td>
+                            <td>0.829</td>
                         </tr>
                     </tbody>
                 </table>
+                <p style="font-size:0.9em;color:#555;">Values are the mean over the five GroupKFold folds, obtained with <code>scripts/ppi_ml_croissant.py</code> on the released package (seed 42). The models use six interface features plus the size of the interface&rsquo;s sequence cluster, a property of the benchmark clustering. Cluster size alone gives a ROC-AUC of 0.60; without it the Random Forest reaches an accuracy of 0.754 and a ROC-AUC of 0.852 (single check). These baselines illustrate reusability and are not scientific results.</p>
             </section>
 
                 <h3 class="cv">GroupKFold Cross-Validation</h2>
@@ -976,18 +1004,16 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
 
                 <h3>Example Console Output for GroupKFold</h3>
                 <div class="output-preview">
-                    <div class="output-line output-info">INFO: === CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===</div>
+                                        <div class="output-line">=== CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===</div>
                     <div class="output-line output-info">INFO:    Number of folds: 5</div>
                     <div class="output-line output-info">INFO:    Using ClusterID as groups to ensure same-cluster samples stay together</div>
-                    <div class="output-line"></div>
                     <div class="output-line output-info">INFO:    Split analysis:</div>
                     <div class="output-line output-info">INFO:    Fold 1:</div>
-                    <div class="output-line output-info">INFO:      Training: 1342 samples, 242 unique clusters, 678 physio (50.5%)</div>
-                    <div class="output-line output-info">INFO:      Testing:  335 samples, 61 unique clusters, 166 physio (49.6%)</div>
+                    <div class="output-line output-info">INFO:      Training: 1341 samples, 840 unique clusters, 705 physio (52.6%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  336 samples, 210 unique clusters, 139 physio (41.4%)</div>
                     <div class="output-line output-info">INFO:    Fold 2:</div>
-                    <div class="output-line output-info">INFO:      Training: 1341 samples, 241 unique clusters, 675 physio (50.3%)</div>
-                    <div class="output-line output-info">INFO:      Testing:  336 samples, 62 unique clusters, 169 physio (50.3%)</div>
-                    <div class="output-line output-success">INFO:    No clusters appear in both train and test sets</div>
+                    <div class="output-line output-info">INFO:      Training: 1341 samples, 840 unique clusters, 652 physio (48.6%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  336 samples, 210 unique clusters, 192 physio (57.1%)</div>
                 </div>
             </section>
 
@@ -997,8 +1023,8 @@ python ppi_ml_croissant.py --local ./bioschemas_output --test-split 0.2</code></
 
                 <h3>Example 1: Full ML Pipeline with Structural Features</h3>
                 <pre><code># Run complete ML pipeline with structural features
-python ppi_ml_croissant.py \
-  --local ./bioschemas_output \
+python scripts/ppi_ml_croissant.py \
+  --local ./bioschema \
   --extract-pdb-features \
   --pdb-local-dir ./structures \
   --pdb-format \
@@ -1019,8 +1045,8 @@ python ppi_ml_croissant.py \
 
                 <h3>Example 2: Quick Test Run</h3>
                 <pre><code># Quick analysis for testing (minimal output)
-python ppi_ml_croissant.py \
-  --local ./bioschemas_output \
+python scripts/ppi_ml_croissant.py \
+  --local ./bioschema \
   --quick \
   --output-dir ./quick_test
 
@@ -1032,8 +1058,8 @@ python ppi_ml_croissant.py \
 
                 <h3>Example 3: Download Structure Files Only</h3>
                 <pre><code># Just download structure files without ML
-python ppi_ml_croissant.py \
-  --local ./bioschemas_output \
+python scripts/ppi_ml_croissant.py \
+  --local ./bioschema \
   --extract-pdb-features \
   --pdb-features-only \
   --pdb-local-dir ./structure_files
@@ -1092,7 +1118,8 @@ python ppi_ml_croissant.py \
         </main>
 
         <!-- Footer -->
-        <footer>
+        <div class="original-work" style="max-width:1100px;margin:20px auto;padding:12px 18px;border-left:4px solid #4689a3;background:#f8f9fa;font-size:0.9rem;line-height:1.5;color:#333"><strong>Original work.</strong> The benchmark was published by Schweke H, Xu Q, Tauriello G, <em>et al.</em> (2023) Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study. <em>Proteomics</em> 23(17):e2200323, <a href="https://doi.org/10.1002/pmic.202200323">doi:10.1002/pmic.202200323</a>. Please cite the paper when you use the benchmark. The label curation applied after publication is described <a href="https://github.com/biofold/ppi-benchmark-fair/blob/master/data/curation/README.md">here</a>.</div>
+<footer>
             <div class="container">
                 <!--
                   <h3>ELIXIR 3D-BioInfo Machine Learning Pipeline</h3>
@@ -1117,10 +1144,9 @@ python ppi_ml_croissant.py \
                 <div class="footer-content">
                 <a href="https://github.com/biofold/ppi-benchmark-fair">
                 <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
-                <a href="https://creativecommons.org/licenses/by/4.0/">
-                <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
-                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+                <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
+                <img src="https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey" alt="DOI: assigned at first release">
                 <a href="https://www.python.org/">
                 <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
                 <a href="https://schema.org/">

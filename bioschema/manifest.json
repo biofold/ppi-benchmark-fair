@@ -1,7 +1,7 @@
 {
-  "generated_date": "2026-01-03T13:56:00.638869",
-  "dataset_file": "ppi_benchmark_2/dataset_with_interfaces.json",
-  "interfaces_dir": "ppi_benchmark_2/interface_protein_pairs",
+  "generated_date": "2026-01-03T13:56:00.638869 (generator run); files revised 2026-11-11",
+  "dataset_file": "bioschema/dataset_with_interfaces.json",
+  "interfaces_dir": "bioschema/interface_protein_pairs",
   "total_interfaces_generated": 1677,
   "total_interfaces_available": 1677,
   "interface_files_sample": [
@@ -16,12 +16,13 @@
     "interface_1AOH_1.json",
     "interface_1AZT_1.json"
   ],
-  "fair_package_file": "ppi_benchmark_2/fair_metadata_package.json",
-  "html_snippet_file": "ppi_benchmark_2/embedded_markup.html",
+  "fair_package_file": "bioschema/fair_metadata_package.json",
+  "html_snippet_file": "bioschema/embedded_markup.html",
   "csv_settings": {
-    "url": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/main/data/benchmark_annotated_updated_30042023.csv",
+    "url": "https://raw.githubusercontent.com/biofold/ppi-benchmark-fair/master/data/benchmark_annotated_updated_30042023.csv",
     "separator_used": ",",
-    "auto_detect": false
+    "auto_detect": false,
+    "published_csv": "data/curation/benchmark_annotated_published.csv"
   },
   "data_columns_found": [
     "Unnamed: 0",
@@ -83,7 +84,10 @@
     "unique_structures_with_metadata": 1645,
     "total_chains_with_sequences": 4157,
     "homomeric_structures": 1493,
-    "metadata_cache_file": "pdb_metadata_cache.json"
+    "metadata_cache_file": "pdb_metadata_cache.json",
+    "snapshot_dir": "bioschema/pdb_metadata",
+    "snapshot_files": 1648,
+    "snapshot_note": "1,645 benchmark entries + 3 replacements of obsolete entries (6YQD, 7JNY, 6OH6); most records retrieved 2026-01-03, see snapshot.retrieved in each file"
   },
   "assembly_checks": {
     "pdb_assembly_checked": true,
@@ -113,5 +117,26 @@
       "ClusterMethodOptions: Parameters used (-S 25 -L 0.5 -b F)"
     ],
     "assignment_method": "Direct assignment from BLASTClust output during parsing"
+  },
+  "labels": {
+    "label_source": "data/benchmark_annotated_updated_30042023.csv",
+    "physiological": 844,
+    "non_physiological": 833,
+    "published_labels_file": "data/curation/benchmark_annotated_published.csv",
+    "published_physiological": 836,
+    "published_non_physiological": 841,
+    "relabelled_interfaces": 16,
+    "flagged_ambiguous": 20,
+    "flagged_to_delete": 6,
+    "documentation": "data/curation/README.md"
+  },
+  "replacement_structures": {
+    "dir": "data/replacement_structures",
+    "files": [
+      "6YQD.cif.gz",
+      "7JNY.cif.gz",
+      "6OH6.cif.gz"
+    ],
+    "documentation": "data/replacement_structures/README.md"
   }
 }

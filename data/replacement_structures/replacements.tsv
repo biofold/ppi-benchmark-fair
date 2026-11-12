@@ -1,0 +1,4 @@
+obsolete_pdb_id	benchmark_interface_id	replacement_pdb_id	obsolete_removal_date	file	bytes	sha256	source_url	retrieved
+4NK0	4NK0_2	6YQD	2020-04-29	6YQD.cif.gz	114314	92e3db03673ee6888b33971d260f7af76b7f9973237f88bfb6bebd914a116d95	https://files.rcsb.org/download/6YQD.cif.gz	2026-11-11
+4ZAI	4ZAI_4	7JNY	2020-10-07	7JNY.cif.gz	66884	4112f27c3ba82df576dff22c8e9fd17a1f5791f7cf5ef689af5dc8c5d5ae1922	https://files.rcsb.org/download/7JNY.cif.gz	2026-11-11
+5A0J	5A0J_1	6OH6	2019-04-17	6OH6.cif.gz	83135	7d53a4242f3526be78c72999019a4b0445369f3c9ab01b686f6f06c26537af27	https://files.rcsb.org/download/6OH6.cif.gz	2026-11-11

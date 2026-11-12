@@ -622,27 +622,27 @@
                 <div class="model-comparison">
                     <div class="model-card rf">
                         <h4><i class="fas fa-tree"></i> Random Forest</h4>
-                        <p><strong>Accuracy:</strong> 0.827 (±0.012)</p>
-                        <p><strong>ROC-AUC:</strong> 0.898 (±0.008)</p>
+                        <p><strong>Accuracy:</strong> 0.756 (±0.011)</p>
+                        <p><strong>ROC-AUC:</strong> 0.860 (±0.005)</p>
                         <p><strong>Best for:</strong> Feature importance analysis and robust performance</p>
                     </div>
                     <div class="model-card svm">
                         <h4><i class="fas fa-project-diagram"></i> Support Vector Machine</h4>
-                        <p><strong>Accuracy:</strong> 0.812 (±0.015)</p>
-                        <p><strong>ROC-AUC:</strong> 0.885 (±0.010)</p>
+                        <p><strong>Accuracy:</strong> 0.753 (±0.011)</p>
+                        <p><strong>ROC-AUC:</strong> 0.850 (±0.007)</p>
                         <p><strong>Best for:</strong> High-dimensional feature spaces</p>
                     </div>
                     <div class="model-card lr">
                         <h4><i class="fas fa-chart-line"></i> Logistic Regression</h4>
-                        <p><strong>Accuracy:</strong> 0.798 (±0.018)</p>
-                        <p><strong>ROC-AUC:</strong> 0.872 (±0.012)</p>
+                        <p><strong>Accuracy:</strong> 0.757 (±0.013)</p>
+                        <p><strong>ROC-AUC:</strong> 0.833 (±0.012)</p>
                         <p><strong>Best for:</strong> Interpretable models and fast predictions</p>
                     </div>
                 </div>
 
                 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
                     <h4><i class="fa-solid fa-lightbulb"></i> Key Insight</h4>
-                    <p>Random Forest achieves the best overall performance with 82.7% accuracy and 89.8% ROC-AUC, demonstrating the effectiveness of structural features for PPI classification. The cluster-aware GroupKFold validation ensures these results are generalizable to new protein families.</p>
+                    <p>The three models perform similarly: accuracy 0.75-0.76 (mean ± standard error over the cross-validation folds). Random Forest has the highest ROC-AUC (0.860) and Logistic Regression the highest F1 score (0.758). The folds are built with cluster-aware GroupKFold, so interfaces with similar sequences are kept in the same fold. Values are those of <code>ml-report/prediction-report.html</code> (generated 2026-01-14), computed with the labels of the curated annotation file.</p>
                 </div>
             </section>
 
@@ -688,7 +688,7 @@ python scripts/ppi_ml_croissant.py \
 
                 <div style="background-color: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 20px;">
                             <h4><i class="fa fa-pencil-square"></i> Dataset Reference Publication </h4>
-                            <p style="margin: 0 0 0.2rem 0;">Schweke, H., Xu, Q., Cazals, F., et al. (2023). <em>Discriminating physiological from non-physiological interfaces in structures 
+                            <p style="margin: 0 0 0.2rem 0;">Schweke, H., Xu, Q., Tauriello, G., et al. (2023). <em>Discriminating physiological from non-physiological interfaces in structures 
                                 of protein complexes: A community-wide study</em>. <strong>Proteomics</strong>, 23(17), e2200323.
                                 <a href="https://doi.org/10.1002/pmic.202200323" target="_blank" rel="noopener noreferrer">
                                     https://doi.org/10.1002/pmic.202200323

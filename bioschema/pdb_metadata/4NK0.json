@@ -1,0 +1,135 @@
+{
+  "pdb_id": "4NK0",
+  "snapshot": {
+    "retrieved": "2026-11-11",
+    "source": "RCSB PDB Data API (https://data.rcsb.org/rest/v1), processed by scripts/ppi_benchmark_fair.py",
+    "live_record": "https://data.rcsb.org/rest/v1/core/entry/4NK0",
+    "license": "CC0-1.0 (wwPDB archive data)",
+    "note": "obsolete entry: header-derived metadata (2026-01-03) completed on 2026-11-11 with the RCSB removal record (removal date, deposition/release dates, title, replacement ID)"
+  },
+  "resolution": 2.02,
+  "deposition_date": "2013-11-11T00:00:00+0000",
+  "release_date": "2013-12-11T00:00:00+0000",
+  "experimental_method": "X-RAY DIFFRACTION",
+  "source_organism": [
+    "HOMO SAPIENS"
+  ],
+  "citation": {
+    "title": "HUMAN HISTIDINE TRIAD NUCLEOTIDE-BINDING PROTEIN 2 (HHINT2) IN P212121 SPACE GROUP AT 2.02 A ",
+    "authors": [
+      "R.M.DOLOT",
+      "A.WLODARCZYK",
+      "G.D.BUJACZ",
+      "B.NAWROT"
+    ],
+    "journal": "",
+    "volume": "",
+    "page": "",
+    "year": ""
+  },
+  "entity_count": 0,
+  "r_factor": null,
+  "space_group": "P 21 21 21",
+  "unit_cell": {
+    "a": 38.012,
+    "b": 73.88,
+    "c": 77.042,
+    "alpha": 90.0,
+    "beta": 90.0,
+    "gamma": 90.0
+  },
+  "found_in_api": true,
+  "obsolete": true,
+  "replaced_by": "6YQD",
+  "sequences": {
+    "A": "MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG",
+    "B": "MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG"
+  },
+  "chain_info": {
+    "A": {
+      "entity_id": "1",
+      "sequence": "MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG",
+      "sequence_length": 163,
+      "residue_count": 163,
+      "num_seqres_records": 13
+    },
+    "B": {
+      "entity_id": "1",
+      "sequence": "MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG",
+      "sequence_length": 163,
+      "residue_count": 163,
+      "num_seqres_records": 13
+    }
+  },
+  "entity_info": {},
+  "is_homomer": true,
+  "sequence_clusters": [
+    {
+      "sequence": "MAAAVVLAAGLRAARRAVAATGVRGGQVRGAAGVTDGNEVAKAQQATPGGAAPTIFSRILDKSLPADILYEDQQCLVFRDVAPQAPVHFLVIPKKPIPRISQAEEEDQQLLGHLLLVAKQTAKAEGLGDGYRLVINDGKLGAQSVYHLHIHVLGGRQLQWPPG",
+      "chains": [
+        "A",
+        "B"
+      ],
+      "chain_count": 2
+    }
+  ],
+  "chain_ids": [],
+  "entity_ids": [],
+  "rcsb_removed_holding": {
+    "rcsb_repository_holdings_removed": {
+      "audit_authors": [
+        "Dolot, R.M.",
+        "Wlodarczyk, A.",
+        "Bujacz, G.D.",
+        "Nawrot, B."
+      ],
+      "deposit_date": "2013-11-11T00:00:00.000+00:00",
+      "id_codes_replaced_by": [
+        "6YQD"
+      ],
+      "release_date": "2013-12-11T00:00:00.000+00:00",
+      "remove_date": "2020-04-29T00:00:00.000+00:00",
+      "repository_content_types": [
+        "entry PDB",
+        "entry PDBML",
+        "entry mmCIF",
+        "structure factors"
+      ],
+      "title": "Human histidine triad nucleotide-binding protein 2 (hHINT2) in P212121 space group at 2.02 A"
+    },
+    "rcsb_repository_holdings_removed_audit_author": [
+      {
+        "audit_author": "Dolot, R.M.",
+        "ordinal_id": 1
+      },
+      {
+        "audit_author": "Wlodarczyk, A.",
+        "ordinal_id": 2
+      },
+      {
+        "audit_author": "Bujacz, G.D.",
+        "ordinal_id": 3
+      },
+      {
+        "audit_author": "Nawrot, B.",
+        "ordinal_id": 4
+      }
+    ],
+    "rcsb_repository_holdings_removed_entry_container_identifiers": {
+      "entry_id": "4NK0",
+      "rcsb_id": "4NK0",
+      "update_id": "2026_45"
+    },
+    "rcsb_id": "4NK0"
+  },
+  "obsolete_date": "2020-04-29T00:00:00+0000",
+  "title": "Human histidine triad nucleotide-binding protein 2 (hHINT2) in P212121 space group at 2.02 A",
+  "taxonomy_ids": [
+    9606
+  ],
+  "primary_taxonomy_id": 9606,
+  "chain_count": 2,
+  "unique_sequences": 1,
+  "homomer_type": "2-mer",
+  "homomer_chains": 2
+}

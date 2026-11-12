@@ -1,0 +1,17 @@
+entry_id,change,introduced_in_commit,n_approaches_wrong,consensus_correct,rf_correct,alphafold_correct,conclusion,conclusion_meaning,protcid_evidence,note
+1fp3_2,non-physiological -> physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,1,physiological,"ProtCID=Physio same as 2gz6 interface, 3/12 CFs",
+2rgv_1,non-physiological -> physiological,d4f218e (2 May 2023),2.0,0.0,1.0,0.0,1,physiological,ProtCID=Physio (22/24 CFs) PDBBA 27/28 entries; PISABA 27/28 entries; same as 4ray,
+2v54_1,non-physiological -> physiological,d4f218e (2 May 2023),2.0,0.0,0.0,1.0,1,physiological,"ProtCID=Physio: 31/37 CFs, 100/123 entries",
+3e6d_1,non-physiological -> physiological,1abc4b6 (3 May 2023),2.0,0.0,0.0,1.0,1,physiological,chain cluster: 69/70 CFs,
+3lf6_1,non-physiological -> physiological,1abc4b6 (3 May 2023),2.0,0.0,0.0,1.0,1,physiological,"chain cluster 6/12 CFs, seq id = 18",
+3ljb_2,non-physiological -> physiological,1abc4b6 (3 May 2023),2.0,0.0,0.0,1.0,1,physiological,no chain cluster. Domain cluster: 12/22 CFs.,
+4ckn_2,non-physiological -> physiological,1abc4b6 (3 May 2023),2.0,0.0,1.0,0.0,1,physiological,"chain cluster 4/6 CFs, 4/6 entries, seq id = 19. domain cluster 7/9 CFs, 7/9 entries, seq id = 11",
+4ldz_1,non-physiological -> physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,1,physiological,"ProtCAD=physio; 13/22 CFs, some bound to DNA",
+4ray_1,non-physiological -> physiological,d4f218e (2 May 2023),2.0,0.0,1.0,0.0,1,physiological,ProtCID=Physio (22/24 CFs; same Pfam/interface as 2rgv),
+4zms_1,non-physiological -> physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,1,physiological,ProtCID=Physio (13/22 CFs) same Pfam cluster as 4ldz,
+5ckl_1,non-physiological -> physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,1,physiological,"ProtCAD=physio; 4/14 CFs (4/5 of these UNPs), including 3 CFs of this UNP; other is 62% seqid",
+5svg_1,non-physiological -> physiological,d4f218e (2 May 2023),2.0,0.0,0.0,1.0,1,physiological,ProtCID=Physio (11/55 CFs),Paper says dimer by SEC/MALS
+2gz6_1,physiological -> non-physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,0,non-physiological,ProtCID=NonPhysio(other interface preferred; 3/12 CFs),Assigned by authors; gel  filtration (not shown in paper) claims dimer.
+4nsv_1,physiological -> non-physiological,d4f218e (2 May 2023),3.0,0.0,0.0,0.0,0,non-physiological,ProtCID=nonphysio;no cluster out of 36 CFs,
+4o1r_2,physiological -> non-physiological,1abc4b6 (3 May 2023),2.0,0.0,1.0,0.0,0,non-physiological,"no clusters. 20 CFs of this Pfam architecture, the largest cluster has 2 CFs. But no clusters of this PDB ",
+4ofd_1,physiological -> non-physiological,1abc4b6 (3 May 2023),2.0,0.0,0.0,1.0,0,non-physiological,no clusters of this interface. Other interface (4ofd_5) preferred in domain cluster 58/199 CFs.,

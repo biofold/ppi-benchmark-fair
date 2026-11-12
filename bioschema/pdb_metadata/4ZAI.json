@@ -1,0 +1,132 @@
+{
+  "pdb_id": "4ZAI",
+  "snapshot": {
+    "retrieved": "2026-11-11",
+    "source": "RCSB PDB Data API (https://data.rcsb.org/rest/v1), processed by scripts/ppi_benchmark_fair.py",
+    "live_record": "https://data.rcsb.org/rest/v1/core/entry/4ZAI",
+    "license": "CC0-1.0 (wwPDB archive data)",
+    "note": "obsolete entry: header-derived metadata (2026-01-03) completed on 2026-11-11 with the RCSB removal record (removal date, deposition/release dates, title, replacement ID)"
+  },
+  "resolution": 1.95,
+  "deposition_date": "2015-04-13T00:00:00+0000",
+  "release_date": "2015-07-15T00:00:00+0000",
+  "experimental_method": "X-RAY DIFFRACTION",
+  "source_organism": [
+    "HOMO SAPIENS"
+  ],
+  "citation": {
+    "title": "CRYSTAL STRUCTURE OF CXCL13 ",
+    "authors": [
+      "E.M.ROSENBERG JR.",
+      "D.RAJASEKARAN",
+      "J.W.MURPHY",
+      "G.PANTOURIS",
+      "E.J.LOLIS"
+    ],
+    "journal": "",
+    "volume": "",
+    "page": "",
+    "year": ""
+  },
+  "entity_count": 0,
+  "r_factor": null,
+  "space_group": "P 31 2 1",
+  "unit_cell": {
+    "a": 48.968,
+    "b": 48.968,
+    "c": 80.276,
+    "alpha": 90.0,
+    "beta": 90.0,
+    "gamma": 120.0
+  },
+  "found_in_api": true,
+  "obsolete": true,
+  "replaced_by": "7JNY",
+  "sequences": {
+    "A": "MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP"
+  },
+  "chain_info": {
+    "A": {
+      "entity_id": "1",
+      "sequence": "MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP",
+      "sequence_length": 88,
+      "residue_count": 88,
+      "num_seqres_records": 7
+    }
+  },
+  "entity_info": {},
+  "is_homomer": true,
+  "sequence_clusters": [
+    {
+      "sequence": "MVLEVYYTSLRCRCVQESSVFIPRRFIDRIQILPRGNGCPRKEIIVWKKNKSIVCVDPQAEWIQRMMEVLRKRSSSTLPVPVFKRKIP",
+      "chains": [
+        "A"
+      ],
+      "chain_count": 1
+    }
+  ],
+  "chain_ids": [],
+  "entity_ids": [],
+  "rcsb_removed_holding": {
+    "rcsb_repository_holdings_removed": {
+      "audit_authors": [
+        "Rosenberg Jr., E.M.",
+        "Rajasekaran, D.",
+        "Murphy, J.W.",
+        "Pantouris, G.",
+        "Lolis, E.J."
+      ],
+      "deposit_date": "2015-04-13T00:00:00.000+00:00",
+      "id_codes_replaced_by": [
+        "7JNY"
+      ],
+      "release_date": "2015-07-15T00:00:00.000+00:00",
+      "remove_date": "2020-10-07T00:00:00.000+00:00",
+      "repository_content_types": [
+        "entry PDB",
+        "entry PDBML",
+        "entry mmCIF",
+        "structure factors"
+      ],
+      "title": "Crystal structure of CXCL13"
+    },
+    "rcsb_repository_holdings_removed_audit_author": [
+      {
+        "audit_author": "Rosenberg Jr., E.M.",
+        "ordinal_id": 1
+      },
+      {
+        "audit_author": "Rajasekaran, D.",
+        "ordinal_id": 2
+      },
+      {
+        "audit_author": "Murphy, J.W.",
+        "ordinal_id": 3
+      },
+      {
+        "audit_author": "Pantouris, G.",
+        "ordinal_id": 4
+      },
+      {
+        "audit_author": "Lolis, E.J.",
+        "ordinal_id": 5
+      }
+    ],
+    "rcsb_repository_holdings_removed_entry_container_identifiers": {
+      "entry_id": "4ZAI",
+      "rcsb_id": "4ZAI",
+      "update_id": "2026_45"
+    },
+    "rcsb_id": "4ZAI"
+  },
+  "obsolete_date": "2020-10-07T00:00:00+0000",
+  "title": "Crystal structure of CXCL13",
+  "taxonomy_ids": [
+    9606
+  ],
+  "primary_taxonomy_id": 9606,
+  "chain_count": 1,
+  "unique_sequences": 1,
+  "homomer_type": "monomer",
+  "homomer_chains": 1
+}

@@ -1718,7 +1718,8 @@ class FAIRVisualizer:
         
         # Footer with updated badges
         html_parts.append(f"""
-        <footer id="footer">
+        <div class="original-work" style="max-width:1100px;margin:20px auto;padding:12px 18px;border-left:4px solid #4689a3;background:#f8f9fa;font-size:0.9rem;line-height:1.5;color:#333"><strong>Original work.</strong> The benchmark was published by Schweke H, Xu Q, Tauriello G, <em>et al.</em> (2023) Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study. <em>Proteomics</em> 23(17):e2200323, <a href="https://doi.org/10.1002/pmic.202200323">doi:10.1002/pmic.202200323</a>. Please cite the paper when you use the benchmark. The label curation applied after publication is described <a href="https://github.com/biofold/ppi-benchmark-fair/blob/master/data/curation/README.md">here</a>.</div>
+<footer id="footer">
             <div class="container">
                 <div class="footer-content">
                     Evaluation of FAIR principles compliance for scientific data repositories
@@ -1726,10 +1727,9 @@ class FAIRVisualizer:
                 <div class="footer-content" style="margin-top:25px;">
                     <a href="https://github.com/biofold/ppi-benchmark-fair">
                     <img src="https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen" alt="FAIR Score: 87.5/100"></a>
-                    <a href="https://creativecommons.org/licenses/by/4.0/">
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/">
                     <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
-                    <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                    <img src="https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey" alt="DOI: assigned at first release">
                     <a href="https://www.python.org/">
                     <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
                     <a href="https://schema.org/">

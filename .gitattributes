@@ -1,3 +1,0 @@
-bioschema/embedded_markup.html filter=lfs diff=lfs merge=lfs -text
-bioschema/fair_metadata_package.json filter=lfs diff=lfs merge=lfs -text
-bioschema/dataset_with_interfaces.json filter=lfs diff=lfs merge=lfs -text
