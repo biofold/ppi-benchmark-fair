@@ -7,7 +7,7 @@
 
 [![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-![DOI: assigned at the first Zenodo release](https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24149636.svg)](https://doi.org/10.5281/zenodo.24149636)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Schema.org+Bioschemas](https://img.shields.io/badge/Metadata-Schema.org%2BBioschemas-blue)](https://schema.org/)
 [![MLCommons Croissant](https://img.shields.io/badge/ML-Croissant_1.0-yellow)](https://mlcommons.org/croissant/)
@@ -68,8 +68,8 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
 
 ### **Findable (85/100) ✅**
 
-* ✅ Rich Metadata: 1,681 metadata files with structured annotations  
-* ✅ Persistent Identifier: DOI minted by Zenodo at the first release (pending)  
+* ✅ Rich Metadata: one JSON-LD file per interface (1,677) plus dataset-level files  
+* ✅ Persistent Identifier: DOI minted by Zenodo (10.5281/zenodo.24149636)  
 * ✅ Keywords: EDAM ontology terms integrated  
 * ⚠️  Possible Improvement: Repository topics, GitHub releases, documentation wiki
 
@@ -357,7 +357,8 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
    `version={1.0.0},`
    `publisher={Zenodo},`
    `url={https://github.com/biofold/ppi-benchmark-fair},`
-   `note={DOI assigned by Zenodo at the first release; cite the concept DOI once it is available}`
+   `doi={10.5281/zenodo.24149636},`
+`note={Zenodo concept DOI, all versions}`
 `}`
 
 Project report (Zenodo, all versions): Capriotti E, Martelli PL, Savojardo C. *FAIRification of the ELIXIR 3D-Bioinfo Protein-Protein Interface Benchmark*. Zenodo, 2026. [doi:10.5281/zenodo.24144349](https://doi.org/10.5281/zenodo.24144349). The first version is [doi:10.5281/zenodo.24144350](https://doi.org/10.5281/zenodo.24144350).

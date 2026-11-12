@@ -2520,7 +2520,7 @@ class PPIBenchmarkProcessor:
             "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
             "name": "Protein-Protein Interaction Interface Benchmark Dataset",
             "description": f"A benchmark dataset of {stats['total_entries']} protein crystal structures with {stats.get('physiological_count', 0)} physiological and {stats.get('non_physiological_count', 0)} non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics.",
-            "identifier": "https://github.com/biofold/ppi-benchmark-fair",
+            "identifier": "https://doi.org/10.5281/zenodo.24149636",
             "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",
             "license": FAIR_LICENSE_URL,
 
@@ -3357,7 +3357,7 @@ class PPIBenchmarkProcessor:
         fair_package = {
             "fair_metadata": {
                 "findability": {
-                    "persistent_identifier": "https://github.com/biofold/ppi-benchmark-fair",
+                    "persistent_identifier": "https://doi.org/10.5281/zenodo.24149636",
                     "rich_metadata": True,
                     "searchable_registry": ["Google Dataset Search", "WorkflowHub", "bio.tools", "Hugging Face Datasets"],
                     "versioning": {

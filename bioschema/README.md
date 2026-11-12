@@ -9,7 +9,7 @@ A benchmark dataset containing 1,677 protein crystal structures with 844 physiol
 | Property | Value |
 | :---- | :---- |
 | Name | Protein-Protein Interaction Interface Benchmark Dataset |
-| Identifier | [https://github.com/biofold/ppi-benchmark-fair](https://github.com/biofold/ppi-benchmark-fair) |
+| Identifier | [https://doi.org/10.5281/zenodo.24149636](https://doi.org/10.5281/zenodo.24149636) |
 | URL | [https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces) |
 | License | CC BY-NC 4.0 ([https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)) |
 | Version | 1.0 |
@@ -29,7 +29,7 @@ A benchmark dataset containing 1,677 protein crystal structures with 844 physiol
 | `dct:conformsTo` | String | Yes | BioSchemas profile | `"https://bioschemas.org/profiles/Dataset/1.0-RELEASE"` |
 | `name` | String | Yes | Dataset name | `"Protein-Protein Interaction Interface Benchmark Dataset"` |
 | `description` | String | Yes | Comprehensive description | Text description |
-| `identifier` | String (URI) | Yes | Persistent identifier (repository URL until a DOI is assigned) | `"https://github.com/biofold/ppi-benchmark-fair"` |
+| `identifier` | String (URI) | Yes | DOI identifier | `"https://doi.org/10.5281/zenodo.24149636"` |
 | `url` | String (URI) | Yes | GitHub repository URL | `"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"` |
 | `license` | String (URI) | Yes | License URL | `"https://creativecommons.org/licenses/by-nc/4.0/"` |
 | `keywords` | Array\[DefinedTerm\] | Yes | EDAM ontology keywords | Array of DefinedTerm objects |
@@ -294,7 +294,7 @@ License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 
 
 When using this dataset, please cite:
 
-1. Dataset (DOI assigned at the first release): [https://github.com/biofold/ppi-benchmark-fair](https://github.com/biofold/ppi-benchmark-fair)  
+1. Dataset DOI: [https://doi.org/10.5281/zenodo.24149636](https://doi.org/10.5281/zenodo.24149636)  
 2. Original Publication: "Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study" (DOI: 10.1002/pmic.202200323)  
 3. ELIXIR 3D-BioInfo Community
 

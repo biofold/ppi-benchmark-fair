@@ -21,6 +21,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-7359-0633"
     affiliation: "University of Bologna"
 version: "1.0.0"
+doi: "10.5281/zenodo.24149636"
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/biofold/ppi-benchmark-fair"
 url: "https://biofold.github.io/ppi-benchmark-fair"

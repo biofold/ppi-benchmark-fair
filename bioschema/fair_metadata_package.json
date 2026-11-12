@@ -1,7 +1,7 @@
 {
   "fair_metadata": {
     "findability": {
-      "persistent_identifier": "https://github.com/biofold/ppi-benchmark-fair",
+      "persistent_identifier": "https://doi.org/10.5281/zenodo.24149636",
       "rich_metadata": true,
       "searchable_registry": [
         "Google Dataset Search",
@@ -101,7 +101,7 @@
       "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
       "name": "Protein-Protein Interaction Interface Benchmark Dataset",
       "description": "A benchmark dataset of 1677 protein crystal structures with 844 physiological and 833 non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics. This package is derived from the benchmark of Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323). It uses the post-publication curated annotation file (30 April 2023), in which 16 interface labels were revised relative to the published split of 836 physiological and 841 non-physiological interfaces.",
-      "identifier": "https://github.com/biofold/ppi-benchmark-fair",
+      "identifier": "https://doi.org/10.5281/zenodo.24149636",
       "url": "https://biofold.github.io/ppi-benchmark-fair",
       "license": "https://creativecommons.org/licenses/by-nc/4.0/",
       "keywords": [
