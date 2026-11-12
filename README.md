@@ -401,4 +401,4 @@ For questions or support, please:
 
 ---
 
-\*This project is part of the ELIXIR 3D-BioInfo Community's efforts to promote FAIR data practices in structural bioinformatics.\*  
+*This project is part of the ELIXIR 3D-BioInfo Community and Tools Platform efforts to promote FAIR data practices in structural bioinformatics.*  
