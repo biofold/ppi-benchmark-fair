@@ -1,0 +1,50 @@
+name: Validate metadata
+
+# Runs on every push or pull request that touches the metadata files, and on demand.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'CITATION.cff'
+      - '.zenodo.json'
+      - 'fair-report/**'
+      - 'bioschema/**'
+      - 'scripts/validate_metadata.py'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - 'CITATION.cff'
+      - '.zenodo.json'
+      - 'fair-report/**'
+      - 'bioschema/**'
+      - 'scripts/validate_metadata.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # the repository holds ~3,300 structure files: only fetch what the checks need
+          sparse-checkout: |
+            CITATION.cff
+            .zenodo.json
+            scripts/validate_metadata.py
+            fair-report
+            bioschema/schema.json
+            bioschema/fair_metadata_package.json
+            bioschema/interface_protein_pairs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install jsonschema pyyaml cffconvert
+      - name: Validate CITATION.cff
+        run: cffconvert --validate
+      - name: Validate metadata files
+        run: python scripts/validate_metadata.py

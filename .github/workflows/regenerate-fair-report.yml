@@ -1,0 +1,86 @@
+name: Regenerate FAIR report
+
+# Manual workflow: re-assess the repository, regenerate the machine-readable FAIR report
+# (fair-report/fair-report.json), the FAIR dashboards and the score numbers in the pages,
+# validate the result and propose it as a pull request. Nothing is committed to the default
+# branch: review the pull request, merge it and publish a new tagged release (Zenodo archives
+# each release automatically).
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag the report refers to (e.g. v1.2.0; must match the version in CITATION.cff)'
+        required: true
+      check_pdb_status:
+        description: 'Also check the PDB entries of the benchmark against the RCSB PDB'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  CONCEPT_DOI: 10.5281/zenodo.24149636
+  LICENSE_ID: CC-BY-NC-4.0
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check that the workflow runs on the default branch
+        if: github.ref_name != github.event.repository.default_branch
+        run: |
+          echo "Run this workflow on the default branch (the assessment clones the default branch)." >&2
+          exit 1
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy matplotlib seaborn plotly pyyaml rdflib jsonschema
+      - name: Check the status of the PDB entries
+        if: ${{ inputs.check_pdb_status }}
+        run: python scripts/check_pdb_status.py --output fair-report/pdb_status_report.json
+      - name: Assess FAIRness (clones this repository and the comparison repositories)
+        run: |
+          mkdir -p "$RUNNER_TEMP/work" && cd "$RUNNER_TEMP/work"
+          python "$GITHUB_WORKSPACE/scripts/test_fair_gitrepo.py" "$GITHUB_WORKSPACE/fair-report/comparison_repos.txt"
+          find fair_reports -name 'fair_comparison_*.json'
+      - name: Export the machine-readable report
+        run: |
+          RAW=$(ls "$RUNNER_TEMP"/work/fair_reports/fair_comparison_*.json | tail -1)
+          python scripts/export_fair_report_json.py "$RAW" \
+            --repo-url "https://github.com/${{ github.repository }}" \
+            --commit "$(git rev-parse HEAD)" \
+            --release "${{ inputs.release_tag }}" \
+            --doi "$CONCEPT_DOI" --license "$LICENSE_ID" \
+            -o fair-report/fair-report.json
+          echo "RAW=$RAW" >> "$GITHUB_ENV"
+      - name: Regenerate the dashboards
+        run: |
+          python scripts/generate_fair_report.py "$RAW" --output-dir "$RUNNER_TEMP/dash" --output-file "$RUNNER_TEMP/dash/fair-report.html"
+          cp "$RUNNER_TEMP/dash/fair-report.html" fair-report/fair-report.html
+          cp "$RUNNER_TEMP"/dash/figures/*.html fair-report/figures/
+      - name: Update the score numbers written in README and pages
+        run: python scripts/update_fair_score_strings.py
+      - name: Validate the metadata
+        run: python scripts/validate_metadata.py
+      - name: Propose the changes as a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="fair-report-${{ inputs.release_tag }}-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add -A
+          git status --short | tee -a "$GITHUB_STEP_SUMMARY"
+          git commit -m "Regenerate FAIR report for ${{ inputs.release_tag }}"
+          git push origin "$BRANCH"
+          gh pr create --base "${{ github.event.repository.default_branch }}" --head "$BRANCH" \
+            --title "Regenerate FAIR report for ${{ inputs.release_tag }}" \
+            --body "Automatic update of the FAIR report, dashboards and score numbers. Review, merge and tag the release." \
+            || echo "Pull request not created automatically (enable 'Allow GitHub Actions to create pull requests' in the repository settings). Open: https://github.com/${{ github.repository }}/compare/$BRANCH" >> "$GITHUB_STEP_SUMMARY"
