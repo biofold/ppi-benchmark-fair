@@ -2123,7 +2123,7 @@ class PPIBenchmarkProcessor:
         </script>
         </head>
         <body>
-        <h1>Protein-Protein Interaction Interface Benchmark Dataset</h1>
+        <h1>Protein-Protein Interface Benchmark Dataset</h1>
         <p>This page contains embedded Bioschemas and Croissant markup for the dataset.</p>
         <p>The JSON-LD markup in the header makes this dataset discoverable by search engines and compatible with Google Dataset Search and ML dataset platforms.</p>
         </body>
@@ -2518,7 +2518,7 @@ class PPIBenchmarkProcessor:
 
             # === BIOSCHEMAS DATASET PROPERTIES ===
             "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
-            "name": "Protein-Protein Interaction Interface Benchmark Dataset",
+            "name": "Protein-Protein Interface Benchmark Dataset",
             "description": f"A benchmark dataset of {stats['total_entries']} protein crystal structures with {stats.get('physiological_count', 0)} physiological and {stats.get('non_physiological_count', 0)} non-physiological homodimer interfaces for evaluating protein-protein interface scoring functions. Ideal for machine learning applications in structural bioinformatics.",
             "identifier": "https://doi.org/10.5281/zenodo.24149636",
             "url": "https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces",

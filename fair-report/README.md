@@ -133,7 +133,7 @@ Below is a compact example that fills required fields so you can visualize struc
       "@context": ["https://schema.org/"],
       "@type": ["Dataset"],
       "@id": "https://github.com/biofold/ppi-benchmark-fair",
-      "name": "Protein-Protein Interaction Interface Benchmark Dataset",
+      "name": "Protein-Protein Interface Benchmark Dataset",
       "description": "Minimal dataset description",
       "identifier": "https://github.com/biofold/ppi-benchmark-fair",
       "url": "https://github.com/OWNER/REPO",

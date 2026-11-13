@@ -8,7 +8,7 @@ A benchmark dataset containing 1,677 homodimer interfaces from 1,645 protein cry
 
 | Property | Value |
 | :---- | :---- |
-| Name | Protein-Protein Interaction Interface Benchmark Dataset |
+| Name | Protein-Protein Interface Benchmark Dataset |
 | Identifier | [https://doi.org/10.5281/zenodo.24149636](https://doi.org/10.5281/zenodo.24149636) |
 | URL | [https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces) |
 | License | CC BY-NC 4.0 ([https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)) |
@@ -27,7 +27,7 @@ A benchmark dataset containing 1,677 homodimer interfaces from 1,645 protein cry
 | `@id` | String (URI) | Yes | Dataset identifier URL | `"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"` |
 | `cr:conformsTo` | String | Yes | ML Commons Croissant spec | `"https://mlcommons.org/croissant/1.0"` |
 | `dct:conformsTo` | String | Yes | BioSchemas profile | `"https://bioschemas.org/profiles/Dataset/1.0-RELEASE"` |
-| `name` | String | Yes | Dataset name | `"Protein-Protein Interaction Interface Benchmark Dataset"` |
+| `name` | String | Yes | Dataset name | `"Protein-Protein Interface Benchmark Dataset"` |
 | `description` | String | Yes | Comprehensive description | Text description |
 | `identifier` | String (URI) | Yes | DOI identifier | `"https://doi.org/10.5281/zenodo.24149636"` |
 | `url` | String (URI) | Yes | GitHub repository URL | `"https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces"` |
@@ -313,4 +313,4 @@ When using this dataset, please cite:
 | 1.0.0 | first Zenodo archive | 1,677 interfaces; light JSON-LD files with an in-repo PDB metadata snapshot; documentation of the label curation |
 | Latest | 2025-12-26 | Updated metadata enrichment |
 
-This data dictionary provides comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interaction Interface Benchmark Dataset schema. All properties follow JSON Schema validation rules and are compatible with both BioSchemas and ML Commons Croissant standards.  
+This data dictionary provides comprehensive documentation for all fields, validation rules, and usage patterns in the Protein-Protein Interface Benchmark Dataset schema. All properties follow JSON Schema validation rules and are compatible with both BioSchemas and ML Commons Croissant standards.  
