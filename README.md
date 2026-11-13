@@ -5,7 +5,7 @@
 > **Original work.** The benchmark described here was published by Schweke H, Xu Q, Tauriello G, *et al.* (2023) *Discriminating physiological from non-physiological interfaces in structures of protein complexes: A community-wide study.* Proteomics 2023 Sep;23(17):e2200323, [doi:10.1002/pmic.202200323](https://doi.org/10.1002/pmic.202200323) (PMID [37365936](https://pubmed.ncbi.nlm.nih.gov/37365936/), PMCID [PMC10937251](https://pmc.ncbi.nlm.nih.gov/articles/PMC10937251/)). The data come from the community repository [vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces](https://github.com/vibbits/Elixir-3DBioInfo-Benchmark-Protein-Interfaces). This repository adds FAIR metadata; please cite the paper when you use the benchmark (see [Citation](#citation)).
 
 
-[![FAIR Score: 87.5/100](https://img.shields.io/badge/FAIR_Score-87.5%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
+[![FAIR Score: 88.75/100](https://img.shields.io/badge/FAIR_Score-88.75%2F100-brightgreen)](https://github.com/biofold/ppi-benchmark-fair)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24149636.svg)](https://doi.org/10.5281/zenodo.24149636)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -64,14 +64,14 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
 | Resolution Range | 0.90–3.94 Å | median 2.20 Å (1,642 entries; the 3 obsolete entries are not served by RCSB) |
 | Experimental Method | X-ray diffraction | 1,642 of 1,642 entries served by RCSB (checked 2026-11-11) |
 
-## **FAIR Compliance Score: 87.5/100**
+## **FAIR Compliance Score: 88.75/100**
 
-### **Findable (85/100) ✅**
+### **Findable (90/100) ✅**
 
 * ✅ Rich Metadata: one JSON-LD file per interface (1,677) plus dataset-level files  
 * ✅ Persistent Identifier: DOI minted by Zenodo (10.5281/zenodo.24149636)  
 * ✅ Keywords: EDAM ontology terms integrated  
-* ⚠️  Possible Improvement: Repository topics, GitHub releases, documentation wiki
+* ⚠️  Possible Improvement: Repository topics, documentation wiki
 
 ### **Accessible (80/100) ✅**
 
@@ -85,18 +85,18 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
 * ✅ [Schema.org/Bioschemas](https://schema.org/Bioschemas): Full compliance  
 * ✅ MLCommons Croissant: ML dataset standard  
 * ✅ Domain Vocabularies: EDAM, GO, Pfam, SCOP  
-* ⚠️  Possible Improvement: Data schema documentation, format information
+* ⚠️  Possible Improvement: Format information
 
 ### **Reusable (95/100) ✅**
 
 * ✅ Provenance: Full processing pipeline documented  
 * ✅ Contact Information: ELIXIR 3D-BioInfo Community  
 * ✅ Examples: Usage scripts provided  
-* ✅ Info: Explicit LICENSE file, CITATION.cff, issue templates
+* ✅ Info: Explicit LICENSE file, CITATION.cff
 
 ### **Machine-readable FAIR report**
 
-The FAIR assessment is also available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 88.75/100 (Findable 90, Accessible 80, Interoperable 90, Reusable 95) for release v1.0.0.
+The FAIR assessment is also available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 88.75/100 (Findable 90, Accessible 80, Interoperable 90, Reusable 95); the file records the assessed commit and release.
 
 ## **Metadata Architecture**
 
@@ -308,25 +308,23 @@ When `--fetch-pdb-metadata` is enabled, the script fetches comprehensive metadat
 
 ## **FAIR Improvements Roadmap**
 
-Based on the FAIR assessment (87.5/100), here are planned improvements:
+Based on the FAIR assessment (88.75/100), here are planned improvements:
 
 ### **Low Priority (Potential \+5 points)**
 
 * Create `.github/ISSUE_TEMPLATE/` for structured issue reporting  
 
-### **Medium Priority (Potential \+40 points)**
+### **Medium Priority (Potential \+30 points)**
 
-* Add `schema.json` or `data_dictionary.md` describing data structure  
 * Specify access rights in metadata (open/restricted/closed)  
 * Include format information (MIME types, extensions) in metadata
 
-### **Low Priority (Potential \+15 points)**
+### **Low Priority (Potential \+10 points)**
 
 * Add repository topics on GitHub settings  
-* Create GitHub releases with version tags  
 * Enable and populate documentation wiki
 
-Target FAIR Score: 100/100 (Currently: 87.5)
+Target FAIR Score: 100/100 (Currently: 88.75)
 
 ## **License and Attribution**
 
@@ -358,7 +356,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
    `title={ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata},`
    `author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},`
    `year={2026},`
-   `version={1.0.0},`
+   `version={1.1.0},`
    `publisher={Zenodo},`
    `url={https://github.com/biofold/ppi-benchmark-fair},`
    `doi={10.5281/zenodo.24149636},`
