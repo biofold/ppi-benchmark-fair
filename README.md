@@ -365,7 +365,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
    `title={ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata},`
    `author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},`
    `year={2026},`
-   `version={1.1.0},`
+   `version={1.2.0},`
    `publisher={Zenodo},`
    `url={https://github.com/biofold/ppi-benchmark-fair},`
    `doi={10.5281/zenodo.24149636},`
