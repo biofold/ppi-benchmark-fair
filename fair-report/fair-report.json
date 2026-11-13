@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "report_type": "FAIR repository assessment",
-  "generated_at": "2026-11-13T16:31:23Z",
-  "assessed_at": "2026-11-13T17:31:23.316340",
+  "generated_at": "2026-11-13T18:38:39Z",
+  "assessed_at": "2026-11-13T18:38:39.371842",
   "repository": {
     "url": "https://github.com/biofold/ppi-benchmark-fair",
-    "commit": "9c215357924608fa9d94a746e1ebe0f1e18fe9dc",
+    "commit": "0ea505a24efcf1ad93e7e2a9a9efd4fe096be87e",
     "release_tag": "v1.2.0",
     "doi": "10.5281/zenodo.24149636",
     "license": "CC-BY-NC-4.0"
@@ -64,9 +64,9 @@
     "has_format_info": false,
     "has_vocabularies": true,
     "standards_used": [
-      "fair",
       "dcat",
       "dublin-core",
+      "fair",
       "schema.org"
     ],
     "license_types": [

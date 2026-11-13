@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-13T18:37:34Z",
+  "source": "RCSB PDB holdings status service (data.rcsb.org)",
+  "entries_checked": 1645,
+  "entries_not_found": [],
+  "not_current": [
+    {
+      "pdb_id": "4NK0",
+      "status": "REMOVED",
+      "replaced_by": "6YQD",
+      "handled_in_package": true,
+      "replacement_in_package": "6YQD"
+    },
+    {
+      "pdb_id": "4ZAI",
+      "status": "REMOVED",
+      "replaced_by": "7JNY",
+      "handled_in_package": true,
+      "replacement_in_package": "7JNY"
+    },
+    {
+      "pdb_id": "5A0J",
+      "status": "REMOVED",
+      "replaced_by": "6OH6",
+      "handled_in_package": true,
+      "replacement_in_package": "6OH6"
+    }
+  ],
+  "not_current_and_unhandled": 0
+}
