@@ -43,8 +43,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install jsonschema pyyaml cffconvert
+        run: pip install jsonschema pyyaml
       - name: Validate CITATION.cff
-        run: cffconvert --validate
+        # cffconvert pins an old jsonschema, so it runs in its own isolated environment
+        run: pipx run cffconvert --validate
       - name: Validate metadata files
         run: python scripts/validate_metadata.py

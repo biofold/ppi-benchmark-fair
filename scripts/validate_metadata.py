@@ -18,7 +18,12 @@ import os
 import sys
 
 import yaml
-from jsonschema import Draft202012Validator, validators
+from jsonschema import validators
+
+try:  # jsonschema >= 4
+    from jsonschema import Draft202012Validator as DefaultValidator
+except ImportError:  # older jsonschema (e.g. the 3.2 pinned by some tools)
+    from jsonschema import Draft7Validator as DefaultValidator
 
 errors = []
 
@@ -38,7 +43,7 @@ def load_json(path):
 
 
 def validate(data, schema, label):
-    cls = validators.validator_for(schema, default=Draft202012Validator)
+    cls = validators.validator_for(schema, default=DefaultValidator)
     errs = sorted(cls(schema).iter_errors(data), key=lambda e: list(e.path))
     if errs:
         for e in errs[:10]:
