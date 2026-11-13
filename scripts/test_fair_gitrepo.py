@@ -1067,6 +1067,16 @@ class GitHubFAIRComparator:
             )
             if result.stdout.strip():
                 info['has_releases'] = True
+            else:
+                # a shallow clone (--depth 1) does not fetch tags of older commits: ask the remote
+                remote = subprocess.run(
+                    ['git', '-C', str(clone_path), 'ls-remote', '--tags', 'origin'],
+                    capture_output=True,
+                    text=True,
+                    timeout=60
+                )
+                if remote.stdout.strip():
+                    info['has_releases'] = True
         except:
             pass
         

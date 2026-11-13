@@ -63,7 +63,7 @@ def build(raw, repo_url, commit=None, release=None, doi=None, license_id=None):
         },
         "metadata_summary": {
             "metadata_files_found": s.get("metadata_files_count"),
-            **{k: v for k, v in s.get("metadata_summary", {}).items()},
+            **{k: (sorted(v) if isinstance(v, list) else v) for k, v in s.get("metadata_summary", {}).items()},
         },
         "improvements": [
             {
