@@ -94,6 +94,10 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
 * ✅ Examples: Usage scripts provided  
 * ✅ Info: Explicit LICENSE file, CITATION.cff, issue templates
 
+### **Machine-readable FAIR report**
+
+The FAIR assessment is also available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 88.75/100 (Findable 90, Accessible 80, Interoperable 90, Reusable 95) for release v1.0.0.
+
 ## **Metadata Architecture**
 
 ### **Generated File Structure**

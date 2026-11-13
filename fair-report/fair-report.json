@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "report_type": "FAIR repository assessment",
+  "generated_at": "2026-11-13T14:21:56Z",
+  "assessed_at": "2026-11-13T15:21:10.028363",
+  "repository": {
+    "url": "https://github.com/biofold/ppi-benchmark-fair",
+    "commit": "5fc66ddd11ea31c14e977cd52059301d91627095",
+    "release_tag": "v1.0.0",
+    "doi": "10.5281/zenodo.24149636",
+    "license": "CC-BY-NC-4.0"
+  },
+  "tool": {
+    "name": "test_fair_gitrepo.py",
+    "description": "Rule-based FAIR checklist run on a clone of the repository; each principle is scored 0-100 from weighted criteria and the total is the mean of the four principle scores.",
+    "path": "scripts/test_fair_gitrepo.py"
+  },
+  "scores": {
+    "total": 88.75,
+    "scale_max": 100,
+    "principles": {
+      "findable": {
+        "score": 90,
+        "max_score": 100,
+        "percentage": 90.0,
+        "missing_criteria": [
+          "Repository topics",
+          "Documentation wiki"
+        ]
+      },
+      "accessible": {
+        "score": 80,
+        "max_score": 100,
+        "percentage": 80.0,
+        "missing_criteria": [
+          "Access rights in metadata"
+        ]
+      },
+      "interoperable": {
+        "score": 90,
+        "max_score": 100,
+        "percentage": 90.0,
+        "missing_criteria": [
+          "Format information"
+        ]
+      },
+      "reusable": {
+        "score": 95,
+        "max_score": 100,
+        "percentage": 95.0,
+        "missing_criteria": [
+          "Issue templates"
+        ]
+      }
+    }
+  },
+  "metadata_summary": {
+    "metadata_files_found": 3331,
+    "has_license": true,
+    "has_doi": true,
+    "has_contact": true,
+    "has_provenance": true,
+    "has_access_rights": false,
+    "has_format_info": false,
+    "has_vocabularies": true,
+    "standards_used": [
+      "dcat",
+      "fair",
+      "dublin-core",
+      "schema.org"
+    ],
+    "license_types": [
+      "https://creativecommons.org/licenses/by-nc/4.0/"
+    ],
+    "formats_mentioned": []
+  },
+  "improvements": [
+    {
+      "principle": "Findable",
+      "missing_criterion": "Repository topics",
+      "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Findable",
+      "missing_criterion": "Documentation wiki",
+      "action": "Enable wiki and add basic documentation on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Accessible",
+      "missing_criterion": "Access rights in metadata",
+      "action": "Specify access rights (open, restricted, closed) in metadata",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "principle": "Interoperable",
+      "missing_criterion": "Format information",
+      "action": "Include format information (MIME types, extensions) in metadata",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "principle": "Reusable",
+      "missing_criterion": "Issue templates",
+      "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+      "priority": "Low",
+      "potential_points": 5
+    }
+  ],
+  "limitations": [
+    "The score is a checklist of repository-level FAIR indicators, not a certification of FAIR compliance.",
+    "Some criteria (e.g. repository topics, wiki, issue templates) are inferred from files in the clone and cannot see GitHub settings.",
+    "The assessed commit precedes the commit that adds this file."
+  ]
+}

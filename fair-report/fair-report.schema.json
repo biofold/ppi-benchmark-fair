@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fair-report.schema.json",
+  "title": "FAIR repository assessment report",
+  "type": "object",
+  "required": ["schema_version", "report_type", "generated_at", "repository", "tool", "scores", "improvements"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "report_type": {"const": "FAIR repository assessment"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "assessed_at": {"type": ["string", "null"]},
+    "repository": {
+      "type": "object",
+      "required": ["url"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "commit": {"type": ["string", "null"]},
+        "release_tag": {"type": ["string", "null"]},
+        "doi": {"type": ["string", "null"]},
+        "license": {"type": ["string", "null"]}
+      }
+    },
+    "tool": {
+      "type": "object",
+      "required": ["name", "path"],
+      "properties": {"name": {"type": "string"}, "description": {"type": "string"}, "path": {"type": "string"}}
+    },
+    "scores": {
+      "type": "object",
+      "required": ["total", "scale_max", "principles"],
+      "properties": {
+        "total": {"type": "number", "minimum": 0, "maximum": 100},
+        "scale_max": {"const": 100},
+        "principles": {
+          "type": "object",
+          "required": ["findable", "accessible", "interoperable", "reusable"],
+          "additionalProperties": false,
+          "patternProperties": {
+            "^(findable|accessible|interoperable|reusable)$": {
+              "type": "object",
+              "required": ["score", "max_score", "percentage", "missing_criteria"],
+              "properties": {
+                "score": {"type": "number"},
+                "max_score": {"type": "number"},
+                "percentage": {"type": "number", "minimum": 0, "maximum": 100},
+                "missing_criteria": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata_summary": {"type": "object"},
+    "improvements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["principle", "missing_criterion", "action", "priority", "potential_points"],
+        "properties": {
+          "principle": {"type": "string"},
+          "missing_criterion": {"type": "string"},
+          "action": {"type": "string"},
+          "priority": {"enum": ["High", "Medium", "Low"]},
+          "potential_points": {"type": "number"}
+        }
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}
