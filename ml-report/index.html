@@ -536,6 +536,7 @@
                     <h4>Key Features:</h4>
                     <ul class="feature-list">
                         <li><strong>Cluster-Aware Validation</strong>: GroupKFold CV ensures all interfaces from the same sequence cluster stay together</li>
+                        <li><strong>Predefined Homology-Aware Splits</strong>: <code>--cv-strategy 1|2|2b|3</code> uses the folds of <code>data/cv_splits/</code> (version 1.3.0)</li>
                         <li><strong>Structural Biology Integration</strong>: Extracts interface residues within 10Å using BioPython</li>
                         <li><strong>Case Sensitivity Handling</strong>: Automatically handles uppercase/lowercase PDB file names</li>
                         <li><strong>Gzipped File Support</strong>: Works directly with .pdb.gz and .cif.gz files (no decompression needed)</li>
@@ -864,6 +865,11 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                             <td>./group_kfold_results</td>
                         </tr>
                         <tr>
+                            <td><code>--cv-strategy</code></td>
+                            <td>Cross-validation groups and folds: <code>blastclust</code> (BLASTClust clusters, GroupKFold) or a predefined strategy <code>1</code>, <code>2</code>, <code>2b</code>, <code>3</code> from <code>data/cv_splits/</code></td>
+                            <td>blastclust</td>
+                        </tr>
+                        <tr>
                             <td><code>--quick</code></td>
                             <td>Run quick demo with basic output</td>
                             <td>False</td>
@@ -1001,6 +1007,22 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                         <li><strong>Stratified</strong>: Maintains class distribution across folds</li>
                     </ul>
                 </div>
+
+                <h3 id="cv-strategies">Predefined homology-aware strategies</h3>
+                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out. The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. Accuracy / ROC-AUC (mean over the five folds, seed 42):</p>
+                <table>
+                    <thead>
+                        <tr><th>Setting</th><th>Random Forest</th><th>SVM</th><th>Logistic Regression</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>blastclust (default, GroupKFold)</td><td>0.773 / 0.859</td><td>0.761 / 0.852</td><td>0.761 / 0.829</td></tr>
+                        <tr><td>Strategy 1 (CATH / gene)</td><td>0.784 / 0.864</td><td>0.776 / 0.859</td><td>0.768 / 0.839</td></tr>
+                        <tr><td>Strategy 2 (MMseqs2)</td><td>0.764 / 0.851</td><td>0.767 / 0.852</td><td>0.759 / 0.830</td></tr>
+                        <tr><td>Strategy 2b (BLASTClust reference)</td><td>0.777 / 0.857</td><td>0.758 / 0.850</td><td>0.763 / 0.827</td></tr>
+                        <tr><td>Strategy 3 (union of 1 and 2b)</td><td>0.780 / 0.858</td><td>0.764 / 0.847</td><td>0.761 / 0.826</td></tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.9em;color:#555;">The models use six interface features plus <code>ClusterSize</code>, a property of the BLASTClust clustering that is kept as in the published report. Differences between strategies are small and come from single runs; they are baselines for reusability and not scientific results.</p>
 
                 <h3>Example Console Output for GroupKFold</h3>
                 <div class="output-preview">
