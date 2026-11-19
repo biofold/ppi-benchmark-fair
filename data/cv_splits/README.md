@@ -48,11 +48,13 @@ They are added by `scripts/ppi_benchmark_fair.py --cv-splits data/cv_splits` or,
 
 | Setting | Random Forest | SVM | Logistic Regression |
 | :---- | :---- | :---- | :---- |
-| `blastclust` (default, GroupKFold) | 0.773 / 0.859 | 0.761 / 0.852 | 0.761 / 0.829 |
+| `blastclust` (default, GroupKFold) | 0.773 / 0.858 | 0.761 / 0.852 | 0.761 / 0.829 |
 | Strategy 1 | 0.784 / 0.864 | 0.776 / 0.859 | 0.768 / 0.839 |
 | Strategy 2 | 0.764 / 0.851 | 0.767 / 0.852 | 0.759 / 0.830 |
 | Strategy 2b | 0.777 / 0.857 | 0.758 / 0.850 | 0.763 / 0.827 |
-| Strategy 3 | 0.780 / 0.858 | 0.764 / 0.847 | 0.761 / 0.826 |
+| Strategy 3 | 0.781 / 0.858 | 0.764 / 0.847 | 0.761 / 0.826 |
+
+Each setting has its own dashboard with precision, recall, F1, standard errors and figures: [default](https://biofold.github.io/ppi-benchmark-fair/ml-report/prediction-report.html), [Strategy 1](https://biofold.github.io/ppi-benchmark-fair/ml-report/strategy1/prediction-report.html), [2](https://biofold.github.io/ppi-benchmark-fair/ml-report/strategy2/prediction-report.html), [2b](https://biofold.github.io/ppi-benchmark-fair/ml-report/strategy2b/prediction-report.html), [3](https://biofold.github.io/ppi-benchmark-fair/ml-report/strategy3/prediction-report.html).
 
 The models use six interface features plus `ClusterSize`, which is a property of the BLASTClust clustering and not of the interface; it is kept as in the published report.
 

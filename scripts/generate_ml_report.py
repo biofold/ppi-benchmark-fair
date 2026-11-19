@@ -1559,7 +1559,7 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
     return plots_map
 
 
-def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], output_path: str = "prediction_dashboard.html", verbose: bool = False):
+def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], output_path: str = "prediction_dashboard.html", verbose: bool = False, landing_link: str = "../index.html"):
     """
     Create a prediction-dashboard HTML that embeds the separate plot HTML files (stacked).
     Updated styling to match FAIR Interactive Dashboard.
@@ -1667,6 +1667,19 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     best_recall = max([d['Recall'] for d in performance_data]) if performance_data else 0
     best_roc_auc = max([d['ROC-AUC'] for d in performance_data]) if performance_data else 0
 
+    # Cross-validation setting recorded by ppi_ml_croissant.py (older result files do not have it)
+    cv_labels = {
+        'blastclust': 'GroupKFold on the BLASTClust clusters (default, ClusterID)',
+        '1': 'Strategy 1 (CATH superfamily, UniProt gene as fallback), predefined five folds of data/cv_splits',
+        '2': 'Strategy 2 (MMseqs2, 25% identity, 50% coverage), predefined five folds of data/cv_splits',
+        '2b': 'Strategy 2b (BLASTClust reference clustering), predefined five folds of data/cv_splits',
+        '3': 'Strategy 3 (union of Strategies 1 and 2b), predefined five folds of data/cv_splits',
+    }
+    cv_key = (results.get('experiment_settings') or {}).get('cv_strategy')
+    cv_line_html = ''
+    if cv_key is not None:
+        cv_line_html = f"<p><strong>Cross-validation:</strong> {cv_labels.get(str(cv_key), str(cv_key))}.</p>"
+
     # Build HTML
     html_parts = []
     html_parts.append("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>")
@@ -1682,7 +1695,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
             <h1><strong>Prediction Results Report</strong></h1>
             <h4><strong>Transforming ELIXIR 3D-Bioinfo PPI dataset into FAIR-compliant, machine learning-ready resource</strong></h4>
             <div>
-                <a href="../index.html" class="dashboard-link">
+                <a href="{landing_link}" class="dashboard-link">
                     <i class="fas fa-home"></i> PPI Benchmark FAIR
                 </a>
                 <a href="/ppi-benchmark-fair/ml-report/feature-report.html" class="dashboard-link">
@@ -1706,6 +1719,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     <div class="section" id="key-metrics">
         <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
         <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
+        {cv_line_html}
 
         <div class="key-metrics">
             <div class="metric-card">
@@ -1907,6 +1921,7 @@ def main():
     group.add_argument('--feature-report', type=str, help='Path to feature evaluation JSON file')
     parser.add_argument('--output-dir', type=str, default='dashboard_output', help='Directory to write outputs (figures and dashboard)')
     parser.add_argument('--output-file', type=str, default=None, help='Optional output HTML file name for the dashboard')
+    parser.add_argument('--landing-link', type=str, default='../index.html', help='Relative link to the landing page used in the dashboard header (default: ../index.html)')
     parser.add_argument('--verbose', action='store_true', help='Print verbose progress messages')
     args = parser.parse_args()
 
@@ -1934,7 +1949,7 @@ def main():
             results = json.load(f)
         plots_map = create_prediction_plots(results, str(output_dir), verbose=args.verbose)
         out_file = args.output_file or str(output_dir / "prediction_dashboard.html")
-        generate_prediction_dashboard(results, plots_map, output_path=out_file, verbose=args.verbose)
+        generate_prediction_dashboard(results, plots_map, output_path=out_file, verbose=args.verbose, landing_link=args.landing_link)
         if args.verbose:
             print(f"Dashboard created at: {out_file}")
 
