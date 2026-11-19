@@ -138,5 +138,75 @@
       "6OH6.cif.gz"
     ],
     "documentation": "data/replacement_structures/README.md"
+  },
+  "cv_splits": {
+    "directory": "data/cv_splits",
+    "strategies": {
+      "strategy_1": {
+        "file": "data/cv_splits/cv_fold_strategy1_cath_superfamily_gene.csv",
+        "method": "CATH superfamily / UniProt gene grouping",
+        "entries": 1671,
+        "groups": 853,
+        "folds": 5,
+        "entries_per_fold": [
+          334,
+          334,
+          335,
+          334,
+          334
+        ],
+        "sha256": "b4b6698f40c6c6be02c3e8a05aa093d9afd34bebe58cf857f0770013a7f4cb36"
+      },
+      "strategy_2": {
+        "file": "data/cv_splits/cv_fold_strategy2_mmseqs2_strict.csv",
+        "method": "MMseqs2 sequence clustering (25% identity, 50% coverage)",
+        "entries": 1671,
+        "groups": 1076,
+        "folds": 5,
+        "entries_per_fold": [
+          335,
+          334,
+          334,
+          335,
+          333
+        ],
+        "sha256": "1444c1571a0e48e74e56c8aab71b3449638bc954b36517eceebb05748fb273a0"
+      },
+      "strategy_2b": {
+        "file": "data/cv_splits/cv_fold_strategy2b_blastclust_reference.csv",
+        "method": "BLASTClust reference clustering (-S 25 -L 0.5 -b F)",
+        "entries": 1671,
+        "groups": 1045,
+        "folds": 5,
+        "entries_per_fold": [
+          335,
+          333,
+          333,
+          336,
+          334
+        ],
+        "sha256": "41c2c64eb75178808c5c55fddb0df28a53ccd40eef357a1850ade79019bcecab"
+      },
+      "strategy_3": {
+        "file": "data/cv_splits/cv_fold_strategy3_combined_union.csv",
+        "method": "union of Strategy 1 and Strategy 2b (recommended)",
+        "entries": 1671,
+        "groups": 688,
+        "folds": 5,
+        "entries_per_fold": [
+          321,
+          319,
+          392,
+          319,
+          320
+        ],
+        "sha256": "31d70491956842985072adb86446486d2586c10bcec2c479b48d5b0600f923ba"
+      }
+    },
+    "properties_added": [
+      "CVGroup_Strategy<N>: homology group",
+      "CVFold_Strategy<N>: fold (0-4)"
+    ],
+    "note": "Interfaces flagged 'to delete' in the curated annotation have no split assignment."
   }
 }

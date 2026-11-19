@@ -4,7 +4,7 @@ title: "ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata"
 abstract: >-
   FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces
   from 1,645 protein crystal structures, with the structure files, an in-repo snapshot of the PDB metadata and the documentation of
-  the label curation. The benchmark was published by Schweke et al. (2023, doi:10.1002/pmic.202200323); this package uses the curated
+  the label curation, and four homology-aware 5-fold cross-validation splits. The benchmark was published by Schweke et al. (2023, doi:10.1002/pmic.202200323); this package uses the curated
   annotation file of the benchmark authors (844 physiological and 833 non-physiological interfaces instead of the published 836 and 841).
 type: dataset
 authors:
@@ -34,6 +34,8 @@ keywords:
   - "Bioschemas"
   - "Croissant"
   - "homodimer interfaces"
+  - "cross-validation"
+  - "homology-aware data splits"
 
 # The original work: the benchmark and its analysis
 preferred-citation:

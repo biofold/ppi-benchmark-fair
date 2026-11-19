@@ -660,6 +660,23 @@
         }
       }
     },
+    "cv_split_statistics": {
+      "type": "object",
+      "description": "Homology-aware cross-validation splits (data/cv_splits): one entry per strategy",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["file", "method", "entries", "groups", "folds", "entries_per_fold", "sha256"],
+        "properties": {
+          "file": {"type": "string"},
+          "method": {"type": "string"},
+          "entries": {"type": "integer"},
+          "groups": {"type": "integer"},
+          "folds": {"type": "integer"},
+          "entries_per_fold": {"type": "array", "items": {"type": "integer"}},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
     "dataset_statistics": {
       "type": "object",
       "properties": {
