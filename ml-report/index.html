@@ -1009,7 +1009,7 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                 </div>
 
                 <h3 id="cv-strategies">Predefined homology-aware strategies</h3>
-                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out (1,671 interfaces). The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. The chosen strategy is recorded in <code>ml_results.json</code> and shown at the top of the dashboard. Accuracy / ROC-AUC (mean over the five folds, seed 42); each setting has its own dashboard with precision, recall, F1, standard errors and figures:</p>
+                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out (1,671 interfaces). The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. The chosen strategy is recorded in <code>ml_results.json</code> and shown at the top of the dashboard. Accuracy / ROC-AUC (mean over the five folds, seed 42); each setting has its own dashboard with precision, recall, F1, standard errors and figures; a menu at the top of every dashboard switches between the five settings:</p>
                 <table>
                     <thead>
                         <tr><th>Setting</th><th>Random Forest</th><th>SVM</th><th>Logistic Regression</th><th>Dashboard</th></tr>
@@ -1178,7 +1178,7 @@ python scripts/ppi_ml_croissant.py \
                 </div>
 
                 <div class="copyright">
-                    <p>Protein Interaction Prediction Experiment • Generated on: 2026-01-08<br></p>
+                    <p>Protein Interaction Prediction Experiment • Generated on: 2026-11-20<br></p>
                 </div>
             </div>
         </footer>
