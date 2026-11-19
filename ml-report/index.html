@@ -1009,20 +1009,20 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                 </div>
 
                 <h3 id="cv-strategies">Predefined homology-aware strategies</h3>
-                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out. The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. Accuracy / ROC-AUC (mean over the five folds, seed 42):</p>
+                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out (1,671 interfaces). The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. The chosen strategy is recorded in <code>ml_results.json</code> and shown at the top of the dashboard. Accuracy / ROC-AUC (mean over the five folds, seed 42); each setting has its own dashboard with precision, recall, F1, standard errors and figures:</p>
                 <table>
                     <thead>
-                        <tr><th>Setting</th><th>Random Forest</th><th>SVM</th><th>Logistic Regression</th></tr>
+                        <tr><th>Setting</th><th>Random Forest</th><th>SVM</th><th>Logistic Regression</th><th>Dashboard</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>blastclust (default, GroupKFold)</td><td>0.773 / 0.859</td><td>0.761 / 0.852</td><td>0.761 / 0.829</td></tr>
-                        <tr><td>Strategy 1 (CATH / gene)</td><td>0.784 / 0.864</td><td>0.776 / 0.859</td><td>0.768 / 0.839</td></tr>
-                        <tr><td>Strategy 2 (MMseqs2)</td><td>0.764 / 0.851</td><td>0.767 / 0.852</td><td>0.759 / 0.830</td></tr>
-                        <tr><td>Strategy 2b (BLASTClust reference)</td><td>0.777 / 0.857</td><td>0.758 / 0.850</td><td>0.763 / 0.827</td></tr>
-                        <tr><td>Strategy 3 (union of 1 and 2b)</td><td>0.780 / 0.858</td><td>0.764 / 0.847</td><td>0.761 / 0.826</td></tr>
+                        <tr><td>blastclust (default, GroupKFold)</td><td>0.773 / 0.858</td><td>0.761 / 0.852</td><td>0.761 / 0.829</td><td><a href="prediction-report.html">open</a></td></tr>
+                        <tr><td>Strategy 1 (CATH / gene)</td><td>0.784 / 0.864</td><td>0.776 / 0.859</td><td>0.768 / 0.839</td><td><a href="strategy1/prediction-report.html">open</a></td></tr>
+                        <tr><td>Strategy 2 (MMseqs2)</td><td>0.764 / 0.851</td><td>0.767 / 0.852</td><td>0.759 / 0.830</td><td><a href="strategy2/prediction-report.html">open</a></td></tr>
+                        <tr><td>Strategy 2b (BLASTClust reference)</td><td>0.777 / 0.857</td><td>0.758 / 0.850</td><td>0.763 / 0.827</td><td><a href="strategy2b/prediction-report.html">open</a></td></tr>
+                        <tr><td>Strategy 3 (union of 1 and 2b)</td><td>0.781 / 0.858</td><td>0.764 / 0.847</td><td>0.761 / 0.826</td><td><a href="strategy3/prediction-report.html">open</a></td></tr>
                     </tbody>
                 </table>
-                <p style="font-size:0.9em;color:#555;">The models use six interface features plus <code>ClusterSize</code>, a property of the BLASTClust clustering that is kept as in the published report. Differences between strategies are small and come from single runs; they are baselines for reusability and not scientific results.</p>
+                <p style="font-size:0.9em;color:#555;">The models use six interface features plus <code>ClusterSize</code>, a property of the BLASTClust clustering that is kept as in the published report. Differences between strategies are small and come from single runs (five folds, one seed); they are baselines for reusability and not scientific results. The dashboards are generated with <code>python scripts/ppi_ml_croissant.py --local bioschema --cv-strategy 3 --output-dir run_cv_3</code> followed by <code>python scripts/generate_ml_report.py --prediction-results run_cv_3/ml_results.json --output-dir ml-report/strategy3 --output-file ml-report/strategy3/prediction-report.html --landing-link ../../index.html</code>.</p>
 
                 <h3>Example Console Output for GroupKFold</h3>
                 <div class="output-preview">

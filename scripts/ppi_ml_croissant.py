@@ -3392,7 +3392,7 @@ class FeatureEvaluator:
 class ProteinInteractionClassifier:
     """Machine learning classifier for protein interaction prediction with GroupKFold CV and feature evaluation."""
 
-    def __init__(self, random_state=42, n_splits=5, predefined_folds=None):
+    def __init__(self, random_state=42, n_splits=5, predefined_folds=None, cv_strategy='blastclust'):
         """Initialize the classifier with multiple models and feature evaluator.
 
         predefined_folds: optional Series with the fold of every sample (strategies of data/cv_splits); when given,
@@ -3411,6 +3411,7 @@ class ProteinInteractionClassifier:
         self.random_state = random_state
         self.n_splits = n_splits
         self.predefined_folds = predefined_folds
+        self.cv_strategy = cv_strategy  # recorded in ml_results.json (experiment_settings)
         if predefined_folds is not None:
             self.n_splits = int(predefined_folds.nunique())
         self.cv_splits = None
@@ -4511,7 +4512,8 @@ class ProteinInteractionClassifier:
             'n_splits': self.n_splits,
             'random_state': self.random_state,
             'best_model': self.best_model_name,
-            'test_split_used': hasattr(self, 'test_split') and self.test_split > 0
+            'test_split_used': hasattr(self, 'test_split') and self.test_split > 0,
+            'cv_strategy': getattr(self, 'cv_strategy', 'blastclust')
         }
 
         # Add timestamp
@@ -5054,6 +5056,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
+                cv_strategy=loader.cv_strategy,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5080,6 +5083,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
+                cv_strategy=loader.cv_strategy,
                 n_splits=args.folds
             )
 
@@ -5123,6 +5127,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
+                cv_strategy=loader.cv_strategy,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5180,6 +5185,7 @@ def main():
         classifier = ProteinInteractionClassifier(
             random_state=args.random_state,
             predefined_folds=loader.fold_ids,
+            cv_strategy=loader.cv_strategy,
             n_splits=args.folds
         )
 
