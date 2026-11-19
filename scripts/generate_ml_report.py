@@ -1559,7 +1559,92 @@ def create_prediction_plots(results: dict, output_dir: str, verbose: bool = Fals
     return plots_map
 
 
-def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], output_path: str = "prediction_dashboard.html", verbose: bool = False, landing_link: str = "../index.html"):
+SETTING_ORDER = ['blastclust', '1', '2', '2b', '3']
+SETTING_SHORT_LABELS = {
+    'blastclust': 'Default: GroupKFold on BLASTClust clusters',
+    '1': 'Strategy 1: CATH superfamily / gene',
+    '2': 'Strategy 2: MMseqs2',
+    '2b': 'Strategy 2b: BLASTClust reference',
+    '3': 'Strategy 3: union of 1 and 2b',
+}
+
+
+def _setting_page(key: str) -> str:
+    """Dashboard of a cross-validation setting, relative to the ml-report folder."""
+    return 'prediction-report.html' if key == 'blastclust' else f'strategy{key}/prediction-report.html'
+
+
+def _setting_summary(results: dict) -> dict:
+    """Mean and standard error (over the folds) of accuracy and ROC-AUC of every model in an ml_results.json."""
+    skip = {'dataset_info', 'experiment_settings', 'metadata', 'cross_validation_settings'}
+    out = {}
+    for name, res in results.items():
+        if name in skip or not isinstance(res, dict) or 'cv_metrics' not in res:
+            continue
+        fm = res.get('fold_metrics', {})
+        def se(vals):
+            return float(np.std(vals) / np.sqrt(len(vals))) if len(vals) > 1 else 0.0
+        out[name] = {
+            'accuracy': res['cv_metrics'].get('accuracy', 0), 'accuracy_se': se(fm.get('accuracies', [])),
+            'roc_auc': res['cv_metrics'].get('roc_auc', 0) or 0, 'roc_auc_se': se(fm.get('roc_aucs', [])),
+        }
+    return out
+
+
+def build_setting_selector_html(current_key, settings: Dict[str, Any], setting_root: str = "") -> tuple:
+    """Dropdown to open the dashboard of another cross-validation setting and a table comparing all settings.
+    settings maps a setting key ('blastclust', '1', '2', '2b', '3') to its ml_results.json content."""
+    keys = [k for k in SETTING_ORDER if k in settings]
+    if not keys:
+        return '', ''
+    options = ''.join(
+        f'<option value="{setting_root}{_setting_page(k)}"{" selected" if str(current_key) == k else ""}>{SETTING_SHORT_LABELS[k]}</option>'
+        for k in keys)
+    selector = (
+        '<div style="margin:12px 0 18px 0;">'
+        '<label for="cv-setting-select"><strong>Cross-validation setting:</strong></label> '
+        f'<select id="cv-setting-select" onchange="if(this.value){{window.location.href=this.value;}}" '
+        'style="padding:6px 10px;border-radius:6px;border:1px solid #bbb;font-size:0.95rem;">'
+        f'{options}</select></div>')
+    summaries = {k: _setting_summary(settings[k]) for k in keys}
+    models = []
+    for k in keys:
+        for m in summaries[k]:
+            if m not in models:
+                models.append(m)
+    head = ''.join(f'<th colspan="2">{m}</th>' for m in models)
+    sub = ''.join('<th>Accuracy</th><th>ROC-AUC</th>' for _ in models)
+    rows = ''
+    for k in keys:
+        n = (settings[k].get('dataset_info') or {}).get('n_samples', '')
+        bold = 'font-weight:bold;background:#eef5f8;' if str(current_key) == k else ''
+        cells = ''
+        for m in models:
+            s = summaries[k].get(m)
+            cells += (f'<td>{s["accuracy"]:.3f} ± {s["accuracy_se"]:.3f}</td><td>{s["roc_auc"]:.3f} ± {s["roc_auc_se"]:.3f}</td>'
+                      if s else '<td>-</td><td>-</td>')
+        rows += (f'<tr style="{bold}"><td style="text-align:left;"><a href="{setting_root}{_setting_page(k)}">{SETTING_SHORT_LABELS[k]}</a></td>'
+                 f'<td>{n}</td>{cells}</tr>')
+    comparison = f"""
+    <div class="section" id="cv-comparison">
+        <h2><i class="fas fa-code-compare"></i> Comparison of the Cross-Validation Settings</h2>
+        <p>Mean &plusmn; standard error over the five folds. The default setting groups interfaces by BLASTClust cluster
+        (1,677 interfaces); Strategies 1, 2, 2b and 3 use the predefined folds of <code>data/cv_splits</code> (1,671 interfaces).
+        Differences between settings are small and come from single runs, so they should not be read as one setting being better than another.
+        Choose a setting in the menu at the top or click its name below to open its dashboard.</p>
+        <table class="performance-table">
+            <thead>
+                <tr><th rowspan="2" style="text-align:left !important;">Setting</th><th rowspan="2">Interfaces</th>{head}</tr>
+                <tr>{sub}</tr>
+            </thead>
+            <tbody>{rows}</tbody>
+        </table>
+    </div>
+    """
+    return selector, comparison
+
+
+def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], output_path: str = "prediction_dashboard.html", verbose: bool = False, landing_link: str = "../index.html", settings: Optional[Dict[str, Any]] = None, setting_root: str = ""):
     """
     Create a prediction-dashboard HTML that embeds the separate plot HTML files (stacked).
     Updated styling to match FAIR Interactive Dashboard.
@@ -1679,11 +1764,15 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     cv_line_html = ''
     if cv_key is not None:
         cv_line_html = f"<p><strong>Cross-validation:</strong> {cv_labels.get(str(cv_key), str(cv_key))}.</p>"
+    selector_html, comparison_html = ('', '')
+    if settings:
+        selector_html, comparison_html = build_setting_selector_html(cv_key, settings, setting_root)
+    title_setting = f" ({SETTING_SHORT_LABELS[str(cv_key)]})" if cv_key is not None and str(cv_key) in SETTING_SHORT_LABELS else ''
 
     # Build HTML
     html_parts = []
     html_parts.append("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>")
-    html_parts.append(f"<title>Prediction Results Report - {current_date}</title>")
+    html_parts.append(f"<title>Prediction Results Report{title_setting} - {current_date}</title>")
     html_parts.append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">')
     html_parts.append('<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>')
     html_parts.append(f"<style>{PAGE_STYLE}</style></head><body><div class='container'>")
@@ -1720,6 +1809,7 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
         <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
         {cv_line_html}
+        {selector_html}
 
         <div class="key-metrics">
             <div class="metric-card">
@@ -1744,6 +1834,9 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
         </div>
     </div>
     """)
+
+    if comparison_html:
+        html_parts.append(comparison_html)
 
     # Performance Table Section
     html_parts.append(f"""
@@ -1922,6 +2015,8 @@ def main():
     parser.add_argument('--output-dir', type=str, default='dashboard_output', help='Directory to write outputs (figures and dashboard)')
     parser.add_argument('--output-file', type=str, default=None, help='Optional output HTML file name for the dashboard')
     parser.add_argument('--landing-link', type=str, default='../index.html', help='Relative link to the landing page used in the dashboard header (default: ../index.html)')
+    parser.add_argument('--setting', action='append', default=[], metavar='KEY=ML_RESULTS_JSON', help='Cross-validation setting for the selector and the comparison table, e.g. 2b=run_cv_2b/ml_results.json (repeatable; keys: blastclust, 1, 2, 2b, 3)')
+    parser.add_argument('--setting-root', type=str, default='', help='Relative path from this dashboard to the ml-report folder (e.g. ../ for strategy dashboards)')
     parser.add_argument('--verbose', action='store_true', help='Print verbose progress messages')
     args = parser.parse_args()
 
@@ -1949,7 +2044,12 @@ def main():
             results = json.load(f)
         plots_map = create_prediction_plots(results, str(output_dir), verbose=args.verbose)
         out_file = args.output_file or str(output_dir / "prediction_dashboard.html")
-        generate_prediction_dashboard(results, plots_map, output_path=out_file, verbose=args.verbose, landing_link=args.landing_link)
+        settings = {}
+        for item in args.setting:
+            key, _, path = item.partition('=')
+            with open(path, 'r', encoding='utf-8') as sf:
+                settings[key.strip()] = json.load(sf)
+        generate_prediction_dashboard(results, plots_map, output_path=out_file, verbose=args.verbose, landing_link=args.landing_link, settings=settings or None, setting_root=args.setting_root)
         if args.verbose:
             print(f"Dashboard created at: {out_file}")
 

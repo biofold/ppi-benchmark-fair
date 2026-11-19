@@ -562,7 +562,16 @@ python scripts/ppi_benchmark_fair.py \
 ├── fair_metadata_package.json            # FAIR Architecture package
 ├── embedded_markup.html                  # HTML with JSON-LD for web discovery
 ├── manifest.json                         # File inventory and checksums
-└── pdb_metadata_cache.json              # Optional: Cached PDB metadata</code></pre>
+└── pdb_metadata_cache.json              # Optional: Cached PDB metadata
+
+data/cv_splits/                           # Homology-aware five-fold splits (version 1.3.0)
+├── cv_fold_strategy1_cath_superfamily_gene.csv
+├── cv_fold_strategy2_mmseqs2_strict.csv
+├── cv_fold_strategy2b_blastclust_reference.csv
+├── cv_fold_strategy3_combined_union.csv
+├── README.md
+└── CV_SPLITTING_STRATEGIES.md</code></pre>
+                <p>Since version 1.3.0 every interface (1,671 of the 1,677; the six flagged &ldquo;to delete&rdquo; are not assigned) also carries the properties <code>CVGroup_Strategy1/2/2b/3</code> and <code>CVFold_Strategy1/2/2b/3</code>, described in the Croissant <code>distribution</code> and <code>recordSet</code>. They are not the folds of Schweke <em>et al.</em> (2023).</p>
 
                 <h3>Data Schema</h3>
                 <pre><code>{
@@ -892,7 +901,7 @@ Generate Metadata → Validate → Output Files</code></pre>
                 </div>
 
                 <div class="copyright">
-                    <p>PPI Benchmark FAIR Metadata • Generated on: 2026-11-11<br></p>
+                    <p>PPI Benchmark FAIR Metadata • Generated on: 2026-11-20<br></p>
                 </div>
             </div>
         </footer>
