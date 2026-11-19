@@ -1354,6 +1354,7 @@ class CroissantDatasetLoader:
         self.all_features_info = {}
         self.cluster_ids = None
         self.cv_strategy = 'blastclust'  # 'blastclust' (ClusterID, GroupKFold) or '1', '2', '2b', '3' (data/cv_splits)
+        self.all_interfaces = False  # True: also use the interfaces without a split assignment (legacy 1,677-interface run)
         self.fold_ids = None  # predefined folds of the chosen strategy (None for 'blastclust')
         self.pdb_sources = {}  # Store PDB source information
         self.temp_dir = None  # Initialize temp_dir
@@ -2025,6 +2026,13 @@ class CroissantDatasetLoader:
 
         return False
 
+    @property
+    def cv_label(self):
+        """Setting name recorded in ml_results.json (experiment_settings.cv_strategy)."""
+        if self.all_interfaces and self.cv_strategy == 'blastclust':
+            return 'blastclust-1677'
+        return self.cv_strategy
+
     def extract_features_labels(self):
         """
         Extract features and labels from the dataset interfaces.
@@ -2120,6 +2128,14 @@ class CroissantDatasetLoader:
                 'samples': samples
             }
 
+        # Interfaces without a split assignment (the six flagged 'to delete') are left out in every setting, also in the
+        # default BLASTClust GroupKFold, so that all settings use the same 1,671 interfaces. Packages without the
+        # CVFold_* properties (versions before 1.3.0) keep all their interfaces.
+        def _has_fold(props):
+            return any(p.get('name') == 'CVFold_Strategy3' and p.get('value') is not None for p in props)
+        skip_unassigned = (not self.all_interfaces) and any(_has_fold(i.get('additionalProperty', [])) for i in self.interfaces)
+        if skip_unassigned:
+            self.logger.info("Interfaces without a split assignment are left out (use --all-interfaces to keep them)")
         # Second pass: extract all data
         self.logger.debug("Extracting data from all interfaces...")
 
@@ -2147,6 +2163,8 @@ class CroissantDatasetLoader:
 
                 if suffix and (cluster_id is None or fold is None):
                     continue  # interface without an assignment in this strategy (the six excluded interfaces)
+                if skip_unassigned and not _has_fold(additional_props):
+                    continue  # the six interfaces without a split assignment (default BLASTClust run)
 
                 if label is None:
                     # Try to find label property
@@ -4651,8 +4669,16 @@ Note: Files are stored in gzipped format (.pdb.gz or .cif.gz)
         type=str,
         default='blastclust',
         choices=['blastclust', '1', '2', '2b', '3'],
-        help="Cross-validation grouping: 'blastclust' (default: GroupKFold on the BLASTClust ClusterID, as in the published "
-             "report) or the homology-aware strategy 1, 2, 2b or 3 (CVGroup_/CVFold_ properties, folds of data/cv_splits)"
+        help="Cross-validation grouping: 'blastclust' (default: GroupKFold on the BLASTClust ClusterID) or the "
+             "homology-aware strategy 1, 2, 2b or 3 (CVGroup_/CVFold_ properties, folds of data/cv_splits). All settings use "
+             "the 1,671 interfaces with a split assignment unless --all-interfaces is given"
+    )
+
+    parser.add_argument(
+        '--all-interfaces',
+        action='store_true',
+        help="Also use the interfaces without a split assignment (the six flagged 'to delete'): 1,677 interfaces instead of 1,671. "
+             "Only changes the default --cv-strategy blastclust (the setting of the ML reports up to version 1.2.1)"
     )
 
     parser.add_argument(
@@ -4855,6 +4881,7 @@ def main():
 
         loader = CroissantDatasetLoader(dataset_source, is_github)
         loader.cv_strategy = args.cv_strategy
+        loader.all_interfaces = args.all_interfaces
 
         if not loader.load_dataset():
             logger.error("Failed to load dataset. Exiting.")
@@ -5056,7 +5083,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
-                cv_strategy=loader.cv_strategy,
+                cv_strategy=loader.cv_label,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5083,7 +5110,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
-                cv_strategy=loader.cv_strategy,
+                cv_strategy=loader.cv_label,
                 n_splits=args.folds
             )
 
@@ -5127,7 +5154,7 @@ def main():
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
                 predefined_folds=loader.fold_ids,
-                cv_strategy=loader.cv_strategy,
+                cv_strategy=loader.cv_label,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5185,7 +5212,7 @@ def main():
         classifier = ProteinInteractionClassifier(
             random_state=args.random_state,
             predefined_folds=loader.fold_ids,
-            cv_strategy=loader.cv_strategy,
+            cv_strategy=loader.cv_label,
             n_splits=args.folds
         )
 

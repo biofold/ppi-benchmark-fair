@@ -643,27 +643,27 @@
                 <div class="model-comparison">
                     <div class="model-card rf">
                         <h4><i class="fas fa-tree"></i> Random Forest</h4>
-                        <p><strong>Accuracy:</strong> 0.773 (±0.009)</p>
-                        <p><strong>ROC-AUC:</strong> 0.858 (±0.006)</p>
+                        <p><strong>Accuracy:</strong> 0.772 (±0.005)</p>
+                        <p><strong>ROC-AUC:</strong> 0.854 (±0.007)</p>
                         <p><strong>Best for:</strong> Feature importance analysis and robust performance</p>
                     </div>
                     <div class="model-card svm">
                         <h4><i class="fas fa-project-diagram"></i> Support Vector Machine</h4>
-                        <p><strong>Accuracy:</strong> 0.761 (±0.004)</p>
+                        <p><strong>Accuracy:</strong> 0.761 (±0.006)</p>
                         <p><strong>ROC-AUC:</strong> 0.852 (±0.008)</p>
                         <p><strong>Best for:</strong> High-dimensional feature spaces</p>
                     </div>
                     <div class="model-card lr">
                         <h4><i class="fas fa-chart-line"></i> Logistic Regression</h4>
-                        <p><strong>Accuracy:</strong> 0.761 (±0.011)</p>
-                        <p><strong>ROC-AUC:</strong> 0.829 (±0.010)</p>
+                        <p><strong>Accuracy:</strong> 0.759 (±0.010)</p>
+                        <p><strong>ROC-AUC:</strong> 0.830 (±0.014)</p>
                         <p><strong>Best for:</strong> Interpretable models and fast predictions</p>
                     </div>
                 </div>
 
                 <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
                     <h4><i class="fa-solid fa-lightbulb"></i> Key Insight</h4>
-                    <p>The three models perform similarly: accuracy 0.76-0.77 (mean ± standard error over the five cross-validation folds). Random Forest has the highest accuracy (0.773), ROC-AUC (0.858) and F1 score (0.770). The folds are built with cluster-aware GroupKFold, so interfaces with similar sequences are kept in the same fold. Values are those of <code>ml-report/prediction-report.html</code> (generated 2026-11-19 from the version 1.3.0 package with the default BLASTClust GroupKFold), computed with the labels of the curated annotation file. Results for the predefined homology-aware strategies are in the <a href="ml-report/index.html#cv-strategies">ML pipeline documentation</a>.</p>
+                    <p>The three models perform similarly: accuracy 0.76-0.77 (mean ± standard error over the five cross-validation folds). Random Forest has the highest accuracy (0.772), ROC-AUC (0.854) and F1 score (0.770). The folds are built with cluster-aware GroupKFold, so interfaces with similar sequences are kept in the same fold. The performance is calculated on 1,671 interfaces: the six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation are excluded from the calculation, although they remain in the dataset. Values are those of <code>ml-report/prediction-report.html</code> (generated 2026-11-20 from the version 1.3.0 package with the default BLASTClust GroupKFold), computed with the labels of the curated annotation file. Results for the predefined homology-aware strategies are in the <a href="ml-report/index.html#cv-strategies">ML pipeline documentation</a>.</p>
                 </div>
             </section>
 
