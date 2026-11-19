@@ -580,7 +580,7 @@
                     <div class="workflow-step">
                         <div class="step-number">4</div>
                         <h4>ML Pipeline</h4>
-                        <p>GroupKFold CV with cluster-aware validation</p>
+                        <p>GroupKFold CV with cluster-aware validation, or one of four predefined homology-aware splits</p>
                     </div>
                     <div class="workflow-step">
                         <div class="step-number">5</div>
@@ -605,12 +605,33 @@
                     </div>
                     <div class="model-card svm">
                         <h4><i class="fa-solid fa-users"></i> Cluster-Aware Validation</h4>
-                        <p>GroupKFold cross-validation using sequence clusters to prevent data leakage and ensure realistic evaluation.</p>
+                        <p>GroupKFold cross-validation using sequence clusters to prevent data leakage and ensure realistic evaluation. Four predefined homology-aware split strategies (version 1.3.0) are available in <code>data/cv_splits/</code>.</p>
                     </div>
                     <div class="model-card lr">
                         <h4><i class="fa-solid fa-chart-bar"></i> Comprehensive Evaluation</h4>
                         <p>Multiple ML models (Random Forest, SVM, Logistic Regression) with detailed performance metrics and visualization.</p>
                     </div>
+                </div>
+            </section>
+
+            <!-- Homology-aware CV splits -->
+            <section class="section" id="cv-splits">
+                <h2><i class="fa-solid fa-code-branch"></i> Homology-aware Cross-Validation Splits (version 1.3.0)</h2>
+                <p>Version 1.3.0 adds five-fold cross-validation assignments of the 1,671 interfaces that remain after the six entries flagged &ldquo;to delete&rdquo; in the curated annotation are excluded. In each file all interfaces of a group share the same fold, so that homologous interfaces are never split between training and held-out data. The assignments are provided as CSV files in <a href="https://github.com/biofold/ppi-benchmark-fair/blob/master/data/cv_splits/README.md" target="_blank" rel="noopener noreferrer"><code>data/cv_splits/</code></a> and as the interface properties <code>CVGroup_Strategy*</code> and <code>CVFold_Strategy*</code> in the JSON-LD and the Croissant <code>distribution</code> and <code>recordSet</code>.</p>
+                <table>
+                    <thead>
+                        <tr><th>Strategy</th><th>Homology defined by</th><th>Groups</th><th>Origin</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>CATH superfamily (UniProt gene when no CATH annotation)</td><td>853</td><td>Rule defined for this package</td></tr>
+                        <tr><td>2</td><td>MMseqs2, 25% identity, 50% coverage</td><td>1,076</td><td>Computed for this package</td></tr>
+                        <tr><td>2b</td><td>BLASTClust <code>-S 25 -L 0.5 -b F</code> (the benchmark clustering, <code>ClusterID</code>)</td><td>1,045</td><td>BLASTClust clustering computed by the authors of this package</td></tr>
+                        <tr><td>3</td><td>Union of Strategies 1 and 2b (connected components); recommended, most conservative</td><td>688</td><td>Rule defined for this package</td></tr>
+                    </tbody>
+                </table>
+                <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                    <h4><i class="fa-solid fa-circle-info"></i> Notes</h4>
+                    <p>These splits were produced for the <a href="https://elixir.unibo.it/tools/oeb_3dbioinfo_ppi_benchmark/" target="_blank" rel="noopener noreferrer">OpenEBench implementation</a> of this benchmark (<a href="https://doi.org/10.5281/zenodo.24323529" target="_blank" rel="noopener noreferrer">Zenodo concept DOI 10.5281/zenodo.24323529</a>) and are not the folds of Schweke <em>et al.</em> (2023). The reasons for each strategy are in <a href="https://github.com/biofold/ppi-benchmark-fair/blob/master/data/cv_splits/CV_SPLITTING_STRATEGIES.md" target="_blank" rel="noopener noreferrer"><code>CV_SPLITTING_STRATEGIES.md</code></a>. The machine-learning script uses the BLASTClust clusters by default; <code>--cv-strategy 1|2|2b|3</code> selects a predefined strategy (see the <a href="ml-report/index.html#cv-strategies">ML pipeline documentation</a>).</p>
                 </div>
             </section>
 

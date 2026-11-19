@@ -1,7 +1,7 @@
 {
   "title": "ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata",
   "upload_type": "dataset",
-  "description": "<p>FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces from 1,645 protein crystal structures, together with the structure files (PDB and mmCIF), an in-repository snapshot of the PDB metadata of every entry, and the documentation of the label curation.</p><p>The benchmark was published by Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323; 836 physiological and 841 non-physiological interfaces). This package uses the curated annotation file of the benchmark authors (844 physiological and 833 non-physiological interfaces; 16 labels revised, 20 interfaces flagged ambiguous and 6 flagged for deletion). Every interface carries both the curated label and the published label (<code>PublishedPhysio</code>). See <code>data/curation/README.md</code>.</p><p>Please cite the original publication as well as this package.</p>",
+  "description": "<p>FAIR metadata (Schema.org, Bioschemas and MLCommons Croissant) for the ELIXIR 3D-BioInfo benchmark of 1,677 homodimer interfaces from 1,645 protein crystal structures, together with the structure files (PDB and mmCIF), an in-repository snapshot of the PDB metadata of every entry, the documentation of the label curation, and four homology-aware 5-fold cross-validation splits (CATH/UniProt, MMseqs2, BLASTClust and their union) attached to every interface.</p><p>The benchmark was published by Schweke et al. (2023, Proteomics 23(17):e2200323, doi:10.1002/pmic.202200323; 836 physiological and 841 non-physiological interfaces). This package uses the curated annotation file of the benchmark authors (844 physiological and 833 non-physiological interfaces; 16 labels revised, 20 interfaces flagged ambiguous and 6 flagged for deletion). Every interface carries both the curated label and the published label (<code>PublishedPhysio</code>). See <code>data/curation/README.md</code>.</p><p>Please cite the original publication as well as this package.</p>",
   "creators": [
     {
       "name": "Capriotti, Emidio",
@@ -21,7 +21,7 @@
   ],
   "license": "cc-by-nc-4.0",
   "access_right": "open",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "language": "eng",
   "keywords": [
     "protein-protein interaction",
@@ -31,7 +31,9 @@
     "FAIR data",
     "Bioschemas",
     "Croissant",
-    "homodimer interfaces"
+    "homodimer interfaces",
+    "cross-validation",
+    "homology-aware data splits"
   ],
   "communities": [
     {

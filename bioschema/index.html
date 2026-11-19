@@ -989,6 +989,81 @@
                 </div>
 
                 <div class="property-category">
+                    <h3>Homology-aware Cross-validation Splits</h3>
+                    <p style="font-size:13px;color:#555;margin:6px 0 10px;">1,671 of the 1,677 interfaces have an assignment (the six interfaces flagged "to delete" have none). Interfaces of one group are always in the same fold. Files and description: <a href="https://github.com/biofold/ppi-benchmark-fair/tree/master/data/cv_splits">data/cv_splits</a>.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property Name</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                                <th>Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="field-highlight">CVGroup_Strategy1</td>
+                                <td><span class="type-string">String</td>
+                                <td>Homology group, Strategy 1: CATH superfamily, UniProt gene as fallback</td>
+                                <td><code>"SF:1.25.40.10"</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVFold_Strategy1</td>
+                                <td><span class="type-number">Integer</td>
+                                <td>Fold (0-4) of the 5-fold cross-validation, Strategy 1</td>
+                                <td><code>2</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVGroup_Strategy2</td>
+                                <td><span class="type-string">String</td>
+                                <td>Homology group, Strategy 2: MMseqs2 clustering</td>
+                                <td><code>"1a17_6"</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVFold_Strategy2</td>
+                                <td><span class="type-number">Integer</td>
+                                <td>Fold (0-4), Strategy 2</td>
+                                <td><code>4</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVGroup_Strategy2b</td>
+                                <td><span class="type-string">String</td>
+                                <td>Homology group, Strategy 2b: BLASTClust clustering (same as ClusterID without the six excluded interfaces)</td>
+                                <td><code>"REFCLU_828"</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVFold_Strategy2b</td>
+                                <td><span class="type-number">Integer</td>
+                                <td>Fold (0-4), Strategy 2b</td>
+                                <td><code>2</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVGroup_Strategy3</td>
+                                <td><span class="type-string">String</td>
+                                <td>Homology group, Strategy 3 (recommended): union of Strategy 1 and 2b</td>
+                                <td><code>"COMBINED_0"</code></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><span class="field-highlight">CVFold_Strategy3</td>
+                                <td><span class="type-number">Integer</td>
+                                <td>Fold (0-4), Strategy 3</td>
+                                <td><code>2</code></td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="property-category">
                     <h3>PDB Metadata Properties</h3>
                     <table>
                         <thead>

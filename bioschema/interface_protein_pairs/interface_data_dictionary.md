@@ -106,6 +106,21 @@ A benchmark dataset containing 1,677 homodimer interfaces from 1,645 protein cry
 | `ClusterMethod` | String | Yes | Clustering method | String | `"BLASTClust sequence clustering"` |
 | `ClusterMethodOptions` | String | Yes | Clustering parameters | String | `"-S 25 -L 0.5 -b F"` |
 
+### **Homology-aware cross-validation splits**
+
+Properties added for the interfaces that have a split assignment: 1,671 of the 1,677 interfaces (the six interfaces flagged "to delete" in the curated annotation have none). The split files are in `data/cv_splits/`; the four strategies are described in `data/cv_splits/README.md`. All interfaces of one group are always placed in the same fold, so that homologous interfaces are not found in both the training and the held-out part of a cross-validation.
+
+| Property Name | Type | Required | Description | Format | Example |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| `CVGroup_Strategy1` | String | No | Homology group of Strategy 1: CATH superfamily, UniProt gene when the superfamily is missing, singleton otherwise | `SF:<CATH code>`, `GENE:<gene>` or `SINGLETON:<id>` | `"SF:1.25.40.10"` |
+| `CVFold_Strategy1` | Integer | No | Fold of the 5-fold cross-validation of Strategy 1 | 0-4 | `2` |
+| `CVGroup_Strategy2` | String | No | Homology group of Strategy 2: MMseqs2 clustering (25% identity, 50% coverage) | Interface ID of the first member, lower case | `"1a17_6"` |
+| `CVFold_Strategy2` | Integer | No | Fold of Strategy 2 | 0-4 | `4` |
+| `CVGroup_Strategy2b` | String | No | Homology group of Strategy 2b: the BLASTClust clustering (`-S 25 -L 0.5 -b F`) of `data/ppi_benchmark_seqs.clust_25_05`, after removal of the six excluded interfaces | `REFCLU_<n>` | `"REFCLU_828"` |
+| `CVFold_Strategy2b` | Integer | No | Fold of Strategy 2b | 0-4 | `2` |
+| `CVGroup_Strategy3` | String | No | Homology group of Strategy 3 (recommended): connected components of the union of Strategy 1 and Strategy 2b | `COMBINED_<n>` | `"COMBINED_0"` |
+| `CVFold_Strategy3` | Integer | No | Fold of Strategy 3 | 0-4 | `2` |
+
 ### **PDB Metadata Properties**
 
 | Property Name | Type | Required | Description | Validation | Example |

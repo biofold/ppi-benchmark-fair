@@ -456,6 +456,54 @@
       "name": "ClusterMethodOptions",
       "value": "-S 25 -L 0.5 -b F",
       "description": "BLASTClust parameters used for sequence clustering"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVGroup_Strategy1",
+      "value": "SF:3.30.70.100",
+      "description": "Homology group of the cross-validation splitting Strategy 1 (CATH superfamily / UniProt gene grouping): interfaces of one group are always placed in the same fold"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVFold_Strategy1",
+      "value": 3,
+      "description": "Fold (0-4) of the 5-fold cross-validation of Strategy 1"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVGroup_Strategy2",
+      "value": "3bde_2",
+      "description": "Homology group of the cross-validation splitting Strategy 2 (MMseqs2 sequence clustering (25% identity, 50% coverage)): interfaces of one group are always placed in the same fold"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVFold_Strategy2",
+      "value": 3,
+      "description": "Fold (0-4) of the 5-fold cross-validation of Strategy 2"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVGroup_Strategy2b",
+      "value": "REFCLU_242",
+      "description": "Homology group of the cross-validation splitting Strategy 2b (BLASTClust reference clustering (-S 25 -L 0.5 -b F)): interfaces of one group are always placed in the same fold"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVFold_Strategy2b",
+      "value": 1,
+      "description": "Fold (0-4) of the 5-fold cross-validation of Strategy 2b"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVGroup_Strategy3",
+      "value": "COMBINED_42",
+      "description": "Homology group of the cross-validation splitting Strategy 3 (union of Strategy 1 and Strategy 2b (recommended)): interfaces of one group are always placed in the same fold"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "CVFold_Strategy3",
+      "value": 3,
+      "description": "Fold (0-4) of the 5-fold cross-validation of Strategy 3"
     }
   ]
 }

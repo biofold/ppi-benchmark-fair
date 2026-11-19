@@ -37,6 +37,7 @@ logger = logging.getLogger(__name__)
 # Shared definitions (license, creators, citation of the original work, PDB snapshot handling)
 import sys as _sys
 _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import cv_splits  # homology-aware cross-validation splits (option --cv-splits)
 from fair_common import (FAIR_LICENSE_URL, FAIR_LICENSE_NAME, FAIR_CREATORS, SCHWEKE_DOI,
                          DEFAULT_PDB_SNAPSHOT_URL, apply_provenance, build_pdb_metadata_property,
                          without_interfaces)
@@ -272,6 +273,9 @@ class PPIBenchmarkProcessor:
         self.cluster_processor = None
         if cluster_file:
             self.cluster_processor = ClusterIDProcessor(cluster_file)
+
+        # Homology-aware cross-validation splits (set from --cv-splits; see scripts/cv_splits.py)
+        self.cv_splits = {}
 
         # requests session reuse
         self.session = requests.Session()
@@ -1926,6 +1930,10 @@ class PPIBenchmarkProcessor:
         # Add all cluster properties to markup
         markup["additionalProperty"].extend(cluster_properties)
 
+        # Add the cross-validation group and fold of every splitting strategy (if --cv-splits was given)
+        if self.cv_splits:
+            markup["additionalProperty"].extend(cv_splits.split_properties(interface.InterfaceID, self.cv_splits))
+
         return markup
 
     def load_data(self) -> pd.DataFrame:
@@ -2933,6 +2941,9 @@ class PPIBenchmarkProcessor:
             dataset_markup["hasPart"] = interface_items
             dataset_markup["numberOfItems"] = len(interface_items)
 
+            if self.cv_splits:
+                cv_splits.patch_dataset(dataset_markup, self.cv_splits)
+
         apply_provenance(dataset_markup)
         return dataset_markup
 
@@ -3502,6 +3513,9 @@ class PPIBenchmarkProcessor:
 
             fair_package["cluster_statistics"] = cluster_stats
 
+        if self.cv_splits:
+            fair_package["cv_split_statistics"] = cv_splits.statistics(self.cv_splits)
+
         return fair_package
 
     def save_bioschemas_markup(self, output_dir: str = "bioschemas_output") -> Dict[str, Any]:
@@ -3762,6 +3776,9 @@ class PPIBenchmarkProcessor:
                 ],
                 "assignment_method": "Direct assignment from BLASTClust output during parsing"
             }
+
+        if self.cv_splits:
+            manifest["cv_splits"] = cv_splits.manifest_entry(self.cv_splits)
 
         manifest_file = os.path.join(output_dir, "manifest.json")
         with open(manifest_file, 'w', encoding='utf-8') as f:
@@ -4315,6 +4332,7 @@ Examples:
   %(prog)s --output my_output_dir  # Custom output directory
   %(prog)s --csv-url "https://example.com/data.csv"  # Custom CSV URL
   %(prog)s --cluster blastclust_output.txt  # Add cluster information from BLASTClust file
+  %(prog)s --cv-splits data/cv_splits  # Add the homology-aware cross-validation splits
         """
     )
 
@@ -4395,6 +4413,13 @@ Examples:
     parser.add_argument(
         "--cluster",
         help="Path to BLASTClust output file for adding cluster information"
+    )
+
+    parser.add_argument(
+        "--cv-splits",
+        default=None,
+        help="Directory with the homology-aware cross-validation split files (data/cv_splits): adds the "
+             "CVGroup_Strategy<N> and CVFold_Strategy<N> properties, file objects and record sets"
     )
 
     parser.add_argument(
@@ -4557,6 +4582,9 @@ Settings:
         pdb_snapshot_url=args.pdb_snapshot_url,
         published_csv=args.published_csv
     )
+    if args.cv_splits:
+        processor.cv_splits = cv_splits.load_cv_splits(args.cv_splits)
+        logger.info(f"Cross-validation splits loaded from {args.cv_splits}: {', '.join(processor.cv_splits) or 'none found'}")
 
     try:
         # Load and parse data

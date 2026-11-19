@@ -56,6 +56,12 @@ warnings.filterwarnings('ignore')
 # First define all the original classes that were in the file
 # ============================================
 
+# Properties added by the homology-aware cross-validation splits (data/cv_splits). They describe the split
+# (group and fold of each strategy), not the interface, and must never be used as features.
+CV_SPLIT_PROPERTY_PREFIXES = ('CVGroup_', 'CVFold_')
+CV_STRATEGY_SUFFIX = {'1': 'Strategy1', '2': 'Strategy2', '2b': 'Strategy2b', '3': 'Strategy3'}
+
+
 class ClusterAwareGroupKFold:
     """
     Custom cross-validator that ensures all interfaces from the same ClusterID
@@ -1347,6 +1353,8 @@ class CroissantDatasetLoader:
         self.categorical_features = []
         self.all_features_info = {}
         self.cluster_ids = None
+        self.cv_strategy = 'blastclust'  # 'blastclust' (ClusterID, GroupKFold) or '1', '2', '2b', '3' (data/cv_splits)
+        self.fold_ids = None  # predefined folds of the chosen strategy (None for 'blastclust')
         self.pdb_sources = {}  # Store PDB source information
         self.temp_dir = None  # Initialize temp_dir
         self.logger = logging.getLogger(__name__)
@@ -2037,6 +2045,10 @@ class CroissantDatasetLoader:
         features_list = []
         labels_list = []
         cluster_ids_list = []
+        fold_list = []
+        suffix = CV_STRATEGY_SUFFIX.get(self.cv_strategy)  # None -> BLASTClust ClusterID and GroupKFold (default)
+        if suffix:
+            self.logger.info(f"Cross-validation strategy {self.cv_strategy}: groups and folds from CVGroup_{suffix} / CVFold_{suffix}")
 
         # First pass: collect all features and sample values
         self.logger.debug("Scanning interfaces to identify feature types...")
@@ -2049,7 +2061,7 @@ class CroissantDatasetLoader:
                     prop_name = prop.get('name', '')
                     prop_value = prop.get('value')
 
-                    if prop_name in DROP_FEATURES: continue
+                    if prop_name in DROP_FEATURES or prop_name.startswith(CV_SPLIT_PROPERTY_PREFIXES): continue
 
                     if prop_name in ['physio', 'label', 'ClusterID', 'PublishedPhysio']:
                         continue
@@ -2122,11 +2134,19 @@ class CroissantDatasetLoader:
                 additional_props = interface.get('additionalProperty', [])
 
                 # Look for physio and ClusterID properties
+                fold = None
                 for prop in additional_props:
                     if prop.get('name') == 'physio':
                         label = prop.get('value')
-                    elif prop.get('name') == 'ClusterID':
+                    elif prop.get('name') == 'ClusterID' and not suffix:
                         cluster_id = prop.get('value')
+                    elif suffix and prop.get('name') == 'CVGroup_' + suffix:
+                        cluster_id = prop.get('value')
+                    elif suffix and prop.get('name') == 'CVFold_' + suffix:
+                        fold = prop.get('value')
+
+                if suffix and (cluster_id is None or fold is None):
+                    continue  # interface without an assignment in this strategy (the six excluded interfaces)
 
                 if label is None:
                     # Try to find label property
@@ -2150,7 +2170,7 @@ class CroissantDatasetLoader:
                     prop_value = prop.get('value')
 
                     # Skip physio/label/ClusterID (already used as target/grouping)
-                    if prop_name in ['physio', 'label', 'ClusterID', 'PublishedPhysio'] + DROP_FEATURES:
+                    if prop_name in ['physio', 'label', 'ClusterID', 'PublishedPhysio'] + DROP_FEATURES or prop_name.startswith(CV_SPLIT_PROPERTY_PREFIXES):
                         continue
 
                     # Get feature info
@@ -2176,6 +2196,7 @@ class CroissantDatasetLoader:
                 features_list.append(features)
                 labels_list.append(label)
                 cluster_ids_list.append(cluster_id)
+                fold_list.append(fold)
 
                 if len(features_list) % 100 == 0 and len(features_list) > 0:
                     self.logger.debug(f"Processed {len(features_list)} interfaces...")
@@ -2190,6 +2211,7 @@ class CroissantDatasetLoader:
         # Create DataFrame
         self.dataframe = pd.DataFrame(features_list)
         self.cluster_ids = pd.Series(cluster_ids_list)
+        self.fold_ids = pd.Series(fold_list, dtype='int64') if suffix else None
 
         # Determine numerical and categorical features from actual data
         self.logger.debug("Determining feature types from extracted data...")
@@ -3370,8 +3392,11 @@ class FeatureEvaluator:
 class ProteinInteractionClassifier:
     """Machine learning classifier for protein interaction prediction with GroupKFold CV and feature evaluation."""
 
-    def __init__(self, random_state=42, n_splits=5):
-        """Initialize the classifier with multiple models and feature evaluator."""
+    def __init__(self, random_state=42, n_splits=5, predefined_folds=None):
+        """Initialize the classifier with multiple models and feature evaluator.
+
+        predefined_folds: optional Series with the fold of every sample (strategies of data/cv_splits); when given,
+        these folds are used instead of GroupKFold."""
         self.models = {
             'Random Forest': RandomForestClassifier(n_estimators=100, random_state=random_state),
             'SVM': SVC(kernel='rbf', probability=True, random_state=random_state),
@@ -3385,6 +3410,9 @@ class ProteinInteractionClassifier:
         self.best_model_name = None
         self.random_state = random_state
         self.n_splits = n_splits
+        self.predefined_folds = predefined_folds
+        if predefined_folds is not None:
+            self.n_splits = int(predefined_folds.nunique())
         self.cv_splits = None
         self.feature_evaluation_report = None
         self.feature_names = None
@@ -3610,13 +3638,20 @@ class ProteinInteractionClassifier:
         """
         self.logger.info(f"\n=== CREATING GROUPKFOLD CROSS-VALIDATION SPLITS ===")
         self.logger.info(f"   Number of folds: {self.n_splits}")
-        self.logger.info(f"   Using ClusterID as groups to ensure same-cluster samples stay together")
+        if self.predefined_folds is not None:
+            self.logger.info(f"   Using the predefined folds of the selected strategy; all samples of a group are in one fold")
+            folds = np.asarray(self.predefined_folds)
+            if len(folds) != len(y):
+                raise ValueError(f"predefined folds ({len(folds)}) and samples ({len(y)}) differ in length")
+            self.cv_splits = [(np.where(folds != f)[0], np.where(folds == f)[0]) for f in sorted(set(folds.tolist()))]
+        else:
+            self.logger.info(f"   Using ClusterID as groups to ensure same-cluster samples stay together")
 
-        # Initialize GroupKFold
-        gkf = GroupKFold(n_splits=self.n_splits)
+            # Initialize GroupKFold
+            gkf = GroupKFold(n_splits=self.n_splits)
 
-        # Generate splits
-        self.cv_splits = list(gkf.split(X, y, groups=cluster_ids))
+            # Generate splits
+            self.cv_splits = list(gkf.split(X, y, groups=cluster_ids))
 
         # Analyze the splits
         self.logger.info(f"   Split analysis:")
@@ -4610,6 +4645,15 @@ Note: Files are stored in gzipped format (.pdb.gz or .cif.gz)
     )
 
     parser.add_argument(
+        '--cv-strategy',
+        type=str,
+        default='blastclust',
+        choices=['blastclust', '1', '2', '2b', '3'],
+        help="Cross-validation grouping: 'blastclust' (default: GroupKFold on the BLASTClust ClusterID, as in the published "
+             "report) or the homology-aware strategy 1, 2, 2b or 3 (CVGroup_/CVFold_ properties, folds of data/cv_splits)"
+    )
+
+    parser.add_argument(
         '--test-split',
         type=float,
         default=0.0,
@@ -4808,6 +4852,7 @@ def main():
         logger.info("="*60)
 
         loader = CroissantDatasetLoader(dataset_source, is_github)
+        loader.cv_strategy = args.cv_strategy
 
         if not loader.load_dataset():
             logger.error("Failed to load dataset. Exiting.")
@@ -5008,6 +5053,7 @@ def main():
             # Initialize classifier
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
+                predefined_folds=loader.fold_ids,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5033,6 +5079,7 @@ def main():
             # Initialize classifier with feature evaluator
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
+                predefined_folds=loader.fold_ids,
                 n_splits=args.folds
             )
 
@@ -5075,6 +5122,7 @@ def main():
             # Initialize classifier
             classifier = ProteinInteractionClassifier(
                 random_state=args.random_state,
+                predefined_folds=loader.fold_ids,
                 n_splits=min(args.folds, 3)  # Use fewer folds for quick mode
             )
 
@@ -5131,6 +5179,7 @@ def main():
 
         classifier = ProteinInteractionClassifier(
             random_state=args.random_state,
+            predefined_folds=loader.fold_ids,
             n_splits=args.folds
         )
 

@@ -47,9 +47,20 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
   `--fetch-pdb-metadata \`  
   `--check-pdb-label \`  
   `--cluster data/ppi_benchmark_seqs.clust_25_05 \`  
+  `--cv-splits data/cv_splits \`  
   `--published-csv data/curation/benchmark_annotated_published.csv \`  
   `--output bioschema \`  
   `--log-level INFO`
+
+## **Homology-aware cross-validation splits**
+
+Besides the BLASTClust clusters (`ClusterID`), the package provides four ways of grouping the interfaces by homology and the corresponding
+5-fold cross-validation assignments in [`data/cv_splits/`](data/cv_splits/README.md): Strategy 1 (CATH superfamily / UniProt gene), Strategy 2
+(MMseqs2), Strategy 2b (the BLASTClust clustering of this package) and Strategy 3 (union of 1 and 2b, recommended). Every interface carries its
+group and fold as the properties `CVGroup_Strategy<N>` and `CVFold_Strategy<N>`; 1,671 of the 1,677 interfaces are assigned (the six
+interfaces flagged "to delete" are not). The splits were produced for the OpenEBench implementation of this benchmark
+([concept DOI 10.5281/zenodo.24323529](https://doi.org/10.5281/zenodo.24323529), [page](https://elixir.unibo.it/tools/oeb_3dbioinfo_ppi_benchmark/)),
+where new predictions can be evaluated with them; they are not part of Schweke *et al.* (2023).
 
 ## **Dataset Statistics**
 
@@ -61,6 +72,7 @@ The `scripts/ppi_benchmark_fair.py` script generates machine-readable JSON-LD me
 | Curation flags | 16 relabelled, 20 ambiguous, 6 to delete | all 1,677 interfaces kept; see `data/curation/` |
 | Unique PDB Structures | 1,645 | 1,650 distinct strings in the `ID` column of the CSV, which mixes bare PDB codes with `<code>_<N>` ones; 1,673 is the number of mmCIF files |
 | Sequence Clusters | 1,050 | BLASTClust, 25% sequence identity, 50% length coverage |
+| Cross-validation splits | 4 strategies | 5-fold, homology-aware: CATH/UniProt (853 groups), MMseqs2 (1,076), BLASTClust (1,045), union (688); 1,671 of the 1,677 interfaces, see `data/cv_splits/` |
 | Resolution Range | 0.90–3.94 Å | median 2.20 Å (1,642 entries; the 3 obsolete entries are not served by RCSB) |
 | Experimental Method | X-ray diffraction | 1,642 of 1,642 entries served by RCSB (checked 2026-11-11) |
 
@@ -365,7 +377,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
    `title={ELIXIR - Protein-Protein Interface Benchmark - FAIR Metadata},`
    `author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},`
    `year={2026},`
-   `version={1.2.1},`
+   `version={1.3.0},`
    `publisher={Zenodo},`
    `url={https://github.com/biofold/ppi-benchmark-fair},`
    `doi={10.5281/zenodo.24149636},`
