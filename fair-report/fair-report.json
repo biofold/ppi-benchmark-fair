@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/biofold/ppi-benchmark-fair",
     "commit": "f2e39ed91e0dea908175ae3c8dc5a1d285ce007b",
-    "release_tag": "v1.2.1",
+    "release_tag": "v1.3.0",
     "doi": "10.5281/zenodo.24149636",
     "license": "CC-BY-NC-4.0"
   },

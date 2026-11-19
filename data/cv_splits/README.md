@@ -42,6 +42,20 @@ The same information is attached to every interface in the JSON-LD (`bioschema/d
 They are added by `scripts/ppi_benchmark_fair.py --cv-splits data/cv_splits` or, to update existing JSON-LD files,
 `python scripts/cv_splits.py patch`.
 
+## Use in the machine-learning script
+
+`scripts/ppi_ml_croissant.py` trains and evaluates its models with the BLASTClust clusters by default (`--cv-strategy blastclust`, the setting of the published ML report, unchanged). `--cv-strategy 1|2|2b|3` uses the groups and the folds of the chosen strategy instead; the six interfaces without an assignment are left out. The properties `CVGroup_*` and `CVFold_*` describe the split and are never used as features. Cross-validated results on this package (5 folds, seed 42, accuracy / ROC-AUC), for comparison:
+
+| Setting | Random Forest | SVM | Logistic Regression |
+| :---- | :---- | :---- | :---- |
+| `blastclust` (default, GroupKFold) | 0.773 / 0.859 | 0.761 / 0.852 | 0.761 / 0.829 |
+| Strategy 1 | 0.784 / 0.864 | 0.776 / 0.859 | 0.768 / 0.839 |
+| Strategy 2 | 0.764 / 0.851 | 0.767 / 0.852 | 0.759 / 0.830 |
+| Strategy 2b | 0.777 / 0.857 | 0.758 / 0.850 | 0.763 / 0.827 |
+| Strategy 3 | 0.780 / 0.858 | 0.764 / 0.847 | 0.761 / 0.826 |
+
+The models use six interface features plus `ClusterSize`, which is a property of the BLASTClust clustering and not of the interface; it is kept as in the published report.
+
 ## Example
 
 ```python
