@@ -462,7 +462,7 @@ footer {
     <div class="section" id="key-metrics">
         <h2><i class="fas fa-chart-bar"></i> Model Performance Statistics</h2>
         <p>Comprehensive evaluation of machine learning model performance across multiple metrics and cross-validation folds. Values shown as mean ± standard error.</p>
-        <p><strong>Cross-validation:</strong> Strategy 2b (BLASTClust reference clustering), predefined five folds of data/cv_splits.</p>
+        <p><strong>Cross-validation:</strong> Strategy 2b (BLASTClust reference clustering), predefined five folds of data/cv_splits.</p><p><strong>Interfaces:</strong> 1,671. The six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation (2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance; they remain in the dataset.</p>
         <div style="margin:12px 0 18px 0;"><label for="cv-setting-select"><strong>Cross-validation setting:</strong></label> <select id="cv-setting-select" onchange="if(this.value){window.location.href=this.value;}" style="padding:6px 10px;border-radius:6px;border:1px solid #bbb;font-size:0.95rem;"><option value="../prediction-report.html">Default: GroupKFold on BLASTClust clusters</option><option value="../strategy1/prediction-report.html">Strategy 1: CATH superfamily / gene</option><option value="../strategy2/prediction-report.html">Strategy 2: MMseqs2</option><option value="../strategy2b/prediction-report.html" selected>Strategy 2b: BLASTClust reference</option><option value="../strategy3/prediction-report.html">Strategy 3: union of 1 and 2b</option></select></div>
 
         <div class="key-metrics">
@@ -491,8 +491,8 @@ footer {
 
     <div class="section" id="cv-comparison">
         <h2><i class="fas fa-code-compare"></i> Comparison of the Cross-Validation Settings</h2>
-        <p>Mean &plusmn; standard error over the five folds. The default setting groups interfaces by BLASTClust cluster
-        (1,677 interfaces); Strategies 1, 2, 2b and 3 use the predefined folds of <code>data/cv_splits</code> (1,671 interfaces).
+        <p>Mean &plusmn; standard error over the five folds. All settings use the same 1,671 interfaces: the six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation (2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance, although they remain in the dataset.
+        The default setting groups the interfaces by BLASTClust cluster and draws its folds at run time; Strategies 1, 2, 2b and 3 use the predefined folds of <code>data/cv_splits</code>.
         Differences between settings are small and come from single runs, so they should not be read as one setting being better than another.
         Choose a setting in the menu at the top or click its name below to open its dashboard.</p>
         <table class="performance-table">
@@ -500,7 +500,7 @@ footer {
                 <tr><th rowspan="2" style="text-align:left !important;">Setting</th><th rowspan="2">Interfaces</th><th colspan="2">Random Forest</th><th colspan="2">SVM</th><th colspan="2">Logistic Regression</th></tr>
                 <tr><th>Accuracy</th><th>ROC-AUC</th><th>Accuracy</th><th>ROC-AUC</th><th>Accuracy</th><th>ROC-AUC</th></tr>
             </thead>
-            <tbody><tr style=""><td style="text-align:left;"><a href="../prediction-report.html">Default: GroupKFold on BLASTClust clusters</a></td><td>1677</td><td>0.773 ± 0.009</td><td>0.858 ± 0.006</td><td>0.761 ± 0.004</td><td>0.852 ± 0.008</td><td>0.761 ± 0.011</td><td>0.829 ± 0.010</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy1/prediction-report.html">Strategy 1: CATH superfamily / gene</a></td><td>1671</td><td>0.784 ± 0.014</td><td>0.864 ± 0.011</td><td>0.776 ± 0.013</td><td>0.859 ± 0.013</td><td>0.768 ± 0.015</td><td>0.839 ± 0.015</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy2/prediction-report.html">Strategy 2: MMseqs2</a></td><td>1671</td><td>0.764 ± 0.006</td><td>0.851 ± 0.010</td><td>0.767 ± 0.013</td><td>0.852 ± 0.012</td><td>0.759 ± 0.010</td><td>0.830 ± 0.014</td></tr><tr style="font-weight:bold;background:#eef5f8;"><td style="text-align:left;"><a href="../strategy2b/prediction-report.html">Strategy 2b: BLASTClust reference</a></td><td>1671</td><td>0.777 ± 0.007</td><td>0.857 ± 0.007</td><td>0.758 ± 0.011</td><td>0.850 ± 0.008</td><td>0.763 ± 0.016</td><td>0.827 ± 0.016</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy3/prediction-report.html">Strategy 3: union of 1 and 2b</a></td><td>1671</td><td>0.781 ± 0.004</td><td>0.858 ± 0.008</td><td>0.764 ± 0.008</td><td>0.847 ± 0.011</td><td>0.761 ± 0.012</td><td>0.826 ± 0.013</td></tr></tbody>
+            <tbody><tr style=""><td style="text-align:left;"><a href="../prediction-report.html">Default: GroupKFold on BLASTClust clusters</a></td><td>1671</td><td>0.772 ± 0.005</td><td>0.854 ± 0.007</td><td>0.761 ± 0.006</td><td>0.852 ± 0.008</td><td>0.759 ± 0.010</td><td>0.830 ± 0.014</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy1/prediction-report.html">Strategy 1: CATH superfamily / gene</a></td><td>1671</td><td>0.784 ± 0.014</td><td>0.864 ± 0.011</td><td>0.776 ± 0.013</td><td>0.859 ± 0.013</td><td>0.768 ± 0.015</td><td>0.839 ± 0.015</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy2/prediction-report.html">Strategy 2: MMseqs2</a></td><td>1671</td><td>0.764 ± 0.006</td><td>0.851 ± 0.010</td><td>0.767 ± 0.013</td><td>0.852 ± 0.012</td><td>0.759 ± 0.010</td><td>0.830 ± 0.014</td></tr><tr style="font-weight:bold;background:#eef5f8;"><td style="text-align:left;"><a href="../strategy2b/prediction-report.html">Strategy 2b: BLASTClust reference</a></td><td>1671</td><td>0.777 ± 0.007</td><td>0.857 ± 0.007</td><td>0.758 ± 0.011</td><td>0.850 ± 0.008</td><td>0.763 ± 0.016</td><td>0.827 ± 0.016</td></tr><tr style=""><td style="text-align:left;"><a href="../strategy3/prediction-report.html">Strategy 3: union of 1 and 2b</a></td><td>1671</td><td>0.781 ± 0.004</td><td>0.858 ± 0.008</td><td>0.764 ± 0.008</td><td>0.847 ± 0.011</td><td>0.761 ± 0.012</td><td>0.826 ± 0.013</td></tr></tbody>
         </table>
     </div>
     
@@ -644,7 +644,7 @@ footer {
                 <img src="https://img.shields.io/badge/ML-Croissant_1.0-yellow" alt="MLCommons Croissant"></a>
             </div>
             <div class="copyright">
-                <p>Prediction Results Report • Generated on: 2026-11-20 00:04:48</p>
+                <p>Prediction Results Report • Generated on: 2026-11-20 00:44:56</p>
             </div>
         </div>
     </footer>

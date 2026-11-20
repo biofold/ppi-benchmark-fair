@@ -1120,11 +1120,17 @@ def generate_feature_dashboard(report: dict, plots_map: Dict[str, str], output_p
     # Main content
     html_parts.append("<main class='container'>")
 
+    samples_note_html = ''
+    if num_samples == 1671:
+        samples_note_html = ("<p><strong>Interfaces:</strong> 1,671. The six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation "
+                             "(2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation; they remain in the dataset.</p>")
+
     # Key Metrics Section (removed green box)
     html_parts.append(f"""
     <div class="section" id="key-metrics">
         <h2><i class="fas fa-clipboard-check"></i> Key Statistics</h2>
         <p>Comprehensive analysis of dataset features including importance scores, correlations, and statistical properties.</p>
+        {samples_note_html}
 
         <div class="key-metrics">
             <div class="metric-card">
@@ -1628,8 +1634,8 @@ def build_setting_selector_html(current_key, settings: Dict[str, Any], setting_r
     comparison = f"""
     <div class="section" id="cv-comparison">
         <h2><i class="fas fa-code-compare"></i> Comparison of the Cross-Validation Settings</h2>
-        <p>Mean &plusmn; standard error over the five folds. The default setting groups interfaces by BLASTClust cluster
-        (1,677 interfaces); Strategies 1, 2, 2b and 3 use the predefined folds of <code>data/cv_splits</code> (1,671 interfaces).
+        <p>Mean &plusmn; standard error over the five folds. All settings use the same 1,671 interfaces: the six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation (2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance, although they remain in the dataset.
+        The default setting groups the interfaces by BLASTClust cluster and draws its folds at run time; Strategies 1, 2, 2b and 3 use the predefined folds of <code>data/cv_splits</code>.
         Differences between settings are small and come from single runs, so they should not be read as one setting being better than another.
         Choose a setting in the menu at the top or click its name below to open its dashboard.</p>
         <table class="performance-table">
@@ -1764,6 +1770,13 @@ def generate_prediction_dashboard(results: dict, plots_map: Dict[str, str], outp
     cv_line_html = ''
     if cv_key is not None:
         cv_line_html = f"<p><strong>Cross-validation:</strong> {cv_labels.get(str(cv_key), str(cv_key))}.</p>"
+        n_used = (results.get('dataset_info') or {}).get('n_samples')
+        if n_used == 1671:
+            cv_line_html += ("<p><strong>Interfaces:</strong> 1,671. The six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation "
+                             "(2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance; "
+                             "they remain in the dataset.</p>")
+        elif n_used:
+            cv_line_html += f"<p><strong>Interfaces:</strong> {n_used:,} (all interfaces of the dataset).</p>"
     selector_html, comparison_html = ('', '')
     if settings:
         selector_html, comparison_html = build_setting_selector_html(cv_key, settings, setting_root)

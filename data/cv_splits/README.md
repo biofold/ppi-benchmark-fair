@@ -44,11 +44,13 @@ They are added by `scripts/ppi_benchmark_fair.py --cv-splits data/cv_splits` or,
 
 ## Use in the machine-learning script
 
-`scripts/ppi_ml_croissant.py` trains and evaluates its models with the BLASTClust clusters by default (`--cv-strategy blastclust`, the setting of the published ML report, unchanged). `--cv-strategy 1|2|2b|3` uses the groups and the folds of the chosen strategy instead; the six interfaces without an assignment are left out. The properties `CVGroup_*` and `CVFold_*` describe the split and are never used as features. Cross-validated results on this package (5 folds, seed 42, accuracy / ROC-AUC), for comparison:
+`scripts/ppi_ml_croissant.py` trains and evaluates its models with the BLASTClust clusters by default (`--cv-strategy blastclust`, GroupKFold on `ClusterID`). `--cv-strategy 1|2|2b|3` uses the groups and the folds of the chosen strategy instead. **All settings use the same 1,671 interfaces:** the six interfaces flagged "to delete" in the curated annotation (`2X2A_1`, `3P0C_3`, `3UCR_1`, `4O1W_1`, `4WOV_3`, `5Z70_2`) are excluded from the calculation of the performance, although they remain in the dataset (1,677 interfaces; 840 physiological and 831 non-physiological are used). They have no split assignment, so the strategies leave them out, and the default setting leaves them out as well; `--all-interfaces` keeps them in the default setting (1,677 interfaces, the setting of the ML reports up to version 1.2.1). The properties `CVGroup_*` and `CVFold_*` describe the split and are never used as features. Cross-validated results on this package (5 folds, seed 42, accuracy / ROC-AUC), for comparison:
+
+Cross-validated results on this package (5 folds, seed 42, accuracy / ROC-AUC), for comparison:
 
 | Setting | Random Forest | SVM | Logistic Regression |
 | :---- | :---- | :---- | :---- |
-| `blastclust` (default, GroupKFold) | 0.773 / 0.858 | 0.761 / 0.852 | 0.761 / 0.829 |
+| `blastclust` (default, GroupKFold) | 0.772 / 0.854 | 0.761 / 0.852 | 0.759 / 0.830 |
 | Strategy 1 | 0.784 / 0.864 | 0.776 / 0.859 | 0.768 / 0.839 |
 | Strategy 2 | 0.764 / 0.851 | 0.767 / 0.852 | 0.759 / 0.830 |
 | Strategy 2b | 0.777 / 0.857 | 0.758 / 0.850 | 0.763 / 0.827 |

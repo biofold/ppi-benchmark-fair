@@ -536,6 +536,7 @@
                     <h4>Key Features:</h4>
                     <ul class="feature-list">
                         <li><strong>Cluster-Aware Validation</strong>: GroupKFold CV ensures all interfaces from the same sequence cluster stay together</li>
+                        <li><strong>Interfaces Used</strong>: the six interfaces flagged &ldquo;to delete&rdquo; are excluded from the calculation of the performance in every setting (1,671 interfaces; <code>--all-interfaces</code> keeps them)</li>
                         <li><strong>Predefined Homology-Aware Splits</strong>: <code>--cv-strategy 1|2|2b|3</code> uses the folds of <code>data/cv_splits/</code> (version 1.3.0)</li>
                         <li><strong>Structural Biology Integration</strong>: Extracts interface residues within 10Å using BioPython</li>
                         <li><strong>Case Sensitivity Handling</strong>: Automatically handles uppercase/lowercase PDB file names</li>
@@ -609,26 +610,27 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                     <div class="output-line output-info">INFO: ============================================================</div>
                     <div class="output-line output-info">INFO: Step 2: Extracting features, labels, and ClusterIDs</div>
                     <div class="output-line output-info">INFO: ============================================================</div>
-                    <div class="output-line output-info">INFO: Successfully extracted 1677 samples</div>
+                    <div class="output-line output-info">INFO: Interfaces without a split assignment are left out (use --all-interfaces to keep them)</div>
+                    <div class="output-line output-info">INFO: Successfully extracted 1671 samples</div>
                     <div class="output-line output-info">INFO: ClusterID Statistics:</div>
-                    <div class="output-line output-info">INFO:   Unique ClusterIDs: 1050</div>
+                    <div class="output-line output-info">INFO:   Unique ClusterIDs: 1045</div>
                     <div class="output-line output-info">INFO:   Interfaces without ClusterID: 0</div>
                     <div class="output-line output-info">INFO: Class distribution:</div>
-                    <div class="output-line output-info">INFO:   Physiological (1): 844 samples</div>
-                    <div class="output-line output-info">INFO:   Non-physiological (0): 833 samples</div>
+                    <div class="output-line output-info">INFO:   Physiological (1): 840 samples</div>
+                    <div class="output-line output-info">INFO:   Non-physiological (0): 831 samples</div>
                     <div class="output-line"></div>
                     <div class="output-line output-info">INFO: ============================================================</div>
                     <div class="output-line output-info">INFO: Step 9: Training and evaluating models</div>
                     <div class="output-line output-info">INFO: ============================================================</div>
                     <div class="output-line">--- Training Random Forest with GroupKFold CV ---</div>
                     <div class="output-line output-info">INFO:   CV Results for Random Forest:</div>
-                    <div class="output-line output-info">INFO:     Average Accuracy:  0.7734 (±0.0205)</div>
-                    <div class="output-line output-info">INFO:     Average Precision: 0.7764 (±0.0519)</div>
-                    <div class="output-line output-info">INFO:     Average Recall:    0.7672 (±0.0422)</div>
-                    <div class="output-line output-info">INFO:     Average F1-Score:  0.7704 (±0.0357)</div>
-                    <div class="output-line output-info">INFO:     Average ROC-AUC:   0.8585 (±0.0142)</div>
+                    <div class="output-line output-info">INFO:     Average Accuracy:  0.7720 (±0.0104)</div>
+                    <div class="output-line output-info">INFO:     Average Precision: 0.7778 (±0.0282)</div>
+                    <div class="output-line output-info">INFO:     Average Recall:    0.7637 (±0.0240)</div>
+                    <div class="output-line output-info">INFO:     Average F1-Score:  0.7703 (±0.0194)</div>
+                    <div class="output-line output-info">INFO:     Average ROC-AUC:   0.8543 (±0.0161)</div>
                     <div class="output-line"></div>
-                    <div class="output-line output-success">INFO: ✅ Best model: Random Forest (Average F1-Score: 0.7704)</div>
+                    <div class="output-line output-success">INFO: ✅ Best model: Random Forest (Average F1-Score: 0.7703)</div>
                     <div class="output-line output-info">INFO: Best model: Random Forest</div>
                 </div>
 
@@ -646,54 +648,54 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                 <pre><code>{
   "Random Forest": {
     "cv_metrics": {
-      "accuracy": 0.773,
-      "precision": 0.776,
-      "recall": 0.767,
+      "accuracy": 0.772,
+      "precision": 0.778,
+      "recall": 0.764,
       "f1": 0.77,
-      "roc_auc": 0.858
+      "roc_auc": 0.854
     },
     "overall_metrics": {
-      "accuracy": 0.773,
-      "precision": 0.779,
-      "recall": 0.768,
-      "f1": 0.773,
-      "roc_auc": 0.858
+      "accuracy": 0.772,
+      "precision": 0.778,
+      "recall": 0.764,
+      "f1": 0.771,
+      "roc_auc": 0.854
     },
     "fold_metrics": {
       "accuracies": [
-        0.765,
-        0.807,
-        0.776,
-        0.743,
-        0.776
+        0.767,
+        0.79,
+        0.775,
+        0.766,
+        0.76
       ],
       "precisions": [
-        0.688,
-        0.832,
-        0.824,
-        0.766,
-        0.772
+        0.758,
+        0.804,
+        0.819,
+        0.75,
+        0.757
       ],
       "recalls": [
-        0.791,
-        0.828,
-        0.747,
-        0.702,
-        0.767
+        0.739,
+        0.804,
+        0.74,
+        0.769,
+        0.766
       ],
       "f1_scores": [
-        0.736,
-        0.83,
-        0.784,
-        0.733,
-        0.769
+        0.748,
+        0.804,
+        0.777,
+        0.759,
+        0.762
       ],
       "roc_aucs": [
-        0.871,
-        0.866,
+        0.847,
         0.872,
-        0.839,
-        0.843
+        0.869,
+        0.828,
+        0.855
       ]
     }
   },
@@ -702,7 +704,8 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
     "n_splits": 5,
     "random_state": 42,
     "best_model": "Random Forest",
-    "test_split_used": false
+    "test_split_used": false,
+    "cv_strategy": "blastclust"
   }
 }</code></pre>
 
@@ -870,6 +873,11 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                             <td>blastclust</td>
                         </tr>
                         <tr>
+                            <td><code>--all-interfaces</code></td>
+                            <td>Also use the interfaces without a split assignment, the six flagged &ldquo;to delete&rdquo; (1,677 instead of 1,671 interfaces); only changes the default <code>blastclust</code> setting</td>
+                            <td>False (the six are excluded)</td>
+                        </tr>
+                        <tr>
                             <td><code>--quick</code></td>
                             <td>Run quick demo with basic output</td>
                             <td>False</td>
@@ -969,31 +977,31 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                     <tbody>
                         <tr>
                             <td><strong>Random Forest</strong></td>
-                            <td>0.773</td>
-                            <td>0.776</td>
-                            <td>0.767</td>
+                            <td>0.772</td>
+                            <td>0.778</td>
+                            <td>0.764</td>
                             <td>0.770</td>
-                            <td>0.858</td>
+                            <td>0.854</td>
                         </tr>
                         <tr>
                             <td>Support Vector Machine</td>
                             <td>0.761</td>
-                            <td>0.768</td>
+                            <td>0.773</td>
                             <td>0.745</td>
-                            <td>0.756</td>
+                            <td>0.757</td>
                             <td>0.852</td>
                         </tr>
                         <tr>
                             <td>Logistic Regression</td>
-                            <td>0.761</td>
                             <td>0.759</td>
-                            <td>0.769</td>
-                            <td>0.762</td>
-                            <td>0.829</td>
+                            <td>0.759</td>
+                            <td>0.764</td>
+                            <td>0.760</td>
+                            <td>0.830</td>
                         </tr>
                     </tbody>
                 </table>
-                <p style="font-size:0.9em;color:#555;">Values are the mean over the five GroupKFold folds, obtained with <code>scripts/ppi_ml_croissant.py</code> on the released package (seed 42). The models use six interface features plus the size of the interface&rsquo;s sequence cluster, a property of the benchmark clustering. Cluster size alone gives a ROC-AUC of 0.60; without it the Random Forest reaches an accuracy of 0.754 and a ROC-AUC of 0.852 (single check). These baselines illustrate reusability and are not scientific results.</p>
+                <p style="font-size:0.9em;color:#555;">Values are the mean over the five GroupKFold folds, obtained with <code>scripts/ppi_ml_croissant.py</code> on the released package (seed 42) for the 1,671 interfaces with a split assignment; the six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation (2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance, although they remain in the dataset. The models use six interface features plus the size of the interface&rsquo;s sequence cluster, a property of the benchmark clustering. Cluster size alone gives a ROC-AUC of 0.62 to 0.63 for the three models; without it the Random Forest reaches an accuracy of 0.769 and a ROC-AUC of 0.846 (single run). These baselines illustrate reusability and are not scientific results.</p>
             </section>
 
                 <h3 class="cv">GroupKFold Cross-Validation</h2>
@@ -1008,21 +1016,22 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                     </ul>
                 </div>
 
-                <h3 id="cv-strategies">Predefined homology-aware strategies</h3>
-                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>; the six interfaces without an assignment are left out (1,671 interfaces). The default, <code>blastclust</code>, is unchanged and reproduces the figures above. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. The chosen strategy is recorded in <code>ml_results.json</code> and shown at the top of the dashboard. Accuracy / ROC-AUC (mean over the five folds, seed 42); each setting has its own dashboard with precision, recall, F1, standard errors and figures; a menu at the top of every dashboard switches between the five settings:</p>
+                <h3 id="cv-strategies">Cross-validation settings and interfaces used</h3>
+                <p><strong>All settings use the same 1,671 interfaces.</strong> The six interfaces flagged &ldquo;to delete&rdquo; in the curated annotation (2X2A_1, 3P0C_3, 3UCR_1, 4O1W_1, 4WOV_3, 5Z70_2) are excluded from the calculation of the performance, although they remain in the dataset (1,677 interfaces; 1,671 are used: 840 physiological and 831 non-physiological). They have no split assignment, so the predefined strategies leave them out, and the default setting leaves them out as well. <code>--all-interfaces</code> keeps them in the default setting (1,677 interfaces, the setting of the ML reports up to version 1.2.1: Random Forest 0.773 / 0.858, SVM 0.761 / 0.852, Logistic Regression 0.761 / 0.829, accuracy / ROC-AUC).</p>
+                <p>With <code>--cv-strategy</code> the script trains and evaluates on the groups and folds of the chosen strategy of <code>data/cv_splits/</code>. The default, <code>blastclust</code>, groups the interfaces by BLASTClust cluster (<code>ClusterID</code>) and draws the folds at run time. The properties <code>CVGroup_*</code> and <code>CVFold_*</code> describe the split and are never used as model inputs. The chosen setting is recorded in <code>ml_results.json</code> and shown at the top of the dashboard. Accuracy / ROC-AUC (mean over the five folds, seed 42); each setting has its own dashboard with precision, recall, F1, standard errors and figures; a menu at the top of every dashboard switches between the five settings:</p>
                 <table>
                     <thead>
                         <tr><th>Setting</th><th>Random Forest</th><th>SVM</th><th>Logistic Regression</th><th>Dashboard</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>blastclust (default, GroupKFold)</td><td>0.773 / 0.858</td><td>0.761 / 0.852</td><td>0.761 / 0.829</td><td><a href="prediction-report.html">open</a></td></tr>
+                        <tr><td>BLASTClust GroupKFold (default)</td><td>0.772 / 0.854</td><td>0.761 / 0.852</td><td>0.759 / 0.830</td><td><a href="prediction-report.html">open</a></td></tr>
                         <tr><td>Strategy 1 (CATH / gene)</td><td>0.784 / 0.864</td><td>0.776 / 0.859</td><td>0.768 / 0.839</td><td><a href="strategy1/prediction-report.html">open</a></td></tr>
                         <tr><td>Strategy 2 (MMseqs2)</td><td>0.764 / 0.851</td><td>0.767 / 0.852</td><td>0.759 / 0.830</td><td><a href="strategy2/prediction-report.html">open</a></td></tr>
                         <tr><td>Strategy 2b (BLASTClust reference)</td><td>0.777 / 0.857</td><td>0.758 / 0.850</td><td>0.763 / 0.827</td><td><a href="strategy2b/prediction-report.html">open</a></td></tr>
                         <tr><td>Strategy 3 (union of 1 and 2b)</td><td>0.781 / 0.858</td><td>0.764 / 0.847</td><td>0.761 / 0.826</td><td><a href="strategy3/prediction-report.html">open</a></td></tr>
                     </tbody>
                 </table>
-                <p style="font-size:0.9em;color:#555;">The models use six interface features plus <code>ClusterSize</code>, a property of the BLASTClust clustering that is kept as in the published report. Differences between strategies are small and come from single runs (five folds, one seed); they are baselines for reusability and not scientific results. The dashboards are generated with <code>python scripts/ppi_ml_croissant.py --local bioschema --cv-strategy 3 --output-dir run_cv_3</code> followed by <code>python scripts/generate_ml_report.py --prediction-results run_cv_3/ml_results.json --output-dir ml-report/strategy3 --output-file ml-report/strategy3/prediction-report.html --landing-link ../../index.html</code>.</p>
+                <p style="font-size:0.9em;color:#555;">The models use six interface features plus <code>ClusterSize</code>, a property of the BLASTClust clustering. Differences between settings are small and come from single runs (five folds, one seed); they are baselines for reusability and not scientific results. The dashboards are generated with <code>python scripts/ppi_ml_croissant.py --local bioschema --cv-strategy 3 --output-dir run_cv_3</code> followed by <code>python scripts/generate_ml_report.py --prediction-results run_cv_3/ml_results.json --output-dir ml-report/strategy3 --output-file ml-report/strategy3/prediction-report.html --landing-link ../../index.html --setting-root ../ --setting blastclust=run_default/ml_results.json --setting 1=run_cv_1/ml_results.json --setting 2=run_cv_2/ml_results.json --setting 2b=run_cv_2b/ml_results.json --setting 3=run_cv_3/ml_results.json</code>.</p>
 
                 <h3>Example Console Output for GroupKFold</h3>
                 <div class="output-preview">
@@ -1031,11 +1040,11 @@ python scripts/ppi_ml_croissant.py --local ./bioschema --test-split 0.2</code></
                     <div class="output-line output-info">INFO:    Using ClusterID as groups to ensure same-cluster samples stay together</div>
                     <div class="output-line output-info">INFO:    Split analysis:</div>
                     <div class="output-line output-info">INFO:    Fold 1:</div>
-                    <div class="output-line output-info">INFO:      Training: 1341 samples, 840 unique clusters, 705 physio (52.6%)</div>
-                    <div class="output-line output-info">INFO:      Testing:  336 samples, 210 unique clusters, 139 physio (41.4%)</div>
+                    <div class="output-line output-info">INFO:      Training: 1336 samples, 836 unique clusters, 683 physio (51.1%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  335 samples, 209 unique clusters, 157 physio (46.9%)</div>
                     <div class="output-line output-info">INFO:    Fold 2:</div>
-                    <div class="output-line output-info">INFO:      Training: 1341 samples, 840 unique clusters, 652 physio (48.6%)</div>
-                    <div class="output-line output-info">INFO:      Testing:  336 samples, 210 unique clusters, 192 physio (57.1%)</div>
+                    <div class="output-line output-info">INFO:      Training: 1337 samples, 836 unique clusters, 661 physio (49.4%)</div>
+                    <div class="output-line output-info">INFO:      Testing:  334 samples, 209 unique clusters, 179 physio (53.6%)</div>
                 </div>
             </section>
 
